@@ -1,42 +1,52 @@
 import type { SiteContent } from "@/content/site";
+import Arrow from "./Arrow";
 
 type Props = { t: SiteContent["services"] };
 
+// Four services as stacked editorial rows: title in a 1/3 column, body and
+// bullets in a 2/3 column at lg; stacks to a single column on mobile/sm.
+// Hairlines bracket the list and divide each row — no card chrome. Bullets
+// use a small clay arrow glyph that echoes the brand mark.
 export default function Services({ t }: Props) {
   return (
-    <section id="services" className="border-b border-gray-200 bg-white">
-      <div className="mx-auto max-w-6xl px-6 py-20">
-        <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+    <section id="services">
+      <div className="mx-auto max-w-6xl px-6 py-14 sm:px-8 sm:py-20 lg:px-12 lg:py-28">
+        <h2 className="text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
           {t.title}
         </h2>
 
-        <p className="mt-6 max-w-3xl text-lg text-gray-500">{t.intro}</p>
+        <p className="mt-6 max-w-3xl text-lg text-body">{t.intro}</p>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
-          {t.items.map((item) => (
-            <article
-              key={item.title}
-              className="rounded-lg border border-gray-200 p-6"
+        <ul className="mt-16 divide-y divide-rule border-y border-rule sm:mt-20">
+          {t.items.map((item, i) => (
+            <li
+              key={i}
+              className="grid gap-6 py-10 sm:py-12 lg:grid-cols-3 lg:gap-12 lg:py-14"
             >
-              <h3 className="text-lg font-semibold text-slate-900">
-                {item.title}
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-gray-500">
-                {item.body}
-              </p>
-              <ul className="mt-4 space-y-2">
-                {item.bullets.map((b, i) => (
-                  <li key={i} className="flex gap-3 text-sm text-gray-500">
-                    <span aria-hidden="true" className="text-slate-900">
-                      ·
-                    </span>
-                    <span>{b}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
+              <div className="lg:col-span-1">
+                <h3 className="text-xl font-semibold leading-snug text-ink sm:text-2xl">
+                  {item.title}
+                </h3>
+              </div>
+              <div className="lg:col-span-2">
+                <p className="text-base leading-relaxed text-body">{item.body}</p>
+                <ul className="mt-6 space-y-3">
+                  {item.bullets.map((b, j) => (
+                    <li
+                      key={j}
+                      className="flex items-start gap-3 text-sm leading-relaxed text-body"
+                    >
+                      <span className="shrink-0 pt-1.5 text-accent">
+                        <Arrow size="sm" />
+                      </span>
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

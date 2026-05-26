@@ -1,32 +1,58 @@
 @import "tailwindcss";
 
-/* AITransforms V1 — light-only palette:
-   - background:      white
-   - primary text:    slate-900
-   - secondary text:  gray-500
-   - borders/dividers: gray-200
-   - CTAs:            slate-900
-   No dark-mode utilities. */
+/* AITransforms — Phase 2 editorial palette.
+   Warm off-white surface, single clay/amber accent, no dark-mode utilities. */
 
 :root {
-  --background: #ffffff;
-  --foreground: #0f172a; /* slate-900 */
+  --bg-page: #FAFAF7;     /* warm off-white — page background */
+  --bg-surface: #FFFFFF;  /* elevated surfaces (cards, contained intermezzo) */
+  --bg-ink: #0E1116;      /* warm near-black for dark intermezzo */
+  --ink: #0F172A;         /* slate-900 — headings */
+  --body: #475569;        /* slate-600 — body text */
+  --muted: #64748B;       /* slate-500 — eyebrows, meta */
+  --rule: #E2E8F0;        /* slate-200 — borders/dividers */
+  --accent: #B45309;      /* clay/amber — single brand accent */
+  --accent-ink: #7C2D12;  /* darker clay — hover/active */
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  /* Surfaces */
+  --color-page: var(--bg-page);          /* bg-page    — warm off-white background */
+  --color-surface: var(--bg-surface);    /* bg-surface — cards, intermezzo, header */
+  --color-inverse: var(--bg-ink);        /* bg-inverse — warm near-black slabs */
+  /* Text */
+  --color-ink: var(--ink);               /* text-ink   — headings */
+  --color-body: var(--body);             /* text-body  — paragraphs */
+  --color-muted: var(--muted);           /* text-muted — eyebrows, meta, labels */
+  /* Lines */
+  --color-rule: var(--rule);             /* border-rule — hairlines, dividers */
+  /* Accent */
+  --color-accent: var(--accent);         /* text/bg/border-accent — clay/amber */
+  --color-accent-strong: var(--accent-ink); /* text/bg-accent-strong — hover */
+  /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-instrument-serif);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--bg-page);
+  color: var(--ink);
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
+/* Persian and Arabic override Geist with Noto Sans Arabic.
+   Declared last so it wins over any display-font assignment on elements.
+   Letter-spacing is reset to normal because Tailwind tracking utilities
+   (tracking-tight, tracking-[0.18em]) break Arabic cursive joining. */
 :lang(fa),
 :lang(ar) {
   font-family: var(--font-noto-arabic), system-ui, sans-serif;
+  letter-spacing: normal;
+}
+
+/* Sticky header is ~70-80px tall. Offset anchor scroll so the section's
+   heading clears the header instead of being hidden behind it. */
+section[id] {
+  scroll-margin-top: 5rem;
 }

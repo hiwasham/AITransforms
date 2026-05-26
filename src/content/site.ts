@@ -11,7 +11,18 @@ const PRIMARY_CTA_HREF = "mailto:iranfluent.com@gmail.com" as const;
 const SECONDARY_CTA_HREF = "#work" as const;
 const BRAND = "AITransforms" as const;
 const COPYRIGHT = "© 2026 AITransforms" as const;
-const FOUNDER_NAME = "Founder, AITransforms" as const;
+
+// Founder identity. Hoisted so the public display name and role are trivial
+// to change later without touching the per-locale blocks. The display name
+// stays Latin ("Hiwa") across all locales by design; the role is translated.
+const FOUNDER = {
+  displayName: "Hiwa",
+  role: {
+    en: "AI Transformation Architect & Founder, AITransforms",
+    fa: "معمار تحول هوش مصنوعی و بنیان‌گذار AITransforms",
+    ar: "مهندس التحول إلى الذكاء الاصطناعي ومؤسس AITransforms",
+  },
+} as const;
 
 export const siteContent = {
   en: {
@@ -39,6 +50,7 @@ export const siteContent = {
         "AITransforms helps businesses document, structure, and implement their knowledge, workflows, frameworks, and documents as AI assistants, RAG systems, adaptive coaching tools, and private mobile-accessible AI agents.",
       primaryCta: { label: "Contact AITransforms", href: PRIMARY_CTA_HREF },
       secondaryCta: { label: "See what we build", href: SECONDARY_CTA_HREF },
+      metaphor: "Business Brain → AI Systems",
     },
 
     problem: {
@@ -184,7 +196,9 @@ export const siteContent = {
 
     founder: {
       title: "Founder-led",
-      name: FOUNDER_NAME,
+      name: FOUNDER.displayName,
+      role: FOUNDER.role.en,
+      credentialsLabel: "Background",
       body: "AITransforms is a founder-led studio. Every engagement is shaped by hands-on engineering experience and direct exposure to the technical and human sides of AI transformation.",
       credentials: [
         "MSc in Computer Engineering",
@@ -196,25 +210,30 @@ export const siteContent = {
 
     resources: {
       title: "Resources",
-      intro: "Short notes and writeups from the studio. A small library, growing slowly.",
+      intro:
+        "Articles, frameworks, and notes from the studio. A small library, building up over time.",
       items: [
         {
-          title: "What is a business brain, really?",
+          title: "Articles",
           summary:
-            "A working definition of the knowledge, workflows, and decisions worth turning into AI systems.",
+            "Short writeups on AI transformation patterns and what actually ships.",
         },
         {
-          title: "RAG vs. fine-tuning for business knowledge",
+          title: "Frameworks",
           summary:
-            "When to retrieve, when to train, and why most business use cases need both.",
+            "Reusable structures for mapping business knowledge to AI systems.",
         },
         {
-          title: "Private agents and the AI CEO Assistant pattern",
+          title: "Roadmaps",
+          summary: "Public notes on what we're prioritizing and why.",
+        },
+        {
+          title: "Technical Notes",
           summary:
-            "Why founder-facing AI deserves its own architecture — and what 'private' actually means.",
+            "Implementation details from real engagements, anonymized.",
         },
       ],
-      note: "More soon.",
+      note: "First writeups coming soon.",
     },
 
     cta: {
@@ -257,6 +276,7 @@ export const siteContent = {
         "AITransforms به کسب‌وکارها کمک می‌کند تا دانش، گردش‌های کاری، چارچوب‌ها و اسناد خود را به‌صورت دستیارهای هوش مصنوعی، سیستم‌های RAG، ابزارهای آموزش تطبیقی و عامل‌های خصوصی قابل‌دسترس از موبایل پیاده‌سازی کنند.",
       primaryCta: { label: "تماس با AITransforms", href: PRIMARY_CTA_HREF },
       secondaryCta: { label: "ببینید چه می‌سازیم", href: SECONDARY_CTA_HREF },
+      metaphor: "مغز کسب‌وکار ← سیستم‌های هوش مصنوعی",
     },
 
     problem: {
@@ -402,7 +422,9 @@ export const siteContent = {
 
     founder: {
       title: "بنیان‌گذار‌محور",
-      name: FOUNDER_NAME,
+      name: FOUNDER.displayName,
+      role: FOUNDER.role.fa,
+      credentialsLabel: "پیشینه",
       body: "AITransforms یک استودیوی بنیان‌گذار‌محور است. هر همکاری با تجربه عملی مهندسی و مواجهه مستقیم با جنبه‌های فنی و انسانی تحول هوش مصنوعی شکل می‌گیرد.",
       credentials: [
         "کارشناسی ارشد مهندسی کامپیوتر",
@@ -414,25 +436,29 @@ export const siteContent = {
 
     resources: {
       title: "منابع",
-      intro: "یادداشت‌ها و نوشته‌های کوتاه از استودیو. کتابخانه‌ای کوچک که آرام رشد می‌کند.",
+      intro:
+        "مقاله‌ها، چارچوب‌ها و یادداشت‌ها از استودیو. کتابخانه‌ای کوچک که در حال شکل‌گیری است.",
       items: [
         {
-          title: "مغز کسب‌وکار واقعاً چیست؟",
+          title: "مقاله‌ها",
           summary:
-            "تعریفی کاربردی از دانش، گردش‌های کاری و تصمیم‌هایی که ارزش تبدیل شدن به سیستم‌های هوش مصنوعی را دارند.",
+            "نوشته‌های کوتاه درباره الگوهای تحول هوش مصنوعی و آنچه واقعاً پیاده‌سازی می‌شود.",
         },
         {
-          title: "RAG در برابر fine-tuning برای دانش کسب‌وکار",
+          title: "چارچوب‌ها",
           summary:
-            "چه زمانی بازیابی کنیم، چه زمانی آموزش دهیم، و چرا بیشتر موارد استفاده کسب‌وکار به هر دو نیاز دارند.",
+            "ساختارهای قابل‌استفاده برای نگاشت دانش کسب‌وکار به سیستم‌های هوش مصنوعی.",
         },
         {
-          title: "عامل‌های خصوصی و الگوی دستیار AI CEO",
-          summary:
-            "چرا هوش مصنوعی متمرکز بر بنیان‌گذار سزاوار معماری خاص خود است — و «خصوصی» واقعاً به چه معناست.",
+          title: "نقشه‌های راه",
+          summary: "یادداشت‌های عمومی درباره اولویت‌های ما و چرایی آن‌ها.",
+        },
+        {
+          title: "یادداشت‌های فنی",
+          summary: "جزئیات پیاده‌سازی از همکاری‌های واقعی، ناشناس‌سازی‌شده.",
         },
       ],
-      note: "به‌زودی بیشتر.",
+      note: "اولین نوشته‌ها به‌زودی منتشر می‌شوند.",
     },
 
     cta: {
@@ -475,6 +501,7 @@ export const siteContent = {
         "تساعد AITransforms الشركات على توثيق معرفتها وسير عملها وأطرها ومستنداتها وتنفيذها كمساعدين ذكيين، وأنظمة RAG، وأدوات تدريب تكيفية، ووكلاء ذكاء اصطناعي خاصين يمكن الوصول إليهم من الهاتف.",
       primaryCta: { label: "تواصل مع AITransforms", href: PRIMARY_CTA_HREF },
       secondaryCta: { label: "شاهد ما نبنيه", href: SECONDARY_CTA_HREF },
+      metaphor: "عقل الأعمال ← أنظمة الذكاء الاصطناعي",
     },
 
     problem: {
@@ -620,7 +647,9 @@ export const siteContent = {
 
     founder: {
       title: "بقيادة المؤسس",
-      name: FOUNDER_NAME,
+      name: FOUNDER.displayName,
+      role: FOUNDER.role.ar,
+      credentialsLabel: "الخلفية",
       body: "AITransforms استوديو بقيادة المؤسس. كل ارتباط عمل يتشكل بالخبرة الهندسية العملية والتعرض المباشر للجوانب التقنية والإنسانية للتحول إلى الذكاء الاصطناعي.",
       credentials: [
         "ماجستير في هندسة الحاسوب",
@@ -632,25 +661,29 @@ export const siteContent = {
 
     resources: {
       title: "موارد",
-      intro: "ملاحظات وكتابات قصيرة من الاستوديو. مكتبة صغيرة تنمو ببطء.",
+      intro:
+        "مقالات وأطر وملاحظات من الاستوديو. مكتبة صغيرة قيد التكوين.",
       items: [
         {
-          title: "ما هو عقل الأعمال فعلاً؟",
+          title: "المقالات",
           summary:
-            "تعريف عملي للمعرفة وسير العمل والقرارات التي تستحق التحويل إلى أنظمة ذكاء اصطناعي.",
+            "كتابات قصيرة حول أنماط التحول إلى الذكاء الاصطناعي وما يُطلق فعلاً.",
         },
         {
-          title: "RAG مقابل fine-tuning لمعرفة الأعمال",
+          title: "الأطر",
           summary:
-            "متى نسترجع، ومتى ندرّب، ولماذا تحتاج معظم حالات الاستخدام إلى كليهما.",
+            "هياكل قابلة لإعادة الاستخدام لربط معرفة الأعمال بأنظمة الذكاء الاصطناعي.",
         },
         {
-          title: "الوكلاء الخاصون ونمط مساعد AI CEO",
-          summary:
-            "لماذا يستحق الذكاء الاصطناعي الموجه للمؤسس بنية خاصة به — وما الذي يعنيه «خاص» فعلاً.",
+          title: "خرائط الطريق",
+          summary: "ملاحظات عامة حول أولوياتنا وسببها.",
+        },
+        {
+          title: "ملاحظات تقنية",
+          summary: "تفاصيل التنفيذ من ارتباطات حقيقية، مجهولة الهوية.",
         },
       ],
-      note: "قريبًا المزيد.",
+      note: "أولى الكتابات قريبًا.",
     },
 
     cta: {

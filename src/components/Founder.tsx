@@ -2,31 +2,56 @@ import type { SiteContent } from "@/content/site";
 
 type Props = { t: SiteContent["founder"] };
 
+// Personal, credible, founder-led. The display name is the H2 with a clay
+// underline; role sits beneath in body color; credentials become an editorial
+// CV-style list with hairlines between items, no bullet glyphs. No photo, no
+// socials, no fake credentials added.
 export default function Founder({ t }: Props) {
   return (
-    <section className="border-b border-gray-200 bg-white">
-      <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-2">
-        <div>
-          <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-            {t.title}
-          </h2>
-          {t.name ? (
-            <p className="mt-2 text-base font-medium text-slate-900">{t.name}</p>
-          ) : null}
-          <p className="mt-6 text-lg leading-relaxed text-gray-500">{t.body}</p>
-        </div>
+    <section>
+      <div className="mx-auto max-w-6xl px-6 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-28">
+        <div className="lg:grid lg:grid-cols-2 lg:gap-16">
+          <div>
+            <p className="text-xs uppercase tracking-[0.18em] text-muted">
+              {t.title}
+            </p>
 
-        <div className="border-t border-gray-200 pt-8 lg:border-s lg:border-t-0 lg:ps-12 lg:pt-0">
-          <ul className="space-y-3">
-            {t.credentials.map((c, i) => (
-              <li key={i} className="flex gap-3 text-sm text-gray-500">
-                <span aria-hidden="true" className="text-slate-900">
-                  ·
+            {t.name ? (
+              <h2 className="mt-6 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
+                <span className="underline decoration-accent decoration-2 underline-offset-[12px]">
+                  {t.name}
                 </span>
-                <span>{c}</span>
-              </li>
-            ))}
-          </ul>
+              </h2>
+            ) : null}
+
+            {t.role ? (
+              <p className="mt-8 max-w-md text-base text-body sm:text-lg">
+                {t.role}
+              </p>
+            ) : null}
+
+            <p className="mt-6 max-w-md text-lg leading-relaxed text-body">
+              {t.body}
+            </p>
+          </div>
+
+          <div className="mt-12 lg:mt-0 lg:border-s lg:ps-16">
+            {t.credentialsLabel ? (
+              <p className="text-xs uppercase tracking-[0.18em] text-muted">
+                {t.credentialsLabel}
+              </p>
+            ) : null}
+            <ul className="mt-6 divide-y divide-rule border-y border-rule">
+              {t.credentials.map((c, i) => (
+                <li
+                  key={i}
+                  className="py-4 text-sm leading-relaxed text-body sm:py-5"
+                >
+                  {c}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>

@@ -1,24 +1,23 @@
+import Wordmark from "./Wordmark";
 import type { SiteContent } from "@/content/site";
 
 type Props = { t: SiteContent["footer"] };
 
 export default function Footer({ t }: Props) {
   return (
-    <footer className="bg-white">
-      <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-12 sm:flex-row sm:items-center sm:justify-between">
+    <footer className="border-t border-rule">
+      <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-10 sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:py-12 lg:px-12 lg:py-14">
         <div>
-          <div className="text-base font-semibold tracking-tight text-slate-900">
-            {t.brand}
-          </div>
+          <Wordmark size="sm" />
           {t.tagline ? (
-            <p className="mt-1 text-sm text-gray-500">{t.tagline}</p>
+            <p className="mt-1 text-sm text-muted">{t.tagline}</p>
           ) : null}
         </div>
 
-        <div className="flex flex-col gap-2 text-sm text-gray-500 sm:items-end">
+        <div className="flex flex-col gap-2 text-sm text-muted sm:items-end">
           <a
             href={t.contactHref}
-            className="text-slate-900 hover:text-gray-500"
+            className="text-ink transition-colors hover:text-muted"
           >
             {t.contactLabel}
           </a>

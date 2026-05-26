@@ -1,41 +1,60 @@
 import type { SiteContent } from "@/content/site";
+import Arrow from "./Arrow";
 
 type Props = { t: SiteContent["agentSpotlight"] };
 
-// Inverted dark treatment so the differentiator visually breaks from the
-// surrounding light sections. Not a dark-mode toggle — just an accent section.
+// Contained dark "agent panel": rounded-2xl bg-inverse card floating on the
+// off-white page bg, with a thin top chrome strip (clay vertical accent +
+// eyebrow) for a command-panel feel — no skeuomorphic terminal dots, no
+// scanlines, no live-status indicators. Same content as V1, just no longer a
+// jarring full-width slab.
+//
+// On-dark text uses alpha-white so it blends with the warm near-black bg
+// rather than the cool gray-300/400 of stock Tailwind grays.
 export default function AgentSpotlight({ t }: Props) {
   return (
-    <section className="border-y border-slate-900 bg-slate-900 text-white">
-      <div className="mx-auto max-w-6xl px-6 py-24 lg:py-28">
-        {t.eyebrow ? (
-          <p className="text-sm font-medium uppercase tracking-wider text-gray-400">
-            {t.eyebrow}
-          </p>
-        ) : null}
+    <section>
+      <div className="mx-auto max-w-6xl px-6 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-32">
+        <div className="overflow-hidden rounded-2xl bg-inverse text-white">
+          <header className="flex items-center gap-3 border-b border-white/10 px-8 py-5 sm:px-10 lg:px-12">
+            <span aria-hidden="true" className="h-3 w-px bg-accent" />
+            {t.eyebrow ? (
+              <p className="text-xs uppercase tracking-[0.18em] text-white/55">
+                {t.eyebrow}
+              </p>
+            ) : null}
+          </header>
 
-        <h2 className="mt-4 max-w-3xl text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
-          {t.title}
-        </h2>
+          <div className="px-8 py-12 sm:px-10 sm:py-16 lg:px-12 lg:py-20">
+            <h2 className="max-w-3xl text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
+              {t.title}
+            </h2>
 
-        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-gray-300">
-          {t.body}
-        </p>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">
+              {t.body}
+            </p>
 
-        <ul className="mt-10 grid gap-4 sm:grid-cols-2">
-          {t.bullets.map((b, i) => (
-            <li key={i} className="flex gap-3 text-sm text-gray-300">
-              <span aria-hidden="true" className="text-white">
-                ·
-              </span>
-              <span>{b}</span>
-            </li>
-          ))}
-        </ul>
+            <ul className="mt-10 grid gap-4 sm:grid-cols-2 sm:gap-x-12 sm:gap-y-4">
+              {t.bullets.map((b, i) => (
+                <li
+                  key={i}
+                  className="flex items-start gap-3 text-sm leading-relaxed text-white/85"
+                >
+                  <span className="shrink-0 pt-1.5 text-accent">
+                    <Arrow size="sm" />
+                  </span>
+                  <span>{b}</span>
+                </li>
+              ))}
+            </ul>
 
-        {t.note ? (
-          <p className="mt-10 max-w-3xl text-sm italic text-gray-400">{t.note}</p>
-        ) : null}
+            {t.note ? (
+              <p className="mt-10 max-w-2xl border-t border-white/10 pt-6 text-sm italic text-white/55">
+                {t.note}
+              </p>
+            ) : null}
+          </div>
+        </div>
       </div>
     </section>
   );
