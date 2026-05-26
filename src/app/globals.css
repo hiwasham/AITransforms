@@ -41,13 +41,50 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
-/* Persian and Arabic override Geist with Noto Sans Arabic.
-   Declared last so it wins over any display-font assignment on elements.
-   Letter-spacing is reset to normal because Tailwind tracking utilities
-   (tracking-tight, tracking-[0.18em]) break Arabic cursive joining. */
-:lang(fa),
+/* Local IRANSans (purchased, license permits web embedding for this site).
+   Loaded via @font-face from public/fonts/ — Regular, Medium, Bold cover the
+   weights used across the site (Light/UltraLight/Black skipped to keep
+   payload small; browser synthesizes any in-between weights). */
+@font-face {
+  font-family: "IRANSans";
+  src: url("/fonts/IRANSansWeb/IRANSansWeb/IRANSansWeb.woff2") format("woff2"),
+       url("/fonts/IRANSansWeb/IRANSansWeb/IRANSansWeb.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IRANSans";
+  src: url("/fonts/IRANSansWeb/IRANSansWeb_Medium/IRANSansWeb_Medium.woff2") format("woff2"),
+       url("/fonts/IRANSansWeb/IRANSansWeb_Medium/IRANSansWeb_Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IRANSans";
+  src: url("/fonts/IRANSansWeb/IRANSansWeb_Bold/IRANSansWeb_Bold.woff2") format("woff2"),
+       url("/fonts/IRANSansWeb/IRANSansWeb_Bold/IRANSansWeb_Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Persian uses local IRANSans. Arabic uses IBM Plex Sans Arabic (loaded via
+   next/font/google as --font-arabic). Both fall back to Noto Sans Arabic and
+   then to system sans-serif. Declared last so they win over any earlier
+   font-family rule. Letter-spacing is reset to normal because Tailwind
+   tracking utilities (tracking-tight, tracking-[0.18em]) break Arabic
+   cursive joining. */
+:lang(fa) {
+  font-family: "IRANSans", var(--font-noto-arabic), system-ui, sans-serif;
+  letter-spacing: normal;
+}
+
 :lang(ar) {
-  font-family: var(--font-noto-arabic), system-ui, sans-serif;
+  font-family: var(--font-arabic), var(--font-noto-arabic), system-ui, sans-serif;
   letter-spacing: normal;
 }
 
