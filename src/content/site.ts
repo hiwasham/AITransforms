@@ -9,6 +9,7 @@
 
 const PRIMARY_CTA_HREF = "mailto:iranfluent.com@gmail.com" as const;
 const SECONDARY_CTA_HREF = "#work" as const;
+const APPLY_HREF = "/apply" as const;
 const BRAND = "AITransforms" as const;
 const COPYRIGHT = "© 2026 AITransforms" as const;
 
@@ -48,7 +49,7 @@ export const siteContent = {
       title: "Turn Your Business Brain Into Practical AI Systems.",
       subtitle:
         "AITransforms helps businesses document, structure, and implement their knowledge, workflows, frameworks, and documents as AI assistants, RAG systems, adaptive coaching tools, and private mobile-accessible AI agents.",
-      primaryCta: { label: "Contact AITransforms", href: PRIMARY_CTA_HREF },
+      primaryCta: { label: "Apply for a review", href: APPLY_HREF },
       secondaryCta: { label: "See what we build", href: SECONDARY_CTA_HREF },
       metaphor: "Business Brain → AI Systems",
     },
@@ -239,7 +240,7 @@ export const siteContent = {
     cta: {
       title: "Ready to see what your business brain can do?",
       body: "Start with an AI transformation review. We'll map what's worth turning into AI, what isn't ready yet, and where the highest-leverage build lives.",
-      primaryCta: { label: "Contact AITransforms", href: PRIMARY_CTA_HREF },
+      primaryCta: { label: "Apply for a review", href: APPLY_HREF },
     },
 
     footer: {
@@ -274,7 +275,7 @@ export const siteContent = {
       title: "مغز کسب‌وکار خود را به سیستم‌های عملی هوش مصنوعی تبدیل کنید.",
       subtitle:
         "AITransforms به کسب‌وکارها کمک می‌کند تا دانش، گردش‌های کاری، چارچوب‌ها و اسناد خود را به‌صورت دستیارهای هوش مصنوعی، سیستم‌های RAG، ابزارهای آموزش تطبیقی و عامل‌های خصوصی قابل‌دسترس از موبایل پیاده‌سازی کنند.",
-      primaryCta: { label: "تماس با AITransforms", href: PRIMARY_CTA_HREF },
+      primaryCta: { label: "درخواست بازبینی", href: APPLY_HREF },
       secondaryCta: { label: "ببینید چه می‌سازیم", href: SECONDARY_CTA_HREF },
       metaphor: "مغز کسب‌وکار ← سیستم‌های هوش مصنوعی",
     },
@@ -464,7 +465,7 @@ export const siteContent = {
     cta: {
       title: "آماده‌اید ببینید مغز کسب‌وکارتان چه می‌تواند بکند؟",
       body: "با یک بازبینی تحول هوش مصنوعی شروع کنید. نقشه می‌کشیم چه چیزی ارزش تبدیل شدن به هوش مصنوعی را دارد، چه چیزی هنوز آماده نیست، و بالاترین اهرم ساخت کجاست.",
-      primaryCta: { label: "تماس با AITransforms", href: PRIMARY_CTA_HREF },
+      primaryCta: { label: "درخواست بازبینی", href: APPLY_HREF },
     },
 
     footer: {
@@ -499,7 +500,7 @@ export const siteContent = {
       title: "حوّل عقل أعمالك إلى أنظمة ذكاء اصطناعي عملية.",
       subtitle:
         "تساعد AITransforms الشركات على توثيق معرفتها وسير عملها وأطرها ومستنداتها وتنفيذها كمساعدين ذكيين، وأنظمة RAG، وأدوات تدريب تكيفية، ووكلاء ذكاء اصطناعي خاصين يمكن الوصول إليهم من الهاتف.",
-      primaryCta: { label: "تواصل مع AITransforms", href: PRIMARY_CTA_HREF },
+      primaryCta: { label: "تقدّم للمراجعة", href: APPLY_HREF },
       secondaryCta: { label: "شاهد ما نبنيه", href: SECONDARY_CTA_HREF },
       metaphor: "عقل الأعمال ← أنظمة الذكاء الاصطناعي",
     },
@@ -689,7 +690,7 @@ export const siteContent = {
     cta: {
       title: "مستعد لترى ما يستطيع عقل أعمالك فعله؟",
       body: "ابدأ بمراجعة تحول الذكاء الاصطناعي. سنرسم ما يستحق التحويل إلى ذكاء اصطناعي، وما هو غير جاهز بعد، وأين تكمن أعلى رافعة بناء.",
-      primaryCta: { label: "تواصل مع AITransforms", href: PRIMARY_CTA_HREF },
+      primaryCta: { label: "تقدّم للمراجعة", href: APPLY_HREF },
     },
 
     footer: {
