@@ -33,7 +33,7 @@ export default function Diagnostic({ t }: Props) {
             >
               <div className="lg:col-span-1">
                 <p className="text-xs uppercase tracking-[0.18em] text-accent-strong">
-                  Diagnostic {String(i + 1).padStart(2, "0")}
+                  {t.itemLabel} {String(i + 1).padStart(2, "0")}
                 </p>
                 <h3 className="mt-3 text-xl font-semibold leading-snug text-ink sm:text-2xl">
                   {item.title}

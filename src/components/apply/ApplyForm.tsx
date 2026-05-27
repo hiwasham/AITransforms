@@ -18,7 +18,7 @@ type FormState = {
   consent: boolean;
 };
 
-const INITIAL_STATE: FormState = {
+const BASE_INITIAL_STATE: Omit<FormState, "language"> = {
   name: "",
   email: "",
   company: "",
@@ -27,7 +27,6 @@ const INITIAL_STATE: FormState = {
   existing: "",
   bottleneck: "",
   interests: [],
-  language: "English",
   consent: false,
 };
 
@@ -41,8 +40,12 @@ const TEXTAREA_MAX = 1000;
 // line below the submit button gives users without a configured mail handler
 // a clear path to email manually.
 export default function ApplyForm({ t }: Props) {
-  const [form, setForm] = useState<FormState>(INITIAL_STATE);
   const f = t.fields;
+  // Default language radio = the page's own language (first option per locale).
+  const [form, setForm] = useState<FormState>(() => ({
+    ...BASE_INITIAL_STATE,
+    language: f.language.options[0],
+  }));
 
   function update<K extends keyof FormState>(key: K, value: FormState[K]) {
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -61,27 +64,29 @@ export default function ApplyForm({ t }: Props) {
     e.preventDefault();
     if (!form.consent) return;
 
+    // Body labels mirror the visible form labels so the submitter sees their
+    // compose window in the same language as the page they applied from.
     const lines = [
-      `Name: ${form.name}`,
-      `Email: ${form.email}`,
-      `Company/Project: ${form.company}`,
-      `Website: ${form.website || "—"}`,
+      `${f.name.label}: ${form.name}`,
+      `${f.email.label}: ${form.email}`,
+      `${f.company.label}: ${form.company}`,
+      `${f.website.label}: ${form.website || "—"}`,
       "",
-      "WHAT DO YOU WANT AI TO HELP WITH?",
+      `${f.helpWith.label}`,
       form.helpWith || "—",
       "",
-      "WHAT KNOWLEDGE, DOCS, OR WORKFLOWS ALREADY EXIST?",
+      `${f.existing.label}`,
       form.existing || "—",
       "",
-      "WHAT IS THE BIGGEST BOTTLENECK?",
+      `${f.bottleneck.label}`,
       form.bottleneck || "—",
       "",
-      `INTERESTED IN: ${
+      `${f.interests.label}: ${
         form.interests.length ? form.interests.join(", ") : "—"
       }`,
-      `PREFERRED LANGUAGE: ${form.language}`,
+      `${f.language.label}: ${form.language}`,
       "",
-      "Consent: yes",
+      `${f.consent.label.replace(/[.]\s*$/, "")}: yes`,
     ];
 
     const subject = encodeURIComponent(SUBJECT);

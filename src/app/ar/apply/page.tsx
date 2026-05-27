@@ -12,17 +12,17 @@ import Reassurance from "@/components/apply/Reassurance";
 import { siteContent } from "@/content/site";
 import { applyContent } from "@/content/apply";
 
-const t = applyContent.en;
+const t = applyContent.ar;
 
 export const metadata: Metadata = {
   title: t.meta.title,
   description: t.meta.description,
 };
 
-export default function ApplyPage() {
+export default function ApplyPageAr() {
   return (
     <>
-      <Header nav={siteContent.en.nav} currentLocale="en" />
+      <Header nav={siteContent.ar.nav} currentLocale="ar" />
       <main className="flex-1">
         <ApplyHero t={t.hero} />
         <ApplyProblem t={t.problem} />
@@ -33,7 +33,7 @@ export default function ApplyPage() {
         <ApplyForm t={t.form} />
         <Reassurance t={t.reassurance} />
       </main>
-      <Footer t={siteContent.en.footer} />
+      <Footer t={siteContent.ar.footer} />
     </>
   );
 }
