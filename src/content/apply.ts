@@ -145,6 +145,8 @@ export const applyContent = {
       intro: "All fields are read by Hiwa. No automated processing.",
       submitLabel: "Send application",
       fallbackNote: "Or email us directly at iranfluent.com@gmail.com.",
+      successNote:
+        "Your email app should open with the application details pre-filled. If it does not open, please email us directly at iranfluent.com@gmail.com.",
       fields: {
         name: { label: "Name" },
         email: { label: "Email" },
@@ -333,6 +335,8 @@ export const applyContent = {
       intro: "همه فیلدها توسط هیوا خوانده می‌شوند. بدون پردازش خودکار.",
       submitLabel: "ارسال درخواست",
       fallbackNote: "یا مستقیماً به iranfluent.com@gmail.com ایمیل بزنید.",
+      successNote:
+        "برنامه ایمیل شما باید با اطلاعات درخواست از پیش پر شده باز شود. اگر باز نشد، لطفاً مستقیماً به iranfluent.com@gmail.com ایمیل بزنید.",
       fields: {
         name: { label: "نام" },
         email: { label: "ایمیل" },
@@ -521,6 +525,8 @@ export const applyContent = {
       intro: "جميع الحقول يقرأها هيوا. بدون معالجة آلية.",
       submitLabel: "إرسال التقديم",
       fallbackNote: "أو راسلنا مباشرة على iranfluent.com@gmail.com.",
+      successNote:
+        "يجب أن يفتح تطبيق البريد الإلكتروني لديك مع تفاصيل التقديم معبأة مسبقًا. إذا لم يفتح، يرجى مراسلتنا مباشرة على iranfluent.com@gmail.com.",
       fields: {
         name: { label: "الاسم" },
         email: { label: "البريد الإلكتروني" },
