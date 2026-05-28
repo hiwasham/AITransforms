@@ -1,11 +1,14 @@
-export default function FaLayout({
+import "../globals.css";
+import { fontClasses } from "../fonts";
+
+export default function FaRootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <div lang="fa" dir="rtl" className="contents">
-      {children}
-    </div>
+    <html lang="fa" dir="rtl" className={fontClasses}>
+      <body className="min-h-full flex flex-col">{children}</body>
+    </html>
   );
 }

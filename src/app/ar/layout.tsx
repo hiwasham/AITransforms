@@ -1,11 +1,14 @@
-export default function ArLayout({
+import "../globals.css";
+import { fontClasses } from "../fonts";
+
+export default function ArRootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <div lang="ar" dir="rtl" className="contents">
-      {children}
-    </div>
+    <html lang="ar" dir="rtl" className={fontClasses}>
+      <body className="min-h-full flex flex-col">{children}</body>
+    </html>
   );
 }
