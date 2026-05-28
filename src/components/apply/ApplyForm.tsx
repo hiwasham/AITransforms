@@ -46,6 +46,7 @@ export default function ApplyForm({ t }: Props) {
     ...BASE_INITIAL_STATE,
     language: f.language.options[0],
   }));
+  const [submitted, setSubmitted] = useState(false);
 
   function update<K extends keyof FormState>(key: K, value: FormState[K]) {
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -92,6 +93,7 @@ export default function ApplyForm({ t }: Props) {
     const subject = encodeURIComponent(SUBJECT);
     const body = encodeURIComponent(lines.join("\n"));
     window.location.href = `mailto:${TO_EMAIL}?subject=${subject}&body=${body}`;
+    setSubmitted(true);
   }
 
   return (
@@ -263,6 +265,15 @@ export default function ApplyForm({ t }: Props) {
               </a>
               .
             </p>
+            {submitted ? (
+              <p
+                role="status"
+                aria-live="polite"
+                className="mt-4 rounded-md border border-rule bg-surface px-4 py-3 text-sm text-ink"
+              >
+                {t.successNote}
+              </p>
+            ) : null}
           </div>
         </form>
       </div>
