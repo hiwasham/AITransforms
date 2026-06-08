@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOP Architecture — 4-Level Documentation Hierarchy</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap');
+
+        :root {
+            --primary: #2563EB;
+            --bg: #F8FAFC;
+            --card: #FFFFFF;
+            --border: #E2E8F0;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Onest', sans-serif;
+            background-color: var(--bg);
+            color: #0F172A;
+            padding: 40px;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .container { max-width: 1400px; margin: 0 auto; }
+
+        header { margin-bottom: 48px; text-align: center; }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            background: linear-gradient(to right, #1e293b, #334155);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0;
+        }
+
+        .subtitle { color: #64748B; font-size: 1.1rem; margin-top: 10px; }
+
+        /* ── Pyramid visual ── */
+        .pyramid-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+            margin-bottom: 56px;
+        }
+
+        .pyramid-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 28px;
+            border-radius: 12px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+            color: white;
+            position: relative;
+            transition: transform .2s;
+            cursor: default;
+        }
+
+        .pyramid-row:hover { transform: scaleX(1.015); }
+
+        .pyramid-row-1 { width: 34%; background: #3B82F6; }
+        .pyramid-row-2 { width: 52%; background: #8B5CF6; }
+        .pyramid-row-3 { width: 70%; background: #10B981; }
+        .pyramid-row-4 { width: 88%; background: #F59E0B; }
+
+        .pyramid-label { opacity: .75; font-weight: 500; font-size: .72rem; }
+
+        /* ── Connector ── */
+        .pyramid-connector {
+            width: 2px;
+            height: 14px;
+            background: #CBD5E1;
+            margin: 0 auto;
+        }
+
+        /* ── Blueprint sections ── */
+        .blueprint-section {
+            background: var(--card);
+            border-radius: 24px;
+            padding: 32px;
+            margin-bottom: 28px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blueprint-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #F1F5F9;
+            gap: 16px;
+        }
+
+        .blueprint-title-block { display: flex; flex-direction: column; gap: 4px; }
+
+        .blueprint-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1E293B;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .blueprint-desc {
+            font-size: .85rem;
+            color: #64748B;
+            max-width: 560px;
+        }
+
+        .blueprint-badge {
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 6px 14px;
+            border-radius: 100px;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .process-flow {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+
+        .step-card {
+            background: #FFFFFF;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            width: 280px;
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .step-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -8px rgba(0,0,0,0.1);
+            border-color: #CBD5E1;
+        }
+
+        /* Phase colour system */
+        .blueprint-section.phase-1 .step-card { border-top: 4px solid #3B82F6; }
+        .blueprint-section.phase-1 .blueprint-badge { background: #EFF6FF; color: #2563EB; }
+        .blueprint-section.phase-1 { border-left: 4px solid #3B82F6; }
+
+        .blueprint-section.phase-2 .step-card { border-top: 4px solid #8B5CF6; }
+        .blueprint-section.phase-2 .blueprint-badge { background: #F5F3FF; color: #7C3AED; }
+        .blueprint-section.phase-2 { border-left: 4px solid #8B5CF6; }
+
+        .blueprint-section.phase-3 .step-card { border-top: 4px solid #10B981; }
+        .blueprint-section.phase-3 .blueprint-badge { background: #ECFDF5; color: #059669; }
+        .blueprint-section.phase-3 { border-left: 4px solid #10B981; }
+
+        .blueprint-section.phase-4 .step-card { border-top: 4px solid #F59E0B; }
+        .blueprint-section.phase-4 .blueprint-badge { background: #FFFBEB; color: #D97706; }
+        .blueprint-section.phase-4 { border-left: 4px solid #F59E0B; }
+
+        .step-number {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: #1E293B;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 8px;
+        }
+
+        .step-name {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0F172A;
+            margin-bottom: 8px;
+            margin-top: 8px;
+            line-height: 1.3;
+        }
+
+        .step-desc {
+            font-size: 0.875rem;
+            color: #64748B;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .raci-box {
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 0.72rem;
+            color: #475569;
+            font-weight: 500;
+            margin-top: auto;
+            line-height: 1.8;
+        }
+
+        /* Attribute tag pills */
+        .attr-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: .05em;
+            text-transform: uppercase;
+            padding: 3px 8px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border: 1px solid;
+        }
+
+        .pill-who    { background: #EFF6FF; color: #2563EB; border-color: #BFDBFE; }
+        .pill-what   { background: #F5F3FF; color: #7C3AED; border-color: #DDD6FE; }
+        .pill-tool   { background: #ECFDF5; color: #059669; border-color: #A7F3D0; }
+        .pill-ai     { background: #FEF9C3; color: #92400E; border-color: #FDE68A; }
+
+        /* Level connector arrows between sections */
+        .level-connector {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin: -10px 0 2px;
+            color: #94A3B8;
+            font-size: .75rem;
+            font-weight: 600;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+        }
+
+        .level-connector::before,
+        .level-connector::after {
+            content: '';
+            display: block;
+            height: 1px;
+            width: 60px;
+            background: #E2E8F0;
+        }
+
+        /* Insights */
+        .insights {
+            background: #1E293B;
+            border-radius: 20px;
+            padding: 32px;
+            color: white;
+            margin-top: 48px;
+        }
+
+        .insights h3 { margin-top: 0; color: white; margin-bottom: 16px; font-size: 1.1rem; }
+        .insights ul { padding-left: 20px; margin: 0; }
+        .insights li { margin-bottom: 10px; color: #CBD5E1; font-size: .9rem; }
+
+        /* Quick ref table */
+        .ref-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 24px;
+            font-size: .82rem;
+        }
+
+        .ref-table th {
+            background: #0F172A;
+            color: #94A3B8;
+            font-weight: 600;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            font-size: .68rem;
+            padding: 10px 14px;
+            text-align: left;
+        }
+
+        .ref-table td {
+            padding: 10px 14px;
+            border-bottom: 1px solid #1E293B;
+            color: #CBD5E1;
+            vertical-align: top;
+        }
+
+        .ref-table tr:last-child td { border-bottom: none; }
+
+        .ref-dot {
+            display: inline-block;
+            width: 8px; height: 8px;
+            border-radius: 2px;
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <h1>SOP Architecture Framework</h1>
+        <div class="subtitle">4-Level Documentation Hierarchy — Operational Design System</div>
+    </header>
+
+    <!-- Pyramid -->
+    <div class="pyramid-wrap">
+        <div class="pyramid-row pyramid-row-1">
+            <span>Level 1</span>
+            <span style="opacity:.4">|</span>
+            <span>Core Process</span>
+            <span class="pyramid-label">— Directors / Executives</span>
+        </div>
+        <div class="pyramid-connector"></div>
+        <div class="pyramid-row pyramid-row-2">
+            <span>Level 2</span>
+            <span style="opacity:.4">|</span>
+            <span>Blueprint</span>
+            <span class="pyramid-label">— Managers / Directors</span>
+        </div>
+        <div class="pyramid-connector"></div>
+        <div class="pyramid-row pyramid-row-3">
+            <span>Level 3</span>
+            <span style="opacity:.4">|</span>
+            <span>Guide</span>
+            <span class="pyramid-label">— Managers / Senior ICs</span>
+        </div>
+        <div class="pyramid-connector"></div>
+        <div class="pyramid-row pyramid-row-4">
+            <span>Level 4</span>
+            <span style="opacity:.4">|</span>
+            <span>Forms &amp; Templates</span>
+            <span class="pyramid-label">— Individual Contributors</span>
+        </div>
+    </div>
+
+    <!-- Level 1 -->
+    <div class="blueprint-section phase-1">
+        <div class="blueprint-header">
+            <div class="blueprint-title-block">
+                <div class="blueprint-title">🗺 Core Process</div>
+                <div class="blueprint-desc">High-level overview of a major function across departments. Defines start → end, system fit, and company-wide visibility.</div>
+            </div>
+            <div class="blueprint-badge">Level 1</div>
+        </div>
+        <div class="process-flow">
+
+            <div class="step-card">
+                <div class="step-number">01</div>
+                <div class="attr-pill pill-what">Purpose</div>
+                <div class="step-name">What the System Is</div>
+                <div class="step-desc">Defines the major business function at the highest level of abstraction. Answers "what does this system do and why does it exist?" — not how it works step by step.</div>
+                <div class="raci-box">R: Director / Executive | A: CEO | C: Department Heads</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">02</div>
+                <div class="attr-pill pill-who">Scope</div>
+                <div class="step-name">Start → End Boundary</div>
+                <div class="step-desc">Clearly states where the process begins (trigger event) and where it ends (output / handoff point). Cross-departmental touchpoints are mapped but not detailed here.</div>
+                <div class="raci-box">R: Director | A: CEO | C: Cross-functional leads</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">03</div>
+                <div class="attr-pill pill-who">Audience</div>
+                <div class="step-name">Leadership Visibility</div>
+                <div class="step-desc">Consumed by leadership and cross-functional stakeholders. Must be readable in under 5 minutes. Should not require operational knowledge to interpret — it communicates the system, not the steps.</div>
+                <div class="raci-box">R: Director | A: CEO | C: All department heads</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">04</div>
+                <div class="attr-pill pill-tool">Output</div>
+                <div class="step-name">Company Fit Map</div>
+                <div class="step-desc">Deliverable is a single visual or document showing how this function connects to other core processes. Enables executives to make resource and priority decisions without needing detail-level SOPs.</div>
+                <div class="raci-box">R: Director | A: CEO | C: N/A</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="level-connector">flows into</div>
+
+    <!-- Level 2 -->
+    <div class="blueprint-section phase-2">
+        <div class="blueprint-header">
+            <div class="blueprint-title-block">
+                <div class="blueprint-title">📋 Blueprint</div>
+                <div class="blueprint-desc">Full process map with multiple guides. Mid-level workflow from start to finish with responsibilities, success criteria, and operational structure.</div>
+            </div>
+            <div class="blueprint-badge">Level 2</div>
+        </div>
+        <div class="process-flow">
+
+            <div class="step-card">
+                <div class="step-number">05</div>
+                <div class="attr-pill pill-what">Purpose</div>
+                <div class="step-name">Full Process Flow</div>
+                <div class="step-desc">Maps the entire process from first trigger to final output, broken into logical phases. Each phase has a clear owner and outcome. This is the execution master plan — more detail than Level 1, less than Level 3.</div>
+                <div class="raci-box">R: Manager / Director | A: Director | C: Team Leads</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">06</div>
+                <div class="attr-pill pill-who">Audience</div>
+                <div class="step-name">Team Lead Coordination</div>
+                <div class="step-desc">Consumed by team leads and project coordinators to run the process. Gives enough detail to delegate work and track progress without needing to read every individual Guide beneath it.</div>
+                <div class="raci-box">R: Manager | A: Director | C: Senior ICs</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">07</div>
+                <div class="attr-pill pill-tool">Responsibilities</div>
+                <div class="step-name">RACI Assignment</div>
+                <div class="step-desc">Each phase in the blueprint includes a RACI assignment. Roles — not names — are used so the document remains valid across team changes. Who does what is clear before execution begins.</div>
+                <div class="raci-box">R: Manager | A: Director | C: HR / Ops</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">08</div>
+                <div class="attr-pill pill-tool">Output</div>
+                <div class="step-name">Success Criteria Defined</div>
+                <div class="step-desc">Each phase ends with a measurable success criterion — a checkpoint confirming the phase is complete before moving to the next. Prepares for operational execution and links down to Level 3 Guides.</div>
+                <div class="raci-box">R: Manager | A: Director | C: Team Leads</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="level-connector">flows into</div>
+
+    <!-- Level 3 -->
+    <div class="blueprint-section phase-3">
+        <div class="blueprint-header">
+            <div class="blueprint-title-block">
+                <div class="blueprint-title">📖 Guide</div>
+                <div class="blueprint-desc">Step-by-step instructions for specific roles. Detailed operational instructions with RACI, tools, triggers, and quality checks.</div>
+            </div>
+            <div class="blueprint-badge">Level 3</div>
+        </div>
+        <div class="process-flow">
+
+            <div class="step-card">
+                <div class="step-number">09</div>
+                <div class="attr-pill pill-what">Purpose</div>
+                <div class="step-name">Role-Specific Instructions</div>
+                <div class="step-desc">Written for a specific role performing a specific task inside a Blueprint phase. The reader should be able to execute the task correctly without asking anyone for clarification — every step is explicit.</div>
+                <div class="raci-box">R: Manager / Senior IC | A: Manager | C: Team Lead</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">10</div>
+                <div class="attr-pill pill-tool">Trigger</div>
+                <div class="step-name">Defined Entry Conditions</div>
+                <div class="step-desc">Every Guide begins with a clear trigger: the exact event, condition, or upstream step that signals this guide should be activated. Prevents premature or missed execution — the system tells you when to start.</div>
+                <div class="raci-box">R: Senior IC | A: Manager | C: N/A</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">11</div>
+                <div class="attr-pill pill-tool">Tools &amp; Templates</div>
+                <div class="step-name">Linked Resources</div>
+                <div class="step-desc">Each step references the exact tool, template, or form needed to complete it. Links are embedded directly — no searching required. Level 4 forms are called out by name at the point of use.</div>
+                <div class="raci-box">R: Manager | A: Manager | C: Individual Contributor</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">12</div>
+                <div class="attr-pill pill-ai">Quality Check</div>
+                <div class="step-name">Output Verification Gate</div>
+                <div class="step-desc">Each Guide ends with a quality checklist confirming the output meets the documented standard before it is handed off. Can be self-checked by the IC or reviewed by a manager. AI can automate this gate.</div>
+                <div class="raci-box">R: Senior IC | A: Manager | C: AI Agent</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="level-connector">flows into</div>
+
+    <!-- Level 4 -->
+    <div class="blueprint-section phase-4">
+        <div class="blueprint-header">
+            <div class="blueprint-title-block">
+                <div class="blueprint-title">🗂 Forms &amp; Templates</div>
+                <div class="blueprint-desc">Execution tools, scripts, templates, and calculators. Simplifies repeatable work and ensures consistent, high-quality output.</div>
+            </div>
+            <div class="blueprint-badge">Level 4</div>
+        </div>
+        <div class="process-flow">
+
+            <div class="step-card">
+                <div class="step-number">13</div>
+                <div class="attr-pill pill-what">Purpose</div>
+                <div class="step-name">Execution Simplification</div>
+                <div class="step-desc">Eliminates the need for the IC to construct anything from scratch. Every repeatable task has a pre-built form, script, or template they fill in — dramatically reducing time-to-output and error rate.</div>
+                <div class="raci-box">R: Individual Contributor | A: Manager | C: N/A</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">14</div>
+                <div class="attr-pill pill-who">Audience</div>
+                <div class="step-name">Anyone Executing the Task</div>
+                <div class="step-desc">Level 4 documents are designed for the lowest assumed knowledge level. A new hire should be able to produce a correct output using only the form — no tribal knowledge, no verbal instructions.</div>
+                <div class="raci-box">R: Individual Contributor | A: Manager | C: N/A</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">15</div>
+                <div class="attr-pill pill-ai">AI Augmentation</div>
+                <div class="step-name">AI-Ready by Design</div>
+                <div class="step-desc">Structured templates are the primary input for AI automation. When a Level 4 form is consistently filled, AI can read it, act on it, or populate it automatically — turning a human task into an AI-run workflow.</div>
+                <div class="raci-box">R: AI Agent | A: Manager | C: Individual Contributor</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">16</div>
+                <div class="attr-pill pill-tool">Consistency</div>
+                <div class="step-name">Standardised Output</div>
+                <div class="step-desc">Every execution of the same task produces the same quality result regardless of who does it or when. Output consistency is measurable — deviations from the template surface immediately in quality audits.</div>
+                <div class="raci-box">R: Individual Contributor | A: Manager | C: QA / AI Agent</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Insights -->
+    <div class="insights">
+        <h3>⚡ Architecture Insights</h3>
+        <ul>
+            <li><strong>The Cascade Rule:</strong> A Level 3 Guide cannot exist without a Level 2 Blueprint to anchor it. A Level 4 form cannot exist without a Level 3 Guide to reference it. Build top-down — never start with forms and work upward.</li>
+            <li><strong>AI Leverage Point:</strong> Level 4 is where AI creates the most value per hour of setup. Once templates are structured and consistent, AI can auto-populate, auto-submit, and auto-audit them — without any change to Levels 1–3.</li>
+            <li><strong>Owner Dependency Test:</strong> If a Level 3 Guide requires a specific person to interpret or explain it, it is not complete. The guide is done when any qualified IC can execute it without asking a question.</li>
+            <li><strong>Update Propagation:</strong> When a process changes at Level 1, every Level 2 Blueprint, Level 3 Guide, and Level 4 form below it must be reviewed and updated. Maintaining this cascade prevents documentation debt.</li>
+            <li><strong>Documentation Depth Signal:</strong> The number of Level 3 Guides linked to a single Level 2 Blueprint indicates operational complexity. More than 10 guides under one Blueprint is a signal to consider splitting it into two Core Processes.</li>
+        </ul>
+
+        <table class="ref-table">
+            <thead>
+                <tr>
+                    <th>Level</th>
+                    <th>Document Type</th>
+                    <th>Owner</th>
+                    <th>Audience</th>
+                    <th>AI Augmentable?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="ref-dot" style="background:#3B82F6"></span>Level 1</td>
+                    <td>Core Process</td>
+                    <td>Directors / Executives</td>
+                    <td>Leadership, cross-functional</td>
+                    <td>Partially (AI can generate drafts from inputs)</td>
+                </tr>
+                <tr>
+                    <td><span class="ref-dot" style="background:#8B5CF6"></span>Level 2</td>
+                    <td>Blueprint</td>
+                    <td>Managers / Directors</td>
+                    <td>Team leads, coordinators</td>
+                    <td>Partially (AI can map flows from transcripts)</td>
+                </tr>
+                <tr>
+                    <td><span class="ref-dot" style="background:#10B981"></span>Level 3</td>
+                    <td>Guide</td>
+                    <td>Managers / Senior ICs</td>
+                    <td>Individual contributors</td>
+                    <td>Yes (AI can generate from call recordings / SOPs)</td>
+                </tr>
+                <tr>
+                    <td><span class="ref-dot" style="background:#F59E0B"></span>Level 4</td>
+                    <td>Forms / Templates</td>
+                    <td>Individual contributors</td>
+                    <td>Anyone executing the task</td>
+                    <td>Fully (AI can fill, submit, and audit autonomously)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+</body>
+</html>

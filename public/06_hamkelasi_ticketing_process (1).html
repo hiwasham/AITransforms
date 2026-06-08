@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamkelasi — Support Ticketing Process</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap');
+
+        :root {
+            --primary: #2563EB;
+            --bg: #F8FAFC;
+            --card: #FFFFFF;
+            --border: #E2E8F0;
+        }
+
+        body {
+            font-family: 'Onest', sans-serif;
+            background-color: var(--bg);
+            color: #0F172A;
+            padding: 40px;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .container { max-width: 1400px; margin: 0 auto; }
+
+        header { margin-bottom: 60px; text-align: center; }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            background: linear-gradient(to right, #1e293b, #334155);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0;
+        }
+
+        .subtitle { color: #64748B; font-size: 1.1rem; margin-top: 10px; }
+
+        .blueprint-section {
+            background: var(--card);
+            border-radius: 24px;
+            padding: 32px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blueprint-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #F1F5F9;
+        }
+
+        .blueprint-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1E293B;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .blueprint-badge {
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 6px 12px;
+            border-radius: 100px;
+            background: #F1F5F9;
+            color: #475569;
+        }
+
+        .process-flow {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+
+        /* Arrow connector between cards */
+        .process-flow .step-card:not(:last-child)::after {
+            content: '→';
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.4rem;
+            color: #CBD5E1;
+            font-weight: 700;
+            z-index: 10;
+        }
+
+        .step-card {
+            background: #FFFFFF;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            width: 280px;
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .step-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -8px rgba(0,0,0,0.1);
+            border-color: #CBD5E1;
+        }
+
+        /* Phase colour accents */
+        .blueprint-section.phase-1 .step-card { border-top: 4px solid #3B82F6; }
+        .blueprint-section.phase-1 .blueprint-badge { background: #EFF6FF; color: #2563EB; }
+
+        .blueprint-section.phase-2 .step-card { border-top: 4px solid #8B5CF6; }
+        .blueprint-section.phase-2 .blueprint-badge { background: #F5F3FF; color: #7C3AED; }
+
+        .blueprint-section.phase-3 .step-card { border-top: 4px solid #10B981; }
+        .blueprint-section.phase-3 .blueprint-badge { background: #ECFDF5; color: #059669; }
+
+        .blueprint-section.phase-4 .step-card { border-top: 4px solid #F59E0B; }
+        .blueprint-section.phase-4 .blueprint-badge { background: #FFFBEB; color: #D97706; }
+
+        .blueprint-section.phase-5 .step-card { border-top: 4px solid #EF4444; }
+        .blueprint-section.phase-5 .blueprint-badge { background: #FEF2F2; color: #DC2626; }
+
+        .step-number {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: #1E293B;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 8px;
+        }
+
+        .step-name {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #0F172A;
+            margin-bottom: 8px;
+            margin-top: 8px;
+            line-height: 1.3;
+        }
+
+        .step-desc {
+            font-size: 0.875rem;
+            color: #64748B;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .raci-box {
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 0.72rem;
+            color: #475569;
+            font-weight: 500;
+            margin-top: auto;
+            line-height: 1.8;
+        }
+
+        /* AI badge on cards that are AI-automated */
+        .ai-badge {
+            display: inline-block;
+            background: #EFF6FF;
+            color: #2563EB;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            padding: 3px 8px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border: 1px solid #BFDBFE;
+        }
+
+        /* Escalation flag */
+        .escalation-badge {
+            display: inline-block;
+            background: #FEF2F2;
+            color: #DC2626;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            padding: 3px 8px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border: 1px solid #FECACA;
+        }
+
+        .insights {
+            background: #1E293B;
+            border-radius: 20px;
+            padding: 32px;
+            color: white;
+            margin-top: 60px;
+        }
+
+        .insights h3 { margin-top: 0; color: white; margin-bottom: 16px; }
+
+        .insights ul { padding-left: 20px; margin: 0; }
+
+        .insights li { margin-bottom: 10px; color: #CBD5E1; }
+
+        /* Legend */
+        .legend {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 48px;
+            padding: 20px 24px;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #475569;
+        }
+
+        .legend-dot {
+            width: 12px; height: 12px;
+            border-radius: 3px;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <h1>Ticketing System Process</h1>
+        <div class="subtitle">Hamkelasi — Support Operations Blueprint v1.0</div>
+    </header>
+
+    <!-- Legend -->
+    <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#3B82F6"></div>Phase 1 — Intake & Triage</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#8B5CF6"></div>Phase 2 — Level 1 Resolution</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#10B981"></div>Phase 3 — Level 2 Investigation</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#F59E0B"></div>Phase 4 — Escalation & L3</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#EF4444"></div>Phase 5 — Closure & Quality</div>
+    </div>
+
+    <!-- Phase 1 -->
+    <div class="blueprint-section phase-1">
+        <div class="blueprint-header">
+            <div class="blueprint-title">🎫 Intake &amp; Triage</div>
+            <div class="blueprint-badge">Phase 1</div>
+        </div>
+        <div class="process-flow">
+
+            <div class="step-card">
+                <div class="step-number">01</div>
+                <div class="ai-badge">AI Automated</div>
+                <div class="step-name">Ticket Submitted</div>
+                <div class="step-desc">School admin submits a support request via the Hamkelasi portal, email, or WhatsApp. System auto-creates a ticket record with timestamp and school ID.</div>
+                <div class="raci-box">R: School Admin | A: Support Lead | C: N/A</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">02</div>
+                <div class="ai-badge">AI Automated</div>
+                <div class="step-name">Auto-Classification</div>
+                <div class="step-desc">AI reads the ticket content and classifies it by type (Technical, Billing, Training, Feature Request) and assigns an initial severity score (Low / Medium / High / Critical).</div>
+                <div class="raci-box">R: AI Agent | A: Support Lead | C: N/A</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">03</div>
+                <div class="ai-badge">AI Automated</div>
+                <div class="step-name">Priority Assignment</div>
+                <div class="step-desc">Ticket is prioritized based on school tier (number of students, contract value) and issue severity. High-priority schools skip the queue and receive instant acknowledgment.</div>
+                <div class="raci-box">R: AI Agent | A: Support Lead | C: Account Manager</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">04</div>
+                <div class="step-name">Agent Assignment &amp; ACK</div>
+                <div class="step-desc">Ticket is routed to the next available Level 1 agent based on workload and specialization. Auto-acknowledgment message is sent to the school within 5 minutes of submission.</div>
+                <div class="raci-box">R: Support Lead | A: Support Lead | C: School Admin</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Phase 2 -->
+    <div class="blueprint-section phase-2">
+        <div class="blueprint-header">
+            <div class="blueprint-title">🔍 Level 1 — Self-Service Resolution</div>
+            <div class="blueprint-badge">Phase 2</div>
+        </div>
+        <div class="process-flow">
+
+            <div class="step-card">
+                <div class="step-number">05</div>
+                <div class="ai-badge">AI Automated</div>
+                <div class="step-name">L3 Guide Suggested</div>
+                <div class="step-desc">AI checks the ticket against the Hamkelasi Level 3 Guide (FAQ library). If a documented answer exists, the system sends the matching guide link to the school before the agent engages.</div>
+                <div class="raci-box">R: AI Agent | A: Support Agent | C: School Admin</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">06</div>
+                <div class="step-name">School Self-Resolution Check</div>
+                <div class="step-desc">School is given 30 minutes to confirm if the guide resolved their issue. If confirmed resolved, ticket is auto-closed. If no response or marked unresolved, it advances to agent handling.</div>
+                <div class="raci-box">R: School Admin | A: Support Agent | C: N/A</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">07</div>
+                <div class="step-name">Agent First Response</div>
+                <div class="step-desc">Support agent reviews the ticket, verifies school identity, and opens a live conversation (chat or call). Agent uses the Hamkelasi Voice guidelines — no improvised scripts.</div>
+                <div class="raci-box">R: Support Agent | A: Support Lead | C: School Admin</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">08</div>
+                <div class="step-name">L1 Troubleshooting</div>
+                <div class="step-desc">Agent works through the documented L1 checklist for the ticket category. All steps are logged in real time inside the ticket record in Vtiger. SLA target: resolved within 2 hours.</div>
+                <div class="raci-box">R: Support Agent | A: Support Lead | C: N/A</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Phase 3 -->
+    <div class="blueprint-section phase-3">
+        <div class="blueprint-header">
+            <div class="blueprint-title">🛠 Level 2 — Technical Investigation</div>
+            <div class="blueprint-badge">Phase 3</div>
+        </div>
+        <div class="process-flow">
+
+            <div class="step-card">
+                <div class="step-number">09</div>
+                <div class="escalation-badge">Escalation Trigger</div>
+                <div class="step-name">L2 Escalation Decision</div>
+                <div class="step-desc">If L1 troubleshooting does not resolve the issue within 2 hours, the agent marks the ticket for L2. Escalation reason is documented. School is notified of the handoff and new ETA.</div>
+                <div class="raci-box">R: Support Agent | A: Support Lead | C: School Admin</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">10</div>
+                <div class="step-name">Technical Specialist Review</div>
+                <div class="step-desc">L2 specialist picks up the ticket in Mizito. They access server logs, platform configs, or LMS integration data relevant to the school's environment. Diagnosis is documented in the ticket.</div>
+                <div class="raci-box">R: Technical Specialist | A: Support Lead | C: Support Agent</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">11</div>
+                <div class="step-name">Root Cause Analysis</div>
+                <div class="step-desc">Specialist identifies whether the issue is a user error, platform bug, integration failure, or configuration gap. Root cause is tagged in the ticket for knowledge base use. SLA target: diagnosed within 4 hours.</div>
+                <div class="raci-box">R: Technical Specialist | A: Support Lead | C: Product Team</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">12</div>
+                <div class="step-name">Fix Implementation</div>
+                <div class="step-desc">Specialist applies the fix or workaround. If a platform-level fix is needed, a dev task is opened in Mizito and linked to the ticket. School is kept informed every 60 minutes until resolved.</div>
+                <div class="raci-box">R: Technical Specialist | A: Support Lead | C: School Admin</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Phase 4 -->
+    <div class="blueprint-section phase-4">
+        <div class="blueprint-header">
+            <div class="blueprint-title">🚨 Escalation — Level 3 &amp; Founder Exception</div>
+            <div class="blueprint-badge">Phase 4</div>
+        </div>
+        <div class="process-flow">
+
+            <div class="step-card">
+                <div class="step-number">13</div>
+                <div class="escalation-badge">Critical Only</div>
+                <div class="step-name">L3 Escalation Trigger</div>
+                <div class="step-desc">Escalation to L3 is triggered only if: issue affects 10+ schools simultaneously, involves data loss or security risk, or remains unresolved after 8 hours. Omid receives a Slack alert with full ticket context.</div>
+                <div class="raci-box">R: Support Lead | A: Omid (CEO) | C: Technical Specialist</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">14</div>
+                <div class="step-name">CEO Exception Review</div>
+                <div class="step-desc">Omid reviews the escalation summary (auto-generated by AI from ticket history). He approves a resolution path — he does not troubleshoot directly. Decision is logged and becomes a new documented standard.</div>
+                <div class="raci-box">R: Omid (CEO) | A: Omid (CEO) | C: Technical Specialist</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">15</div>
+                <div class="step-name">Emergency Fix Deployment</div>
+                <div class="step-desc">Approved fix is deployed by Technical Specialist. If a platform patch is required, it follows the expedited deployment checklist. All affected schools are contacted directly by the Support Lead.</div>
+                <div class="raci-box">R: Technical Specialist | A: Omid (CEO) | C: Support Lead</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">16</div>
+                <div class="step-name">Post-Incident Brief</div>
+                <div class="step-desc">Within 24 hours of resolution, a brief incident report is drafted (timeline, root cause, fix applied, prevention measure). Report is added to the knowledge base and shared with all school admins if relevant.</div>
+                <div class="raci-box">R: Support Lead | A: Omid (CEO) | C: Technical Specialist</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Phase 5 -->
+    <div class="blueprint-section phase-5">
+        <div class="blueprint-header">
+            <div class="blueprint-title">✅ Closure &amp; Quality Audit</div>
+            <div class="blueprint-badge">Phase 5</div>
+        </div>
+        <div class="process-flow">
+
+            <div class="step-card">
+                <div class="step-number">17</div>
+                <div class="step-name">Resolution Confirmation</div>
+                <div class="step-desc">Agent sends a structured closure message to the school confirming the fix, the root cause (if shareable), and any preventive steps for the school to follow. School has 24 hours to reopen if unresolved.</div>
+                <div class="raci-box">R: Support Agent | A: Support Lead | C: School Admin</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">18</div>
+                <div class="step-name">CSAT Survey Sent</div>
+                <div class="step-desc">Automated satisfaction survey (3 questions, 1-5 scale) is sent to the school admin 1 hour after ticket closure. Results are logged in Vtiger and linked to the agent and ticket record.</div>
+                <div class="raci-box">R: AI Agent | A: Support Lead | C: School Admin</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">19</div>
+                <div class="ai-badge">AI Automated</div>
+                <div class="step-name">AI Quality Audit</div>
+                <div class="step-desc">AI scores the full ticket interaction against the Hamkelasi Voice rubric and the L3 Guide routing standard. Scores ≥7/10 are filed silently. Scores below 7 trigger a Slack alert to Support Lead for coaching review.</div>
+                <div class="raci-box">R: AI Agent | A: Support Lead | C: Omid (CEO)</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">20</div>
+                <div class="step-name">Knowledge Base Update</div>
+                <div class="step-desc">If the ticket revealed a gap in the Level 3 Guide, the Support Lead drafts a new FAQ entry and submits it for review. Approved entries are published within 48 hours and tagged to the ticket that originated them.</div>
+                <div class="raci-box">R: Support Lead | A: Omid (CEO) | C: Technical Specialist</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Insights -->
+    <div class="insights">
+        <h3>⚡ Process Insights &amp; Bottleneck Analysis</h3>
+        <ul>
+            <li><strong>Primary Bottleneck — L2 Escalation Volume:</strong> If the Level 3 Guide is not kept current, agents will skip self-service and escalate directly — inflating L2 workload. The knowledge base update loop (Step 20) is the most important preventive mechanism in this system.</li>
+            <li><strong>Owner Dependency Risk:</strong> Omid is only in the critical path at Steps 14–16. This is correct for exception handling but the Slack alert in Step 13 must include a full AI-generated summary — Omid should never have to read the full ticket thread to make a decision.</li>
+            <li><strong>AI Leverage Point:</strong> Steps 02, 03, 05, 18, and 19 are fully AI-automated. Ensuring these five steps are running reliably removes the equivalent of 1 full-time support agent from routine work.</li>
+            <li><strong>SLA Targets Embedded:</strong> L1 resolution target is 2 hours. L2 diagnosis is 4 hours. Any ticket exceeding 8 hours without closure automatically triggers the L3 escalation path — no manual judgment required.</li>
+            <li><strong>Scale Readiness:</strong> This system handles 700 schools without linear headcount growth. Quality is enforced by AI at Step 19 — meaning Omid leads by exception, not by review of every interaction.</li>
+        </ul>
+    </div>
+
+</div>
+</body>
+</html>
