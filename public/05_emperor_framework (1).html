@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EMPEROR Framework</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+
+    *{box-sizing:border-box;margin:0;padding:0}
+
+    body {
+      font-family:'Inter',system-ui,sans-serif;
+      background:#080e1c;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      padding:3rem 2rem;
+    }
+
+    .framework-label {
+      font-size:11px;font-weight:600;letter-spacing:.14em;
+      text-transform:uppercase;color:#3a4a6b;margin-bottom:.6rem;
+      text-align:center;
+    }
+    .framework-title {
+      font-size:28px;font-weight:700;color:#e8eaf2;
+      text-align:center;margin-bottom:3rem;letter-spacing:-.01em;
+    }
+
+    .grid-top {
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+      width:100%;
+      max-width:1020px;
+      margin-bottom:14px;
+    }
+    .grid-bottom {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      width:100%;
+      max-width:765px;
+    }
+
+    .card {
+      background:#0d1526;
+      border:1px solid #1a2540;
+      border-radius:16px;
+      padding:1.5rem 1.4rem 1.6rem;
+      position:relative;
+      overflow:hidden;
+      transition:border-color .2s,transform .18s;
+      cursor:default;
+    }
+    .card:hover {
+      border-color:#2a3a5a;
+      transform:translateY(-2px);
+    }
+    .card::before {
+      content:'';
+      position:absolute;
+      inset:0;
+      border-radius:16px;
+      background:radial-gradient(ellipse 60% 50% at 50% 0%, rgba(255,255,255,.025) 0%, transparent 100%);
+      pointer-events:none;
+    }
+
+    .card-top {
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      margin-bottom:1.1rem;
+    }
+
+    .big-letter {
+      font-size:72px;
+      font-weight:900;
+      line-height:1;
+      letter-spacing:-.03em;
+      -webkit-background-clip:text;
+      background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .icon-box {
+      width:36px;height:36px;
+      border-radius:10px;
+      border:1px solid;
+      display:flex;align-items:center;justify-content:center;
+      font-size:16px;
+      flex-shrink:0;
+      margin-top:4px;
+    }
+
+    .card-body { margin-top:.1rem; }
+    .card-name {
+      font-size:11px;font-weight:700;
+      letter-spacing:.1em;text-transform:uppercase;
+      color:#e8eaf2;margin-bottom:6px;
+    }
+    .accent-line {
+      height:2px;width:32px;border-radius:2px;
+      margin-bottom:10px;
+    }
+    .card-desc {
+      font-size:12.5px;color:#6b7a99;
+      line-height:1.65;font-weight:400;
+    }
+
+    /* — Per-card color themes — */
+    /* E Expansion */
+    .c-expansion .big-letter{background:linear-gradient(135deg,#4a5f8a 0%,#6a7faa 60%,#8898c0 100%)}
+    .c-expansion .icon-box{border-color:#1e3060;background:#111e38;color:#4a7fff}
+    .c-expansion .accent-line{background:linear-gradient(90deg,#4a7fff,#8b5cf6)}
+
+    /* M Marketing */
+    .c-marketing .big-letter{background:linear-gradient(135deg,#8b3a7a 0%,#c0508a 60%,#d46fa0 100%)}
+    .c-marketing .icon-box{border-color:#3a1a40;background:#1c0f28;color:#d44fa0}
+    .c-marketing .accent-line{background:linear-gradient(90deg,#d44fa0,#8b3af0)}
+
+    /* P Profitability */
+    .c-profitability .big-letter{background:linear-gradient(135deg,#2a7a4a 0%,#3da060 60%,#50c070 100%)}
+    .c-profitability .icon-box{border-color:#1a3a28;background:#0e1e18;color:#3da060}
+    .c-profitability .accent-line{background:linear-gradient(90deg,#3da060,#50e080)}
+
+    /* O Offering */
+    .c-offering .big-letter{background:linear-gradient(135deg,#7a4a2a 0%,#b06030 60%,#c87840 100%)}
+    .c-offering .icon-box{border-color:#3a2010;background:#1e1208;color:#c07030}
+    .c-offering .accent-line{background:linear-gradient(90deg,#c07030,#f09040)}
+
+    /* W Workforce */
+    .c-workforce .big-letter{background:linear-gradient(135deg,#8b2a6a 0%,#b040a0 60%,#c860b8 100%)}
+    .c-workforce .icon-box{border-color:#3a1050;background:#1c0828;color:#c050c0}
+    .c-workforce .accent-line{background:linear-gradient(90deg,#c050c0,#8040f0)}
+
+    /* E Execution */
+    .c-execution .big-letter{background:linear-gradient(135deg,#1a7a7a 0%,#20a0a0 60%,#30c0b0 100%)}
+    .c-execution .icon-box{border-color:#0e3a3a;background:#081e1e;color:#20c0a0}
+    .c-execution .accent-line{background:linear-gradient(90deg,#20c0a0,#00e0c0)}
+
+    /* R Robustness */
+    .c-robustness .big-letter{background:linear-gradient(135deg,#5a3a8a 0%,#7a50b0 60%,#9060c8 100%)}
+    .c-robustness .icon-box{border-color:#2a1850;background:#160e2c;color:#8050d0}
+    .c-robustness .accent-line{background:linear-gradient(90deg,#8050d0,#6040f0)}
+
+    @media(max-width:800px){
+      .grid-top{grid-template-columns:repeat(2,1fr)}
+      .grid-bottom{grid-template-columns:repeat(2,1fr);max-width:510px}
+      .big-letter{font-size:56px}
+    }
+    @media(max-width:480px){
+      .grid-top,.grid-bottom{grid-template-columns:1fr;max-width:320px}
+    }
+  </style>
+</head>
+<body>
+
+  <p class="framework-label">Business Operating System</p>
+  <h1 class="framework-title">EMPEROR Framework</h1>
+
+  <div class="grid-top">
+
+    <div class="card c-expansion">
+      <div class="card-top">
+        <span class="big-letter">E</span>
+        <div class="icon-box"><i class="ti ti-trending-up"></i></div>
+      </div>
+      <div class="card-body">
+        <p class="card-name">Expansion</p>
+        <div class="accent-line"></div>
+        <p class="card-desc">Scaling operations without complexity. Sale to Delivery &amp; Delivery to Success.</p>
+      </div>
+    </div>
+
+    <div class="card c-marketing">
+      <div class="card-top">
+        <span class="big-letter">M</span>
+        <div class="icon-box"><i class="ti ti-speakerphone"></i></div>
+      </div>
+      <div class="card-body">
+        <p class="card-name">Marketing</p>
+        <div class="accent-line"></div>
+        <p class="card-desc">Brand strength &amp; lead flow. Market to Lead &amp; Success to Market.</p>
+      </div>
+    </div>
+
+    <div class="card c-profitability">
+      <div class="card-top">
+        <span class="big-letter">P</span>
+        <div class="icon-box"><i class="ti ti-currency-dollar"></i></div>
+      </div>
+      <div class="card-body">
+        <p class="card-name">Profitability</p>
+        <div class="accent-line"></div>
+        <p class="card-desc">Financial health &amp; efficiency. Financial Performance Management.</p>
+      </div>
+    </div>
+
+    <div class="card c-offering">
+      <div class="card-top">
+        <span class="big-letter">O</span>
+        <div class="icon-box"><i class="ti ti-shopping-bag"></i></div>
+      </div>
+      <div class="card-body">
+        <p class="card-name">Offering</p>
+        <div class="accent-line"></div>
+        <p class="card-desc">Sales effectiveness &amp; conversion. Lead to Sale process optimization.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="grid-bottom">
+
+    <div class="card c-workforce">
+      <div class="card-top">
+        <span class="big-letter">W</span>
+        <div class="icon-box"><i class="ti ti-users-group"></i></div>
+      </div>
+      <div class="card-body">
+        <p class="card-name">Workforce</p>
+        <div class="accent-line"></div>
+        <p class="card-desc">Recruit, develop, retain. Hire to Retire talent systems.</p>
+      </div>
+    </div>
+
+    <div class="card c-execution">
+      <div class="card-top">
+        <span class="big-letter">E</span>
+        <div class="icon-box"><i class="ti ti-activity"></i></div>
+      </div>
+      <div class="card-body">
+        <p class="card-name">Execution</p>
+        <div class="accent-line"></div>
+        <p class="card-desc">Operational backbone. Quality Management &amp; feedback loops.</p>
+      </div>
+    </div>
+
+    <div class="card c-robustness">
+      <div class="card-top">
+        <span class="big-letter">R</span>
+        <div class="icon-box"><i class="ti ti-shield-check"></i></div>
+      </div>
+      <div class="card-body">
+        <p class="card-name">Robustness</p>
+        <div class="accent-line"></div>
+        <p class="card-desc">Market Position. Product Development &amp; Future-proofing.</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

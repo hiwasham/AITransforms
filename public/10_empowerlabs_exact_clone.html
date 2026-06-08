@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Stop using AI for random tasks. EMPOWER helps you document processes, build your Master Prompt, and create the foundation for AI transformation. Join 65% of participants already using established operating systems.">
+<title>EMPOWER: Document Your Business Brain Before AI Transformation</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#09090b;--g900:#18181b;--g800:#27272a;--g700:#3f3f46;
+  --g600:#52525b;--g500:#71717a;--g400:#a1a1aa;--g300:#d4d4d8;
+  --g200:#e4e4e7;--g100:#f4f4f5;--g50:#fafafa;--white:#fff;
+  --blue:#2563eb;--blue-l:#3b82f6;--blue-xl:#60a5fa;
+  --green:#22c55e;--red:#ef4444;--amber:#f59e0b;
+  --ease:cubic-bezier(.4,0,.2,1);--spring:cubic-bezier(.34,1.56,.64,1);
+}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--white);color:var(--black);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button,input,textarea,select{font-family:inherit;outline:none}
+
+/* ─── ANNOUNCE BAR ─── */
+.ann{background:var(--black);color:var(--white);text-align:center;font-size:.8rem;font-weight:500;padding:10px 20px;letter-spacing:.01em}
+.ann a{color:var(--white);text-decoration:underline;text-underline-offset:2px;opacity:.75;transition:opacity .15s;cursor:pointer}
+.ann a:hover{opacity:1}
+
+/* ─── NAV ─── */
+nav{position:sticky;top:0;z-index:300;background:rgba(255,255,255,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
+nav.scrolled{border-bottom-color:var(--g200);box-shadow:0 1px 16px rgba(0,0,0,.07)}
+.nav-i{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 24px}
+.logo{font-size:1.08rem;font-weight:900;letter-spacing:-.025em;color:var(--black);cursor:pointer}
+.logo span{color:var(--blue)}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nl{font-size:.875rem;font-weight:500;color:var(--g600);padding:8px 14px;border-radius:8px;transition:color .15s,background .15s;cursor:pointer;white-space:nowrap}
+.nl:hover,.nl.active{color:var(--black);background:var(--g100)}
+.ncta{background:var(--black);color:var(--white);font-size:.875rem;font-weight:700;padding:9px 20px;border-radius:10px;transition:opacity .15s,transform .15s;cursor:pointer;white-space:nowrap;border:none}
+.ncta:hover{opacity:.85;transform:translateY(-1px)}
+.hbg{display:none;flex-direction:column;gap:5px;padding:8px;border-radius:8px;background:none;border:none;cursor:pointer;transition:background .15s}
+.hbg:hover{background:var(--g100)}
+.hbg span{display:block;width:22px;height:2px;background:var(--black);border-radius:2px;transition:transform .3s var(--ease),opacity .2s}
+.hbg.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hbg.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hbg.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mob-menu{position:fixed;inset:0;z-index:290;background:var(--white);transform:translateX(100%);transition:transform .35s var(--ease);display:flex;flex-direction:column;padding:88px 32px 40px;gap:0}
+.mob-menu.open{transform:translateX(0)}
+.mob-link{font-size:1.5rem;font-weight:700;padding:18px 0;border-bottom:1px solid var(--g100);color:var(--g700);cursor:pointer;transition:color .15s}
+.mob-link:hover{color:var(--black)}
+.mob-cta{margin-top:28px;background:var(--black);color:var(--white);font-size:1.1rem;font-weight:700;padding:18px;border-radius:14px;text-align:center;cursor:pointer;border:none}
+
+/* ─── PAGES ─── */
+.page{display:none}
+.page.active{display:block;animation:pin .4s var(--ease) both}
+@keyframes pin{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+/* ─── REVEAL ─── */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv-l{opacity:0;transform:translateX(-30px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
+.rv-l.in{opacity:1;transform:none}
+.rv-r{opacity:0;transform:translateX(30px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
+.rv-r.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+/* ─── HERO ─── */
+.hero{background:var(--black);color:var(--white);text-align:center;padding:104px 24px 96px;position:relative;overflow:hidden}
+.hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse 85% 65% at 50% -5%,rgba(37,99,235,.42) 0%,transparent 68%);pointer-events:none;animation:gp 7s ease-in-out infinite}
+@keyframes gp{0%,100%{opacity:.75}50%{opacity:1}}
+.particles{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.pt{position:absolute;border-radius:50%;animation:ptf linear infinite}
+@keyframes ptf{0%{transform:translateY(100vh) scale(0);opacity:0}8%{opacity:.6}92%{opacity:.2}100%{transform:translateY(-5vh) scale(1);opacity:0}}
+.hero-inner{position:relative;z-index:1}
+.badge{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);border-radius:100px;padding:7px 18px;font-size:.76rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--g400);margin-bottom:32px;backdrop-filter:blur(8px)}
+.badge-dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:bdot 2s ease-in-out infinite;flex-shrink:0}
+@keyframes bdot{0%,100%{opacity:1;box-shadow:0 0 8px var(--green)}50%{opacity:.35;box-shadow:0 0 3px var(--green)}}
+h1.hh{font-size:clamp(2.3rem,5.5vw,4.3rem);font-weight:900;letter-spacing:-.04em;line-height:1.07;max-width:820px;margin:0 auto 24px;color:var(--white)}
+.hh em{font-style:normal;background:linear-gradient(135deg,#60a5fa 0%,#a78bfa 55%,#f472b6 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hsub{font-size:1.05rem;color:var(--g400);max-width:590px;margin:0 auto 44px;line-height:1.75}
+.hact{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.bw{display:inline-flex;align-items:center;gap:6px;background:var(--white);color:var(--black);font-weight:700;font-size:.95rem;padding:14px 28px;border-radius:12px;cursor:pointer;border:none;transition:opacity .15s,transform .15s}
+.bw:hover{opacity:.88;transform:translateY(-2px)}
+.bo{display:inline-flex;align-items:center;gap:6px;background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.22);font-weight:600;font-size:.95rem;padding:14px 28px;border-radius:12px;cursor:pointer;transition:border-color .2s,background .2s,transform .15s}
+.bo:hover{border-color:rgba(255,255,255,.48);background:rgba(255,255,255,.07);transform:translateY(-2px)}
+.bb{display:inline-flex;align-items:center;gap:6px;background:var(--black);color:var(--white);font-weight:700;font-size:.95rem;padding:14px 28px;border-radius:12px;cursor:pointer;border:none;transition:opacity .15s,transform .15s}
+.bb:hover{opacity:.84;transform:translateY(-2px)}
+
+/* ─── TICKER ─── */
+.tick-wrap{background:var(--black);border-top:1px solid var(--g800);border-bottom:1px solid var(--g800);padding:22px 0;overflow:hidden}
+.tick-lbl{text-align:center;font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--g700);margin-bottom:18px}
+.tick-mask{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.tick-track{display:flex;gap:60px;width:max-content;animation:tick 34s linear infinite}
+.tick-track:hover{animation-play-state:paused}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ti{font-size:.875rem;font-weight:700;color:var(--g700);white-space:nowrap;letter-spacing:.02em;transition:color .2s;cursor:default}
+.ti:hover{color:var(--g400)}
+
+/* ─── SHARED SECTION ─── */
+section,.sdark,.sempe,.stesti,.sbar,.snl{padding:96px 24px}
+.si{max-width:1100px;margin:0 auto}
+.stag{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:14px}
+.sh{font-size:clamp(1.75rem,3.8vw,2.75rem);font-weight:800;letter-spacing:-.03em;line-height:1.2;margin-bottom:18px}
+.ssub{font-size:1rem;color:var(--g600);max-width:600px;line-height:1.75}
+.tc{text-align:center}.tc .ssub{margin:0 auto}
+
+/* ─── DARK SECTION (Problem) ─── */
+.sdark{background:var(--black);color:var(--white);padding:96px 24px}
+.sdark .stag{color:var(--blue-xl)}
+.sdark .sh{color:var(--white)}
+.sdark .ssub{color:var(--g400)}
+.prob-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-top:52px}
+.pt3{color:var(--g400);line-height:1.75;margin-bottom:14px;font-size:.95rem}
+.pt3 strong{color:var(--white)}
+.pt3-h{font-size:1.45rem;font-weight:800;letter-spacing:-.02em;color:var(--white);margin:32px 0 14px;line-height:1.3}
+.bquote{border-left:3px solid var(--blue);padding:16px 20px;margin-top:28px;background:rgba(37,99,235,.08);border-radius:0 10px 10px 0}
+.bquote p{color:var(--g400);font-style:italic;line-height:1.7;margin:0;font-size:.93rem}
+
+/* Terminal */
+.term{background:#0d1117;border:1px solid var(--g800);border-radius:16px;overflow:hidden;font-family:'Courier New',monospace;box-shadow:0 24px 64px rgba(0,0,0,.5)}
+.tbar{background:#161b22;padding:12px 16px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--g800)}
+.tdot{width:12px;height:12px;border-radius:50%}
+.ttitle{flex:1;text-align:center;font-size:.72rem;color:var(--g600);font-family:'Inter',sans-serif}
+.tbody{padding:24px 26px}
+.tlbl{font-size:.68rem;color:var(--g600);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px;font-family:'Inter',sans-serif}
+.tbadge{display:inline-block;padding:4px 12px;border-radius:6px;font-size:.72rem;font-weight:700;font-family:'Inter',sans-serif;margin-bottom:20px;background:rgba(239,68,68,.14);color:#f87171;border:1px solid rgba(239,68,68,.24)}
+.trow{display:flex;align-items:center;gap:10px;color:var(--g500);margin:9px 0;font-size:.8rem}
+.trow::before{content:'✗';color:var(--red);font-size:.85rem;flex-shrink:0}
+.thr{border:none;border-top:1px solid var(--g800);margin:18px 0}
+.terr{color:var(--red);font-size:.78rem;letter-spacing:.05em}
+.tcursor{display:inline-block;width:8px;height:14px;background:var(--green);animation:blink .8s step-end infinite;vertical-align:text-bottom;margin-left:2px}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.tact{color:var(--amber);font-size:.78rem;letter-spacing:.05em;margin-top:10px}
+
+/* ─── PREREQS ─── */
+.pre-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px}
+.pre-card{background:var(--g50);border:1px solid var(--g200);border-radius:16px;padding:28px;transition:box-shadow .25s,border-color .25s,transform .25s var(--spring)}
+.pre-card:hover{box-shadow:0 8px 32px rgba(0,0,0,.09);border-color:var(--g300);transform:translateY(-4px)}
+.pre-icon{width:42px;height:42px;background:var(--black);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;margin-bottom:16px}
+.pre-tag{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+.pre-card h3{font-size:1.05rem;font-weight:700;margin-bottom:10px;letter-spacing:-.01em;line-height:1.3}
+.pre-card p{font-size:.875rem;color:var(--g600);line-height:1.65}
+
+/* ─── EMPEROR ─── */
+.sempe{background:#080e1c;padding:96px 24px}
+.sempe .stag{color:#60a5fa}
+.sempe .sh{color:var(--white)}
+.eg4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:12px}
+.eg3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:75%;margin:0 auto}
+.ec{background:#0d1526;border:1px solid #1a2540;border-radius:14px;padding:1.3rem 1.2rem 1.4rem;transition:border-color .22s,transform .22s var(--spring),box-shadow .22s;cursor:default}
+.ec:hover{border-color:#2e4272;transform:translateY(-5px);box-shadow:0 20px 48px rgba(0,0,0,.45)}
+.el{font-size:64px;font-weight:900;line-height:1;letter-spacing:-.03em;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;display:block;margin-bottom:.85rem}
+.en{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#e8eaf2;margin-bottom:6px}
+.ea{height:2px;width:28px;border-radius:2px;margin-bottom:9px}
+.ed{font-size:.8rem;color:#6b7a99;line-height:1.55}
+/* letter colours */
+.e1 .el{background:linear-gradient(135deg,#4a5f8a,#8898c0)}.e1 .ea{background:linear-gradient(90deg,#4a7fff,#8b5cf6)}
+.e2 .el{background:linear-gradient(135deg,#8b3a7a,#d46fa0)}.e2 .ea{background:linear-gradient(90deg,#d44fa0,#8b3af0)}
+.e3 .el{background:linear-gradient(135deg,#2a7a4a,#50c070)}.e3 .ea{background:linear-gradient(90deg,#3da060,#50e080)}
+.e4 .el{background:linear-gradient(135deg,#7a4a2a,#c87840)}.e4 .ea{background:linear-gradient(90deg,#c07030,#f09040)}
+.e5 .el{background:linear-gradient(135deg,#8b2a6a,#c860b8)}.e5 .ea{background:linear-gradient(90deg,#c050c0,#8040f0)}
+.e6 .el{background:linear-gradient(135deg,#1a7a7a,#30c0b0)}.e6 .ea{background:linear-gradient(90deg,#20c0a0,#00e0c0)}
+.e7 .el{background:linear-gradient(135deg,#5a3a8a,#9060c8)}.e7 .ea{background:linear-gradient(90deg,#8050d0,#6040f0)}
+
+/* ─── ECO ─── */
+.eco-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:52px}
+.eco-card{border:1px solid var(--g200);border-radius:20px;padding:36px;background:var(--white);transition:box-shadow .25s,transform .25s var(--spring)}
+.eco-card:hover{box-shadow:0 12px 40px rgba(0,0,0,.09);transform:translateY(-4px)}
+.epill{display:inline-block;background:#EFF6FF;color:var(--blue);font-size:.7rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:100px;border:1px solid #BFDBFE;margin-bottom:20px}
+.eco-card h3{font-size:1.2rem;font-weight:800;margin-bottom:14px;letter-spacing:-.02em;line-height:1.3}
+.eco-card p{font-size:.875rem;color:var(--g600);line-height:1.72;margin-bottom:12px}
+.eco-card strong{color:var(--black)}
+
+/* ─── PATH ─── */
+.path-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:52px}
+.pcard{border:1px solid var(--g200);border-radius:20px;padding:36px;background:var(--white);display:flex;flex-direction:column;transition:box-shadow .25s,border-color .25s}
+.pcard:hover{box-shadow:0 16px 48px rgba(0,0,0,.1);border-color:var(--g300)}
+.pcard.feat{background:var(--black);border-color:var(--black);color:var(--white)}
+.pcard.feat:hover{box-shadow:0 16px 48px rgba(0,0,0,.5)}
+.ptag{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+.pcard.feat .ptag{color:#60a5fa}
+.paud{font-size:.78rem;color:var(--g500);margin-bottom:20px}
+.pcard h3{font-size:1.35rem;font-weight:800;margin-bottom:14px;letter-spacing:-.02em;line-height:1.3}
+.pcard p{font-size:.875rem;line-height:1.72;color:var(--g600);margin-bottom:0;flex:1}
+.pcard.feat p{color:var(--g400)}
+.pfeats{display:flex;flex-direction:column;gap:8px;margin:20px 0}
+.pfeat{display:flex;align-items:flex-start;gap:8px;font-size:.82rem;color:var(--g600)}
+.pcard.feat .pfeat{color:var(--g400)}
+.pfeat::before{content:'—';color:var(--blue);flex-shrink:0;font-weight:700}
+.pnote{font-size:.76rem;color:var(--g500);font-style:italic;margin-bottom:22px}
+.pcard.feat .pnote{color:var(--g600)}
+.pbtn{display:block;text-align:center;font-weight:700;font-size:.9rem;padding:14px;border-radius:12px;cursor:pointer;border:none;font-family:inherit;transition:opacity .15s,transform .15s}
+.pbtn:hover{opacity:.88;transform:translateY(-1px)}
+.pbtn-w{background:var(--white);color:var(--black)}
+.pbtn-b{background:var(--black);color:var(--white)}
+
+/* ─── TESTIMONIALS ─── */
+.stesti{background:var(--g50);padding:96px 24px}
+.tgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:52px}
+.tcard{background:var(--white);border-radius:16px;padding:28px;border:1px solid var(--g200);transition:box-shadow .22s,transform .22s var(--spring)}
+.tcard:hover{box-shadow:0 8px 32px rgba(0,0,0,.07);transform:translateY(-3px)}
+.tch{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.tava{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;color:var(--white);flex-shrink:0}
+.tname{font-size:.9rem;font-weight:700;color:var(--black)}
+.trole{font-size:.75rem;color:var(--g500)}
+.tind{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--g100);border:1px solid var(--g200);color:var(--g600);padding:2px 7px;border-radius:5px;margin-left:5px;vertical-align:middle}
+.tcard blockquote{font-size:.875rem;color:var(--g600);line-height:1.78;font-style:italic;border:none;padding:0;margin:0}
+.tcard blockquote strong{color:var(--black);font-style:normal}
+
+/* ─── STATS ─── */
+.sbar{background:var(--black);padding:60px 24px}
+.sbar-i{max-width:880px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center}
+.sv{font-size:2.4rem;font-weight:900;color:var(--white);letter-spacing:-.04em;line-height:1}
+.sl{font-size:.8rem;color:var(--g600);margin-top:7px;font-weight:500}
+
+/* ─── FOUNDER ─── */
+.fgrid{display:grid;grid-template-columns:1fr 1.45fr;gap:72px;align-items:center;margin-top:52px}
+.fimg{width:100%;aspect-ratio:4/5;background:linear-gradient(145deg,#1e293b,#0f172a);border-radius:24px;display:flex;align-items:center;justify-content:center;font-size:6rem;overflow:hidden;position:relative}
+.fimg-wrap{position:relative}
+.fbadge{position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);background:var(--white);border:1px solid var(--g200);border-radius:100px;padding:10px 22px;font-size:.8rem;font-weight:700;white-space:nowrap;box-shadow:0 4px 20px rgba(0,0,0,.1)}
+.fstats{display:flex;gap:28px;margin-top:44px}
+.fstat h4{font-size:1.6rem;font-weight:900;letter-spacing:-.04em}
+.fstat p{font-size:.76rem;color:var(--g600)}
+.ftext h2{font-size:2rem;font-weight:800;letter-spacing:-.03em;margin-bottom:20px;line-height:1.2}
+.ftext p{font-size:.93rem;color:var(--g600);line-height:1.78;margin-bottom:14px}
+
+/* ─── CTA SECTION ─── */
+.scta{background:var(--black);color:var(--white);padding:100px 24px;text-align:center}
+.scta .sh{color:var(--white);max-width:720px;margin:0 auto 18px}
+.scta .ssub{color:var(--g400);max-width:540px;margin:0 auto 44px}
+.ctaact{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.ctanote{margin-top:24px;font-size:.78rem;color:var(--g600);display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
+.ctanote span{display:flex;align-items:center;gap:5px}
+
+/* ─── NEWSLETTER ─── */
+.snl{background:var(--g100);padding:80px 24px;text-align:center}
+.nli{max-width:460px;margin:0 auto}
+.nltag{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--g500);margin-bottom:12px}
+.nli h3{font-size:1.6rem;font-weight:800;letter-spacing:-.02em;margin-bottom:10px}
+.nli p{font-size:.875rem;color:var(--g600);margin-bottom:26px}
+.nlform{display:flex;gap:8px}
+.nlform input{flex:1;padding:12px 16px;border-radius:10px;border:1px solid var(--g200);font-size:.875rem;background:var(--white);transition:border-color .15s,box-shadow .15s}
+.nlform input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.12)}
+.nlform button{background:var(--black);color:var(--white);font-weight:700;font-size:.875rem;padding:12px 18px;border-radius:10px;border:none;cursor:pointer;white-space:nowrap;transition:opacity .15s}
+.nlform button:hover{opacity:.85}
+.nlnote{font-size:.73rem;color:var(--g400);margin-top:12px}
+.nlcheck{font-size:.73rem;color:var(--g500);margin-top:10px}
+.nlcheck a{text-decoration:underline;text-underline-offset:2px}
+
+/* ─── FOOTER ─── */
+footer{background:var(--black);color:var(--white);padding:60px 24px 32px}
+.fi{max-width:1100px;margin:0 auto}
+.ftop{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;padding-bottom:40px;border-bottom:1px solid var(--g800);margin-bottom:28px}
+.fbrand p{font-size:.85rem;color:var(--g600);margin-top:12px;line-height:1.6;max-width:260px}
+.fcol h5{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--g600);margin-bottom:16px}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.fcol ul li a,.fcol ul li span{font-size:.85rem;color:var(--g500);cursor:pointer;transition:color .15s}
+.fcol ul li a:hover,.fcol ul li span:hover{color:var(--white)}
+.fbot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.fbot p{font-size:.75rem;color:var(--g700)}
+.fblinks{display:flex;gap:18px}
+.fblinks span{font-size:.75rem;color:var(--g700);cursor:pointer;transition:color .15s}
+.fblinks span:hover{color:var(--g400)}
+
+/* ─── COHORT PAGE SPECIFIC ─── */
+.cohort-steps{background:rgba(255,255,255,.06);border-top:1px solid rgba(255,255,255,.1);padding:24px 24px 0}
+.cs-inner{max-width:680px;margin:0 auto;display:flex;align-items:center;gap:0;padding-bottom:0}
+.cs-step{display:flex;flex-direction:column;align-items:center;gap:8px;flex:1}
+.cs-num{width:32px;height:32px;border-radius:50%;background:var(--g800);color:var(--g400);font-size:.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;transition:background .2s,color .2s}
+.cs-active .cs-num{background:var(--blue);color:var(--white)}
+.cs-label{font-size:.68rem;font-weight:600;color:var(--g600);text-align:center;line-height:1.3}
+.cs-active .cs-label{color:var(--blue-xl)}
+.cs-connector{flex:1;height:1px;background:var(--g800);max-width:40px}
+.c-prob-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-top:48px}
+.c-bot-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.cquote-wrap{background:var(--g50);padding:48px 24px;border-top:1px solid var(--g200);border-bottom:1px solid var(--g200)}
+.cquote{font-size:clamp(1.1rem,2.5vw,1.5rem);font-weight:700;color:var(--black);text-align:center;max-width:680px;margin:0 auto;line-height:1.5;letter-spacing:-.02em}
+.sol-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:48px}
+.sol-card{background:var(--g50);border:1px solid var(--g200);border-radius:16px;padding:28px}
+.sol-card-good{background:#f0fdf4;border-color:#bbf7d0}
+.sol-step{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-bottom:16px}
+.sol-items{display:flex;flex-direction:column;gap:10px}
+.sol-item{display:flex;align-items:flex-start;gap:8px;font-size:.875rem;line-height:1.55;padding:8px 10px;border-radius:8px}
+.sol-bad{color:var(--g600);background:rgba(239,68,68,.05)}.sol-bad::before{content:'✗';color:var(--red);flex-shrink:0;font-weight:700}
+.sol-good{color:#166534;background:rgba(34,197,94,.07)}.sol-good::before{content:'✓';color:#22c55e;flex-shrink:0;font-weight:700}
+.pillars-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:52px}
+.pillar-card{border:1px solid var(--g200);border-radius:20px;overflow:hidden;transition:box-shadow .2s,transform .2s}
+.pillar-card:hover{box-shadow:0 12px 40px rgba(0,0,0,.1);transform:translateY(-3px)}
+.pillar-img{height:240px;display:flex;align-items:center;justify-content:center;padding:32px}
+.pillar-img-1{background:linear-gradient(145deg,#1a1a2e,#0d0d1a)}
+.pillar-img-2{background:linear-gradient(145deg,#0d1526,#080e1c)}
+.pillar-book{display:flex;width:140px;height:160px;filter:drop-shadow(4px 8px 20px rgba(0,0,0,.5))}
+.pillar-book-spine{width:22px;background:linear-gradient(180deg,#1e40af,#1d4ed8);border-radius:3px 0 0 3px}
+.pillar-book-front{flex:1;background:linear-gradient(145deg,#2563eb,#1d4ed8);border-radius:0 3px 3px 0;padding:20px 16px;display:flex;flex-direction:column;justify-content:flex-end}
+.pillar-title{font-size:1.1rem;font-weight:700;margin:20px 20px 10px;letter-spacing:-.01em}
+.pillar-desc{font-size:.875rem;color:var(--g600);line-height:1.7;margin:0 20px 20px}
+.atda-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.atda-col{background:#111;border:1px solid var(--g800);border-radius:14px;padding:28px}
+.atda-section-label{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--g600);margin-bottom:8px}
+.atda-h{font-size:1rem;font-weight:700;color:var(--white);margin-bottom:16px;line-height:1.3}
+.atda-items{display:flex;flex-direction:column;gap:8px}
+.atda-item{font-size:.83rem;color:var(--g500);line-height:1.5;display:flex;align-items:flex-start;gap:7px}.atda-item::before{content:'→';color:var(--blue-l);flex-shrink:0}
+.deliv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:8px}
+.deliv-card{background:var(--g50);border:1px solid var(--g200);border-radius:14px;padding:24px;transition:box-shadow .2s,transform .2s}
+.deliv-card:hover{box-shadow:0 6px 20px rgba(0,0,0,.07);transform:translateY(-2px)}
+.deliv-icon{font-size:1.4rem;margin-bottom:10px}
+.deliv-title{font-size:.95rem;font-weight:700;margin-bottom:8px;letter-spacing:-.01em}
+.deliv-desc{font-size:.8rem;color:var(--g600);line-height:1.65}
+.capgain-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.capgain{display:flex;align-items:flex-start;gap:12px;background:var(--g50);border:1px solid var(--g200);border-radius:12px;padding:20px}
+.capgain-arrow{font-size:1.2rem;color:var(--blue);flex-shrink:0;font-weight:700}
+.capgain strong{display:block;font-size:.9rem;font-weight:700;margin-bottom:6px}
+.capgain p{font-size:.8rem;color:var(--g600);line-height:1.6;margin:0}
+.is-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.is-card{border-radius:16px;padding:28px;border:1px solid}
+.is-yes{background:#f0fdf4;border-color:#bbf7d0}
+.is-no{background:#fef2f2;border-color:#fecaca}
+.is-title{font-size:1.1rem;font-weight:800;margin-bottom:20px;letter-spacing:-.02em}
+.is-items{display:flex;flex-direction:column;gap:10px}
+.is-item{font-size:.875rem;line-height:1.5;display:flex;align-items:flex-start;gap:8px}
+.is-item-y{color:#166534}.is-item-y::before{content:'✓';color:#22c55e;font-weight:700;flex-shrink:0}
+.is-item-n{color:#991b1b}.is-item-n::before{content:'✕';color:#ef4444;font-weight:700;flex-shrink:0}
+.ops-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.op-card{background:#111;border:1px solid var(--g800);border-radius:16px;padding:28px;text-align:center}
+.op-img{width:80px;height:80px;border-radius:50%;background:linear-gradient(145deg,#1e293b,#0f172a);display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 16px}
+.op-name{font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:4px}
+.op-role{font-size:.78rem;color:var(--g600);margin-bottom:14px}
+.op-bio{font-size:.83rem;color:var(--g500);line-height:1.7}
+.res-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px}
+.res-stat{background:var(--white);border:1px solid var(--g200);border-radius:14px;padding:28px;text-align:center}
+.res-val{font-size:2.4rem;font-weight:900;color:var(--black);letter-spacing:-.04em;line-height:1}
+.res-label{font-size:.8rem;color:var(--g600);margin-top:8px;line-height:1.5}
+/* ─── COHORT PAGE RESPONSIVE ─── */
+@media(max-width:920px){
+  .c-prob-grid,.c-bot-grid,.sol-grid,.pillars-grid,.atda-grid,.deliv-grid,.capgain-grid,.is-grid,.ops-grid,.res-grid{grid-template-columns:1fr}
+}
+
+/* ─── TEAMS PAGE SPECIFIC ─── */
+.t-prob-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:48px}
+
+/* Methodology stages */
+.stage-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(37,99,235,.12);border:1px solid rgba(37,99,235,.25);color:#60a5fa;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:7px 16px;border-radius:100px;margin-bottom:20px}
+.stage-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:#60a5fa;flex-shrink:0}
+.phase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:8px}
+.phase-card{background:#0d1526;border:1px solid #1a2540;border-radius:14px;padding:24px;transition:border-color .2s,transform .2s}
+.phase-card:hover{border-color:#2e4272;transform:translateY(-3px)}
+.phase-num{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#60a5fa;margin-bottom:8px}
+.phase-title{font-size:1rem;font-weight:700;color:#e8eaf2;margin-bottom:10px;line-height:1.3}
+.phase-desc{font-size:.82rem;color:#6b7a99;line-height:1.65}
+
+/* For / Not For */
+.for-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.for-card{border-radius:18px;padding:36px;border:1px solid}
+.for-yes{background:#0a1a0f;border-color:#1a3a20}
+.for-no{background:#1a0a0a;border-color:#3a1a1a}
+.for-title{font-size:1.35rem;font-weight:800;color:var(--white);margin-bottom:24px;line-height:1.3;letter-spacing:-.02em}
+.for-items{display:flex;flex-direction:column;gap:12px}
+.for-item{font-size:.875rem;line-height:1.6;display:flex;align-items:flex-start;gap:10px;padding:10px 14px;border-radius:10px}
+.for-item-y{color:#86efac;background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.15)}
+.for-item-y::before{content:'✓';color:#22c55e;flex-shrink:0;font-weight:700}
+.for-item-n{color:#fca5a5;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.15)}
+.for-item-n::before{content:'✕';color:#ef4444;flex-shrink:0;font-weight:700}
+
+/* Roadmap */
+.roadmap{position:relative;display:flex;flex-direction:column;gap:0}
+.roadmap-line{position:absolute;left:50%;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,transparent,var(--g200) 5%,var(--g200) 95%,transparent);transform:translateX(-50%);z-index:0}
+.rm-row{display:grid;grid-template-columns:1fr 40px 1fr;gap:24px;align-items:center;margin-bottom:40px;position:relative;z-index:1}
+.rm-dot{width:14px;height:14px;border-radius:50%;background:var(--blue);border:3px solid var(--white);box-shadow:0 0 0 3px var(--blue);justify-self:center;flex-shrink:0}
+.rm-card{background:var(--white);border:1px solid var(--g200);border-radius:16px;padding:28px;transition:box-shadow .2s,transform .2s}
+.rm-card:hover{box-shadow:0 8px 28px rgba(0,0,0,.08);transform:translateY(-2px)}
+.rm-left{text-align:right}
+.rm-right{text-align:left}
+.rm-left.rm-card h3,.rm-left.rm-card p,.rm-left.rm-card .rm-phase{text-align:right}
+.rm-phase{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+.rm-card h3{font-size:1.05rem;font-weight:700;margin-bottom:10px;letter-spacing:-.01em}
+.rm-card p{font-size:.85rem;color:var(--g600);line-height:1.65}
+.rm-visual{}
+.rm-os-card{background:var(--white);border:1px solid var(--g200);border-radius:12px;padding:18px}
+.rm-os-header{display:flex;gap:5px;margin-bottom:12px}
+.rm-os-dot{width:9px;height:9px;border-radius:50%}
+.rm-os-title{font-size:.8rem;font-weight:700;color:var(--black);margin-bottom:3px}
+.rm-os-sub{font-size:.7rem;color:var(--g500);margin-bottom:10px}
+.rm-os-bar{height:4px;background:var(--g200);border-radius:2px;overflow:hidden;margin-bottom:6px}
+.rm-os-fill{height:100%;background:linear-gradient(90deg,var(--blue),#8b5cf6);border-radius:2px}
+.rm-os-label{font-size:.68rem;color:var(--g500)}
+
+/* Augment section */
+.aug-warning{display:flex;align-items:flex-start;gap:12px;background:#fffbeb;border:1px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:.875rem;color:#92400e;line-height:1.6}
+.aug-warn-icon{font-size:1rem;flex-shrink:0;margin-top:.1em}
+.aug-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.aug-card{background:var(--g50);border:1px solid var(--g200);border-radius:16px;padding:24px;transition:box-shadow .2s,transform .2s}
+.aug-card:hover{box-shadow:0 6px 24px rgba(0,0,0,.07);transform:translateY(-2px)}
+.aug-card-tag{font-size:.8rem;font-weight:700;margin-bottom:4px}
+.aug-card-sub{font-size:.72rem;color:var(--g500);font-weight:500;letter-spacing:.02em;text-transform:uppercase;margin-bottom:4px}
+.aug-item{display:flex;align-items:flex-start;gap:7px;font-size:.8rem;color:var(--g600);line-height:1.5}
+.aug-item::before{content:'—';color:var(--g400);flex-shrink:0}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:920px){
+  .phase-grid{grid-template-columns:1fr}
+  .for-grid{grid-template-columns:1fr}
+  .aug-grid{grid-template-columns:1fr}
+  .t-prob-grid{grid-template-columns:1fr}
+  .rm-row{grid-template-columns:1fr 24px 1fr}
+  .prob-grid,.eco-grid,.path-grid,.fgrid,.pre-grid,.tgrid{grid-template-columns:1fr}
+  .eg4{grid-template-columns:repeat(2,1fr)}
+  .eg3{grid-template-columns:repeat(2,1fr);max-width:100%}
+  .sbar-i{grid-template-columns:repeat(2,1fr)}
+  .ftop{grid-template-columns:1fr 1fr}
+  .fgrid{gap:44px}
+}
+@media(max-width:640px){
+  .nav-links .nl{display:none}
+  .hbg{display:flex}
+  .eg4,.eg3{grid-template-columns:1fr;max-width:100%}
+  .nlform{flex-direction:column}
+  .ftop{grid-template-columns:1fr}
+  .sbar-i{grid-template-columns:1fr 1fr}
+  .hact{flex-direction:column;align-items:center}
+  section,.sdark,.sempe,.stesti,.sbar,.snl{padding:72px 20px}
+}
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCE -->
+<div class="ann">
+  <a onclick="nav('cohort')">Apply Now for the Next Cohort</a>
+</div>
+
+<!-- NAV -->
+<nav id="NAV">
+  <div class="nav-i">
+    <div class="logo" onclick="nav('home')">EMPOWER<span>Labs</span></div>
+    <div class="nav-links">
+      <span class="nl" id="nl-cohort" onclick="nav('cohort')">Live Cohort</span>
+      <span class="nl" id="nl-teams" onclick="nav('teams')">For Teams</span>
+      <button class="ncta" onclick="document.querySelector('#page-home #path').scrollIntoView({behavior:'smooth'})">Get Started</button>
+    </div>
+    <button class="hbg" id="HBG" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="MOBMENU">
+  <span class="mob-link" onclick="nav('home');closeMob()">Home</span>
+  <span class="mob-link" onclick="nav('cohort');closeMob()">Live Cohort</span>
+  <span class="mob-link" onclick="nav('teams');closeMob()">For Teams</span>
+  <button class="mob-cta" onclick="nav('cohort');closeMob()">Get Started →</button>
+</div>
+
+<!-- ═══════ HOME ═══════ -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-glow"></div>
+    <div class="particles" id="PTC"></div>
+    <div class="hero-inner">
+      <div class="badge rv"><div class="badge-dot"></div>Application Open for the Next Cohort</div>
+      <h1 class="hh rv d1">Build Your Business Brain&nbsp; <em>Before AI Transformation</em></h1>
+      <p class="hsub rv d2">AI can't augment what isn't documented. EMPOWER creates the process foundation that makes AI adoption actually work—whether you use established operating systems, well-known business frameworks, or build from scratch.</p>
+      <div class="hact rv d3">
+        <button class="bw" onclick="nav('cohort')">Explore Live Cohort</button>
+        <button class="bo" onclick="nav('teams')">For Teams</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TICKER -->
+  <div class="tick-wrap">
+    <div class="tick-lbl">Trusted by forward-thinking organizations</div>
+    <div class="tick-mask">
+      <div class="tick-track">
+        <span class="ti">Walmart</span><span class="ti">Meta</span><span class="ti">FanDuel</span><span class="ti">KOSATEC</span><span class="ti">Veritas Steel</span><span class="ti">RealWealth</span><span class="ti">Rocket Media</span><span class="ti">Davids</span><span class="ti">Sharda Motor</span><span class="ti">ArcStone</span><span class="ti">Bruce &amp; Merrilees</span><span class="ti">Washmen</span><span class="ti">Digital DJ Tips</span><span class="ti">Camp Cocker</span><span class="ti">Langschied</span><span class="ti">The Egg Company</span><span class="ti">cultivate(software)</span><span class="ti">Amber Premium</span>
+        <span class="ti">Walmart</span><span class="ti">Meta</span><span class="ti">FanDuel</span><span class="ti">KOSATEC</span><span class="ti">Veritas Steel</span><span class="ti">RealWealth</span><span class="ti">Rocket Media</span><span class="ti">Davids</span><span class="ti">Sharda Motor</span><span class="ti">ArcStone</span><span class="ti">Bruce &amp; Merrilees</span><span class="ti">Washmen</span><span class="ti">Digital DJ Tips</span><span class="ti">Camp Cocker</span><span class="ti">Langschied</span><span class="ti">The Egg Company</span><span class="ti">cultivate(software)</span><span class="ti">Amber Premium</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROBLEM -->
+  <div class="sdark">
+    <div class="si">
+      <div class="stag rv">The Problem</div>
+      <h2 class="sh rv d1">Why AI Training Hasn't Created Transformation</h2>
+      <div class="prob-grid">
+        <div class="rv-l">
+          <p class="pt3">You've spent years building expertise. But transformation hasn't happened because <strong>every time you use AI, you start from scratch.</strong> The AI doesn't know your pricing, your team structure, your strategic goals, or your documented processes.</p>
+          <h3 class="pt3-h">The Founder Bottleneck: What AI Can't Fix Alone</h3>
+          <p class="pt3">The knowledge that runs your business lives in your head and the heads of a few key people. Your processes aren't written down. Your workflows aren't mapped.</p>
+          <p class="pt3">This is the <strong>founder bottleneck</strong>. No amount of better prompts will fix it.</p>
+          <div class="bquote"><p>"The EMPOWER framework changes that—transforming how you document, systematize, and AI-enable every part of your business."</p></div>
+        </div>
+        <div class="rv-r">
+          <div class="term">
+            <div class="tbar">
+              <div class="tdot" style="background:#ff5f57"></div>
+              <div class="tdot" style="background:#febc2e"></div>
+              <div class="tdot" style="background:#28c840"></div>
+              <div class="ttitle">System Diagnostics</div>
+            </div>
+            <div class="tbody">
+              <div class="tlbl">Status Report</div>
+              <div class="tbadge">Critical Disconnect</div>
+              <div class="trow">No centralized knowledge base</div>
+              <div class="trow">Processes live in people's heads</div>
+              <div class="trow">Data silos between departments</div>
+              <div class="trow">AI outputs are inconsistent &amp; generic</div>
+              <div class="thr"></div>
+              <div class="terr" id="TERR"><span class="tcursor"></span></div>
+              <div class="thr"></div>
+              <div class="tact">ACTION REQUIRED</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="sbar">
+    <div class="sbar-i">
+      <div class="rv"><div class="sv" data-count="65" data-sfx="%">0%</div><div class="sl">of Participants already using established operating systems</div></div>
+      <div class="rv d1"><div class="sv" data-count="30" data-sfx="+">0</div><div class="sl">Active businesses managed by the founder</div></div>
+      <div class="rv d2"><div class="sv" data-count="8">0</div><div class="sl">Core processes across Customer, Money &amp; People Flow</div></div>
+      <div class="rv d3"><div class="sv" data-count="4">0</div><div class="sl">Documentation levels for complete AI readiness</div></div>
+    </div>
+  </div>
+
+  <!-- FRAMEWORK -->
+  <section>
+    <div class="si">
+      <div class="stag rv tc">System Architecture</div>
+      <h2 class="sh rv d1 tc">The EMPOWER Framework: What Must Exist First</h2>
+      <p class="ssub rv d2 tc">Before AI can transform your business, you need three things documented:</p>
+      <div class="pre-grid">
+        <div class="pre-card rv d1">
+          <div class="pre-icon">🗺</div>
+          <div class="pre-tag">Infrastructure</div>
+          <h3>A complete map of your processes</h3>
+          <p>Not whatever happens to be documented. The 8 core processes across Customer Flow, Money Flow, and People Flow.</p>
+        </div>
+        <div class="pre-card rv d2">
+          <div class="pre-icon">📋</div>
+          <div class="pre-tag">Hierarchy</div>
+          <h3>Documentation at four levels</h3>
+          <p>Strategic overview, functional breakdown, step-by-step guides, and daily templates. Not just high-level or overly detailed.</p>
+        </div>
+        <div class="pre-card rv d3">
+          <div class="pre-icon">🎯</div>
+          <div class="pre-tag">Strategy</div>
+          <h3>Clarity on what matters</h3>
+          <p>Not all processes affect value equally. You need to know which ones to fix first to maximize enterprise value.</p>
+        </div>
+      </div>
+      <p class="rv" style="font-size:.9rem;color:var(--g600);margin-top:52px">EMPOWER is how we assess which processes to document first, using seven value drivers:</p>
+    </div>
+  </section>
+
+  <!-- EMPEROR CARDS -->
+  <div class="sempe">
+    <div class="si">
+      <div class="eg4">
+        <div class="ec rv d1 e1"><span class="el">E</span><div class="en">Expansion</div><div class="ea"></div><div class="ed">Scaling operations without complexity. Sale to Delivery &amp; Delivery to Success.</div></div>
+        <div class="ec rv d2 e2"><span class="el">M</span><div class="en">Marketing</div><div class="ea"></div><div class="ed">Brand strength &amp; lead flow. Market to Lead &amp; Success to Market.</div></div>
+        <div class="ec rv d3 e3"><span class="el">P</span><div class="en">Profitability</div><div class="ea"></div><div class="ed">Financial health &amp; efficiency. Financial Performance Management.</div></div>
+        <div class="ec rv d4 e4"><span class="el">O</span><div class="en">Offering</div><div class="ea"></div><div class="ed">Sales effectiveness &amp; conversion. Lead to Sale process optimization.</div></div>
+      </div>
+      <div class="eg3" style="margin-top:12px">
+        <div class="ec rv d1 e5"><span class="el">W</span><div class="en">Workforce</div><div class="ea"></div><div class="ed">Recruit, develop, retain. Hire to Retire talent systems.</div></div>
+        <div class="ec rv d2 e6"><span class="el">E</span><div class="en">Execution</div><div class="ea"></div><div class="ed">Operational backbone. Quality Management &amp; feedback loops.</div></div>
+        <div class="ec rv d3 e7"><span class="el">R</span><div class="en">Robustness</div><div class="ea"></div><div class="ed">Market Position. Product Development &amp; Future-proofing.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ECOSYSTEM -->
+  <section>
+    <div class="si">
+      <div class="stag rv">Ecosystem Compatibility</div>
+      <h2 class="sh rv d1">EMPOWER Works With &nbsp; Your Existing Systems</h2>
+      <p class="ssub rv d2">Scale your existing framework with the high-fidelity process layer it's currently missing.</p>
+      <div class="eco-grid">
+        <div class="eco-card rv-l">
+          <div class="epill">65% of Participants</div>
+          <h3>For those using professional operating systems</h3>
+          <p>EMPOWER fills the <strong>process documentation gap</strong> those systems (like EOS or Scaling Up) advocate for but don't fully equip you to achieve.</p>
+          <p>Your operating system provides accountability structures and meeting rhythms. EMPOWER provides the process taxonomy, documentation methodology, and AI readiness.</p>
+        </div>
+        <div class="eco-card rv-r">
+          <div class="epill">Foundation Builder</div>
+          <h3>For those without a defined operating system</h3>
+          <p>If you're still building your foundation, EMPOWER introduces you to what's available—established operating systems, well-known business frameworks, and others.</p>
+          <p>We give you the foundation to implement one effectively if that's your next step, ensuring you don't build on top of operational chaos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHOOSE YOUR PATH -->
+  <section id="path" style="background:var(--g50)">
+    <div class="si">
+      <h2 class="sh rv tc" style="text-align:center">Choose Your Path</h2>
+      <p class="ssub rv d1 tc" style="text-align:center">How do you want to build your operating framework?</p>
+      <div class="path-grid">
+        <div class="pcard feat rv-l">
+          <div class="ptag">Live Cohort</div>
+          <div class="paud">Founders, Execs &amp; Managers</div>
+          <h3>The intensive program to document your business brain.</h3>
+          <p>Move from founder-dependent to AI-augmented by documenting 8 core processes four levels deep, building your Master Prompt, and creating the foundation for AI transformation.</p>
+          <div class="pfeats">
+            <div class="pfeat">Master Prompt Foundation (3 modules)</div>
+            <div class="pfeat">EMPOWER 101 (5-module sprint, live cohort)</div>
+            <div class="pfeat">Process taxonomy assessment</div>
+            <div class="pfeat">Four-level documentation framework</div>
+            <div class="pfeat">Value driver scoring</div>
+            <div class="pfeat">2-month community access</div>
+          </div>
+          <p class="pnote">Not training. Transformation work. You leave with documented processes and clear priorities, not just certificates.</p>
+          <button class="pbtn pbtn-w" onclick="nav('cohort')">Explore Curriculum</button>
+        </div>
+        <div class="pcard rv-r">
+          <div class="ptag">For Teams</div>
+          <div class="paud">Companies with 10+ Staff</div>
+          <h3>Scale the EMPOWER methodology across your entire organization.</h3>
+          <p>Install a unified documentation system, train your workforce on the Master Prompt methodology, and eliminate the silos that keep AI adoption stuck at the stage.</p>
+          <div class="pfeats">
+            <div class="pfeat">Executive strategy workshop</div>
+            <div class="pfeat">Team-wide EMPOWER 101 access</div>
+            <div class="pfeat">Centralized Master Context engine</div>
+            <div class="pfeat">Guided implementation rollout</div>
+            <div class="pfeat">Department-specific workflow training</div>
+          </div>
+          <p class="pnote">For organizations ready to move beyond individual AI experiments to systematic transformation.</p>
+          <button class="pbtn pbtn-b" onclick="nav('teams')">View Team Roadmap</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <div class="stesti">
+    <div class="si">
+      <h2 class="sh rv tc" style="text-align:center">Voices of Transformation</h2>
+      <p class="ssub rv d1 tc" style="text-align:center">See how leaders across industries are rebuilding their businesses with the EMPOWER framework.</p>
+      <div class="tgrid">
+        <div class="tcard rv d1">
+          <div class="tch">
+            <div class="tava" style="background:#1e3a5f">A</div>
+            <div>
+              <div class="tname">Andreas Sander <span class="tind">Global Innovation</span></div>
+              <div class="trole">Founder &amp; CEO of KOSATEC</div>
+            </div>
+          </div>
+          <blockquote>"The program is exceptional. It's not just a course – it's a transformation. The team at EMPOWER Labs are from another planet – world-class minds, perfectly structured, deeply strategic. It's not about learning more. It's about thinking clearer, moving faster, and building a company that scales without chaos."</blockquote>
+        </div>
+        <div class="tcard rv d2">
+          <div class="tch">
+            <div class="tava" style="background:#1a3d2e">R</div>
+            <div>
+              <div class="tname">Rich Fettke</div>
+              <div class="trole">CEO, Real Wealth Realty <span class="tind">Real Estate Investment</span></div>
+            </div>
+          </div>
+          <blockquote>"It's like we have <strong>hired multiple experts with PhDs in finance, operations, marketing, positioning and technology</strong>...but have <strong>not had to increase our payroll</strong>. My biggest win was creating a <strong>business 'brain' that can support me</strong> (and my business) with strategy, analysis, ideation, structures, workflows and more."</blockquote>
+        </div>
+        <div class="tcard rv d3">
+          <div class="tch">
+            <div class="tava" style="background:#3d1a1a">D</div>
+            <div>
+              <div class="tname">Don Bury <span class="tind">Construction &amp; AI</span></div>
+              <div class="trole">Founder, Insurance Controls</div>
+            </div>
+          </div>
+          <blockquote>"The concept of conducting threat assessments around competitors adopting AI has become a <strong>potent client-getter</strong> for consultants like me, launching me into whole new levels of lead generation. <strong>Anyone who embraces this knowledge and guidance will never look back</strong>."</blockquote>
+        </div>
+        <div class="tcard rv d4">
+          <div class="tch">
+            <div class="tava" style="background:#1a2a3d">M</div>
+            <div>
+              <div class="tname">Michael DeCristofaro <span class="tind">Real Estate Finance</span></div>
+              <div class="trole">Real Wealth Realty, Inc.</div>
+            </div>
+          </div>
+          <blockquote>"This program doesn't just teach you systems - it completely <strong>rewires how you think about running your business</strong>. The EMPOWER Operating System + Master Prompt framework made <strong>putting real processes and SOPs in place easier than I ever thought possible</strong>. We're now <strong>automating tasks that used to drain our team's energy and scaling without adding headcount</strong>. That ROI alone paid for the entire program."</blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOUNDER -->
+  <section>
+    <div class="si">
+      <div class="fgrid">
+        <div class="fimg-wrap rv-l">
+          <div class="fimg">👤</div>
+          <div class="fbadge">30+ Acquisitions · Lifelong Student of Business</div>
+          <div class="fstats">
+            <div class="fstat"><h4>30+</h4><p>Acquisitions</p></div>
+            <div class="fstat"><h4>9-fig</h4><p>Portfolio</p></div>
+          </div>
+        </div>
+        <div class="ftext rv-r">
+          <div class="stag">Built by an Operator, Not a Theorist.</div>
+          <h2>Hayden Miyamoto manages a portfolio of 30+ active businesses. He built the EMPOWER OS to survive the chaos of scaling a 9-figure portfolio.</h2>
+          <p>After seeing businesses invest in AI training programs and adoption platforms without results, Hayden realized the problem wasn't the tools or training. It was the missing foundation. Most businesses don't have their processes documented four levels deep. EMPOWER was built to solve that prerequisite problem first.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <div class="scta">
+    <div class="si">
+      <h2 class="sh rv" style="text-align:center;color:var(--white);margin:0 auto 18px">Stop Experimenting. Start Systematizing.</h2>
+      <p class="ssub rv d1" style="color:var(--g400);text-align:center;margin:0 auto 44px">The difference between businesses that transform and businesses that stall isn't better prompts or fancier tools. It's process depth.<br><br>You can't augment what isn't documented.<br><br>EMPOWER provides the taxonomy, documentation framework, and AI-enabled approach that makes transformation achievable. The result: a documented business brain ready for AI.</p>
+      <div class="ctaact rv d2">
+        <button class="bw" onclick="nav('cohort')">Join Live Cohort</button>
+        <button class="bo" onclick="nav('teams')">Learn More About Teams</button>
+      </div>
+      <div class="ctanote rv d3">
+        <span>Risk-Free 7-Day Refund (Cohort)</span>
+        <span>•</span>
+        <span>Unified Team Systems (Teams)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <div class="snl">
+    <div class="nli rv">
+      <div class="nltag">The EMPOWER Weekly</div>
+      <h3>Build your business brain.</h3>
+      <p>Join a growing community of forward-thinking founders receiving weekly insights on systems, AI governance, and scaling without chaos.</p>
+      <form class="nlform" onsubmit="subNL(event,this)">
+        <input type="email" placeholder="Email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="nlcheck">I agree to the <a href="#">Privacy Policy</a> and consent to receive updates.</p>
+      <p class="nlnote">We hate spam as much as you do. Unsubscribe anytime.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="fi">
+      <div class="ftop">
+        <div class="fbrand">
+          <div class="logo" style="color:var(--white);cursor:pointer" onclick="nav('home')">EMPOWER<span>Labs</span></div>
+          <p>Building the business brain for the next generation of business.</p>
+        </div>
+        <div class="fcol">
+          <h5>Programs</h5>
+          <ul>
+            <li><span onclick="nav('cohort')">Live Cohort</span></li>
+            <li><span onclick="nav('teams')">For Teams</span></li>
+            <li><span>Masterclass Replay</span></li>
+          </ul>
+        </div>
+        <div class="fcol">
+          <h5>Contact</h5>
+          <ul><li><a href="mailto:support@empowerlabs.ai">support@empowerlabs.ai</a></li></ul>
+        </div>
+      </div>
+      <div class="fbot">
+        <p>© 2026 EMPOWER Labs. All rights reserved.</p>
+        <div class="fblinks">
+          <span>Cookie Preferences</span>
+          <span>Terms of Service</span>
+          <span>Privacy Policy</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══════ COHORT PAGE ═══════ -->
+<div class="page" id="page-cohort">
+
+  <!-- HERO -->
+  <div class="hero" style="padding-bottom:0">
+    <div class="hero-glow"></div>
+    <div class="hero-inner" style="padding-bottom:72px">
+      <div class="badge rv"><div class="badge-dot"></div>Cohort Program</div>
+      <h1 class="hh rv d1">Document Your Business<br><em>Brain in 5 Weeks.</em></h1>
+      <p class="hsub rv d2">The only program that takes you from founder-dependent to AI-augmented by documenting your 8 core business processes four levels deep — live, with a cohort of peers doing the same work.</p>
+      <div class="hact rv d3">
+        <button class="bw">Apply for the Next Cohort</button>
+        <button class="bo" onclick="nav('teams')">For Teams Instead</button>
+      </div>
+    </div>
+    <div class="cohort-steps rv" style="position:relative;z-index:1">
+      <div class="cs-inner">
+        <div class="cs-step cs-active"><div class="cs-num">1</div><div class="cs-label">Master Prompt<br>Foundation</div></div>
+        <div class="cs-connector"></div>
+        <div class="cs-step"><div class="cs-num">2</div><div class="cs-label">Assessment &amp;<br>Taxonomy</div></div>
+        <div class="cs-connector"></div>
+        <div class="cs-step"><div class="cs-num">3</div><div class="cs-label">Documentation<br>Sprint</div></div>
+        <div class="cs-connector"></div>
+        <div class="cs-step"><div class="cs-num">4</div><div class="cs-label">AI Integration<br>Handoff</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY AI TRAINING HASN'T CREATED TRANSFORMATION -->
+  <section>
+    <div class="si">
+      <div class="stag rv">The Problem</div>
+      <h2 class="sh rv d1">Why AI Training Hasn't Created <span style="color:var(--blue)">Transformation</span></h2>
+      <div class="c-prob-grid">
+        <div class="rv-l">
+          <p style="font-size:.95rem;color:var(--g600);line-height:1.75;margin-bottom:16px">You've been through the AI courses. You've watched the tutorials. You've experimented with the tools. But your business hasn't transformed — because none of it addressed the real problem.</p>
+          <p style="font-size:.95rem;color:var(--g600);line-height:1.75;margin-bottom:16px">The issue isn't the AI. The issue is that AI has nothing to work with. No documented processes. No context. No systematic foundation. Every prompt starts from zero because your business knowledge lives in your head — not in a system.</p>
+          <p style="font-size:.95rem;color:var(--g600);line-height:1.75">EMPOWER addresses this prerequisite problem first. Documentation before augmentation. Foundation before AI.</p>
+        </div>
+        <div class="rv-r">
+          <div style="background:var(--g50);border:1px solid var(--g200);border-radius:16px;padding:24px">
+            <div style="font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--g500);margin-bottom:16px">Why Most AI Adoption Fails</div>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;align-items:flex-start;gap:10px;font-size:.875rem;color:var(--g600)"><span style="color:var(--red);font-weight:700;flex-shrink:0">✗</span>Using AI tools without a documented foundation</div>
+              <div style="display:flex;align-items:flex-start;gap:10px;font-size:.875rem;color:var(--g600)"><span style="color:var(--red);font-weight:700;flex-shrink:0">✗</span>Every prompt starting from zero — no shared context</div>
+              <div style="display:flex;align-items:flex-start;gap:10px;font-size:.875rem;color:var(--g600)"><span style="color:var(--red);font-weight:700;flex-shrink:0">✗</span>Tribal knowledge locked in founders and key people</div>
+              <div style="display:flex;align-items:flex-start;gap:10px;font-size:.875rem;color:var(--g600)"><span style="color:var(--red);font-weight:700;flex-shrink:0">✗</span>AI outputs inconsistent because inputs are inconsistent</div>
+              <div style="display:flex;align-items:flex-start;gap:10px;font-size:.875rem;color:var(--g600)"><span style="color:var(--red);font-weight:700;flex-shrink:0">✗</span>No system for capturing and scaling what works</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <div class="cquote-wrap"><div class="si"><div class="cquote rv">"We won't get you out of business. But a competitor who documents their processes and then applies AI might."</div></div></div>
+
+  <!-- THE SOLUTION -->
+  <section>
+    <div class="si">
+      <div class="stag rv tc" style="text-align:center">The Solution</div>
+      <h2 class="sh rv d1 tc" style="text-align:center"><span style="color:var(--blue)">Document First,</span> Transform Second</h2>
+      <p class="ssub rv d2 tc" style="text-align:center;margin:0 auto 52px">Most AI programs teach you to use tools. EMPOWER teaches you to build the foundation that makes every tool you'll ever use dramatically more effective.</p>
+      <div class="sol-grid">
+        <div class="sol-card rv-l"><div class="sol-step">Without Foundation</div><div class="sol-items"><div class="sol-item sol-bad">AI gives generic outputs because it has no context</div><div class="sol-item sol-bad">Every team member prompts differently</div><div class="sol-item sol-bad">Knowledge stays in founders' heads</div><div class="sol-item sol-bad">Can't delegate because nothing is documented</div><div class="sol-item sol-bad">AI adoption stays at the experiment phase</div></div></div>
+        <div class="sol-card rv-r sol-card-good"><div class="sol-step" style="color:#22c55e">With EMPOWER Foundation</div><div class="sol-items"><div class="sol-item sol-good">AI outputs are specific, on-brand, and accurate</div><div class="sol-item sol-good">Every team member has the same context</div><div class="sol-item sol-good">Knowledge lives in documented systems</div><div class="sol-item sol-good">Delegation becomes straightforward</div><div class="sol-item sol-good">AI transformation becomes achievable</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE FOUNDER BOTTLENECK -->
+  <div class="sdark">
+    <div class="si">
+      <div class="c-bot-grid">
+        <div class="rv-l">
+          <div class="stag" style="color:var(--blue-xl)">The Core Problem</div>
+          <h2 class="sh" style="color:var(--white)">The Founder Bottleneck:<br>What AI Can't Fix Alone</h2>
+          <p style="color:var(--g400);font-size:.95rem;line-height:1.75;margin-bottom:16px">The knowledge that runs your business lives in your head and the heads of a few key people. Your processes aren't written down. Your workflows aren't mapped.</p>
+          <p style="color:var(--g400);font-size:.95rem;line-height:1.75;margin-bottom:16px">This isn't an AI problem. No amount of better prompts will extract that knowledge and turn it into a scalable system. That requires deliberate documentation work — exactly what EMPOWER is built to do.</p>
+          <p style="color:var(--g400);font-size:.95rem;line-height:1.75">AI amplifies what's already documented. It cannot replace documentation that doesn't exist.</p>
+        </div>
+        <div class="rv-r">
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="background:#111;border:1px solid var(--g800);border-radius:12px;padding:18px"><div style="font-size:.72rem;font-weight:700;color:var(--g600);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px">Current State — Most Businesses</div><div style="display:flex;flex-direction:column;gap:8px"><div style="display:flex;align-items:center;gap:8px;font-size:.83rem;color:var(--g500)"><span style="color:var(--red)">✗</span>Core processes undocumented</div><div style="display:flex;align-items:center;gap:8px;font-size:.83rem;color:var(--g500)"><span style="color:var(--red)">✗</span>AI context missing or inconsistent</div><div style="display:flex;align-items:center;gap:8px;font-size:.83rem;color:var(--g500)"><span style="color:var(--red)">✗</span>Founder is single point of failure</div><div style="display:flex;align-items:center;gap:8px;font-size:.83rem;color:var(--g500)"><span style="color:var(--red)">✗</span>Knowledge transfer takes months or never happens</div></div></div>
+            <div style="background:#0a180a;border:1px solid #1a3a1a;border-radius:12px;padding:18px"><div style="font-size:.72rem;font-weight:700;color:#22c55e;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px">After EMPOWER</div><div style="display:flex;flex-direction:column;gap:8px"><div style="display:flex;align-items:center;gap:8px;font-size:.83rem;color:#86efac"><span style="color:#22c55e">✓</span>8 core processes documented 4 levels deep</div><div style="display:flex;align-items:center;gap:8px;font-size:.83rem;color:#86efac"><span style="color:#22c55e">✓</span>Master Prompt built with full business context</div><div style="display:flex;align-items:center;gap:8px;font-size:.83rem;color:#86efac"><span style="color:#22c55e">✓</span>AI outputs that are specific and on-brand</div><div style="display:flex;align-items:center;gap:8px;font-size:.83rem;color:#86efac"><span style="color:#22c55e">✓</span>Business knowledge captured and scalable</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE TWO PILLARS -->
+  <section>
+    <div class="si">
+      <div class="stag rv tc" style="text-align:center">The Methodology</div>
+      <h2 class="sh rv d1 tc" style="text-align:center">The Two Pillars of <span style="color:var(--blue)">Documented</span> Transformation</h2>
+      <p class="ssub rv d2 tc" style="text-align:center;margin:0 auto 52px">Two complementary systems that work together to build your documented business brain.</p>
+      <div class="pillars-grid">
+        <div class="pillar-card rv-l">
+          <div class="pillar-img pillar-img-1"><div class="pillar-book"><div class="pillar-book-spine"></div><div class="pillar-book-front"><div style="font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:8px">MASTER PROMPT</div><div style="font-size:.95rem;font-weight:800;color:var(--white);line-height:1.3">Protect That.<br>Build Everything.</div></div></div></div>
+          <h3 class="pillar-title">The Master Prompt Method</h3>
+          <p class="pillar-desc">A structured process for extracting and documenting your Business DNA — your ICP, voice, pricing, competitive positioning, and strategic context — into a reusable AI context engine. Every AI interaction becomes more accurate, more on-brand, and more aligned with your actual business.</p>
+        </div>
+        <div class="pillar-card rv-r">
+          <div class="pillar-img pillar-img-2"><div style="text-align:center"><div style="font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#60a5fa;margin-bottom:10px">THE EMPOWER OS</div><div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:6px"><div style="background:#1a2540;border-radius:6px;padding:8px;font-size:.65rem;font-weight:800;color:#e8eaf2;text-align:center">E</div><div style="background:#1a2540;border-radius:6px;padding:8px;font-size:.65rem;font-weight:800;color:#e8eaf2;text-align:center">M</div><div style="background:#1a2540;border-radius:6px;padding:8px;font-size:.65rem;font-weight:800;color:#e8eaf2;text-align:center">P</div><div style="background:#1a2540;border-radius:6px;padding:8px;font-size:.65rem;font-weight:800;color:#e8eaf2;text-align:center">O</div></div><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px"><div style="background:#1a2540;border-radius:6px;padding:8px;font-size:.65rem;font-weight:800;color:#e8eaf2;text-align:center">W</div><div style="background:#1a2540;border-radius:6px;padding:8px;font-size:.65rem;font-weight:800;color:#e8eaf2;text-align:center">E</div><div style="background:#1a2540;border-radius:6px;padding:8px;font-size:.65rem;font-weight:800;color:#e8eaf2;text-align:center">R</div></div></div></div>
+          <h3 class="pillar-title">The EMPOWER OS Framework</h3>
+          <p class="pillar-desc">A seven-pillar assessment framework for identifying which of your 8 core business processes to document first — using value driver scoring across Expansion, Marketing, Profitability, Offering, Workforce, Execution, and Robustness.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FROM ASSESSMENT TO DOCUMENTATION TO AUGMENTATION -->
+  <div style="background:var(--black);padding:96px 24px">
+    <div class="si">
+      <div class="stag rv tc" style="color:var(--blue-xl);text-align:center">The Full Program</div>
+      <h2 class="sh rv d1 tc" style="color:var(--white);text-align:center;margin-bottom:56px">From Assessment to Documentation<br>to <span style="color:#60a5fa">Augmentation</span></h2>
+      <div class="atda-grid">
+        <div class="atda-col rv-l"><div class="atda-section-label">What we're doing</div><h3 class="atda-h">Assessment, Tools and Framework</h3><div class="atda-items"><div class="atda-item">The Thinking Four-Level Documentation Framework</div><div class="atda-item">The Thinking of Family of AI Tools and Platforms</div><div class="atda-item">The Four Levels of Business Documentation</div><div class="atda-item">Building Your EMPOWER OS Assessment Score</div></div></div>
+        <div class="atda-col rv-r"><div class="atda-section-label">What we're building</div><h3 class="atda-h">Document Foundation (Four Level Framework)</h3><div class="atda-items"><div class="atda-item">Profiling Stories and Core Business Narrative</div><div class="atda-item">Business DNA Master Prompt (Full Context)</div><div class="atda-item">Customer Flow Documentation — 4 levels deep</div><div class="atda-item">Money Flow Documentation — 4 levels deep</div><div class="atda-item">People Flow Documentation — 4 levels deep</div></div></div>
+        <div class="atda-col rv-l" style="margin-top:32px"><div class="atda-section-label">What we're building</div><h3 class="atda-h">AI-Augmented Business Systems</h3><div class="atda-items"><div class="atda-item">Bundled AI tools connected to documented processes</div><div class="atda-item">Business operations — automated and AI-monitored</div><div class="atda-item">Retention &amp; Loyalty systems built on documentation</div><div class="atda-item">Revenue Age — AI-augmented growth infrastructure</div><div class="atda-item">Repeat Market systems — scalable without founder</div></div></div>
+        <div class="atda-col rv-r" style="margin-top:32px"><div class="atda-section-label">Integration</div><h3 class="atda-h">Capability Integration</h3><div class="atda-items"><div class="atda-item">Bundled 4 Integration options per process area</div><div class="atda-item">Strategic Alignment session with AI governance</div><div class="atda-item">Business ops automation — decisions to AI</div><div class="atda-item">Retention &amp; Loyalty — AI-managed touchpoints</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT YOU ACTUALLY LEAVE WITH -->
+  <section>
+    <div class="si">
+      <div class="stag rv tc" style="text-align:center">The Deliverables</div>
+      <h2 class="sh rv d1 tc" style="text-align:center">What You Actually <span style="color:var(--blue)">Leave With</span></h2>
+      <div style="font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--g500);margin:48px 0 20px" class="rv">Tangible Documentation Deliverables</div>
+      <div class="deliv-grid">
+        <div class="deliv-card rv d1"><div class="deliv-icon">📄</div><h4 class="deliv-title">Master Prompt Document</h4><p class="deliv-desc">Your complete Business DNA in a reusable AI context engine. Every prompt, every team member, every AI tool — fed from the same documented foundation.</p></div>
+        <div class="deliv-card rv d2"><div class="deliv-icon">🗺</div><h4 class="deliv-title">Business Process Map</h4><p class="deliv-desc">A visual map of your 8 core processes — Customer Flow, Money Flow, and People Flow — showing how they connect and where documentation gaps exist.</p></div>
+        <div class="deliv-card rv d3"><div class="deliv-icon">📋</div><h4 class="deliv-title">Business Process Documentation</h4><p class="deliv-desc">Your core processes documented four levels deep — from high-level Core Process maps down to the daily Forms and Templates your team executes against.</p></div>
+        <div class="deliv-card rv d1"><div class="deliv-icon">🎯</div><h4 class="deliv-title">EMPOWER OS Score Report</h4><p class="deliv-desc">Your scored assessment across all seven EMPOWER value drivers — a prioritized roadmap showing which processes to document next and why.</p></div>
+        <div class="deliv-card rv d2"><div class="deliv-icon">⚡</div><h4 class="deliv-title">Integration Roadmap</h4><p class="deliv-desc">A blueprint for connecting your documented processes to AI tools, automation platforms, and the augmentation opportunities available to your business.</p></div>
+        <div class="deliv-card rv d3"><div class="deliv-icon">👥</div><h4 class="deliv-title">Community Access</h4><p class="deliv-desc">Two months of cohort community access — peer accountability, process reviews, live Q&amp;A with the EMPOWER team, and a library of templates and frameworks.</p></div>
+      </div>
+      <div style="font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--g500);margin:48px 0 20px" class="rv">Capability Gains</div>
+      <div class="capgain-grid">
+        <div class="capgain rv d1"><span class="capgain-arrow">→</span><div><strong>Strategic Thinking Upgrade</strong><p>You'll understand your business at a systems level — seeing the processes, the flows, and the leverage points you couldn't see before.</p></div></div>
+        <div class="capgain rv d2"><span class="capgain-arrow">→</span><div><strong>AI Prompting Mastery</strong><p>With a documented foundation, every AI interaction becomes dramatically more effective. Your prompts have context. Your outputs have consistency.</p></div></div>
+        <div class="capgain rv d1"><span class="capgain-arrow">→</span><div><strong>Delegation Capability</strong><p>Documented processes are delegatable processes. You'll leave with the foundation to remove yourself from decisions that currently require your presence.</p></div></div>
+        <div class="capgain rv d2"><span class="capgain-arrow">→</span><div><strong>Scaling Without Chaos</strong><p>Growth without documentation creates chaos. EMPOWER gives you the foundation to scale cleanly — adding people and AI without adding confusion.</p></div></div>
+      </div>
+      <div class="is-grid" style="margin-top:48px">
+        <div class="is-card is-yes rv-l"><h3 class="is-title">What This <span style="color:#22c55e">IS</span></h3><div class="is-items"><div class="is-item is-item-y">Deliberate documentation work done live, in a cohort</div><div class="is-item is-item-y">Structured methodology for extracting and capturing business knowledge</div><div class="is-item is-item-y">A foundation-building program — prerequisite to AI transformation</div><div class="is-item is-item-y">Real deliverables: documents, maps, frameworks you keep forever</div><div class="is-item is-item-y">Peer accountability with founders doing the same work</div></div></div>
+        <div class="is-card is-no rv-r"><h3 class="is-title">What This is <span style="color:#ef4444">NOT</span></h3><div class="is-items"><div class="is-item is-item-n">An AI tools course or prompt engineering training</div><div class="is-item is-item-n">A passive content library you watch at your own pace</div><div class="is-item is-item-n">A consulting engagement where someone else does the work</div><div class="is-item is-item-n">A certification program with no real-world output</div><div class="is-item is-item-n">A quick fix — this is deliberate, structured transformation work</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUILT BY OPERATORS -->
+  <div class="sdark">
+    <div class="si">
+      <div class="stag rv tc" style="color:var(--blue-xl);text-align:center">Built By Operators Who <span style="color:#60a5fa">Solved</span> This Problem First</div>
+      <p class="ssub rv d1 tc" style="color:var(--g400);text-align:center;margin:16px auto 56px">The EMPOWER framework wasn't designed by academics or consultants. It was built by operators who faced the same problem — and documented their way out of it.</p>
+      <div class="ops-grid">
+        <div class="op-card rv-l"><div class="op-img">👤</div><h3 class="op-name">Hayden Miyamoto</h3><div class="op-role">Founder, EMPOWER Labs</div><p class="op-bio">Manages a portfolio of 30+ active businesses. Built the EMPOWER OS after watching AI investments fail across his portfolio — always due to missing documentation, never due to missing tools.</p></div>
+        <div class="op-card rv-r"><div class="op-img" style="background:linear-gradient(145deg,#1a2e1a,#0f1a0f)">👤</div><h3 class="op-name">Josh Collins</h3><div class="op-role">Co-Creator, EMPOWER Labs</div><p class="op-bio">Operator and documentation systems architect. Co-built the EMPOWER methodology from real business transformation work — not theory. Specializes in translating complex operations into AI-ready documentation frameworks.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESULTS -->
+  <section style="background:var(--g50)">
+    <div class="si">
+      <div class="stag rv tc" style="text-align:center">Proof</div>
+      <h2 class="sh rv d1 tc" style="text-align:center">Results, Not Theory.</h2>
+      <div class="res-grid">
+        <div class="res-stat rv d1"><div class="res-val" data-count="178">0</div><div class="res-label">Participants who have completed the EMPOWER program</div></div>
+        <div class="res-stat rv d2"><div class="res-val" data-count="106">0</div><div class="res-label">Businesses with documented processes across 3+ departments</div></div>
+        <div class="res-stat rv d3"><div class="res-val" data-count="75" data-sfx=".5%">0</div><div class="res-label">Of participants report measurable AI output improvement post-program</div></div>
+        <div class="res-stat rv d4"><div class="res-val" data-count="60">0</div><div class="res-label">Average days from program start to first AI-augmented process live</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="scta"><div class="si"><h2 class="sh rv" style="text-align:center;color:var(--white);margin:0 auto 18px">Ready to Document Your<br>Business Brain?</h2><p class="ssub rv d1" style="color:var(--g400);text-align:center;margin:0 auto 44px">Applications are reviewed on a rolling basis. Spots are limited per cohort to ensure quality of work and peer accountability.</p><div class="ctaact rv d2"><button class="bw">Apply for the Next Cohort</button><button class="bo" onclick="nav('teams')">For Teams Instead</button></div><div class="ctanote rv d3"><span>Risk-Free 7-Day Refund</span><span>•</span><span>Live cohort sessions</span><span>•</span><span>Real deliverables</span></div></div></div>
+
+  <div class="snl"><div class="nli rv"><div class="nltag">The EMPOWER Weekly</div><h3>Build your business brain.</h3><p>Join a growing community of forward-thinking founders receiving weekly insights on systems, AI governance, and scaling without chaos.</p><form class="nlform" onsubmit="subNL(event,this)"><input type="email" placeholder="Email address" required><button type="submit">Subscribe</button></form><p class="nlcheck">I agree to the <a href="#">Privacy Policy</a> and consent to receive updates.</p><p class="nlnote">We hate spam as much as you do. Unsubscribe anytime.</p></div></div>
+
+  <footer><div class="fi"><div class="ftop"><div class="fbrand"><div class="logo" style="color:var(--white);cursor:pointer" onclick="nav('home')">EMPOWER<span>Labs</span></div><p>Building the business brain for the next generation of business.</p></div><div class="fcol"><h5>Programs</h5><ul><li><span onclick="nav('cohort')">Live Cohort</span></li><li><span onclick="nav('teams')">For Teams</span></li><li><span>Masterclass Replay</span></li></ul></div><div class="fcol"><h5>Contact</h5><ul><li><a href="mailto:support@empowerlabs.ai">support@empowerlabs.ai</a></li></ul></div></div><div class="fbot"><p>© 2026 EMPOWER Labs. All rights reserved.</p><div class="fblinks"><span>Cookie Preferences</span><span>Terms of Service</span><span>Privacy Policy</span></div></div></div></footer>
+</div>
+
+<!-- ═══════ TEAMS PAGE ═══════ -->
+<div class="page" id="page-teams">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+      <div class="badge rv"><div class="badge-dot"></div>For Teams</div>
+      <h1 class="hh rv d1">Document Your<br>Organization's Brain<br><em>Before AI Transformation</em></h1>
+      <p class="hsub rv d2">Scale the EMPOWER methodology across your entire workforce. Move from scattered AI experiments to systematic documentation that makes AI adoption actually work.</p>
+      <div class="hact rv d3">
+        <button class="bw">Enroll My Team</button>
+        <button class="bo">View Roadmap</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TICKER -->
+  <div class="tick-wrap">
+    <div class="tick-lbl">Trusted by forward-thinking organizations</div>
+    <div class="tick-mask">
+      <div class="tick-track">
+        <span class="ti">Walmart</span><span class="ti">Meta</span><span class="ti">FanDuel</span><span class="ti">KOSATEC</span><span class="ti">Veritas Steel</span><span class="ti">RealWealth</span><span class="ti">Rocket Media</span><span class="ti">Davids</span><span class="ti">Sharda Motor</span><span class="ti">ArcStone</span><span class="ti">Bruce &amp; Merrilees</span><span class="ti">Washmen</span><span class="ti">Digital DJ Tips</span><span class="ti">Camp Cocker</span><span class="ti">Langschied</span><span class="ti">The Egg Company</span><span class="ti">cultivate(software)</span><span class="ti">Amber Premium</span>
+        <span class="ti">Walmart</span><span class="ti">Meta</span><span class="ti">FanDuel</span><span class="ti">KOSATEC</span><span class="ti">Veritas Steel</span><span class="ti">RealWealth</span><span class="ti">Rocket Media</span><span class="ti">Davids</span><span class="ti">Sharda Motor</span><span class="ti">ArcStone</span><span class="ti">Bruce &amp; Merrilees</span><span class="ti">Washmen</span><span class="ti">Digital DJ Tips</span><span class="ti">Camp Cocker</span><span class="ti">Langschied</span><span class="ti">The Egg Company</span><span class="ti">cultivate(software)</span><span class="ti">Amber Premium</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY ENTERPRISE AI FAILS -->
+  <section>
+    <div class="si">
+      <div class="t-prob-grid">
+        <div class="rv-l">
+          <div class="stag">The Problem</div>
+          <h2 class="sh">Why Enterprise AI Adoption Fails: <span style="color:var(--blue)">The Documentation Gap</span></h2>
+          <p style="font-size:.95rem;color:var(--g600);line-height:1.75;margin-bottom:16px">"The key reason something like AI in X is not working the way AI should work."</p>
+          <p style="font-size:.95rem;color:var(--g600);line-height:1.75;margin-bottom:16px">This isn't an adoption problem. It's an <strong>infrastructure problem</strong>.</p>
+          <p style="font-size:.95rem;color:var(--g600);line-height:1.75;margin-bottom:16px">Every department is running its own AI experiments. Some people are using it daily, others never. But the real problem isn't enthusiasm — it's that AI has nothing to work with. No documented processes. No shared context. No systematic foundation.</p>
+          <p style="font-size:.95rem;color:var(--g600);line-height:1.75">Until your organization's knowledge is documented, AI adoption will stay stuck at the experimentation stage — impressive demos, no transformation.</p>
+        </div>
+        <div class="rv-r">
+          <div class="term">
+            <div class="tbar">
+              <div class="tdot" style="background:#ff5f57"></div>
+              <div class="tdot" style="background:#febc2e"></div>
+              <div class="tdot" style="background:#28c840"></div>
+              <div class="ttitle">Enterprise AI Audit</div>
+            </div>
+            <div class="tbody">
+              <div class="tlbl">Organization Status</div>
+              <div class="tbadge" style="background:rgba(239,68,68,.14);color:#f87171;border-color:rgba(239,68,68,.24)">⚠ Documentation Gap Detected</div>
+              <div class="trow">AI tools deployed — no documented context</div>
+              <div class="trow">Department silos preventing knowledge transfer</div>
+              <div class="trow">No unified Master Prompt or Business DNA</div>
+              <div class="trow">Tribal knowledge locked in individual heads</div>
+              <div class="thr"></div>
+              <div class="terr">ADOPTION_BLOCKED: Missing foundation layer</div>
+              <div class="thr"></div>
+              <div class="tact">RECOMMENDED: Install documentation system first</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE EMPOWER FOR TEAMS METHODOLOGY -->
+  <div style="background:#080e1c;padding:96px 24px">
+    <div class="si">
+      <div class="stag rv tc" style="color:#60a5fa;text-align:center">The EMPOWER For Teams Methodology</div>
+      <h2 class="sh rv d1 tc" style="color:var(--white);text-align:center;margin-bottom:12px">We don't just teach prompting.<br>We install a <em style="font-style:normal;color:#60a5fa">documentation system</em> built for scale.</h2>
+      <p style="text-align:center;color:#6b7a99;font-size:.95rem;margin-bottom:64px;max-width:600px;margin-left:auto;margin-right:auto" class="rv d2">We don't just teach prompting. We install a documentation system built for scale, security, and systematic AI adoption across your entire workforce.</p>
+
+      <!-- Stage 1 -->
+      <div class="stage-badge rv">Stage 1: Foundation &amp; Alignment</div>
+      <div class="phase-grid rv d1">
+        <div class="phase-card">
+          <div class="phase-num">Phase 0</div>
+          <h3 class="phase-title">Onboarding &amp; Change Management</h3>
+          <p class="phase-desc">Aligning leadership, setting expectations, and preparing your team for a documentation-first transformation. We handle the change management so you don't have to.</p>
+        </div>
+        <div class="phase-card">
+          <div class="phase-num">Phase Empower 101</div>
+          <h3 class="phase-title">EMPOWER 101</h3>
+          <p class="phase-desc">Your entire team goes through the EMPOWER 101 sprint together. Everyone learns the same taxonomy, uses the same documentation language, and builds from a shared foundation.</p>
+        </div>
+        <div class="phase-card">
+          <div class="phase-num">Phase 2</div>
+          <h3 class="phase-title">Strategic Alignment</h3>
+          <p class="phase-desc">Map your highest-value processes using the EMPOWER value driver scoring system. Identify where documentation creates the most enterprise value before writing a single SOP.</p>
+        </div>
+      </div>
+
+      <!-- Stage 2 -->
+      <div class="stage-badge rv" style="margin-top:40px">Stage 2: Implementation &amp; Scale</div>
+      <div class="phase-grid rv d1">
+        <div class="phase-card">
+          <div class="phase-num">Phase 3</div>
+          <h3 class="phase-title">AI-Powered Growth Engine</h3>
+          <p class="phase-desc">Document and AI-augment your revenue processes. Lead scoring, automated outreach, CRM enrichment, and proposal generation — all built on your documented foundation.</p>
+        </div>
+        <div class="phase-card">
+          <div class="phase-num">Phase 4</div>
+          <h3 class="phase-title">AI-Driven Operations Core</h3>
+          <p class="phase-desc">SOP execution, quality management, contract analysis, and workflow integration — systematized across departments with AI enforcement built in from day one.</p>
+        </div>
+        <div class="phase-card">
+          <div class="phase-num">Phase 5</div>
+          <h3 class="phase-title">AI-Augmented People System</h3>
+          <p class="phase-desc">Recruiting, onboarding, performance reviews, and L&amp;D pathways — all running on documented frameworks that AI can execute, monitor, and improve continuously.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOR / NOT FOR -->
+  <div style="background:#0d1117;padding:96px 24px">
+    <div class="si">
+      <div class="for-grid">
+        <div class="for-card for-yes rv-l">
+          <h3 class="for-title">This Program Is <span style="color:#22c55e">For</span><br>Organizations That...</h3>
+          <div class="for-items">
+            <div class="for-item for-item-y">Have 10–45 employees with valuable tribal knowledge locked in a few key people</div>
+            <div class="for-item for-item-y">Have 2–3 people who are single points of failure for critical decisions or processes</div>
+            <div class="for-item for-item-y">Are running systems (EOS, Scaling Up, etc.) but missing the process documentation layer</div>
+            <div class="for-item for-item-y">Have invested in AI infrastructure but can't deploy it systematically across the team</div>
+            <div class="for-item for-item-y">Need knowledge capture at the highest levels before key people leave or scale breaks things</div>
+          </div>
+        </div>
+        <div class="for-card for-no rv-r">
+          <h3 class="for-title">This Program Is <span style="color:#ef4444">NOT For</span><br>Organizations That...</h3>
+          <div class="for-items">
+            <div class="for-item for-item-n">Just want something finished in 2 weeks without real documentation work being done</div>
+            <div class="for-item for-item-n">Aren't creating a long-term relationship with their documentation and AI systems</div>
+            <div class="for-item for-item-n">Need just-in-time documentation without a systematic approach to knowledge capture</div>
+            <div class="for-item for-item-n">Have fewer than 5 employees without real process complexity that needs documenting</div>
+            <div class="for-item for-item-n">Have a team that isn't bought into the documentation-first approach to AI transformation</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE TRANSFORMATION ROADMAP -->
+  <section style="background:var(--g50)">
+    <div class="si">
+      <div class="stag rv tc" style="text-align:center">The Transformation Roadmap</div>
+      <h2 class="sh rv d1 tc" style="text-align:center">The Transformation Roadmap</h2>
+      <p class="ssub rv d2 tc" style="text-align:center;margin:0 auto 64px">An eight-week structured implementation that transforms AI adoption across your entire organization.</p>
+
+      <div class="roadmap">
+        <div class="roadmap-line"></div>
+
+        <div class="rm-row rv">
+          <div class="rm-card rm-left">
+            <div class="rm-phase">Phase 0</div>
+            <h3>Onboarding &amp; Change Management</h3>
+            <p>Executive alignment session. Team communication plan. Roles and responsibilities assigned. Documentation infrastructure set up. Change management protocol activated.</p>
+          </div>
+          <div class="rm-dot"></div>
+          <div class="rm-right rm-visual">
+            <div class="rm-os-card">
+              <div class="rm-os-header"><span class="rm-os-dot" style="background:#ff5f57"></span><span class="rm-os-dot" style="background:#febc2e"></span><span class="rm-os-dot" style="background:#28c840"></span></div>
+              <div class="rm-os-title">EMPOWER OS</div>
+              <div class="rm-os-sub">Team Documentation System</div>
+              <div class="rm-os-bar"><div class="rm-os-fill" style="width:15%"></div></div>
+              <div class="rm-os-label">Foundation: 15% complete</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rm-row rv">
+          <div class="rm-left rm-visual">
+            <div class="rm-os-card" style="background:#0d1526">
+              <div class="rm-os-header"><span class="rm-os-dot" style="background:#ff5f57"></span><span class="rm-os-dot" style="background:#febc2e"></span><span class="rm-os-dot" style="background:#28c840"></span></div>
+              <div class="rm-os-title" style="color:#e8eaf2">EMPOWER 101</div>
+              <div class="rm-os-sub" style="color:#6b7a99">Team Sprint Underway</div>
+              <div class="rm-os-bar" style="background:#1a2540"><div class="rm-os-fill" style="width:35%;background:linear-gradient(90deg,#3b82f6,#8b5cf6)"></div></div>
+              <div class="rm-os-label" style="color:#6b7a99">Module 2 of 5 in progress</div>
+            </div>
+          </div>
+          <div class="rm-dot"></div>
+          <div class="rm-card rm-right">
+            <div class="rm-phase">Phase 1</div>
+            <h3>EMPOWER 101</h3>
+            <p>Full team completes the EMPOWER 101 sprint. Master Prompt Foundation built for the organization. Process taxonomy introduced. Value driver scoring completed. Documentation hierarchy established.</p>
+          </div>
+        </div>
+
+        <div class="rm-row rv">
+          <div class="rm-card rm-left">
+            <div class="rm-phase">Phase 2</div>
+            <h3>Strategic Alignment</h3>
+            <p>EMPOWER value driver scoring across all seven pillars. Highest-leverage processes identified. Documentation priority map created. Department leads assigned to their process ownership areas.</p>
+          </div>
+          <div class="rm-dot"></div>
+          <div class="rm-right rm-visual">
+            <div class="rm-os-card">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px">
+                <div style="background:#f4f4f5;border-radius:6px;padding:8px;font-size:.7rem;font-weight:700;color:#3f3f46">Growth Engine<br><span style="color:#2563eb;font-size:.8rem">87</span></div>
+                <div style="background:#f4f4f5;border-radius:6px;padding:8px;font-size:.7rem;font-weight:700;color:#3f3f46">Marketing<br><span style="color:#8b5cf6;font-size:.8rem">74</span></div>
+                <div style="background:#f4f4f5;border-radius:6px;padding:8px;font-size:.7rem;font-weight:700;color:#3f3f46">Operations<br><span style="color:#10b981;font-size:.8rem">92</span></div>
+                <div style="background:#f4f4f5;border-radius:6px;padding:8px;font-size:.7rem;font-weight:700;color:#3f3f46">People OS<br><span style="color:#f59e0b;font-size:.8rem">61</span></div>
+              </div>
+              <div class="rm-os-label" style="text-align:center">Value Driver Score Report</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rm-row rv">
+          <div class="rm-left rm-visual">
+            <div class="rm-os-card" style="background:#0d1526">
+              <div class="rm-os-title" style="color:#e8eaf2;font-size:.8rem;margin-bottom:8px">Growth Engine Processes</div>
+              <div style="display:flex;flex-direction:column;gap:5px">
+                <div style="display:flex;align-items:center;gap:6px;font-size:.72rem;color:#6b7a99"><span style="color:#22c55e">✓</span> Lead Scoring SOP — Level 3 Complete</div>
+                <div style="display:flex;align-items:center;gap:6px;font-size:.72rem;color:#6b7a99"><span style="color:#22c55e">✓</span> CRM Enrichment Blueprint</div>
+                <div style="display:flex;align-items:center;gap=6px;font-size:.72rem;color:#f59e0b"><span>◎</span> Proposal Generation — In Progress</div>
+                <div style="display:flex;align-items:center;gap:6px;font-size:.72rem;color:#52525b"><span>○</span> Automated Outreach — Queued</div>
+              </div>
+            </div>
+          </div>
+          <div class="rm-dot"></div>
+          <div class="rm-card rm-right">
+            <div class="rm-phase">Phase 3</div>
+            <h3>Growth Engine</h3>
+            <p>Revenue processes documented four levels deep. Lead scoring, CRM enrichment, proposal generation, and automated outreach — all built on the documented foundation and AI-augmented.</p>
+          </div>
+        </div>
+
+        <div class="rm-row rv">
+          <div class="rm-card rm-left">
+            <div class="rm-phase">Phase 4</div>
+            <h3>Operations Core</h3>
+            <p>Operational processes mapped and documented. SOP execution engine installed. Quality management framework deployed. Workflow integration connecting all documented systems into a single backbone.</p>
+          </div>
+          <div class="rm-dot"></div>
+          <div class="rm-right rm-visual">
+            <div class="rm-os-card" style="background:#0d1526">
+              <div class="rm-os-title" style="color:#e8eaf2;font-size:.8rem;margin-bottom:8px">Operations Core — AI Audit</div>
+              <div style="display:flex;flex-direction:column;gap:5px">
+                <div style="display:flex;justify-content:space-between;font-size:.72rem;color:#6b7a99"><span>SOP Execution</span><span style="color:#22c55e">8.9/10 ✓</span></div>
+                <div style="display:flex;justify-content:space-between;font-size:.72rem;color:#6b7a99"><span>Quality Management</span><span style="color:#22c55e">9.1/10 ✓</span></div>
+                <div style="display:flex;justify-content:space-between;font-size:.72rem;color:#6b7a99"><span>Contract Analysis</span><span style="color:#f59e0b">6.2/10 ◎</span></div>
+                <div style="display:flex;justify-content:space-between;font-size:.72rem;color:#6b7a99"><span>Workflow Integration</span><span style="color:#22c55e">9.4/10 ✓</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rm-row rv">
+          <div class="rm-left rm-visual">
+            <div class="rm-os-card" style="background:#0d1526">
+              <div class="rm-os-title" style="color:#e8eaf2;font-size:.8rem;margin-bottom:8px">People System Status</div>
+              <div style="display:flex;flex-direction:column;gap:5px">
+                <div style="display:flex;align-items:center;gap:6px;font-size:.72rem;color:#6b7a99"><span style="color:#22c55e">✓</span> Recruiting Scorecard — Deployed</div>
+                <div style="display:flex;align-items:center;gap:6px;font-size:.72rem;color:#6b7a99"><span style="color:#22c55e">✓</span> Onboarding Workflow — Live</div>
+                <div style="display:flex;align-items:center;gap:6px;font-size:.72rem;color:#22c55e"><span>✓</span> Performance Framework — Active</div>
+                <div style="display:flex;align-items:center;gap:6px;font-size:.72rem;color:#6b7a99"><span style="color:#22c55e">✓</span> L&amp;D Pathways — Personalized</div>
+              </div>
+            </div>
+          </div>
+          <div class="rm-dot"></div>
+          <div class="rm-card rm-right">
+            <div class="rm-phase">Phase 5</div>
+            <h3>People System</h3>
+            <p>HR processes documented and AI-augmented. Recruiting aligned to documented role requirements. Onboarding running automatically. Performance reviews using documented frameworks. L&amp;D pathways personalized per role.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ONCE PROCESSES ARE DOCUMENTED -->
+  <section>
+    <div class="si">
+      <div class="aug-warning rv">
+        <span class="aug-warn-icon">⚠</span>
+        Important: once processes are documented four levels deep and your Master Prompt is built, AI agents can execute, monitor, and improve each module autonomously — without founder involvement in routine decisions.
+      </div>
+      <h2 class="sh rv d1 tc" style="text-align:center;margin-top:40px">Once Processes Are Documented,<br>Departments Can Augment</h2>
+      <p class="ssub rv d2 tc" style="text-align:center;margin:0 auto 48px">Each department unlocks a set of AI modules once their core processes are documented four levels deep.</p>
+      <div class="aug-grid">
+        <div class="aug-card rv d1">
+          <div class="aug-card-tag" style="color:#1D9E75">Growth Engine</div>
+          <div class="aug-card-sub">Revenue &amp; Market Expansion</div>
+          <div style="display:flex;flex-direction:column;gap:7px;margin-top:14px">
+            <div class="aug-item">Lead scoring (based on qualification criteria)</div>
+            <div class="aug-item">Automated outreach (using brand voice)</div>
+            <div class="aug-item">CRM enrichment (connected to sales process)</div>
+            <div class="aug-item">Proposal generation (leveraging service offerings)</div>
+          </div>
+        </div>
+        <div class="aug-card rv d2">
+          <div class="aug-card-tag" style="color:#185FA5">Operations Core</div>
+          <div class="aug-card-sub">Efficiency &amp; Governance</div>
+          <div style="display:flex;flex-direction:column;gap:7px;margin-top:14px">
+            <div class="aug-item">SOP execution (following documented procedures)</div>
+            <div class="aug-item">Contract analysis (against documented standards)</div>
+            <div class="aug-item">Workflow integration (between documented systems)</div>
+            <div class="aug-item">Quality management (based on documented requirements)</div>
+          </div>
+        </div>
+        <div class="aug-card rv d3">
+          <div class="aug-card-tag" style="color:#534AB7">People OS</div>
+          <div class="aug-card-sub">Talent &amp; Culture</div>
+          <div style="display:flex;flex-direction:column;gap:7px;margin-top:14px">
+            <div class="aug-item">Recruiting (aligned to documented role requirements)</div>
+            <div class="aug-item">Onboarding (following documented workflows)</div>
+            <div class="aug-item">Performance reviews (using documented frameworks)</div>
+            <div class="aug-item">L&amp;D pathways (supporting documented skills)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <div class="scta">
+    <div class="si">
+      <h2 class="sh rv" style="text-align:center;color:var(--white);margin:0 auto 18px">Ready to Document Your<br>Organization's Brain?</h2>
+      <p class="ssub rv d1" style="color:var(--g400);text-align:center;margin:0 auto 44px">Scale the EMPOWER methodology across your entire workforce. Move from scattered AI experiments to systematic documentation that makes AI adoption actually work.</p>
+      <div class="ctaact rv d2">
+        <button class="bw">Enroll My Team</button>
+        <button class="bo">View Roadmap</button>
+      </div>
+      <div class="ctanote rv d3" style="flex-direction:column;gap:8px;margin-top:32px">
+        <span>— Team-wide EMPOWER 101 access</span>
+        <span>— Centralized Master Context engine</span>
+        <span>— Guided implementation rollout</span>
+        <span>— Department-specific workflow training</span>
+        <span>— Executive strategy workshop</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <div class="snl"><div class="nli rv"><div class="nltag">The EMPOWER Weekly</div><h3>Build your business brain.</h3><p>Join a growing community of forward-thinking founders receiving weekly insights on systems, AI governance, and scaling without chaos.</p><form class="nlform" onsubmit="subNL(event,this)"><input type="email" placeholder="Email address" required><button type="submit">Subscribe</button></form><p class="nlcheck">I agree to the <a href="#">Privacy Policy</a> and consent to receive updates.</p><p class="nlnote">We hate spam as much as you do. Unsubscribe anytime.</p></div></div>
+
+  <!-- FOOTER -->
+  <footer><div class="fi"><div class="ftop"><div class="fbrand"><div class="logo" style="color:var(--white);cursor:pointer" onclick="nav('home')">EMPOWER<span>Labs</span></div><p>Building the business brain for the next generation of business.</p></div><div class="fcol"><h5>Programs</h5><ul><li><span onclick="nav('cohort')">Live Cohort</span></li><li><span onclick="nav('teams')">For Teams</span></li><li><span>Masterclass Replay</span></li></ul></div><div class="fcol"><h5>Contact</h5><ul><li><a href="mailto:support@empowerlabs.ai">support@empowerlabs.ai</a></li></ul></div></div><div class="fbot"><p>© 2026 EMPOWER Labs. All rights reserved.</p><div class="fblinks"><span>Cookie Preferences</span><span>Terms of Service</span><span>Privacy Policy</span></div></div></div></footer>
+</div>
+
+<script>
+// ── PARTICLES ──────────────────
+(function(){
+  const c=document.getElementById('PTC');
+  for(let i=0;i<28;i++){
+    const p=document.createElement('div');
+    const s=.8+Math.random()*2.2;
+    p.className='pt';
+    p.style.cssText=`left:${Math.random()*100}%;width:${s}px;height:${s}px;background:rgba(255,255,255,${.15+Math.random()*.3});animation-duration:${9+Math.random()*16}s;animation-delay:${Math.random()*12}s`;
+    c.appendChild(p);
+  }
+})();
+
+// ── TERMINAL TYPEWRITER ─────────
+(function(){
+  const el=document.getElementById('TERR');
+  if(!el)return;
+  const txt='ERROR_CODE_404_CONTEXT';
+  let i=0;
+  const cursor=el.querySelector('.tcursor');
+  function type(){
+    if(i<txt.length){
+      el.insertBefore(document.createTextNode(txt[i]),cursor);
+      i++;
+      setTimeout(type,55+Math.random()*40);
+    }
+  }
+  const io=new IntersectionObserver(e=>{if(e[0].isIntersecting){setTimeout(type,600);io.disconnect();}});
+  io.observe(el);
+})();
+
+// ── SPA ROUTING ─────────────────
+let CUR='home';
+function nav(page){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+page).classList.add('active');
+  CUR=page;
+  window.scrollTo({top:0,behavior:'smooth'});
+  updateNL();
+  requestAnimationFrame(()=>requestAnimationFrame(initReveal));
+  document.title=page==='home'
+    ?'EMPOWER: Document Your Business Brain Before AI Transformation'
+    :page==='cohort'
+    ?'Live Cohort | EMPOWER Labs'
+    :'For Teams | EMPOWER Labs';
+}
+function updateNL(){
+  document.querySelectorAll('.nl').forEach(l=>l.classList.remove('active'));
+  if(CUR==='cohort')document.getElementById('nl-cohort').classList.add('active');
+  if(CUR==='teams')document.getElementById('nl-teams').classList.add('active');
+}
+
+// ── MOBILE MENU ─────────────────
+const HBG=document.getElementById('HBG'),MM=document.getElementById('MOBMENU');
+HBG.addEventListener('click',()=>{HBG.classList.toggle('open');MM.classList.toggle('open');document.body.style.overflow=MM.classList.contains('open')?'hidden':'';});
+function closeMob(){HBG.classList.remove('open');MM.classList.remove('open');document.body.style.overflow='';}
+
+// ── STICKY NAV ──────────────────
+window.addEventListener('scroll',()=>{document.getElementById('NAV').classList.toggle('scrolled',window.scrollY>16);},{passive:true});
+
+// ── SCROLL REVEAL ───────────────
+function initReveal(){
+  const sel='.page.active .rv,.page.active .rv-l,.page.active .rv-r';
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.1,rootMargin:'0px 0px -36px 0px'});
+  document.querySelectorAll(sel).forEach(el=>{if(!el.classList.contains('in'))io.observe(el);});
+}
+initReveal();
+
+// ── COUNTER ─────────────────────
+const co=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting||e.target._counted)return;
+    e.target._counted=true;
+    const target=+e.target.dataset.count,sfx=e.target.dataset.sfx||'',dur=1300,start=performance.now();
+    const ease=t=>1-Math.pow(1-t,3);
+    (function tick(now){
+      const p=Math.min((now-start)/dur,1);
+      e.target.textContent=Math.round(ease(p)*target)+sfx;
+      if(p<1)requestAnimationFrame(tick);
+    })(start);
+  });
+},{threshold:.6});
+document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
+
+// ── PARALLAX ────────────────────
+window.addEventListener('scroll',()=>{
+  document.querySelectorAll('.page.active .hero-glow').forEach(g=>{g.style.transform=`translateY(${window.scrollY*.14}px)`;});
+},{passive:true});
+
+// ── NEWSLETTER ──────────────────
+function subNL(e,form){
+  e.preventDefault();
+  form.innerHTML='<p style="font-weight:600;color:#52525b">✓ You\'re subscribed. Welcome to the community.</p>';
+}
+</script>
+</body>
+</html>
