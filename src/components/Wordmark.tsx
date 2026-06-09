@@ -4,17 +4,25 @@ type Props = {
   href?: string;
   size?: "sm" | "lg";
   className?: string;
+  /** "ink" (default) for light surfaces, "inverse" for dark surfaces. */
+  tone?: "ink" | "inverse";
 };
 
 // AITransforms wordmark. Shared by Header (linked) and Footer (static).
-// Geist semibold text + a small clay arrow glyph that echoes the
+// Inter semibold text + a small blue arrow glyph that echoes the
 // "Business Brain → AI Systems" metaphor used across the site.
 // The glyph mirrors for RTL via rtl:-scale-x-100.
-export default function Wordmark({ href, size = "lg", className }: Props) {
+export default function Wordmark({
+  href,
+  size = "lg",
+  className,
+  tone = "ink",
+}: Props) {
+  const toneClass = tone === "inverse" ? "text-white" : "text-ink";
   const textClass =
     size === "lg"
-      ? "text-lg font-semibold tracking-tight text-ink"
-      : "text-base font-semibold tracking-tight text-ink";
+      ? `text-lg font-bold tracking-tight ${toneClass}`
+      : `text-base font-bold tracking-tight ${toneClass}`;
 
   const content = (
     <span

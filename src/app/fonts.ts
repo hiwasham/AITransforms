@@ -2,9 +2,18 @@ import {
   Geist,
   Geist_Mono,
   IBM_Plex_Sans_Arabic,
+  Inter,
   Instrument_Serif,
   Noto_Sans_Arabic,
 } from "next/font/google";
+
+// English body + UI face for the EMPOWER-style redesign. Loaded locally via
+// next/font (no CDN). Persian/Arabic keep their own faces via :lang() rules.
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,4 +52,4 @@ const notoArabic = Noto_Sans_Arabic({
   display: "swap",
 });
 
-export const fontClasses = `${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} ${ibmPlexArabic.variable} ${notoArabic.variable} h-full antialiased`;
+export const fontClasses = `${inter.variable} ${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} ${ibmPlexArabic.variable} ${notoArabic.variable} h-full antialiased`;

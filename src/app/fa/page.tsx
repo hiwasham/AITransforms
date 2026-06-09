@@ -11,6 +11,7 @@ import ResourcesTeaser from "@/components/ResourcesTeaser";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import { siteContent } from "@/content/site";
+import { moduleLinks } from "@/content/modules";
 
 const t = siteContent.fa;
 
@@ -22,19 +23,48 @@ export const metadata: Metadata = {
 export default function HomePageFa() {
   return (
     <>
-      <Header nav={t.nav} currentLocale="fa" />
+      <Header
+        nav={t.nav}
+        currentLocale="fa"
+        cta={{ label: t.hero.primaryCta.label, href: t.hero.primaryCta.href }}
+      />
       <main className="flex-1">
         <Hero t={t.hero} />
         <Problem t={t.problem} />
         <Framework t={t.framework} />
         <Services t={t.services} />
         <AgentSpotlight t={t.agentSpotlight} />
-        <CaseStudies t={t.caseStudies} />
+        <CaseStudies
+          t={t.caseStudies}
+          more={{ label: "مشاهده نمونه‌کارهای کامل", href: "/fa/work" }}
+        />
         <Founder t={t.founder} />
         <ResourcesTeaser t={t.resources} />
         <CTA t={t.cta} />
       </main>
-      <Footer t={t.footer} />
+      <Footer
+        t={t.footer}
+        columns={[
+          {
+            heading: t.nav.services,
+            links: [
+              { label: t.nav.services, href: "#services" },
+              { label: t.nav.work, href: "#work" },
+              { label: t.nav.process, href: "#process" },
+            ],
+          },
+          {
+            heading: t.nav.process,
+            links: moduleLinks("fa", "/fa"),
+          },
+          {
+            heading: t.nav.contact,
+            links: [
+              { label: t.footer.contactLabel, href: t.footer.contactHref },
+            ],
+          },
+        ]}
+      />
     </>
   );
 }
