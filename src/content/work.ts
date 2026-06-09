@@ -161,7 +161,7 @@ const EN: LocaleText = {
         "A distributed-agent ticketing system with a semantic memory layer (PGLite / pgvector). 'Smart ticketing' surfaces similar resolved tickets at submit time and is built to deflect routine queries before they reach a human.",
       metric: { value: "38,000", label: "tickets migrated into a structured knowledge base" },
       metricNote:
-        "Migration scope is documented (38,000 tickets / 85,000 messages / 123,000 data points). Automation target is 80% of routine queries; realized deflection rate is being measured post-launch — shown as a target, not a result, until confirmed (TBD).",
+        "Migration scope is documented: 38,000 tickets / 85,000 messages / 123,000 data points. Automation is a Target KPI — 80% of routine queries — not a realized result: the engagement is active (Phase 2), deploying against the 38,000-ticket backlog, so a final deflection rate is not published yet.",
       whatChanged:
         "The support desk moved from founder-dependent and improvised toward an AI-augmented model, with the historical ticket corpus turned into a searchable knowledge base instead of tribal memory.",
       constraints: [
@@ -198,7 +198,8 @@ const EN: LocaleText = {
       whatChanged:
         "A resource-constrained team gained strategic intelligence — competitor strengths, weaknesses, and positioning gaps — that previously would have required weeks of work or outside consultants.",
       constraints: ["Non-profit-level resources and staffing"],
-      founderRole: "Delivered the methodology and the analysis workflow",
+      founderRole:
+        "Acted as lead operator, directly extracting tribal knowledge and configuring the AI architecture.",
       method: [
         "Map: identify that strategic research was the missing capability, not a missing tool",
         "Structure: encode the positioning questions into a documented, repeatable prompt workflow",
@@ -227,7 +228,8 @@ const EN: LocaleText = {
       whatChanged:
         "Proposal turnaround fell from 2–4 hours to under an hour, and the close rate rose from 18% to 31% — without touching the underlying offer or pricing.",
       constraints: [],
-      founderRole: "Documented the proposal process and decision framework",
+      founderRole:
+        "Acted as lead operator, directly extracting tribal knowledge and configuring the AI architecture.",
       method: [
         "Map: locate the bottleneck at the proposal step, not the lead or the offer",
         "Structure: capture the implicit proposal decisions as a 5-point checklist + template",
