@@ -1,12 +1,16 @@
 import type { SiteContent } from "@/content/site";
 import Reveal from "./motion/Reveal";
 
-type Props = { t: SiteContent["caseStudies"] };
+type Props = {
+  t: SiteContent["caseStudies"];
+  /** Optional link to the dedicated /work page. Omitted where /work isn't live. */
+  more?: { label: string; href: string };
+};
 
 // Selected work as a 3-col card grid (EMPOWER project-card style): hairline
 // border, hover lift, title + summary + em-dash highlight list. Content stays
 // anonymized and qualitative — no fabricated metrics. Logical spacing for RTL.
-export default function CaseStudies({ t }: Props) {
+export default function CaseStudies({ t, more }: Props) {
   return (
     <section id="work" className="bg-page">
       <div className="mx-auto max-w-6xl px-6 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28">
@@ -50,6 +54,17 @@ export default function CaseStudies({ t }: Props) {
             </Reveal>
           ))}
         </div>
+
+        {more ? (
+          <Reveal delay={200}>
+            <a
+              href={more.href}
+              className="mt-10 inline-flex text-sm font-bold text-accent hover:underline"
+            >
+              {more.label} →
+            </a>
+          </Reveal>
+        ) : null}
       </div>
     </section>
   );
