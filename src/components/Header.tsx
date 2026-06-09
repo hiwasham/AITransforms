@@ -18,11 +18,15 @@ export default function Header({ nav, currentLocale, cta }: Props) {
   // Locale-aware base path for routes (not anchors). localePath("en") is "/",
   // so strip the trailing slash to avoid "//work".
   const basePath = currentLocale === "en" ? "" : localePath(currentLocale);
+  // Section anchors live on the locale homepage. Anchor them absolutely so they
+  // still reach the homepage sections when the header renders on a /work page
+  // (a bare "#services" would resolve to "/work#services", a dead link).
+  const homeHref = basePath || "/";
   const navItems = [
-    { label: nav.services, href: "#services" },
+    { label: nav.services, href: `${homeHref}#services` },
     { label: nav.work, href: `${basePath}/work` },
-    { label: nav.process, href: "#process" },
-    { label: nav.contact, href: "#contact" },
+    { label: nav.process, href: `${homeHref}#process` },
+    { label: nav.contact, href: `${homeHref}#contact` },
   ].filter((item) => item.label);
 
   return (
