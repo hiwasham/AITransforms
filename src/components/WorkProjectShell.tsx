@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Reveal from "@/components/motion/Reveal";
 import HeroGlow from "@/components/motion/HeroGlow";
 import { Icon } from "@/components/icons";
+import WorkMetricValue from "@/components/WorkMetricValue";
 import { siteContent, type Locale } from "@/content/site";
 import {
   getWorkProject,
@@ -48,7 +49,7 @@ function Block({
 // ModulePageShell: localized Header, dark hero band, long-form case body,
 // Footer. The "system shape" diagram is a generic inputs → processing →
 // outputs flow (no client identifiers). It uses logical properties and an
-// rtl:rotate-180 on the connector so horizontal flow mirrors under RTL.
+// rtl:-scale-x-100 on the connector so horizontal flow mirrors under RTL.
 export default function WorkProjectShell({ locale, slug }: Props) {
   const t = siteContent[locale];
   const labels = getWorkLabels(locale);
@@ -99,7 +100,7 @@ export default function WorkProjectShell({ locale, slug }: Props) {
                 className="text-4xl font-black tracking-[-0.03em] sm:text-5xl"
                 style={{ color: p.accent }}
               >
-                {p.metric.value}
+                <WorkMetricValue metric={p.metric} />
               </p>
               <p className="mx-auto mt-2 max-w-md text-base leading-snug text-body">
                 {p.metric.label}
@@ -233,12 +234,13 @@ function DiagramCell({
   );
 }
 
-// Arrow connector. rtl:rotate-180 flips the horizontal direction under RTL;
-// the vertical (mobile, stacked) arrow is unaffected.
+// Arrow connector. rtl:-scale-x-100 mirrors the horizontal direction under RTL
+// (house convention, matches Arrow.tsx / ModulePanel.tsx); the vertical
+// (mobile, stacked) arrow is unaffected.
 function Connector() {
   return (
     <div className="flex items-center justify-center text-body/50">
-      <span className="hidden sm:inline rtl:rotate-180" aria-hidden="true">
+      <span className="hidden sm:inline rtl:-scale-x-100" aria-hidden="true">
         →
       </span>
       <span className="sm:hidden" aria-hidden="true">

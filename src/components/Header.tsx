@@ -15,9 +15,12 @@ type Props = {
 // behaviour). The CTA href comes from the content dictionary so it keeps the
 // locale-correct apply/mailto path (PR #2 preserved).
 export default function Header({ nav, currentLocale, cta }: Props) {
+  // Locale-aware base path for routes (not anchors). localePath("en") is "/",
+  // so strip the trailing slash to avoid "//work".
+  const basePath = currentLocale === "en" ? "" : localePath(currentLocale);
   const navItems = [
     { label: nav.services, href: "#services" },
-    { label: nav.work, href: "#work" },
+    { label: nav.work, href: `${basePath}/work` },
     { label: nav.process, href: "#process" },
     { label: nav.contact, href: "#contact" },
   ].filter((item) => item.label);

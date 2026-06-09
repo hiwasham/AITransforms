@@ -34,7 +34,10 @@ export default function HomePageFa() {
         <Framework t={t.framework} />
         <Services t={t.services} />
         <AgentSpotlight t={t.agentSpotlight} />
-        <CaseStudies t={t.caseStudies} />
+        <CaseStudies
+          t={t.caseStudies}
+          more={{ label: "مشاهده نمونه‌کارهای کامل", href: "/fa/work" }}
+        />
         <Founder t={t.founder} />
         <ResourcesTeaser t={t.resources} />
         <CTA t={t.cta} />

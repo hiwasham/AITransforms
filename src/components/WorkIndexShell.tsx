@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Reveal from "@/components/motion/Reveal";
 import HeroGlow from "@/components/motion/HeroGlow";
 import { Icon } from "@/components/icons";
+import WorkMetricValue from "@/components/WorkMetricValue";
 import { siteContent, type Locale } from "@/content/site";
 import {
   getWorkLabels,
@@ -53,7 +54,7 @@ export default function WorkIndexShell({ locale }: Props) {
             </Reveal>
             <Reveal delay={100}>
               <h1 className="mt-3 text-3xl font-black tracking-[-0.03em] sm:text-4xl">
-                {t.nav.work}
+                {labels.pageTitle}
               </h1>
             </Reveal>
             <Reveal delay={200}>
@@ -95,7 +96,7 @@ export default function WorkIndexShell({ locale }: Props) {
                       className="text-2xl font-black tracking-[-0.02em]"
                       style={{ color: p.accent }}
                     >
-                      {p.metric.value}
+                      <WorkMetricValue metric={p.metric} />
                     </p>
                     <p className="mt-1 text-sm leading-snug text-body">
                       {p.metric.label}
