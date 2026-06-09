@@ -1,25 +1,28 @@
 @import "tailwindcss";
 
-/* AITransforms — Phase 2 editorial palette.
-   Warm off-white surface, single clay/amber accent, no dark-mode utilities. */
+/* AITransforms — EMPOWER-style palette (Phase 4 redesign).
+   White page, near-black dark sections, blue→violet→pink gradient accent.
+   Token names are kept stable from Phase 2 so components remap cleanly; only
+   the values changed. Tailwind v4's default zinc/blue/violet/pink/green/amber
+   scales are available as utilities directly for the new dark surfaces. */
 
 :root {
-  --bg-page: #FAFAF7;     /* warm off-white — page background */
-  --bg-surface: #FFFFFF;  /* elevated surfaces (cards, contained intermezzo) */
-  --bg-ink: #0E1116;      /* warm near-black for dark intermezzo */
-  --ink: #0F172A;         /* slate-900 — headings */
-  --body: #475569;        /* slate-600 — body text */
-  --muted: #64748B;       /* slate-500 — eyebrows, meta */
-  --rule: #E2E8F0;        /* slate-200 — borders/dividers */
-  --accent: #B45309;      /* clay/amber — single brand accent */
-  --accent-ink: #7C2D12;  /* darker clay — hover/active */
+  --bg-page: #FFFFFF;     /* white — page background */
+  --bg-surface: #FAFAFA;  /* zinc-50 — subtle raised surfaces */
+  --bg-ink: #09090B;      /* near-black — hero & dark sections */
+  --ink: #09090B;         /* near-black — headings */
+  --body: #52525B;        /* zinc-600 — body text */
+  --muted: #71717A;       /* zinc-500 — eyebrows, meta */
+  --rule: #E4E4E7;        /* zinc-200 — borders/dividers */
+  --accent: #2563EB;      /* blue-600 — single brand accent */
+  --accent-ink: #1D4ED8;  /* blue-700 — hover/active */
 }
 
 @theme inline {
   /* Surfaces */
-  --color-page: var(--bg-page);          /* bg-page    — warm off-white background */
-  --color-surface: var(--bg-surface);    /* bg-surface — cards, intermezzo, header */
-  --color-inverse: var(--bg-ink);        /* bg-inverse — warm near-black slabs */
+  --color-page: var(--bg-page);          /* bg-page    — white background */
+  --color-surface: var(--bg-surface);    /* bg-surface — subtle raised cards */
+  --color-inverse: var(--bg-ink);        /* bg-inverse — near-black slabs/hero */
   /* Text */
   --color-ink: var(--ink);               /* text-ink   — headings */
   --color-body: var(--body);             /* text-body  — paragraphs */
@@ -27,12 +30,13 @@
   /* Lines */
   --color-rule: var(--rule);             /* border-rule — hairlines, dividers */
   /* Accent */
-  --color-accent: var(--accent);         /* text/bg/border-accent — clay/amber */
+  --color-accent: var(--accent);         /* text/bg/border-accent — blue */
   --color-accent-strong: var(--accent-ink); /* text/bg-accent-strong — hover */
-  /* Fonts */
-  --font-sans: var(--font-geist-sans);
+  /* Fonts — Inter is the English body face; display serif retired on the
+     homepage in favour of Inter's heavy weights. */
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
-  --font-display: var(--font-instrument-serif);
+  --font-display: var(--font-inter);
 }
 
 body {
@@ -92,4 +96,77 @@ body {
    heading clears the header instead of being hidden behind it. */
 section[id] {
   scroll-margin-top: 5rem;
+}
+
+/* ─── EMPOWER redesign — shared visual primitives ─────────────────────────
+   Gradient text for hero emphasis, the radial hero glow, floating particles,
+   and scroll-reveal/typewriter keyframes. The motion islands in
+   src/components/motion/ add the JS; these are the styles they hook into.
+   Everything decorative is disabled under prefers-reduced-motion. */
+
+/* Blue→violet→pink gradient used on emphasized hero words and section accents.
+   Logical-property safe (background-clip only). */
+.text-gradient {
+  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 55%, #f472b6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Radial glow behind the dark hero. Positioned, not directional — RTL-safe. */
+.hero-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 85% 65% at 50% -5%,
+    rgba(37, 99, 235, 0.42) 0%,
+    transparent 68%
+  );
+  animation: glow-pulse 7s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.75; }
+  50% { opacity: 1; }
+}
+
+/* Floating hero particles (positions/sizes set inline by the Particles island). */
+@keyframes particle-float {
+  0% { transform: translateY(100%) scale(0); opacity: 0; }
+  8% { opacity: 0.6; }
+  92% { opacity: 0.2; }
+  100% { transform: translateY(-5vh) scale(1); opacity: 0; }
+}
+
+/* Scroll-reveal: elements start shifted + transparent, the Reveal island adds
+   .is-in when they enter the viewport. */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Typewriter caret for the diagnostics terminal. */
+@keyframes caret-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-glow,
+  [class*="particle"] {
+    animation: none !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }

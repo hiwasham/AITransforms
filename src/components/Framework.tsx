@@ -1,46 +1,64 @@
 import { Fragment } from "react";
 import type { SiteContent } from "@/content/site";
+import Reveal from "./motion/Reveal";
 import Arrow from "./Arrow";
 
 type Props = { t: SiteContent["framework"] };
 
-// Map → Structure → Implement → Adapt rendered as a vertical hairline stack on
-// mobile/sm and a horizontal flex flow at lg, with clay arrow separators
-// between steps. The locale-specific step numbers (01 / ۰۱ / ٠١) come from
-// site.ts; numerals are typeset in Instrument Serif on Latin and fall back to
-// Noto Sans Arabic for fa/ar via the :lang() rule in globals.css.
+// Map → Structure → Implement → Adapt as a connected horizontal flow (not a
+// symmetric card grid — that reads as generic AI slop). Left-aligned header,
+// then four steps separated by clay/blue arrow connectors at lg, stacked with a
+// leading rule on mobile. Numerals are solid accent blue: the blue→violet→pink
+// gradient washes out to ~2.5:1 on the white page background, so the gradient
+// is reserved for dark surfaces (hero, Problem). Numerals come locale-typeset
+// from site.ts (01 / ۰۱ / ٠١); the arrow mirrors under RTL via Arrow's own
+// rtl:-scale-x-100.
 export default function Framework({ t }: Props) {
   return (
-    <section id="process">
-      <div className="mx-auto max-w-6xl px-6 py-16 sm:px-8 sm:py-24 lg:px-12 lg:py-32">
-        <h2 className="text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
-          {t.title}
-        </h2>
+    <section id="process" className="bg-page">
+      <div className="mx-auto max-w-6xl px-6 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28">
+        <Reveal>
+          <p className="text-xs font-bold uppercase tracking-[0.14em] text-accent">
+            System Architecture
+          </p>
+        </Reveal>
+        <Reveal delay={100}>
+          <h2 className="mt-3 max-w-2xl text-3xl font-extrabold tracking-[-0.03em] text-ink sm:text-4xl">
+            {t.title}
+          </h2>
+        </Reveal>
+        <Reveal delay={200}>
+          <p className="mt-5 max-w-2xl text-base leading-[1.75] text-body">
+            {t.intro}
+          </p>
+        </Reveal>
 
-        <p className="mt-6 max-w-3xl text-lg text-body">{t.intro}</p>
-
-        <ol className="mt-16 sm:mt-20 lg:mt-24 lg:flex lg:items-start">
+        <ol className="mt-14 lg:flex lg:items-start">
           {t.steps.map((step, i) => {
             const isLast = i === t.steps.length - 1;
             return (
               <Fragment key={step.number}>
-                <li className="mt-8 border-t border-rule pt-6 first:mt-0 lg:mt-0 lg:flex-1 lg:border-t-0 lg:pt-0">
-                  <span className="block font-display text-4xl leading-none text-accent sm:text-5xl lg:text-6xl">
+                <Reveal
+                  as="li"
+                  delay={(i % 4) * 100}
+                  className="mt-8 border-s-2 border-rule ps-5 first:mt-0 lg:mt-0 lg:flex-1 lg:border-s-0 lg:ps-0"
+                >
+                  <span className="block text-5xl font-black leading-none text-accent lg:text-6xl">
                     {step.number}
                   </span>
-                  <h3 className="mt-4 text-xl font-semibold text-ink">
+                  <h3 className="mt-4 text-lg font-bold text-ink">
                     {step.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-body">
+                  <p className="mt-2.5 text-sm leading-relaxed text-body lg:pe-8">
                     {step.body}
                   </p>
-                </li>
+                </Reveal>
                 {!isLast ? (
                   <li
                     aria-hidden="true"
-                    className="hidden text-accent lg:flex lg:items-start lg:px-4 lg:pt-6"
+                    className="hidden text-accent lg:flex lg:items-center lg:pt-5"
                   >
-                    <Arrow size="lg" />
+                    <Arrow size="md" />
                   </li>
                 ) : null}
               </Fragment>

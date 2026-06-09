@@ -54,11 +54,30 @@ export const siteContent = {
       primaryCta: { label: "Apply for a review", href: APPLY_HREF },
       secondaryCta: { label: "See what we build", href: SECONDARY_CTA_HREF },
       metaphor: "Business Brain → AI Systems",
+      stats: [
+        { value: 20, suffix: "+", label: "Years of engineering experience" },
+        { value: 4, suffix: "", label: "Focused AI service lines" },
+        { value: 3, suffix: "", label: "Languages, fully localized" },
+        { value: 100, suffix: "%", label: "Private by default" },
+      ],
     },
 
     problem: {
       title: "Your business already has the brain. It just isn't accessible as software.",
       body: "Years of decisions, documents, frameworks, and tribal knowledge live inside a handful of people, scattered drives, and inboxes. None of it is queryable. None of it scales. None of it adapts. That gap — between what your business knows and what your tools can act on — is where AI transformation actually happens.",
+      terminal: {
+        title: "System Diagnostics",
+        statusLabel: "Status Report",
+        badge: "Critical Disconnect",
+        rows: [
+          "No centralized knowledge base",
+          "Processes live in people's heads",
+          "Data silos between departments",
+          "Generic AI outputs, no business context",
+        ],
+        errorText: "ERROR_CODE_404_CONTEXT",
+        actionLabel: "ACTION REQUIRED",
+      },
       points: [
         {
           title: "Knowledge is locked inside people.",
@@ -280,11 +299,30 @@ export const siteContent = {
       primaryCta: { label: "درخواست بازبینی", href: APPLY_HREF_FA },
       secondaryCta: { label: "ببینید چه می‌سازیم", href: SECONDARY_CTA_HREF },
       metaphor: "مغز کسب‌وکار ← سیستم‌های هوش مصنوعی",
+      stats: [
+        { value: 20, suffix: "+", label: "سال تجربه مهندسی" },
+        { value: 4, suffix: "", label: "خط خدمات متمرکز هوش مصنوعی" },
+        { value: 3, suffix: "", label: "زبان، کاملاً بومی‌سازی‌شده" },
+        { value: 100, suffix: "٪", label: "خصوصی به‌طور پیش‌فرض" },
+      ],
     },
 
     problem: {
       title: "کسب‌وکار شما همین حالا یک مغز دارد. فقط هنوز به‌صورت نرم‌افزار در دسترس نیست.",
       body: "سال‌ها تصمیم، سند، چارچوب و دانش ضمنی، در ذهن چند نفر، روی هاردهای پراکنده و در ایمیل‌ها زندگی می‌کنند. چیزی از این‌ها قابل‌جست‌وجو نیست. هیچ‌کدام مقیاس نمی‌گیرند. هیچ‌کدام تطبیق پیدا نمی‌کنند. تحول هوش مصنوعی واقعی، در همین فاصله اتفاق می‌افتد — بین آنچه کسب‌وکار شما می‌داند و آنچه ابزارهایتان می‌توانند انجام دهند.",
+      terminal: {
+        title: "تشخیص سیستم",
+        statusLabel: "گزارش وضعیت",
+        badge: "گسست بحرانی",
+        rows: [
+          "پایگاه دانش متمرکزی وجود ندارد",
+          "فرآیندها در ذهن آدم‌ها زندگی می‌کنند",
+          "جزایر داده میان دپارتمان‌ها",
+          "خروجی عمومی هوش مصنوعی، بدون زمینه کسب‌وکار",
+        ],
+        errorText: "ERROR_CODE_404_CONTEXT",
+        actionLabel: "نیازمند اقدام",
+      },
       points: [
         {
           title: "دانش در ذهن آدم‌ها قفل است.",
@@ -505,11 +543,30 @@ export const siteContent = {
       primaryCta: { label: "تقدّم للمراجعة", href: APPLY_HREF_AR },
       secondaryCta: { label: "شاهد ما نبنيه", href: SECONDARY_CTA_HREF },
       metaphor: "عقل الأعمال ← أنظمة الذكاء الاصطناعي",
+      stats: [
+        { value: 20, suffix: "+", label: "عامًا من الخبرة الهندسية" },
+        { value: 4, suffix: "", label: "خطوط خدمات ذكاء اصطناعي مركزة" },
+        { value: 3, suffix: "", label: "لغات، مترجمة بالكامل" },
+        { value: 100, suffix: "٪", label: "خاص بشكل افتراضي" },
+      ],
     },
 
     problem: {
       title: "عملك يمتلك العقل بالفعل. فقط لم يصبح بعد متاحًا كبرنامج.",
       body: "سنوات من القرارات والمستندات والأطر والمعرفة الضمنية تعيش داخل عدد قليل من الأشخاص، وعلى أقراص متناثرة، وفي صناديق البريد. لا شيء من ذلك قابل للاستعلام. لا شيء منه يتسع. لا شيء منه يتكيف. هذه الفجوة — بين ما يعرفه عملك وما يمكن لأدواتك التصرف بناءً عليه — هي المكان الذي يحدث فيه التحول الفعلي إلى الذكاء الاصطناعي.",
+      terminal: {
+        title: "تشخيص النظام",
+        statusLabel: "تقرير الحالة",
+        badge: "انفصال حرج",
+        rows: [
+          "لا توجد قاعدة معرفة مركزية",
+          "العمليات تعيش في رؤوس الأشخاص",
+          "صوامع بيانات بين الأقسام",
+          "مخرجات ذكاء اصطناعي عامة، بلا سياق للعمل",
+        ],
+        errorText: "ERROR_CODE_404_CONTEXT",
+        actionLabel: "إجراء مطلوب",
+      },
       points: [
         {
           title: "المعرفة محبوسة داخل الأشخاص.",
