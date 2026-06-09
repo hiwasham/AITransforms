@@ -11,6 +11,7 @@ import ResourcesTeaser from "@/components/ResourcesTeaser";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import { siteContent } from "@/content/site";
+import { moduleLinks } from "@/content/modules";
 
 const t = siteContent.en;
 
@@ -22,7 +23,11 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <Header nav={t.nav} currentLocale="en" />
+      <Header
+        nav={t.nav}
+        currentLocale="en"
+        cta={{ label: t.hero.primaryCta.label, href: t.hero.primaryCta.href }}
+      />
       <main className="flex-1">
         <Hero t={t.hero} />
         <Problem t={t.problem} />
@@ -34,7 +39,29 @@ export default function HomePage() {
         <ResourcesTeaser t={t.resources} />
         <CTA t={t.cta} />
       </main>
-      <Footer t={t.footer} />
+      <Footer
+        t={t.footer}
+        columns={[
+          {
+            heading: t.nav.services,
+            links: [
+              { label: t.nav.services, href: "#services" },
+              { label: t.nav.work, href: "#work" },
+              { label: t.nav.process, href: "#process" },
+            ],
+          },
+          {
+            heading: t.nav.process,
+            links: moduleLinks("en", ""),
+          },
+          {
+            heading: t.nav.contact,
+            links: [
+              { label: t.footer.contactLabel, href: t.footer.contactHref },
+            ],
+          },
+        ]}
+      />
     </>
   );
 }

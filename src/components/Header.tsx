@@ -5,9 +5,16 @@ import { localePath, type Locale, type SiteContent } from "@/content/site";
 type Props = {
   nav: SiteContent["nav"];
   currentLocale: Locale;
+  /** Optional header CTA (label + href) — usually the apply/contact path. */
+  cta?: { label: string; href: string };
 };
 
-export default function Header({ nav, currentLocale }: Props) {
+// Sticky, blurred top bar in the EMPOWER style. Wordmark on the start side;
+// nav links + language switcher + a dark pill CTA on the end side. Nav links
+// stay hidden below sm (the page is anchor-light on mobile, matching the prior
+// behaviour). The CTA href comes from the content dictionary so it keeps the
+// locale-correct apply/mailto path (PR #2 preserved).
+export default function Header({ nav, currentLocale, cta }: Props) {
   const navItems = [
     { label: nav.services, href: "#services" },
     { label: nav.work, href: "#work" },
@@ -16,21 +23,21 @@ export default function Header({ nav, currentLocale }: Props) {
   ].filter((item) => item.label);
 
   return (
-    <header className="sticky top-0 z-10 border-b border-rule bg-surface">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-5 sm:px-8 sm:py-6 lg:px-12">
+    <header className="sticky top-0 z-50 border-b border-rule bg-page/85 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4 sm:px-8 lg:px-12">
         <Wordmark href={localePath(currentLocale)} size="lg" />
 
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-4 sm:gap-5">
           {navItems.length > 0 ? (
             <nav
               aria-label="Primary"
-              className="hidden gap-6 text-sm text-muted sm:flex"
+              className="hidden gap-1 text-sm sm:flex"
             >
               {navItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
-                  className="transition-colors hover:text-ink"
+                  className="rounded-lg px-3 py-2 font-medium text-body transition-colors hover:bg-surface hover:text-ink"
                 >
                   {item.label}
                 </a>
@@ -38,14 +45,21 @@ export default function Header({ nav, currentLocale }: Props) {
             </nav>
           ) : null}
 
-          {navItems.length > 0 ? (
-            <span
-              aria-hidden="true"
-              className="hidden h-4 w-px bg-rule sm:block"
-            />
-          ) : null}
+          <span
+            aria-hidden="true"
+            className="hidden h-4 w-px bg-rule sm:block"
+          />
 
           <LanguageSwitcher currentLocale={currentLocale} />
+
+          {cta ? (
+            <a
+              href={cta.href}
+              className="hidden rounded-[10px] bg-ink px-4 py-2 text-sm font-bold text-white transition hover:-translate-y-px hover:opacity-85 sm:inline-flex"
+            >
+              {cta.label}
+            </a>
+          ) : null}
         </div>
       </div>
     </header>

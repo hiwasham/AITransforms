@@ -1,52 +1,50 @@
-import { Fragment } from "react";
 import type { SiteContent } from "@/content/site";
-import Arrow from "./Arrow";
+import Reveal from "./motion/Reveal";
 
 type Props = { t: SiteContent["framework"] };
 
-// Map → Structure → Implement → Adapt rendered as a vertical hairline stack on
-// mobile/sm and a horizontal flex flow at lg, with clay arrow separators
-// between steps. The locale-specific step numbers (01 / ۰۱ / ٠١) come from
-// site.ts; numerals are typeset in Instrument Serif on Latin and fall back to
-// Noto Sans Arabic for fa/ar via the :lang() rule in globals.css.
+// Map → Structure → Implement → Adapt as a light card grid (EMPOWER "prereq"
+// style): centered eyebrow + heading + intro, then four hover-lift cards each
+// led by a large gradient step numeral. Replaces the prior horizontal hairline
+// flow. The numerals come locale-typeset from site.ts (01 / ۰۱ / ٠١). Grid and
+// spacing are direction-agnostic so RTL mirrors cleanly.
 export default function Framework({ t }: Props) {
   return (
-    <section id="process">
-      <div className="mx-auto max-w-6xl px-6 py-16 sm:px-8 sm:py-24 lg:px-12 lg:py-32">
-        <h2 className="text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
-          {t.title}
-        </h2>
+    <section id="process" className="bg-page">
+      <div className="mx-auto max-w-6xl px-6 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28">
+        <Reveal>
+          <p className="text-center text-xs font-bold uppercase tracking-[0.14em] text-accent">
+            System Architecture
+          </p>
+        </Reveal>
+        <Reveal delay={100}>
+          <h2 className="mx-auto mt-3 max-w-3xl text-center text-3xl font-extrabold tracking-[-0.03em] text-ink sm:text-4xl">
+            {t.title}
+          </h2>
+        </Reveal>
+        <Reveal delay={200}>
+          <p className="mx-auto mt-5 max-w-2xl text-center text-base leading-[1.75] text-body">
+            {t.intro}
+          </p>
+        </Reveal>
 
-        <p className="mt-6 max-w-3xl text-lg text-body">{t.intro}</p>
-
-        <ol className="mt-16 sm:mt-20 lg:mt-24 lg:flex lg:items-start">
-          {t.steps.map((step, i) => {
-            const isLast = i === t.steps.length - 1;
-            return (
-              <Fragment key={step.number}>
-                <li className="mt-8 border-t border-rule pt-6 first:mt-0 lg:mt-0 lg:flex-1 lg:border-t-0 lg:pt-0">
-                  <span className="block font-display text-4xl leading-none text-accent sm:text-5xl lg:text-6xl">
-                    {step.number}
-                  </span>
-                  <h3 className="mt-4 text-xl font-semibold text-ink">
-                    {step.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-body">
-                    {step.body}
-                  </p>
-                </li>
-                {!isLast ? (
-                  <li
-                    aria-hidden="true"
-                    className="hidden text-accent lg:flex lg:items-start lg:px-4 lg:pt-6"
-                  >
-                    <Arrow size="lg" />
-                  </li>
-                ) : null}
-              </Fragment>
-            );
-          })}
-        </ol>
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {t.steps.map((step, i) => (
+            <Reveal key={step.number} delay={(i % 4) * 100} className="h-full">
+              <div className="h-full rounded-2xl border border-rule bg-surface p-7 transition hover:-translate-y-1 hover:border-zinc-300 hover:shadow-[0_8px_32px_rgba(0,0,0,0.09)]">
+                <span className="block text-5xl font-black leading-none text-gradient">
+                  {step.number}
+                </span>
+                <h3 className="mt-4 text-lg font-bold leading-snug text-ink">
+                  {step.title}
+                </h3>
+                <p className="mt-2.5 text-sm leading-relaxed text-body">
+                  {step.body}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   );
