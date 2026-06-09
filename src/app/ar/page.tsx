@@ -34,7 +34,10 @@ export default function HomePageAr() {
         <Framework t={t.framework} />
         <Services t={t.services} />
         <AgentSpotlight t={t.agentSpotlight} />
-        <CaseStudies t={t.caseStudies} />
+        <CaseStudies
+          t={t.caseStudies}
+          more={{ label: "عرض الأعمال التفصيلية", href: "/ar/work" }}
+        />
         <Founder t={t.founder} />
         <ResourcesTeaser t={t.resources} />
         <CTA t={t.cta} />
