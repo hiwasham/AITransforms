@@ -28,3 +28,19 @@ class MockIntersectionObserver implements IntersectionObserver {
   }
 }
 vi.stubGlobal("IntersectionObserver", MockIntersectionObserver);
+
+// jsdom has no matchMedia; the HeroGlow motion island queries
+// prefers-reduced-motion. Report "no preference" (matches: false).
+vi.stubGlobal(
+  "matchMedia",
+  vi.fn((query: string) => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addEventListener: () => {},
+    removeEventListener: () => {},
+    addListener: () => {},
+    removeListener: () => {},
+    dispatchEvent: () => false,
+  })),
+);
