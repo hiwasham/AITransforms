@@ -1,6 +1,23 @@
 # AITransforms — Project Handoff
 
-Last updated at end of Phase 3 (localized `/apply` flow).
+Last updated at end of Phase 4 (EMPOWER visual redesign + localized `/work` portfolio).
+
+> **Phase 4 status (shipped):** The EMPOWER-style redesign of the homepage and
+> module pages, plus a fully localized `/work` portfolio (en/fa/ar), merged to
+> production `main` via PR #3 (`33e82bc`). One follow-up not yet on `main`: an
+> RTL arrow-mirroring fix (commit `cbf6147`, patch at `/tmp/cbf6147-rtl-arrows.patch`).
+>
+> **Single-source-of-truth rule:** GitHub `main` is canonical. Use exactly ONE
+> local working copy with push credentials; do not keep two copies in sync by
+> hand. Project context lives in this repo (`docs/`, gstack checkpoints under
+> `~/.gstack/projects/hiwasham-AITransforms/`), not in any one agent's memory —
+> so any session that loads this repo is caught up.
+>
+> **Phase 5 backlog (next):** native-speaker review of all fa/ar copy (homepage,
+> modules, `/work` — currently V1 machine translation); an About page; Open Graph
+> + social meta; sitemap.xml + robots.txt; optional no-JS scroll-reveal fallback.
+> Note: sections 1-9 below describe the Phase 1-3 state; routes/branch details
+> there predate Phase 4.
 
 ## 1. Current production URL
 

@@ -40,3 +40,25 @@ Output:
 Keep the plan practical.
 Do not overengineer.
 Wait for my approval before coding.
+
+## Testing
+
+Run tests with `npm run test` (Vitest, jsdom). Component tests are colocated as
+`src/**/*.test.tsx`. See `TESTING.md` for framework setup and conventions.
+
+Full local verification before pushing:
+
+```bash
+npm run lint
+npx tsc --noEmit
+npm run test
+npm run build
+```
+
+Test expectations:
+- 100% coverage is the goal — tests make vibe coding safe.
+- New component or helper → write a corresponding test.
+- Fixing a bug → write a regression test (e.g. the Header anchor and RTL-arrow
+  tests pin ISSUE-001 and the RTL mirroring fix).
+- Adding a conditional (if/else, locale branch) → test both paths.
+- Never commit code that makes existing tests fail.

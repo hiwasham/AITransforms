@@ -61,7 +61,10 @@ export default function CaseStudies({ t, more }: Props) {
               href={more.href}
               className="mt-10 inline-flex text-sm font-bold text-accent hover:underline"
             >
-              {more.label} →
+              {more.label}{" "}
+              <span aria-hidden="true" className="inline-block rtl:-scale-x-100">
+                →
+              </span>
             </a>
           </Reveal>
         ) : null}
