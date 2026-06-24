@@ -26,6 +26,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - De-symmetrized the Framework section and switched numerals to solid blue
   (design review FINDING-001).
 
+## [0.1.1] - 2026-06-24
+
+### Fixed
+
+- Header section-navigation anchors (Services, Process, Contact) now resolve to
+  the locale homepage instead of dead-linking on `/work` pages, where a bare
+  `#services` had been resolving to `/work#services` (ISSUE-001).
+- Directional arrows (`→` / `←`) now mirror correctly under RTL on the homepage
+  and `/work` pages, and are marked `aria-hidden` so screen readers no longer
+  announce them.
+
+### Added
+
+- Test suite: Vitest + React Testing Library, with component tests pinning the
+  header-anchor and RTL-arrow fixes, a GitHub Actions test workflow, and
+  `TESTING.md`.
+
 ## [0.1.0] - 2026-06-08
 
 ### Added
