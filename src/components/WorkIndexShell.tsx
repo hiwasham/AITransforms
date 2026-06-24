@@ -103,7 +103,13 @@ export default function WorkIndexShell({ locale }: Props) {
                     </p>
                   </div>
                   <span className="mt-5 text-sm font-bold text-accent">
-                    {labels.viewCase} →
+                    {labels.viewCase}{" "}
+                    <span
+                      aria-hidden="true"
+                      className="inline-block rtl:-scale-x-100"
+                    >
+                      →
+                    </span>
                   </span>
                 </a>
               </Reveal>

@@ -188,7 +188,10 @@ export default function WorkProjectShell({ locale, slug }: Props) {
               href={`${basePath}/work`}
               className="text-sm font-bold text-accent hover:underline"
             >
-              ← {labels.backToWork}
+              <span aria-hidden="true" className="inline-block rtl:-scale-x-100">
+                ←
+              </span>{" "}
+              {labels.backToWork}
             </a>
           </div>
         </article>
