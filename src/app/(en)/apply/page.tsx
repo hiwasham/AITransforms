@@ -17,6 +17,19 @@ const t = applyContent.en;
 export const metadata: Metadata = {
   title: t.meta.title,
   description: t.meta.description,
+  openGraph: {
+    title: t.meta.title,
+    description: t.meta.description,
+    url: "/apply",
+    siteName: "AITransforms",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: t.meta.title,
+    description: t.meta.description,
+  },
 };
 
 export default function ApplyPage() {
