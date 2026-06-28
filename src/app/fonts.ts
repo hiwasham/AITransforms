@@ -7,6 +7,7 @@ import {
   Noto_Sans_Arabic,
 } from "next/font/google";
 
+<<<<<<< HEAD
 // English body + UI face for the EMPOWER-style redesign. Loaded locally via
 // next/font (no CDN). Persian/Arabic keep their own faces via :lang() rules.
 const inter = Inter({
@@ -14,6 +15,11 @@ const inter = Inter({
   subsets: ["latin"],
   display: "swap",
 });
+=======
+// Centralized font loaders. Shared by every route-group root layout so the
+// next/font instances are created once, not per-locale. Each layout applies
+// `fontVars` to its own <html> element.
+>>>>>>> 2827813 (refactor(routing): implement locale route groups for HTML dir attributes)
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
