@@ -17,6 +17,19 @@ const t = applyContent.fa;
 export const metadata: Metadata = {
   title: t.meta.title,
   description: t.meta.description,
+  openGraph: {
+    title: t.meta.title,
+    description: t.meta.description,
+    url: "/fa/apply",
+    siteName: "AITransforms",
+    locale: "fa_IR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: t.meta.title,
+    description: t.meta.description,
+  },
 };
 
 export default function ApplyPageFa() {

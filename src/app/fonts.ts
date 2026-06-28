@@ -52,4 +52,5 @@ const notoArabic = Noto_Sans_Arabic({
   display: "swap",
 });
 
+// Combined CSS-variable class string for the <html> element.
 export const fontClasses = `${inter.variable} ${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} ${ibmPlexArabic.variable} ${notoArabic.variable} h-full antialiased`;
