@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Recovery Report - AITransforms - Project Recovery</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Recovery Report";
+        var mkdocs_page_input_path = "project-recovery.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> AITransforms - Project Recovery
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Overview</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Recovery Report</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#primary-directory">Primary Directory</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#recovery-artifacts">Recovery Artifacts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mkdocs-documentation-site">MkDocs Documentation Site</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#search-coverage">Search Coverage</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#alternative-project-candidates">Alternative Project Candidates</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#recommended-canonical-location">Recommended Canonical Location</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#migration-workflow">Migration Workflow</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#project-dashboard">Project Dashboard</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#preview-server">Preview Server</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#git-audit">Git Audit</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#active-forest-index">Active Forest Index</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#roajitpm-operating-files">ROA/JITPM Operating Files</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#project-story-files">Project Story Files</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#commit-plan">Commit Plan</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#related-context-found">Related Context Found</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#conversations-and-session-logs">Conversations And Session Logs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#project-files">Project Files</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#recovered-project-story">Recovered Project Story</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#source-quality-ranking">Source Quality Ranking</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#current-project-shape">Current Project Shape</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#important-user-requests-recovered">Important User Requests Recovered</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#important-decisions-recovered">Important Decisions Recovered</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#constraints-and-preferences">Constraints And Preferences</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#open-questions">Open Questions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#cleanup-plan">Cleanup Plan</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#next-agent-instructions">Next-Agent Instructions</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../operating-system/">Operating System</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project-story/">Project Story</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../artifacts/PROJECT_STORY_LLM_BRIEF/">LLM Story Brief</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../artifacts/COMMIT_PLAN/">Commit Plan</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../artifacts/DASHBOARD/">Dashboard</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../artifacts/BUILD-PACKET/">Build Packet</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../artifacts/BRAINSWEEP/">Brainsweep</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../evidence/">Evidence Guide</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">AITransforms - Project Recovery</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Recovery Report</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="project-recovery-api-proxy-broker-for-freemodel">Project Recovery: API proxy broker for freemodel</h1>
+<p>Generated: 2026-07-07T18:04:14.286134+00:00</p>
+<h2 id="primary-directory">Primary Directory</h2>
+<p>Path: <code>/root/projects/AITransforms</code></p>
+<p>Confidence: <code>high</code></p>
+<p>Why this appears to be the primary project:</p>
+<ul>
+<li>path contains 'for'</li>
+<li>has .git</li>
+<li>has package.json</li>
+<li>has README.md</li>
+<li>has AGENTS.md</li>
+<li>recent activity</li>
+</ul>
+<h2 id="recovery-artifacts">Recovery Artifacts</h2>
+<ul>
+<li>Evidence JSON: <a href="../artifacts/project-recovery-evidence.json"><code>project-recovery-evidence.json</code></a></li>
+<li>Full chat transcript: <a href="../artifacts/project-recovery-transcripts.html"><code>project-recovery-transcripts.html</code></a></li>
+<li>MkDocs config: <a href="../artifacts/mkdocs.yml"><code>mkdocs.yml</code></a></li>
+<li>Readable docs: <a href="../"><code>docs/index.md</code></a></li>
+<li>ROA/JITPM operating files: <a href="../artifacts/DASHBOARD/"><code>DASHBOARD.md</code></a>, <a href="../artifacts/BUILD-PACKET/"><code>BUILD-PACKET.md</code></a>, <a href="../artifacts/BRAINSWEEP/"><code>BRAINSWEEP.md</code></a></li>
+<li>Project story: <a href="../project-story/"><code>PROJECT_STORY.md</code></a></li>
+<li>LLM story brief: <a href="../artifacts/PROJECT_STORY_LLM_BRIEF/"><code>PROJECT_STORY_LLM_BRIEF.md</code></a></li>
+<li>Commit plan: <a href="../artifacts/COMMIT_PLAN/"><code>COMMIT_PLAN.md</code></a></li>
+<li>Migration manifest: <a href="../artifacts/MIGRATION_MANIFEST/"><code>MIGRATION_MANIFEST.md</code></a></li>
+</ul>
+<h2 id="mkdocs-documentation-site">MkDocs Documentation Site</h2>
+<ul>
+<li><code>mkdocs.yml</code>: <code>/root/projects/AITransforms/mkdocs.yml</code></li>
+<li>Docs directory: <code>/root/projects/AITransforms/docs</code></li>
+<li>Site directory: <code>/root/projects/AITransforms/site</code></li>
+<li>MkDocs installed: <code>False</code></li>
+<li>MkDocs command: <code>mkdocs</code></li>
+<li>Remote preview URL: <code>http://89.167.19.64:8000/</code></li>
+<li>Install MkDocs, then run <code>mkdocs serve</code> or <code>mkdocs build</code> from the project root.</li>
+</ul>
+<p>Use:</p>
+<pre><code class="language-bash">mkdocs serve --dev-addr 0.0.0.0:8000
+</code></pre>
+<p>or:</p>
+<pre><code class="language-bash">mkdocs build
+</code></pre>
+<h2 id="search-coverage">Search Coverage</h2>
+<p>Local roots searched:</p>
+<ul>
+<li><code>/root</code></li>
+<li><code>/home</code></li>
+<li><code>/Users</code></li>
+<li><code>/srv</code></li>
+<li><code>/opt</code></li>
+<li><code>/mnt</code></li>
+<li><code>/media</code></li>
+<li><code>/tmp</code></li>
+</ul>
+<p>Remote search status:</p>
+<ul>
+<li><code>ssh</code>: available - command found</li>
+<li><code>tailscale</code>: available - command found</li>
+<li><code>wsl.exe</code>: unavailable - command not found</li>
+<li><code>wsl</code>: unavailable - command not found</li>
+</ul>
+<h2 id="alternative-project-candidates">Alternative Project Candidates</h2>
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Path</th>
+<th style="text-align: right;">Score</th>
+<th>Why it matched</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>/root/projects/AITransforms</code></td>
+<td style="text-align: right;">100</td>
+<td>path contains &#x27;for&#x27;; has .git; has package.json; has README.md; has AGENTS.md; recent activity</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>/home/miraddo/.openclaw/projects/aitransforms-gstack-sandbox</code></td>
+<td style="text-align: right;">76</td>
+<td>path contains &#x27;for&#x27;; has .git; has README.md; has AGENTS.md; recent activity</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>/root/.openclaw/workspace-hamkelasi-omid-ceo-transformation/obsidian-sync</code></td>
+<td style="text-align: right;">64</td>
+<td>path contains &#x27;for&#x27;; has .git; has README.md; activity within 90 days</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>/root/.openclaw/agents/hamkelasi-omid-ceo-transformation/agent/codex-home/.tmp/plugins</code></td>
+<td style="text-align: right;">64</td>
+<td>path contains &#x27;for&#x27;; has .git; has README.md; activity within 90 days</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>/root/.openclaw/agents/hamkelasi-omid-ceo-transformation/agent/codex-home/.tmp/plugins-backup-TwTqXH/repo</code></td>
+<td style="text-align: right;">64</td>
+<td>path contains &#x27;for&#x27;; has .git; has README.md; activity within 90 days</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>/root/.bun/install/cache/form-data@4.0.6@@@1</code></td>
+<td style="text-align: right;">62</td>
+<td>path contains &#x27;for&#x27;; has package.json; has README.md; recent activity</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>/root/.bun/install/cache/forwarded@0.2.0@@@1</code></td>
+<td style="text-align: right;">62</td>
+<td>path contains &#x27;for&#x27;; has package.json; has README.md; recent activity</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>/root/.bun/install/cache/ajv-formats@3.0.1@@@1</code></td>
+<td style="text-align: right;">62</td>
+<td>path contains &#x27;for&#x27;; has package.json; has README.md; recent activity</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>/root/.bun/install/cache/proxy-addr@2.0.7@@@1</code></td>
+<td style="text-align: right;">62</td>
+<td>path contains &#x27;proxy&#x27;; has package.json; has README.md; recent activity</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>/root/.openclaw/workspace/hamkelasi-omid-ceo-transformation</code></td>
+<td style="text-align: right;">62</td>
+<td>path contains &#x27;for&#x27;; has .git; has AGENTS.md; activity within 90 days</td>
+</tr>
+</tbody>
+</table>
+<h2 id="recommended-canonical-location">Recommended Canonical Location</h2>
+<p>Suggested path: <code>/root/projects/tools-projects/api-proxy-broker-for</code></p>
+<p>Why:</p>
+<ul>
+<li>Category: <code>tools-projects</code></li>
+<li>Slug: <code>api-proxy-broker-for</code></li>
+<li>Reason: query contains api</li>
+</ul>
+<h2 id="migration-workflow">Migration Workflow</h2>
+<ol>
+<li>Confirm <code>/root/projects/AITransforms</code> is the canonical project root.</li>
+<li>Create <code>/root/projects/tools-projects</code>.</li>
+<li>Copy the project to <code>/root/projects/tools-projects/api-proxy-broker-for</code> with metadata preserved.</li>
+<li>Keep <code>PROJECT_RECOVERY.md</code>, <code>project-recovery-transcripts.html</code>, and <code>project-recovery-evidence.json</code> with the migrated project.</li>
+<li>Run the project from the new path and update absolute paths in scripts, services, docs, and deployments.</li>
+<li>If git is used, commit the migration separately from functional code changes.</li>
+<li>After verification, archive or remove stale scattered folders only with explicit approval.</li>
+</ol>
+<p>Migration execution:</p>
+<ul>
+<li>status: <code>copied</code></li>
+<li>source: <code>/root/projects/AITransforms</code></li>
+<li>target: <code>/root/projects/tools-projects/api-proxy-broker-for</code></li>
+<li>manifest_path: <code>/root/projects/AITransforms/MIGRATION_MANIFEST.json</code></li>
+<li>manifest_new_files: <code>208</code></li>
+<li>manifest_overwritten_files: <code>0</code></li>
+<li>manifest_skipped_files: <code>0</code></li>
+</ul>
+<h2 id="project-dashboard">Project Dashboard</h2>
+<ul>
+<li>status: <code>updated</code></li>
+<li>path: <code>/root/projects/project-dashboard</code></li>
+<li>url: <code>http://89.167.19.64:8001/</code></li>
+<li>build: <code>{'mkdocs_available': True, 'returncode': 0, 'stderr': ''}</code></li>
+</ul>
+<h2 id="preview-server">Preview Server</h2>
+<ul>
+<li>status: <code>not_requested</code></li>
+</ul>
+<h2 id="git-audit">Git Audit</h2>
+<p>Status: <code>minimal</code></p>
+<p>Git initialization:</p>
+<ul>
+<li>started: <code>False</code></li>
+<li>reason: <code>disabled or not needed</code></li>
+</ul>
+<p>Findings:</p>
+<ul>
+<li>Current branch: main.</li>
+<li>Latest commit: 33e82bc 2026-06-10 Merge pull request #3 from hiwasham/feature/work-portfolio.</li>
+<li>Commit count: 24.</li>
+<li>Remote configured.</li>
+<li>.gitignore exists.</li>
+<li>Working tree has 1 uncommitted change(s).</li>
+</ul>
+<p>Fix plan:</p>
+<ol>
+<li>Review uncommitted changes and commit or intentionally discard each group.</li>
+</ol>
+<h2 id="active-forest-index">Active Forest Index</h2>
+<ul>
+<li>status: <code>updated</code></li>
+<li>path: <code>/root/.claude/projects/saveme/Hiwa_context/2-Project Context (The Forest)/03_Active-Forest.md</code></li>
+</ul>
+<h2 id="roajitpm-operating-files">ROA/JITPM Operating Files</h2>
+<ul>
+<li>written: <code>['/root/projects/AITransforms/DASHBOARD.md', '/root/projects/AITransforms/BUILD-PACKET.md', '/root/projects/AITransforms/BRAINSWEEP.md']</code></li>
+<li>existing: <code>[]</code></li>
+<li>missing_templates: <code>[]</code></li>
+</ul>
+<h2 id="project-story-files">Project Story Files</h2>
+<ul>
+<li>story: <code>/root/projects/AITransforms/PROJECT_STORY.md</code></li>
+<li>llm_brief: <code>/root/projects/AITransforms/PROJECT_STORY_LLM_BRIEF.md</code></li>
+</ul>
+<h2 id="commit-plan">Commit Plan</h2>
+<ul>
+<li>path: <code>/root/projects/AITransforms/COMMIT_PLAN.md</code></li>
+<li>status_lines: <code>6</code></li>
+</ul>
+<h2 id="related-context-found">Related Context Found</h2>
+<h3 id="conversations-and-session-logs">Conversations And Session Logs</h3>
+<ul>
+<li><code>/root/.claude/projects/-root/memory/api-keys-dashboard.md</code>: hits api, api, proxy, for, freemodel</li>
+<li><code>/root/.claude/projects/-root/memory/codex-freemodel-ip-account-conflict.md</code>: hits freemodel, api, proxy, for, freemodel</li>
+<li><code>/root/.claude/projects/-home-miraddo--openclaw-projects-aitransforms-gstack-sandbox/59429e3b-39b0-41db-84af-c2602b95163c.jsonl</code>: hits for, api, proxy, for</li>
+<li><code>/root/.claude/projects/-home-miraddo--openclaw-projects-aitransforms-gstack-sandbox/00aac119-f48e-4eb1-91c9-125ad2f1fb7b.jsonl</code>: hits for, api, proxy, for</li>
+<li><code>/root/.claude/projects/-home-miraddo--openclaw-projects-aitransforms-gstack-sandbox/69edf474-db32-411a-8b65-a776747f94e7.jsonl</code>: hits for, api, proxy, for</li>
+<li><code>/root/.claude/projects/-home-miraddo--openclaw-projects-aitransforms-gstack-sandbox/9b3b1cfa-124e-46e5-a3bb-c7c4df81f1d1.jsonl</code>: hits for, api, proxy, for</li>
+<li><code>/root/.claude/projects/-home-miraddo--openclaw-projects-aitransforms-gstack-sandbox/566ff3dd-dc32-4298-b20f-97b45c1f11d4.jsonl</code>: hits for, api, proxy, for</li>
+<li><code>/root/.claude/projects/-home-miraddo--openclaw-projects-aitransforms-gstack-sandbox/a96c100e-adf1-4d86-88d4-d957c90b51ab.jsonl</code>: hits for, api, proxy, for</li>
+<li><code>/root/.claude/projects/-home-miraddo--openclaw-projects-aitransforms-gstack-sandbox/b0b6656a-0424-4bc6-85ca-c5822c12719f.jsonl</code>: hits for, api, proxy, for</li>
+<li><code>/root/.claude/projects/-home-miraddo--openclaw-projects-aitransforms-gstack-sandbox/16f80805-3844-4906-827d-50bdeec0b276.jsonl</code>: hits for, api, proxy, for</li>
+<li><code>/root/.claude/projects/-home-miraddo--openclaw-projects-aitransforms-gstack-sandbox/5ba737d4-76df-4ff7-afc2-77282d561ea5.jsonl</code>: hits for, api, proxy, for</li>
+<li><code>/root/.claude/projects/-home-miraddo--openclaw-projects-aitransforms-gstack-sandbox/c759cf26-8d81-4f5c-af70-e1a96b823db0.jsonl</code>: hits for, api, proxy, for</li>
+<li><code>/root/.claude/projects/-home-miraddo--openclaw-projects-aitransforms-gstack-sandbox/f82aad22-2c91-4402-a2e6-63813eda5c9f.jsonl</code>: hits for, api, proxy, for</li>
+<li><code>/root/.claude/projects/-root-apidash/f7453a91-4ec9-470b-8385-20660311b4cd.jsonl</code>: hits api, api, proxy, for</li>
+<li><code>/root/.codex/.tmp/plugins/plugins/twilio-developer-kit/skills/twilio-conversations-classic-api/SKILL.md</code>: hits api, api, proxy, for</li>
+<li><code>/root/.codex/sessions/2026/05/23/rollout-2026-05-23T14-28-43-019e553d-06c2-79f3-8b78-1ec719fe34f1.jsonl</code>: hits api, proxy, for, freemodel</li>
+<li><code>/root/.codex/sessions/2026/05/23/rollout-2026-05-23T15-59-05-019e558f-c1df-7171-871c-f7060a62edcd.jsonl</code>: hits api, proxy, for, freemodel</li>
+<li><code>/root/.codex/sessions/2026/05/30/rollout-2026-05-30T15-18-47-019e7977-6347-75e2-81ed-05a75519ae0c.jsonl</code>: hits api, proxy, for, freemodel</li>
+<li><code>/root/.codex/sessions/2026/07/01/rollout-2026-07-01T16-28-07-019f1e82-5bf6-78c1-bc1f-3f014ca8b35e.jsonl</code>: hits api, proxy, for, freemodel</li>
+<li><code>/root/.codex/sessions/2026/07/07/rollout-2026-07-07T17-04-55-019f3d8a-35a8-7222-a421-7195079385a7.jsonl</code>: hits api, proxy, for, freemodel</li>
+<li><code>/root/.codex/sessions/2026/07/07/rollout-2026-07-07T18-01-21-019f3dbd-dfc4-78e2-ac14-65bf66af6be7.jsonl</code>: hits api, proxy, broker, for, freemodel</li>
+<li><code>/root/.codex/sessions/2026/07/02/rollout-2026-07-02T15-54-24-019f2389-db4d-74f1-8205-6aac916bb812.jsonl</code>: hits api, broker, for, freemodel</li>
+<li><code>/root/.codex/sessions/2026/07/02/rollout-2026-07-02T22-09-17-019f24e1-122d-76e3-ac56-bf90ccacdacb.jsonl</code>: hits api, proxy, for, freemodel</li>
+<li><code>/root/.codex/sessions/2026/07/02/rollout-2026-07-02T16-45-17-019f23b8-707e-7643-b6d0-e3892708a88b.jsonl</code>: hits api, broker, for, freemodel</li>
+<li><code>/root/.codex/sessions/2026/07/06/rollout-2026-07-06T11-22-13-019f372a-168c-77a0-8b3b-59da7eb9d7a4.jsonl</code>: hits api, proxy, for, freemodel</li>
+<li><code>/root/.codex/sessions/2026/07/06/rollout-2026-07-06T01-30-33-019f350c-680f-7a53-b062-66d1c031d9a6.jsonl</code>: hits api, proxy, broker, for, freemodel</li>
+<li><code>/root/.codex/sessions/2026/07/06/rollout-2026-07-06T01-32-18-019f350e-036a-7ee0-a0e9-e90475a9fa7f.jsonl</code>: hits api, proxy, for, freemodel</li>
+<li><code>/root/.codex/sessions/2026/06/08/rollout-2026-06-08T00-31-22-019ea4a4-27b7-7b12-86f4-35f7093a1e7c.jsonl</code>: hits api, proxy, for, freemodel</li>
+<li><code>/root/.codex/sessions/2026/06/07/rollout-2026-06-07T22-30-21-019ea435-601a-7453-8801-5368cf621512.jsonl</code>: hits api, proxy, for, freemodel</li>
+<li><code>/root/.codex/sessions/2026/06/07/rollout-2026-06-07T21-24-17-019ea3f8-e11c-7150-885f-27b3a4a512ae.jsonl</code>: hits api, proxy, for, freemodel</li>
+<li><code>/root/.claude/projects/-root--claude-projects-saveme/143c02ff-dad3-4554-ba78-f149be137d15.jsonl</code>: hits api, proxy, for, freemodel</li>
+<li><code>/root/.claude/projects/-root--claude-projects-saveme/ec66f610-58d4-438d-8c4a-5a4b8907c56c.jsonl</code>: hits api, proxy, for, freemodel</li>
+<li><code>/root/.claude/projects/-root--claude-projects-saveme/39680429-f87e-4cf8-8c0a-d5c103e93973.jsonl</code>: hits api, proxy, for, freemodel</li>
+<li><code>/root/.claude/projects/-root--claude-squad-worktrees-root-scrapper-18bb80262a3c24b1/ac85066c-b8bc-4caa-9015-165f8b555ed0.jsonl</code>: hits api, proxy, for, freemodel</li>
+<li><code>/root/.claude/projects/-root--claude-squad-worktrees-root-scrapper-18bb80262a3c24b1/88d2c1a7-e714-476e-821d-e5b1100b013e.jsonl</code>: hits api, proxy, for, freemodel</li>
+<li><code>/root/.claude/projects/-root--claude-squad-worktrees-root-feature-game-of-life-improvement-18bae1c034efa0bf/c621671d-2797-48db-9289-aa7ddb49a13a.jsonl</code>: hits api, proxy, for, freemodel</li>
+<li><code>/root/.claude/projects/-root--claude-squad-worktrees-root-feature-game-of-life-improvement-18bae1c034efa0bf/f34b47da-4833-4998-beac-c7c3fac0d172.jsonl</code>: hits api, proxy, for, freemodel</li>
+<li><code>/root/.claude/projects/-root--claude-projects-iranfluent/37659f66-3340-4d27-8a5f-c8d5c599dbcc.jsonl</code>: hits api, proxy, for, freemodel</li>
+<li><code>/root/.claude/projects/-root--claude-projects-iranfluent/6cc08f2a-d1e6-4c1a-84ab-23a0c421b563.jsonl</code>: hits api, proxy, for, freemodel</li>
+<li><code>/root/.claude/projects/-root--claude-projects-iranfluent/88d45226-498f-4027-bd27-436e4130bf03.jsonl</code>: hits api, proxy, for, freemodel</li>
+</ul>
+<h3 id="project-files">Project Files</h3>
+<ul>
+<li><code>/root/.claude/projects/flashcard-wp-plugin/includes/class-api-client.php</code>: hits api, api, proxy, for</li>
+<li><code>/root/.openclaw/agents/hamkelasi-omid-ceo-transformation/agent/codex-home/.tmp/plugins/plugins/mt-newswires/.codex-plugin/plugin.json</code>: hits for, api, broker, for</li>
+<li><code>/root/.openclaw/workspace-hamkelasi-omid-ceo-transformation/memory/2026-05-24-2145.md</code>: hits for, api, proxy, for, freemodel</li>
+<li><code>/root/.codex/.tmp/plugins/plugins/nvidia/skills/omniverse-usd-performance-tuning/references/report-templates/optimization-report.design-fixture.json</code>: hits for, proxy, for</li>
+<li><code>/root/.codex/.tmp/plugins/plugins/nvidia/skills/omniverse-usd-performance-tuning/references/optimization-report/scripts/optimization-report.schema.json</code>: hits for, proxy, for</li>
+<li><code>/root/.codex/.tmp/plugins/plugins/nvidia/skills/omniverse-usd-performance-tuning/references/operations/_curation.json</code>: hits for, proxy, for</li>
+<li><code>/root/.codex/.tmp/plugins/plugins/nvidia/skills/omniverse-usd-performance-tuning/references/operations/manifest.json</code>: hits for, proxy, for</li>
+<li><code>/root/.openclaw/agents/hamkelasi-omid-ceo-transformation/agent/codex-home/.tmp/plugins/plugins/factset/.codex-plugin/plugin.json</code>: hits for, broker, for</li>
+<li><code>/root/.local/share/pipx/venvs/headroom-ai/lib/python3.12/site-packages/headroom/proxy/memory_handler.py</code>: hits proxy, api, proxy, for</li>
+<li><code>/root/.local/share/pipx/venvs/headroom-ai/lib/python3.12/site-packages/headroom/proxy/memory_ranker.py</code>: hits proxy, api, proxy, for</li>
+<li><code>/root/.claude/plugins/marketplaces/headroom-marketplace/tests/test_proxy_memory_integration.py</code>: hits proxy, api, proxy, for</li>
+<li><code>/root/.claude/plugins/marketplaces/headroom-marketplace/crates/headroom-proxy/src/handlers/conversations.rs</code>: hits proxy, api, proxy, for</li>
+<li><code>/root/.claude/plugins/marketplaces/headroom-marketplace/crates/headroom-proxy/tests/integration_conversations.rs</code>: hits proxy, api, proxy, for</li>
+<li><code>/root/.claude/plugins/marketplaces/headroom-marketplace/headroom/proxy/memory_handler.py</code>: hits proxy, api, proxy, for</li>
+<li><code>/root/.claude/plugins/marketplaces/headroom-marketplace/headroom/proxy/memory_ranker.py</code>: hits proxy, api, proxy, for</li>
+<li><code>/root/.openclaw/agents/ops/agent/codex-home/.tmp/plugins/plugins/twilio-developer-kit/skills/twilio-conversations-classic-api/SKILL.md</code>: hits api, api, proxy, for</li>
+<li><code>/root/.openclaw/agents/leadgen/agent/codex-home/.tmp/plugins-clone-DagaA2/plugins/twilio-developer-kit/skills/twilio-conversations-classic-api/SKILL.md</code>: hits api, api, proxy, for</li>
+<li><code>/root/.openclaw/agents/leadgen/agent/codex-home/.tmp/plugins/plugins/twilio-developer-kit/skills/twilio-conversations-classic-api/SKILL.md</code>: hits api, api, proxy, for</li>
+<li><code>/root/.openclaw/agents/growth/agent/codex-home/.tmp/plugins/plugins/twilio-developer-kit/skills/twilio-conversations-classic-api/SKILL.md</code>: hits api, api, proxy, for</li>
+<li><code>/root/.openclaw/agents/main/agent/codex-home/.tmp/plugins/plugins/twilio-developer-kit/skills/twilio-conversations-classic-api/SKILL.md</code>: hits api, api, proxy, for</li>
+<li><code>/root/.openclaw/agents/main/agent/codex-home/.tmp/plugins-backup-SMwG2q/repo/plugins/twilio-developer-kit/skills/twilio-conversations-classic-api/SKILL.md</code>: hits api, api, proxy, for</li>
+<li><code>/root/.openclaw/agents/main/agent/codex-home/.tmp/plugins-backup-5Pv4lN/repo/plugins/twilio-developer-kit/skills/twilio-conversations-classic-api/SKILL.md</code>: hits api, api, proxy, for</li>
+<li><code>/root/.openclaw/agents/ceo-adviser/agent/codex-home/.tmp/plugins/plugins/twilio-developer-kit/skills/twilio-conversations-classic-api/SKILL.md</code>: hits api, api, proxy, for</li>
+<li><code>/root/.openclaw/agents/researcher/agent/codex-home/.tmp/plugins/plugins/twilio-developer-kit/skills/twilio-conversations-classic-api/SKILL.md</code>: hits api, api, proxy, for</li>
+<li><code>/root/.openclaw/agents/coder/agent/codex-home/.tmp/plugins/plugins/twilio-developer-kit/skills/twilio-conversations-classic-api/SKILL.md</code>: hits api, api, proxy, for</li>
+<li><code>/root/.openclaw/agents/hamkelasi-omid-ceo-transformation/agent/codex-home/.tmp/plugins/plugins/twilio-developer-kit/skills/twilio-conversations-classic-api/SKILL.md</code>: hits api, for, api, proxy, for</li>
+<li><code>/root/.local/share/pipx/venvs/headroom-ai/lib/python3.12/site-packages/headroom/proxy/memory_tool_adapter.py</code>: hits proxy, api, for</li>
+<li><code>/root/.local/share/pipx/venvs/headroom-ai/lib/python3.12/site-packages/headroom/proxy/memory_decision.py</code>: hits proxy, proxy, for</li>
+<li><code>/root/.claude/plugins/marketplaces/headroom-marketplace/headroom/proxy/memory_tool_adapter.py</code>: hits proxy, api, for</li>
+<li><code>/root/.claude/plugins/marketplaces/headroom-marketplace/headroom/proxy/memory_decision.py</code>: hits proxy, proxy, for</li>
+<li><code>/root/.openclaw/workspace-hamkelasi-omid-ceo-transformation/memory/2026-05-28-1203.md</code>: hits for, proxy, for</li>
+<li><code>/root/.local/share/pipx/venvs/headroom-ai/lib/python3.12/site-packages/litellm/proxy/guardrails/guardrail_hooks/litellm_content_filter/categories/denied_financial_advice.yaml</code>: hits proxy, api, proxy, broker, for</li>
+<li><code>/root/.gstack/projects/finland/designs/apiproxy-dashboard-20260706-210701/design-board.html</code>: hits api, proxy, api, proxy, for, freemodel</li>
+<li><code>/root/apidash/server.py.bak-bgprober-20260630T215552Z</code>: hits api, api, proxy, for, freemodel</li>
+<li><code>/root/apidash/server.py.bak-gptprobe-20260630T214709Z</code>: hits api, api, proxy, for, freemodel</li>
+<li><code>/root/apidash/server.py</code>: hits api, api, proxy, for, freemodel</li>
+<li><code>/root/apidash/server.py.bak-20260624T213157Z</code>: hits api, api, proxy, for, freemodel</li>
+<li><code>/root/apidash/server.py.bak-ua-20260630T220617Z</code>: hits api, api, proxy, for, freemodel</li>
+<li><code>/root/finland/tests/test_compatibility_proxy.py</code>: hits proxy, api, proxy, for, freemodel</li>
+<li><code>/root/finland/scripts/import_freemodel_keys.py</code>: hits freemodel, api, proxy, for, freemodel</li>
+</ul>
+<h2 id="recovered-project-story">Recovered Project Story</h2>
+<p>This appears to be the recovered project for 'API proxy broker for freemodel', with primary files under <code>/root/projects/AITransforms</code>. The project shape looks like a JavaScript/Node project. Product-intent evidence starts with: {"biggestLen":4206,"cls":"expandable-section-content","sample":"مدیریت دوپامین و ADHD: راهنمای جامع\nImproving <code>jq</code> API Key Update\nImproving <code>jq</code> API Key Update Command\nCannot Access Shared Link\nColab Site Scraper for Google Drive\nDocker Service Not Running: Fixes\nWSL Networ</p>
+<h2 id="source-quality-ranking">Source Quality Ranking</h2>
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Source</th>
+<th style="text-align: right;">Quality</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>/root/.claude/projects/-root/memory/api-keys-dashboard.md</code></td>
+<td style="text-align: right;">102</td>
+<td>specific project token match; AI session or memory location; memory/transcript naming; path match; content match</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>/root/.claude/projects/-root/memory/codex-freemodel-ip-account-conflict.md</code></td>
+<td style="text-align: right;">102</td>
+<td>specific project token match; AI session or memory location; memory/transcript naming; path match; content match</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>/root/.claude/projects/-home-miraddo--openclaw-projects-aitransforms-gstack-sandbox/59429e3b-39b0-41db-84af-c2602b95163c.jsonl</code></td>
+<td style="text-align: right;">100</td>
+<td>specific project token match; AI session or memory location; structured conversation log; path match; content match</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>/root/.claude/projects/-home-miraddo--openclaw-projects-aitransforms-gstack-sandbox/00aac119-f48e-4eb1-91c9-125ad2f1fb7b.jsonl</code></td>
+<td style="text-align: right;">100</td>
+<td>specific project token match; AI session or memory location; structured conversation log; path match; content match</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>/root/.claude/projects/-home-miraddo--openclaw-projects-aitransforms-gstack-sandbox/69edf474-db32-411a-8b65-a776747f94e7.jsonl</code></td>
+<td style="text-align: right;">100</td>
+<td>specific project token match; AI session or memory location; structured conversation log; path match; content match</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>/root/.claude/projects/-home-miraddo--openclaw-projects-aitransforms-gstack-sandbox/9b3b1cfa-124e-46e5-a3bb-c7c4df81f1d1.jsonl</code></td>
+<td style="text-align: right;">100</td>
+<td>specific project token match; AI session or memory location; structured conversation log; path match; content match</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>/root/.claude/projects/-home-miraddo--openclaw-projects-aitransforms-gstack-sandbox/566ff3dd-dc32-4298-b20f-97b45c1f11d4.jsonl</code></td>
+<td style="text-align: right;">100</td>
+<td>specific project token match; AI session or memory location; structured conversation log; path match; content match</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>/root/.claude/projects/-home-miraddo--openclaw-projects-aitransforms-gstack-sandbox/a96c100e-adf1-4d86-88d4-d957c90b51ab.jsonl</code></td>
+<td style="text-align: right;">100</td>
+<td>specific project token match; AI session or memory location; structured conversation log; path match; content match</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>/root/.claude/projects/-home-miraddo--openclaw-projects-aitransforms-gstack-sandbox/b0b6656a-0424-4bc6-85ca-c5822c12719f.jsonl</code></td>
+<td style="text-align: right;">100</td>
+<td>specific project token match; AI session or memory location; structured conversation log; path match; content match</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>/root/.claude/projects/-home-miraddo--openclaw-projects-aitransforms-gstack-sandbox/16f80805-3844-4906-827d-50bdeec0b276.jsonl</code></td>
+<td style="text-align: right;">100</td>
+<td>specific project token match; AI session or memory location; structured conversation log; path match; content match</td>
+</tr>
+<tr>
+<td>11</td>
+<td><code>/root/.claude/projects/-home-miraddo--openclaw-projects-aitransforms-gstack-sandbox/5ba737d4-76df-4ff7-afc2-77282d561ea5.jsonl</code></td>
+<td style="text-align: right;">100</td>
+<td>specific project token match; AI session or memory location; structured conversation log; path match; content match</td>
+</tr>
+<tr>
+<td>12</td>
+<td><code>/root/.claude/projects/-home-miraddo--openclaw-projects-aitransforms-gstack-sandbox/c759cf26-8d81-4f5c-af70-e1a96b823db0.jsonl</code></td>
+<td style="text-align: right;">100</td>
+<td>specific project token match; AI session or memory location; structured conversation log; path match; content match</td>
+</tr>
+<tr>
+<td>13</td>
+<td><code>/root/.claude/projects/-home-miraddo--openclaw-projects-aitransforms-gstack-sandbox/f82aad22-2c91-4402-a2e6-63813eda5c9f.jsonl</code></td>
+<td style="text-align: right;">100</td>
+<td>specific project token match; AI session or memory location; structured conversation log; path match; content match</td>
+</tr>
+<tr>
+<td>14</td>
+<td><code>/root/.claude/projects/-root-apidash/f7453a91-4ec9-470b-8385-20660311b4cd.jsonl</code></td>
+<td style="text-align: right;">100</td>
+<td>specific project token match; AI session or memory location; structured conversation log; path match; content match</td>
+</tr>
+<tr>
+<td>15</td>
+<td><code>/root/.codex/.tmp/plugins/plugins/twilio-developer-kit/skills/twilio-conversations-classic-api/SKILL.md</code></td>
+<td style="text-align: right;">97</td>
+<td>specific project token match; AI session or memory location; memory/transcript naming; path match; content match</td>
+</tr>
+</tbody>
+</table>
+<h2 id="current-project-shape">Current Project Shape</h2>
+<p>This section needs a human or agent pass after reviewing the files above.</p>
+<p>Main components:</p>
+<ul>
+<li>Inspect the primary directory files and update this list.</li>
+</ul>
+<p>Runtime/deployment notes:</p>
+<ul>
+<li>Inspect launch scripts, manifests, and logs in the primary directory.</li>
+</ul>
+<h2 id="important-user-requests-recovered">Important User Requests Recovered</h2>
+<ul>
+<li>Request: &gt; I am confirming Situation 1. You were right—my previous session was mistakenly running on the read-only Raspberry Pi edge node. I have now officially SSH'd into the primary Finland VPS. We are starting fresh. &gt; &gt; <strong>Context Sync:</strong> &gt; &gt; NaN. We are physically on the Finland VPS. 
+  Source: <code>/root/.claude/projects/-home-miraddo--openclaw-projects-aitransforms-gstack-sandbox/00aac119-f48e-4eb1-91c9-125ad2f1fb7b.jsonl</code></li>
+<li>Request: I am confirming Situation 1. You were right—my previous session was mistakenly running on the read-only Raspberry Pi edge node. I have now officially SSH'd into the primary Finland VPS. We are starting fresh. Context Sync: We are physically on the Finland VPS. I have revoked the 
+  Source: <code>/root/.claude/projects/-home-miraddo--openclaw-projects-aitransforms-gstack-sandbox/566ff3dd-dc32-4298-b20f-97b45c1f11d4.jsonl</code></li>
+<li>Request: [ { "slug": "transcripts/claude-code/hiwasham-airesearcher/2026-06-09-b7b77c96-057", "page_id": 682, "title": "claude-code session — hiwasham-airesearcher — 2026-06-09", "type": "transcript", "chunk_text": "- <strong>B = framing of RESEARCH QUESTIONS</strong> — cultural feasibility/acceptabil
+  Source: <code>/root/.claude/projects/-root--claude-squad-worktrees-root-feature-game-of-life-improvement-18bae1c034efa0bf/f34b47da-4833-4998-beac-c7c3fac0d172.jsonl</code></li>
+<li>Request: [ { "slug": "transcripts/claude-code/_unattributed/2026-06-08-4093906e-48e", "page_id": 729, "title": "claude-code session — _unattributed — 2026-06-08", "type": "transcript", "chunk_text": "## Assistant\n\nSaved, Hiwa — captured the pro way despite the DB being down.\n\n**Two cr
+  Source: <code>/root/.claude/projects/-root--claude-projects-iranfluent/6cc08f2a-d1e6-4c1a-84ab-23a0c421b563.jsonl</code></li>
+<li>Request: Exit code 1 === proxy env === === leftover zips/tmp === /tmp/playwright-download-YRRDq6 /tmp/playwright-download-x9ZXTv /tmp/hshell.zip /tmp/playwright-download-p1WU9C /tmp/playwright-download-b5oKy8 /tmp/playwright-download-SFMDms /tmp/playwright-download-YRRDq6/playwright-downl
+  Source: <code>/root/.claude/projects/-root/fe24d3b7-00c4-47a5-9df3-e3b6230f43a8.jsonl</code></li>
+<li>Request: {"biggestLen":4206,"cls":"expandable-section-content","sample":"مدیریت دوپامین و ADHD: راهنمای جامع\nImproving <code>jq</code> API Key Update\nImproving <code>jq</code> API Key Update Command\nCannot Access Shared Link\nColab Site Scraper for Google Drive\nDocker Service Not Running: Fixes\nWSL Networ
+  Source: <code>/root/.claude/projects/-root/fe24d3b7-00c4-47a5-9df3-e3b6230f43a8.jsonl</code></li>
+<li>Request: [{"t":"Gemini","h":"/"},{"t":"New chat","h":"/app"},{"t":"Search chats","h":"/search"},{"t":"Images","h":"/images"},{"t":"Videos","h":"/videos"},{"t":"Library","h":"library"},{"t":"Images","h":"/images"},{"t":"Videos","h":"/videos"},{"t":"Library","h":"library"},{"t":"New noteboo
+  Source: <code>/root/.claude/projects/-root/fe24d3b7-00c4-47a5-9df3-e3b6230f43a8.jsonl</code></li>
+<li>Request: /root/bin/jit ---jit alias/func--- jit is /root/bin/jit ---jit files--- ---recent daily/log files touched last 24h--- /root/BACKLOG.md /root/.headroom/logs/proxy.log /root/.cockpit/presence.log /root/.cockpit/backup.log /root/.npm/_logs/2026-06-23T19_57_47_212Z-debug-0.log /root/
+  Source: <code>/root/.claude/projects/-root/f975039f-e876-465f-b356-38b6bea37099.jsonl</code></li>
+</ul>
+<h2 id="important-decisions-recovered">Important Decisions Recovered</h2>
+<ul>
+<li>Review the transcript and fill in durable decisions with source paths.</li>
+</ul>
+<h2 id="constraints-and-preferences">Constraints And Preferences</h2>
+<ul>
+<li>Keep full recovered conversations linked in this project directory.</li>
+<li>Treat this primary directory as canonical unless stronger evidence is found.</li>
+</ul>
+<h2 id="open-questions">Open Questions</h2>
+<ul>
+<li>Question: Is <code>/root/projects/AITransforms</code> definitely the canonical project root?
+  Why it matters: cleanup should not move context into the wrong directory.
+  Suggested next action: inspect the top-ranked alternatives and update this report.</li>
+</ul>
+<h2 id="cleanup-plan">Cleanup Plan</h2>
+<ol>
+<li>Keep this directory as the canonical project home until the migration target is confirmed.</li>
+<li>Migrate toward <code>/root/projects/tools-projects/api-proxy-broker-for</code> using the workflow above.</li>
+<li>Move or link relevant scattered notes into this project.</li>
+<li>Add or update <code>README.md</code> with setup, run, and deployment instructions.</li>
+<li>Add project-specific <code>AGENTS.md</code> if agent workflow rules matter.</li>
+<li>Convert unresolved work into issues or a local task list.</li>
+<li>Apply the git fix plan above.</li>
+</ol>
+<h2 id="next-agent-instructions">Next-Agent Instructions</h2>
+<ol>
+<li>Start in <code>/root/projects/AITransforms</code>.</li>
+<li>Read this file.</li>
+<li>Open <code>project-recovery-transcripts.html</code> for full conversation context.</li>
+<li>Inspect <code>project-recovery-evidence.json</code> for raw search evidence.</li>
+<li>Treat alternative candidates as supporting context unless new evidence proves one is canonical.</li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../operating-system/" class="btn btn-neutral float-right" title="Operating System">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../operating-system/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

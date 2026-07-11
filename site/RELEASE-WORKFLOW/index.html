@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Release Workflow - AITransforms - Project Recovery</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Release Workflow";
+        var mkdocs_page_input_path = "RELEASE-WORKFLOW.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> AITransforms - Project Recovery
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Overview</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project-recovery/">Recovery Report</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../operating-system/">Operating System</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project-story/">Project Story</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../artifacts/PROJECT_STORY_LLM_BRIEF/">LLM Story Brief</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../artifacts/COMMIT_PLAN/">Commit Plan</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../artifacts/DASHBOARD/">Dashboard</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../artifacts/BUILD-PACKET/">Build Packet</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../artifacts/BRAINSWEEP/">Brainsweep</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../evidence/">Evidence Guide</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">AITransforms - Project Recovery</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Release Workflow</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="release-workflow">Release Workflow</h1>
+<p>This document defines how releases and deployments happen for AITransforms.</p>
+<h2 id="core-rule">Core rule</h2>
+<p><strong>All releases and production deployments must go through the gstack <code>/ship</code> workflow.</strong></p>
+<p>Do not push directly to <code>main</code> to deploy, and do not deploy from local builds.
+<code>main</code> is the production branch — Vercel auto-deploys it to <code>v1.aitransforms.ir</code>.
+Every change reaches <code>main</code> through <code>/ship</code>, which runs the verify gate, updates
+version and changelog, and opens the PR.</p>
+<h2 id="what-ship-does">What <code>/ship</code> does</h2>
+<p><code>/ship</code> is the single entry point for shipping. In order, it:</p>
+<ol>
+<li>Runs the verify gate (build, lint, typecheck) and refuses to proceed if any fail.</li>
+<li>Bumps <code>VERSION</code> per semantic versioning.</li>
+<li>Moves the <code>[Unreleased]</code> notes in <code>CHANGELOG.md</code> into a new dated version entry.</li>
+<li>Squashes work-in-progress commits into clean, reviewable commits.</li>
+<li>Opens a pull request against <code>main</code>.</li>
+</ol>
+<p>Merging the PR to <code>main</code> triggers the Vercel production deploy. Other branches get
+automatic Vercel preview URLs (also surfaced in the PR checks).</p>
+<h2 id="verify-gate">Verify gate</h2>
+<p>These must all pass before anything ships. <code>/ship</code> runs them; you can run them
+locally first:</p>
+<pre><code class="language-bash">npm run build        # Next.js static build (Turbopack)
+npm run lint         # ESLint
+npx tsc --noEmit     # TypeScript typecheck
+</code></pre>
+<h2 id="versioning">Versioning</h2>
+<ul>
+<li>Source of truth is the <code>VERSION</code> file at the repo root.</li>
+<li>Follow <a href="https://semver.org/">Semantic Versioning</a>: <code>MAJOR.MINOR.PATCH</code>.</li>
+<li>PATCH — fixes and copy/content tweaks with no structural change.</li>
+<li>MINOR — new sections, routes, or features that are backward compatible.</li>
+<li>MAJOR — breaking restructures (reserved; the <code>v1.</code> domain prefix leaves room
+    for a future <code>v2</code>).</li>
+<li>Record every shipped change under the matching version heading in <code>CHANGELOG.md</code>.</li>
+</ul>
+<h2 id="changelog-discipline">Changelog discipline</h2>
+<ul>
+<li>Add notes under <code>## [Unreleased]</code> as you work.</li>
+<li><code>/ship</code> promotes <code>[Unreleased]</code> to a dated, versioned section at release time.</li>
+<li>Keep entries grouped by <code>Added</code> / <code>Changed</code> / <code>Fixed</code> / <code>Removed</code>.</li>
+</ul>
+<h2 id="out-of-scope-for-ship">Out of scope for <code>/ship</code></h2>
+<p>No environment variables or Vercel build overrides are required. The site is fully
+static with no backend, so there are no migrations, secrets, or post-deploy steps
+to coordinate.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

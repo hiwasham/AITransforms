@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>AITransforms — Project Handoff - AITransforms - Project Recovery</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "AITransforms \u2014 Project Handoff";
+        var mkdocs_page_input_path = "PROJECT-HANDOFF.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> AITransforms - Project Recovery
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Overview</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project-recovery/">Recovery Report</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../operating-system/">Operating System</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project-story/">Project Story</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../artifacts/PROJECT_STORY_LLM_BRIEF/">LLM Story Brief</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../artifacts/COMMIT_PLAN/">Commit Plan</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../artifacts/DASHBOARD/">Dashboard</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../artifacts/BUILD-PACKET/">Build Packet</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../artifacts/BRAINSWEEP/">Brainsweep</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../evidence/">Evidence Guide</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">AITransforms - Project Recovery</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">AITransforms — Project Handoff</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="aitransforms-project-handoff">AITransforms — Project Handoff</h1>
+<p>Last updated at end of Phase 3 (localized <code>/apply</code> flow).</p>
+<h2 id="1-current-production-url">1. Current production URL</h2>
+<ul>
+<li><strong>Primary</strong>: https://v1.aitransforms.ir</li>
+<li>Reachable subpaths:</li>
+<li>https://v1.aitransforms.ir/</li>
+<li>https://v1.aitransforms.ir/fa</li>
+<li>https://v1.aitransforms.ir/ar</li>
+<li>https://v1.aitransforms.ir/apply</li>
+<li>https://v1.aitransforms.ir/fa/apply (after the Phase 3 localized branch is deployed)</li>
+<li>https://v1.aitransforms.ir/ar/apply (after the Phase 3 localized branch is deployed)</li>
+<li>The default Vercel project URL (<code>https://ai-transforms.vercel.app</code>) currently returns 404 — <code>v1.aitransforms.ir</code> is the canonical production domain.</li>
+</ul>
+<h2 id="2-current-routes">2. Current routes</h2>
+<p>All routes are statically generated by Next.js App Router at build time.</p>
+<table>
+<thead>
+<tr>
+<th>Route</th>
+<th>Locale</th>
+<th>Direction</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/</code></td>
+<td>English</td>
+<td>LTR</td>
+<td>Homepage</td>
+</tr>
+<tr>
+<td><code>/fa</code></td>
+<td>Persian (Farsi)</td>
+<td>RTL</td>
+<td>Persian homepage</td>
+</tr>
+<tr>
+<td><code>/ar</code></td>
+<td>Arabic</td>
+<td>RTL</td>
+<td>Arabic homepage</td>
+</tr>
+<tr>
+<td><code>/apply</code></td>
+<td>English</td>
+<td>LTR</td>
+<td>Application page (AI Transformation Review)</td>
+</tr>
+<tr>
+<td><code>/fa/apply</code></td>
+<td>Persian</td>
+<td>RTL</td>
+<td>Persian application page</td>
+</tr>
+<tr>
+<td><code>/ar/apply</code></td>
+<td>Arabic</td>
+<td>RTL</td>
+<td>Arabic application page</td>
+</tr>
+<tr>
+<td><code>/icon.svg</code></td>
+<td>—</td>
+<td>—</td>
+<td>Brand favicon (clay arrow on warm near-black)</td>
+</tr>
+</tbody>
+</table>
+<p>CTA flow:
+- English homepage primary CTAs → <code>/apply</code>
+- Persian homepage primary CTAs → <code>/fa/apply</code>
+- Arabic homepage primary CTAs → <code>/ar/apply</code>
+- Footer "Contact AITransforms" link in all locales → <code>mailto:iranfluent.com@gmail.com</code> (backup contact path)</p>
+<h2 id="3-github-repo-and-branch-status">3. GitHub repo and branch status</h2>
+<ul>
+<li><strong>Repo</strong>: <code>hiwasham/AITransforms</code></li>
+<li><strong>Default branch</strong>: <code>main</code> (production / deployed)</li>
+<li><strong>Working branches</strong> (history):</li>
+<li><code>main</code> — production; cumulative through Phase 3 apply flow (commit <code>f28e1e3 add AI transformation review apply flow</code>)</li>
+<li><code>phase2-ui-branding</code> — Phase 2 editorial visual redesign (merged)</li>
+<li><code>phase3-apply-flow</code> — Phase 3 English <code>/apply</code> (merged)</li>
+<li><strong>Phase 3 localized <code>/apply</code></strong> (current pass): work is on <code>main</code> working tree, untracked. After commit + push it will land on a localized-apply branch and merge into <code>main</code>.</li>
+</ul>
+<h2 id="4-phase-summary">4. Phase summary</h2>
+<h3 id="phase-1-v1-ship">Phase 1 — V1 ship</h3>
+<ul>
+<li>Set up Next.js 16 App Router + TypeScript + Tailwind v4 + Vercel.</li>
+<li>Three locale routes (<code>/</code>, <code>/fa</code>, <code>/ar</code>) with static page generation.</li>
+<li>12 section components per locale: Header, Hero, Problem, Framework, Services, AgentSpotlight, CaseStudies, Founder, ResourcesTeaser, CTA, Footer, LanguageSwitcher.</li>
+<li>Single content dictionary at <code>src/content/site.ts</code> keyed by locale.</li>
+<li>RTL plumbing via <code>&lt;div lang="..." dir="rtl"&gt;</code> wrappers in <code>src/app/fa/layout.tsx</code> and <code>src/app/ar/layout.tsx</code>.</li>
+<li>Build, lint, typecheck clean. Deployed to Vercel.</li>
+</ul>
+<h3 id="phase-2-editorial-visual-redesign">Phase 2 — Editorial visual redesign</h3>
+<p>Eight sub-passes (G–N) on <code>phase2-ui-branding</code>, merged to <code>main</code>:</p>
+<ul>
+<li><strong>Pass G — Design tokens</strong>: replaced the 2-variable palette with 9 Phase 2 tokens (<code>bg-page</code>, <code>bg-surface</code>, <code>bg-inverse</code>, <code>text-ink</code>, <code>text-body</code>, <code>text-muted</code>, <code>border-rule</code>, <code>text-accent</code>, <code>text-accent-strong</code>). Registered Instrument Serif as <code>--font-display</code>.</li>
+<li><strong>Pass H — Typography &amp; rhythm</strong>: token swaps across every component, alternating section padding scale, dropped most <code>border-b</code> section separators in favor of whitespace.</li>
+<li><strong>Pass I — Wordmark &amp; Header</strong>: created reusable <code>Wordmark.tsx</code> with a clay SVG arrow glyph; made Header sticky; restyled <code>LanguageSwitcher</code> with vertical hairline separators and a clay underline on the active locale.</li>
+<li><strong>Pass J — Hero</strong>: H1 in Instrument Serif at <code>text-5xl/6xl/7xl</code>; primary CTA pill (<code>rounded-full bg-ink hover:bg-accent-strong</code>); secondary CTA clay-underlined; new "Business Brain → AI Systems" metaphor flourish.</li>
+<li><strong>Pass K — Problem, Framework, Services</strong>: replaced card grids with editorial hairline-stacked rows. Problem uses large clay serif numerals; Framework becomes a horizontal flow with clay arrow separators at lg; Services becomes 4 stacked rows with title-left / body-right.</li>
+<li><strong>Pass L — AgentSpotlight, CaseStudies, CTA</strong>: AgentSpotlight switched from full-bleed dark slab to contained <code>rounded-2xl</code> panel with a top chrome strip (clay vertical accent + eyebrow); CaseStudies stripped card chrome; CTA enlarged to a closing-moment with pill button and hairline frame.</li>
+<li><strong>Pass M — Founder, Resources, content tidy</strong>: hoisted <code>FOUNDER</code> object (<code>displayName: "Hiwa"</code> + per-locale <code>role: "AI Transformation Architect &amp; Founder, AITransforms"</code>); replaced fake article cards with 4 honest category teasers (Articles / Frameworks / Roadmaps / Technical Notes) + clay closing line.</li>
+<li><strong>Pass N — Mobile polish, RTL QA, favicon, ship</strong>: <code>section[id] { scroll-margin-top: 5rem }</code> so anchor scrolls clear the sticky header; replaced default Next.js <code>favicon.ico</code> with a brand <code>icon.svg</code> (clay arrow on warm near-black).</li>
+</ul>
+<p>Plus a separate font pass (Pass T): Persian uses local IRANSans (<code>public/fonts/IRANSansWeb/</code>); Arabic uses IBM Plex Sans Arabic via <code>next/font/google</code> as <code>--font-arabic</code>. English keeps Geist; mono stays Geist Mono. Fallback for both fa/ar is Noto Sans Arabic.</p>
+<h3 id="phase-3-apply-flow">Phase 3 — Apply flow</h3>
+<p>Five sub-passes (O–S) on <code>phase3-apply-flow</code>:</p>
+<ul>
+<li><strong>Pass O — Content scaffold + route</strong>: new <code>src/content/apply.ts</code> (English-only at first), new <code>/apply</code> route, 8 section component stubs in <code>src/components/apply/</code>, 6 homepage CTA repointed to <code>/apply</code> (with translated labels).</li>
+<li><strong>Pass P — ApplyHero + ApplyProblem + Diagnostic</strong>: ApplyHero gets full Instrument Serif treatment + hairline tagline; ApplyProblem becomes hairlined rows with short clay vertical accent bars; Diagnostic becomes a 3-col grid at lg with clay-strong <code>Diagnostic NN</code> labels.</li>
+<li><strong>Pass Q — WhatWeReview + WhoThisIsFor + AfterApply</strong>: WhatWeReview = 2-col list with clay arrow markers, no hairlines; WhoThisIsFor = <code>&lt;dl&gt;</code> dictionary-entry layout with whitespace separation; AfterApply = 3-step horizontal flow with clay arrow separators at lg (mirrors home Framework).</li>
+<li><strong>Pass R — ApplyForm</strong>: converted to <code>"use client"</code> component with controlled state, HTML5 validation (required Name/Email/Company/helpWith/Consent; <code>maxLength={1000}</code> on textareas; <code>type="email"</code> and <code>type="url"</code>), and a <code>mailto:</code> submit handler that constructs a structured body. Visible fallback email line below submit button as Plan B.</li>
+<li><strong>Pass S — Reassurance + final QA</strong>: polished Reassurance into a quiet closing trust note (hairline + em-dash bullets); verified all 8 sections, 4 CTA flows, and form behavior.</li>
+</ul>
+<p>Plus the localized apply work (current pass, untracked on <code>main</code>):
+- Restructured <code>apply.ts</code> into locale-keyed <code>{ en, fa, ar }</code>.
+- Created <code>/fa/apply</code> and <code>/ar/apply</code> routes with full Persian / Arabic translations.
+- Diagnostic prefix label localized per locale (<code>itemLabel</code>).
+- ApplyForm lazy initializer defaults the language radio to the page's own language; mailto body labels now read from <code>f.*.label</code> so submitters see their compose window in their own language.
+- Persian homepage primary CTAs → <code>/fa/apply</code>; Arabic homepage primary CTAs → <code>/ar/apply</code>; English homepage primary CTAs stay → <code>/apply</code>.</p>
+<h2 id="5-typography-setup">5. Typography setup</h2>
+<p>Loaded fonts (all via <code>next/font/google</code> in <code>src/app/layout.tsx</code>, except IRANSans which is local):</p>
+<table>
+<thead>
+<tr>
+<th>Font</th>
+<th>Source</th>
+<th>CSS variable</th>
+<th>Used for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geist</td>
+<td>next/font/google</td>
+<td><code>--font-geist-sans</code> (<code>font-sans</code>)</td>
+<td>English body text (default)</td>
+</tr>
+<tr>
+<td>Geist Mono</td>
+<td>next/font/google</td>
+<td><code>--font-geist-mono</code> (<code>font-mono</code>)</td>
+<td>Mono (unused on page surfaces)</td>
+</tr>
+<tr>
+<td>Instrument Serif</td>
+<td>next/font/google</td>
+<td><code>--font-instrument-serif</code> (<code>font-display</code>)</td>
+<td>Hero H1s only (home + apply, en only)</td>
+</tr>
+<tr>
+<td>IBM Plex Sans Arabic</td>
+<td>next/font/google</td>
+<td><code>--font-arabic</code></td>
+<td>Arabic body (<code>:lang(ar)</code>)</td>
+</tr>
+<tr>
+<td>Noto Sans Arabic</td>
+<td>next/font/google</td>
+<td><code>--font-noto-arabic</code></td>
+<td>Fallback for fa + ar</td>
+</tr>
+<tr>
+<td>IRANSans Web (Regular/Medium/Bold)</td>
+<td>local — <code>public/fonts/IRANSansWeb/</code> via <code>@font-face</code> in <code>globals.css</code></td>
+<td>(no CSS variable; family name <code>IRANSans</code>)</td>
+<td>Persian body (<code>:lang(fa)</code>)</td>
+</tr>
+</tbody>
+</table>
+<p><code>:lang(fa), :lang(ar)</code> rules in <code>globals.css</code> also reset <code>letter-spacing: normal</code> because Tailwind tracking utilities break Arabic cursive joining.</p>
+<p>Persian/Arabic don't inherit Instrument Serif because the <code>:lang()</code> rule wins the cascade and overrides <code>font-family</code> back to IRANSans / IBM Plex Sans Arabic.</p>
+<h2 id="6-domain-setup">6. Domain setup</h2>
+<ul>
+<li><strong>Primary domain</strong>: <code>v1.aitransforms.ir</code> (Iranian TLD).</li>
+<li><strong>Hosting</strong>: Vercel (static).</li>
+<li><strong>DNS</strong>: <code>v1.aitransforms.ir</code> points at Vercel; configured in Vercel project settings.</li>
+<li><strong>Default Vercel URL</strong>: <code>ai-transforms.vercel.app</code> currently returns 404 — production traffic uses the custom domain.</li>
+<li>The <code>v1.</code> subdomain prefix reserves room for future major-version domains (e.g. <code>v2.aitransforms.ir</code>).</li>
+</ul>
+<h2 id="7-form-apply-behavior">7. Form / apply behavior</h2>
+<p>The <code>/apply</code>, <code>/fa/apply</code>, and <code>/ar/apply</code> forms all behave identically aside from language:</p>
+<table>
+<thead>
+<tr>
+<th>Behavior</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Component</td>
+<td><code>src/components/apply/ApplyForm.tsx</code> — the only <code>"use client"</code> component in the project</td>
+</tr>
+<tr>
+<td>Submission target</td>
+<td><code>mailto:iranfluent.com@gmail.com</code></td>
+</tr>
+<tr>
+<td>Email subject</td>
+<td><code>AI Transformation Review Application</code> (universal English, all locales)</td>
+</tr>
+<tr>
+<td>Email body</td>
+<td>Localized to the page's locale — labels in fa / ar / en match what the submitter saw</td>
+</tr>
+<tr>
+<td>Visible fallback</td>
+<td>"Or email us directly at iranfluent.com@gmail.com." with the email as a clickable mailto link</td>
+</tr>
+<tr>
+<td>State management</td>
+<td>Single <code>useState&lt;FormState&gt;</code> object; 10 fields total</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>HTML5 — <code>required</code> on Name / Email / Company / "What do you want AI to help with?" / Consent; <code>type="email"</code> and <code>type="url"</code>; <code>maxLength={1000}</code> on the three textareas</td>
+</tr>
+<tr>
+<td>Default language radio</td>
+<td>First option of the locale (English on en, Persian on fa, Arabic on ar)</td>
+</tr>
+<tr>
+<td>Form fields</td>
+<td>Name; Email; Company or project; Website (optional); 3 textareas (help-with / existing / bottleneck); Interests (multi-checkbox: 4 service categories); Preferred language (radio: 3 options); Consent (required)</td>
+</tr>
+<tr>
+<td>No backend</td>
+<td>No API routes, no server actions, no database, no CMS, no auth. Form data only exits the user's machine when they send the prefilled email from their mail client.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-known-limitations">8. Known limitations</h2>
+<ol>
+<li><strong><code>&lt;html lang&gt;</code> and root <code>dir</code> are always <code>lang="en"</code></strong> with no <code>dir</code> attribute at the root layout. Persian and Arabic routes get RTL via a nested <code>&lt;div lang="..." dir="rtl"&gt;</code> in <code>src/app/fa/layout.tsx</code> and <code>src/app/ar/layout.tsx</code>. Search engines and assistive tech would benefit from correct root-level attributes — requires per-locale root layouts.</li>
+<li><strong>Mobile navigation hides anchor links</strong> at <code>&lt;sm</code> breakpoint (<code>hidden sm:flex</code>). Phone visitors only see the wordmark + language switcher. No hamburger menu.</li>
+<li><strong>Language switcher always links to homepages</strong> (<code>/</code>, <code>/fa</code>, <code>/ar</code>), not the equivalent apply route. A visitor on <code>/fa/apply</code> clicking "العربية" lands on <code>/ar</code>, not <code>/ar/apply</code>. Locale-aware path mapping is a future improvement.</li>
+<li><strong>Translations are V1 quality</strong> — Persian and Arabic content was translated directly rather than reviewed by a native speaker. Acceptable for V1; flagged for native review.</li>
+<li><strong>No submission tracking</strong> by design (no backend). The site can't observe whether a user actually sent the prefilled email.</li>
+<li><strong><code>mailto:</code> URL length</strong> — with Persian/Arabic content and three 1000-char textareas, the URL can exceed 20-30 KB. Most modern mail clients handle it; legacy Windows configurations may truncate. Visible fallback email line is the explicit Plan B.</li>
+<li><strong>Diagnostic numerals stay Latin (<code>01–05</code>)</strong> in all locales for visual consistency with the home Problem section. Persian/Arabic readers see Latin digits in the Diagnostic prefix.</li>
+<li><strong>mailto subject is universal English</strong> — recipient-friendly for inbox filtering, but submitters see English text in their mail composer subject line.</li>
+<li><strong>No focus-visible rings on form inputs</strong> — relies on browser defaults. A consistent focus-ring policy is a future a11y polish item.</li>
+<li><strong><code>public/fonts/</code> ships unused IRANSans weight directories</strong> (Light, UltraLight, Black, the <code>(FaNum)</code> variant tree, the original <code>IRANSans.zip</code>, the <code>WebFonts.png</code> preview). These aren't referenced by CSS but are publicly accessible at <code>/fonts/...</code> URLs. Cleanup is a small future task.</li>
+<li><strong>No Open Graph / social meta tags</strong> — link previews on Slack/LinkedIn/iMessage use Next's default behavior.</li>
+<li><strong>No sitemap.xml or robots.txt</strong> — light SEO items.</li>
+<li><strong>AgentSpotlight is the only dark surface</strong> on every page. Intentional; no visual variety pattern beyond it currently.</li>
+</ol>
+<h2 id="9-phase-4-backlog">9. Phase 4 backlog</h2>
+<p>In rough priority order:</p>
+<ol>
+<li><strong>Translation review</strong> — native-speaker review of all Persian and Arabic copy, especially the <code>/apply</code> flow and form labels.</li>
+<li><strong>Locale-aware LanguageSwitcher</strong> — when on <code>/fa/apply</code> clicking another language should land on the equivalent apply route in that language, not the homepage.</li>
+<li><strong><code>&lt;html lang&gt;</code> and <code>dir</code> per locale at the root layout</strong> — requires either per-locale root layouts or a dynamic root layout. Improves SEO and a11y signaling.</li>
+<li><strong>Mobile navigation</strong> — small hamburger menu or section anchor dropdown so phone visitors can navigate without scrolling through every section.</li>
+<li><strong>Open Graph + social meta</strong> — per-locale <code>og:title</code>, <code>og:description</code>, <code>og:image</code>. The <code>icon.svg</code> could be the basis for a 1200×630 OG image.</li>
+<li><strong>Sitemap.xml + robots.txt</strong> — light SEO.</li>
+<li><strong>Submission tracking</strong> — privacy-friendly analytics event on the submit handler (Plausible, Vercel Analytics) to observe conversion.</li>
+<li><strong>Real Resources content</strong> — the homepage Resources teaser still says "First writeups coming soon." Ship the actual first writeup.</li>
+<li><strong>Diagnostic numerals localization</strong> — lift <code>01–05</code> into per-locale <code>number</code> fields so fa shows <code>۰۱–۰۵</code> and ar shows <code>٠١–٠٥</code>.</li>
+<li><strong>mailto subject localization</strong> — per-locale subject would let submitters see a familiar string in their compose window. Trade-off: recipient-side filtering becomes locale-aware.</li>
+<li><strong>Long mailto fallback</strong> — copy-to-clipboard button that generates the same body text, for edge cases where the prefilled compose window fails.</li>
+<li><strong>Focus-visible rings</strong> — global <code>focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2</code> on interactive elements for clearer keyboard-only navigation.</li>
+<li><strong>public/fonts/ cleanup</strong> — delete the unused IRANSans weight directories, the <code>(FaNum)</code> tree, the original <code>.zip</code>, and the <code>WebFonts.png</code> preview to slim the deployed artifact.</li>
+<li><strong>Founder photo / signature</strong> — only if/when the founder is ready to add it; current restraint is intentional.</li>
+<li><strong>AgentSpotlight pattern reuse</strong> — if a second contained dark moment is wanted elsewhere, the <code>rounded-2xl bg-inverse text-white</code> pattern is reusable.</li>
+</ol>
+<h2 id="10-how-to-run-build-deploy-locally">10. How to run / build / deploy locally</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>Node.js 20+</li>
+<li>npm (project uses npm — no yarn / pnpm)</li>
+</ul>
+<h3 id="install">Install</h3>
+<pre><code class="language-bash">git clone https://github.com/hiwasham/AITransforms.git
+cd AITransforms
+npm install
+</code></pre>
+<h3 id="develop">Develop</h3>
+<pre><code class="language-bash">npm run dev
+# Open http://localhost:3000
+# Routes: /, /fa, /ar, /apply, /fa/apply, /ar/apply
+</code></pre>
+<h3 id="verify">Verify</h3>
+<pre><code class="language-bash">npm run build        # Next.js static build (Turbopack)
+npm run lint         # ESLint
+npx tsc --noEmit     # TypeScript typecheck
+</code></pre>
+<p>All three commands must pass cleanly before pushing.</p>
+<h3 id="deploy">Deploy</h3>
+<ul>
+<li><strong>Production</strong>: push to <code>main</code>. Vercel auto-deploys to <code>v1.aitransforms.ir</code>.</li>
+<li><strong>Preview</strong>: push any other branch. Vercel auto-generates a preview URL (also visible in GitHub PR checks).</li>
+<li>No environment variables required. No Vercel build overrides needed. The Next.js auto-detection on Vercel handles everything.</li>
+</ul>
+<h3 id="project-structure">Project structure</h3>
+<pre><code>src/
+  app/
+    layout.tsx              Root layout, font loaders
+    globals.css             Tailwind v4 + design tokens + IRANSans @font-face
+    icon.svg                Brand favicon
+    page.tsx                Home (English)
+    fa/
+      layout.tsx            &lt;div lang=&quot;fa&quot; dir=&quot;rtl&quot;&gt;
+      page.tsx              Home (Persian)
+      apply/
+        page.tsx            /fa/apply
+    ar/
+      layout.tsx            &lt;div lang=&quot;ar&quot; dir=&quot;rtl&quot;&gt;
+      page.tsx              Home (Arabic)
+      apply/
+        page.tsx            /ar/apply
+    apply/
+      page.tsx              /apply (English)
+  components/
+    Header.tsx              Sticky header w/ wordmark + nav + language switcher
+    Wordmark.tsx            Reusable brand mark w/ clay arrow SVG
+    Footer.tsx              Wordmark + tagline + contact + copyright
+    LanguageSwitcher.tsx    EN | FA | AR with vertical hairlines + clay underline
+    Hero.tsx, Problem.tsx, Framework.tsx, Services.tsx,
+    AgentSpotlight.tsx, CaseStudies.tsx, Founder.tsx,
+    ResourcesTeaser.tsx, CTA.tsx
+    Arrow.tsx               Reusable clay arrow glyph (sm / md / lg)
+    apply/
+      ApplyHero.tsx, ApplyProblem.tsx, Diagnostic.tsx,
+      WhatWeReview.tsx, WhoThisIsFor.tsx, AfterApply.tsx,
+      ApplyForm.tsx (the only &quot;use client&quot; component),
+      Reassurance.tsx
+  content/
+    site.ts                 Homepage content + CTA constants, locale-keyed
+    apply.ts                /apply content, locale-keyed (en / fa / ar)
+public/
+  fonts/
+    IRANSans.zip            Original archive (kept for reference)
+    IRANSansWeb/            Extracted .woff2/.woff (used by @font-face)
+    IRANSansWeb(FaNum)/     Persian-digit variant (unused; available for swap)
+    WebFonts.png            License/preview image (unused)
+docs/
+  AITransforms-V1-Build-Packet.md     Phase 1 build specification
+  PROJECT-HANDOFF.md                  This document
+</code></pre>
+<h3 id="adding-content">Adding content</h3>
+<ul>
+<li>Homepage copy → <code>src/content/site.ts</code> (locale-keyed: <code>en</code>, <code>fa</code>, <code>ar</code>).</li>
+<li>Apply page copy → <code>src/content/apply.ts</code> (locale-keyed).</li>
+<li>Both files use <code>as const</code> so each locale's literal type aligns across the union. Adding or removing a field in one locale requires the same change in the other two.</li>
+</ul>
+<h3 id="adding-a-route">Adding a route</h3>
+<p>Place a <code>page.tsx</code> under <code>src/app/&lt;route&gt;/</code>. Static generation is automatic. For a localized route, place it under <code>src/app/fa/&lt;route&gt;/</code> or <code>src/app/ar/&lt;route&gt;/</code> — it inherits the parent layout's <code>dir="rtl"</code> and <code>lang</code> attributes.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
