@@ -27,6 +27,7 @@ import { randomBytes } from "node:crypto";
 import type { BFVBotClient } from "./bfv-bot-client.js";
 import type { LLMClient } from "@/services/llm/llm-client.js";
 import { wrapUntrustedContent } from "@/services/llm/untrusted-content.js";
+import { logger } from "@/lib/logger.js";
 
 /** Prospect-scoped context storage, keyed by contextRef and by deep-link token. */
 export interface BFVContextStore {
@@ -148,22 +149,51 @@ export class TelegramBFVBotClient implements BFVBotClient {
 
   async processUpdate(update: TelegramUpdate): Promise<void> {
     const message = update.message;
-    if (!message?.text) return;
+    if (!message?.text) {
+      logger.info("bfv_update_ignored", { reason: "no_text_message" });
+      return;
+    }
     const chatId = message.chat.id;
-    const text = message.text.trim();
+    logger.info("bfv_update_received", { chatId });
+    try {
+      await this.handleMessage(chatId, message.text.trim());
+    } catch (error) {
+      const raw = error instanceof Error ? error.message : String(error);
+      logger.error("bfv_update_failed", { chatId, error: this.scrub(raw) });
+      throw error;
+    }
+  }
 
+  /**
+   * T110 (Constitution VI): every branch below logs a lifecycle event —
+   * fields carry chat id / context ref / attempt id only, never the
+   * deep-link token, the prospect's message, scraped facts, or reply text
+   * (Constitution V).
+   */
+  private async handleMessage(chatId: number, text: string): Promise<void> {
     const startMatch = /^\/start\s+(\S+)$/.exec(text);
     if (startMatch) {
       const context = await this.contextStore.getByToken(startMatch[1]!);
       if (!context) {
+        logger.warn("bfv_deeplink_unknown", { chatId });
         await this.sendMessage(chatId, FALLBACK_REPLY);
         return;
       }
       this.sessions.set(chatId, context.contextRef);
+      logger.info("bfv_deeplink_resolved", {
+        chatId,
+        contextRef: context.contextRef,
+        outreachAttemptId: context.outreachAttemptId,
+      });
       const greeting = await this.llmClient.complete(
         this.buildPrompt(context, null),
       );
       await this.sendMessage(chatId, greeting);
+      logger.info("bfv_reply_sent", {
+        chatId,
+        contextRef: context.contextRef,
+        kind: "greeting",
+      });
       return;
     }
 
@@ -172,6 +202,7 @@ export class TelegramBFVBotClient implements BFVBotClient {
       ? await this.contextStore.getByRef(contextRef)
       : null;
     if (!context) {
+      logger.warn("bfv_session_miss", { chatId });
       await this.sendMessage(chatId, FALLBACK_REPLY);
       return;
     }
@@ -179,6 +210,11 @@ export class TelegramBFVBotClient implements BFVBotClient {
       this.buildPrompt(context, text),
     );
     await this.sendMessage(chatId, answer);
+    logger.info("bfv_reply_sent", {
+      chatId,
+      contextRef: context.contextRef,
+      kind: "answer",
+    });
   }
 
   // --- internals ---

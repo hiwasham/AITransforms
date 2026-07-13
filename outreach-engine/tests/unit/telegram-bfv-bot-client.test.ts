@@ -1,9 +1,10 @@
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import {
   TelegramBFVBotClient,
   InMemoryBFVContextStore,
 } from "@/services/telegram/telegram-bfv-bot-client.js";
 import { MockLLMClient } from "@/services/llm/llm-client.js";
+import { logger } from "@/lib/logger.js";
 
 /**
  * Unit tests for the production Telegram BFVBotClient (T106). No live
@@ -230,6 +231,127 @@ describe("TelegramBFVBotClient (T106)", () => {
         );
       expect(err!.message).toContain("401");
       expect(err!.message).not.toContain(BOT_TOKEN);
+    });
+  });
+
+  describe("structured logging (T110, Constitution VI)", () => {
+    afterEach(() => {
+      vi.restoreAllMocks();
+    });
+
+    /** Spies on all logger levels and returns the captured (event, fields) calls. */
+    function captureLogs() {
+      const calls: Array<{ level: string; event: string; fields: Record<string, unknown> }> = [];
+      for (const level of ["info", "warn", "error"] as const) {
+        vi.spyOn(logger, level).mockImplementation((event, fields) => {
+          calls.push({ level, event, fields: (fields ?? {}) as Record<string, unknown> });
+        });
+      }
+      return calls;
+    }
+
+    function allLoggedText(calls: Array<{ event: string; fields: Record<string, unknown> }>): string {
+      return calls.map((c) => `${c.event} ${JSON.stringify(c.fields)}`).join("\n");
+    }
+
+    it("a valid /start logs update entry, deep-link resolution, and reply success — never the token or scraped facts", async () => {
+      const calls = captureLogs();
+      const { client } = makeClient();
+      const { contextRef, telegramDeepLinkToken } = await client.provisionContext("attempt-1", {
+        excerpt: "Fresh sourdough daily",
+      });
+
+      await client.processUpdate({
+        message: { chat: { id: 42 }, text: `/start ${telegramDeepLinkToken}` },
+      });
+
+      const received = calls.find((c) => c.event === "bfv_update_received");
+      expect(received).toBeDefined();
+      expect(received!.fields.chatId).toBe(42);
+
+      const resolved = calls.find((c) => c.event === "bfv_deeplink_resolved");
+      expect(resolved).toBeDefined();
+      expect(resolved!.fields.chatId).toBe(42);
+      expect(resolved!.fields.contextRef).toBe(contextRef);
+      expect(resolved!.fields.outreachAttemptId).toBe("attempt-1");
+
+      const sent = calls.find((c) => c.event === "bfv_reply_sent");
+      expect(sent).toBeDefined();
+      expect(sent!.fields.kind).toBe("greeting");
+
+      const text = allLoggedText(calls);
+      expect(text).not.toContain(telegramDeepLinkToken);
+      expect(text).not.toContain("Fresh sourdough daily");
+      expect(text).not.toContain(BOT_TOKEN);
+    });
+
+    it("an unknown /start token logs a warn without the token itself", async () => {
+      const calls = captureLogs();
+      const { client } = makeClient();
+
+      await client.processUpdate({
+        message: { chat: { id: 7 }, text: "/start bogus-token-abc" },
+      });
+
+      const unknown = calls.find((c) => c.event === "bfv_deeplink_unknown");
+      expect(unknown).toBeDefined();
+      expect(unknown!.level).toBe("warn");
+      expect(unknown!.fields.chatId).toBe(7);
+      expect(allLoggedText(calls)).not.toContain("bogus-token-abc");
+    });
+
+    it("a message with no bound session logs a session miss; an answered session logs reply success without the message text", async () => {
+      const calls = captureLogs();
+      const llm = new MockLLMClient();
+      llm.setResponder(() => "We bake it every morning.");
+      const { client } = makeClient({ llm });
+
+      await client.processUpdate({
+        message: { chat: { id: 555 }, text: "hello?" },
+      });
+      const miss = calls.find((c) => c.event === "bfv_session_miss");
+      expect(miss).toBeDefined();
+      expect(miss!.level).toBe("warn");
+      expect(miss!.fields.chatId).toBe(555);
+
+      const { telegramDeepLinkToken } = await client.provisionContext("attempt-1", {
+        excerpt: "sourdough",
+      });
+      await client.processUpdate({
+        message: { chat: { id: 9 }, text: `/start ${telegramDeepLinkToken}` },
+      });
+      await client.processUpdate({
+        message: { chat: { id: 9 }, text: "When do you bake?" },
+      });
+
+      const answer = calls.find((c) => c.event === "bfv_reply_sent" && c.fields.kind === "answer");
+      expect(answer).toBeDefined();
+      const text = allLoggedText(calls);
+      expect(text).not.toContain("When do you bake?"); // prospect content never logged
+      expect(text).not.toContain("We bake it every morning."); // reply content never logged
+    });
+
+    it("a thrown send failure is logged as an error with the bot token scrubbed, then rethrown", async () => {
+      const calls = captureLogs();
+      const { client } = makeClient({
+        fetchImpl: async (url) => {
+          throw new Error(`connect ECONNREFUSED for ${String(url)}`);
+        },
+      });
+      const { telegramDeepLinkToken } = await client.provisionContext("a1", {});
+
+      await expect(
+        client.processUpdate({
+          message: { chat: { id: 1 }, text: `/start ${telegramDeepLinkToken}` },
+        }),
+      ).rejects.toThrow(/Telegram sendMessage failed/);
+
+      const failed = calls.find((c) => c.event === "bfv_update_failed");
+      expect(failed).toBeDefined();
+      expect(failed!.level).toBe("error");
+      expect(failed!.fields.chatId).toBe(1);
+      expect(String(failed!.fields.error)).toContain("sendMessage failed");
+      expect(allLoggedText(calls)).not.toContain(BOT_TOKEN);
     });
   });
 });
