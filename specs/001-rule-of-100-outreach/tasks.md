@@ -525,3 +525,17 @@ unchecked task (T003–T098 open items) is deliberately NOT duplicated here.
 - [X] T107 Implement the production `LLMClient` reusing this host's existing Claude access path (`research.md` §9; key via `loadConfig().llmApiKey`) behind the existing interface in `outreach-engine/src/services/llm/llm-client.ts`; only `MockLLMClient` exists and no remaining task tracks the real client used by script generation (T037), the linter LLM-judge (T039), and BFV readiness checks (T035) — per FR-005 / plan: Primary Dependencies (partial)
 - [ ] T108 Extend `outreach-engine/tests/integration/dispatch-failure-recoverable.test.ts` with T028's trimmed leg once T048 lands: walk `approved` → exhaust the automatic-retry cap → `dispatch_failed` → `POST /prospects/:id/retry-dispatch` → `sent`, confirming approval is never redone, per SC-007 (partial)
 - [ ] T109 Populate `WebhookEvent.raw_payload_ref` when recording inbound events in `outreach-engine/src/domain/replies/webhook-event.ts` and `reply-ingestion.ts`, so unmatched and superseded events stay auditable per plan: data-model.md WebhookEvent / spec.md Key Entities (partial)
+
+## Phase 11: Convergence
+
+Appended by `/speckit-converge` 2026-07-13 (second pass, after T104–T107
+landed). Scope note: same policy as Phase 10 — work still tracked by an
+existing unchecked task (T003–T098 open items, T103, T108, T109) is NOT
+duplicated here. All three findings below are gaps in or around the
+Phase-10-checked Telegram BFV client (T106) that no open task's text names:
+T100 covers serving the `src/api/**/route.ts` HTTP handlers, not the
+Telegram bot's update loop or its context durability.
+
+- [ ] T110 CRITICAL Add structured logging to the BFV session-serving path in `outreach-engine/src/services/telegram/telegram-bfv-bot-client.ts` — `processUpdate()` entry (update kind, chat id), deep-link token resolution outcome (resolved/unknown — never log the token itself per Constitution V), session bind/miss, LLM-reply success, and failure paths (thrown `callApi`/LLM errors), so an unattended prospect conversation answers "did this run, and did it succeed" without reading source, per Constitution VI (contradicts)
+- [ ] T111 Implement the Telegram update transport that feeds `TelegramBFVBotClient.processUpdate()` — a long-poll (`getUpdates` with offset tracking) or webhook (`setWebhook`) loop running in the production runtime, with startup/shutdown wired to the served process and failures logged per Constitution VI — in `outreach-engine/src/services/telegram/update-transport.ts` (pairs with T100's served runtime, whose text names only the HTTP route handlers; depends on T106 [X]) per FR-016 (missing)
+- [ ] T112 Implement a durable DB-backed `BFVContextStore` (the `put`/`getByRef`/`getByToken` port in `outreach-engine/src/services/telegram/telegram-bfv-bot-client.ts`) reading token/context_ref from `bfv_deliverables` and extracted facts from `scraped_site_snapshots` — no new schema needed — so already-dispatched deep links survive a bot-process restart instead of orphaning every provisioned context (today only `InMemoryBFVContextStore` exists), in `outreach-engine/src/services/telegram/db-context-store.ts` per FR-004/FR-017 (partial)
