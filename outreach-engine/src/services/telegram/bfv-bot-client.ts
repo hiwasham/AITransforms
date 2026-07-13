@@ -2,8 +2,9 @@
  * Shared Telegram BFV bot client (T035). One bot, per-attempt deep-link
  * tokens (research.md §6) — never one bot per prospect.
  *
- * MVP-1 scope: mock only, matching quickstart.md's stated testing
- * philosophy. A real Telegram Bot API client is Phase 2/Future.
+ * The production implementation is TelegramBFVBotClient (T106,
+ * telegram-bfv-bot-client.ts). Pipeline tests keep using MockBFVBotClient
+ * below, matching quickstart.md's stated testing philosophy.
  */
 
 import { randomUUID } from "node:crypto";
