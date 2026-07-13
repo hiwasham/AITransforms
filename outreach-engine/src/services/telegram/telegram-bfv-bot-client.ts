@@ -7,8 +7,9 @@
  *
  * Boundaries: implements the existing BFVBotClient interface — the domain
  * layer (batch orchestrator, BFV readiness check) stays Telegram-unaware.
- * Contexts live behind BFVContextStore, not the Core Engine DB, so this
- * service never imports domain/ or db/. Scraped facts cross into LLM
+ * Contexts live behind the BFVContextStore port (in-memory for tests,
+ * DB-backed DbBFVContextStore in production, T112), so this file never
+ * imports domain/ or db/. Scraped facts cross into LLM
  * prompts only inside the untrusted-content boundary (T016).
  *
  * Security: the bot token appears only in the request URL Telegram's API
