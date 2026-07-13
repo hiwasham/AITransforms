@@ -177,6 +177,24 @@ export async function findByProviderThreadId(
 }
 
 /**
+ * Attempts a `POST /batches/generate` retry resumes (T104, data-model.md
+ * Resume Rule): stranded at exactly `generated` for the batch date — the
+ * process died before their pipeline produced any pass/fail verdict.
+ * Every TERMINAL_TO_BATCH_RESUME state is excluded by construction.
+ */
+export async function findResumable(
+  db: Db,
+  batchDate: string,
+): Promise<OutreachAttempt[]> {
+  const result = await db.query<AttemptRow>(
+    `SELECT * FROM outreach_attempts
+     WHERE batch_date = $1 AND workflow_state = 'generated'`,
+    [batchDate],
+  );
+  return result.rows.map(fromRow);
+}
+
+/**
  * Attempts the automatic dispatch pass should process: `approved` /
  * `dispatch_failed` below the retry cap, plus attempts stuck at
  * `dispatching` past `stuckTimeoutMinutes` (process died mid-send —

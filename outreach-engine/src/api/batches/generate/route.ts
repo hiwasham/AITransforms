@@ -1,8 +1,9 @@
 /**
  * POST /batches/generate (T044). MVP-1 scope: processes exactly the
  * supplied prospectList — no Batch Candidate Pool union with
- * re-engagement-eligible prospects (FR-026, Phase 2/Future), no
- * resume-on-retry (data-model.md Resume Rule, Phase 2/Future).
+ * re-engagement-eligible prospects (FR-026, Phase 2/Future). A
+ * re-invocation for an already-started date resumes attempts stranded at
+ * `generated` per the Resume Rule (T104) — handled inside runBatch.
  */
 
 import type { Db } from "@/db/client.js";

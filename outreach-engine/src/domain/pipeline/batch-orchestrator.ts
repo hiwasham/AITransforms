@@ -4,12 +4,15 @@
  *
  *   INCLUDED:  scrape -> BFV -> script -> lint coordination for a single
  *              ingested prospect (the vertical slice's Research -> BFV ->
- *              Script -> Quality validation stages).
+ *              Script -> Quality validation stages), plus the batch Resume
+ *              Rule (T104, data-model.md): a re-invocation for an
+ *              already-started date resumes attempts stranded at exactly
+ *              `generated`, continuing from the first missing of
+ *              snapshot -> BFV -> script — never redoing a step whose
+ *              output already exists.
  *   DEFERRED (Phase 2 / Future — NOT implemented in this pass):
  *              - Batch Candidate Pool union with re-engagement-eligible
  *                prospects (FR-026)
- *              - Resume-on-retry for a partially-completed batch date
- *                (data-model.md's Resume Rule)
  *              - Full FR-007 dedup (redirect resolution, history-wide
  *                fuzzy matching) — only the minimal normalizeUrl() dedup
  *                key needed to satisfy the schema is applied here.
@@ -48,6 +51,8 @@ export interface ProcessProspectResult {
   outreachAttemptId: string;
   workflowState: string;
   deduped: boolean;
+  /** True when this entry was recovered by the Resume Rule sweep (T104). */
+  resumed?: boolean;
 }
 
 async function setState(
@@ -61,6 +66,116 @@ async function setState(
   }
   await AttemptRepo.setWorkflowState(db, attemptId, to as never);
   logger.info("workflow_state_transition", { attemptId, from, to });
+}
+
+function deepLinkUrl(deps: BatchOrchestratorDeps, token: string): string {
+  const botUsername = deps.telegramBotUsername ?? "AITransformsBot";
+  return `https://t.me/${botUsername}?start=${token}`;
+}
+
+/** Readiness-checks an existing BFV row; returns its deep-link token, or null on failure. */
+async function verifyBfv(
+  db: Db,
+  deps: BatchOrchestratorDeps,
+  bfv: { id: string; contextRef: string; telegramDeepLinkToken: string },
+): Promise<string | null> {
+  const ready = await BFVRepo.checkReadiness(
+    deps.botClient,
+    deps.llmClient,
+    bfv.contextRef,
+  );
+  if (!ready) {
+    await BFVRepo.markVerificationFailed(db, bfv.id);
+    return null;
+  }
+  await BFVRepo.markVerified(db, bfv.id);
+  return bfv.telegramDeepLinkToken;
+}
+
+/** BFV provisioning + verification; returns the deep-link token, or null on failure. */
+async function provisionAndVerifyBfv(
+  db: Db,
+  deps: BatchOrchestratorDeps,
+  attemptId: string,
+  facts: Record<string, unknown>,
+): Promise<string | null> {
+  const provisioned = await deps.botClient.provisionContext(attemptId, facts);
+  const bfv = await BFVRepo.create(db, {
+    outreachAttemptId: attemptId,
+    telegramDeepLinkToken: provisioned.telegramDeepLinkToken,
+    contextRef: provisioned.contextRef,
+  });
+  return verifyBfv(db, deps, bfv);
+}
+
+/**
+ * Script generation + quality validation (bounded revision loop). The
+ * attempt must be at `generated`. `existingScript` is the Resume Rule's
+ * entry point: a crash-survivor current revision is linted as-is instead
+ * of being regenerated.
+ */
+async function runScriptAndLint(
+  db: Db,
+  deps: BatchOrchestratorDeps,
+  attemptId: string,
+  facts: Record<string, unknown>,
+  telegramDeepLinkUrl: string,
+  existingScript: ScriptRepo.OutreachScript | null,
+): Promise<"human_review_queue" | "needs_manual_draft"> {
+  let script =
+    existingScript ??
+    (await ScriptRepo.generateAndStore(db, deps.llmClient, {
+      outreachAttemptId: attemptId,
+      extractedFacts: facts,
+      telegramDeepLinkUrl,
+    }));
+
+  await setState(db, attemptId, "generated", "quality_checked");
+
+  let report = await LinterRepo.runLint(db, deps.llmClient, {
+    outreachScriptId: script.id,
+    bodyText: script.bodyText,
+    prospectFacts: facts,
+  });
+
+  let attemptsSoFar = 1;
+  while (report.verdict === "fail" && canRetry(attemptsSoFar)) {
+    await setState(db, attemptId, "quality_checked", "revision_requested");
+    logger.info("revision_requested", {
+      attemptId,
+      revisionAttempt: attemptsSoFar,
+      feedback: report.revisionFeedback,
+    });
+
+    script = await ScriptRepo.generateAndStore(db, deps.llmClient, {
+      outreachAttemptId: attemptId,
+      extractedFacts: facts,
+      telegramDeepLinkUrl,
+      revisionFeedback: report.revisionFeedback ?? undefined,
+    });
+    await setState(db, attemptId, "revision_requested", "quality_checked");
+
+    report = await LinterRepo.runLint(db, deps.llmClient, {
+      outreachScriptId: script.id,
+      bodyText: script.bodyText,
+      prospectFacts: facts,
+    });
+    attemptsSoFar += 1;
+  }
+
+  if (report.verdict === "fail") {
+    await setState(db, attemptId, "quality_checked", "revision_requested");
+    await AttemptRepo.setWorkflowState(db, attemptId, "needs_manual_draft");
+    logger.warn("attempt_needs_manual_draft", {
+      attemptId,
+      revisionAttempts: attemptsSoFar,
+      cap: MAX_REVISION_ATTEMPTS,
+    });
+    return "needs_manual_draft";
+  }
+
+  await setState(db, attemptId, "quality_checked", "human_review_queue");
+  return "human_review_queue";
 }
 
 export async function processProspect(
@@ -123,19 +238,8 @@ export async function processProspect(
   const facts = scrape.extractedFacts ?? {};
 
   // --- BFV provisioning + verification ---
-  const provisioned = await deps.botClient.provisionContext(attempt.id, facts);
-  const bfv = await BFVRepo.create(db, {
-    outreachAttemptId: attempt.id,
-    telegramDeepLinkToken: provisioned.telegramDeepLinkToken,
-    contextRef: provisioned.contextRef,
-  });
-  const ready = await BFVRepo.checkReadiness(
-    deps.botClient,
-    deps.llmClient,
-    provisioned.contextRef,
-  );
-  if (!ready) {
-    await BFVRepo.markVerificationFailed(db, bfv.id);
+  const token = await provisionAndVerifyBfv(db, deps, attempt.id, facts);
+  if (token === null) {
     await setState(db, attempt.id, "generated", "needs_attention");
     logger.warn("attempt_needs_attention", {
       attemptId: attempt.id,
@@ -148,75 +252,110 @@ export async function processProspect(
       deduped: false,
     };
   }
-  await BFVRepo.markVerified(db, bfv.id);
-
-  const botUsername = deps.telegramBotUsername ?? "AITransformsBot";
-  const telegramDeepLinkUrl = `https://t.me/${botUsername}?start=${provisioned.telegramDeepLinkToken}`;
 
   // --- Script generation + Quality validation (bounded revision loop) ---
-  let script = await ScriptRepo.generateAndStore(db, deps.llmClient, {
-    outreachAttemptId: attempt.id,
-    extractedFacts: facts,
-    telegramDeepLinkUrl,
-  });
-
-  await setState(db, attempt.id, "generated", "quality_checked");
-
-  let report = await LinterRepo.runLint(db, deps.llmClient, {
-    outreachScriptId: script.id,
-    bodyText: script.bodyText,
-    prospectFacts: facts,
-  });
-
-  let attemptsSoFar = 1;
-  while (report.verdict === "fail" && canRetry(attemptsSoFar)) {
-    await setState(db, attempt.id, "quality_checked", "revision_requested");
-    logger.info("revision_requested", {
-      attemptId: attempt.id,
-      revisionAttempt: attemptsSoFar,
-      feedback: report.revisionFeedback,
-    });
-
-    script = await ScriptRepo.generateAndStore(db, deps.llmClient, {
-      outreachAttemptId: attempt.id,
-      extractedFacts: facts,
-      telegramDeepLinkUrl,
-      revisionFeedback: report.revisionFeedback ?? undefined,
-    });
-    await setState(db, attempt.id, "revision_requested", "quality_checked");
-
-    report = await LinterRepo.runLint(db, deps.llmClient, {
-      outreachScriptId: script.id,
-      bodyText: script.bodyText,
-      prospectFacts: facts,
-    });
-    attemptsSoFar += 1;
-  }
-
-  if (report.verdict === "fail") {
-    await setState(db, attempt.id, "quality_checked", "revision_requested");
-    await AttemptRepo.setWorkflowState(db, attempt.id, "needs_manual_draft");
-    logger.warn("attempt_needs_manual_draft", {
-      attemptId: attempt.id,
-      revisionAttempts: attemptsSoFar,
-      cap: MAX_REVISION_ATTEMPTS,
-    });
-    return {
-      prospectId: prospect.id,
-      outreachAttemptId: attempt.id,
-      workflowState: "needs_manual_draft",
-      deduped: false,
-    };
-  }
-
-  await setState(db, attempt.id, "quality_checked", "human_review_queue");
+  const outcome = await runScriptAndLint(
+    db,
+    deps,
+    attempt.id,
+    facts,
+    deepLinkUrl(deps, token),
+    null,
+  );
 
   return {
     prospectId: prospect.id,
     outreachAttemptId: attempt.id,
-    workflowState: "human_review_queue",
+    workflowState: outcome,
     deduped: false,
   };
+}
+
+/**
+ * Resume Rule (T104, data-model.md / contracts/outreach-api.md resume
+ * semantics): continue a `generated`-stranded attempt from the first
+ * missing of snapshot -> BFV -> script. Never redoes a step whose output
+ * already exists — an existing BFV row is re-verified (or its stored
+ * verdict re-applied), never re-provisioned; an existing current script
+ * revision is linted as-is.
+ */
+async function resumeAttempt(
+  db: Db,
+  deps: BatchOrchestratorDeps,
+  attempt: AttemptRepo.OutreachAttempt,
+): Promise<ProcessProspectResult> {
+  logger.info("attempt_resumed", {
+    attemptId: attempt.id,
+    batchDate: attempt.batchDate,
+  });
+  const base = {
+    prospectId: attempt.prospectId,
+    outreachAttemptId: attempt.id,
+    deduped: false,
+    resumed: true,
+  };
+
+  // --- Research (scrape) — only if the snapshot is missing ---
+  let snapshot = await SnapshotRepo.getByAttemptId(db, attempt.id);
+  if (!snapshot) {
+    const prospect = await ProspectRepo.getById(db, attempt.prospectId);
+    if (!prospect) {
+      // FK-impossible; guard narrows the type.
+      throw new Error(`Prospect ${attempt.prospectId} missing for attempt ${attempt.id}`);
+    }
+    const scrape = await deps.scrapeUrl(prospect.sourceUrl);
+    snapshot = await SnapshotRepo.create(db, {
+      outreachAttemptId: attempt.id,
+      status: scrape.status,
+      rawContent: scrape.rawContent,
+      extractedFacts: scrape.extractedFacts,
+    });
+  }
+  if (snapshot.status !== "complete") {
+    // Re-apply the verdict the crash swallowed — never re-scrape.
+    await setState(db, attempt.id, "generated", "needs_attention");
+    logger.warn("attempt_needs_attention", {
+      attemptId: attempt.id,
+      reason: "scrape_incomplete",
+      status: snapshot.status,
+    });
+    return { ...base, workflowState: "needs_attention" };
+  }
+  const facts = snapshot.extractedFacts ?? {};
+
+  // --- BFV — provision only if the row is missing ---
+  const bfv = await BFVRepo.getByAttemptId(db, attempt.id);
+  let token: string | null;
+  if (!bfv) {
+    token = await provisionAndVerifyBfv(db, deps, attempt.id, facts);
+  } else if (bfv.verificationStatus === "verified") {
+    token = bfv.telegramDeepLinkToken;
+  } else if (bfv.verificationStatus === "pending_verification") {
+    token = await verifyBfv(db, deps, bfv);
+  } else {
+    // verification_failed was persisted but the state flip was lost mid-crash.
+    token = null;
+  }
+  if (token === null) {
+    await setState(db, attempt.id, "generated", "needs_attention");
+    logger.warn("attempt_needs_attention", {
+      attemptId: attempt.id,
+      reason: "bfv_verification_failed",
+    });
+    return { ...base, workflowState: "needs_attention" };
+  }
+
+  // --- Script + lint — an existing current revision is linted, not regenerated ---
+  const existingScript = await ScriptRepo.getCurrentByAttemptId(db, attempt.id);
+  const outcome = await runScriptAndLint(
+    db,
+    deps,
+    attempt.id,
+    facts,
+    deepLinkUrl(deps, token),
+    existingScript,
+  );
+  return { ...base, workflowState: outcome };
 }
 
 export interface RunBatchInput {
@@ -228,6 +367,8 @@ export interface RunBatchResult {
   batchDate: string;
   accepted: number;
   deduped: number;
+  /** Attempts recovered by the Resume Rule sweep (T104). */
+  resumed: number;
   processing: Array<ProcessProspectResult>;
 }
 
@@ -238,6 +379,16 @@ export async function runBatch(
 ): Promise<RunBatchResult> {
   const results: ProcessProspectResult[] = [];
   let deduped = 0;
+
+  // --- Resume Rule sweep (T104) — before the day's list is processed ---
+  // Only attempts at exactly `generated` for this date qualify; every
+  // TERMINAL_TO_BATCH_RESUME state is excluded by the query itself, so a
+  // retry can never double-produce work already at rest in the review
+  // queue or beyond (Constitution Principle VII).
+  const stranded = await AttemptRepo.findResumable(db, input.batchDate);
+  for (const attempt of stranded) {
+    results.push(await resumeAttempt(db, deps, attempt));
+  }
 
   for (const p of input.prospectList) {
     const result = await processProspect(db, deps, {
@@ -253,6 +404,7 @@ export async function runBatch(
     batchDate: input.batchDate,
     accepted: results.length - deduped,
     deduped,
+    resumed: stranded.length,
     shortfall: results.length - deduped < 100,
   });
 
@@ -260,6 +412,7 @@ export async function runBatch(
     batchDate: input.batchDate,
     accepted: results.length - deduped,
     deduped,
+    resumed: stranded.length,
     processing: results,
   };
 }
