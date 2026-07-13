@@ -1,0 +1,108 @@
+/**
+ * PGLite schema for the Rule of 100 Outreach Engine (data-model.md).
+ *
+ * Owned exclusively by api/ + domain/ (the core service) — jobs/ MUST
+ * NEVER import this module (research.md §11, plan.md Process Boundaries &
+ * Data Flow).
+ *
+ * IDs are TEXT (UUIDs generated in application code via crypto.randomUUID())
+ * rather than a Postgres extension, per Constitution Principle III (avoid
+ * unnecessary dependencies).
+ */
+
+import type { PGlite } from "@electric-sql/pglite";
+
+export async function applySchema(db: PGlite): Promise<void> {
+  await db.exec(`
+    CREATE TABLE IF NOT EXISTS prospects (
+      id TEXT PRIMARY KEY,
+      business_name TEXT NOT NULL,
+      source_url TEXT NOT NULL,
+      normalized_domain TEXT NOT NULL UNIQUE,
+      first_processed_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+      current_outcome_status TEXT NOT NULL DEFAULT 'not_yet_sent'
+        CHECK (current_outcome_status IN (
+          'not_yet_sent', 'sent', 'replied', 'call_booked', 'closed', 'unresponsive'
+        )),
+      attempt_count INTEGER NOT NULL DEFAULT 1
+    );
+
+    CREATE TABLE IF NOT EXISTS outreach_attempts (
+      id TEXT PRIMARY KEY,
+      prospect_id TEXT NOT NULL REFERENCES prospects(id),
+      attempt_number INTEGER NOT NULL,
+      batch_date DATE NOT NULL,
+      workflow_state TEXT NOT NULL DEFAULT 'generated'
+        CHECK (workflow_state IN (
+          'generated', 'quality_checked', 'revision_requested', 'needs_manual_draft',
+          'needs_attention', 'human_review_queue', 'approved',
+          'dispatching', 'dispatch_failed', 'sent', 'response_tracking'
+        )),
+      provider_thread_id TEXT UNIQUE,
+      dispatch_attempts INTEGER NOT NULL DEFAULT 0,
+      last_dispatch_error TEXT,
+      created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+    );
+
+    CREATE TABLE IF NOT EXISTS scraped_site_snapshots (
+      id TEXT PRIMARY KEY,
+      outreach_attempt_id TEXT NOT NULL UNIQUE REFERENCES outreach_attempts(id),
+      scraped_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+      status TEXT NOT NULL CHECK (status IN ('complete', 'insufficient', 'unreachable')),
+      raw_content_ref TEXT,
+      extracted_facts JSONB
+    );
+
+    CREATE TABLE IF NOT EXISTS bfv_deliverables (
+      id TEXT PRIMARY KEY,
+      outreach_attempt_id TEXT NOT NULL UNIQUE REFERENCES outreach_attempts(id),
+      telegram_deep_link_token TEXT NOT NULL UNIQUE,
+      context_ref TEXT NOT NULL,
+      verification_status TEXT NOT NULL DEFAULT 'pending_verification'
+        CHECK (verification_status IN ('pending_verification', 'verified', 'verification_failed')),
+      verified_at TIMESTAMPTZ,
+      verification_attempts INTEGER NOT NULL DEFAULT 0
+    );
+
+    CREATE TABLE IF NOT EXISTS outreach_scripts (
+      id TEXT PRIMARY KEY,
+      outreach_attempt_id TEXT NOT NULL REFERENCES outreach_attempts(id),
+      revision_number INTEGER NOT NULL,
+      is_current BOOLEAN NOT NULL DEFAULT true,
+      body_text TEXT NOT NULL,
+      generated_at TIMESTAMPTZ NOT NULL DEFAULT now()
+    );
+
+    CREATE TABLE IF NOT EXISTS lint_reports (
+      id TEXT PRIMARY KEY,
+      outreach_script_id TEXT NOT NULL REFERENCES outreach_scripts(id),
+      verdict TEXT NOT NULL CHECK (verdict IN ('pass', 'fail')),
+      reading_grade_score NUMERIC,
+      jargon_terms_found JSONB NOT NULL DEFAULT '[]',
+      specificity_verdict TEXT NOT NULL CHECK (specificity_verdict IN ('pass', 'fail')),
+      structure_verdict TEXT NOT NULL CHECK (structure_verdict IN ('pass', 'fail')),
+      revision_feedback TEXT,
+      checked_at TIMESTAMPTZ NOT NULL DEFAULT now()
+    );
+
+    CREATE TABLE IF NOT EXISTS follow_up_cadence_states (
+      id TEXT PRIMARY KEY,
+      outreach_attempt_id TEXT NOT NULL UNIQUE REFERENCES outreach_attempts(id),
+      send_date DATE NOT NULL,
+      exhausted_at TIMESTAMPTZ,
+      reengagement_eligible_date DATE
+    );
+
+    CREATE TABLE IF NOT EXISTS webhook_events (
+      id TEXT PRIMARY KEY,
+      provider TEXT NOT NULL CHECK (provider IN ('instantly', 'unipile')),
+      provider_event_id TEXT NOT NULL,
+      signature_verified BOOLEAN NOT NULL,
+      matched_outreach_attempt_id TEXT REFERENCES outreach_attempts(id),
+      resulted_in_transition BOOLEAN NOT NULL DEFAULT false,
+      received_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+      raw_payload_ref TEXT,
+      UNIQUE (provider, provider_event_id)
+    );
+  `);
+}

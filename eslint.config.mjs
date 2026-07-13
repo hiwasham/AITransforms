@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // outreach-engine/ is its own isolated project (own package.json,
+    // tsconfig, ESLint setup) — not linted against this site's config.
+    "outreach-engine/**",
   ]),
 ]);
 
