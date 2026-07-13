@@ -3,14 +3,12 @@
  * scraped text MUST route it through the untrusted-content sanitizer
  * (T016) before calling this.
  *
- * MVP-1 scope note: the real client (reusing this host's Claude access
- * path) is intentionally not wired to a live API key in this pass — the
- * interface below is what real and mock implementations both satisfy, and
- * all MVP-1 tests run against MockLLMClient so the suite has zero live
- * network dependency, matching quickstart.md's own stated testing
- * philosophy ("mocked scraper/Telegram/LLM service adapters"). Wiring a
- * real provider call behind this interface is a Phase 2/Future task, not
- * a design change.
+ * The production implementation is AnthropicLLMClient (T107,
+ * anthropic-client.ts), which reuses this host's Claude access path.
+ * All tests still run against MockLLMClient below (plus injected-fetch
+ * unit tests for the real client), so the suite keeps zero live network
+ * dependency, matching quickstart.md's testing philosophy ("mocked
+ * scraper/Telegram/LLM service adapters").
  */
 
 export interface LLMClient {

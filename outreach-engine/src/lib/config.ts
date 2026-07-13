@@ -12,6 +12,8 @@
 export interface Config {
   dbDataDir: string | undefined; // undefined = in-memory (tests)
   llmApiKey: string | undefined;
+  llmModel: string;
+  llmTimeoutMs: number;
   telegramBotToken: string | undefined;
   instantlyApiKey: string | undefined;
   instantlyWebhookSecret: string | undefined;
@@ -20,9 +22,12 @@ export interface Config {
 }
 
 export function loadConfig(env: NodeJS.ProcessEnv = process.env): Config {
+  const timeoutMs = Number(env.OUTREACH_LLM_TIMEOUT_MS);
   return {
     dbDataDir: env.OUTREACH_DB_DATA_DIR,
     llmApiKey: env.ANTHROPIC_API_KEY,
+    llmModel: env.OUTREACH_LLM_MODEL ?? "claude-sonnet-5",
+    llmTimeoutMs: Number.isFinite(timeoutMs) && timeoutMs > 0 ? timeoutMs : 60_000,
     telegramBotToken: env.TELEGRAM_BOT_TOKEN,
     instantlyApiKey: env.INSTANTLY_API_KEY,
     instantlyWebhookSecret: env.INSTANTLY_WEBHOOK_SECRET,
