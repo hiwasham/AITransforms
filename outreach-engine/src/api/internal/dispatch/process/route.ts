@@ -4,10 +4,13 @@
  * the business logic contracts/outreach-api.md describes).
  *
  * For every attempt at approved/dispatch_failed below the automatic-retry
- * cap: calls DispatchClient.send() with idempotencyKey = attempt.id.
+ * cap — plus attempts stuck at `dispatching` past the stuck timeout (T105,
+ * Dispatch Recovery Rule) — calls DispatchClient.send() with
+ * idempotencyKey = attempt.id.
  * On success: sets provider_thread_id, dispatching -> sent, creates
- * FollowUpCadenceState. On failure: increments dispatch_attempts, records
- * last_dispatch_error, -> dispatch_failed.
+ * FollowUpCadenceState. On failure OR a thrown send(): increments
+ * dispatch_attempts, records last_dispatch_error, -> dispatch_failed,
+ * and continues with the rest of the pass.
  */
 
 import type { Db } from "@/db/client.js";
@@ -20,6 +23,7 @@ import { jsonResponse } from "@/api/lib/errors.js";
 import { logger } from "@/lib/logger.js";
 
 export const AUTOMATIC_DISPATCH_RETRY_CAP = 3;
+export const DISPATCH_STUCK_TIMEOUT_MINUTES = 10;
 
 export async function processDispatchable(
   db: Db,
@@ -28,14 +32,16 @@ export async function processDispatchable(
   const dispatchable = await AttemptRepo.findDispatchable(
     db,
     AUTOMATIC_DISPATCH_RETRY_CAP,
+    DISPATCH_STUCK_TIMEOUT_MINUTES,
   );
 
   let sent = 0;
   let failed = 0;
 
   for (const attempt of dispatchable) {
-    const fromState = attempt.workflowState; // 'approved' or 'dispatch_failed'
-    await AttemptRepo.setWorkflowState(db, attempt.id, "dispatching");
+    // 'approved', 'dispatch_failed', or stuck 'dispatching' (T105)
+    const fromState = attempt.workflowState;
+    await AttemptRepo.markDispatching(db, attempt.id);
     logger.info("workflow_state_transition", {
       attemptId: attempt.id,
       from: fromState,
@@ -45,14 +51,27 @@ export async function processDispatchable(
     const script = await ScriptRepo.getCurrentByAttemptId(db, attempt.id);
     const prospect = await ProspectRepo.getById(db, attempt.prospectId);
 
-    const result = await dispatchClient.send(
-      {
-        outreachAttemptId: attempt.id,
-        recipientContact: prospect?.sourceUrl ?? "unknown",
-        bodyText: script?.bodyText ?? "",
-      },
-      attempt.id,
-    );
+    let result;
+    try {
+      result = await dispatchClient.send(
+        {
+          outreachAttemptId: attempt.id,
+          recipientContact: prospect?.sourceUrl ?? "unknown",
+          bodyText: script?.bodyText ?? "",
+        },
+        attempt.id,
+      );
+    } catch (error) {
+      const reason = error instanceof Error ? error.message : String(error);
+      await AttemptRepo.recordDispatchFailure(db, attempt.id, reason);
+      logger.warn("dispatch_failed", {
+        attemptId: attempt.id,
+        reason,
+        thrown: true,
+      });
+      failed += 1;
+      continue;
+    }
 
     if (result.status === "sent") {
       await AttemptRepo.recordDispatchSuccess(db, attempt.id, result.providerThreadId);

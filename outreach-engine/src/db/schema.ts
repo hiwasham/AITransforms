@@ -41,6 +41,7 @@ export async function applySchema(db: PGlite): Promise<void> {
       provider_thread_id TEXT UNIQUE,
       dispatch_attempts INTEGER NOT NULL DEFAULT 0,
       last_dispatch_error TEXT,
+      dispatching_since TIMESTAMPTZ,
       created_at TIMESTAMPTZ NOT NULL DEFAULT now()
     );
 

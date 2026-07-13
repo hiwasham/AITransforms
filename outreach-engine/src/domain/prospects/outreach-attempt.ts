@@ -39,6 +39,7 @@ export interface OutreachAttempt {
   providerThreadId: string | null;
   dispatchAttempts: number;
   lastDispatchError: string | null;
+  dispatchingSince: string | null;
   createdAt: string;
 }
 
@@ -51,6 +52,7 @@ interface AttemptRow {
   provider_thread_id: string | null;
   dispatch_attempts: number;
   last_dispatch_error: string | null;
+  dispatching_since: string | null;
   created_at: string;
 }
 
@@ -64,6 +66,7 @@ function fromRow(row: AttemptRow): OutreachAttempt {
     providerThreadId: row.provider_thread_id,
     dispatchAttempts: row.dispatch_attempts,
     lastDispatchError: row.last_dispatch_error,
+    dispatchingSince: row.dispatching_since,
     createdAt: row.created_at,
   };
 }
@@ -119,6 +122,21 @@ export async function transition(
   return (result.affectedRows ?? 0) > 0;
 }
 
+/**
+ * Enter `dispatching` and stamp `dispatching_since` — the timestamp the
+ * Dispatch Recovery Rule's stuck-attempt timeout is measured against.
+ * Also called on a stuck attempt already at `dispatching` to reset the
+ * clock before its retry send.
+ */
+export async function markDispatching(db: Db, id: string): Promise<void> {
+  await db.query(
+    `UPDATE outreach_attempts
+     SET workflow_state = 'dispatching', dispatching_since = now()
+     WHERE id = $1`,
+    [id],
+  );
+}
+
 export async function recordDispatchSuccess(
   db: Db,
   id: string,
@@ -158,15 +176,26 @@ export async function findByProviderThreadId(
   return result.rows[0] ? fromRow(result.rows[0]) : null;
 }
 
+/**
+ * Attempts the automatic dispatch pass should process: `approved` /
+ * `dispatch_failed` below the retry cap, plus attempts stuck at
+ * `dispatching` past `stuckTimeoutMinutes` (process died mid-send —
+ * treated identically to dispatch_failed per data-model.md's Dispatch
+ * Recovery Rule; the idempotency key makes the retry safe).
+ */
 export async function findDispatchable(
   db: Db,
   automaticRetryCap: number,
+  stuckTimeoutMinutes: number,
 ): Promise<OutreachAttempt[]> {
   const result = await db.query<AttemptRow>(
     `SELECT * FROM outreach_attempts
-     WHERE workflow_state IN ('approved', 'dispatch_failed')
+     WHERE (workflow_state IN ('approved', 'dispatch_failed')
+            OR (workflow_state = 'dispatching'
+                AND dispatching_since IS NOT NULL
+                AND dispatching_since < now() - ($2 * interval '1 minute')))
        AND dispatch_attempts < $1`,
-    [automaticRetryCap],
+    [automaticRetryCap, stuckTimeoutMinutes],
   );
   return result.rows.map(fromRow);
 }
