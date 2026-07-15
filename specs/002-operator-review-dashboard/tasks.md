@@ -63,19 +63,19 @@ complete states.
 **Independent Test**: SC-000 verbatim — import the real
 `out/first-100-*.csv`, review 10 prospects end to end, CSV never opened.
 
-- [ ] M001 Create branch `feature/002-operator-review-dashboard`; run the
+- [X] M001 Create branch `feature/002-operator-review-dashboard`; run the
       full existing verification (engine `npm run test` + `npm run
       typecheck`; site `npm run lint`, `npx tsc --noEmit`, `npm run
       test`, `npm run build`) and save the output as the SC-006 baseline
 
-- [ ] M002 Extract the shared CSV helpers (`parseCsvRows`, `csvEscape`)
+- [X] M002 Extract the shared CSV helpers (`parseCsvRows`, `csvEscape`)
       from `outreach-engine/scripts/first-100.ts` into
       `outreach-engine/src/lib/csv.ts` and re-import them in
       `first-100.ts`; the existing `tests/unit/first-100.test.ts` must
       pass **unchanged** — the Principle I pin for the only pre-existing
       file this feature touches
 
-- [ ] M003 Add the `review_packages` table to
+- [X] M003 Add the `review_packages` table to
       `outreach-engine/src/db/schema.ts` per plan.md §Data Model as
       amended by §MVP-0 Build Scope: no `review_imports` table;
       `source_name` text column instead of `import_id`; reserved
@@ -83,7 +83,7 @@ complete states.
       index; CHECK constraint on `decision`. Additive only (depends on
       M001)
 
-- [ ] M004 [P] Implement the `ReviewPackage` repository — create,
+- [X] M004 [P] Implement the `ReviewPackage` repository — create,
       getById, count-reviewed/total, decision write (last-write-wins,
       FR-010) and passed-over marking — in
       `outreach-engine/src/domain/review/review-package.ts`, and the pure
@@ -94,7 +94,7 @@ complete states.
       `outreach-engine/src/domain/review/review-order.ts` (depends on
       M003)
 
-- [ ] M005 [P] Implement the importer — CSV text via `src/lib/csv.ts` →
+- [X] M005 [P] Implement the importer — CSV text via `src/lib/csv.ts` →
       normalized packages; `dedup_key` idempotency (FR-002: re-import
       adds nothing, resets nothing); `<<paste video link…>>` → null;
       `needs_research` carried to `generator_flag`; source `approved`
@@ -104,7 +104,7 @@ complete states.
       `outreach-engine/src/domain/review/importer.ts` (depends on M002,
       M003)
 
-- [ ] M006 [P] Unit tests for M004/M005: importer mapping + flag carry +
+- [X] M006 [P] Unit tests for M004/M005: importer mapping + flag carry +
       malformed tolerance + same-file dedup; `dedup_key` normalization
       edges (case, whitespace, `www.`, trailing slash, no-URL fallback);
       review-order matrix (fresh queue, advance, passed-over return,
@@ -113,7 +113,7 @@ complete states.
       `outreach-engine/tests/unit/review-order.test.ts` (write first,
       expect fail until M004/M005 land)
 
-- [ ] M007 [P] Contract tests for the four MVP-0 endpoints: `POST
+- [X] M007 [P] Contract tests for the four MVP-0 endpoints: `POST
       /review/imports` (201 summary shape incl. duplicates + malformed;
       double-import ⇒ `added: 0`, zero state change — SC-004's assertion
       lives here now); `GET /review/packages/next` (full package +
@@ -124,7 +124,7 @@ complete states.
       action ⇒ 400) — in
       `outreach-engine/tests/contract/review-api.test.ts`
 
-- [ ] M008 Implement the four route factories —
+- [X] M008 Implement the four route factories —
       `outreach-engine/src/api/review/imports/route.ts`,
       `.../packages/next/route.ts`, `.../packages/[id]/route.ts`,
       `.../packages/[id]/decision/route.ts` — and register them plus
@@ -134,7 +134,7 @@ complete states.
       plan.md Observability (import summary, per-decision entries —
       identifiers only, never package text) (depends on M004, M005)
 
-- [ ] M009 Build the review UI — one screen per prospect with all
+- [X] M009 Build the review UI — one screen per prospect with all
       package fields and the `needs_research` flag; keys `a`/`r`/`n` (+
       buttons, bindings visible on-screen, FR-008); auto-advance from the
       decision response's inline `next`; do-NOT-advance on a failed write
