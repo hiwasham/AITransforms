@@ -27,6 +27,10 @@ import { createGetProspectHandler } from "@/api/prospects/[id]/route.js";
 import { createApproveHandler } from "@/api/prospects/[id]/approve/route.js";
 import { createDispatchProcessHandler } from "@/api/internal/dispatch/process/route.js";
 import { createWebhookHandler } from "@/api/webhooks/[provider]/route.js";
+import { createReviewImportHandler } from "@/api/review/imports/route.js";
+import { createNextPackageHandler } from "@/api/review/packages/next/route.js";
+import { createGetReviewPackageHandler } from "@/api/review/packages/[id]/route.js";
+import { createDecisionHandler } from "@/api/review/packages/[id]/decision/route.js";
 import { errorResponse } from "@/api/lib/errors.js";
 
 export interface AppDeps {
@@ -109,6 +113,28 @@ export function createApp(deps: AppDeps): App {
       method: "POST",
       segments: ["webhooks", ":provider"],
       handler: createWebhookHandler(db, deps.webhookSecrets) as RouteHandler,
+    },
+    // Review dashboard (specs/002-operator-review-dashboard MVP-0).
+    // Isolated from the workflow state machine (spec 002 FR-018).
+    {
+      method: "POST",
+      segments: ["review", "imports"],
+      handler: createReviewImportHandler(db) as RouteHandler,
+    },
+    {
+      method: "GET",
+      segments: ["review", "packages", "next"],
+      handler: createNextPackageHandler(db) as RouteHandler,
+    },
+    {
+      method: "GET",
+      segments: ["review", "packages", ":id"],
+      handler: createGetReviewPackageHandler(db) as RouteHandler,
+    },
+    {
+      method: "POST",
+      segments: ["review", "packages", ":id", "decision"],
+      handler: createDecisionHandler(db) as RouteHandler,
     },
   ];
 
