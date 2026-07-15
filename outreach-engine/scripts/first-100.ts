@@ -31,10 +31,15 @@ import { randomBytes } from "node:crypto";
 import { pathToFileURL, fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { loadConfig } from "@/lib/config.js";
+import { parseCsvRows, csvEscape } from "@/lib/csv.js";
 import { scrapeUrl } from "@/services/scraper/scraper-client.js";
 import { AnthropicLLMClient } from "@/services/llm/anthropic-client.js";
 import { wrapUntrustedContent } from "@/services/llm/untrusted-content.js";
 import type { LLMClient } from "@/services/llm/llm-client.js";
+
+// Re-exported so existing consumers/tests keep importing from this module
+// unchanged (M002 extraction pin, specs/002-operator-review-dashboard).
+export { parseCsvRows, csvEscape };
 
 const DEFAULT_COUNT = 10;
 
@@ -75,42 +80,6 @@ export const CSV_HEADER = [
 // ---------------------------------------------------------------------------
 // Pure helpers (unit-tested)
 // ---------------------------------------------------------------------------
-
-/** Split raw CSV text into rows of fields, honoring quotes and escaped quotes. */
-export function parseCsvRows(text: string): string[][] {
-  const rows: string[][] = [];
-  let field = "";
-  let row: string[] = [];
-  let inQuotes = false;
-  for (let i = 0; i < text.length; i++) {
-    const c = text[i];
-    if (inQuotes) {
-      if (c === '"') {
-        if (text[i + 1] === '"') {
-          field += '"';
-          i++;
-        } else inQuotes = false;
-      } else field += c;
-      continue;
-    }
-    if (c === '"') inQuotes = true;
-    else if (c === ",") {
-      row.push(field);
-      field = "";
-    } else if (c === "\n" || c === "\r") {
-      if (c === "\r" && text[i + 1] === "\n") i++;
-      row.push(field);
-      rows.push(row);
-      row = [];
-      field = "";
-    } else field += c;
-  }
-  if (field !== "" || row.length > 0) {
-    row.push(field);
-    rows.push(row);
-  }
-  return rows.filter((r) => r.some((f) => f.trim() !== ""));
-}
 
 const COMPANY_KEYS = ["company", "business", "businessname", "business name", "name"];
 const URL_KEYS = ["url", "website", "site", "sourceurl", "source url", "web", "link"];
@@ -202,10 +171,6 @@ export function withBfvCta(messageBody: string): string {
 
 export function telegramDeepLink(botUsername: string, token: string): string {
   return `https://t.me/${botUsername}?start=${token}`;
-}
-
-export function csvEscape(field: string): string {
-  return /[",\n\r]/.test(field) ? `"${field.replaceAll('"', '""')}"` : field;
 }
 
 export function toCsv(rows: PackageRow[]): string {
