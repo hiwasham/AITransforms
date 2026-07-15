@@ -15,6 +15,7 @@
  */
 
 import type { Db } from "@/db/client.js";
+import { readFile } from "node:fs/promises";
 import type { LLMClient } from "@/services/llm/llm-client.js";
 import type { BFVBotClient } from "@/services/telegram/bfv-bot-client.js";
 import type { DispatchClient } from "@/services/dispatch/interface.js";
@@ -138,9 +139,30 @@ export function createApp(deps: AppDeps): App {
     },
   ];
 
+  // Review UI (M009): two static files served from src/ui/ by explicit
+  // allowlist — no generic file serving, so path traversal is
+  // structurally impossible (plan 002 Security Considerations).
+  const uiRoot = new URL("../ui/", import.meta.url);
+  const UI_FILES: Record<string, { file: string; type: string }> = {
+    "/": { file: "index.html", type: "text/html; charset=utf-8" },
+    "/ui/review.js": { file: "review.js", type: "text/javascript; charset=utf-8" },
+  };
+
+  async function serveUi(pathname: string): Promise<Response | null> {
+    const entry = UI_FILES[pathname];
+    if (!entry) return null;
+    const body = await readFile(new URL(entry.file, uiRoot), "utf8");
+    return new Response(body, { headers: { "content-type": entry.type } });
+  }
+
   return {
     async handle(req: Request): Promise<Response> {
-      const path = new URL(req.url).pathname.split("/").filter(Boolean);
+      const url = new URL(req.url);
+      if (req.method === "GET") {
+        const ui = await serveUi(url.pathname);
+        if (ui) return ui;
+      }
+      const path = url.pathname.split("/").filter(Boolean);
       for (const route of routes) {
         if (route.method !== req.method) continue;
         const params = matchParams(route.segments, path);
