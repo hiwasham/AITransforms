@@ -385,6 +385,26 @@ contains exactly the approved set with decisions and substituted messages.
   planned for the engine (001 plan.md Security Considerations / open task
   T113) — it MUST NOT become a second unauthenticated state-changing
   surface beyond what already exists locally.
+- **FR-021** *(Amendment 1, 2026-07-16 — gate G7, feedback loop)*: When
+  the operator rejects a package, the system MUST allow (never require) a
+  single-keystroke rejection-reason tag from a small fixed set —
+  `generic`, `false_claim`, `bad_fit`, `creepy`, `other` — persisted with
+  the decision. Tagging MUST NOT add a mandatory step to the reject flow
+  (one key rejects exactly as today; the reason is an optional second
+  key). Purpose: after the 5/5 rejection of the first real batch
+  (001 spec.md Amendment 1), every rejection becomes calibration data for
+  the generation exemplars (001 FR-032) instead of a lost bit. Scheduled
+  *before first 100 sends*, not before first 10 — see
+  `specs/001-rule-of-100-outreach/recovery-plan-first-100.md`.
+- **FR-022** *(Amendment 1, 2026-07-16 — gate G3 enforcement at decision
+  time)*: The approve action MUST refuse (with a visible reason, FR-013
+  style) to record approval on a package that fails the deterministic
+  deliverable-integrity check defined by 001 FR-029 — a message claiming
+  an asset that does not exist, or final text still carrying an unresolved
+  `{{BFV_LINK}}`/`<<…>>` placeholder where a real link is claimed. The
+  generation pipeline is the primary gate; this decision-time check is the
+  backstop guaranteeing 001 SC-010's "no bypass path" from the review
+  surface. Scheduled *before first 10 sends*.
 
 ### Key Entities
 
