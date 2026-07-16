@@ -27,6 +27,25 @@ const JARGON_DENY_LIST = [
   "holistic approach",
 ];
 
+// Q003 (gate G2 mechanical half, FR-031/Amendment 1): speculative framing
+// about the prospect is a gate FAIL — "I bet your team gets asked…" /
+// "your team must spend hours…" drove 3/5 of the first batch's rejections
+// (defect D2, resources/golden-reject-set-2026-07-16.md). Claims must
+// trace to scraped evidence; guesses dressed as facts never reach review.
+const SPECULATION_DENY_LIST = [
+  "i bet",
+  "must spend",
+  "i'm sure",
+  "im sure",
+  "i am sure",
+  "i'm guessing",
+  "im guessing",
+  "i imagine",
+  "i assume",
+  "likely",
+  "probably",
+];
+
 const READING_LEVEL_MAX_GRADE = 4; // "approximately 3rd grade" + small tolerance
 
 function countSyllables(word: string): number {
@@ -60,6 +79,12 @@ export function findJargonTerms(text: string): string[] {
   return JARGON_DENY_LIST.filter((term) => lower.includes(term));
 }
 
+/** Q003: speculation markers about the prospect (FR-031, defect D2). */
+export function findSpeculationTerms(text: string): string[] {
+  const lower = text.toLowerCase();
+  return SPECULATION_DENY_LIST.filter((term) => lower.includes(term));
+}
+
 /** Body text contains an identifiable Hook, Pain, BFV-link reference, and Ask, in that order. */
 export function checkStructure(text: string): boolean {
   const lower = text.toLowerCase();
@@ -85,12 +110,16 @@ export interface MechanicalCheckResult {
   readingLevelPass: boolean;
   jargonTermsFound: string[];
   jargonPass: boolean;
+  /** Q003 (FR-031): speculative-framing markers found in the text. */
+  speculationTermsFound: string[];
+  speculationPass: boolean;
   structurePass: boolean;
 }
 
 export function runMechanicalChecks(bodyText: string): MechanicalCheckResult {
   const readingGradeScore = fleschKincaidGrade(bodyText);
   const jargonTermsFound = findJargonTerms(bodyText);
+  const speculationTermsFound = findSpeculationTerms(bodyText);
   const structurePass = checkStructure(bodyText);
 
   return {
@@ -98,6 +127,8 @@ export function runMechanicalChecks(bodyText: string): MechanicalCheckResult {
     readingLevelPass: readingGradeScore <= READING_LEVEL_MAX_GRADE,
     jargonTermsFound,
     jargonPass: jargonTermsFound.length === 0,
+    speculationTermsFound,
+    speculationPass: speculationTermsFound.length === 0,
     structurePass,
   };
 }
