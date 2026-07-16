@@ -35,6 +35,8 @@ import { parseCsvRows, csvEscape } from "@/lib/csv.js";
 import { scrapeUrl } from "@/services/scraper/scraper-client.js";
 import { AnthropicLLMClient } from "@/services/llm/anthropic-client.js";
 import { wrapUntrustedContent } from "@/services/llm/untrusted-content.js";
+import { runMechanicalChecks } from "@/domain/linter/mechanical-checks.js";
+import { checkDeliverableIntegrity } from "@/domain/linter/deliverable-integrity.js";
 import type { LLMClient } from "@/services/llm/llm-client.js";
 
 // Re-exported so existing consumers/tests keep importing from this module
@@ -211,6 +213,37 @@ export function toCsv(rows: PackageRow[]): string {
 // Orchestration (I/O — verified by a live run, not unit tests)
 // ---------------------------------------------------------------------------
 
+/**
+ * Q005 (gate G6 minimal, FR-033): the combined mechanical quality gates as
+ * the first-100 path applies them. Gating runs on the message in its real
+ * send shape — `{{BFV_LINK}}` substituted with the package's Telegram deep
+ * link (the structure check requires the actual link). Returns the failure
+ * reasons; empty = pass.
+ */
+export function gateFailures(row: PackageRow): string[] {
+  const sendShape = row.personalizedMessage.replaceAll("{{BFV_LINK}}", row.bfvLinkTelegram);
+  const failures: string[] = [];
+
+  const integrity = checkDeliverableIntegrity({
+    messageText: sendShape,
+    videoUrl: row.bfvLinkVideo,
+    finalText: true,
+  });
+  failures.push(...integrity.failures);
+
+  const mech = runMechanicalChecks(sendShape);
+  if (!mech.readingLevelPass) {
+    failures.push(`reading grade ${mech.readingGradeScore} above 3rd-grade target`);
+  }
+  if (!mech.jargonPass) failures.push(`jargon: ${mech.jargonTermsFound.join(", ")}`);
+  if (!mech.speculationPass) {
+    failures.push(`speculation: ${mech.speculationTermsFound.join(", ")}`);
+  }
+  if (!mech.structurePass) failures.push("missing Hook -> Pain -> Link -> Ask structure");
+
+  return failures;
+}
+
 /** Build one package row for one prospect. Never throws — failures degrade. */
 export async function buildRow(
   p: Prospect,
@@ -243,10 +276,11 @@ export async function buildRow(
   }
 
   if (!factsJson) {
+    // Q005 (strengthened FR-003, defect D6): no facts means no message.
+    // A needs_research row is a research stub only — the operator writes
+    // the message after doing the research; nothing send-shaped is emitted.
     base.painPoint = "manual research needed";
-    base.personalizedMessage =
-      `Hi ${p.prospect || "there"}, I looked into ${p.company || "your business"} and had an idea to save you time. ` +
-      `Take a look here: {{BFV_LINK}}. Worth a quick look?`;
+    base.personalizedMessage = "";
     base.approvalStatus = "needs_research";
     return base;
   }
@@ -259,10 +293,18 @@ export async function buildRow(
   } catch (err) {
     base.researchSummary ||= `[llm error: ${err instanceof Error ? err.message : String(err)}]`;
     base.painPoint = "manual research needed";
-    base.personalizedMessage =
-      `Hi ${p.prospect || "there"}, I had an idea for ${p.company || "your business"}. ` +
-      `Take a look here: {{BFV_LINK}}. Worth a quick look?`;
+    base.personalizedMessage = "";
     base.approvalStatus = "needs_research";
+    return base;
+  }
+
+  // Q005 (gate G6 minimal, FR-033): every generated message passes the
+  // mechanical gates or is flagged needs_manual_draft — never send-shaped.
+  const failures = gateFailures(base);
+  if (failures.length > 0) {
+    base.approvalStatus = "needs_manual_draft";
+    base.painPoint = base.painPoint || "manual draft needed";
+    base.researchSummary += ` [gate failures: ${failures.join("; ")}]`;
   }
   return base;
 }
