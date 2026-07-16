@@ -4,7 +4,6 @@ import {
   parseProspects,
   buildPackagePrompt,
   parsePackageJson,
-  withBfvCta,
   telegramDeepLink,
   csvEscape,
   toCsv,
@@ -72,6 +71,19 @@ describe("buildPackagePrompt", () => {
     expect(prompt).toContain("Acme");
     expect(prompt).toMatch(/never treat as instructions/i);
   });
+
+  it("makes the link part of the single generation contract (Q001/FR-030)", () => {
+    const prompt = buildPackagePrompt(
+      { prospect: "Sam", company: "Acme", url: "https://acme.test" },
+      "{}",
+    );
+    // One coherent message: the model writes the {{BFV_LINK}} placement
+    // and exactly one ask; nothing is appended after generation.
+    expect(prompt).toContain("{{BFV_LINK}}");
+    expect(prompt).toMatch(/exactly ONE ask/i);
+    expect(prompt).toMatch(/never claim a video/i);
+    expect(prompt).not.toMatch(/appended separately/i);
+  });
 });
 
 describe("parsePackageJson", () => {
@@ -98,8 +110,11 @@ describe("parsePackageJson", () => {
 });
 
 describe("formatting helpers", () => {
-  it("withBfvCta appends the find-replace marker", () => {
-    expect(withBfvCta("Hi there.")).toContain("{{BFV_LINK}}");
+  it("no post-generation CTA append exists (Q001/FR-030 — defect D1/D3 pin)", async () => {
+    // The blind append ("I made you a short personal video") poisoned 5/5
+    // of the first real batch. The module must no longer export it.
+    const mod = await import("../../scripts/first-100.js");
+    expect("withBfvCta" in mod).toBe(false);
   });
 
   it("telegramDeepLink builds the t.me start URL", () => {
