@@ -119,7 +119,20 @@
       body: JSON.stringify({ action: action }),
     })
       .then(function (res) {
-        if (!res.ok) throw new Error("HTTP " + res.status);
+        if (!res.ok) {
+          // Surface the server's reason when it sent one (e.g. the Q006
+          // not_send_ready refusal), not just the bare status code.
+          return res
+            .json()
+            .catch(function () { return null; })
+            .then(function (errBody) {
+              var detail =
+                errBody && errBody.error && errBody.error.message
+                  ? errBody.error.message
+                  : "HTTP " + res.status;
+              throw new Error(detail);
+            });
+        }
         return res.json();
       })
       .then(function (body) {
