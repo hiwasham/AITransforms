@@ -197,5 +197,37 @@ describe("review API contracts", () => {
       );
       expect(missing.status).toBe(404);
     });
+
+    it("refuses approve on a false video claim (Q006 / 002 FR-022, 409)", async () => {
+      // Import a package whose message claims a video exists while the
+      // video field is still the generator placeholder (golden defect D1).
+      const row = `Pat,Claimy Co,summary,pain,https://t.me/b?start=9,<<paste video link for Claimy Co>>,"I made you a short personal video. Watch it here: {{BFV_LINK}}",pending`;
+      const res = await createReviewImportHandler(db)(
+        postJson("http://x/review/imports", {
+          sourceName: "claim.csv",
+          csv: [HEADER, row].join("\n") + "\n",
+        }),
+      );
+      expect(res.status).toBe(201);
+      const id = await firstId();
+
+      const refused = await createDecisionHandler(db)(
+        postJson("http://x", { action: "approve" }), { params: { id } },
+      );
+      expect(refused.status).toBe(409);
+      const body = await json(refused);
+      expect(body.error.code).toBe("not_send_ready");
+      expect(body.error.message).toMatch(/claims a video/i);
+
+      // Decision unchanged; reject still allowed on the same package.
+      const after = await createGetReviewPackageHandler(db)(
+        new Request("http://x"), { params: { id } },
+      );
+      expect((await json(after)).package.decision).toBe("pending");
+      const rejected = await createDecisionHandler(db)(
+        postJson("http://x", { action: "reject" }), { params: { id } },
+      );
+      expect((await json(rejected)).package.decision).toBe("rejected");
+    });
   });
 });

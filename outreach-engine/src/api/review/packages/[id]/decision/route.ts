@@ -11,6 +11,7 @@
 
 import type { Db } from "@/db/client.js";
 import * as Repo from "@/domain/review/review-package.js";
+import { checkDeliverableIntegrity } from "@/domain/linter/deliverable-integrity.js";
 import { jsonResponse, errorResponse } from "@/api/lib/errors.js";
 import { packagePayload } from "@/api/review/packages/next/route.js";
 import { logger } from "@/lib/logger.js";
@@ -41,6 +42,31 @@ export function createDecisionHandler(db: Db) {
     const before = await Repo.getById(db, ctx.params.id);
     if (!before) {
       return errorResponse("not_found", "Review package not found", 404);
+    }
+
+    // Q006 (002 FR-022, gate G3 backstop): approval is refused when the
+    // message fails the deterministic deliverable-integrity check — e.g.
+    // it claims a video exists while the package has no real video URL
+    // (defect D1, 5/5 of the first real batch). The generation pipeline
+    // is the primary gate; this guarantees SC-010's "no bypass path"
+    // from the review surface. The {{BFV_LINK}} marker itself is fine in
+    // stored text (FR-029) — substitution happens at send prep.
+    if (action === "approve") {
+      const integrity = checkDeliverableIntegrity({
+        messageText: before.messageBody,
+        videoUrl: before.videoUrl,
+      });
+      if (!integrity.pass) {
+        logger.warn("review_approve_refused_integrity", {
+          packageId: before.id,
+          failures: integrity.failures,
+        });
+        return errorResponse(
+          "not_send_ready",
+          `Cannot approve: ${integrity.failures.join(" ")}`,
+          409,
+        );
+      }
     }
 
     const updated =
