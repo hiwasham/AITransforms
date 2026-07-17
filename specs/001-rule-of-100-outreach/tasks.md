@@ -565,7 +565,7 @@ no new dependencies.
 10 sends the operator curates the input list by hand (manual form per
 the recovery plan). The automated classifier is Q1 (Q010).
 
-- [ ] Q001 Kill the blind CTA append (gate G4): in
+- [X] Q001 Kill the blind CTA append (gate G4): in
   `outreach-engine/scripts/first-100.ts`, remove the post-generation
   `withBfvCta()` append and make the BFV link/CTA sentence part of the
   single generation contract in `buildPackagePrompt` (the model writes
@@ -576,7 +576,7 @@ the recovery plan). The automated classifier is Q1 (Q010).
   false "I made you a short personal video" claim into 5/5 rejected
   messages, per FR-030 (rejects addressed: 5/5; effort: S; no
   dependencies)
-- [ ] Q002 [P] Implement the deterministic deliverable-integrity check
+- [X] Q002 [P] Implement the deterministic deliverable-integrity check
   (gate G3) as a new mechanical check module in
   `outreach-engine/src/domain/linter/` — FAIL when: (a) message text
   claims a video/recording/demo exists while the package's video field is
@@ -585,14 +585,14 @@ the recovery plan). The automated classifier is Q1 (Q010).
   no LLM call, unit-tested with the 5 golden rejects as fail fixtures,
   per FR-029/SC-010 (rejects addressed: 5/5; effort: S; no dependencies —
   parallel with Q001)
-- [ ] Q003 [P] Add the speculation-marker deny-list (gate G2, mechanical
+- [X] Q003 [P] Add the speculation-marker deny-list (gate G2, mechanical
   half) to `outreach-engine/src/domain/linter/mechanical-checks.ts` —
   same code shape as the existing jargon deny-list, new list: "i bet",
   "must spend", "likely", "probably", "i'm sure", "i'm guessing",
   "i imagine", "i assume"; unit tests both paths, per FR-031 (rejects
   addressed: 3/5 — D2; effort: S; no dependencies — parallel with
   Q001/Q002)
-- [ ] Q004 Add generation exemplars + the golden-set regression fixture
+- [X] Q004 Add generation exemplars + the golden-set regression fixture
   (gate G5): inject into `buildPackagePrompt` the Day 1 template from
   `resources/follow-up-cadence-scripts.md` as the positive standard and
   2–3 golden rejects with their defect-class reasons as negative
@@ -601,7 +601,7 @@ the recovery plan). The automated classifier is Q1 (Q010).
   `resources/golden-reject-set-2026-07-16.md`, per FR-032/SC-009
   (rejects addressed: 5/5 indirectly — D7 tone; effort: S; depends on
   Q002, Q003)
-- [ ] Q005 Route the first-100 path through the mechanical gates (gate
+- [X] Q005 Route the first-100 path through the mechanical gates (gate
   G6, minimal form): `buildRow` in
   `outreach-engine/scripts/first-100.ts` runs `runMechanicalChecks` plus
   the Q002/Q003 checks on every generated message; a failing row is
@@ -610,7 +610,7 @@ the recovery plan). The automated classifier is Q1 (Q010).
   research stub only — NO generated message body, NO link claim
   (strengthened FR-003, closes D6), per FR-033 (rejects addressed: 5/5 —
   enforcement of all gates; effort: M; depends on Q001–Q004)
-- [ ] Q006 Dashboard approve backstop (002 FR-022): the decision route
+- [X] Q006 Dashboard approve backstop (002 FR-022): the decision route
   `outreach-engine/src/api/review/packages/[id]/decision/route.ts`
   refuses `approve` on a package failing the Q002 integrity check,
   returning a visible reason per 002 FR-013 conventions — guarantees
