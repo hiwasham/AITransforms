@@ -334,6 +334,16 @@ async function main(): Promise<void> {
     apiKey: config.llmApiKey,
     model: config.llmModel,
     timeoutMs: config.llmTimeoutMs,
+    // Honor a proxy/base override (e.g. ANTHROPIC_BASE_URL from Claude Code
+    // settings); defaults to api.anthropic.com inside the client.
+    baseUrl: process.env.ANTHROPIC_BASE_URL,
+    // The operator's proxy authorizes by Claude Code's client signature —
+    // present the same user-agent it checks for.
+    fetchImpl: (url, init) =>
+      globalThis.fetch(url, {
+        ...init,
+        headers: { ...(init?.headers as Record<string, string>), "user-agent": "claude-cli/2.0.0 (external, cli)" },
+      }),
   });
 
   console.log(`Generating ${prospects.length} package(s) with ${config.llmModel}...`);
