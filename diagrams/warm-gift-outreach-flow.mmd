@@ -1,0 +1,27 @@
+graph LR
+    subgraph FIND["1. Find"]
+        W[Hayden webinar] -->|spot attendee| L[Pick lead]
+        L -->|site + LinkedIn| R[Research business]
+    end
+
+    subgraph BUILD["2. Build gift"]
+        R --> A[Audit their page]
+        A --> G[Rebuild as one<br/>HTML file]
+        G --> X[Extras: photos,<br/>AI art, previews]
+    end
+
+    subgraph SEND["3. Send"]
+        X --> E[Write gift email<br/>no-ask, specific]
+        E --> C[Commit to git<br/>emails/NN-name.md]
+        C --> S[Send with<br/>attachments]
+    end
+
+    subgraph NEXT["4. Follow up"]
+        S --> T{Reply?}
+        T -->|yes| CALL[Conversation<br/>to call]
+        T -->|no| F[Soft follow-up<br/>later]
+    end
+
+    style W fill:#1e3a5f,color:#fff
+    style CALL fill:#2e7d32,color:#fff
+    style S fill:#8d4a2f,color:#fff
