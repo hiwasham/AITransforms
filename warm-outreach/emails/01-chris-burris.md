@@ -2,25 +2,29 @@ Subject: made you a couple things for the England Healing Circles page
 
 Hi Chris,
 
-I was on your site looking at the England Healing Circles workshop and I
-kept coming back to your enso painting — it's beautiful, and it deserves
-to travel further than that one page.
+I was on your site looking at the England Healing Circles workshop and
+felt the page wasn't doing the workshop justice — so I rebuilt it as a
+gift, no strings.
 
-So I made you a couple of things, no strings, just a gift:
+Attached:
 
-  1. A polished event hero using your own artwork (I didn't touch the
-     painting — just added the title and details cleanly on top).
-  2. A matching square card you can drop straight onto Instagram or
-     LinkedIn to point people at the workshop.
+  1. A full redesign of the event page — same info, but with a proper
+     hero, the dates / location / investment up front, a "who this is
+     for" section, and a register card that makes the 40-seat limit
+     visible. There's a preview image plus the HTML file itself, so
+     whoever runs your site can use it directly or steal any piece of it.
+  2. An AI riff on your enso painting. I ran it through an image model
+     and it reinterpreted the piece rather than copying it — so treat it
+     as a variation on your original, not a replacement. Keep it only if
+     it sparks something.
 
-They're attached. Use them, tweak them, or ignore them entirely — no
-ask here. I just enjoy making these and yours was worth the time.
+Use them, tweak them, or ignore them entirely — no ask here. I just
+enjoy making these and yours was worth the time.
 
 One small thing I noticed: your other Healing Circles training is marked
 FULL, but this England one has no waitlist capture. If it fills the same
-way, you're leaving warm people with nowhere to go. If that's useful, I
-put together a simple "join the waitlist" page concept too — happy to
-send it over. Totally your call.
+way, warm people will have nowhere to go. If that's useful, I'll put
+together a simple "join the waitlist" page too — just say the word.
 
 Either way, hope the Bristol workshop is a great one.
 
