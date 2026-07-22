@@ -7,6 +7,9 @@
  *   N          next (advance without deciding — never lost)
  *   ArrowLeft  step back to the previous prospect (undo a mis-key by
  *              re-deciding it, FR-010)
+ *   G/F/B/C/O  tag the just-rejected prospect with a reason (Q011): the
+ *              window opens on a successful reject and closes on the next
+ *              A/R/N/ArrowLeft (D6). Optional; the tag is calibration data.
  *
  * Rules this file must keep (plan 002):
  * - ALL dynamic content set via textContent — never innerHTML (untrusted
@@ -20,6 +23,17 @@
   var current = null; // the package on screen
   var history = []; // ids of previously shown packages (for ArrowLeft)
   var busy = false; // one in-flight decision at a time
+  var lastRejectedId = null; // reason-window target; null = window closed (D6)
+
+  // Single-letter → full-word reason (D5/D7 client-side map). The server
+  // validates the full word; the UI never sends a letter.
+  var REASON_MAP = {
+    g: "generic",
+    f: "false_claim",
+    b: "bad_fit",
+    c: "creepy",
+    o: "other",
+  };
 
   function $(id) {
     return document.getElementById(id);
@@ -44,6 +58,56 @@
 
   function renderCounts(counts) {
     $("progress").textContent = counts.reviewed + " / " + counts.total;
+  }
+
+  // Reason window (D6/D9). Opening it is a side effect of a successful
+  // reject; ANY subsequent A/R/N/ArrowLeft attempt closes it, so the
+  // reason keys can only ever tag the prospect the operator just rejected.
+  function openReasonWindow(id) {
+    lastRejectedId = id;
+    var hint = $("reason-hint");
+    hint.textContent = "rejected — G/F/B/C/O to tag a reason";
+    hint.style.display = "inline";
+  }
+
+  function closeReasonWindow() {
+    lastRejectedId = null;
+    var hint = $("reason-hint");
+    hint.textContent = "";
+    hint.style.display = "none";
+  }
+
+  function tagReason(letter) {
+    // No-op when the window is closed (D6) or a write is in flight.
+    if (busy || lastRejectedId === null) return;
+    var reason = REASON_MAP[letter];
+    if (!reason) return;
+    var id = lastRejectedId;
+    busy = true;
+    fetch("/review/packages/" + encodeURIComponent(id) + "/rejection-reason", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ reason: reason }),
+    })
+      .then(function (res) {
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        return res.json();
+      })
+      .then(function () {
+        setError(null);
+        // Window stays open: in-window re-tag is last-write-wins so the
+        // operator can correct a mis-key (Codex #4).
+        var hint = $("reason-hint");
+        hint.textContent = "tagged: " + reason;
+        hint.style.display = "inline";
+      })
+      .catch(function (err) {
+        // D9: a failed reason POST keeps the window open for a re-press.
+        setError("tag failed, not saved: " + err.message);
+      })
+      .finally(function () {
+        busy = false;
+      });
   }
 
   function renderPackage(pkg) {
@@ -111,6 +175,9 @@
 
   function decide(action) {
     if (!current || busy) return;
+    // D6: any A/R/N attempt closes a still-open reason window before it
+    // acts, so a reason key can never land on the wrong prospect.
+    closeReasonWindow();
     busy = true;
     var decidedId = current.id;
     fetch("/review/packages/" + encodeURIComponent(decidedId) + "/decision", {
@@ -139,6 +206,9 @@
         setError(null);
         history.push(decidedId);
         renderCounts(body.counts);
+        // A successful reject opens the reason window on the prospect that
+        // was just rejected (not the one now on screen).
+        if (action === "reject") openReasonWindow(decidedId);
         if (body.next) {
           renderPackage(body.next);
         } else {
@@ -159,6 +229,8 @@
 
   function goBack() {
     if (busy || history.length === 0) return;
+    // D6: ArrowLeft closes the reason window like any other navigation.
+    closeReasonWindow();
     var id = history.pop();
     busy = true;
     fetch("/review/packages/" + encodeURIComponent(id))
@@ -186,6 +258,7 @@
     else if (key === "r") decide("reject");
     else if (key === "n") decide("next");
     else if (e.key === "ArrowLeft") goBack();
+    else if (REASON_MAP[key] && lastRejectedId !== null) tagReason(key);
     else return;
     e.preventDefault();
   });

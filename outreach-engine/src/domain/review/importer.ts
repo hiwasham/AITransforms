@@ -15,6 +15,7 @@
 import type { Db } from "@/db/client.js";
 import { parseCsvRows } from "@/lib/csv.js";
 import * as ReviewPackageRepo from "@/domain/review/review-package.js";
+import { logger } from "@/lib/logger.js";
 
 export interface ImportSummary {
   rowsRead: number;
@@ -135,6 +136,19 @@ export async function importCsv(
 
     if (created) summary.added++;
     else summary.duplicates++;
+  }
+
+  // D10: the all-duplicates collision signature (the D4 failure mode —
+  // regenerating the same companies yields an already-full queue, so a
+  // "fresh" import silently adds nothing). Harmless for a legitimate
+  // re-import, but the Q007 fresh-10 cohort requires added>0, so surface
+  // it. Logged, never thrown.
+  if (summary.rowsRead > 0 && summary.added === 0 && summary.duplicates > 0) {
+    logger.warn("review_import_all_duplicates", {
+      sourceName,
+      rowsRead: summary.rowsRead,
+      duplicates: summary.duplicates,
+    });
   }
 
   return summary;

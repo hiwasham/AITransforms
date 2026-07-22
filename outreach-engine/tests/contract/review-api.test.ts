@@ -10,6 +10,7 @@ import { createReviewImportHandler } from "@/api/review/imports/route.js";
 import { createNextPackageHandler } from "@/api/review/packages/next/route.js";
 import { createGetReviewPackageHandler } from "@/api/review/packages/[id]/route.js";
 import { createDecisionHandler } from "@/api/review/packages/[id]/decision/route.js";
+import { createRejectionReasonHandler } from "@/api/review/packages/[id]/rejection-reason/route.js";
 
 const HEADER =
   "prospect,company,research_summary,pain_point,bfv_link_telegram,bfv_link_video,personalized_message,approval_status";
@@ -228,6 +229,93 @@ describe("review API contracts", () => {
         postJson("http://x", { action: "reject" }), { params: { id } },
       );
       expect((await json(rejected)).package.decision).toBe("rejected");
+    });
+  });
+
+  describe("POST /review/packages/:id/rejection-reason (Q011, D3/D11/D12)", () => {
+    async function firstId(): Promise<string> {
+      const body = await json(await createNextPackageHandler(db)());
+      return body.package.id as string;
+    }
+    const setReason = (id: string, reason: unknown) =>
+      createRejectionReasonHandler(db)(
+        postJson("http://x", { reason }), { params: { id } },
+      );
+    const decide = (id: string, action: string) =>
+      createDecisionHandler(db)(
+        postJson("http://x", { action }), { params: { id } },
+      );
+
+    it("tags a rejected package; the reason surfaces on the payload", async () => {
+      await importFixture();
+      const id = await firstId();
+      await decide(id, "reject");
+      const res = await setReason(id, "false_claim");
+      expect(res.status).toBe(200);
+      expect((await json(res)).package).toMatchObject({
+        id,
+        decision: "rejected",
+        rejectionReason: "false_claim",
+      });
+    });
+
+    it("in-window re-tag is last-write-wins (typo correction, Codex #4)", async () => {
+      await importFixture();
+      const id = await firstId();
+      await decide(id, "reject");
+      await setReason(id, "generic");
+      const res = await setReason(id, "creepy");
+      expect((await json(res)).package.rejectionReason).toBe("creepy");
+    });
+
+    it("a later decision write clears the reason (D11)", async () => {
+      await importFixture();
+      const id = await firstId();
+      await decide(id, "reject");
+      await setReason(id, "bad_fit");
+      // Re-reject: the prior tag is wiped, so the row starts untagged.
+      const rereject = await json(await decide(id, "reject"));
+      expect(rereject.package.rejectionReason).toBeNull();
+    });
+
+    it("400 on an unknown reason enum", async () => {
+      await importFixture();
+      const id = await firstId();
+      await decide(id, "reject");
+      const res = await setReason(id, "spammy");
+      expect(res.status).toBe(400);
+      expect((await json(res)).error.code).toBe("invalid_reason");
+    });
+
+    it("404 on an unknown id", async () => {
+      await importFixture();
+      const res = await setReason("nope", "generic");
+      expect(res.status).toBe(404);
+      expect((await json(res)).error.code).toBe("not_found");
+    });
+
+    it("409 when the package is not currently rejected", async () => {
+      await importFixture();
+      const id = await firstId();
+      // pending → no decision yet
+      const pendingRes = await setReason(id, "generic");
+      expect(pendingRes.status).toBe(409);
+      expect((await json(pendingRes)).error.code).toBe("not_rejected");
+      // approved is also not-rejected
+      await decide(id, "approve");
+      const approvedRes = await setReason(id, "generic");
+      expect(approvedRes.status).toBe(409);
+    });
+
+    it("400 on a non-JSON body", async () => {
+      await importFixture();
+      const id = await firstId();
+      await decide(id, "reject");
+      const res = await createRejectionReasonHandler(db)(
+        new Request("http://x", { method: "POST", body: "{" }),
+        { params: { id } },
+      );
+      expect(res.status).toBe(400);
     });
   });
 });

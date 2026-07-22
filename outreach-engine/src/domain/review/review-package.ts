@@ -10,6 +10,22 @@ import type { Db } from "@/db/client.js";
 
 export type ReviewDecision = "pending" | "approved" | "rejected";
 
+/** G7/FR-021 rejection-reason tags (specs/002 D5). UI maps g/f/b/c/o → these. */
+export type RejectionReason =
+  | "generic"
+  | "false_claim"
+  | "bad_fit"
+  | "creepy"
+  | "other";
+
+export const REJECTION_REASONS: readonly RejectionReason[] = [
+  "generic",
+  "false_claim",
+  "bad_fit",
+  "creepy",
+  "other",
+];
+
 export interface ReviewPackage {
   id: string;
   dedupKey: string;
@@ -26,6 +42,7 @@ export interface ReviewPackage {
   decision: ReviewDecision;
   decidedAt: string | null;
   passedOverAt: string | null;
+  rejectionReason: RejectionReason | null;
 }
 
 export interface NewReviewPackage {
@@ -59,11 +76,13 @@ interface Row {
   decision: ReviewDecision;
   decided_at: string | null;
   passed_over_at: string | null;
+  rejection_reason: RejectionReason | null;
 }
 
 const COLUMNS = `id, dedup_key, source_name, position, company, contact,
   research_summary, pain_point, message_body, bfv_link_telegram, video_url,
-  generator_flag, decision, decided_at::text, passed_over_at::text`;
+  generator_flag, decision, decided_at::text, passed_over_at::text,
+  rejection_reason`;
 
 function fromRow(row: Row): ReviewPackage {
   return {
@@ -82,6 +101,7 @@ function fromRow(row: Row): ReviewPackage {
     decision: row.decision,
     decidedAt: row.decided_at,
     passedOverAt: row.passed_over_at,
+    rejectionReason: row.rejection_reason,
   };
 }
 
@@ -156,10 +176,37 @@ export async function recordDecision(
 ): Promise<ReviewPackage | null> {
   const result = await db.query<Row>(
     `UPDATE review_packages
-     SET decision = $2, decided_at = now(), passed_over_at = NULL
+     SET decision = $2, decided_at = now(), passed_over_at = NULL,
+         rejection_reason = NULL
      WHERE id = $1
      RETURNING ${COLUMNS}`,
     [id, decision],
+  );
+  const row = result.rows[0];
+  return row ? fromRow(row) : null;
+}
+
+/**
+ * Tag a rejection with a structured reason (Q011, specs/002 D3/D11/D12).
+ * Atomic conditional write: only a currently-rejected package can be
+ * tagged, so the "reason ⟹ rejected" invariant is enforced in one SQL
+ * round-trip with no read-then-write race (Codex #1). A subsequent
+ * decision write clears the tag (recordDecision, D11), so a re-reject
+ * starts untagged. Returns the updated package, or null when no row was
+ * currently-rejected (unknown id OR wrong state) — the caller
+ * distinguishes 404 vs 409 by first probing existence.
+ */
+export async function setRejectionReason(
+  db: Db,
+  id: string,
+  reason: RejectionReason,
+): Promise<ReviewPackage | null> {
+  const result = await db.query<Row>(
+    `UPDATE review_packages
+     SET rejection_reason = $2
+     WHERE id = $1 AND decision = 'rejected'
+     RETURNING ${COLUMNS}`,
+    [id, reason],
   );
   const row = result.rows[0];
   return row ? fromRow(row) : null;

@@ -619,15 +619,24 @@ the recovery plan). The automated classifier is Q1 (Q010).
   addressed: backstop for D1; effort: S; depends on Q002; touches
   feature 002's surface — tracked here so the recovery phase has one
   ordered list)
-- [ ] Q007 Q0 exit gate (SC-008 trajectory): regenerate a 10-prospect
-  batch through the gated path (Q001–Q005 live), import into the review
-  dashboard, operator reviews; PASS = ≥6/10 approved without edits; on
-  PASS, append the approved messages to the golden-approved section of
+- [ ] Q007 Q0 exit gate (SC-008 trajectory): generate a batch of 10 FRESH
+  prospects through the gated path (Q001–Q005 live) — fresh companies, not
+  a same-company regeneration, which FR-002 dedup would silently drop
+  (CEO review 2026-07-18 D4); the import summary MUST show `added==10` as
+  the mechanical freshness proof, and the gate cohort is exactly the rows
+  under that import's `source_name` (D13). Run as ONE combined operator
+  session with M012's manual SC-000 gate, recording the two verdicts
+  separately in the commit/PR (D7). Operator reviews in the dashboard,
+  tagging each reject with a Q011 reason; gate result = the decision
+  counts over that source_name at session end, recorded verbatim (frozen
+  evidence, D13; in-session FR-010 revisions count). Binary threshold
+  (D8): PASS = ≥6/10 approved without edits; FAIL = ≤5/10. On PASS,
+  append the approved messages to the golden-approved section of
   `resources/golden-reject-set-2026-07-16.md` and **send the first 10 by
-  hand**; on FAIL (<5/10), STOP — capture per-message rejection reasons
-  and re-plan from that data before building anything further, per
-  recovery-plan Stage A exit criterion (effort: S — verification, not
-  construction; depends on Q001–Q006)
+  hand**; on FAIL, STOP — the Q011 rejection-reason data drives the
+  re-plan before building anything further, per recovery-plan Stage A
+  exit criterion (effort: S — verification, not construction; depends on
+  Q001–Q006 + the Q011 build)
 
 ## Phase Q1: Quality Scale-Up — after first outreach, before first 100
 

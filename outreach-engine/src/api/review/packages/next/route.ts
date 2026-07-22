@@ -23,6 +23,7 @@ export function packagePayload(pkg: ReviewPackage) {
     generatorFlag: pkg.generatorFlag,
     decision: pkg.decision,
     decidedAt: pkg.decidedAt,
+    rejectionReason: pkg.rejectionReason,
     sourceName: pkg.sourceName,
     position: pkg.position,
   };

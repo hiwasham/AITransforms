@@ -145,20 +145,23 @@ complete states.
       `innerHTML` — in `outreach-engine/src/ui/index.html` and
       `outreach-engine/src/ui/review.js` (depends on M008)
 
-- [ ] M010 Integration test — the SC-000 loop against a fixture CSV in
+- [x] M010 Integration test — the SC-000 loop against a fixture CSV in
       the real first-100 column shape: import → walk the queue deciding
       and passing-over via the endpoints → verify every decision
       recorded, passed-over prospects return, complete state reached;
       plus a restart-durability leg (reopen the Db on the same datadir,
       decisions intact, FR-009) — in
       `outreach-engine/tests/integration/review-loop.test.ts`
+      (done 2026-07-22, night shift: import→reject+Q011 tag→approve→next
+      loop + restart-durability leg, both green)
 
-- [ ] M011 Add a mechanical guard test: no
+- [x] M011 Add a mechanical guard test: no
       `innerHTML`/`insertAdjacentHTML`/`document.write` under
       `outreach-engine/src/ui/`, and no import of the workflow
       state machine / dispatch / webhook / cadence modules under
       `src/{domain,api}/review/` (FR-018) — in
       `outreach-engine/tests/unit/review-isolation.test.ts`
+      (done 2026-07-22: sink-write regex + import-specifier guard, green)
 
 - [ ] M012 Verify and close MVP-0: rerun the full verification suite and
       diff against M001's baseline (identical-or-green, SC-006/FR-019);

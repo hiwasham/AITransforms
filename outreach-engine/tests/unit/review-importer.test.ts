@@ -4,10 +4,11 @@
  * dedup idempotency (FR-002), dedup_key normalization.
  */
 
-import { describe, expect, it, beforeEach } from "vitest";
+import { describe, expect, it, beforeEach, vi, afterEach } from "vitest";
 import { createDb, type Db } from "@/db/client.js";
 import { importCsv, dedupKey } from "@/domain/review/importer.js";
 import * as ReviewPackageRepo from "@/domain/review/review-package.js";
+import { logger } from "@/lib/logger.js";
 
 const HEADER =
   "prospect,company,research_summary,pain_point,bfv_link_telegram,bfv_link_video,personalized_message,approval_status";
@@ -131,5 +132,31 @@ describe("importCsv", () => {
     const summary = await importCsv(db, csv(ROW_ACME, row2), "day2.csv");
     expect(summary).toMatchObject({ added: 1, duplicates: 1 });
     expect((await ReviewPackageRepo.getCounts(db)).total).toBe(2);
+  });
+
+  describe("all-duplicates collision warn (D10)", () => {
+    afterEach(() => vi.restoreAllMocks());
+
+    it("warns when rowsRead>0, added==0, duplicates>0", async () => {
+      const warn = vi.spyOn(logger, "warn");
+      await importCsv(db, csv(ROW_ACME), "day1.csv");
+      warn.mockClear();
+      await importCsv(db, csv(ROW_ACME), "day2.csv"); // same company again
+      expect(warn).toHaveBeenCalledWith("review_import_all_duplicates", {
+        sourceName: "day2.csv",
+        rowsRead: 1,
+        duplicates: 1,
+      });
+    });
+
+    it("does not warn when anything was added or the file was empty", async () => {
+      const warn = vi.spyOn(logger, "warn");
+      await importCsv(db, csv(ROW_ACME), "day1.csv"); // added=1
+      await importCsv(db, HEADER + "\n", "empty.csv"); // rowsRead=0
+      expect(warn).not.toHaveBeenCalledWith(
+        "review_import_all_duplicates",
+        expect.anything(),
+      );
+    });
   });
 });

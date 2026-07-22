@@ -129,7 +129,19 @@ export async function applySchema(db: PGlite): Promise<void> {
         CHECK (decision IN ('pending', 'approved', 'rejected')),
       decided_at TIMESTAMPTZ,
       passed_over_at TIMESTAMPTZ,
+      rejection_reason TEXT
+        CHECK (rejection_reason IN ('generic', 'false_claim', 'bad_fit', 'creepy', 'other')),
       created_at TIMESTAMPTZ NOT NULL DEFAULT now()
     );
+
+    -- Q011 rejection-reason capture (specs/002 D5, G7/FR-021). Idempotent
+    -- evolution so an existing datadir gains the column without losing the
+    -- first batch's decision history; NULL passes the CHECK (untagged
+    -- rejections and all non-rejected rows). Full-word values; the UI maps
+    -- g/f/b/c/o to these. IF NOT EXISTS won't repair a wrong-typed
+    -- pre-existing column (hand-mutated dev DBs only, accepted risk).
+    ALTER TABLE review_packages
+      ADD COLUMN IF NOT EXISTS rejection_reason TEXT
+      CHECK (rejection_reason IN ('generic', 'false_claim', 'bad_fit', 'creepy', 'other'));
   `);
 }

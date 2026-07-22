@@ -32,6 +32,7 @@ import { createReviewImportHandler } from "@/api/review/imports/route.js";
 import { createNextPackageHandler } from "@/api/review/packages/next/route.js";
 import { createGetReviewPackageHandler } from "@/api/review/packages/[id]/route.js";
 import { createDecisionHandler } from "@/api/review/packages/[id]/decision/route.js";
+import { createRejectionReasonHandler } from "@/api/review/packages/[id]/rejection-reason/route.js";
 import { errorResponse } from "@/api/lib/errors.js";
 
 export interface AppDeps {
@@ -136,6 +137,11 @@ export function createApp(deps: AppDeps): App {
       method: "POST",
       segments: ["review", "packages", ":id", "decision"],
       handler: createDecisionHandler(db) as RouteHandler,
+    },
+    {
+      method: "POST",
+      segments: ["review", "packages", ":id", "rejection-reason"],
+      handler: createRejectionReasonHandler(db) as RouteHandler,
     },
   ];
 

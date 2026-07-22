@@ -68,12 +68,16 @@ architecture, no new tables.
    recorded at review skips the prospect from any future batch. No
    classifier built yet.
 
-**Exit criterion for this stage**: regenerate the 5-prospect batch (or a
-fresh 10) through the gated path; operator reviews in the dashboard. Target
-per SC-008 trajectory: ≥6/10 approved. If still <50%, STOP — capture
-rejection reasons and re-plan before building anything further; the next
-bottleneck is not yet known and must come from real rejection data, not
-speculation.
+**Exit criterion for this stage**: generate a batch of 10 FRESH prospects
+(fresh companies — a same-company regeneration is deduped away by FR-002,
+which was the original failure mode; CEO review 2026-07-18 D4) through the
+gated path; the import MUST show `added==10`, and the cohort is the rows
+under that import's `source_name` (D13). Operator reviews in the dashboard,
+tagging each reject with a Q011 reason. Binary threshold (D8): PASS = ≥6/10
+approved without edits; FAIL = ≤5/10 → STOP. On FAIL, the captured Q011
+rejection reasons drive the re-plan before building anything further; the
+next bottleneck is not yet known and must come from real rejection data,
+not speculation.
 
 ## Should do before first 100
 
@@ -139,7 +143,7 @@ outreach / before first 100), appended 2026-07-16.
 
 ```
 Stage A / Phase Q0 (before first 10 sends)  — G4, G3, G5, G2-mechanical, G6-minimal, G1-manual
-   └─ exit (Q007): regenerate batch → operator review → ≥6/10 approved (else stop & re-plan)
+   └─ exit (Q007): fresh-10 batch (added==10) → combined M012+Q007 operator session → PASS ≥6/10 / FAIL ≤5/10 (else stop & re-plan from Q011 reasons)
 Stage B / Phase Q1 (before first 100 sends) — G2-judge, G6-full, G1-automated, G7, extraction upgrade
    └─ exit: SC-008 holding ≥60% over rolling 20; SC-009 fixtures green
 Later                                       — telemetry, exemplar tooling, path unification, ICP scoring

@@ -89,6 +89,14 @@
   }
   #decision-badge.approved { display: inline-block; background: #e6f4ea; color: var(--approve); }
   #decision-badge.rejected { display: inline-block; background: #fce8e6; color: var(--reject); }
+  #reason-hint {
+    display: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--muted);
+    margin-top: 14px;
+    margin-left: 10px;
+  }
   footer {
     position: fixed;
     bottom: 0; left: 0; right: 0;
@@ -136,6 +144,7 @@
     <div id="progress">– / –</div>
     <div id="keys">
       <kbd>A</kbd> approve&ensp;<kbd>R</kbd> reject&ensp;<kbd>N</kbd> next&ensp;<kbd>&larr;</kbd> back
+      <br /><span id="reason-keys">after a reject: <kbd>G</kbd> generic&ensp;<kbd>F</kbd> false claim&ensp;<kbd>B</kbd> bad fit&ensp;<kbd>C</kbd> creepy&ensp;<kbd>O</kbd> other</span>
     </div>
   </header>
 
@@ -156,6 +165,7 @@
     <p id="contact"></p>
     <div id="flag"></div>
     <span id="decision-badge"></span>
+    <span id="reason-hint"></span>
 
     <section>
       <h2>Research</h2>
