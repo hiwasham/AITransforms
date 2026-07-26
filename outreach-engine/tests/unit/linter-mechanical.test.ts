@@ -2,9 +2,11 @@ import { describe, expect, it } from "vitest";
 import {
   fleschKincaidGrade,
   findJargonTerms,
+  findSpeculationTerms,
   checkStructure,
   runMechanicalChecks,
 } from "@/domain/linter/mechanical-checks.js";
+import { GOLDEN_REJECTS } from "../fixtures/golden-rejects.js";
 
 describe("linter mechanical checks (T020)", () => {
   it("scores simple text at a low grade level", () => {
@@ -33,6 +35,36 @@ describe("linter mechanical checks (T020)", () => {
     expect(findJargonTerms("I built a small tool for your shop.")).toEqual([]);
   });
 
+  it("finds speculation markers and reports which ones (Q003/FR-031)", () => {
+    const found = findSpeculationTerms(
+      "I bet your team gets asked a lot. They must spend hours. It's probably rough.",
+    );
+    expect(found).toContain("i bet");
+    expect(found).toContain("must spend");
+    expect(found).toContain("probably");
+  });
+
+  it("passes evidence-grounded text with zero speculation matches", () => {
+    expect(
+      findSpeculationTerms("Your FAQ page lists 40 questions about shipping."),
+    ).toEqual([]);
+  });
+
+  it("flags speculation in the golden rejects that carry defect D2/D5 framing", () => {
+    // Mozilla ("must spend hours"), Basecamp ("I bet"), Sivers ("I bet") —
+    // the speculative-pain rejects from the first real batch.
+    const speculative = GOLDEN_REJECTS.filter((r) =>
+      ["Mozilla", "Basecamp", "Sivers"].includes(r.company),
+    );
+    expect(speculative).toHaveLength(3);
+    for (const reject of speculative) {
+      expect(
+        findSpeculationTerms(reject.message),
+        `${reject.company} must be flagged`,
+      ).not.toHaveLength(0);
+    }
+  });
+
   it("detects Hook->Pain->BFVLink->Ask structure when the link sits in the middle", () => {
     const good =
       "Hey Sam, I saw your bakery online. Your team handles a lot of orders by hand. " +
@@ -59,7 +91,17 @@ describe("linter mechanical checks (T020)", () => {
     const result = runMechanicalChecks(passing);
     expect(result.readingLevelPass).toBe(true);
     expect(result.jargonPass).toBe(true);
+    expect(result.speculationPass).toBe(true);
     expect(result.structurePass).toBe(true);
+  });
+
+  it("runMechanicalChecks fails speculationPass on guessed pain (Q003)", () => {
+    const speculative =
+      "Hey Sam, I saw your bakery. I bet your team must spend hours on orders. " +
+      "I made a bot: https://t.me/samplebot?start=abc123. Want to try it?";
+    const result = runMechanicalChecks(speculative);
+    expect(result.speculationPass).toBe(false);
+    expect(result.speculationTermsFound).toContain("i bet");
   });
 
   it("runMechanicalChecks flags a failing script on every axis", () => {

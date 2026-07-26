@@ -20,6 +20,47 @@ the exact messaging/cadence/BFV standard the feature must satisfy):
 - [`resources/bfv-concept.md`](resources/bfv-concept.md) — the BFV standard
   (zero-friction access, pre-built-before-send, functionally real vs. a
   generic lead magnet) (drives FR-004/FR-016/FR-017).
+- [`resources/golden-reject-set-2026-07-16.md`](resources/golden-reject-set-2026-07-16.md)
+  — the 5 operator-rejected messages from the first real batch, verbatim,
+  with defect classes D1–D7. Ground-truth regression fixtures for the
+  Amendment 1 quality gates (drives FR-029–FR-034, SC-008–SC-010).
+- [`recovery-plan-first-100.md`](recovery-plan-first-100.md) — the minimal
+  recovery plan sequencing the Amendment 1 gates into "before first 10
+  sends" / "before first 100" / "later" (operator direction, 2026-07-16).
+
+## Amendment 1 — Send-Readiness Quality Gates (2026-07-16)
+
+**Trigger**: The first real generated batch (5 packages,
+`out/first-100-2026-07-14.csv`) was reviewed by the operator in the 002
+review dashboard. **All 5 were rejected.** The review workflow itself
+worked (speed good); the generated content was unsendable. The rejected
+messages and their defect classes (D1–D7) are preserved verbatim in
+[`resources/golden-reject-set-2026-07-16.md`](resources/golden-reject-set-2026-07-16.md).
+
+**Root causes** (spec-level, from the post-mortem analysis):
+
+1. The operator's actual generation path (`scripts/first-100.ts`) bypassed
+   the Anti-Values Linter, LLM judge, and revision loop entirely — the
+   quality pipeline existed but nothing routed the real workflow through
+   it.
+2. Even routed, the existing gates check **form** (reading grade, jargon
+   deny-list, sentence-count structure, "references some fact") — not
+   **sendability** (claims are true, pain is evidenced, deliverables
+   exist, message is self-consistent, prospect is a plausible buyer).
+   Every rejected message passes the pre-amendment gates.
+3. A deterministic post-generation CTA append ("I made you a short
+   personal video…") inserted a false claim into 5/5 messages.
+
+**Scope of this amendment**: FR-029 through FR-034 (quality gates
+G1–G6), SC-008 through SC-010, the withdrawal of the "input list is
+inherently viable" assumption, and the golden reject set as a permanent
+regression fixture. Sequencing and effort triage live in
+[`recovery-plan-first-100.md`](recovery-plan-first-100.md) — gates are
+staged as *before first 10 sends* / *before first 100* / *later*; this
+spec defines the full standard, the recovery plan defines the order.
+
+Feature 002's FR-021 (rejection reasons, gate G7) is amended in that
+feature's own spec — it belongs to the review surface, not the engine.
 
 ## User Scenarios & Testing *(mandatory)*
 
@@ -390,6 +431,63 @@ period.
   time thereafter, with no cap on manual retries — a dispatch failure is
   always recoverable, never a dead end (`CHK003` correction).
 
+The following requirements were added by **Amendment 1 — Send-Readiness
+Quality Gates (2026-07-16)**, after the operator rejected 5/5 packages in
+the first real generated batch (see the Amendment 1 section below and
+`resources/golden-reject-set-2026-07-16.md`):
+
+- **FR-029 (deliverable integrity — gate G3)**: A generated message MUST
+  NOT assert the existence of any asset (video, bot, demo, document) that
+  does not exist and work at the time the package is created. A
+  substitutable marker (`{{BFV_LINK}}`) is permitted in stored message
+  text, but a message whose text claims "I made you a video" (or
+  equivalent) while the package's video field is a placeholder is a
+  quality-gate FAIL, deterministically detectable with no LLM call. No
+  message MAY reach "sent" with an unresolved substitution marker or an
+  unverified BFV link.
+- **FR-030 (self-consistency — gate G4)**: A generated message MUST
+  contain exactly one ask and MUST NOT contradict itself (e.g. asking
+  permission to show something and simultaneously asserting it has already
+  been made). Any fixed call-to-action text MUST be part of the single
+  generation contract for the message — a CTA MUST NOT be appended to the
+  model's output after generation without a consistency check, since blind
+  appending is what produced defect D3 in all three affected rejects.
+- **FR-031 (evidence grounding — gate G2)**: Every prospect-specific
+  factual claim in a generated message MUST be traceable to the prospect's
+  scraped evidence. Speculative framing about the prospect ("I bet…",
+  "your team must spend…", "likely", "probably", "I'm sure") is a
+  quality-gate FAIL: the mechanical layer MUST deny-list speculation
+  markers, and the LLM-judge layer MUST verify claim-by-claim support
+  (each prospect-referencing claim marked supported/unsupported against
+  the scraped facts; any unsupported claim fails with that claim quoted in
+  the revision feedback).
+- **FR-032 (golden-example calibration — gate G5)**: The generation prompt
+  MUST include positive exemplars of the required standard (at minimum the
+  Day 1 template from `resources/follow-up-cadence-scripts.md`, plus
+  operator-approved messages as they accumulate) and negative exemplars
+  drawn from the golden reject set with their rejection reasons. The
+  combined quality gates MUST fail every message in
+  `resources/golden-reject-set-2026-07-16.md` — that set is the permanent
+  regression floor for gate strictness.
+- **FR-033 (single quality path — gate G6)**: Every message on ANY path to
+  the operator — the batch orchestrator AND the first-100 operator
+  workflow (`scripts/first-100.ts`) or any successor — MUST pass the full
+  quality-gate stack (mechanical checks + LLM judge + bounded revision
+  loop) before it is presented as reviewable. A message that exhausts
+  revisions MUST surface as `needs_manual_draft` — never as a send-shaped
+  message. A prospect flagged for missing/insufficient data
+  (`needs_research`, FR-003) MUST NOT receive a generated message body at
+  all: it surfaces as a research stub only (strengthens FR-003, which
+  flagged but did not stop generation — defect D6).
+- **FR-034 (prospect viability — gate G1)**: Before any message
+  generation, each prospect MUST pass a viability check: is this a real
+  business that could plausibly buy the offered service? Verdicts:
+  `viable`, `not_viable` (with reason, no generation occurs, no LLM spend
+  on packaging), or `needs_human`. Sourcing remains out of scope;
+  filtering the supplied list is not (the prior Assumption that the input
+  list is inherently viable is withdrawn — defect D4, example.com was
+  confidently packaged).
+
 ### Key Entities
 
 - **Prospect**: A distinct targeted business/lead considered for outreach.
@@ -459,13 +557,35 @@ period.
   "sent" — approval is never revoked or repeated to recover from a
   delivery failure (`CHK003` correction).
 
+Added by Amendment 1 (2026-07-16):
+
+- **SC-008 (approval rate — the north-star quality metric)**: Over a
+  rolling window of 20 operator-reviewed packages, **at least 60% are
+  approved without edits**. Baseline measured 2026-07-15: **0%** (5/5
+  rejected). SC-002's completeness measure is explicitly NOT a quality
+  measure — all 5 rejected packages counted as SC-002 successes; SC-008
+  is the criterion that would have caught this failure.
+- **SC-009 (golden-set regression floor)**: The combined quality gates
+  fail **all 5** messages in `resources/golden-reject-set-2026-07-16.md`,
+  verified by fixture tests. Any gate change that lets one pass is a
+  regression, regardless of other improvements.
+- **SC-010 (no false deliverable claims reach review)**: Zero packages
+  presented for operator review contain a claim about a nonexistent asset
+  (FR-029) or an unresolved substitution marker presented as final text —
+  measured as: the deterministic deliverable-integrity check runs on 100%
+  of packages entering the review queue, with no bypass path.
+
 ## Assumptions
 
 - **Prospect sourcing**: The system consumes a daily list of targeted
   prospects (business name + website URL) from an existing or
   operator-supplied source; discovering/enrolling entirely new lead sources
   or lead-generation logic beyond ingesting a daily list is out of scope for
-  this feature.
+  this feature. *(Amended 2026-07-16: the implicit corollary that the
+  supplied list is inherently viable is withdrawn — the first real batch
+  contained a non-business (example.com) that was confidently packaged.
+  Sourcing stays out of scope; viability filtering of the supplied list is
+  in scope per FR-034.)*
 - **Sending is automatic and system-triggered, but architecturally
   separate from approval**: The system prepares ready-to-send packages
   (script + BFV link); once the operator approves a package (the Tier-3

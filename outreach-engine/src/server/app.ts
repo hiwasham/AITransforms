@@ -15,6 +15,7 @@
  */
 
 import type { Db } from "@/db/client.js";
+import { readFile } from "node:fs/promises";
 import type { LLMClient } from "@/services/llm/llm-client.js";
 import type { BFVBotClient } from "@/services/telegram/bfv-bot-client.js";
 import type { DispatchClient } from "@/services/dispatch/interface.js";
@@ -27,6 +28,11 @@ import { createGetProspectHandler } from "@/api/prospects/[id]/route.js";
 import { createApproveHandler } from "@/api/prospects/[id]/approve/route.js";
 import { createDispatchProcessHandler } from "@/api/internal/dispatch/process/route.js";
 import { createWebhookHandler } from "@/api/webhooks/[provider]/route.js";
+import { createReviewImportHandler } from "@/api/review/imports/route.js";
+import { createNextPackageHandler } from "@/api/review/packages/next/route.js";
+import { createGetReviewPackageHandler } from "@/api/review/packages/[id]/route.js";
+import { createDecisionHandler } from "@/api/review/packages/[id]/decision/route.js";
+import { createRejectionReasonHandler } from "@/api/review/packages/[id]/rejection-reason/route.js";
 import { errorResponse } from "@/api/lib/errors.js";
 
 export interface AppDeps {
@@ -110,11 +116,59 @@ export function createApp(deps: AppDeps): App {
       segments: ["webhooks", ":provider"],
       handler: createWebhookHandler(db, deps.webhookSecrets) as RouteHandler,
     },
+    // Review dashboard (specs/002-operator-review-dashboard MVP-0).
+    // Isolated from the workflow state machine (spec 002 FR-018).
+    {
+      method: "POST",
+      segments: ["review", "imports"],
+      handler: createReviewImportHandler(db) as RouteHandler,
+    },
+    {
+      method: "GET",
+      segments: ["review", "packages", "next"],
+      handler: createNextPackageHandler(db) as RouteHandler,
+    },
+    {
+      method: "GET",
+      segments: ["review", "packages", ":id"],
+      handler: createGetReviewPackageHandler(db) as RouteHandler,
+    },
+    {
+      method: "POST",
+      segments: ["review", "packages", ":id", "decision"],
+      handler: createDecisionHandler(db) as RouteHandler,
+    },
+    {
+      method: "POST",
+      segments: ["review", "packages", ":id", "rejection-reason"],
+      handler: createRejectionReasonHandler(db) as RouteHandler,
+    },
   ];
+
+  // Review UI (M009): two static files served from src/ui/ by explicit
+  // allowlist — no generic file serving, so path traversal is
+  // structurally impossible (plan 002 Security Considerations).
+  const uiRoot = new URL("../ui/", import.meta.url);
+  const UI_FILES: Record<string, { file: string; type: string }> = {
+    "/": { file: "index.html", type: "text/html; charset=utf-8" },
+    "/ui/review.js": { file: "review.js", type: "text/javascript; charset=utf-8" },
+  };
+
+  async function serveUi(pathname: string): Promise<Response | null> {
+    const entry = UI_FILES[pathname];
+    if (!entry) return null;
+    const body = await readFile(new URL(entry.file, uiRoot), "utf8");
+    return new Response(body, { headers: { "content-type": entry.type } });
+  }
 
   return {
     async handle(req: Request): Promise<Response> {
-      const path = new URL(req.url).pathname.split("/").filter(Boolean);
+      const url = new URL(req.url);
+      if (req.method === "GET") {
+        const ui = await serveUi(url.pathname);
+        if (ui) return ui;
+      }
+      const path = url.pathname.split("/").filter(Boolean);
       for (const route of routes) {
         if (route.method !== req.method) continue;
         const params = matchParams(route.segments, path);

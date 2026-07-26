@@ -548,3 +548,133 @@ already tracked by open tasks (T011, T059/T060) and are NOT re-reported here.
 
 - [ ] T113 Wire authentication into the served runtime's router (`outreach-engine/src/server/app.ts`): operator-session middleware (T011) in front of the operator endpoints (`POST /prospects/:id/approve`, and later operator routes as they land) and a service-credential guard in front of `POST /internal/dispatch/process` (and later `/internal/*` routes), so the T100 runtime no longer serves state-changing endpoints unauthenticated per plan: auth decision / T011 (partial)
 - [ ] T114 Replace `MockDispatchClient` in the served runtime's composition root (`outreach-engine/src/server/main.ts`) with the real provider `DispatchClient` wiring once T059/T060 land — client construction from `INSTANTLY_API_KEY`/`UNIPILE_API_KEY` via config.ts, selection consistent with the dispatch contract, and removal of the `dispatch_client_mock_active` boot warning per FR-021 / plan: dispatch integration (partial)
+
+## Phase Q0: Send-Readiness Recovery — MUST ship before first outreach
+
+Appended per spec.md Amendment 1 (2026-07-16) and
+`recovery-plan-first-100.md` after the operator rejected 5/5 packages in
+the first real batch. Goal of this phase: **send the first 10 real
+outreach messages.** Tasks are ordered by (1) reduction of rejected
+messages — measured against the golden reject set
+(`resources/golden-reject-set-2026-07-16.md`, defects D1–D7) — then
+(2) engineering effort, then (3) dependency order. Everything here is
+deterministic or prompt-text-only: no new tables, no new architecture,
+no new dependencies.
+
+**G1 (viability, FR-034) carries no Q0 task by design**: for the first
+10 sends the operator curates the input list by hand (manual form per
+the recovery plan). The automated classifier is Q1 (Q010).
+
+- [X] Q001 Kill the blind CTA append (gate G4): in
+  `outreach-engine/scripts/first-100.ts`, remove the post-generation
+  `withBfvCta()` append and make the BFV link/CTA sentence part of the
+  single generation contract in `buildPackagePrompt` (the model writes
+  ONE coherent ask that references the link marker; nothing is appended
+  to its output afterward); update the `withBfvCta` unit tests in
+  `outreach-engine/tests/unit/first-100.test.ts` to pin the new contract
+  — catches D1+D3 at the source: this one deterministic line put the
+  false "I made you a short personal video" claim into 5/5 rejected
+  messages, per FR-030 (rejects addressed: 5/5; effort: S; no
+  dependencies)
+- [X] Q002 [P] Implement the deterministic deliverable-integrity check
+  (gate G3) as a new mechanical check module in
+  `outreach-engine/src/domain/linter/` — FAIL when: (a) message text
+  claims a video/recording/demo exists while the package's video field is
+  a `<<…>>` placeholder or empty; (b) text presented as final still
+  contains an unresolved `{{BFV_LINK}}` or `<<…>>` marker; pure function,
+  no LLM call, unit-tested with the 5 golden rejects as fail fixtures,
+  per FR-029/SC-010 (rejects addressed: 5/5; effort: S; no dependencies —
+  parallel with Q001)
+- [X] Q003 [P] Add the speculation-marker deny-list (gate G2, mechanical
+  half) to `outreach-engine/src/domain/linter/mechanical-checks.ts` —
+  same code shape as the existing jargon deny-list, new list: "i bet",
+  "must spend", "likely", "probably", "i'm sure", "i'm guessing",
+  "i imagine", "i assume"; unit tests both paths, per FR-031 (rejects
+  addressed: 3/5 — D2; effort: S; no dependencies — parallel with
+  Q001/Q002)
+- [X] Q004 Add generation exemplars + the golden-set regression fixture
+  (gate G5): inject into `buildPackagePrompt` the Day 1 template from
+  `resources/follow-up-cadence-scripts.md` as the positive standard and
+  2–3 golden rejects with their defect-class reasons as negative
+  exemplars; add a fixture test asserting the combined mechanical gates
+  (Q002 + Q003 + existing checks) FAIL all 5 messages in
+  `resources/golden-reject-set-2026-07-16.md`, per FR-032/SC-009
+  (rejects addressed: 5/5 indirectly — D7 tone; effort: S; depends on
+  Q002, Q003)
+- [X] Q005 Route the first-100 path through the mechanical gates (gate
+  G6, minimal form): `buildRow` in
+  `outreach-engine/scripts/first-100.ts` runs `runMechanicalChecks` plus
+  the Q002/Q003 checks on every generated message; a failing row is
+  emitted with `approval_status: needs_manual_draft` and never
+  send-shaped; a `needs_research` row (no scrape/LLM facts) emits a
+  research stub only — NO generated message body, NO link claim
+  (strengthened FR-003, closes D6), per FR-033 (rejects addressed: 5/5 —
+  enforcement of all gates; effort: M; depends on Q001–Q004)
+- [X] Q006 Dashboard approve backstop (002 FR-022): the decision route
+  `outreach-engine/src/api/review/packages/[id]/decision/route.ts`
+  refuses `approve` on a package failing the Q002 integrity check,
+  returning a visible reason per 002 FR-013 conventions — guarantees
+  SC-010's "no bypass path" from the review surface; contract test in
+  `outreach-engine/tests/contract/review-api.test.ts` (rejects
+  addressed: backstop for D1; effort: S; depends on Q002; touches
+  feature 002's surface — tracked here so the recovery phase has one
+  ordered list)
+- [ ] Q007 Q0 exit gate (SC-008 trajectory): generate a batch of 10 FRESH
+  prospects through the gated path (Q001–Q005 live) — fresh companies, not
+  a same-company regeneration, which FR-002 dedup would silently drop
+  (CEO review 2026-07-18 D4); the import summary MUST show `added==10` as
+  the mechanical freshness proof, and the gate cohort is exactly the rows
+  under that import's `source_name` (D13). Run as ONE combined operator
+  session with M012's manual SC-000 gate, recording the two verdicts
+  separately in the commit/PR (D7). Operator reviews in the dashboard,
+  tagging each reject with a Q011 reason; gate result = the decision
+  counts over that source_name at session end, recorded verbatim (frozen
+  evidence, D13; in-session FR-010 revisions count). Binary threshold
+  (D8): PASS = ≥6/10 approved without edits; FAIL = ≤5/10. On PASS,
+  append the approved messages to the golden-approved section of
+  `resources/golden-reject-set-2026-07-16.md` and **send the first 10 by
+  hand**; on FAIL, STOP — the Q011 rejection-reason data drives the
+  re-plan before building anything further, per recovery-plan Stage A
+  exit criterion (effort: S — verification, not construction; depends on
+  Q001–Q006 + the Q011 build)
+
+## Phase Q1: Quality Scale-Up — after first outreach, before first 100
+
+Not started until Q007 passes and the first 10 real messages are sent.
+Ordering rationale: at 100-prospect scale the operator cannot
+eyeball-curate the list or hand-note rejection reasons — the LLM-judge
+layer and the feedback loop must carry the load that manual review
+carried for the first 10.
+
+- [ ] Q008 Upgrade the LLM judge to claim-by-claim evidence grounding
+  (gate G2, judge half): `outreach-engine/src/domain/linter/llm-judge.ts`
+  enumerates each prospect-referencing claim, marks it
+  supported/unsupported against the scraped facts, FAILs quoting any
+  unsupported claim in the revision feedback (real feedback for the
+  revision loop instead of one generic sentence), per FR-031 (effort: M;
+  depends on Q007 pass)
+- [ ] Q009 Route first-100 through the full quality pipeline (gate G6,
+  full form): judge (Q008) + bounded revision loop (`revision-retry.ts`
+  semantics, mirroring `runScriptAndLint`) in the first-100 path;
+  exhausted revisions surface as `needs_manual_draft` in the review
+  queue, per FR-033 (effort: M; depends on Q008)
+- [ ] Q010 Automated prospect-viability classifier (gate G1): one
+  pre-generation LLM verdict `viable | not_viable(reason) | needs_human`;
+  `not_viable` prospects cost no packaging LLM spend and never reach
+  review, per FR-034 (effort: M; depends on Q007 pass; parallel with
+  Q008)
+- [ ] Q011 Rejection-reason capture (gate G7, 002 FR-021): optional
+  single-keystroke reason tag on reject
+  (`g`eneric / `f`alse_claim / `b`ad_fit / `c`reepy / `o`ther) persisted
+  with the decision — one column on `review_packages`, one keypress in
+  the review UI; never a mandatory step (effort: S; depends on Q007
+  pass; parallel with Q008/Q010; touches feature 002's surface)
+- [ ] Q012 Business-relevant fact extraction: replace the
+  first-5-sentences + question-sentences heuristic in
+  `outreach-engine/src/services/scraper/scraper-client.ts` with
+  extraction preferring offer/customers/support-surface facts — the
+  Sivers "17 people in Jakarta" defect (D5) was an extraction problem;
+  sequenced last because Q003/Q008 already make bad facts fail safe
+  downstream — this raises the ceiling, not the floor (effort: M;
+  depends on Q008 so grounding catches regressions while extraction
+  changes)

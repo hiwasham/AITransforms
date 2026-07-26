@@ -105,5 +105,43 @@ export async function applySchema(db: PGlite): Promise<void> {
       raw_payload_ref TEXT,
       UNIQUE (provider, provider_event_id)
     );
+
+    -- Review dashboard (specs/002-operator-review-dashboard, MVP-0).
+    -- Deliberately NO foreign key to prospects/outreach_attempts: review
+    -- packages are CSV-imported and never touch the workflow state
+    -- machine (spec 002 FR-018, plan Two-Queues). "source" is the
+    -- reserved convergence column (plan §MVP-0 Build Scope).
+    CREATE TABLE IF NOT EXISTS review_packages (
+      id TEXT PRIMARY KEY,
+      dedup_key TEXT NOT NULL UNIQUE,
+      source TEXT NOT NULL DEFAULT 'first100_csv',
+      source_name TEXT NOT NULL,
+      position INTEGER NOT NULL,
+      company TEXT NOT NULL,
+      contact TEXT,
+      research_summary TEXT NOT NULL DEFAULT '',
+      pain_point TEXT NOT NULL DEFAULT '',
+      message_body TEXT NOT NULL DEFAULT '',
+      bfv_link_telegram TEXT NOT NULL DEFAULT '',
+      video_url TEXT,
+      generator_flag TEXT,
+      decision TEXT NOT NULL DEFAULT 'pending'
+        CHECK (decision IN ('pending', 'approved', 'rejected')),
+      decided_at TIMESTAMPTZ,
+      passed_over_at TIMESTAMPTZ,
+      rejection_reason TEXT
+        CHECK (rejection_reason IN ('generic', 'false_claim', 'bad_fit', 'creepy', 'other')),
+      created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+    );
+
+    -- Q011 rejection-reason capture (specs/002 D5, G7/FR-021). Idempotent
+    -- evolution so an existing datadir gains the column without losing the
+    -- first batch's decision history; NULL passes the CHECK (untagged
+    -- rejections and all non-rejected rows). Full-word values; the UI maps
+    -- g/f/b/c/o to these. IF NOT EXISTS won't repair a wrong-typed
+    -- pre-existing column (hand-mutated dev DBs only, accepted risk).
+    ALTER TABLE review_packages
+      ADD COLUMN IF NOT EXISTS rejection_reason TEXT
+      CHECK (rejection_reason IN ('generic', 'false_claim', 'bad_fit', 'creepy', 'other'));
   `);
 }

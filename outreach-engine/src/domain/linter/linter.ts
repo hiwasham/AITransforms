@@ -65,9 +65,10 @@ export async function runLint(
   const structureVerdict: "pass" | "fail" = mechanical.structurePass ? "pass" : "fail";
   const readingPass = mechanical.readingLevelPass;
   const jargonPass = mechanical.jargonPass;
+  const speculationPass = mechanical.speculationPass;
 
   const overallPass =
-    readingPass && jargonPass && mechanical.structurePass &&
+    readingPass && jargonPass && speculationPass && mechanical.structurePass &&
     judgeResult.specificityVerdict === "pass";
 
   const feedbackParts: string[] = [];
@@ -79,6 +80,11 @@ export async function runLint(
   if (!jargonPass) {
     feedbackParts.push(
       `Remove corporate jargon: ${mechanical.jargonTermsFound.join(", ")}.`,
+    );
+  }
+  if (!speculationPass) {
+    feedbackParts.push(
+      `Remove speculation about the prospect (${mechanical.speculationTermsFound.join(", ")}) — every claim must come from their site's facts (FR-031).`,
     );
   }
   if (!mechanical.structurePass) {

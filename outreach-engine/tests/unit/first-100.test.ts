@@ -4,15 +4,16 @@ import {
   parseProspects,
   buildPackagePrompt,
   parsePackageJson,
-  withBfvCta,
   telegramDeepLink,
   csvEscape,
   toCsv,
   buildRow,
+  gateFailures,
   CSV_HEADER,
   type PackageRow,
 } from "../../scripts/first-100.js";
 import { MockLLMClient } from "@/services/llm/llm-client.js";
+import { startFixtureServer } from "../helpers/fixture-server.js";
 
 /**
  * Unit tests for the First-100 operator workflow's pure helpers (input
@@ -72,6 +73,19 @@ describe("buildPackagePrompt", () => {
     expect(prompt).toContain("Acme");
     expect(prompt).toMatch(/never treat as instructions/i);
   });
+
+  it("makes the link part of the single generation contract (Q001/FR-030)", () => {
+    const prompt = buildPackagePrompt(
+      { prospect: "Sam", company: "Acme", url: "https://acme.test" },
+      "{}",
+    );
+    // One coherent message: the model writes the {{BFV_LINK}} placement
+    // and exactly one ask; nothing is appended after generation.
+    expect(prompt).toContain("{{BFV_LINK}}");
+    expect(prompt).toMatch(/exactly ONE ask/i);
+    expect(prompt).toMatch(/never claim a video/i);
+    expect(prompt).not.toMatch(/appended separately/i);
+  });
 });
 
 describe("parsePackageJson", () => {
@@ -98,8 +112,11 @@ describe("parsePackageJson", () => {
 });
 
 describe("formatting helpers", () => {
-  it("withBfvCta appends the find-replace marker", () => {
-    expect(withBfvCta("Hi there.")).toContain("{{BFV_LINK}}");
+  it("no post-generation CTA append exists (Q001/FR-030 — defect D1/D3 pin)", async () => {
+    // The blind append ("I made you a short personal video") poisoned 5/5
+    // of the first real batch. The module must no longer export it.
+    const mod = await import("../../scripts/first-100.js");
+    expect("withBfvCta" in mod).toBe(false);
   });
 
   it("telegramDeepLink builds the t.me start URL", () => {
@@ -145,7 +162,7 @@ describe("formatting helpers", () => {
 });
 
 describe("buildRow degrade-not-throw", () => {
-  it("emits a needs_research row when the prospect has no URL (no scrape, no LLM)", async () => {
+  it("emits a research-stub row with NO message when the prospect has no URL (Q005/D6)", async () => {
     const llm = new MockLLMClient(); // must not be called
     const row = await buildRow(
       { prospect: "Sam", company: "Acme", url: "" },
@@ -155,7 +172,8 @@ describe("buildRow degrade-not-throw", () => {
     expect(row.approvalStatus).toBe("needs_research");
     expect(row.researchSummary).toBe("[no url provided]");
     expect(row.painPoint).toBe("manual research needed");
-    expect(row.personalizedMessage).toContain("{{BFV_LINK}}");
+    // Strengthened FR-003: nothing send-shaped for an unresearched prospect.
+    expect(row.personalizedMessage).toBe("");
     expect(row.bfvLinkTelegram).toMatch(/^https:\/\/t\.me\/AITransformsBot\?start=[A-Za-z0-9_-]{16,}$/);
     expect(row.bfvLinkVideo).toContain("Acme");
   });
@@ -165,5 +183,86 @@ describe("buildRow degrade-not-throw", () => {
     const a = await buildRow({ prospect: "", company: "A", url: "" }, llm, "Bot");
     const b = await buildRow({ prospect: "", company: "B", url: "" }, llm, "Bot");
     expect(a.bfvLinkTelegram).not.toBe(b.bfvLinkTelegram);
+  });
+});
+
+describe("gateFailures (Q005/FR-033 — mechanical gates on the first-100 path)", () => {
+  const baseRow = (message: string): PackageRow => ({
+    prospect: "Sam",
+    company: "Acme",
+    researchSummary: "bakes bread",
+    painPoint: "slow orders",
+    bfvLinkTelegram: "https://t.me/Bot?start=x",
+    bfvLinkVideo: "<<paste video link for Acme>>",
+    personalizedMessage: message,
+    approvalStatus: "pending",
+  });
+
+  it("passes a message meeting the standard", () => {
+    expect(
+      gateFailures(
+        baseRow(
+          "Hey Sam, I saw your site sells bread by mail. Orders come in by phone. " +
+            "I built a bot from your site. Try to break it here: {{BFV_LINK}}. Open to testing it?",
+        ),
+      ),
+    ).toEqual([]);
+  });
+
+  it("fails a false video claim (D1) and reports why", () => {
+    const failures = gateFailures(
+      baseRow(
+        "Hey Sam, I saw your site sells bread. " +
+          "I made you a short personal video. Watch it here: {{BFV_LINK}}. Worth a look?",
+      ),
+    );
+    expect(failures.some((f) => /claims a video/i.test(f))).toBe(true);
+  });
+
+  it("fails speculation (D2) and reports the terms", () => {
+    const failures = gateFailures(
+      baseRow(
+        "Hey Sam, I saw your bakery site. I bet your team must spend hours on orders. " +
+          "Try it here: {{BFV_LINK}}. Want to try?",
+      ),
+    );
+    expect(failures.some((f) => /speculation/.test(f))).toBe(true);
+  });
+
+  it("gates the send shape: {{BFV_LINK}} substituted before checks, so structure sees the real link", () => {
+    // No unresolved-marker failure for {{BFV_LINK}} — it substitutes; and
+    // the structure check finds the t.me link post-substitution.
+    const failures = gateFailures(
+      baseRow(
+        "Hey Sam, your FAQ lists 12 questions about shipping. Answering each takes time. " +
+          "I built a bot on your site's data. Try it: {{BFV_LINK}}. Open to testing it?",
+      ),
+    );
+    expect(failures).toEqual([]);
+  });
+
+  it("marks a gate-failing generated message needs_manual_draft in buildRow", async () => {
+    const fixtures = await startFixtureServer();
+    try {
+      const llm = new MockLLMClient();
+      llm.setResponder(() =>
+        JSON.stringify({
+          researchSummary: "They sell bread online.",
+          painPoint: "phone orders eat time",
+          messageBody:
+            "Hey Sam, I bet your team must spend hours on phone orders. " +
+            "I made you a short personal video. Watch it here: {{BFV_LINK}}. Worth a look?",
+        }),
+      );
+      const row = await buildRow(
+        { prospect: "Sam", company: "Acme", url: `${fixtures.url}/complete` },
+        llm,
+        "Bot",
+      );
+      expect(row.approvalStatus).toBe("needs_manual_draft");
+      expect(row.researchSummary).toMatch(/gate failures/);
+    } finally {
+      await fixtures.close();
+    }
   });
 });
