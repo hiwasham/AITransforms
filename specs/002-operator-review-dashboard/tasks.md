@@ -186,53 +186,74 @@ unrelated engine surface mechanically unavailable.
 `public-deployment-design-2026-07-27.md`, spec FR-023–FR-032, and plan.md
 §Phase P. HOLD SCOPE: do not pull any Phase D item into this release.
 
-- [x] P001 Approve the office-hours design through three adversarial
+- [ ] P001 Approve the office-hours design through three adversarial
       reviews, explicitly select Funnel + application login and HOLD scope,
       synchronize `spec.md`, `plan.md`, and `tasks.md`, then pass
-      `/plan-eng-review` and `/cso` before implementation
+      `/plan-eng-review` and `/cso` before implementation (design/docs/CEO
+      complete; engineering and security gates in progress)
 
 - [ ] P002 Write failing unit tests first for dashboard config modes,
       password/signing-secret strength validation, candidate digest
-      comparison, signed-session issue/verify/tamper/expiry behavior,
-      absolute-not-sliding expiry, fixed-window global limiter, exact-Origin
-      policy, content-type policy, security headers, and exhaustive route
-      classification; use an injected clock/random source only where needed
-      for deterministic tests
+      comparison, raw secret removal from `process.env`, signed-session
+      format/version/nonce/issue/verify/tamper/expiry/future-time behavior,
+      absolute-not-sliding expiry, missing/duplicate/malformed cookies,
+      fixed-window limiter boundaries (49/50/51 and reset), exact/missing/
+      mismatched Origin, content types with/without charset, security headers,
+      literal/dynamic/method/malformed-percent route matching, and exhaustive
+      policy-table classification; use an injected clock/random source only
+      where needed for deterministic tests
 
 - [ ] P003 Write failing contract tests first for `GET/POST /login`,
       `POST /logout`, `GET /healthz`, UI navigation redirect, direct protected
       asset/API `401`, cookie attributes, no-store/CSP/framing headers, fixed
-      `400/401/403/413/415/429` responses, every selected review route, and
-      generic `404` for batch/prospect/internal/webhook/unclassified paths
+      `400/401/403/413/415/429` responses, missing/empty/duplicate/unknown login
+      fields, the exact 4 KiB boundary, security headers on success/redirect/
+      every error, every selected review route, and generic non-disclosing
+      `404` for every forbidden method/path under batch/prospect/internal/
+      webhook plus other unclassified paths
 
 - [ ] P004 Write failing HTTP/integration tests first for the 1 MiB bridge
-      limit (and 4 KiB login limit), early oversized-body rejection, malformed
-      URL handling, dashboard-only dependency construction, non-dashboard or
-      non-mock startup refusal, loopback binding intent, graceful shutdown,
-      restart persistence, and a review decision with zero external network
-      transport
+      limit (and 4 KiB login limit), raw `Content-Length` rejection, chunked
+      input crossing the limit, the exact accepted boundary, safe connection
+      close/drain behavior, malformed URL handling, full-engine router/bridge
+      regression behavior, dashboard-only dependency imports/construction,
+      non-dashboard or non-mock startup refusal, loopback binding intent,
+      graceful shutdown, restart persistence, and a review decision with zero
+      external network transport
 
 - [ ] P005 Implement the minimum auth/security modules using Node built-ins
       only: validated config, SHA-256 candidate digest comparison,
       HMAC-SHA-256 stateless 12-hour session, `__Host-outreach_session`
       cookie, global limiter, exact origin/content-type enforcement, fixed
-      failures, security/no-store headers, and safe audit metadata
+      failures, security/no-store headers, and safe audit metadata. Use a
+      dashboard-only config loader; after deriving the password digest and
+      binary signing key, delete the raw env entries and retain no raw secret
+      string references
 
 - [ ] P006 Implement a dedicated dashboard composition root and production
-      entry point that construct only DB/auth/static UI/health plus the five
-      selected review handlers; do not import or construct LLM, Telegram,
-      scraper, batch, prospect, webhook, internal-dispatch, or dispatch-client
-      modules; make all unclassified routes fail closed with the generic 404
+      entry point. First extract the generic matcher/dispatcher from
+      `server/app.ts` and pin the full app with regression tests. Define one
+      dashboard policy table containing method, pattern, handler, access class,
+      mutation/origin rule, and accepted content type; construct only
+      DB/auth/static UI/health plus the five selected review handlers. Do not
+      import or construct LLM, Telegram, scraper, batch, prospect, webhook,
+      internal-dispatch, or dispatch-client modules; make all unclassified
+      routes fail closed with the generic 404
 
 - [ ] P007 Bound the node:http bridge before buffering, preserve fixed safe
-      500 behavior, bind the dashboard runtime explicitly to `127.0.0.1`, and
-      retain graceful HTTP/PGlite shutdown; add a request correlation ID
-      without logging cookie, credential, session, or prospect content
+      500 behavior, and make the limit an explicit bridge option: dashboard
+      passes 1 MiB while the full runtime's existing behavior stays explicit
+      and regression-tested. Bind the dashboard runtime to `127.0.0.1`, retain
+      graceful HTTP/PGlite shutdown, and add a request correlation ID without
+      logging cookie, credential, session, or prospect content
 
 - [ ] P008 Add the persistent visible
       `SIMULATION MODE — nothing will be sent` banner and authenticated
       logout control to the existing UI without changing the review workflow;
-      keep dynamic content text-only and keyboard behavior unchanged
+      keep dynamic content text-only and keyboard behavior unchanged. Add
+      static/mechanical tests for the banner, logout, no unsafe HTML sinks,
+      unchanged keys, failed-mutation stay-put behavior, and clear recovery
+      when the session expires mid-use
 
 - [ ] P009 Run the new unit/contract/integration tests, then the complete
       existing `outreach-engine` test suite and typecheck. Run the root site
@@ -243,8 +264,10 @@ unrelated engine surface mechanically unavailable.
       hardened systemd unit, root-owned no-trace Infisical wrapper template,
       private-first deploy procedure, offline backup/retention and separate-
       directory restore procedure, rollback procedure, and smoke checks.
-      Never place a real credential, token, public secret, or host-derived
-      encrypted credential blob in Git
+      Validate committed artifacts with `systemd-analyze verify`, shell
+      syntax/no-trace checks, and secret-pattern scans. Never place a real
+      credential, token, public secret, or host-derived encrypted credential
+      blob in Git
 
 - [ ] P011 On the Finland host, take timestamped backups before every config
       write and run the fail-closed preflight: systemd/systemd-creds support,

@@ -122,14 +122,20 @@ prospect/batch routes | internal dispatch | dispatch client
 ```
 
 The dashboard composition is a new outer module that depends on selected
-existing review handler factories. Outreach domain code never depends on
+existing review handler factories. The generic path matcher/dispatcher is
+extracted from `server/app.ts` into a small shared router core; the full-engine
+and dashboard apps keep separate route declarations. Dashboard registration
+uses one declarative policy table containing method, path, handler, access
+class, mutation/origin rule, and accepted content type, so routing and security
+classification cannot drift. Outreach domain code never depends on
 authentication, systemd, Infisical, or Tailscale. Unclassified routes fail
 closed before handler lookup.
 
 ### Request and session flows, including shadow paths
 
 ```text
-REQUEST -> 1 MiB bounded bridge -> security headers -> route classification
+REQUEST -> configurable bounded shared bridge -> security headers -> route classification
+  dashboard limit = 1 MiB; full-engine behavior stays explicit and regression-tested
   missing body  -> route-specific 400/401/404, fixed body, no-store
   empty body    -> route-specific 400, no-store
   invalid body  -> 400/413/415 before handler, no-store
@@ -149,6 +155,12 @@ REVIEW MUTATION -> auth/origin/type checks -> existing handler -> PGlite
   success -> audit IDs only -> JSON -> UI advances
   handler/DB error -> fixed safe error -> UI stays on current prospect
 ```
+
+The dashboard has its own config loader and does not read engine integration
+variables. At startup it decodes and validates the operator password and
+signing key, derives the fixed password digest and binary HMAC key, then deletes
+the raw secret strings from `process.env` and drops all raw string references.
+Only the digest and required binary key material remain in the auth dependency.
 
 Session state machine:
 
@@ -226,25 +238,72 @@ No new per-request network call is introduced.
 
 ```text
 UNIT
-  config modes/secrets | HMAC format/tamper/expiry | limiter clock/window
-  origin/type/body policy | route classification | no integration imports
+  config modes/secrets/raw-env erasure | HMAC format/version/nonce/tamper/expiry/future-time
+  cookie parser: missing/duplicate/malformed | limiter 49/50/51/reset window
+  Origin: exact/missing/mismatch | content types incl. charset | route policy completeness
+  router matcher: literal/dynamic/method/malformed-percent path | no integration imports
 
 CONTRACT
-  login/logout/cookies/headers | UI redirect vs API 401 | protected asset
-  all five review routes | every forbidden route | fixed 4xx/404/500 shapes
+  login form: missing/empty/duplicate/unknown fields | exact 4 KiB boundary
+  login/logout/cookie attributes/no-store | UI redirect vs API/asset 401
+  headers on success/redirect/every 4xx/404/500 | all five review routes
+  every forbidden method/path | fixed bodies that do not disclose resource existence
 
 INTEGRATION
-  dashboard composition + PGlite | restart persistence | no network transport
-  bounded node:http bridge | graceful shutdown | single-writer lock
+  dashboard composition + PGlite | router-extraction full-engine regression
+  raw Content-Length over limit + chunked crossing limit + exact 1 MiB boundary
+  connection close/drain behavior | graceful shutdown | restart persistence
+  no external module construction/transport | single-writer lock
+
+UI / STATIC
+  simulation banner + logout control | zero unsafe HTML sinks | existing keys unchanged
+  401/expired-session recovery | failed mutation stays on current prospect
 
 HOST PREFLIGHT
-  systemd-creds | Infisical Universal Auth/redaction | port/policy
-  normalized Serve before/after | backup + separate-directory restore
+  systemd-analyze verify | wrapper syntax/no-trace checks | systemd-creds
+  Infisical Universal Auth/redaction | port/policy | normalized Serve before/after
+  backup permissions/retention + separate-directory restore
 
 LIVE BROWSER
   fresh login -> real queue -> CANARY rejection -> logout -> blocked again
   restart -> login -> record still present | zero console errors
 ```
+
+Coverage target is every new branch and failure response, with unit tests for
+pure auth/policy code, contract tests for route behavior, integration tests for
+the real Node bridge/PGlite boundary, and browser E2E for the operator journey.
+No LLM eval is required because dashboard mode neither imports nor calls an LLM.
+
+### Engineering implementation decisions
+
+1. **Shared router core**: extract only generic matching/dispatch; keep full and
+   dashboard route tables independent and regression-test the current full app.
+2. **Single dashboard policy declaration**: route existence and auth/origin/type
+   requirements are one source of truth; an unclassified route is impossible to
+   dispatch.
+3. **Configurable shared HTTP bound**: dashboard mode passes 1 MiB; existing
+   full-runtime behavior is explicit and pinned by regression tests rather than
+   silently changed by the security work.
+4. **Derive then erase secrets**: dashboard-only config, no integration-secret
+   reads, immediate raw env deletion after digest/key derivation.
+5. **Sequential implementation**: no worktree parallelization. Router, auth,
+   HTTP behavior, tests, and ops artifacts share one security contract; merging
+   independent partial implementations would add more review risk than speed.
+
+### Implementation tasks from engineering review
+
+- **E1 (P1)** Extract and regression-test the generic router core before adding
+  the dashboard policy table.
+- **E2 (P1)** Implement dashboard config/auth primitives from the failing unit
+  matrix, including raw environment erasure.
+- **E3 (P1)** Implement dashboard policy composition and all contract cases from
+  the route matrix.
+- **E4 (P1)** Add the configurable bounded HTTP reader and real bridge boundary
+  tests without silently changing the full runtime.
+- **E5 (P1)** Validate the systemd/wrapper/backup artifacts mechanically, then
+  verify their host-dependent behavior in private preflight.
+- **E6 (P1)** Run the fresh-browser login/review/logout/restart canary before
+  declaring the public URL ready.
 
 ### Observability and security
 
@@ -755,10 +814,10 @@ sized to one screen. Gate remains **PASS**.
 |--------|---------|-----|------|--------|----------|
 | CEO Review | `/plan-ceo-review` | Scope & strategy | 1 | CLEAR | HOLD_SCOPE, 0 critical gaps; governing docs synchronized to the approved design |
 | Codex Review | `/codex review` | Independent 2nd opinion | 0 | TIMEOUT | Non-blocking outside voice exceeded its time budget; prior design had 3 adversarial rounds and 37/37 issues fixed |
-| Eng Review | `/plan-eng-review` | Architecture & tests (required) | 0 | REQUIRED | Runs next against this updated plan |
-| Design Review | `/plan-design-review` | UI/UX gaps | 0 | — | UI scope limited to login, logout, and simulation banner; live design audit remains post-implementation |
+| Eng Review | `/plan-eng-review` | Architecture & tests (required) | 1 | CLEAR | 5 issues folded, 0 critical gaps: shared router, one policy table, bounded bridge, erased raw secrets, full test matrix |
+| Design Review | `/plan-design-review` | UI/UX gaps | 0 | — | UI delta is limited; live post-implementation design/browser audit remains required |
 | DX Review | `/plan-devex-review` | Developer experience gaps | 0 | — | Not required for this operator-only deployment |
 
-**VERDICT:** CEO CLEAR; engineering review required before implementation.
+**VERDICT:** CEO + ENG CLEAR; security review is the remaining pre-implementation gate.
 
 NO UNRESOLVED DECISIONS
