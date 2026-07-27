@@ -242,8 +242,8 @@ After deployment, Hiwa opens the public URL in a private browser session that is
 
 ## Adversarial Review
 
-- Round 1: 6/10; 22 concrete gaps found across authentication, routing, secrets, persistence, scope, and deployment rollback.
-- Round 2: 8/10; 9 remaining policy and feasibility gaps found.
+- Round 1: 6/10; 26 concrete gaps found across authentication, routing, secrets, persistence, scope, and deployment rollback.
+- Round 2: 8/10; 11 remaining policy and feasibility gaps found.
 - Round 3: PASS on completeness, consistency, clarity, scope, and feasibility.
 - Final quality score: 9/10.
 - Remaining host-dependent uncertainties are represented as fail-closed preflight gates, not implementation assumptions.
