@@ -25,9 +25,9 @@ still-relevant deferred work is retained, renumbered, under **Phase D
 **MVP-0 exit gate (spec SC-000)**: the operator can import today's real
 first-100 CSV and review 10 prospects without opening the CSV manually.
 
-**Status**: NOT STARTED. Phase M begins on operator approval of this
-file; Phase D begins only on a separate, later operator decision — its
-tasks are a parking lot, not a queue.
+**Status**: Phase M implemented through M011. Phase P (login-protected
+public dashboard) approved 2026-07-27 and active. Phase D remains a
+parking lot and is not part of the public-deployment release.
 
 ## Format: `[ID] [P?] Description`
 
@@ -172,6 +172,111 @@ complete states.
 
 **Checkpoint / STOP**: MVP-0 done. The operator reviews real prospects
 without the CSV. Nothing below starts without a new operator decision.
+
+---
+
+## Phase P: Login-protected public deployment (active)
+
+**Goal**: Run the real persistent review dashboard on the Finland VPS and
+open it from a public browser through a dedicated Tailscale Funnel URL,
+while login-protecting every operator route and keeping sending and every
+unrelated engine surface mechanically unavailable.
+
+**Source of truth**:
+`public-deployment-design-2026-07-27.md`, spec FR-023–FR-032, and plan.md
+§Phase P. HOLD SCOPE: do not pull any Phase D item into this release.
+
+- [x] P001 Approve the office-hours design through three adversarial
+      reviews, explicitly select Funnel + application login and HOLD scope,
+      synchronize `spec.md`, `plan.md`, and `tasks.md`, then pass
+      `/plan-eng-review` and `/cso` before implementation
+
+- [ ] P002 Write failing unit tests first for dashboard config modes,
+      password/signing-secret strength validation, candidate digest
+      comparison, signed-session issue/verify/tamper/expiry behavior,
+      absolute-not-sliding expiry, fixed-window global limiter, exact-Origin
+      policy, content-type policy, security headers, and exhaustive route
+      classification; use an injected clock/random source only where needed
+      for deterministic tests
+
+- [ ] P003 Write failing contract tests first for `GET/POST /login`,
+      `POST /logout`, `GET /healthz`, UI navigation redirect, direct protected
+      asset/API `401`, cookie attributes, no-store/CSP/framing headers, fixed
+      `400/401/403/413/415/429` responses, every selected review route, and
+      generic `404` for batch/prospect/internal/webhook/unclassified paths
+
+- [ ] P004 Write failing HTTP/integration tests first for the 1 MiB bridge
+      limit (and 4 KiB login limit), early oversized-body rejection, malformed
+      URL handling, dashboard-only dependency construction, non-dashboard or
+      non-mock startup refusal, loopback binding intent, graceful shutdown,
+      restart persistence, and a review decision with zero external network
+      transport
+
+- [ ] P005 Implement the minimum auth/security modules using Node built-ins
+      only: validated config, SHA-256 candidate digest comparison,
+      HMAC-SHA-256 stateless 12-hour session, `__Host-outreach_session`
+      cookie, global limiter, exact origin/content-type enforcement, fixed
+      failures, security/no-store headers, and safe audit metadata
+
+- [ ] P006 Implement a dedicated dashboard composition root and production
+      entry point that construct only DB/auth/static UI/health plus the five
+      selected review handlers; do not import or construct LLM, Telegram,
+      scraper, batch, prospect, webhook, internal-dispatch, or dispatch-client
+      modules; make all unclassified routes fail closed with the generic 404
+
+- [ ] P007 Bound the node:http bridge before buffering, preserve fixed safe
+      500 behavior, bind the dashboard runtime explicitly to `127.0.0.1`, and
+      retain graceful HTTP/PGlite shutdown; add a request correlation ID
+      without logging cookie, credential, session, or prospect content
+
+- [ ] P008 Add the persistent visible
+      `SIMULATION MODE — nothing will be sent` banner and authenticated
+      logout control to the existing UI without changing the review workflow;
+      keep dynamic content text-only and keyboard behavior unchanged
+
+- [ ] P009 Run the new unit/contract/integration tests, then the complete
+      existing `outreach-engine` test suite and typecheck. Run the root site
+      lint, typecheck, tests, and production build to prove the independent
+      Vercel website remains green
+
+- [ ] P010 Add reviewed deployment artifacts under `outreach-engine/ops/`:
+      hardened systemd unit, root-owned no-trace Infisical wrapper template,
+      private-first deploy procedure, offline backup/retention and separate-
+      directory restore procedure, rollback procedure, and smoke checks.
+      Never place a real credential, token, public secret, or host-derived
+      encrypted credential blob in Git
+
+- [ ] P011 On the Finland host, take timestamped backups before every config
+      write and run the fail-closed preflight: systemd/systemd-creds support,
+      host-bound encrypt/decrypt, installed Infisical Universal Auth flow and
+      redaction, dedicated user/directories/permissions, active listeners,
+      port 8443 availability and Funnel policy, canonical DNS name, existing
+      Serve/Funnel JSON, and normalized configuration baseline
+
+- [ ] P012 Deploy the merged Git SHA privately into a root-owned immutable
+      release, install production dependencies, create/verify the encrypted
+      bootstrap credentials without revealing them, start the loopback-only
+      service, then verify health, login, origin rejection, forbidden routes,
+      real queue access, mock-only behavior, restart persistence, single-writer
+      refusal, offline backup, and restore into a separate PGlite directory
+
+- [ ] P013 Enable only the new Funnel listener after private verification;
+      prove every normalized pre-existing Serve entry is unchanged, exercise
+      remove/re-add rollback, and run gstack `/browse` QA from a fresh public
+      browser: blocked unauthenticated UI/asset/API, login, real queue,
+      uniquely named `CANARY-<UTC>` rejection with `other`, zero console
+      errors, logout, restart, blocked access again, and retained canary record
+
+- [ ] P014 Run `/review`, `/ship`, `/land-and-deploy`, and `/canary`; merge by
+      PR only after required checks pass. Publish the stable Vercel marketing
+      URL and the verified Funnel dashboard URL plus a deploy report containing
+      release SHA, backup identifier, rollback evidence, and any conditional
+      host facts that could not be observed
+
+**Phase P exit gate**: SC-008–SC-013 all have observed evidence. The
+dashboard URL opens publicly, requires the operator password, renders the
+real persisted queue, cannot expose or construct sending/integration paths,
+survives restart, has a tested backup/rollback, and passes live browser QA.
 
 ---
 

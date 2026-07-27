@@ -7,10 +7,10 @@
 **Input**: Feature specification from
 `specs/002-operator-review-dashboard/spec.md`
 
-**Status**: Design complete; direction approved 2026-07-15 with an
-operator-directed MVP scope reduction (spec.md §MVP-0). The design below
-describes the full feature; §MVP-0 Build Scope narrows what is built
-first. No code has been written.
+**Status**: MVP-0 implemented through M011. Public deployment design
+approved 2026-07-27. Phase P below is the active implementation plan;
+older localhost-only statements are historical and are superseded for the
+public dashboard runtime.
 
 **Scope note on artifacts**: per the operator's request this feature ships
 three documents (`spec.md`, `plan.md`, `tasks.md`). The data model and API
@@ -61,6 +61,247 @@ zero-new-dependencies UI decision, decision durability (FR-009), the
 textContent-only rendering rule, and the SC-006 before/after verification
 gate. The MVP-0 exit gate is spec.md SC-000: import today's real CSV,
 review 10 prospects, CSV never opened manually.
+
+## Phase P: Login-Protected Public Dashboard (active)
+
+Source of truth:
+[`public-deployment-design-2026-07-27.md`](./public-deployment-design-2026-07-27.md).
+The operator selected Tailscale Funnel plus application login and HOLD
+SCOPE: ship the approved dashboard-only design with no product additions.
+
+### What already exists
+
+- `createApp` already composes the full engine route table; Phase P adds a
+  separate dashboard composition instead of weakening that runtime.
+- The five selected review handlers, static UI, review repository, PGlite
+  schema, structured logger, graceful HTTP shutdown, and restart tests exist.
+- `MockDispatchClient` exists, but dashboard mode does not construct even
+  that client; `OUTREACH_DISPATCH_MODE=mock` remains a fail-closed config
+  assertion and audit label.
+- The Finland host, Tailscale 1.98.9, systemd, and existing private Serve
+  endpoints exist. Their exact capabilities remain preflight facts, not
+  design assumptions.
+
+### NOT in scope
+
+- Google/OAuth login, multiple users, roles, password reset, or a session
+  revocation service.
+- Real sending, generation, Telegram, provider webhooks, prospect/batch APIs,
+  internal dispatch, or any new review feature.
+- Moving the long-running PGlite service into Vercel or coupling it to the
+  marketing site.
+- Waiting for or changing `aitransforms.ir` DNS. The website remains on its
+  stable Vercel URL; the dashboard uses the Funnel URL.
+
+### Architecture and dependency boundary
+
+```text
+Public browser
+    |
+    | HTTPS :8443 (preferred; preflight may block)
+    v
+Tailscale Funnel -------------- existing Serve entries (must not change)
+    |
+    | loopback HTTP only
+    v
+dashboard main -> bounded HTTP bridge -> security/auth boundary
+                                         |       |       |
+                                         |       |       +-> GET /healthz
+                                         |       +----------> login/logout
+                                         +------------------> protected allowlist
+                                                                    |
+                                   +--------------------------------+
+                                   |                                |
+                           static UI files                 selected review handlers
+                                                                    |
+                                                                    v
+                                                    single-writer persistent PGlite
+
+Not imported or constructed: LLM | Telegram | scraper | webhook |
+prospect/batch routes | internal dispatch | dispatch client
+```
+
+The dashboard composition is a new outer module that depends on selected
+existing review handler factories. Outreach domain code never depends on
+authentication, systemd, Infisical, or Tailscale. Unclassified routes fail
+closed before handler lookup.
+
+### Request and session flows, including shadow paths
+
+```text
+REQUEST -> 1 MiB bounded bridge -> security headers -> route classification
+  missing body  -> route-specific 400/401/404, fixed body, no-store
+  empty body    -> route-specific 400, no-store
+  invalid body  -> 400/413/415 before handler, no-store
+  bridge error  -> structured safe log + fixed 500, no-store
+
+LOGIN -> exact Origin -> 4 KiB form -> SHA-256 candidate digest
+  -> timingSafeEqual -> signed 12-hour cookie -> 303 /
+  mismatch -> limiter failure count -> fixed 401 or fixed 429
+
+PROTECTED REQUEST -> parse cookie -> verify format/version/HMAC/expiry
+  valid UI navigation -> allow
+  valid API request   -> allow (+ exact Origin/content-type for mutations)
+  missing/invalid UI -> 303 /login
+  missing/invalid API/asset -> fixed 401
+
+REVIEW MUTATION -> auth/origin/type checks -> existing handler -> PGlite
+  success -> audit IDs only -> JSON -> UI advances
+  handler/DB error -> fixed safe error -> UI stays on current prospect
+```
+
+Session state machine:
+
+```text
+       valid password
+LOGGED_OUT -----------> AUTHENTICATED (absolute expiry fixed at issue)
+    ^                         |
+    | POST /logout            | expiry / malformed / tampered token
+    +-------------------------+
+
+Restart keeps a valid signed token. Logout clears the browser cookie but
+does not revoke a copied token before expiry; this accepted limitation is
+displayed in the design and covered in the threat model.
+```
+
+### Error and rescue registry
+
+| Codepath | Named failure | Rescue/action | Operator sees |
+|---|---|---|---|
+| HTTP body reader | `RequestBodyTooLargeError` | stop buffering, close/read-drain safely, fixed 413 | fixed 413 |
+| URL/router | `MalformedPathError` | generic fail-closed response | fixed 404 |
+| login parser | `InvalidFormError` / `UnsupportedMediaTypeError` | fixed response, no submitted value logged | 400 / 415 |
+| login limiter | `LoginRateLimitedError` | reject until fixed window ends; log state only | fixed 429 |
+| secret validation | `InvalidAuthSecretError` | fail startup before listen | service unavailable |
+| session verification | `InvalidSessionError` / `ExpiredSessionError` | clear/ignore token; redirect UI or reject API | 303 / 401 |
+| origin check | `OriginMismatchError` | reject before mutation | fixed 403 |
+| review handler | existing validation/not-found/conflict errors | preserve existing safe contract | 400 / 404 / 409 |
+| PGlite open/write | `DatabaseOpenError` / `DatabaseWriteError` | fail startup or return safe 500; never advance UI | login unavailable / visible error |
+| static asset read | `UiAssetReadError` | structured path-free log, fixed 500 | fixed error |
+| Infisical wrapper | credential decrypt/auth/fetch failure | exit before Node; no fallback secret path | service unavailable |
+| single-writer lock | `LockUnavailableError` | exit before PGlite open | service unavailable |
+| Funnel preflight | port/policy/config mismatch | do not enable or modify ingress | no public URL yet |
+
+No catch-and-continue path may swallow these errors. Unexpected handler
+exceptions retain a fixed response, a request correlation ID, and a safe
+structured journal entry without secret or prospect content.
+
+### Failure modes registry
+
+| Codepath | Failure mode | Rescued? | Test? | User sees? | Logged? |
+|---|---|---:|---:|---|---:|
+| Login | wrong/malformed/oversized input | yes | yes | fixed 4xx | safe metadata |
+| Session | forged/expired/tampered cookie | yes | yes | redirect/401 | safe event |
+| Protected asset/API | direct unauthenticated request | yes | yes | fixed 401 | optional aggregate |
+| Route allowlist | batch/prospect/webhook/internal path | yes | yes | generic 404 | safe route class |
+| Review decision | DB write fails | yes | yes | visible error; no advance | yes, IDs only |
+| Dashboard startup | non-dashboard/non-mock mode | yes | yes | no listener | yes |
+| External integration | accidental construction/network call | yes | yes | no change | startup/test evidence |
+| PGlite | second writer or restart | yes | yes | startup blocked / records retained | yes |
+| Secret bootstrap | decrypt/vault failure | yes | preflight | no listener | redacted failure |
+| Deployment | bad release or health check | yes | rehearsal | private rollback; no public exposure | deploy report |
+| Funnel | port collision/policy/config drift | yes | preflight | public enablement blocked | preflight report |
+| Backup | inconsistent archive/failed restore | yes | restore rehearsal | rollout blocked | backup identifier |
+
+There are no rows with `Rescued=no`, `Test=no`, and a silent user outcome.
+
+### Interaction and performance review
+
+| Interaction | Edge handling |
+|---|---|
+| Double login/decision click | global UI `busy` guard plus server idempotent/last-write-wins contract |
+| Slow or failed mutation | current prospect remains visible with an explicit error |
+| Back/reload/restart | DB decisions persist; stateless session survives restart until absolute expiry |
+| Empty queue | existing empty state; authenticated only |
+| Completed queue | existing completion state; authenticated only |
+| Stale/two-tab decision | existing last-write-wins response becomes the displayed source of truth |
+| Expiry during use | next protected request redirects/rejects; no sliding extension |
+
+At the expected low-thousands-row scale, password hashing, HMAC, and route
+classification are constant-time relative to data size. The slow paths are
+PGlite open at startup, review queries/writes, and Infisical startup fetch.
+No new per-request network call is introduced.
+
+### Test diagram
+
+```text
+UNIT
+  config modes/secrets | HMAC format/tamper/expiry | limiter clock/window
+  origin/type/body policy | route classification | no integration imports
+
+CONTRACT
+  login/logout/cookies/headers | UI redirect vs API 401 | protected asset
+  all five review routes | every forbidden route | fixed 4xx/404/500 shapes
+
+INTEGRATION
+  dashboard composition + PGlite | restart persistence | no network transport
+  bounded node:http bridge | graceful shutdown | single-writer lock
+
+HOST PREFLIGHT
+  systemd-creds | Infisical Universal Auth/redaction | port/policy
+  normalized Serve before/after | backup + separate-directory restore
+
+LIVE BROWSER
+  fresh login -> real queue -> CANARY rejection -> logout -> blocked again
+  restart -> login -> record still present | zero console errors
+```
+
+### Observability and security
+
+- Startup logs runtime/dispatch mode, release SHA, listener address, and
+  `dispatch_mode=mock`; it never logs secrets, paths containing credentials,
+  cookies, session tokens, prospect text, or messages.
+- Login events log outcome category and limiter state only. Review mutations
+  log package ID, action, optional reason enum, per-session audit ID, and mock
+  mode.
+- systemd restart count, failed starts, health, backup identifier, release
+  SHA, Funnel listener, and normalized pre-existing Serve definitions are
+  captured in the deploy report.
+- Security is re-reviewed by `/cso` after this plan update. Public ingress is
+  the final step and remains disabled until every security/preflight gate is
+  observed.
+
+### Deployment and rollback sequence
+
+```text
+merge SHA -> root-owned release -> install production deps -> private config
+  -> encrypted-credential/Infisical preflight -> start loopback service
+  -> login/API/restart checks -> offline backup + restore rehearsal
+  -> backup Serve JSON -> prove :8443 + Funnel policy -> add one Funnel entry
+  -> normalized config comparison -> public browser QA -> canary report
+```
+
+```text
+PUBLIC FAILURE?
+  yes -> remove only new Funnel entry -> verify old Serve entries unchanged
+      -> stop unit -> point current to previous compatible SHA -> start
+      -> private health/login/data check -> restore Funnel -> public canary
+  data corruption proven?
+      no  -> never restore data
+      yes -> stop, preserve failed data, restore named verified backup
+```
+
+### Dream-state delta and reversibility
+
+```text
+localhost-only review tool
+    -> this phase: public, protected, persistent, mock-only operator service
+    -> 12-month ideal: identity-managed operator platform with deliberate
+       provider integrations and audited send controls (separate projects)
+```
+
+This release moves toward reliable operations without coupling the dashboard
+to a future identity/provider architecture. Reversibility is **4/5**: Funnel,
+unit, release symlink, and code are reversible; PGlite records are durable and
+restored only through the explicit data-recovery path.
+
+### Stale diagram audit
+
+The existing `outreach-engine/docs/ARCHITECTURE.md` diagrams remain correct
+for the full engine runtime. They do not describe the new dashboard-only
+composition; the architecture diagram above is authoritative for Phase P.
+No existing state-machine diagram changes because review decisions remain
+separate from the outreach dispatch state machine.
 
 ## Summary
 
@@ -507,3 +748,17 @@ principle weight both came out on the strict side — §Two-Queues keeps
 documented future convergence step, and §UI Decision keeps the dependency
 count at zero (Principles III/XI) at the cost of hand-rolled DOM code
 sized to one screen. Gate remains **PASS**.
+
+## GSTACK REVIEW REPORT
+
+| Review | Trigger | Why | Runs | Status | Findings |
+|--------|---------|-----|------|--------|----------|
+| CEO Review | `/plan-ceo-review` | Scope & strategy | 1 | CLEAR | HOLD_SCOPE, 0 critical gaps; governing docs synchronized to the approved design |
+| Codex Review | `/codex review` | Independent 2nd opinion | 0 | TIMEOUT | Non-blocking outside voice exceeded its time budget; prior design had 3 adversarial rounds and 37/37 issues fixed |
+| Eng Review | `/plan-eng-review` | Architecture & tests (required) | 0 | REQUIRED | Runs next against this updated plan |
+| Design Review | `/plan-design-review` | UI/UX gaps | 0 | — | UI scope limited to login, logout, and simulation banner; live design audit remains post-implementation |
+| DX Review | `/plan-devex-review` | Developer experience gaps | 0 | — | Not required for this operator-only deployment |
+
+**VERDICT:** CEO CLEAR; engineering review required before implementation.
+
+NO UNRESOLVED DECISIONS

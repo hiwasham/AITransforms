@@ -4,9 +4,10 @@
 
 **Created**: 2026-07-15
 
-**Status**: Direction approved 2026-07-15, with an operator-directed MVP
-scope reduction (see §MVP-0 Scope Reduction below). No code is written
-until the operator approves the reduced `tasks.md` MVP-0 phase.
+**Status**: MVP-0 implemented through M011. Public deployment amendment
+approved 2026-07-27; implementation and deployment are governed by
+[`public-deployment-design-2026-07-27.md`](./public-deployment-design-2026-07-27.md)
+and Phase P in `tasks.md`.
 
 **Input**: User description: "Build an internal founder/operator dashboard
 to replace CSV review. Business objective: get the first 100 prospects
@@ -106,6 +107,23 @@ today's real first-100 CSV and review 10 prospects without opening the CSV
 manually.* Everything below in this spec remains the definition of the
 full feature; requirement/criterion IDs are unchanged, and each carries an
 MVP-0 marker in plan.md/tasks.md where scope differs.
+
+## Public Deployment Amendment (approved 2026-07-27)
+
+The next release makes the real, persistent MVP-0 dashboard reachable from
+a public browser. It does not expand the review feature itself. The public
+runtime is a dedicated dashboard-only composition of selected existing
+review handlers, protected by one password-only operator session and served
+from the Finland VPS through Tailscale Funnel. It cannot construct or expose
+generation, prospect, Telegram, webhook, internal-dispatch, or real dispatch
+capabilities.
+
+The complete security, persistence, secret-delivery, backup, rollback, and
+Funnel contracts live in
+[`public-deployment-design-2026-07-27.md`](./public-deployment-design-2026-07-27.md).
+If an older requirement below assumes localhost-only access or the full
+engine composition, this amendment supersedes that assumption for the
+public dashboard runtime only.
 
 
 ## User Scenarios & Testing *(mandatory)*
@@ -380,11 +398,11 @@ contains exactly the approved set with decisions and substituted messages.
   existing `outreach-engine` test, endpoint contract, or invariant
   (001's FR-015 discipline, extended to the engine itself).
 - **FR-020**: The dashboard and its API MUST be reachable only by the
-  operator: binding to localhost by default; if exposed beyond localhost
-  it MUST sit behind the same single-operator credential approach already
-  planned for the engine (001 plan.md Security Considerations / open task
-  T113) — it MUST NOT become a second unauthenticated state-changing
-  surface beyond what already exists locally.
+  operator. The Node process binds to loopback; public ingress is only a
+  dedicated Tailscale Funnel HTTPS listener; every operator UI, asset, and
+  review API route is protected by the password-only signed-session
+  contract in the public deployment design. No public operator route may
+  depend on the still-deferred engine-wide T113 authentication task.
 - **FR-021** *(Amendment 1, 2026-07-16 — gate G7, feedback loop)*: When
   the operator rejects a package, the system MUST allow (never require) a
   single-keystroke rejection-reason tag from a small fixed set —
@@ -405,6 +423,52 @@ contains exactly the approved set with decisions and substituted messages.
   generation pipeline is the primary gate; this decision-time check is the
   backstop guaranteeing 001 SC-010's "no bypass path" from the review
   surface. Scheduled *before first 10 sends*.
+- **FR-023** *(Public deployment)*: Startup MUST require
+  `OUTREACH_RUNTIME_MODE=dashboard` and `OUTREACH_DISPATCH_MODE=mock`.
+  Missing or different values fail before listening, and dashboard mode
+  MUST NOT construct LLM, Telegram, webhook, prospect, batch, or dispatch
+  clients.
+- **FR-024** *(Public deployment)*: The public route matrix MUST be an
+  allowlist containing only login, logout, minimal health, dashboard UI and
+  asset, and the five existing review routes named in the deployment
+  design. Every unclassified method/path pair, including `/batches/**`,
+  `/prospects/**`, `/internal/**`, and `/webhooks/**`, returns the same
+  generic `404`.
+- **FR-025** *(Public deployment)*: Authentication MUST implement the exact
+  password-only, 12-hour absolute signed-session contract in the deployment
+  design, including strong startup-validated secrets, a secure `__Host-`
+  cookie, fixed failure responses, a global login limiter, and no credential
+  or session-token logging.
+- **FR-026** *(Public deployment)*: All state-changing requests MUST match
+  the configured canonical HTTPS origin; JSON review APIs MUST require
+  `application/json`; login MUST require bounded form encoding; the HTTP
+  bridge MUST reject request bodies larger than its configured limit before
+  unbounded buffering.
+- **FR-027** *(Public deployment)*: Login, logout, protected responses and
+  errors, redirects, assets, and review APIs MUST send `Cache-Control:
+  no-store` plus the approved CSP, framing, MIME-sniffing, and referrer
+  protections. No permissive CORS policy is allowed.
+- **FR-028** *(Public deployment)*: PGlite data MUST live outside release
+  directories under `/var/lib/aitransforms-outreach/pglite`, be owned by a
+  dedicated non-login service account, and have exactly one writer enforced
+  by systemd plus a process-lifetime lock. Stop/start MUST preserve records.
+- **FR-029** *(Public deployment)*: Runtime secrets MUST be fetched from
+  Infisical on every service start through systemd encrypted credentials.
+  Secrets are forbidden in Git, unit text, release files, persistent env
+  files, command-line arguments, and logs; any credential or vault failure
+  blocks startup.
+- **FR-030** *(Public deployment)*: Releases MUST be immutable, root-owned
+  Git-SHA directories selected by an atomic `current` symlink. Deployment
+  MUST include a verified private-first rollout, code rollback, offline
+  backup, and restore rehearsal before public ingress.
+- **FR-031** *(Public deployment)*: Funnel enablement MUST fail closed unless
+  host preflight proves encrypted-credential support, Infisical Universal
+  Auth, a free policy-allowed Funnel port, and preservation of every existing
+  Serve definition by normalized before/after comparison.
+- **FR-032** *(Public deployment)*: The dashboard MUST visibly state
+  `SIMULATION MODE — nothing will be sent`; an end-to-end review decision
+  MUST persist locally while a test proves no external transport is
+  constructed or called.
 
 ### Key Entities
 
@@ -463,6 +527,28 @@ contains exactly the approved set with decisions and substituted messages.
   all times: pending + approved + rejected + skipped counts always sum to
   the imported total, and the list view (FR-012) can surface any package
   regardless of state — nothing is ever unreachable or silently dropped.
+- **SC-008 (public access)**: A fresh unauthenticated browser can reach only
+  the login page and fixed health response; direct dashboard HTML, protected
+  JavaScript, prospect data, review APIs, and unregistered engine routes are
+  blocked according to the exhaustive route matrix.
+- **SC-009 (session boundary)**: Valid login, invalid login, limiter block,
+  logout, expiry, malformed token, tampered token, same-origin enforcement,
+  content-type rejection, and request-size rejection all pass automated
+  contract tests with the exact cookie and response policy.
+- **SC-010 (dashboard-only runtime)**: Production-mode startup refuses any
+  non-dashboard/non-mock configuration, constructs no external integration
+  client, shows the simulation banner, and persists a review decision without
+  network transport.
+- **SC-011 (durability)**: The systemd service binds only to loopback,
+  survives stop/start with real records intact, and a named backup restores
+  successfully into a separate PGlite directory.
+- **SC-012 (safe ingress)**: Adding and removing the new Funnel listener
+  leaves every normalized pre-existing Serve definition unchanged and the
+  rollback drill restores the verified state.
+- **SC-013 (live browser)**: The final public URL loads in a fresh browser,
+  requires login, renders the real queue after login with zero console errors,
+  performs one uniquely named canary decision, logs out, and blocks the data
+  again after a service restart.
 
 ## Assumptions
 
@@ -475,14 +561,14 @@ contains exactly the approved set with decisions and substituted messages.
   dashboard approve could also drive the 001 `human_review_queue →
   approved` transition — is explicitly future work, and the design must
   not preclude it (plan.md documents the seam).
-- **Sending remains manual**: The operator sends approved messages by hand
-  (the current workflow). This feature ends at copy/export. No dispatch,
-  no provider integration, no cadence — those are 001's territory and are
-  untouched.
-- **Single operator, single machine**: One founder/operator, running the
-  dashboard locally against a local backing process. No team features, no
-  multi-user coordination, no roles (per the MVP mandate). FR-020's
-  localhost-default posture follows from this.
+- **Sending remains unavailable in this release**: The public dashboard
+  records review decisions only. Dashboard mode does not register or
+  construct dispatch, provider, generation, webhook, cadence, or Telegram
+  components; `OUTREACH_DISPATCH_MODE=mock` is a startup invariant.
+- **Single operator, remote browser**: One founder/operator may use any
+  public browser that can reach the Funnel URL, after application login.
+  No team features, identities, roles, or concurrent editing model are
+  introduced.
 - **Volume**: Batches of ~100 packages, cumulative history in the low
   thousands of rows. No pagination/virtualization engineering beyond what
   that scale needs.
@@ -511,5 +597,11 @@ contains exactly the approved set with decisions and substituted messages.
 - Editing generated content (message text, research summary, pain
   hypothesis) — the only writable field is the video URL (FR-015).
 - Automated sending of any kind (FR-018).
-- Reject reasons / feedback-to-generator loops.
-- Authentication build-out beyond FR-020's localhost-default posture.
+- Automated feedback-to-generator or regeneration loops; the already-built
+  optional rejection-reason tag remains calibration data only.
+- Google/OAuth login, multiple accounts, roles, password reset, session
+  revocation service, or team access.
+- Real sending, provider credentials, Telegram polling, generation, webhook
+  ingestion, and internal dispatch on the public dashboard listener.
+- Custom-domain ingress while `aitransforms.ir` DNS remains outside this
+  release; the stable marketing-site Vercel URL remains independent.
