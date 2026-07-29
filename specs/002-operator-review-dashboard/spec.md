@@ -114,9 +114,11 @@ The next release makes the real, persistent MVP-0 dashboard reachable from
 a public browser. It does not expand the review feature itself. The public
 runtime is a dedicated dashboard-only composition of selected existing
 review handlers, protected by one password-only operator session and served
-from the Finland VPS through Tailscale Funnel. It cannot construct or expose
-generation, prospect, Telegram, webhook, internal-dispatch, or real dispatch
-capabilities.
+from the Finland VPS through Tailscale Funnel on the selected public HTTPS
+listener `:10000`. The pre-existing public `:443 -> 127.0.0.1:20128` Funnel
+mapping and the xray listener on `:8443` are out of scope and must remain
+unchanged. The dashboard runtime cannot construct or expose generation,
+prospect, Telegram, webhook, internal-dispatch, or real dispatch capabilities.
 
 The complete security, persistence, secret-delivery, backup, rollback, and
 Funnel contracts live in
@@ -542,9 +544,10 @@ contains exactly the approved set with decisions and substituted messages.
 - **SC-011 (durability)**: The systemd service binds only to loopback,
   survives stop/start with real records intact, and a named backup restores
   successfully into a separate PGlite directory.
-- **SC-012 (safe ingress)**: Adding and removing the new Funnel listener
-  leaves every normalized pre-existing Serve definition unchanged and the
-  rollback drill restores the verified state.
+- **SC-012 (safe ingress)**: Adding and removing only the new `:10000` Funnel
+  listener leaves every normalized pre-existing Serve definition unchanged,
+  including the public `:443 -> 127.0.0.1:20128` mapping, and the rollback
+  drill restores the verified state.
 - **SC-013 (live browser)**: The final public URL loads in a fresh browser,
   requires login, renders the real queue after login with zero console errors,
   performs one uniquely named canary decision, logs out, and blocks the data

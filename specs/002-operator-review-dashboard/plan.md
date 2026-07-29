@@ -98,7 +98,7 @@ SCOPE: ship the approved dashboard-only design with no product additions.
 ```text
 Public browser
     |
-    | HTTPS :8443 (preferred; preflight may block)
+    | HTTPS :10000 (selected; preflight must re-verify)
     v
 Tailscale Funnel -------------- existing Serve entries (must not change)
     |
@@ -326,7 +326,7 @@ No LLM eval is required because dashboard mode neither imports nor calls an LLM.
 merge SHA -> root-owned release -> install production deps -> private config
   -> encrypted-credential/Infisical preflight -> start loopback service
   -> login/API/restart checks -> offline backup + restore rehearsal
-  -> backup Serve JSON -> prove :8443 + Funnel policy -> add one Funnel entry
+  -> backup Serve JSON -> prove :10000 + Funnel policy -> add one Funnel entry
   -> normalized config comparison -> public browser QA -> canary report
 ```
 

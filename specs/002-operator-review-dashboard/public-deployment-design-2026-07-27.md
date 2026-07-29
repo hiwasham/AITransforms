@@ -183,16 +183,16 @@ Logs record authentication and review audit metadata without the submitted crede
 
 ## Funnel Preflight and Rollback Gate
 
-Observed state before implementation: Tailscale `1.98.9`; existing HTTPS Serve entries occupy the default HTTPS endpoint and port `10000`; no public Funnel entry is active. Port `8443` is preferred but not yet assumed free or policy-enabled.
+Observed state before implementation: Tailscale `1.98.9`; an existing public Funnel listener at `https://finland-freedom1-89-167-19-64.tail0dc61e.ts.net:443` proxies to `http://127.0.0.1:20128` and must remain byte-for-byte equivalent after normalized comparison. Port `8443` is occupied by xray. Tailnet policy permits ports `443`, `8443`, and `10000`; port `10000` is currently free and is the selected dashboard listener.
 
 Before enabling ingress:
 
 1. Capture timestamped `tailscale serve status --json`, `tailscale funnel status`, active listeners, installed Tailscale/systemd versions, encrypted-credential capability, and the relevant unit state.
 2. Prove `systemd-creds` host-bound encrypt/decrypt works and validate the installed Infisical CLI Universal Auth flow without leaking values to process arguments, persistent files, or journald. Failure blocks this deployment mechanism.
-3. Verify `8443` is free, Funnel-supported, and allowed by tailnet policy. If not, stop and revise the design; do not reuse or replace an existing endpoint.
-4. Read the node's canonical Tailscale DNS name from local status JSON and deterministically construct `https://<canonical-dns-name>:8443` as `OUTREACH_PUBLIC_ORIGIN` before starting the production-configured service. Confirm the later Funnel-reported origin matches exactly.
+3. Re-verify `10000` is free, Funnel-supported, and allowed by tailnet policy. If not, stop and revise the design; do not reuse or replace an existing endpoint. Confirm xray still owns `8443` and do not modify it.
+4. Read the node's canonical Tailscale DNS name from local status JSON and deterministically construct `https://<canonical-dns-name>:10000` as `OUTREACH_PUBLIC_ORIGIN` before starting the production-configured service. Confirm the later Funnel-reported origin matches exactly.
 5. Start the dashboard on loopback with the final canonical origin and pass local login/auth/data/restart checks using explicit matching/mismatching Origin headers.
-6. Normalize the captured existing Serve endpoint definitions by listener, path, proxy target, and exposure mode. Add only the new Funnel entry and verify the normalized pre-existing definitions remain unchanged; ignore output ordering and incidental status fields.
+6. Normalize the captured existing Serve endpoint definitions by listener, path, proxy target, and exposure mode. Add only the new `:10000` Funnel entry and verify the normalized pre-existing definitions remain unchanged, including the existing public `:443 -> 127.0.0.1:20128` mapping; ignore output ordering and incidental status fields.
 7. Verify the reported public URL from a browser and confirm it exactly matches `OUTREACH_PUBLIC_ORIGIN`.
 8. Exercise rollback by removing only the new entry, confirm normalized prior endpoints remain unchanged, then re-add the verified entry.
 

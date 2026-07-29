@@ -273,8 +273,10 @@ unrelated engine surface mechanically unavailable.
       write and run the fail-closed preflight: systemd/systemd-creds support,
       host-bound encrypt/decrypt, installed Infisical Universal Auth flow and
       redaction, dedicated user/directories/permissions, active listeners,
-      port 8443 availability and Funnel policy, canonical DNS name, existing
-      Serve/Funnel JSON, and normalized configuration baseline
+      port 10000 availability and Funnel policy, canonical DNS name, existing
+      Serve/Funnel JSON, and normalized configuration baseline (including the
+      existing public :443 -> 127.0.0.1:20128 mapping); confirm xray still owns
+      8443 and do not modify either existing listener
 
 - [ ] P012 Deploy the merged Git SHA privately into a root-owned immutable
       release, install production dependencies, create/verify the encrypted
