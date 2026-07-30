@@ -88,7 +88,7 @@ export async function main(): Promise<void> {
     telegramBotUsername: config.telegramBotUsername,
   });
 
-  const server = createHttpServer(app);
+  const server = createHttpServer(app, { maxBodyBytes: null });
   const port = Number(process.env.OUTREACH_PORT) || DEFAULT_PORT;
   await new Promise<void>((resolve) => server.listen(port, resolve));
   transport.start();

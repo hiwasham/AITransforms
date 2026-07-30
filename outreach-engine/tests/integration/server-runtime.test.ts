@@ -48,7 +48,7 @@ describe("served runtime (T100)", () => {
       webhookSecrets: { instantly: "instantly-secret", unipile: "unipile-secret" },
       telegramBotUsername: "AITransformsBot",
     });
-    server = createHttpServer(app);
+    server = createHttpServer(app, { maxBodyBytes: null });
     await new Promise<void>((resolve) => server.listen(0, "127.0.0.1", resolve));
     const { port } = server.address() as AddressInfo;
     base = `http://127.0.0.1:${port}`;

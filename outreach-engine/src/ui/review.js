@@ -56,6 +56,14 @@
     }
   }
 
+  function requireSession(response) {
+    if (response.status === 401) {
+      window.location.assign("/login");
+      throw new Error("Session expired; sign in again");
+    }
+    return response;
+  }
+
   function renderCounts(counts) {
     $("progress").textContent = counts.reviewed + " / " + counts.total;
   }
@@ -89,6 +97,7 @@
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ reason: reason }),
     })
+      .then(requireSession)
       .then(function (res) {
         if (!res.ok) throw new Error("HTTP " + res.status);
         return res.json();
@@ -160,6 +169,7 @@
 
   function loadNext() {
     return fetch("/review/packages/next")
+      .then(requireSession)
       .then(function (res) {
         if (!res.ok) throw new Error("HTTP " + res.status);
         return res.json();
@@ -185,6 +195,7 @@
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ action: action }),
     })
+      .then(requireSession)
       .then(function (res) {
         if (!res.ok) {
           // Surface the server's reason when it sent one (e.g. the Q006
@@ -234,6 +245,7 @@
     var id = history.pop();
     busy = true;
     fetch("/review/packages/" + encodeURIComponent(id))
+      .then(requireSession)
       .then(function (res) {
         if (!res.ok) throw new Error("HTTP " + res.status);
         return res.json();

@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node --experimental-transform-types --import ./loader.mjs src/server/main.ts",
+    "start:dashboard": "node --experimental-transform-types --import ./loader.mjs src/server/dashboard-main.ts",
     "first-100": "node --experimental-transform-types --import ./loader.mjs scripts/first-100.ts",
     "test": "vitest run",
     "test:watch": "vitest",
