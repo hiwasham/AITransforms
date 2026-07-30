@@ -112,3 +112,24 @@ add --path <dir>` (no `--url`): URL-managed sources can auto-reclone, and the
 sync code walk for them requires an explicit `--allow-reclone` opt-in.
 
 <!-- gstack-gbrain-search-guidance:end -->
+
+## Deploy Configuration (configured by /setup-deploy)
+
+- Platform: Vercel (marketing site) + custom systemd/Tailscale Funnel (outreach dashboard)
+- Production URLs:
+  - Website: https://ai-transforms-hiwas-projects-6e95f587.vercel.app
+  - Dashboard: https://finland-freedom1-89-167-19-64.tail0dc61e.ts.net:10000
+- Deploy workflow: PR-only; Vercel website deploy plus private-first VPS dashboard release
+- Deploy status command: Vercel CLI for the website; systemd status and Funnel status for the dashboard
+- Merge method: squash WIP checkpoints through `/ship`, then merge the PR
+- Project type: static web app + persistent Node/PGlite operator service
+- Post-deploy health checks:
+  - Website: https://ai-transforms-hiwas-projects-6e95f587.vercel.app
+  - Dashboard: https://finland-freedom1-89-167-19-64.tail0dc61e.ts.net:10000/healthz
+
+### Custom deploy hooks
+
+- Pre-merge: root lint, typecheck, tests, and build; outreach-engine tests and typecheck; `/cso`, `/qa`, and `/review`
+- Deploy trigger: Vercel production deploy plus the reviewed private-first VPS procedure under `outreach-engine/ops/`
+- Deploy status: verify immutable release SHA, systemd unit health, loopback listener, and normalized Funnel configuration
+- Health check: verify the website root and dashboard `/healthz`, then run the authenticated browser canary

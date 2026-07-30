@@ -1,0 +1,61 @@
+[Unit]
+Description=AITransforms outreach review dashboard
+Documentation=https://github.com/hiwasham/AITransforms
+After=network-online.target tailscaled.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=aitransforms-outreach
+Group=aitransforms-outreach
+WorkingDirectory=/opt/aitransforms-outreach/current/outreach-engine
+RuntimeDirectory=aitransforms-outreach
+RuntimeDirectoryMode=0700
+UMask=0077
+
+Environment=NODE_ENV=production
+Environment=OUTREACH_RUNTIME_MODE=dashboard
+Environment=OUTREACH_DISPATCH_MODE=mock
+Environment=OUTREACH_DB_DATA_DIR=/var/lib/aitransforms-outreach/pglite
+Environment=OUTREACH_PUBLIC_ORIGIN=https://finland-freedom1-89-167-19-64.tail0dc61e.ts.net:10000
+Environment=OUTREACH_PORT=3100
+Environment=INFISICAL_API_URL=http://100.116.105.2:8080
+Environment=INFISICAL_DISABLE_UPDATE_CHECK=true
+Environment=INFISICAL_PROJECT_ID=@INFISICAL_PROJECT_ID@
+Environment=INFISICAL_ENVIRONMENT=@INFISICAL_ENVIRONMENT@
+Environment=INFISICAL_SECRET_PATH=@INFISICAL_SECRET_PATH@
+
+LoadCredentialEncrypted=infisical-client-id:/etc/credstore.encrypted/aitransforms-outreach-infisical-client-id
+LoadCredentialEncrypted=infisical-client-secret:/etc/credstore.encrypted/aitransforms-outreach-infisical-client-secret
+
+ExecStartPre=/usr/bin/test -d /opt/aitransforms-outreach/current/outreach-engine
+ExecStartPre=/usr/bin/test -x /usr/local/libexec/aitransforms-outreach-start
+ExecStart=/usr/local/libexec/aitransforms-outreach-start
+Restart=on-failure
+RestartSec=5s
+KillSignal=SIGTERM
+TimeoutStopSec=30s
+
+NoNewPrivileges=true
+PrivateDevices=true
+PrivateTmp=true
+ProtectClock=true
+ProtectControlGroups=true
+ProtectHome=true
+ProtectHostname=true
+ProtectKernelLogs=true
+ProtectKernelModules=true
+ProtectKernelTunables=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/aitransforms-outreach /run/aitransforms-outreach
+RemoveIPC=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+RestrictNamespaces=true
+RestrictRealtime=true
+RestrictSUIDSGID=true
+LockPersonality=true
+CapabilityBoundingSet=
+AmbientCapabilities=
+
+[Install]
+WantedBy=multi-user.target
