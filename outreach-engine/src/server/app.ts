@@ -33,7 +33,12 @@ import { createNextPackageHandler } from "@/api/review/packages/next/route.js";
 import { createGetReviewPackageHandler } from "@/api/review/packages/[id]/route.js";
 import { createDecisionHandler } from "@/api/review/packages/[id]/decision/route.js";
 import { createRejectionReasonHandler } from "@/api/review/packages/[id]/rejection-reason/route.js";
-import { errorResponse } from "@/api/lib/errors.js";
+import {
+  createRouter,
+  type App,
+  type Route,
+  type RouteHandler,
+} from "./router.js";
 
 export interface AppDeps {
   db: Db;
@@ -42,35 +47,6 @@ export interface AppDeps {
   dispatchClient: DispatchClient;
   webhookSecrets: WebhookSecrets;
   telegramBotUsername: string;
-}
-
-export interface App {
-  handle(req: Request): Promise<Response>;
-}
-
-type RouteHandler = (
-  req: Request,
-  ctx: { params: Record<string, string> },
-) => Promise<Response>;
-
-interface Route {
-  method: string;
-  segments: string[]; // ":name" segments capture
-  handler: RouteHandler;
-}
-
-function matchParams(
-  segments: string[],
-  path: string[],
-): Record<string, string> | null {
-  if (segments.length !== path.length) return null;
-  const params: Record<string, string> = {};
-  for (let i = 0; i < segments.length; i++) {
-    const seg = segments[i]!;
-    if (seg.startsWith(":")) params[seg.slice(1)] = decodeURIComponent(path[i]!);
-    else if (seg !== path[i]) return null;
-  }
-  return params;
 }
 
 export function createApp(deps: AppDeps): App {
@@ -161,6 +137,8 @@ export function createApp(deps: AppDeps): App {
     return new Response(body, { headers: { "content-type": entry.type } });
   }
 
+  const router = createRouter(routes);
+
   return {
     async handle(req: Request): Promise<Response> {
       const url = new URL(req.url);
@@ -168,13 +146,7 @@ export function createApp(deps: AppDeps): App {
         const ui = await serveUi(url.pathname);
         if (ui) return ui;
       }
-      const path = url.pathname.split("/").filter(Boolean);
-      for (const route of routes) {
-        if (route.method !== req.method) continue;
-        const params = matchParams(route.segments, path);
-        if (params) return route.handler(req, { params });
-      }
-      return errorResponse("not_found", "No such endpoint", 404);
+      return router.handle(req);
     },
   };
 }

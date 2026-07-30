@@ -97,6 +97,13 @@ describe("served runtime (T100)", () => {
     expect(wrongMethod.status).toBe(404);
   });
 
+  it("fails closed with the generic 404 for malformed dynamic path encoding", async () => {
+    const res = await fetch(`${base}/review/packages/%E0%A4%A`);
+    expect(res.status).toBe(404);
+    const body = (await res.json()) as { error: { code: string } };
+    expect(body.error.code).toBe("not_found");
+  });
+
   it("keeps the webhook fail-closed over HTTP (bad signature -> 401)", async () => {
     const res = await fetch(`${base}/webhooks/instantly`, {
       method: "POST",

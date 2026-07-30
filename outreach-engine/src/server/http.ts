@@ -8,7 +8,7 @@
  */
 
 import { createServer, type Server, type IncomingMessage } from "node:http";
-import type { App } from "./app.js";
+import type { App } from "./router.js";
 import { logger } from "@/lib/logger.js";
 
 async function readBody(req: IncomingMessage): Promise<Buffer> {
