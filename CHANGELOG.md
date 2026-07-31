@@ -26,6 +26,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - De-symmetrized the Framework section and switched numerals to solid blue
   (design review FINDING-001).
 
+## [0.1.3] - 2026-07-31
+
+### Changed
+
+- Updated Next.js and its ESLint integration to 16.2.12, with locked PostCSS
+  and Sharp versions for the production website dependency update.
+
 ## [0.1.2] - 2026-07-26
 
 ### Fixed
