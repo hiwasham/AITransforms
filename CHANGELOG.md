@@ -26,6 +26,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - De-symmetrized the Framework section and switched numerals to solid blue
   (design review FINDING-001).
 
+## [0.1.4] - 2026-08-02
+
+### Added
+
+- Login-protected outreach review dashboard with persistent CSV imports,
+  keyboard-first approve/reject/next actions, rejection-reason tags, and a
+  visible simulation-only boundary that cannot construct sending integrations.
+- Hardened systemd, Infisical, backup, restore, rollback, and smoke-test
+  artifacts for a private-first Finland deployment behind Tailscale Funnel.
+- Unit, contract, integration, browser-client, and restart-durability coverage
+  for authentication, HTTP limits, audit events, review state, and failure paths.
+
+### Fixed
+
+- Malformed CSV quoting now preserves later rows; missing-company prospects stay
+  visible with stable deduplication; invalid JSON mutation bodies return fixed
+  400 responses instead of server errors.
+- Failed dashboard actions stay on the current prospect, expired sessions return
+  to login, and imported non-HTTPS links remain inert in the browser.
+- Safe audit events now cover login and mutation failures without retaining raw
+  credentials, cookies, bootstrap tokens, or prospect content.
+
 ## [0.1.3] - 2026-07-31
 
 ### Changed

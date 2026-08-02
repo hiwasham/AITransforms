@@ -1,0 +1,41 @@
+#!/bin/sh
+set -eu
+
+fail() {
+  printf '%s\n' "aitransforms-outreach: $1" >&2
+  exit 1
+}
+
+[ -n "${CREDENTIALS_DIRECTORY:-}" ] || fail "systemd credentials unavailable"
+[ "${INFISICAL_PROJECT_ID:-}" != "@INFISICAL_PROJECT_ID@" ] || fail "Infisical project ID not configured"
+[ "${INFISICAL_ENVIRONMENT:-}" != "@INFISICAL_ENVIRONMENT@" ] || fail "Infisical environment not configured"
+[ "${INFISICAL_SECRET_PATH:-}" != "@INFISICAL_SECRET_PATH@" ] || fail "Infisical secret path not configured"
+
+credential() {
+  credential_file="$CREDENTIALS_DIRECTORY/$1"
+  [ -r "$credential_file" ] || fail "required encrypted credential is unavailable"
+  credential_value=$(/usr/bin/tr -d '\r\n' < "$credential_file")
+  [ -n "$credential_value" ] || fail "required encrypted credential is empty"
+  printf '%s' "$credential_value"
+}
+
+INFISICAL_UNIVERSAL_AUTH_CLIENT_ID=$(credential infisical-client-id)
+INFISICAL_UNIVERSAL_AUTH_CLIENT_SECRET=$(credential infisical-client-secret)
+export INFISICAL_UNIVERSAL_AUTH_CLIENT_ID INFISICAL_UNIVERSAL_AUTH_CLIENT_SECRET
+
+INFISICAL_BIN=$(command -v infisical) || fail "Infisical CLI is not installed"
+INFISICAL_TOKEN=$(
+  "$INFISICAL_BIN" login --method=universal-auth --silent --plain
+) || fail "Infisical Universal Auth failed"
+unset INFISICAL_UNIVERSAL_AUTH_CLIENT_ID INFISICAL_UNIVERSAL_AUTH_CLIENT_SECRET
+[ -n "$INFISICAL_TOKEN" ] || fail "Infisical returned an empty access token"
+export INFISICAL_TOKEN
+
+exec 9>/var/lib/aitransforms-outreach/writer.lock
+/usr/bin/flock -n 9 || fail "another dashboard writer is already running"
+
+exec "$INFISICAL_BIN" run \
+  --projectId="$INFISICAL_PROJECT_ID" \
+  --env="$INFISICAL_ENVIRONMENT" \
+  --path="$INFISICAL_SECRET_PATH" \
+  -- /usr/bin/env -u INFISICAL_TOKEN /usr/bin/npm run start:dashboard

@@ -1,0 +1,72 @@
+#!/bin/sh
+set -eu
+
+service_name=aitransforms-outreach.service
+data_root=/var/lib/aitransforms-outreach
+backup_root=/var/backups/aitransforms-outreach
+lock_file=/run/lock/aitransforms-outreach-backup.lock
+writer_lock_file=$data_root/writer.lock
+
+[ "$(id -u)" -eq 0 ] || {
+  printf '%s\n' "backup must run as root" >&2
+  exit 1
+}
+
+/usr/bin/install -d -o root -g root -m 0700 "$backup_root"
+exec 8>"$lock_file"
+/usr/bin/flock -n 8 || {
+  printf '%s\n' "another outreach backup is running" >&2
+  exit 1
+}
+
+was_active=false
+if /usr/bin/systemctl is-active --quiet "$service_name"; then
+  was_active=true
+  /usr/bin/systemctl stop "$service_name"
+fi
+
+restart_service() {
+  if [ "$was_active" = true ]; then
+    /usr/bin/systemctl start "$service_name"
+  fi
+}
+
+tmp_archive=
+cleanup() {
+  [ -z "$tmp_archive" ] || /usr/bin/rm -- "$tmp_archive"
+  restart_service
+}
+trap cleanup EXIT HUP INT TERM
+
+if /usr/bin/systemctl is-active --quiet "$service_name"; then
+  printf '%s\n' "service did not stop; refusing inconsistent backup" >&2
+  exit 1
+fi
+[ -d "$data_root/pglite" ] || {
+  printf '%s\n' "PGlite data directory is missing" >&2
+  exit 1
+}
+
+exec 9>"$writer_lock_file"
+/usr/bin/flock -n 9 || {
+  printf '%s\n' "another dashboard writer is running" >&2
+  exit 1
+}
+
+backup_id="outreach-$(date -u +%Y%m%dT%H%M%SZ)"
+archive="$backup_root/$backup_id.tar.gz"
+tmp_archive=$(/usr/bin/mktemp "$backup_root/.${backup_id}.XXXXXX")
+/usr/bin/tar --acls --xattrs --numeric-owner -C "$data_root" -czf "$tmp_archive" pglite
+/usr/bin/chmod 0600 "$tmp_archive"
+/usr/bin/tar -tzf "$tmp_archive" >/dev/null
+/usr/bin/ln "$tmp_archive" "$archive"
+/usr/bin/rm -- "$tmp_archive"
+tmp_archive=
+
+/usr/bin/find "$backup_root" -maxdepth 1 -type f -name 'outreach-*.tar.gz' \
+  -printf '%T@ %p\n' | /usr/bin/sort -rn | /usr/bin/tail -n +8 | \
+  /usr/bin/cut -d ' ' -f 2- | while IFS= read -r old_archive; do
+    [ -n "$old_archive" ] && /usr/bin/rm -- "$old_archive"
+  done
+
+printf '%s\n' "$backup_id"
