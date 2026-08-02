@@ -20,7 +20,7 @@ Environment=OUTREACH_RUNTIME_MODE=dashboard
 Environment=OUTREACH_DISPATCH_MODE=mock
 Environment=OUTREACH_RELEASE_SHA=@RELEASE_SHA@
 Environment=OUTREACH_DB_DATA_DIR=/var/lib/aitransforms-outreach/pglite
-Environment=OUTREACH_PUBLIC_ORIGIN=https://finland-freedom1-89-167-19-64.tail0dc61e.ts.net:10000
+Environment=OUTREACH_PUBLIC_ORIGIN=https://finland-freedom1-89-167-19-64.tail0dc61e.ts.net:3111
 Environment=OUTREACH_PORT=3110
 Environment=INFISICAL_API_URL=http://100.116.105.2:8080
 Environment=INFISICAL_DISABLE_UPDATE_CHECK=true
