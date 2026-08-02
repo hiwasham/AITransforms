@@ -31,6 +31,15 @@ npm run test
 npm run build
 ```
 
+CI also verifies the isolated outreach dashboard from its own package root:
+
+```bash
+cd outreach-engine
+npm ci
+npm run typecheck
+npm test
+```
+
 ## Test layers
 
 - **Unit / component tests** — colocated next to the component as
@@ -39,12 +48,18 @@ npm run build
   This is where the bulk of coverage lives for a static site like this.
 - **Integration** — render a component together with its real children
   (the Header tests render the real `LanguageSwitcher` / `Wordmark`).
-- **E2E** — not set up yet. If user-flow coverage is needed later, Playwright
-  is the natural fit and can drive `npm run dev`.
+- **Outreach dashboard unit / contract / integration tests** — live under
+  `outreach-engine/tests/`. They cover authentication, the review API, the
+  browser client, HTTP limits, persistence across restart, and the dashboard's
+  mock-only isolation boundary.
+- **Website E2E** — not set up yet. If user-flow coverage is needed later,
+  Playwright is the natural fit and can drive `npm run dev`.
 
 ## Conventions
 
 - File naming: `<Component>.test.tsx` colocated with the component.
+- Dashboard tests are grouped by layer under `outreach-engine/tests/unit/`,
+  `contract/`, and `integration/`.
 - Assert real behavior, not existence. Prefer `getByRole` / `getByText` and
   concrete attribute assertions over `toBeDefined()`.
 - One `describe` per component; one `it` per behavior.
