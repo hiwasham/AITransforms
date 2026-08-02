@@ -21,8 +21,10 @@ version and changelog, and opens the PR.
 4. Squashes work-in-progress commits into clean, reviewable commits.
 5. Opens a pull request against `main`.
 
-Merging the PR to `main` triggers the Vercel production deploy. Other branches get
-automatic Vercel preview URLs (also surfaced in the PR checks).
+Merging the PR to `main` triggers the website's Vercel production deploy. Other
+branches get automatic Vercel preview URLs (also surfaced in the PR checks).
+The outreach dashboard is released separately to the Finland VPS after merge;
+follow its [private-first deployment guide](../outreach-engine/ops/README.md).
 
 ## Verify gate
 
@@ -33,6 +35,15 @@ locally first:
 npm run build        # Next.js static build (Turbopack)
 npm run lint         # ESLint
 npx tsc --noEmit     # TypeScript typecheck
+```
+
+Changes under `outreach-engine/` must also pass its independent CI gate:
+
+```bash
+cd outreach-engine
+npm ci
+npm run typecheck
+npm test
 ```
 
 ## Versioning
@@ -53,6 +64,8 @@ npx tsc --noEmit     # TypeScript typecheck
 
 ## Out of scope for `/ship`
 
-No environment variables or Vercel build overrides are required. The site is fully
-static with no backend, so there are no migrations, secrets, or post-deploy steps
-to coordinate.
+The website requires no environment variables or Vercel build overrides. The
+outreach dashboard is a separate long-running service with runtime secrets,
+persistent PGlite data, backups, restore rehearsal, and post-merge smoke checks;
+it must not be deployed to Vercel. Those steps are owned by the
+[dashboard operations guide](../outreach-engine/ops/README.md).
