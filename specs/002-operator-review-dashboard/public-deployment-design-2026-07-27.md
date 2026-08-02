@@ -37,8 +37,8 @@ The only operator in the first release is Hiwa. The narrowest useful release is:
 4. Persistent PGlite storage on the Finland VPS.
 5. No Telegram, generation, provider webhook, prospect, or dispatch route registered on the public listener. The runtime refuses to start unless configured as `dashboard` + `mock`.
 
-The dashboard Node process uses loopback port `3110`. Tailscale Funnel remains
-on public HTTPS port `10000`; the two ports are intentionally separate and
+The dashboard Node process uses loopback port `3110`. Tailscale Funnel uses
+the separate public HTTPS port `3111`; the two ports are intentionally separate and
 must be revalidated during host preflight.
 
 ## Constraints
@@ -187,16 +187,16 @@ Logs record authentication and review audit metadata without the submitted crede
 
 ## Funnel Preflight and Rollback Gate
 
-Observed state before implementation: Tailscale `1.98.10`; an existing public Funnel listener at `https://finland-freedom1-89-167-19-64.tail0dc61e.ts.net:443` proxies to `http://127.0.0.1:20128` and must remain byte-for-byte equivalent after normalized comparison. Port `8443` is occupied by xray. The dashboard uses loopback port `3110` and Funnel HTTPS port `10000`; both must be revalidated before writes. Tailnet policy permits ports `443`, `8443`, and `10000`; port `10000` is the selected dashboard listener.
+Observed state before implementation on 2026-08-02: Tailscale `1.98.10`; the public Funnel listeners are `https://finland-freedom1-89-167-19-64.tail0dc61e.ts.net:443` (proxying to `http://127.0.0.1:20128`) and `:8765` (proxying to `http://127.0.0.1:8765`), and both must remain byte-for-byte equivalent after normalized comparison. Port `8443` is occupied by xray. Port `:10000` is a tailnet-only GBrain proxy to `http://127.0.0.1:18790` and must not become public or be replaced. The dashboard uses loopback port `3110` and the separate Funnel HTTPS port `3111`; both must be revalidated before writes. The existing public high-port listener proves the host supports non-default Funnel ports, but policy permission for `:3111` remains a fail-closed preflight requirement.
 
 Before enabling ingress:
 
 1. Capture timestamped `tailscale serve status --json`, `tailscale funnel status`, active listeners, installed Tailscale/systemd versions, encrypted-credential capability, and the relevant unit state.
 2. Prove `systemd-creds` host-bound encrypt/decrypt works and validate the installed Infisical CLI Universal Auth flow without leaking values to process arguments, persistent files, or journald. Failure blocks this deployment mechanism.
-3. Re-verify loopback port `3110` and Funnel port `10000` are free/allowed for this release. If either is unavailable, stop and revise the design; do not reuse or replace an existing endpoint. Confirm xray still owns `8443` and do not modify it.
-4. Read the node's canonical Tailscale DNS name from local status JSON and deterministically construct `https://<canonical-dns-name>:10000` as `OUTREACH_PUBLIC_ORIGIN` before starting the production-configured service. Confirm the later Funnel-reported origin matches exactly.
+3. Re-verify loopback port `3110` and Funnel port `3111` are free/allowed for this release. If either is unavailable, stop and revise the design; do not reuse or replace an existing endpoint. Confirm xray still owns `8443` and GBrain still owns tailnet-only `:10000`; do not modify either.
+4. Read the node's canonical Tailscale DNS name from local status JSON and deterministically construct `https://<canonical-dns-name>:3111` as `OUTREACH_PUBLIC_ORIGIN` before starting the production-configured service. Confirm the later Funnel-reported origin matches exactly.
 5. Start the dashboard on loopback with the final canonical origin and pass local login/auth/data/restart checks using explicit matching/mismatching Origin headers.
-6. Normalize the captured existing Serve endpoint definitions by listener, path, proxy target, and exposure mode. Add only the new `:10000` Funnel entry and verify the normalized pre-existing definitions remain unchanged, including the existing public `:443 -> 127.0.0.1:20128` mapping; ignore output ordering and incidental status fields.
+6. Normalize the captured existing Serve endpoint definitions by listener, path, proxy target, and exposure mode. Add only the new `:3111` Funnel entry and verify the normalized pre-existing definitions remain unchanged, including the existing public `:443 -> 127.0.0.1:20128` mapping and tailnet-only `:10000 -> 127.0.0.1:18790` mapping; ignore output ordering and incidental status fields.
 7. Verify the reported public URL from a browser and confirm it exactly matches `OUTREACH_PUBLIC_ORIGIN`.
 8. Exercise rollback by removing only the new entry, confirm normalized prior endpoints remain unchanged, then re-add the verified entry.
 

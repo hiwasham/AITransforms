@@ -33,7 +33,7 @@ describe("dashboard authentication config", () => {
       OUTREACH_DISPATCH_MODE: "mock",
       OUTREACH_DB_DATA_DIR: "/var/lib/aitransforms-outreach/pglite",
       OUTREACH_PUBLIC_ORIGIN:
-        "https://finland-freedom1-89-167-19-64.tail0dc61e.ts.net:10000",
+        "https://finland-freedom1-89-167-19-64.tail0dc61e.ts.net:3111",
       OUTREACH_OPERATOR_PASSWORD: password,
       OUTREACH_SESSION_SIGNING_KEY: signingSecret,
       OUTREACH_RELEASE_SHA: "b".repeat(40),
@@ -46,7 +46,7 @@ describe("dashboard authentication config", () => {
     );
     expect(config.signingKey).toEqual(Buffer.alloc(32, 9));
     expect(config.publicOrigin).toBe(
-      "https://finland-freedom1-89-167-19-64.tail0dc61e.ts.net:10000",
+      "https://finland-freedom1-89-167-19-64.tail0dc61e.ts.net:3111",
     );
     expect(config.dbDataDir).toBe("/var/lib/aitransforms-outreach/pglite");
     expect(config.releaseSha).toBe("b".repeat(40));
