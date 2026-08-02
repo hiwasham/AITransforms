@@ -115,9 +115,10 @@ a public browser. It does not expand the review feature itself. The public
 runtime is a dedicated dashboard-only composition of selected existing
 review handlers, protected by one password-only operator session and served
 from the Finland VPS through Tailscale Funnel on the selected public HTTPS
-listener `:10000`. The pre-existing public `:443 -> 127.0.0.1:20128` Funnel
-mapping and the xray listener on `:8443` are out of scope and must remain
-unchanged. The dashboard runtime cannot construct or expose generation,
+listener `:3111`. The pre-existing public `:443 -> 127.0.0.1:20128` Funnel
+mapping, tailnet-only GBrain `:10000 -> 127.0.0.1:18790` mapping, and the xray
+listener on `:8443` are out of scope and must remain unchanged. The dashboard
+runtime cannot construct or expose generation,
 prospect, Telegram, webhook, internal-dispatch, or real dispatch capabilities.
 
 The complete security, persistence, secret-delivery, backup, rollback, and
@@ -128,7 +129,7 @@ engine composition, this amendment supersedes that assumption for the
 public dashboard runtime only.
 
 The dashboard process binds to `127.0.0.1:3110`; Tailscale Funnel exposes the
-public HTTPS listener on `:10000`.
+public HTTPS listener on `:3111`.
 
 
 ## User Scenarios & Testing *(mandatory)*
@@ -547,7 +548,7 @@ contains exactly the approved set with decisions and substituted messages.
 - **SC-011 (durability)**: The systemd service binds only to loopback,
   survives stop/start with real records intact, and a named backup restores
   successfully into a separate PGlite directory.
-- **SC-012 (safe ingress)**: Adding and removing only the new `:10000` Funnel
+- **SC-012 (safe ingress)**: Adding and removing only the new `:3111` Funnel
   listener leaves every normalized pre-existing Serve definition unchanged,
   including the public `:443 -> 127.0.0.1:20128` mapping, and the rollback
   drill restores the verified state.
