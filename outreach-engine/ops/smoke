@@ -1,0 +1,31 @@
+#!/bin/sh
+set -eu
+
+base_url=${1:-http://127.0.0.1:3110}
+
+status() {
+  method=$1
+  path=$2
+  /usr/bin/curl --silent --show-error --output /dev/null \
+    --write-out '%{http_code}' --request "$method" "$base_url$path"
+}
+
+health_body=$(/usr/bin/curl --fail --silent --show-error "$base_url/healthz")
+[ "$health_body" = '{"status":"ok"}' ] || {
+  printf '%s\n' "unexpected health response" >&2
+  exit 1
+}
+[ "$(status GET /)" = 303 ] || {
+  printf '%s\n' "dashboard navigation did not require login" >&2
+  exit 1
+}
+[ "$(status GET /ui/review.js)" = 401 ] || {
+  printf '%s\n' "dashboard asset was not protected" >&2
+  exit 1
+}
+[ "$(status GET /prospects)" = 404 ] || {
+  printf '%s\n' "forbidden engine route is registered" >&2
+  exit 1
+}
+
+printf '%s\n' "dashboard smoke passed: $base_url"
