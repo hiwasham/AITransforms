@@ -1,0 +1,233 @@
+<!doctype html>
+<!--
+  Review dashboard UI (M009, specs/002-operator-review-dashboard MVP-0).
+  One prospect at a time; keyboard-first (A approve, R reject, N next,
+  ArrowLeft undo/back). All dynamic content rendered via textContent —
+  never innerHTML (plan 002 Security Considerations).
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Prospect Review</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --muted: #666;
+    --approve: #0a7d33;
+    --reject: #b3261e;
+    --flag-bg: #fff3cd;
+    --flag-ink: #7a5c00;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+    background: #fafafa;
+    font-size: 20px;
+    line-height: 1.55;
+  }
+  #safety-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 9px 20px;
+    background: #5a3200;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+  }
+  #btn-logout {
+    padding: 4px 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background: transparent;
+    color: #fff;
+    font-size: 14px;
+  }
+  main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 24px 32px 140px;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 4px 0 16px;
+    border-bottom: 2px solid #e5e5e5;
+    margin-bottom: 24px;
+  }
+  #progress { font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  #keys { color: var(--muted); font-size: 15px; }
+  kbd {
+    background: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 1px 7px;
+    font-size: 14px;
+    font-family: inherit;
+  }
+  #company { font-size: 44px; font-weight: 800; margin: 0; line-height: 1.15; }
+  #contact { font-size: 26px; color: var(--muted); margin: 4px 0 0; font-weight: 600; }
+  #flag {
+    display: none;
+    background: var(--flag-bg);
+    color: var(--flag-ink);
+    font-weight: 700;
+    font-size: 17px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    margin-top: 14px;
+  }
+  section { margin-top: 26px; }
+  section h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin: 0 0 6px;
+  }
+  section p { margin: 0; white-space: pre-wrap; }
+  #message-body {
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 8px;
+    padding: 18px 20px;
+  }
+  #bfv-link { font-size: 17px; word-break: break-all; }
+  #decision-badge {
+    display: none;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-top: 14px;
+  }
+  #decision-badge.approved { display: inline-block; background: #e6f4ea; color: var(--approve); }
+  #decision-badge.rejected { display: inline-block; background: #fce8e6; color: var(--reject); }
+  #reason-hint {
+    display: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--muted);
+    margin-top: 14px;
+    margin-left: 10px;
+  }
+  footer {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: #fff;
+    border-top: 2px solid #e5e5e5;
+    padding: 14px 32px;
+  }
+  .actions {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+  }
+  button {
+    font-size: 19px;
+    font-weight: 700;
+    padding: 12px 26px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+  }
+  #btn-approve { background: var(--approve); color: #fff; }
+  #btn-reject { background: var(--reject); color: #fff; }
+  #btn-next { background: #fff; color: var(--ink); border-color: #bbb; }
+  #btn-back { background: none; color: var(--muted); border: none; font-weight: 600; }
+  #error {
+    display: none;
+    background: #fce8e6;
+    color: var(--reject);
+    font-weight: 700;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-left: auto;
+  }
+  .state-screen { text-align: center; padding: 80px 0; display: none; }
+  .state-screen h1 { font-size: 36px; }
+  .state-screen p { color: var(--muted); }
+  #screen-review { display: none; }
+</style>
+</head>
+<body>
+<div id="safety-bar" role="status">
+  <span>SIMULATION MODE — nothing will be sent</span>
+  <form method="post" action="/logout">
+    <button id="btn-logout" type="submit">Log out</button>
+  </form>
+</div>
+<main>
+  <header>
+    <div id="progress">– / –</div>
+    <div id="keys">
+      <kbd>A</kbd> approve&ensp;<kbd>R</kbd> reject&ensp;<kbd>N</kbd> next&ensp;<kbd>&larr;</kbd> back
+      <br /><span id="reason-keys">after a reject: <kbd>G</kbd> generic&ensp;<kbd>F</kbd> false claim&ensp;<kbd>B</kbd> bad fit&ensp;<kbd>C</kbd> creepy&ensp;<kbd>O</kbd> other</span>
+    </div>
+  </header>
+
+  <div id="screen-empty" class="state-screen">
+    <h1>No prospects loaded</h1>
+    <p>Import a first-100 CSV first:</p>
+    <p><code>curl -X POST localhost:3110/review/imports -H 'content-type: application/json' \
+      -d "{\"sourceName\":\"first-100.csv\",\"csv\":\"$(cat outreach-engine/out/first-100-*.csv)\"}"</code></p>
+  </div>
+
+  <div id="screen-done" class="state-screen">
+    <h1>Review complete 🎉</h1>
+    <p id="done-counts"></p>
+  </div>
+
+  <div id="screen-review">
+    <h1 id="company"></h1>
+    <p id="contact"></p>
+    <div id="flag"></div>
+    <span id="decision-badge"></span>
+    <span id="reason-hint"></span>
+
+    <section>
+      <h2>Research</h2>
+      <p id="research"></p>
+    </section>
+
+    <section>
+      <h2>Pain point</h2>
+      <p id="pain"></p>
+    </section>
+
+    <section>
+      <h2>Message</h2>
+      <p id="message-body"></p>
+    </section>
+
+    <section>
+      <h2>Telegram BFV link</h2>
+      <p><a id="bfv-link" target="_blank" rel="noopener noreferrer"></a></p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="actions">
+    <button id="btn-approve" type="button">A — Approve</button>
+    <button id="btn-reject" type="button">R — Reject</button>
+    <button id="btn-next" type="button">N — Next</button>
+    <button id="btn-back" type="button">&larr; Back</button>
+    <div id="error"></div>
+  </div>
+</footer>
+
+<script src="/ui/review.js"></script>
+</body>
+</html>
