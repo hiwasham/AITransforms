@@ -98,6 +98,24 @@ describe("public dashboard HTTP contract", () => {
     expect(response.headers.get("cache-control")).toBe("no-store");
   });
 
+  it("accepts a direct browser form login when the proxy omits Origin", async () => {
+    const response = await app().handle(
+      new Request(`${ORIGIN}/login`, {
+        method: "POST",
+        headers: {
+          "content-type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams({ password: PASSWORD }),
+      }),
+    );
+
+    expect(response.status).toBe(303);
+    expect(response.headers.get("location")).toBe("/");
+    expect(response.headers.get("set-cookie")).toMatch(
+      /^__Host-outreach_session=[A-Za-z0-9_.-]+; Path=\/; HttpOnly; Secure; SameSite=Strict; Max-Age=43200$/,
+    );
+  });
+
   it("records safe login outcomes without credentials or cookies", async () => {
     const requestId = "11111111-1111-4111-8111-111111111111";
     const response = await app().handle(
@@ -160,15 +178,6 @@ describe("public dashboard HTTP contract", () => {
     };
 
     const cases = [
-      {
-        response: await submit(`password=${PASSWORD}`, {
-          "content-type": "application/x-www-form-urlencoded",
-        }),
-        status: 403,
-        code: "forbidden",
-        message: "Request forbidden",
-        outcome: "origin_rejected",
-      },
       {
         response: await submit(`password=${PASSWORD}`, {
           ...formHeaders,
@@ -318,6 +327,12 @@ describe("public dashboard HTTP contract", () => {
     );
     expect(crossSite.status).toBe(403);
     expect(crossSite.headers.get("set-cookie")).toBeNull();
+
+    const missingOrigin = await app().handle(
+      new Request(`${ORIGIN}/logout`, { method: "POST" }),
+    );
+    expect(missingOrigin.status).toBe(403);
+    expect(missingOrigin.headers.get("set-cookie")).toBeNull();
   });
 
   it("checks authentication before origin and JSON type on review mutations", async () => {
