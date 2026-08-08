@@ -33,7 +33,7 @@
       radial-gradient(ellipse 720px 520px at 6% 8%, rgba(46,143,70,0.06), transparent 60%),
       radial-gradient(ellipse 680px 480px at 94% 24%, rgba(73,188,124,0.05), transparent 60%);
   }
-  .wrap{max-width:1220px;margin:0 auto;padding:36px 28px 80px;position:relative;z-index:1;}
+  .wrap{max-width:1220px;margin:0 auto;padding:36px 28px 80px;padding:max(36px,env(safe-area-inset-top)) max(28px,env(safe-area-inset-right)) max(80px,env(safe-area-inset-bottom)) max(28px,env(safe-area-inset-left));position:relative;z-index:1;}
 
   header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:24px;flex-wrap:wrap;gap:16px;}
   .brand{display:flex;align-items:center;gap:12px;}
