@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, type FormEvent } from 'react';
+import { sha256 } from 'js-sha256';
 
 interface PasswordGateProps {
   children: React.ReactNode;
@@ -29,15 +30,8 @@ export default function PasswordGate({
     setIsLoading(false);
   }, [correctPasswordHash, storageKey]);
 
-  const hashPassword = async (pwd: string): Promise<string> => {
-    if (typeof window === 'undefined' || !window.crypto || !window.crypto.subtle) {
-      throw new Error('Crypto API not available');
-    }
-    const encoder = new TextEncoder();
-    const data = encoder.encode(pwd);
-    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-    const hashArray = Array.from(new Uint8Array(hashBuffer));
-    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+  const hashPassword = (pwd: string): string => {
+    return sha256(pwd);
   };
 
   const handleSubmit = async (e: FormEvent) => {
@@ -50,7 +44,10 @@ export default function PasswordGate({
     }
 
     try {
-      const hash = await hashPassword(password);
+      const hash = hashPassword(password);
+      console.log('Generated hash:', hash);
+      console.log('Expected hash:', correctPasswordHash);
+      console.log('Match:', hash === correctPasswordHash);
 
       if (hash === correctPasswordHash) {
         sessionStorage.setItem(storageKey, hash);
@@ -60,7 +57,8 @@ export default function PasswordGate({
         setPassword('');
       }
     } catch (err) {
-      setError('Authentication error');
+      console.error('Auth error:', err);
+      setError('Authentication error: ' + (err instanceof Error ? err.message : 'Unknown'));
       setPassword('');
     }
   };
