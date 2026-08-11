@@ -26,6 +26,37 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - De-symmetrized the Framework section and switched numerals to solid blue
   (design review FINDING-001).
 
+## [0.1.4.1] - 2026-08-11
+
+### Added
+
+- Warm-outreach v2 dashboard (`warm-outreach/lead-dashboard-v2.html`):
+  single-file HTML/CSS/JS with a sequential funnel (built → written → sent
+  → replied → booked), filterable lead table, slide-out detail panel with
+  stage advance/regress and notes, localStorage-backed persistence
+  (`warm-outreach-v2`), JSON export, and a seed of the five active leads
+  that loads only when no saved state exists. Mirror of the dashboard's
+  full build specification lives at
+  `warm-outreach/prompts/v2-dashboard-build.md` for future iteration.
+
+### Changed
+
+- Visual polish on the warm-outreach v2 dashboard: visible keyboard focus,
+  44px touch targets, safe-area padding for notch devices, balanced headline
+  text, and active/pressed states on the primary buttons
+  (design findings 001, 005, 007, 008).
+
+### Fixed
+
+- Pre-landing review fixes for the warm-outreach v2 dashboard: keyboard
+  focus now visible on search, status filter, stage picker, notes, delete,
+  and close buttons; icon-only buttons carry `aria-label`s; the brand
+  subtitle and progress bar read from the real lead count (no more
+  contradiction after delete, no NaN% on empty state); `sentDate` is
+  cleared when a lead regresses off the `sent` stage; lead ids in row
+  metadata are numeric-coerced and outbound links pass a scheme allowlist
+  before escaping.
+
 ## [0.1.4] - 2026-08-02
 
 ### Added
