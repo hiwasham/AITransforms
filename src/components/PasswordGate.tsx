@@ -20,14 +20,19 @@ export default function PasswordGate({
 
   useEffect(() => {
     // Check if already authenticated in this session
-    const token = sessionStorage.getItem(storageKey);
-    if (token === correctPasswordHash) {
-      setIsAuthenticated(true);
+    if (typeof window !== 'undefined') {
+      const token = sessionStorage.getItem(storageKey);
+      if (token === correctPasswordHash) {
+        setIsAuthenticated(true);
+      }
     }
     setIsLoading(false);
   }, [correctPasswordHash, storageKey]);
 
   const hashPassword = async (pwd: string): Promise<string> => {
+    if (typeof window === 'undefined' || !window.crypto || !window.crypto.subtle) {
+      throw new Error('Crypto API not available');
+    }
     const encoder = new TextEncoder();
     const data = encoder.encode(pwd);
     const hashBuffer = await crypto.subtle.digest('SHA-256', data);
@@ -39,13 +44,23 @@ export default function PasswordGate({
     e.preventDefault();
     setError('');
 
-    const hash = await hashPassword(password);
+    if (typeof window === 'undefined') {
+      setError('Client-side environment required');
+      return;
+    }
 
-    if (hash === correctPasswordHash) {
-      sessionStorage.setItem(storageKey, hash);
-      setIsAuthenticated(true);
-    } else {
-      setError('Incorrect password');
+    try {
+      const hash = await hashPassword(password);
+
+      if (hash === correctPasswordHash) {
+        sessionStorage.setItem(storageKey, hash);
+        setIsAuthenticated(true);
+      } else {
+        setError('Incorrect password');
+        setPassword('');
+      }
+    } catch (err) {
+      setError('Authentication error');
       setPassword('');
     }
   };
