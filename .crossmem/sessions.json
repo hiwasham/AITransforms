@@ -1,0 +1,83 @@
+[
+  {
+    "provider": "claude",
+    "ref": "/root/.claude/projects/-root-projects-AITransforms/a7bafb78-924c-4ac0-921d-84ea1299219d.jsonl",
+    "path": "/root/.claude/projects/-root-projects-AITransforms/a7bafb78-924c-4ac0-921d-84ea1299219d.jsonl",
+    "bytes": 1100981,
+    "modified": "2026-07-21T00:54:45.77Z",
+    "workspace": "/root/projects/AITransforms",
+    "title": "Redesign LeSar Holdings homepage"
+  },
+  {
+    "provider": "claude",
+    "ref": "/root/.claude/projects/-root-projects-AITransforms/9b37f198-a04b-4ac0-84a9-dc9d8a05aced.jsonl",
+    "path": "/root/.claude/projects/-root-projects-AITransforms/9b37f198-a04b-4ac0-84a9-dc9d8a05aced.jsonl",
+    "bytes": 9880734,
+    "modified": "2026-07-20T21:07:27.69443496Z",
+    "workspace": "/root/projects/AITransforms"
+  },
+  {
+    "provider": "claude",
+    "ref": "/root/.claude/projects/-root-projects-AITransforms/0f991445-12a1-49d8-8c6b-45a82a6c3e65.jsonl",
+    "path": "/root/.claude/projects/-root-projects-AITransforms/0f991445-12a1-49d8-8c6b-45a82a6c3e65.jsonl",
+    "bytes": 1413739,
+    "modified": "2026-07-20T18:06:37.722484631Z",
+    "workspace": "/root/projects/AITransforms"
+  },
+  {
+    "provider": "claude",
+    "ref": "/root/.claude/projects/-root-projects-AITransforms-projects-iranfluent/627360a3-25b8-46ae-a02c-e4137fd36b35.jsonl",
+    "path": "/root/.claude/projects/-root-projects-AITransforms-projects-iranfluent/627360a3-25b8-46ae-a02c-e4137fd36b35.jsonl",
+    "bytes": 27688,
+    "modified": "2026-07-20T09:54:06.312646138Z",
+    "workspace": "/root/projects/AITransforms/projects/iranfluent"
+  },
+  {
+    "provider": "claude",
+    "ref": "/root/.claude/projects/-root-projects-AITransforms/768b41f0-dfbd-4438-bc56-ae99cce43f91.jsonl",
+    "path": "/root/.claude/projects/-root-projects-AITransforms/768b41f0-dfbd-4438-bc56-ae99cce43f91.jsonl",
+    "bytes": 1313090,
+    "modified": "2026-07-18T15:03:47.334111775Z",
+    "workspace": "/root/projects/AITransforms"
+  },
+  {
+    "provider": "codex",
+    "ref": "/root/.codex/sessions/2026/07/18/rollout-2026-07-18T13-25-27-019f7567-3974-71a1-bbb7-502c2db753e7.jsonl",
+    "path": "/root/.codex/sessions/2026/07/18/rollout-2026-07-18T13-25-27-019f7567-3974-71a1-bbb7-502c2db753e7.jsonl",
+    "bytes": 263036,
+    "modified": "2026-07-18T13:27:32.157857844Z",
+    "workspace": "/root/projects/AITransforms"
+  },
+  {
+    "provider": "claude",
+    "ref": "/root/.claude/projects/-root-projects-AITransforms/c3896a41-8e00-422d-afa0-50f2377c63a5.jsonl",
+    "path": "/root/.claude/projects/-root-projects-AITransforms/c3896a41-8e00-422d-afa0-50f2377c63a5.jsonl",
+    "bytes": 1032573,
+    "modified": "2026-07-18T10:54:31.374Z",
+    "workspace": "/root/projects/AITransforms"
+  },
+  {
+    "provider": "codex",
+    "ref": "/root/.codex/sessions/2026/07/18/rollout-2026-07-18T01-32-52-019f72da-d6f0-7753-8f70-4373e6776a6b.jsonl",
+    "path": "/root/.codex/sessions/2026/07/18/rollout-2026-07-18T01-32-52-019f72da-d6f0-7753-8f70-4373e6776a6b.jsonl",
+    "bytes": 325454,
+    "modified": "2026-07-18T01:44:15.519056677Z",
+    "workspace": "/root/projects/AITransforms"
+  },
+  {
+    "provider": "claude",
+    "ref": "/root/.claude/projects/-root-projects-AITransforms/91d54e9b-0f4d-4ec1-9271-b54d76eda63c.jsonl",
+    "path": "/root/.claude/projects/-root-projects-AITransforms/91d54e9b-0f4d-4ec1-9271-b54d76eda63c.jsonl",
+    "bytes": 42234,
+    "modified": "2026-07-18T01:43:28.501656324Z",
+    "workspace": "/root/projects/AITransforms"
+  },
+  {
+    "provider": "claude",
+    "ref": "/root/.claude/projects/-root-projects-AITransforms/4e6c0357-5443-41b9-a19b-2dcaf59e6bd2.jsonl",
+    "path": "/root/.claude/projects/-root-projects-AITransforms/4e6c0357-5443-41b9-a19b-2dcaf59e6bd2.jsonl",
+    "bytes": 42305,
+    "modified": "2026-07-18T01:40:59.514917466Z",
+    "workspace": "/root/projects/AITransforms"
+  }
+]
