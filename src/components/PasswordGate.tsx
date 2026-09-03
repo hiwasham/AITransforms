@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, type FormEvent } from 'react';
+import { useState, useSyncExternalStore, type FormEvent } from 'react';
 import { sha256 } from 'js-sha256';
 
 interface PasswordGateProps {
@@ -9,26 +9,29 @@ interface PasswordGateProps {
   storageKey?: string;
 }
 
+// sessionStorage does not change underneath us in this tab, so there is nothing
+// to subscribe to.
+const NO_OP_SUBSCRIBE = () => () => {};
+
 export default function PasswordGate({
   children,
   correctPasswordHash,
   storageKey = 'auth-token'
 }: PasswordGateProps) {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const [isLoading, setIsLoading] = useState(true);
+  const [unlockedThisSession, setUnlockedThisSession] = useState(false);
 
-  useEffect(() => {
-    // Check if already authenticated in this session
-    if (typeof window !== 'undefined') {
-      const token = sessionStorage.getItem(storageKey);
-      if (token === correctPasswordHash) {
-        setIsAuthenticated(true);
-      }
-    }
-    setIsLoading(false);
-  }, [correctPasswordHash, storageKey]);
+  // Read the session token here rather than in an effect: the server and
+  // hydration snapshot is undefined, so mounting no longer cascades a render.
+  const storedToken = useSyncExternalStore(
+    NO_OP_SUBSCRIBE,
+    () => sessionStorage.getItem(storageKey),
+    () => undefined
+  );
+
+  const isLoading = storedToken === undefined;
+  const isAuthenticated = unlockedThisSession || storedToken === correctPasswordHash;
 
   const hashPassword = (pwd: string): string => {
     return sha256(pwd);
@@ -45,13 +48,10 @@ export default function PasswordGate({
 
     try {
       const hash = hashPassword(password);
-      console.log('Generated hash:', hash);
-      console.log('Expected hash:', correctPasswordHash);
-      console.log('Match:', hash === correctPasswordHash);
 
       if (hash === correctPasswordHash) {
         sessionStorage.setItem(storageKey, hash);
-        setIsAuthenticated(true);
+        setUnlockedThisSession(true);
       } else {
         setError('Incorrect password');
         setPassword('');
