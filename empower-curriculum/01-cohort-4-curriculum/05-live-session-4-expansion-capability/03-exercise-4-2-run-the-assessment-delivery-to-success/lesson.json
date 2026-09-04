@@ -1,0 +1,464 @@
+{
+  "id": 3391960,
+  "name": "Exercise 4.2: Run the Assessment (Delivery to Success)",
+  "status": "published",
+  "featured_media_enabled": false,
+  "download_featured_media": false,
+  "created_at": "2026-02-02T15:39:32.355Z",
+  "updated_at": "2026-02-02T21:47:59.975Z",
+  "comments_enabled": false,
+  "default_tab": "curriculum",
+  "enforce_featured_media_completion": false,
+  "autocomplete_on_featured_media_completion": true,
+  "dripped_at": null,
+  "is_dripped": true,
+  "needs_to_complete_previous_lesson": false,
+  "completed": false,
+  "notify_students_enabled": false,
+  "bookmark_id": null,
+  "serialized_rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Purpose",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Purpose"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To assess your organization’s performance in the delivery-to-success process, gauge the dependence on the owner, and identify areas for improvement. ",
+              "type": "text",
+              "circle_ios_fallback_text": "To assess your organization’s performance in the delivery-to-success process, gauge the dependence on the owner, and identify areas for improvement. "
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Instructions",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Instructions"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Copy and paste the prompt into a NEW chat within your Master Prompt project ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Rename the chat “Delivery to Success” (so you can easily find it later) ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Let Claude guide you through the questions. The more specific and honest you are, the more tailored and effective the guidance will be.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Claude will create an artifact as the output. Select “Copy to Project” to add the artifact to your project knowledge. ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://docs.google.com/document/d/130JlqKzDo6eQLeXve0yE9v54CSILlt1ahdnf4GSJp28/edit?tab=t.js66j44zz65u",
+            "color": "#2B2E33",
+            "label": "Access the Prompt",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Time to complete:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Time to complete:"
+            },
+            {
+              "text": " 10-15 minutes ",
+              "type": "text",
+              "circle_ios_fallback_text": " 10-15 minutes "
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Questions?",
+              "type": "text",
+              "circle_ios_fallback_text": "Questions?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the ",
+              "type": "text",
+              "circle_ios_fallback_text": "If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the "
+            },
+            {
+              "type": "entity",
+              "attrs": {
+                "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa"
+              },
+              "circle_ios_fallback_text": "#Discussion"
+            },
+            {
+              "text": " space. ",
+              "type": "text",
+              "circle_ios_fallback_text": " space. "
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "PurposeTo assess your organization’s performance in the delivery-to-success process, gauge the dependence on the owner, and identify areas for improvement. InstructionsTime to complete: 10-15 minutes Questions?If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the #Discussion space. ",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa": {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    },
+    "format": "post",
+    "community_members": [],
+    "entities": [
+      {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    ],
+    "group_mentions": [],
+    "polls": []
+  },
+  "rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Purpose",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Purpose"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To assess your organization’s performance in the delivery-to-success process, gauge the dependence on the owner, and identify areas for improvement. ",
+              "type": "text",
+              "circle_ios_fallback_text": "To assess your organization’s performance in the delivery-to-success process, gauge the dependence on the owner, and identify areas for improvement. "
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Instructions",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Instructions"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Copy and paste the prompt into a NEW chat within your Master Prompt project ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Rename the chat “Delivery to Success” (so you can easily find it later) ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Let Claude guide you through the questions. The more specific and honest you are, the more tailored and effective the guidance will be.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Claude will create an artifact as the output. Select “Copy to Project” to add the artifact to your project knowledge. ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://docs.google.com/document/d/130JlqKzDo6eQLeXve0yE9v54CSILlt1ahdnf4GSJp28/edit?tab=t.js66j44zz65u",
+            "color": "#2B2E33",
+            "label": "Access the Prompt",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Time to complete:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Time to complete:"
+            },
+            {
+              "text": " 10-15 minutes ",
+              "type": "text",
+              "circle_ios_fallback_text": " 10-15 minutes "
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Questions?",
+              "type": "text",
+              "circle_ios_fallback_text": "Questions?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the ",
+              "type": "text",
+              "circle_ios_fallback_text": "If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the "
+            },
+            {
+              "type": "entity",
+              "attrs": {
+                "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa"
+              },
+              "circle_ios_fallback_text": "#Discussion"
+            },
+            {
+              "text": " space. ",
+              "type": "text",
+              "circle_ios_fallback_text": " space. "
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "PurposeTo assess your organization’s performance in the delivery-to-success process, gauge the dependence on the owner, and identify areas for improvement. InstructionsTime to complete: 10-15 minutes Questions?If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the #Discussion space. ",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa": {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    },
+    "format": "post",
+    "community_members": [],
+    "entities": [
+      {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    ],
+    "group_mentions": [],
+    "polls": []
+  },
+  "chat_room_uuid": "90835de1-6c05-442b-91c8-de1d9d260387"
+}

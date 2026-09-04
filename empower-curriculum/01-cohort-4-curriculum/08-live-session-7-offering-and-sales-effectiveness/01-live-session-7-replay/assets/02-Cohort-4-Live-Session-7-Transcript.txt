@@ -1,0 +1,1177 @@
+Thank Welcome to another week with us here at Empower Labs. Today's session is the 7th of 12 and we're covering the O in Empower for Offering and Sales Excellence. 
+
+
+Before we get started, let's take a look at where we are in the timeline and see where we're going. 
+
+
+So with this session, things can really take off for you. It's where everything we've built so far starts to generate revenue. And of course, sales is the single most critical function in any business. 
+
+
+You can have the most streamlined operations, a highly skilled team, the smartest AI systems, but without the ability to convert prospects into paying customers. 
+
+
+None of those advantages really count. So this session is designed to address this by focusing on identifying your key opportunities, optimizing your sales process, and maximizing your team's effectiveness. 
+
+
+I am going to launch a poll, same poll as usual, just to check in and see where folks are at this point. 
+
+
+Here we go. So hopefully you've had the chance to run your financial performance management assessment, created your level one and two SOPs, created an interactive artifact with Claude and use Claude as your fractional CFO. 
+
+
+All right, looks like most folks are partially done, which is really good news. For the person who hasn't gotten started yet, You're always free to reach out to Josh and I if you're having any trouble. 
+
+
+Feel free to do that through Circle, through direct message. And here are the results. And congratulations to the person who is 100% completed. 
+
+
+Excellent news. And just out of curiosity, as you're sharing these results, I'd be curious to hear from maybe at least one of you. 
+
+
+But sometimes the The unit economics can be tricky. A lot of people might not know them or they struggle here a bit. I'd be curious if anybody wanted to share kind of how they handled that, whether it was, I'm not sure, just to keep the process moving. 
+
+
+You kind of gave it as much information as you had, just so Claude has context. But ultimately, there were a few things you weren't aware of. 
+
+
+Yeah, Jonas, I would love for at least one person to share kind of how you handled that, if it helps anybody else. 
+
+
+Yeah, not entirely sure if it does help anybody else. But in our particular case, actually, there was a lot of like, to be honest, we don't do any marketing, like zero, zero acquisition cost, which is great. 
+
+
+Yeah. But so cloud was like, yeah, I think we can skip most of it. But maybe let's try and let's work through it. And let's see. And cloud was really, really good in, you know, adjusting according to what's really necessary for me. 
+
+
+and for the business. And at some point in time, we actually got to a point where I was questioning a little bit. 
+
+
+I can't remember the exact question that I was on, but basically I said, you know what? I don't think this now really applies to our business right now. 
+
+
+Maybe we need to rephrase this or pick this up again at another time. And Claude really managed well. And I really tried to just trust the process and continue as good as I can with not a lot of details and numbers. 
+
+
+And it worked great, to be honest. I still managed to get to the end. Good. Well, thank you for sharing everyone's, as you all know, like everyone has their own experiences and you all have unique businesses. 
+
+
+So hopefully that was helpful for you all because you know, what was helpful for me when I really started doing this for business was the good part of the iterative process is exactly what Jonas went through in the sense that eventually it's actually really good, not only to like to do the assessment and get the foundation part of, of what you're doing, But it also shows you what Claude doesn't understand about your company, which is exactly why we do things the way that we do. 
+
+
+So thank you for sharing that, Jonas. We can kind of keep moving, Midori. All right. Okay, so looking at the three layers of business process, I want to show you how today's session fits within it. 
+
+
+We've previously been discussing these layers. Last week, we looked at the foundational layer, the enabling processes layer, and today we're at the customer lifecycle. 
+
+
+This is where we're directly generating revenue and serving our customers. And again, when we look at the six stages of the customer lifecycle that we've been working through, you'll see that we're now at lead to sale. 
+
+
+So out of today's sessions, we're hoping to cover four key areas. First is positioning your offer. So you're going to learn to define where your product or service fits in the market to compete on value and not price. 
+
+
+Next, we're generating leverage with sales calls. Josh will explain the groundwork needed before scaling a sales team and how to use AI to convert every sales call into valuable team-wide intelligence. 
+
+
+Third, we're increasing conversions. So we're looking at strategies using lead magnets and autoresponders to boost your conversion rates. 
+
+
+And finally, we're accelerating your proposal process. So we're looking at the ways AI can reduce proposal generation time from days to mere hours. 
+
+
+And so I think that's the overview. To kick things off, I'm going to hand it over to Josh to start with offer. Excellent. Thank you, Midori. Before we dive in, I'd I'd like to zoom out for a moment and just sort of remind you all kind of like where we are in the journey. 
+
+
+I know Midori just went over this session, but so far we've covered the first three letters of empower first focusing on what your business actually does and can it deliver value consistently and scale without massive reinvention. 
+
+
+Then we had marketing and brand equity, how value actually gets created and captured in the market. 
+
+
+And is there something distinctive about how you attract your prospects? And third, profitability metrics. Understanding systems for all business decisions that drive profitability and how can you improve it? 
+
+
+Each of those sections has helped you build context, not just for Claude, as mentioned, and for your master prompt, but for yourself. 
+
+
+You're building clarity around how your business actually works. And today we're gonna move to the O, which is offering and sales excellence. 
+
+
+So this sits between market to lead and delivery. It's the bridge between interest and commitment. It'll answer the question, once someone becomes a lead, how do we convert them into revenue in a predictable way? 
+
+
+And this matters whether you're a solo operator or you're running a large team. If you're solo, this will determine your cash flow and stability. 
+
+
+If you have a team, this determines predictability, scalability, and enterprise value for mature organizations. 
+
+
+So at the end of the day, the quality of your offer and your ability to shorten the distance between lead and commitment directly impacts how valuable your business is. 
+
+
+So if you can create a predictable planned revenue, everything changes. Cashflow will improve, confidence improves, and the overall value of the company rises. 
+
+
+And that's what we're kind of stepping into today. So lead to sale effectiveness is not just a sales topic. It's a business valuation topic. How well you convert leads into paying customers directly impacts what your business is worth. 
+
+
+So I'll break that down. First, predictable revenue generation. If you can reliably turn leads into revenue month after month, that creates stability. 
+
+
+Stability creates confidence and confidence increases valuations. A business with erratic sales is risky. A business with predictable conversion rates and consistent revenue is valuable. 
+
+
+Second, scalable sales process independent of owner involvement. If you're a solo operator, this means can revenue grow without you being personally involved in every deal? 
+
+
+If you have a team, it means can performance grow without relying on one superstar closer or one exceptional leader? 
+
+
+Can your team leads develop other leaders can result scale beyond a single individual. Businesses that depend on one person are very fragile. Businesses that run on process are valuable. 
+
+
+Third, higher conversion rates and shorter sales cycles. When you understand your numbers, your close rate, your cycle length, your drop off points, you gain leverage. 
+
+
+You can improve them. Even small improvements compound very quickly. A higher conversion rate or a shorter sales cycle means more revenue from the exact same lead flow and that efficiency directly increases value. 
+
+
+Fourth, systematic objection handling and proposal management. If objections are handled randomly, results tend to be random. If proposals are inconsistent, outcomes will be inconsistent. 
+
+
+But when these elements are documented, measured, and refined, your sales engines become more reliable and repeatable. 
+
+
+And finally, data-driven sales optimization. When you know your metrics, you can make intelligent decisions. Which offers should we push harder? Where should we maybe invest more? 
+
+
+Without data, it's guesswork. With data, it's strategy. So remembering the golden ratio here, customer value divided by customer acquisition cost. 
+
+
+We've already introduced unit economics, but now we're kind of connecting it directly to your offer and your sales process, because this is where you actually influence the number. 
+
+
+Your golden ratio improves in four primary ways. First, increase average purchase price. If your offer is structured correctly, if positioning is strong, If value is clear, you can command a higher price point. 
+
+
+Even small increases in average order value significantly improve the ratio without spending another dollar on acquisition. 
+
+
+Second, offer upsells and downsells. This is about sequencing, like what happens immediately after someone buys, is there a logical next step, a premium upgrade, perhaps a lower tier option if they hesitate. 
+
+
+Strategic offer architecture increases total customer value, which strengthens the ratio automatically. 
+
+
+Third, increase conversion rate. If more of your leads become buyers, your effective acquisition cost drops. Same traffic, same spend, more customers. And that's leverage as conversion rate improvement is one of the fastest ways to improve the golden ratio. 
+
+
+Fourth, boost repeat purchases. It is almost always cheaper to sell to an existing customer than to acquire a new one. 
+
+
+If you build systems that create re-engagement, continuity, or add-on offers, total customer value rises without increasing CAC. 
+
+
+And notice the pattern. Every one of these levers is influenced by sales. Offer clarity, structured upsells, objection handling, and intentional follow-up. 
+
+
+So this is why strong internal sales capability matters so much. It doesn't just give revenue. It improves the unit economics of the entire business. 
+
+
+So as we move into the prompts and the SOP work, keep this frame in mind. As we're not just building process for process sake, we are aiming to improve the golden ratio. 
+
+
+this is a value equation. There are many formulas out there i'm sure you're all familiar with. This one specifically has been published by alex hermosi and it says value equals dream outcome times perceived likelihood of achievement divided by time delay times effort of sacrifice. 
+
+
+So if we break that down at the top of the equation is the the dream outcome. What is the transformation you are promising? What is the result someone deeply wants? 
+
+
+Then it's multiplied by the perceived likelihood of achievement. In other words, do they believe it will actually work for them? You know, you can have a massive dream outcome, but if it doesn't feel believable or if there's no clear path, no proof, no structure, things tend to collapse. 
+
+
+Now, looking at the bottom of the equation, time delay, How long will this take and effort and sacrifice? 
+
+
+How hard will this be? How painful? How disruptive? The longer it takes and the harder it feels, the more value gets divided down. 
+
+
+So if we zoom out, this equation becomes a diagnostic tool for your offer. Are we clear on the dream outcome? Are we demonstrating a believable path to success? 
+
+
+Are we shortening time to result? Are we reducing friction, complexity, and perceived risk? This is philosophical, but it's also deeply practical because every sales objection usually lives somewhere in this equation. 
+
+
+Now, if we were to apply this to this Empower Labs program as an example, I might say something like, we help you build an AI-powered operating system that transforms your business fast, with certainty, and without the typical pain of enterprise change initiatives? 
+
+
+Who's ready to buy? In all seriousness- I'm in. Yeah, I'm in. There you go. I like it. In all seriousness though, if we look at just that example does, and it could certainly be better, but you have a dream outcome, right? 
+
+
+An AI powered operating system that transforms your business. perceived likelihood, structured system, proven frameworks, guided implementation, reduced time, it's fast, this is only a few weeks, and reduced effort and sacrifice without the typical pain of sort of enterprise change. 
+
+
+So that's the equation in action, if helpful. Okay, earlier in the program, we talked about becoming a category of one, and this slide helps us think about how to map our price to the real problem landscape. 
+
+
+First by asking what problem are you actually solving? Not your features, not your deliverables. What is the real job your customer is hiring you to do? 
+
+
+And here's the really important part. That job may not be what you think it is. There is like something that we all get to do and complete transparency in business is continue to seek and to better understand as we move forward. 
+
+
+in business. The second question is, what are others charging to solve that problem? And not just direct competitors, like what are the alternative ways that problem gets solved? 
+
+
+Whether it's different services, software, potentially internal hires or something else. Those are all part of your pricing landscape. If you don't understand the real problem and the competitive landscape around it, you'll struggle to price with confidence. 
+
+
+If you do understand it, you can position clearly, price strategically, and avoid being compared like a commodity, and that is certainly Every offer you sell sits somewhere on the spectrum. 
+
+
+On one end, you have considered buys. These are large, complex decisions. Think enterprise systems, major investments, big ticket purchases. 
+
+
+These require time, multiple stakeholders or decision makers, research, and perhaps risk evaluation. 
+
+
+On the other end, you have impulse buys, fast, more low risk decisions. Coffee is an impulse buy as well as maybe like a low ticket course, something that doesn't require much thought. 
+
+
+And perhaps some of us are somewhere in the middle there. But the key insight is your sales process must match how your customers buy, not how you prefer to sell. 
+
+
+This is really important. Like where your offer sits on this spectrum affects how price impacts the buyer. how many decision makers are involved, the consequences of being wrong, and how much research is required. 
+
+
+If you sell a considered buy like it's an impulse buy, you'll probably lose trust. And if you treat an impulse buy like a complex enterprise deal, you'll actually just create friction. 
+
+
+So the question to ask here is, where does your offer truly sit on this spectrum? Because Once you know that, you can then design the right sales motion to support it. 
+
+
+Different positions require vastly different sales strategies. There's certainly no one size fits all. So I'm saying this as a disclaimer, but this now is really important as we begin to sort of work through what this looks like for us individually. 
+
+
+We need at least to carry this knowledge into the work of building out the sales process. Your sales process must match your position on the spectrum. 
+
+
+If your offer is considered leaning, your process needs to support thoughtful decision-making. That could mean a strong educational content library, multiple touch points like demos or trials, clear risk mitigation, guarantees, support, proof, things like that, and tools that help stakeholders evaluate and align. 
+
+
+In this world, Pressure hurts you. So artificial urgency damages trust. If it's a serious decision, you must respect the seriousness of it. 
+
+
+Now on the other end, if your offer is impulse leading, the game sort of changes because speed matters. 
+
+
+So this is things like same day, response capability, emotional triggers like convenience or status, heavy, heavy emphasis on social proof. 
+
+
+and then just frictionless, easy payment options. In this world, long nurture sequences and detailed, overly detailed, I'll say ROI breakdowns and complexity actually slow down the sale by adding confusion. 
+
+
+So the real question is to ask is, is not what sales process do I like? It's what buying process does my customer require? And when your sales motion aligns with how your customer naturally buys, conversion increases and friction drops. 
+
+
+You can diagnose where you sit on the spectrum. There are a few simple tests. First is the price test. What percentage of prospects need to think about your pricing? 
+
+
+If it's under 20%, you're likely impulse leaning. If it's over 60%, you're considered leaning. Price hesitation is a strong signal about buying behavior. 
+
+
+Second is the timeline test. How long does it take from first contact to decision? This is really the driver because I've actually personally worked with a lot of high ticket price points that are very transactional, one to two call closes. 
+
+
+But again, less than a week, that's impulsive. More than a month, that's certainly considered. Time is a great reflection of complexity. Third is the stakeholder test. How often do other decision makers get involved? 
+
+
+If it's rarely, it's impulse. If it's usually, then it's considered. I'll say this is especially important as you move upmarket. The higher the price and impact, the more stakeholders enter the room and your sales process must be prepared to meet them at their level financially, strategically, and operationally. 
+
+
+Now, Watch for misalignment red flags. If you're too impulse for a considered offer, you could have high refund rates, uh, get pressure tactic complaints for like your sales process and have heavy price shopping with your prospects. 
+
+
+And if you're too considered for impulse, um, prospects will go cold. They'll ghost, um, perhaps they get overeducated. So it adds confusion. and it leads to unnecessarily long sales cycles. 
+
+
+So here's the action to keep in mind for your business. You do not need to redesign everything. That's something we stay consistent here in this program. 
+
+
+I would, however, encourage you to identify one adjustment that better aligns your sales process with your true position on this spectrum. 
+
+
+Okay, Midori, would you like to set everyone up to take the poll to see kind of where they fall? Absolutely. I've launched a poll here to see where you are on the impulse versus considered purchase. 
+
+
+Looks like today we've got considered purchases, 100% of you. Okay, cool. I knew that for some of you, but that's a surprise. It's 100%. Just out of curiosity in the chat, could you all – Just put for your business specifically, what the average kind of lead to sales cycle timeline is. 
+
+
+Is it three months? Is it 60 days? I'm a little curious now that 100% of you are considered. Four to six weeks? Okay. 45 days, Jonas. Okay, from one week to six months. 
+
+
+Wow, that's quite the spectrum, Jonathan. We might need to discuss that. 90 days to 180, Don. Big spread, Jonathan. Yeah, that's what I was thinking. Benny, four to six months. 
+
+
+Is it possible to become impulse purchase? Potentially, Benny. That's something that we can explore. But if you're in the four to six months, it would probably be highly unlikely. 
+
+
+And you can share maybe a little more about that when we get to the Q&A part. Okay, cool. So we got 100% of you considered. Just to keep moving, I will now go over kind of how to leverage sales teams. 
+
+
+That's, by the way, been my primary focus over the last few years. And I think this will be helpful for each of you when you're at your retrospective organization. 
+
+
+If you're a solopreneur or in a small team environment, I want this next section to kind of clarify when you should make the switch to bring someone in to sell internally. 
+
+
+And you can explore the possibility of what could be there if you did have people on your team or who can engage in the sales process. 
+
+
+And that might be an actual person. It might be something like process or an AI agent to delegate this to. But I really want you to explore if you've never thought about this or ever considered the fact that you might benefit from the use of the sales team. 
+
+
+If you have a salesperson in place, and especially if you have a sales team in place already, then this content is especially valuable for you as you sort of think about ways that you can elevate them and help them significantly improve. 
+
+
+So there's at least different views of this content that I see as particularly valuable. Okay. I want to make sure we're all on the same page about what we mean by sales process and team, because it will look different depending on your business model. 
+
+
+On the left side of the slide, you have online only sales. This is sort of automated funnels that drive prospects to self-purchase. 
+
+
+So there's no human touch that takes place. Success here hinges on traffic quality, conversion rates, and hitting the right price points. 
+
+
+Business examples here would be e-commerce companies or Tiago Forte through his books and products he sells. 
+
+
+On the right side, you have an internal sales team. This involves human connection. So salespeople qualify leads and conduct personalized discovery and solutions. 
+
+
+A lot of times proposals are involved in this process. And success here depends on sales skills, process efficiency, and relationship building. 
+
+
+A business example here potentially could be a lot of you, but one of Hayden's businesses would be Acquira. 
+
+
+It's one of the companies he owns that helps acquisition entrepreneurs acquire cash flowing businesses. 
+
+
+Now, most businesses will have some combination of the positions shown at the bottom here, and you might have different roles like SDRs or setters who qualify incoming leads and schedule discovery appointments. 
+
+
+Account executives or closers who conduct discovery calls, build relationships, and close deals. There are also hybrid salespeople, not shown on here, that do both and kind of own the whole lead to sales cycle. 
+
+
+And then sales managers who kind of coach team members, manage the pipeline, and focus on growing the department. 
+
+
+The key insight for today is wherever you are, AI can dramatically improve your results. Okay, should you make the switch? I would like to share what I have seen to be a really big issue with a lot of solopreneurs and small teams as it relates to this on when to hire a salesperson or a sort of team to delegate sales. 
+
+
+A lot of people, for a variety of reasons, look to outsource sales as early as possible, thinking if they didn't have to do sales calls, then they can focus more on product delivery or moving the business forward. 
+
+
+And I would like to share this to any one of you who are at this stage, considering this, that that thinking is a mistake and it is premature. 
+
+
+Here's why. A lot of people try to hire a sales person or team as founders or CEOs without first validating the sales process. 
+
+
+And the problem with doing that is when things start to go wrong and they will, if you haven't validated the sales process yourself, it will become incredibly difficult for you to manage it effectively. 
+
+
+Because you won't actually know if it's a marketing problem like offer or the leads on the front end, or it's an actual sales skill problem. 
+
+
+Plus no one has more knowledge and expertise to sell your product or service than you do. So the foundations that you should have in place before hiring a salesperson or team would be what i call an optimal selling system. 
+
+
+And this is through two main areas. The first one is to have a consistent repeatable predictable way to generate opportunities, leads, interests, and appointments. 
+
+
+The second is a consistent, repeatable, predictable way to turn that interest into money through sales goals. 
+
+
+So a validated offer that you have sold, and then you also have a predictable way to generate opportunities, leads, and appointments. 
+
+
+Between those two things, what they do is they create a conveyor belt to where you have the same people coming in from the same funnel and your sales reps will have the same conversation that you've already had and that's handled the same way every single time. 
+
+
+So when you have that conveyor belt and you validated it yourself, it's very easy at that point to remove yourself as you're only changing one barrier. 
+
+
+So the case to know you shouldn't have an internal sales team would be if you don't have an optimal selling system, like I mentioned. 
+
+
+And if you have, you know, healthy online conversion rates, low touch sort of commodity products, price sensitive market, limited lead volume and seasonal or sort of inconsistent demand, then I would suggest sticking with online. 
+
+
+So let's look at what's happening in most sales organizations right now. Salespeople are taking notes during discovery calls while simultaneously trying to build rapport with prospects. 
+
+
+And then after the call, they are manually updating a CRM, often missing critical details. They're then, you know, there's follow-ups from scratch for each prospect and managers are reviewing calls randomly. 
+
+
+with no systematic approach to coaching. And this creates a lot of waste as you're losing a lot of admin time for each sales call. 
+
+
+And, you know, think about this. If your sales team does, let's say 10 calls a day, that's hours per day of productive selling time lost to admin work. 
+
+
+The majority of conversational insights like never make it into CRMs because salespeople are human. 
+
+
+and they forget details or they don't capture everything. And you've got hours and days or longer in some cases of delay and follow-up, which kills conversion rates because prospects go cold while your team is writing emails from scratch. 
+
+
+And the big killer is you're getting zero leverage from all call intelligence because there's no systematic improvement happening because insights stay trapped in individual calls. 
+
+
+And this is exactly what AI can fix. So let's talk about it. Every single one of your calls can now become real time intelligence. 
+
+
+So it starts with the sales call itself. Every conversation automatically becomes high level data without any manual effort from your team. 
+
+
+That means no more frantic note taking while trying to stay present with a prospect. Next, AI processing kicks in, extracting all the key insights from the dialogue in real time. 
+
+
+It's identifying pain points, objections, budget signals, decision maker information, all the critical details that your salespeople used to have to remember and sort of type up later. 
+
+
+Then comes automated actions. The system can be built to trigger personalized workflows based on what was actually said in the conversation. 
+
+
+And this is where the magic can happen. You can get automatic CRM updates, perfect call notes with zero admin time. Lead scoring happens based on actual conversation signals, not guesswork. 
+
+
+Pain points and objections are tagged automatically so you can spot patterns across your entire pipeline. 
+
+
+And you get instant follow-ups. That's like personalized emails that reference specific call highlights sent within minutes, SMS sequences triggered by specific pain points, the prospect mentioned, or where they're currently at in your sales cycle. 
+
+
+And custom reports can then be generated from the needs identified during the call. All of this technology exists right now. Now let's talk about scaling your sales management because this is where most sales leaders hit a wall. 
+
+
+First, automated coaching. Instead of managers listening to random calls and hoping to catch coaching moments, AI evaluates every single call against your custom rubrics. 
+
+
+So think of this as scoring. Like what does good discovery sound like? How was objection handled? The system scores it all automatically, and then you can get real-time coaching alerts during the live conversations. 
+
+
+Then there's pipeline intelligence. Your pipeline reviews can now be automated. The system identifies where deals are getting stuck, which stages have bottlenecks, and flags deals at risk before they fall apart. 
+
+
+AI analyzes conversation signals to score deal risk. The system catches these warning signs that humans might miss and can forecast accuracy improves dramatically because you're using predictive analytics based on actual conversation data and not just gut feel. 
+
+
+This is how in an AI world you can scale from managing like three salespeople to managing 30 without losing quality or working 80 to 100 hours. 
+
+
+the AI does the heavy lifting. Let's talk about the actual impact this creates. First, you'll be able to complete more sales calls. Why? Because you've eliminated the administrative burden. 
+
+
+Your reps can focus on what actually matters, selling, instead of updating spreadsheets and writing call summaries. 
+
+
+You get same day feedback, which is game changing, instead of waiting for potentially like the weekly or monthly pipeline review to find out what went wrong. 
+
+
+your reps get instant coaching right after the call. And this creates a real-time feedback loop and improvement cycle that definitely compounds over time. 
+
+
+And you achieve 100% CRM accuracy. So no more missing insights because someone forgot to log a detail, which means you actually know what's happening in your pipeline. 
+
+
+On the management leverage side, the numbers are even more dramatic. You can now manage about a 15 to one manager to rep ratio. You know, you get 24 seven coaching coverage and you unlock data driven insights with performance patterns emerging from conversation analytics across your entire team, revealing what actually works and what doesn't. 
+
+
+This is exactly how you scale revenue without scaling headcount. For implementation strategy, have your conversation intelligence platform selected. 
+
+
+There are some software references listed here, but use whatever you're currently using for clarity. 
+
+
+You can integrate your CRM system, and like everything else, you use the LLM to build these things out to understand how to integrate, score, and then trigger specific sequences. 
+
+
+I will say there is certainly a technical implementation setup required for this setup typically through the open API of your LLM. 
+
+
+Meaning if this is going to be fully automated through your CRM and your sales process, but it's all open and can be integrated with softwares like Zapier. 
+
+
+And I will tell you, it certainly has a very, very big ROI. For sales scripts and templates to use to get consistency, use as many things for context that you can to provide the best scores and accuracy. 
+
+
+So shown here is discovery questions, objections, and how to handle them, closing methodology or script flow if you have that, and proposal structure if applicable. 
+
+
+These are typically docs that are updated as resources. It's also great to put like 10 plus or more great example call transcripts in as well. 
+
+
+Okay, let me give you two powerful ways to use AI for training and reviews here. First, role playing with AI. You can use, you know, ChatGPT, Gemini Voice mode to sort of simulate prospect conversations and control that. 
+
+
+I will say I personally don't currently do this. I typically have people role play in breakout rooms and then dump the transcripts from those role plays into an AI powered review for me. 
+
+
+you see the notes of how they handled specifically, but you certainly can use AI to role play. And second would be AI powered reviews. So use AI to analyze your pipeline by walking through prospects, recorded call data, identifying which deals need attention. 
+
+
+So that's everything on kind of generating leverage with sales calls. and should really inspire you on what's possible to optimize your sales process and drastically change efficiency. 
+
+
+What I'd like to also share for a few minutes is how I have done a lot of the things I sort of went over with you all personally from just a cloud project level that could be helpful for some of you if you're doing sales yourself, or if you have a small team. 
+
+
+AI has allowed me to do a lot of like fractional sales team management way more. efficiently. And I've worked with a few teams this way and it wasn't a hundred percent automated at like a stage four level that it could be for some of your organizations, but it could be helpful. 
+
+
+So, um, I first use Claude to make any new spreadsheets and dashboards as it gets me dialed in on, on tracking effectively, like right away without changing any of like the current tracking process. 
+
+
+Plus it gives me freedom to kind of add new metrics, quickly on my own before making any changes that I would then take to the team. 
+
+
+I put all team end of day reports and end of week reports. These are generated in Slack or forms through companies I've worked with into a project each day and at end of week to pinpoint areas of focus. 
+
+
+I've put recorded sales call transcripts into a grade the call project to see what part of the call wasn't handled correctly. 
+
+
+And I collect a common concerns and objection list with how to handle them, which can always be updated. 
+
+
+And I know what to focus on for like my meetings for coaching in real time. It's been really helpful to run data insights from a CRM dashboard if you use it. 
+
+
+So think HubSpot, GoHighLevel, Close, Salesforce to name a few. to pull or pulling specific pipeline data. There's overall CRM data, but you can go into your pipeline stages and say pull your pipeline data to see what leads you should focus on potentially at end of the month and use the LLM for that. 
+
+
+I also would update info on clients enrolled each month to update the ICP and provide sales feedback to our marketing team. 
+
+
+for internal marketing to continue to be revised. And lastly, I've had a project to spit out new SOPs for everything I need to hire onboard and ramp up new setters and closers or potential new processes for the team. 
+
+
+So that's some of the different ways I've used AI, again, in projects. So it's not 100% automated and AI is not replacing anything. I'm using it as a multiplier and just saving my time on a lot of the things that were time consuming. 
+
+
+So some of the specific projects I have built in roles were kind of through a project called Sales Manager Assistant that kind of handled reports, summaries, and feedback prep. 
+
+
+SOP Builder, this turns like rough notes into clear systems. Hiring, which would filter candidate resumes on the front end and interview notes. 
+
+
+And then I have an onboarding and ramp up process. And then Data Analyst, which is a project to review the CRM or spreadsheet exports or do projections. 
+
+
+And I can certainly answer questions on this stuff later, but for the sake of time, we will keep moving. 
+
+
+OK, now we'll talk increasing conversions with lead magnets and autoresponders. So here's an uncomfortable truth. Your autoresponders are probably not working at the level they could or should, and that is a massive opportunity. 
+
+
+Most autoresponders today are just kind of generic thanks for signing up messages that provide zero value. 
+
+
+They're completely disconnected from your actual sales process and buyer journey, which means you're missing critical qualification opportunities and leaving money on the table. 
+
+
+But with AI, you can now create interactive engagement tools that address specific buyer objections automatically. 
+
+
+You can implement automatic lead scoring that prioritizes your hottest prospects so your teams focus on the right people. 
+
+
+And you can deliver custom segmentation based on actual prospect behavior, like what they clicked, what they downloaded, and what questions they asked. 
+
+
+Every autoresponder message should make the prospects more likely to buy and kind of give you better sales intelligence as you go So instead of sending, you know, thanks for downloading our guide type of emails, you could replace those with interactive elements that actually help qualify and segment your prospects. 
+
+
+You can use things like calculators, like ROI calculators, pricing estimators, or savings calculators that reveal budget capacity and urgency level. 
+
+
+You could deploy quizzes that ask, you know, what's your biggest challenge or how ready are you? Not maybe in those exact questions, but it's just to identify buyer personas and decision timelines. 
+
+
+You can create custom GPTs where prospects can ask your AI about their specific situation, capturing detailed qualification data through natural conversation, or use assessments like business health checks or readiness scores or evaluations that sort of determine sales readiness and pain severity. 
+
+
+The key insight here is that every interaction, as you think through this, should tell you more about prospect fit and buyer readiness. 
+
+
+That's what kind of smart automation delivers in a sales workflow. Okay, so letting technology do the qualification and routing. You can have your smart automation layer transform raw interactions into sales intelligence, qualifying leads before your team ever touches them. 
+
+
+Set up automatic lead scoring where calculator insights generate budget and authority scores, quiz responses, and much more. 
+
+
+then you can use segmentation and routing appropriately. This way, the prospect is directed where they are in the lead to sale cycle. 
+
+
+And perhaps they get sent a specific piece of content if they're not at the point where they're ready to buy. 
+
+
+Maybe they get a calendar to book with a setter or SDR to sort of discuss where they're currently at. 
+
+
+And of course, directly booking with closers if they're a great fit. This way you or your sales team only talks to qualified prospects and everyone else gets the right content for their stage. 
+
+
+Now this is about bringing it all together to create measurable business impact across your, your sort of entire tech stack. 
+
+
+You know, you, you get three major benefits. First CRM integration, second conditional content and third sales team benefits. 
+
+
+Here's a strategy most people miss, and that is that lead magnets aren't just for acquiring new leads. 
+
+
+They're incredibly powerful re-engagement tools for deals that have stalled. The traditional approach you see here is maybe you do a demo, a prospect doesn't decide, and you send multiple follow-ups, but the prospect goes cold. 
+
+
+But with the magnet strategy, An example could be after the demo, you could send an objection specific resource that triggers an engagement spike and reopens the sales conversation to kind of keep things moving. 
+
+
+For example, if they had budget concerns, send them a business case magnet that can help accelerate their decision. 
+
+
+And you can use these same interactive tools as lead magnets in your market to lead process, but also deploy them strategically when deals don't. 
+
+
+Okay, part four will be accelerating your proposal process. So let's talk about a hidden bottleneck that crushes a lot of people's growth right now. 
+
+
+It's the proposal process. Data shows that for a lot of businesses, it takes two to eight hours to create a custom proposal. 
+
+
+Again, that's custom, which a lot of you potentially do. Which means you're only bidding on a certain percentage of opportunities because of capacity. 
+
+
+And you could lose deals to faster competitors who can turn proposals around same day. And you can see the opportunity cost there, right? And your proposal speed can determine your market share. 
+
+
+If you can't respond quickly with quality proposals, you're leaving massive revenue on the table. and AI fixes this. I'll give you all a real-world example. My brother works for a company called Strata. 
+
+
+It's a company that, he's an account manager, and he is the point of contact with builders who are building new developments, and he bids on those projects. 
+
+
+Think of like D.R. Horton's, Lennar, these big home builds, and he bids on their electrical plumbing and HVAC for those developments. 
+
+
+And in conversation, I asked him, I was like, what is your biggest challenge? And he said that it's not just my biggest challenge, it's the whole industry's biggest challenge is getting an estimate turned around. 
+
+
+I'm sure you can appreciate the logistics and the nuance that would be part of a blueprint of all the things to build a house. 
+
+
+And then when a builder comes back and says, I need revision A, B, C, D, it's complex. And he has a team an estimating department. He said, there's dozens of real people that have to get that through their CRM and then go through their, you know, specifics and then create a new estimate. 
+
+
+And it takes weeks to do that. And by the way, this is a, this is a company for clarity that does hundreds of millions of dollars a year. 
+
+
+And he's also saying that this is the biggest problem in an industry. So, um, I personally am, am actually trying to really, uh, set up a meeting to, to show this person who does hundreds of millions of dollars a year. 
+
+
+If there were a way to, and I'm not looking to replace his department, but if there were a way where account managers could have all the data inside an LLM for every revision that they get back to put into something like Claude and spit out the contract to send back immediately. 
+
+
+I mean, I would love to tie myself to 1% of what that Delta would look like. And that is a personal goal of mine this year. So that is a, A very specific example that maybe some of you can relate to if you're doing custom proposals. 
+
+
+Here's how to transform your proposal process using AI. Start by training your AI on excellence. So maybe feed it your highest converting proposals, include your winning pricing strategies and messaging networks, and establish your margin targets and pricing rules so the AI understands your business model. 
+
+
+Then watch the transformation happen because AI eliminates this bottleneck I've certainly done this, but you literally achieve same day or even same hour delivery, which means you're first to respond and you will win more deals. 
+
+
+And you get consistent quality that matches your best work every single time. This means you can bid on more opportunities without hiring more people or burning out your team. 
+
+
+Here's a dynamic pricing model where it can get really powerful. AI can help you implement smart pricing based on actual conversion data. 
+
+
+Examples of this could be to give high engagement prospects your standard pricing because they're likely to close. 
+
+
+You could charge rush requests in certain businesses, perhaps a 20% to 40% premium for urgency because they need it now. 
+
+
+I've seen that. certainly work in some businesses or at a premium during peak demand periods when you're at capacity and offer maybe a discount during high availability periods to fill the pipeline. 
+
+
+Then AI integration could automatically adjust pricing based on prospect qualification scores from your lead magnets, your current pipeline and capacity. 
+
+
+So you're not leaving money on the table. And this is a dynamic pricing example that sort of maximizes both revenue and margins simultaneously. 
+
+
+Before we wrap up, I want to acknowledge something important. Some of you could maybe feel overwhelmed by all of this, like always, right? 
+
+
+Others could be thinking, give me more, let's go faster, let's go deeper. And this wide spectrum is totally expected and just depends on your organization size, your AI familiarity, and perhaps whether you've been experimenting with AI already. 
+
+
+And so we've created a framework, which is the seven levels of program implementation that you see here. 
+
+
+This is specific to this program and designed to kind of meet you wherever you are. You can think of each letter of empower as having different levels of implementation. 
+
+
+And so the question then becomes, how deep do you want to go? Here's the path level one. is gaining exposure hours to sort of build your AI intuition. 
+
+
+Level two is completing assessments and updating your master prompt for targeted recommendations. Level three is creating high-level SOPs of your core processes. 
+
+
+Level four is building your implementation plan with AI as your strategist. Level five is reviewing and correcting those SOPs with your team. 
+
+
+Level six is creating AI-first SOPs that streamline everything. And level seven is sort of experimenting with other use cases and tools to expand what's possible. 
+
+
+So you choose your pace, you choose your depth, the framework is here to guide you. So with that, I will open it up a bit to do a Q&A. And I think there's a couple of things we can have an open discussion with as well. 
+
+
+But just want to answer any questions that you all may have when it comes to your sales process. Josh, I just want to note from the chat that Nancy was asking if it would be possible to put together a list of some of the tools that you yourself have used and mentioned earlier in the call. 
+
+
+Yeah, of course. I can do for the smaller teams. I have like a Loom video. I could probably send you. showing you like the project stuff, Nancy, like how I do that specifically, if that's helpful. 
+
+
+It's not full automation again, but it's how I wanted to say that for the smaller teams or perhaps individuals to make sure that you still get the efficiency of AI, but it not being like completely stage four. 
+
+
+I will also say, Nancy. Oh, go ahead. You were listing many different things that you've done and it was sparking ideas in me. 
+
+
+And then I know I can find it in the transcript, but just Just your list that you just read off would be very helpful to me and probably some other people just as an idea sparker and any looms you have of how you actually did it even better. 
+
+
+Okay. Yeah, absolutely. I'll post that in circle just so you can all see it in the discussion. I'll make a loom on the, again, it's absolutely great for efficiency. 
+
+
+Again, you're not using AI to replace yourself as an individual, or even if you have a small team, it's just to use it as a multiplier. 
+
+
+It saves a lot of time. And so I'll do that in Circle. I'll post a Loom video on the projects that I built specifically. And also for you all to know, there's also in our case studies, there are specific sales workflows like we internally also use that are fully automated that of like how we do it. 
+
+
+We've also done this on Tiago's channel, like how Hayden and myself are running actual AI workflows in the setting that I just explained, like what we use. 
+
+
+Nothing complicated. This is literally done through Zapier. Again, these AI tools have an open API. So an easy way to think about this is if you have anybody who is a tech, let's call them a webmaster, you have a web team. 
+
+
+Again, everybody's different. A person who set that up for you, it's actually fairly simple. It's just connecting things like Zapier and just making sure all of the automations... 
+
+
+You can see that and like the softwares we use and how that's set up, that's in the case study section of Circle as well. 
+
+
+So if you all say, hey, I wanna see a workflow in action for sales in the exact way that I discussed where a person has a sales call, those notes are automatically immediately posted into the CRM and as well as the lead scoring and scoring that call with objections, it goes into Slack and it updates Sales Manager. 
+
+
+All of that is posted inside the case study for inspiration as well, just so you can see the real workflow. 
+
+
+Make one comment because for me, we don't, we have more sales than we need, but what we do is we have lots of teachers and they are supervising and coaching other teachers, senior teachers, and like everything you were describing for being able to be a sales manager, I can see applying to us listening into the conversations that they have so we can improve everybody's ability and follow it. 
+
+
+So it's just maybe spark some other people's ideas. Of course. Yeah. We want to hear from other people, of course. But for you, Nancy, that sounds, of course, you have context I don't have on your specific business, but also Claude will tell you after you do these assessments today, it's no different. 
+
+
+Like how owner reliant is it on you, Nancy? And what is your best leverage to optimize your sales process? If it's in the way that the teachers to listen to their calls, to recruit other teachers, that's going to become very, very clear for you once you have that. 
+
+
+that context, but that's a, that's a good example. Anybody, uh, Don, go ahead. You have your, your hand up. Hi, can you hear me? Okay. Okay. As usual, thank you for a fabulous input here. 
+
+
+Um, pivotal question. Most of this stuff I think really relies on recording calls. Uh, you know, I, when you, when you get the calls recorded, you get the transcripts, the summaries, you can trigger everything. 
+
+
+And so, uh, a lot of companies have, uh, Different people talking to potential customers, and they might be out in the field on their cell phones and a whole variety of other scenarios. 
+
+
+And I'm sure that that confounds some people about how to get that implemented. I was really interested in any comments you have. Of course. Yeah, there's many ways to do this. 
+
+
+I want to answer your question, though, because you're asking. So do you – let me ask you this. Are you – individual taking the sales calls and right now you have nothing. 
+
+
+I just want to make sure I give you a good. I'm thinking of our team of estimators. Okay. Construction company. And so, you know, they're, they're talking to customers and there's kind of a long sales cycle. 
+
+
+And I know that there's opportunity in there, you know, that they're, cause they're not trained salespeople really. 
+
+
+They're estimators. And so. Yeah. So I think we can get some real lift if we could, you know, get an analysis going on those calls. 
+
+
+Yeah, you definitely can. And, and have a lot of different lead magnets in, in just the way to, to try to shorten the sales cycle. 
+
+
+So in terms of recording calls, um, again, like we don't, we don't typically say like, I recommend this software. 
+
+
+I'll give you a few that I have used. Okay. So, um, you can record your calls, whether they're phone calls, that's typically in your phone system, which would be in your CRM. 
+
+
+That will be all phone call recordings on zoom or Google meet or, you know, What is it? I forgot Microsoft. Microsoft has one. If you do a video call, there are endless AI note takers. 
+
+
+You probably already see. Right. So that's some examples are otter bubbles. I mean, there again, there's hundreds, if probably not thousands of AI note takers. 
+
+
+And that is the process. Gemini in Google actually does a really good job. I personally use Gemini like Google's Gemini. because I just think the recap of the calls are very clear. 
+
+
+It's the summary, and then it does bullet points of what's next. I personally like that, but it's a matter of preference, Don, and that's the process. 
+
+
+Once you have the call recording, it's the start to everything else that I talked about and what could be possible once you get that. 
+
+
+So let's visualize an estimator who's driving around in his truck and talking to people on the phone and all this stuff. 
+
+
+Have you come up with a solution to grab those calls? Yeah. So again, if it's a phone call, it would be whatever your internal phone system is. 
+
+
+So every CRM, CRMs don't have a phone system. 90% of numbers in CRMs are from Twilio. Twilio is like the mass provider of phone numbers, almost all of them right now. 
+
+
+I'll say in the United States, apologies. So you have to get numbers that are phone systems that integrate with whatever CRM or system that they use, your estimator specifically. 
+
+
+If they're using their personal cell phone, you can record it, but they're going to have to get personal software, which is not going to be optimal for the business. 
+
+
+You can record calls on your cell phone as a person, but you're not going to want to do that because they would have to download it, they would have control, and the setup would have to be through their phone number, which is a business that wouldn't be best practice to do so. 
+
+
+Don, there are tools like call tracking metrics or RingCentral or CallRail that we assign to our field reps with a dedicated line, and it points right to their cell phone and automatically records it. 
+
+
+So they still get the benefit of using their cell phone, but think of it as a follow-me number where it just hops into your estimators. 
+
+
+That's one way that you could do it. Easy. FM, does that only apply for incoming calls, or is it catching the outgoing ones? 
+
+
+Good question. Can't answer that. I don't know. I think with a setting that you can make it outbound to. But as Josh was hinting, you do need to do a little configuration to make that happen. 
+
+
+Yeah. Add on to it, Don, even if you don't have the forward like Montgomery does, like he's saying, hey, it calls in. 
+
+
+I can forward it to a salesperson's phone and they don't have his phone number. Whatever system you use in your company, they'll have an app. 
+
+
+And so the same process will apply. Exactly the same, even if it's through the app itself and not the person's personal phone number. 
+
+
+Okay. So I'll offer some interesting information here. There's a company called Quad that starts with a P like Papa, L-A-U-D. And they sell this little device that attaches to the phone magnetically to the cell phone. 
+
+
+And if I push a button, it records the call. And then that sends back the summary and the to-do list and the whole breakdown. 
+
+
+So anyway, because I've always been looking for the right answer. This is the best thing I've found so far. Yeah. And again, just like Montgomery said, there's no right answer plot. 
+
+
+What Don said, I guess, put on your phone there. And that's great. If that's worked well for you, Don, then again, it's never about like, you know, it's like saying, what CRM should I use? 
+
+
+I'm pretty agnostic with software, but people tend to have preferences relative to if they're a little more techie or not techie at all. 
+
+
+If they're just salespeople, they want a very simple user experience. It's always a matter of preference. Yeah, simpler, the better. The less steps, the more likely it is to work. 
+
+
+For sure, for sure. Complexity is the enemy of execution. So you don't want to complicate things. Anybody else have questions? I mean, you all are consultative sales. 
+
+
+So Benny, it might be good to, I know you had a question about could you become impulse? I think that might be an interesting discussion if anybody else doesn't have a question about their sales process specifically. 
+
+
+I have another question. So in Europe, data protection for sensitive personal data is, on a high level and recording calls needs authorization consent and I'm not sure if in the US you can just record all calls of your staff. 
+
+
+I don't know but this would be not possible here therefore I ask the others from Europe if they do and how Yeah, first of all, great question. 
+
+
+And you are not alone, Benny. Obviously, data protection, whether you deal with PII data, which is a lot of patient care or things that you absolutely cannot reveal about people, I think you're referring to GDPR. 
+
+
+But for clarity, internally, like our company, we do record everything. Now, relative to where they are in the call, if you're talking to a prospect, we also let them know, we're recording, right? 
+
+
+So like we use Zoom here for this session. When you all log on, the very first thing that you hear is that this meeting is being recorded. 
+
+
+So in video, it's a prompt that you put in that you have to alert people because you do. On the phone, in my experience with certain setters, I have them mention it at the beginning of the call. 
+
+
+And an example would be like, and Benny, before we get further into the call, I just wanted to let you know that we're recording this call for training purposes. 
+
+
+And then you just get into it. There are, I do know people who are using AI agents as setting a gentleman in the last, we had a few different companies in the last cohort when they progressed, they're using AI agents because it's less of maybe a sales call. 
+
+
+It was a lot of more, admin conversations. So one gentleman owned a plethora of spas. So it's just people over and over sort of calling, Hey, I'm looking for a massage. 
+
+
+What do you offer? What does it call? It's like the same 12 questions. So he's using AI agents. There's a lot of people in the gym space doing it. So, um, there's certainly AI agents if your calls on like front end. 
+
+
+So think setting, um, not closing. I don't know anyone in any industry at, at this, time that's using AI to sell anything in a consultative sales process, again, as of now. 
+
+
+But if it does make sense, there is a lot of leverage in AI agents. And I could, again, I wouldn't recommend. I've used one myself. I could provide a few of those in Circle as well, if that would make sense for any or all of your businesses. 
+
+
+But Benny, before I get to other questions, I'm curious, what's got you asking about, because four to six months would be, that's definitely a considered purchase. 
+
+
+And so it's highly unlikely that we could snap our fingers from Claude and all of a sudden you're selling people in a week or a month even would be a drastic change for you. 
+
+
+But would there be anything, I don't know, that I don't know or that you know that's got you potentially considering that? 
+
+
+Yeah, I thought about, because when it came to the UVP, I talked or wrote with Claude about packaging services to the little amount possible. 
+
+
+So the smallest package possible. And if you have usually a, implementation projects of 50 to a hundred K or so, and you package it, uh, to a very little package, qualify me, uh, my case as a medical device. 
+
+
+And that's it. It could be, uh, more impulse than considered, considered to purchase. Yeah. I still think in your industry, my, my personal opinion in your industry at that price point, you're, you're still going to fall into considered, but it would be interesting to see if you could, you know, that could be your direction conversationally with Claude about what, if any, because again, for you guys, if this is helpful, there's so many different ways. 
+
+
+And by the way, like if anybody wants to message me personally, like I have literally focused personally, I focused on this for the last few years. 
+
+
+So there's a lot of scenarios. If potentially I understand your sales process, but I'll give you, I could give you endless examples, but I worked with an agency recently, a digital marketing agency. 
+
+
+And here's a real-time way that they were using AI. So they basically, they sold two offers essentially for Clarity. If you did a million or under, you would be what's called their blueprint offer. 
+
+
+And then if you did over a million, you're doing like eight figures a year, you would have their mastery. 
+
+
+So it's just two of the same programs. And what would happen is in their pipeline stages, in their normal CRM, If I had a call and I was ready for Blueprint, the salesperson would slide me to call completed under their name in the pipeline stages. 
+
+
+And when that happened, the owner used a software called Send Potion, which is if you look through the case studies, we use this internally today. 
+
+
+You can make an evergreen video, shoot it once, but it can change the name and be custom to whoever it ends up being sent to. 
+
+
+And what we would do, we would use this a variety of different ways, but every time this was helping people in the concrete coating and painting space. 
+
+
+And the owner had built a very successful, like eight figure per year, um, service company. So every time we would slide it to the pipeline stage and it was an evergreen video, but it would go out immediately and it would see like, Benny, I, it looks like you just had a call with Josh. 
+
+
+So it would be relative to the closer. And I'm really, really excited for you because I remember being where you were when I started. 
+
+
+this company. And it would be a personalized message to that individual who just had a call with us and we did zero. 
+
+
+And I can tell you that one thing increased our close rate probably by 24%. If I did nothing else in that company, it increased the closure rate by 24%. 
+
+
+So, and again, I, we don't have enough time for examples and of like things that I've done and what companies like we, But if you want to give me a little more perspective and circle, you can message me. 
+
+
+And if you just give me a high level, this is what my lead to sales cycle, uh, ideas are super easy guys. 
+
+
+I can certainly give you those. Um, it's going to be more about though, you doing the assessment and understanding like Claude should come up with, like, this is your lowest barrier to entry, uh, like improving one thing, right? 
+
+
+So Benny, if it's, if it happens to be the new product or, You know, what, what does, what are, how could we have an output where I could shorten my sales cycle? 
+
+
+All of you would win if that is certainly possible. Right. Or it's the process like, Hey, if you go through and you're saying, Hey, you know, these are objections I get a lot. 
+
+
+Perhaps when people are giving price objection after price objection, after price objection, you have things that go out automated, no different than I did at a pipeline stage, right after people had a call, it wasn't an objection. 
+
+
+It was to tell them, I'm so excited for you to actually get started. After speaking to this person, I was in your exact same position. 
+
+
+It just felt so personalized. And again, all of this technology exists today. I know some of it can be overwhelming. Like I can tell you all softwares. There is an element of if you want to be fully automated, you do have to have a technical capability in order to do that. 
+
+
+Um, and that's, you know, think like a web guy, you have somebody who sets up workflows currently with Zapier and CRMs. 
+
+
+That would be the person, but it would be incredibly simple because all of it is like, like LLMs have open APIs, which connect to CRMs, Google drives, sheets, all of, all of these things that, that we just talked about. 
+
+
+So it's, it's just about what's possible for you and a reminder for people. Um, I will also make a loom video on if you were to just make some really, really effective projects to maximize that way. 
+
+
+Um, just so you see the types of ways that, that I can, or that you could potentially do that as well. 
+
+
+Um, does anybody else have any questions? I don't have a question per se. Sorry to jump right in there. More of a observation of excitement and frustration all in one after seeing today's, uh, course, I get super excited for all the things that one can do, but also overwhelmed like most of us. 
+
+
+And this is my second cohort. I was in the first one. And in the last month or so, we're a digital agency, been around for a while. 
+
+
+We set up a new company that's only AI. So I almost had our team compete against themselves. I grabbed a few people and we just- smdigital.ai and now the whole thing runs on, or at least in theory it should, on just ai processes in the background. 
+
+
+What I'm struggling with and so frustrated, and i like to think that we're at least halfway advanced with a digital background is where to go. 
+
+
+Like there's so many different opportunities i i just feel like there's so much on the shoulder and i'm sinking because I'm missing out on some things. 
+
+
+And I think you had mentioned on one call, and here's where my question is, that post this cohort, you offer team consulting, et cetera. 
+
+
+What advice do you have for someone in my position who might be seeing all the opportunities and even following your course, although I'm still behind, on how to do it intelligently without trying to boil the ocean in one day? 
+
+
+Yeah, of course. And by the way, Montgomery, for clarity, I don't even have to ask every single person on this call is feeling exactly how you're feeling, right? 
+
+
+So it doesn't matter your business. It doesn't matter the size. We've helped literally, we've helped companies with thousands of employees. 
+
+
+So I'll answer your question by bringing you back to the reminder that we've been consistent with through the first session all the way to today. 
+
+
+It's gonna be the exact same message because this is your second time through, you'll relate to it more. 
+
+
+And so what happens when you go through this is you see all the possibilities, especially as we go through session by session, right? 
+
+
+You're like, oh my gosh, this is so awesome. I need help with marketing. I need help with operations. And you go, oh, that's awesome. I want to go do that. Now, that is not what we want any of you to do, including you, Montgomery. 
+
+
+As a reminder, what we want to do first, the purpose of this first cohort is to document process because it will show you what good looks like in every area of your business. 
+
+
+At the end of the cohort, we said, what is going to be your one thing? And you all probably came into the cohort with a pretty good idea of what that was. 
+
+
+Or perhaps you've been doing some of these assessments and by the end, Claude suggests that actually with your strategic initiatives, your highest leverage move would be something different potentially, your area of focus. 
+
+
+So again, your one thing in this scenario, let's say sales is your one thing. So after you build your master prompt, you've documented process in every area of your business with SOPs, and then you see what implementation looks like. 
+
+
+At the end of the cohort, you're going to focus on, in this case, if it were sales, your sales workflow. 
+
+
+And that's going to be different. Like a digital agency, you might have a team of setters and closers. I know digital agencies real well. I ran one for five. right? So it's like, I know that operation. 
+
+
+So that's going to be a different, a very different operation than Benny's operation, right? Drastically different. However, a lot of people get pointed to sales as the lifeblood of the business to generate revenue as their one thing. 
+
+
+So if you said Montgomery, I'll take this example. Let's say your one thing is sales. When you've documented your master prompt, and then you, you then can take a process and a workflow to your team for sales. 
+
+
+Let's say you wanted to do exactly what I talked about. Hey, I'm going to take all my calls. All of the notes are going to go into this LLM. We're going to score things in that. 
+
+
+You're going to build out that workflow with Claude. And over the next 30, 60, 90 days, you're going to build it to completion. 
+
+
+So it's actually working. And what most people do is they start going through stuff and they start operating. And that's where you're going to get, I will promise you, I've said this multiple times, you will get incredibly overwhelmed. 
+
+
+If you start trying to execute during these sessions. Guilty as charged. No, by the way, we're all humans, right? This is human behavior. I'm a, I see your faces. Like sometimes I'll be going through slides and I can see the wheels turning of like, now I understand what's possible. 
+
+
+And then you want to start Googling like what software can I like, Don, like, how can I record calls? 
+
+
+What can I use this? I use this CRM. That process is awesome. However, in the middle of documenting and building your master prompt, Like this is what you're doing right now is you're, you're thinking you're working on your business, not in it. 
+
+
+If you're working on it and you start working in it, all of you will be overwhelmed and you'll get the feeling. 
+
+
+And you probably all have already experienced this, whether it's your first time or your second time through. 
+
+
+If you try to execute, take it to your team while you're sort of documenting and learning, it will then scale chaos. 
+
+
+And I've seen it. I've seen people ask me questions like, Hey, I'm just here for sales. Is it cool if I don't finish the rest of these sessions and I just start building a workflow like you just explained to me? 
+
+
+And I'm like, you could do that. You all could leave and not come to any of the remaining sessions and you could go build this workflow because this would change the revenue in your business. 
+
+
+If you did that, the delta is that the master prompt will not have the information of your business in all the other areas that we haven't covered. 
+
+
+to then maximize the output. And so, or you end up scaling chaos of whatever your current situations are. And so in the best case scenario, if you end up doing it and you scale sales, you'll probably then break operations. 
+
+
+And that is kind of a natural growth progression of business, of course. But at the same time, that's what we want you to avoid. So hopefully that's helpful. And I am guilty. I'm a human being, guys. 
+
+
+I see things all the time. I've gone to conferences and digested 7% of it. And I just want to implement what I loved and did. And I probably missed a lot of stuff. 
+
+
+So just to remind you all, we're not executing anything right now. We're documenting, we're showing you what good looks like. And then you're going to have your implementation plan to focus on one thing. 
+
+
+If you have a big team, great. You can be like, this is the implementation for marketing, sales, operations. If you're a mature organization, that's a little bit different. 
+
+
+But for a lot of you, it's just really about doing this thing right. And then when you get to the point, Montgomery, you can say, hey, my one thing, whatever it be, operations, everybody's going to be different here as well. 
+
+
+That's going to be your workflow to build out because that one workflow, if you increase speed and efficiency, quality of output, and increased ROI, like we talked about, you and everybody else with their one thing will drastically see huge outputs this year, mainly things like EBIT per employee and all of those things that we've sort of talked about. 
+
+
+So hopefully that's helpful. And what I will do, if anybody has any questions, by the way, remember, please reach out to us in Circle or myself directly. 
+
+
+You can make it a post too. I'll answer it so everybody sees it. That might be the best case scenario for everybody to get the most value. 
+
+
+And then Midori, what I will do is just let you kind of sign us off here and talk about next steps. 
+
+
+Thank you so much, Josh. Such great information from you today. You've given us a lot of insight into exactly how we can optimize sales. 
+
+
+So your next steps are to run a lead to sale assessment. This assesses your organization's performance, gauges the dependence on the owner and identifies areas for improvement. 
+
+
+Then you're creating the level one and two SOP for lead to sale. Uh, as usual, you're going to find all of those prompts in circle under curriculum session seven. 
+
+
+Those should be up shortly. Uh, and our next session will be, uh, office hours this Wednesday where you'll see, uh, Josh and I, uh, 1 PM Eastern time. 
+
+
+And then our, uh, next, uh, session eight will be on Monday, February 23rd. Um, It was so wonderful to see all of you here today. Look forward to your questions and conversations on Circle and anything else we can help answer for you. 
+
+
+Thank you, Josh and Madhuri. Thanks, everyone. Appreciate you. Talk to you soon. Thanks. Bye-bye. Take care. Thanks. Bye-bye. 

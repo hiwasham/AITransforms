@@ -1,0 +1,32 @@
+{
+  "space": {
+    "id": 2315108,
+    "name": "Discussion for Teams",
+    "slug": "discussion-for-teams-18cf6a",
+    "post_type": "basic",
+    "posts_count": 1,
+    "space_group_name": "Cohort 3"
+  },
+  "fetched_at": "2026-09-03T00:37:46+00:00",
+  "posts": [
+    {
+      "dir": "01-a-thread-for-non-founder-or-c-suite-members",
+      "title": "A Thread for Non-Founder or C-Suite Members",
+      "space": "Discussion for Teams",
+      "post_number": 1,
+      "author": "Dale Meador",
+      "status": "published",
+      "post_id": 26519876,
+      "space_id": 2315108,
+      "slug": "a-thread-for-non-founder-or-c-suite-members",
+      "url": "https://community.empowerlabs.ai/c/discussion-for-teams-18cf6a/a-thread-for-non-founder-or-c-suite-members",
+      "topics": null,
+      "attachments": 0,
+      "images": 0,
+      "comments": 4,
+      "published_at": "2025-11-01T15:58:23.000Z",
+      "updated_at": "2025-11-09T21:24:19.572Z",
+      "fetched_at": "2026-09-03T00:37:46+00:00"
+    }
+  ]
+}

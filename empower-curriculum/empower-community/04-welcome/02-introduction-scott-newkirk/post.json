@@ -1,0 +1,155 @@
+{
+  "id": 34587128,
+  "name": "Introduction: Scott Newkirk",
+  "slug": "introduction-scott-newkirk",
+  "type": "Posts::Basic",
+  "status": "published",
+  "user_id": 4552195,
+  "published_at": "2026-07-16T22:54:03.799Z",
+  "updated_at": "2026-07-20T16:05:55.497Z",
+  "created_at": "2026-07-16T22:54:03.799Z",
+  "hide_meta_info": false,
+  "community_member_id": 85023613,
+  "is_truncation_disabled": null,
+  "hide_from_featured_areas": false,
+  "flagged_for_approval_at": null,
+  "pinned_at": null,
+  "internal_custom_html": null,
+  "is_comments_enabled": true,
+  "is_liking_enabled": true,
+  "share_post_enabled": null,
+  "share_uid": null,
+  "minimal_layout": false,
+  "show_post_teaser": false,
+  "editor": "tiptap",
+  "is_comments_closed": false,
+  "is_comments_disabled": false,
+  "is_liking_disabled": false,
+  "display_title": "Introduction: Scott Newkirk",
+  "cover_image": null,
+  "cover_image_url": null,
+  "cover_image_variants": {},
+  "cardview_thumbnail": null,
+  "cardview_thumbnail_url": null,
+  "cardview_image_url": null,
+  "space_name": "Discussion",
+  "space_slug": "welcome",
+  "community_slug": "empower-labs",
+  "space_id": 2702505,
+  "pin_to_top": false,
+  "pinned_at_top_of_space": false,
+  "bookmark_id": null,
+  "topics": [
+    336018
+  ],
+  "community_member": {
+    "id": 85023613,
+    "user_id": 4552195,
+    "public_uid": "eefbc7da",
+    "first_name": "Scott",
+    "last_name": "Newkirk",
+    "name": "Scott Newkirk",
+    "admin": false,
+    "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIwZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzQ1NTIxOTU_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiD2F0dGFjaGFibGUGOwBUSSIPZXhwaXJlc19hdAY7AFQw--63558bb37d611b8b0688d0a850af2db79f4aa31f",
+    "type": "CommunityMember",
+    "headline": "Owner",
+    "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvODUwMjM2MTM_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--0045cfc8413c2fadbcc67ab9477bb36d566a7e1a",
+    "avatar_url": "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRzhPOVFvPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--73e92e9d0d2db5e70f03060b12b30d7d6adc6020/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lKYW5CbFp3WTZCa1ZVT2hSeVpYTnBlbVZmZEc5ZmJHbHRhWFJiQjJrQ0xBRnBBaXdCT2dwellYWmxjbnNHT2dwemRISnBjRlE9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--ef295ed08e817a599d692fd6d8761673d3ed547f/Photo_LinkedIn.jpeg"
+  },
+  "conversation_summary_overview": "",
+  "body_trix_content": "",
+  "body_for_editor": null,
+  "truncated_content": "📍 Where you're based: Pasadena, CA\n\n💼 What you do: Own small business renting 16’ food trailers with full-kitchens on annual leases.\n\n🏢 Your business or organization: SBJ Group in league with CulinaryCoachworks.com\n\n🎯 What you're hoping to achieve with...",
+  "show_more": true,
+  "tiptap_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "📍 Where you're based: Pasadena, CA",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "💼 What you do: Own small business renting 16’ food trailers with full-kitchens on annual leases.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "🏢 Your business or organization: SBJ Group in league with CulinaryCoachworks.com",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "🎯 What you're hoping to achieve with AI: mostly learn how to leverage it in all areas of business starting with “Market to Lead”!",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "🤖 What inspired you to join EMPOWER Labs: Ran into Hayden’s material on Tiago Forte’s Youtube channel.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  }
+}

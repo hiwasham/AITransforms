@@ -1,0 +1,164 @@
+{
+  "id": 29855494,
+  "name": "Marketing and Brand Equity: 5.1 Competitor Research Question + AI Platform Question",
+  "slug": "marketing-and-brand-equity-5-1-competitor-research-question-ai-platform-question",
+  "type": "Posts::Basic",
+  "status": "published",
+  "user_id": 51985978,
+  "published_at": "2026-02-19T16:37:21.729Z",
+  "updated_at": "2026-02-25T19:13:54.322Z",
+  "created_at": "2026-02-19T16:37:21.729Z",
+  "hide_meta_info": false,
+  "community_member_id": 64421875,
+  "is_truncation_disabled": null,
+  "hide_from_featured_areas": false,
+  "flagged_for_approval_at": null,
+  "pinned_at": null,
+  "internal_custom_html": null,
+  "is_comments_enabled": true,
+  "is_liking_enabled": true,
+  "share_post_enabled": null,
+  "share_uid": null,
+  "minimal_layout": false,
+  "show_post_teaser": false,
+  "editor": "tiptap",
+  "is_comments_closed": false,
+  "is_comments_disabled": false,
+  "is_liking_disabled": false,
+  "display_title": "Marketing and Brand Equity: 5.1 Competitor Research Question + AI Platform Question",
+  "cover_image": null,
+  "cover_image_url": null,
+  "cover_image_variants": {},
+  "cardview_thumbnail": null,
+  "cardview_thumbnail_url": null,
+  "cardview_image_url": null,
+  "space_name": "Discussion",
+  "space_slug": "discussion-b92449",
+  "community_slug": "empower-labs",
+  "space_id": 2414947,
+  "pin_to_top": false,
+  "pinned_at_top_of_space": false,
+  "bookmark_id": null,
+  "topics": [
+    336021,
+    336022
+  ],
+  "community_member": {
+    "id": 64421875,
+    "user_id": 51985978,
+    "public_uid": "d2c1dc3a",
+    "first_name": "Matt",
+    "last_name": "Clement",
+    "name": "Matt Clement",
+    "admin": false,
+    "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzUxOTg1OTc4P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--9d6a3b12bf14558bc15ae4b071821491b91eab85",
+    "type": "CommunityMember",
+    "headline": "EVP",
+    "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNjQ0MjE4NzU_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--f980f32c16af094093bf1921730be3af7a0b8b3d",
+    "avatar_url": null
+  },
+  "conversation_summary_overview": "",
+  "body_trix_content": "",
+  "body_for_editor": null,
+  "truncated_content": "Hi all,\n\nGreat to finally meet a few of you ‘live’ yesterday!\n\nI am working thru exercise 5.1 and I have a question for everyone…\n\nI’ve never really relied on Claude for research tasks, instead defaulting to either Perplexity Pro or Gemini Deep Researc...",
+  "show_more": true,
+  "tiptap_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hi all,",
+              "type": "text",
+              "circle_ios_fallback_text": "Hi all,"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Great to finally meet a few of you ‘live’ yesterday!",
+              "type": "text",
+              "circle_ios_fallback_text": "Great to finally meet a few of you ‘live’ yesterday!"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I am working thru exercise 5.1 and I have a question for everyone…",
+              "type": "text",
+              "circle_ios_fallback_text": "I am working thru exercise 5.1 and I have a question for everyone…"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I’ve never really relied on Claude for research tasks, instead defaulting to either Perplexity Pro or Gemini Deep Research.",
+              "type": "text",
+              "circle_ios_fallback_text": "I’ve never really relied on Claude for research tasks, instead defaulting to either Perplexity Pro or Gemini Deep Research."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Has Claude closed the gap to the point that letting Perplexity go is a safe decision to make? And I think the larger question is…has Claude gotten to the point that it’s truly the only ‘generalist’ AI platform needed (I put ChatGPT, Gemini, and Claude into this generalist group). My thinking to date has been to utilize all 3 of these platforms in specific use cases. Gemini for deep research, task mgmt, or anything that involves company files stored on our Google Drive. ChatGPT I’ve used primarily for multi-step tasks simply because I’d had a few sources suggest it was the most capable of ‘sticking to the script’ in multi-step cases. Claude has certainly been the primary ‘daily driver’, but again, my research on these platforms has tended to show that using a mix of all 3, along with a set of specialist platforms (Gamma, Perplexity, etc) was the more complicated, but ideal set up.",
+              "type": "text",
+              "circle_ios_fallback_text": "Has Claude closed the gap to the point that letting Perplexity go is a safe decision to make? And I think the larger question is…has Claude gotten to the point that it’s truly the only ‘generalist’ AI platform needed (I put ChatGPT, Gemini, and Claude into this generalist group). My thinking to date has been to utilize all 3 of these platforms in specific use cases. Gemini for deep research, task mgmt, or anything that involves company files stored on our Google Drive. ChatGPT I’ve used primarily for multi-step tasks simply because I’d had a few sources suggest it was the most capable of ‘sticking to the script’ in multi-step cases. Claude has certainly been the primary ‘daily driver’, but again, my research on these platforms has tended to show that using a mix of all 3, along with a set of specialist platforms (Gamma, Perplexity, etc) was the more complicated, but ideal set up."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I would love to get feedback from the group and you guys at Empower…as this question has really been on my mind for quite some time. ",
+              "type": "text",
+              "circle_ios_fallback_text": "I would love to get feedback from the group and you guys at Empower…as this question has really been on my mind for quite some time. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Thanks!",
+              "type": "text",
+              "circle_ios_fallback_text": "Thanks!"
+            }
+          ]
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Matt",
+              "type": "text",
+              "circle_ios_fallback_text": "Matt"
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "Hi all,Great to finally meet a few of you ‘live’ yesterday!I am working thru exercise 5.1 and I have a question for everyone…I’ve never really relied on Claude for research tasks, instead defaulting to either Perplexity Pro or Gemini Deep Research.Has Claude closed the gap to the point that letting Perplexity go is a safe decision to make? And I think the larger question is…has Claude gotten to the point that it’s truly the only ‘generalist’ AI platform needed (I put ChatGPT, Gemini, and Claude into this generalist group). My thinking to date has been to utilize all 3 of these platforms in specific use cases. Gemini for deep research, task mgmt, or anything that involves company files stored on our Google Drive. ChatGPT I’ve used primarily for multi-step tasks simply because I’d had a few sources suggest it was the most capable of ‘sticking to the script’ in multi-step cases. Claude has certainly been the primary ‘daily driver’, but again, my research on these platforms has tended to show that using a mix of all 3, along with a set of specialist platforms (Gamma, Perplexity, etc) was the more complicated, but ideal set up.I would love to get feedback from the group and you guys at Empower…as this question has really been on my mind for quite some time. Thanks!Matt",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  }
+}

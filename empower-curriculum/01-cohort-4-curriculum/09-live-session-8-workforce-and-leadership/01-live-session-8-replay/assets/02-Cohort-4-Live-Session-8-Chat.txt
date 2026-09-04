@@ -1,0 +1,949 @@
+Welcome to session eight. This session is dedicated to the W in Empower, workforce and leadership. We'll be exploring the critical link between effective people management and its direct impact on business valuation. 
+
+
+We're looking at key challenges in team leadership, And we're following that with the introduction of some AI powered solutions. 
+
+
+These AI tools are designed to help you build and maintain a high performing workforce capable of operating seamlessly with minimal hands-on supervision. 
+
+
+We are at session 8 of 12, so we're really in the program's last leg. We'll have office hours this week with Hayden on Wednesday, followed by session 9 next Monday on execution systems. 
+
+
+I'm going to launch our regular milestone check-in poll just to see where everybody's at. Here we go. should be seeing that on your screen now. So again, hoping that you've had the opportunity to run the lead to sale assessment and then optional was to create level one and two SOPs for lead to sale. 
+
+
+All right. So I'm sharing the results now. For folks who haven't yet started, you know, you're always welcome to post in circle if you hit a roadblock. 
+
+
+Come to office hours on Wednesday and we can help you work through any issues as well as DM Josh Hayden or myself for some help. 
+
+
+I think we're all very familiar with this slide by now. Again, today we're focused on the enabling process layer. This is supporting and strengthening the core of our business, and this is where workforce and leadership lie. 
+
+
+Our goal today is to build that strong foundation, ensuring your workforce and leadership systems are scalable, robust, and don't rely solely on you. 
+
+
+Today, we'll look at a three-part workforce transformation framework, all packed with practical, immediate actions. 
+
+
+The first is leadership structure and delegation, set in another way. That is how to distribute decision-making effectively. Then we're looking at hiring and performance management, so how to get the best people for your organization hired. 
+
+
+And finally, we're looking at employee development and retention, so that's how to invest in your people effectively. 
+
+
+to help them grow while keeping them engaged in your business. And with that, I'm going to throw it over to Hayden. Thanks, Madhuri. So as I've looked at a lot of small businesses, and I'd say that's under 100 employees, most owners actually become their own bottleneck to growth inadvertently, often because They centralize decision-making. 
+
+
+So this is probably the number one thing is nothing moves without owner approval, which can create delays. 
+
+
+Again, this is, it sounds like owners are doing this horrible things. This is all inadvertent. It's all part of basically the natural progression of knowing your business really well and growing organically. 
+
+
+Often a lot of critical knowledge is also kind of hoarded in the owner's head. So that makes the business really vulnerable when the owner is unavailable. 
+
+
+It also prevents others from making informed decisions. Owners can often maintain perfectionist standards. I actually don't like the title of that. I would say that owners will often continue doing things on their own because they don't believe anyone else can do it as well as them. 
+
+
+I think maintaining really strong standards is a very good and important thing. We'll talk quite a bit about that today. But I think sometimes there's ego attachments to doing work. 
+
+
+And sometimes there's maybe a lack of patience or faith in others. And often that comes because there's a lack of a delegation framework, right? 
+
+
+So a systematic way to delegate to others, also to understand that that delegation is actually a two-way road and that you actually need to train other people as well on how to effectively receive delegation, just because it's not an easy task. 
+
+
+Now, all the businesses that I own have a leadership team, regardless of their size. And when we buy a business, most businesses were typically owner-run, total owner-operator running it. 
+
+
+And we would usually promote about two to three people within the business to a leadership team. And we'd usually do that within 30 days of actually buying the business. 
+
+
+And at that point, it would be a trial for a leadership team. So you on this call may or may not already have a leadership team. If you do, I can share with you sort of my own requirements for a leadership team. 
+
+
+Let's see if it matches what you're doing. If you don't, you may want to consider building a leadership team and happy to also use the Q&A at the end of the session to answer any questions about that. 
+
+
+So my requirements, when I ask people to join a leadership team, I kind of tell them what the requirements are. 
+
+
+and also tell them sort of what the comp structure is. And one of the requirements is I typically want them to have process ownership. 
+
+
+So I want them to be accountable usually for a key function in the business. I want to ensure that they have time to work on transformational goals, right? 
+
+
+So transformational is different from operational. Operational, the way I look at this is like operational is you set KPIs and you do work to meet those KPIs. 
+
+
+A transformational goal is doing work on the side to extend the reach of those or extend the scope of those KPIs, right? 
+
+
+So operationally as a sales, since we just did sales, as a sales, in a sales function, you may have goals to hit certain conversion rates, to close leads on a certain cycle, to hit certain pipelines. 
+
+
+A transformational goal in sales would be creating you know, a better enablement system that permanently increases your sales conversion rate goal, right? 
+
+
+So instead of 20%, it becomes 30%, right? Or to create an AI-based system that automatically, you know, does a whole bunch of your lead scoring, right? 
+
+
+And CRM entry. In a lot of operating systems, those are called rocks, right? In Some people may be going by OKRs, objectives and key results. 
+
+
+But to me, if you're on a leadership team, you need to be owning those transformational goals, typically on a minimum of a quarterly basis. 
+
+
+When we set up a leadership team, we usually do our rocks on a two-month basis for the first year and then switch to quarterly because we want to have a faster feedback loop because often the rocks are the wrong rocks when we're first starting out. 
+
+
+Obviously to do that, you need to have enough time for actual knowledge work, right? So leaders need capacity for strategic thinking and planning. 
+
+
+If you invite someone on your leadership team and 90% of their time is doing operational tasks or joining the leadership team means you're sacrificing something really key operationally, right? 
+
+
+If they're your number one salesperson and their participation in the leadership team means you are giving up revenue, That's probably not right. 
+
+
+As part of the leadership team, they should actively contribute to leadership meetings and offsites. 
+
+
+So typically, we'll do weekly leadership meetings. We'll do quarterly leadership offsites. They should be bringing insights and solutions to those meetings. 
+
+
+And that contribution can be actively adding things proactively, or it can be reactively. Business finance literacy is a prerequisite for me, for a leadership team. 
+
+
+There are certain books that I'll get people to start reading, but at a very basic, at the very minimum, they need to understand how to read P&L statements and how to understand how their area impacts those P&L statements. 
+
+
+And then in all of my business, owner-aligned compensation. So if I want people to think like owners, I want to incentivize them and compensate them as owners. 
+
+
+Usually that is in an EBITDA-based performance bonus or a profit before taxes performance-based bonus or sometimes a pure gross profit percentage bonus. 
+
+
+I'm happy to answer any questions if people are curious on how to set that up. I believe that is more and more important in the age of AI because as you learn AI, as your team learns AI, they become significantly more leveraged and important to the organization. 
+
+
+And, you know, you want to give people, you want to incentivize people well to basically automate out all of their responsibilities so that they can take on higher level responsibilities. 
+
+
+And in my opinion, the best way to do that is to incentivize them as like owners, right? So if we grow the business 50% this year, there's a meaning, you know, your compensation is also growing 50%. 
+
+
+One of the unique aspects of our operating system is I ask, I want the leadership team to be process owners. 
+
+
+And I really like this concept of having basically each member of a leadership team represent a key stakeholder in the organization. 
+
+
+So for example, in our companies, a lot of them, because they are supply constrained businesses, that require people to do work. 
+
+
+We have a people and culture person in the organization, and they are also on the leadership team. And they kind of represent employee interests for the company, including training, ongoing training, culture, but also obviously recruitment and standard HR things. 
+
+
+Typically, we have someone representing the ownership and financial stakeholder. So profitability, sustainability, there's a natural tension that exists between those first two, right? 
+
+
+So someone who's representing employees and culture, there's a natural tension to say, hey, I want to give people better insurance, health insurance. 
+
+
+I want to give people better hours. And then the finance needs to tug on that and say, well, we need to protect our profitability. 
+
+
+And so that tension, I think, is healthy. I typically will have someone in a customer acquisition role. So often representing both markets, a lead and lead to sale on the leadership team depends on the size of the company. 
+
+
+It's, it's great. If you're large enough to have one represent each we can talk about some, how that handoff works, but this person represents basically growing revenue in your organization as well as sort of the market needs. 
+
+
+Then we'll have someone operationally who manages typically sale to delivery and delivery to success, or just calling it sale to success and fulfillment that represents quality interests for the company. 
+
+
+So they would measure customer success, they would measure NPS, they would ensure that the products are all rated highly. 
+
+
+And then finally you have the GM, right? The general manager or CEO, often this is you, Maybe if you get to the point where you are an actual CEO, then it's a GM that manages this. 
+
+
+But I actually think a GM's role is to very patiently grow the leadership team, right? And grow the quality of the leadership team, but also balance the stakeholder interests, right? 
+
+
+And make the ultimate decisions between a lot of the trade-offs that exist. And obviously grow the leadership team and how they support the overall strategy culture and alignment. 
+
+
+Um, if you don't have a large team, uh, one interesting thing that you can do, and I've actually seen multiple people do is create a little AI leadership team, right? 
+
+
+So literally create, uh, create a simple prompt that basically says you are my people and culture leader. 
+
+
+This is the, this is the, uh, interests and stakeholder you represent. This is your role. and then give it the context for any decision you want to make. 
+
+
+You can even have more sophisticated setups where you have each of these roles argue with each other about specific decisions and sort of watch that conversation evolve, which is quite fascinating. 
+
+
+This is one of the areas that has probably the highest AI enablement, in my opinion. So AI enables, like in the past, many different frameworks for smaller businesses that were only available to larger businesses in the past. 
+
+
+So things like the world's best hiring and recruiting systems in the form of things like top grading. 
+
+
+In addition, A lot of anything that involves sort of meetings and meeting optimization, which is a huge part of the culture of a company can be massively AI assisted. 
+
+
+So, you know, obviously everyone is using sort of note takers, but are they, you know, making AI prepare for the meeting and prepare everyone else for the meeting? 
+
+
+Are they using actual real-time facilitation? which is something that's becoming bigger nowadays. Are they actually doing automated follow-up and accountability post-meeting, or is it just sending their standard sort of meeting update and nobody really looks at it? 
+
+
+AI is also, like I just said in the last slide, great for decision support systems, right, by giving Claude certain prompts for context. 
+
+
+It's extremely good for accountability. So one of the things that we're doing in our company is we'll get into sort of the clarity boards. 
+
+
+And if we have time at the end, I'll actually share my screen and show some clarity boards that AI creates. 
+
+
+But it kind of does this like bottoms up approach to execution. So one of the things we're doing is teaching individual contributors how to have conversations with Claude that then surface their own OKRs going forward and even then structure all of the meetings that they're having going forward. 
+
+
+So as opposed to us going top down and doing this, which we had to do in the past, you can now bring the system and go bottom up and actually have a lot of the rock review, rock revision happen on an individual basis from the bottom up. 
+
+
+Strategic planning, AI is fantastic with as well. I'm starting to play with proactive agents in this area. I don't have anything I can fully release yet, but it's super interesting. 
+
+
+And in manager coaching, this happens in many different ways, but all sorts of training and onboarding is super, super helpful with AI. 
+
+
+But also any kind of call review, whether it's part of a sales process, whether it's part of a fulfillment process, AI can automatically score those calls, can automatically flag sort of poorly scoring calls for call review, can flag really high scoring calls for call review in a group, right? 
+
+
+Which also makes the person who did the call feel great and then show what good looks like to everyone else. 
+
+
+Yeah, AI is fantastic for this. Even just the onboarding piece, like if there's one piece that you take out of this whole thing, it would probably be like use AI to create a full onboarding process for every single one of your employees, but turn it into a prompt that actually has your own employees create it for you. 
+
+
+I can show you more about that at the end. Before you get on to the slide, Hayden, there's a couple of comments in the chat around AI leaders and whether you give them an individual personality and around decision support, if you've ever experienced wrong support due to invalid data. 
+
+
+So, for example, a hallucination. So the first question, do I give them a personality? I give them a role and a stakeholder that they advocate for. 
+
+
+I wouldn't say I necessarily give them a personality. But yeah, I think the main thing is giving them a role, giving them a scope, giving them an advocate, and then And then giving them proper context, obviously, which we're doing with the master prompt primarily. 
+
+
+Sorry, the second question was? around decision support if you've ever experienced wrong support due to invalid data? 
+
+
+100%, all the time. That's why taste matters. That's why the person who's receiving the support really should know enough about what makes a good decision. 
+
+
+This is you to the power of AI. If the you is really, really low, the exponent is not nearly as valuable. So if I were to say, I believe the proper role to receive sort of strategic support like this is one that should already be giving the strategic or doing the strategic work. 
+
+
+It's not that you equip someone without the experience with an AI tutor that tells them what to do and trust it. 
+
+
+So it's like a challenger. Exactly, yeah. It's a challenger. So what I've found is AI, first of all, saves you a lot of time, as you've probably noticed as you go back and forth with some of these prompts. 
+
+
+The fact that it's asking you questions and then answering its own questions is probably revealing a lot more context than you would normally give if you were thinking about it on your own. 
+
+
+In addition, You can go back to it with various frameworks that you'll learn and basically challenge it to look at everything through the lens of this framework. 
+
+
+And it will fully give you all of that, unleash all of that potential, which, again, us humans are not nearly as capable of doing. 
+
+
+And it also, if those lenses are designed to create insights and innovations, it will surface them. 
+
+
+And again, those are things that, you know, if you were given a very specific context and scope to look at, you probably would have figured out on your own. 
+
+
+But it would have taken you quite a bit of time and you would have had to go through that scope. But AI is able to just surface it all. But you get out what you put in. 
+
+
+It's kind of the key to this all. And so I think the whole, I think the innovation of the master prompt is a combination of like the context is always there. 
+
+
+So you're always putting the context in, but it's also that it's asking questions to the right user and answering its own questions about the user and allowing the user to kind of expand upon that context. 
+
+
+And that's what kind of creates like really strong context into whatever you're trying to create. Go ahead, Don. I think you're muted. Yeah. Okay. I'm back. Hello. Hi, Hayden. Great topics today, as usual. 
+
+
+I would love for you to maybe give me some examples of specific ideas around the leadership-based, or rather around the owner-aligned compensation. 
+
+
+That's what I'm after. The owner-aligned compensation, because it does certainly create... A lot of owners are into transparency and I'm sure you deal with stuff like that. 
+
+
+And any comments you have about your experiences actually implementing this stuff would be great. Yep. So a lot of it will depend on the industry context. 
+
+
+And I would say also the maturity of the industry in anything that isn't, let's say like startup Silicon Valley style environment. 
+
+
+I would say that, most people value cash over equity. And you as an owner, cash is much cheaper than equity. And so you also value cash over equity. So again, if you come from a more mature startup environment, that may not be the case. 
+
+
+And then you may need to be looking into stock option pools and stuff like that. I'm going to assume that you don't. It's construction. I'm talking construction. Yeah, so- Yeah, my game there, yeah. 
+
+
+So cash first, cash-based compensation. I like to give people a percentage of EBITDA growth, right? Sometimes you give it over a baseline. So let's say this last year you did a million dollars in EBITDA, you might give them a percentage EBITDA growth over 10%, right? 
+
+
+So anything over 1.1, I will give them a percentage of growth. I like to give the full leadership team a percent, right? Typically... 15 to 20% over that baseline, maybe 20% over that baseline. 
+
+
+And I like to split it up and leaving a section unallocated for future potential members of leadership team. 
+
+
+I like to keep the bonus stuck to a single baseline. So if I start year one and it's at a million dollars and I say that the expected CAGR of this business is 10%, And year two, I'm giving the bonus on anything over 1.1. 
+
+
+Year three, I'd give the bonus on anything over 1.2-ish, a little bit more, because of the compound effect. 
+
+
+That acts as golden handcuffs, assuming that you actually have year-over-year growth. Because if you get to the point where you're making over three years, you're making $2 million now in EBITDA, you're still getting paid on an EBITDA over 1 point something. 
+
+
+at that point. Quitting means giving up a very, very large bonus. There are other pieces of this, but yeah, typically for like a construction business, it's cash-based, it's EBITDA based. 
+
+
+Often year one, it'll be gross profit based because they don't actually have control over EBITDA. And there may be some larger expenses you wanna put in. 
+
+
+That's up to you though. And how often do you do the calculation and pay the bonuses? So pay the bonus quarterly, usually. And if you have a down quarter, you need to obviously adjust for that accordingly. 
+
+
+And very important, going back to our finance framework, you only pay the bonus out if you have a certain number of months of OpEx or burn in the bank, right? 
+
+
+And everyone needs to know that upfront. Very, very important. And there should always be a mechanism to claw back if you have a down quarter. 
+
+
+Okay. Makes sense. Great. Voice of experience. Yeah. I mean, I also am really interested in ESOPs as like a way for companies to get liquidity, especially in the US. 
+
+
+So, you know, if you're ever interested in that and want to see like what great really looks like from this perspective, there's the great game of business, which is a book, written years ago by a guy who formed an ESOP for a remanufacturing company, does workshops and company tours, which are really quite amazing. 
+
+
+Something I would check out if I were you. I think they have this ridiculous stat. I think they formed as an ESOP 40 years ago, and they've had 40 years of successive growth and have grown something like multiples ahead. 
+
+
+I can't remember the exact number, but something like 25X Berkshire Hathaway as a company. Really fascinating. Wonderful. Okay, thank you. One thing that I've been working on a lot over the last several months is this idea of building a business brain. 
+
+
+And building a business brain is effectively like it works from the bottom up. So teaching all of your team AI and having AI interview your team in order to actually understand process ownership from the bottom up is actually, I've found a much more effective way to do this than going top down. 
+
+
+So as you graduate this cohort, you probably have core processes, maybe some blueprints laid out. And you may be thinking, OK, now I need to teach, do this myself or teach this myself. 
+
+
+I personally think that's the wrong approach. And the right approach is actually teaching your team how to uncover a lot of this from the bottom up and then build up a bit of a business brain so that you can surface a bunch of, ideas Process ownership gaps, delegation opportunities, responsibility, distribution, et cetera. 
+
+
+Again, happy to answer questions. That's a very large topic. But this is where I see some of the most use is teaching your team how to use AI, almost having them go through a similar program in order to surface all of this. 
+
+
+I have, so I created, my job descriptions always looked like roles are a collection of responsibilities which are tied to processes which have success metrics, which I think is a little bit more thorough than how most people approach a role. 
+
+
+Most people will approach a role as a role has a job description and maybe people have five to seven The next level up might be that people have five to seven KPIs in a role. 
+
+
+And the next level up above that might be that they have outcomes defined on a monthly basis. But I kind of do look at this as holistically as your role as a collection of responsibilities that are tied to the processes that you are responsible, accountable, consulted for, that then each of those processes have success metrics. 
+
+
+It's an interesting distinction. Because it also means that as your team, you and your team are able to automate functions within processes, roles evolve rapidly, right? 
+
+
+So I think, I personally think like this is the last year you'll ever see like a single like CMO style role simply because so much of that role, so many pieces of that process are being automated by AI that that role, know couldn't possibly have more in a proper functioning company probably shouldn't be spending more than five hours a week on, right. 
+
+
+Maybe 10 hours a week on. So now you might see you have a lot more chief revenue officers in smaller companies that handle both, you know, marketing and sales leadership and a finance function, right. 
+
+
+Without having those other rules beneath them. Um, simply because as i said, processes become more automated, um, those responsibilities, um, require less human hours for the same output. 
+
+
+And so roles end up evolving into much broader roles. And I think we're seeing that already in programming as programmers. So the junior programmer role is disappearing. 
+
+
+In some ways, the product manager role is actually evolving into what would have been maybe four or five different roles where you had a product manager, you had, you know, maybe one or two senior developers and two junior developers. 
+
+
+That's all turning into one role, which is effectively like a product manager that's responsible for, you know, speccing, prototyping, giving feedback and potentially even, you know, determining feasibility. 
+
+
+I'm going to pause there for a second. Does anyone have any questions related to this slide or the last? So some context on the idea of a clarity board. 
+
+
+I remember an early mentor taught me like a very simple way of looking at business was clarity, right? 
+
+
+So if everyone in the company knows where the company is going, has clarity in where the company is going, if everyone in the company has clarity in their role in getting there, and if everyone in the company has clarity clarity in how success in that role is measured, everybody has clarity, those simple three things. 
+
+
+And so I initially created Clarity Awards to try to help achieve that for everyone. And they were originally designed by a people and culture manager with the individual employees. 
+
+
+And they acted as like, we did them in Google Sheets originally. They acted as like a one-stop shop for everything that employees needed. 
+
+
+So it included obviously their role responsibilities, links to all their processes, links to their scorecards and expected outcomes, links, if they had them, links to their ROCs or OKRs. 
+
+
+It had like their personal meeting schedule and communication cadences, the agendas for all their meetings, had the full, you know, links to the employee handbooks, mission vision values, core values, et cetera. 
+
+
+Even had all their onboarding together. So initially we did this in, in, Coda, which was like a Notion competitor years ago, and then we did it in Google Sheets, and now we are just custom making them with AI. 
+
+
+So before, we had an entire role that designed these things, and it took quite a bit of time to do them. 
+
+
+Today, it's now a single prompt that designs them in basically working in conjunction with the actual employee. 
+
+
+I will share an example of ClarityBoard, and I can share an example of the prompt as well if people are interested to do it at the end of the session. 
+
+
+Okay, next part is hiring and performance management. Obviously we went over quite a bit. This is a very dense session. So if anyone has any questions right now, please feel free to ask. 
+
+
+There's definitely interest in seeing an example clarity board at the end of the session. Okay, so part of the AI first culture shift. So AI enables both faster and higher quality work, which means it needs to go in combination with reset expectations for both speed and quality. 
+
+
+If you don't have, if you don't raise those bars, that's why a lot of implementations and organizations don't work. 
+
+
+Because people end up using AI, automating certain things, and then just kind of resting on their laurels. 
+
+
+So this does need to come with higher expectations. AI is also excellent at creating accountability and becoming an accountability partner. 
+
+
+If you are like me, I hate cracking the whip. terrible at it. AI is an incredible and friendly nudger of everyone on your team if you set it up to do that. 
+
+
+And then the other thing I would say is like part of the AI first culture shift needs to be recognizing achievement within the team and just having, I would say, a general culture of like, recognition around experimentation and playfulness, because those are actually the traits of people that succeed with AI, as people who are curious, who are willing to experiment and are willing to dig deep in figuring things out. 
+
+
+We'll talk a bit in a future session on how to build out and get team buy-in and how to announce AI and all these other things, but I wanted to mention that this is a key piece to introducing AI is you need to have these resets expectations. 
+
+
+So one thing that I'm sure everyone's heard and probably everyone realizes they should do, and not a lot of people do, is to hire slow and fire fast. 
+
+
+In fact, I would almost say that if I look at, say, acquisition entrepreneurs who buy businesses, the number one, probably the number one criteria for whether or not they'll succeed is their ability to fire fast and not sit back with someone who is clearly not a good culture fit for months on end. 
+
+
+So the key thing here is to, so the key thing around hiring, around firing fast is to have clear standards, right? 
+
+
+So nothing unambiguous is to be able to document issues as they come up, to be able to coach people. 
+
+
+So coach people as issues come up and coach them towards success or, you know, get rid of them. and part of getting rid of them is using AI to coach for some of these difficult conversations. 
+
+
+And so one thing I would look at here is, as individual owners, how can I use AI to help me fire fast? 
+
+
+That may not sound like the most fun, pleasant, and way to look at this, but it is highly correlated with success, which is why I mentioned it here. 
+
+
+wanted to take some time we're a small group, so I think we can just stay here um. How many people are we sorry. I think we've got 10. Okay, maybe make like two to three groups on yeah um. 
+
+
+yeah just separate and say what's one performance conversation, you need to have right now. As a as a talking point you can. also talk about if there's nothing you can think of there on what sort of one way you'd love to work with AI in sort of workforce and leadership management. 
+
+
+All right, I am opening all of the rooms and you don't have to worry about keeping an eye on time. We'll do that for you and you'll come right back to the main room after about 10 minutes. 
+
+
+Welcome back. Hope folks had fruitful discussions. Would anyone like to share any of their discussions? I could share a quick, um, we ended up discussing how, how, how in both cases, like implementing with your team and, and maybe it's good for you to say something because like, I feel this is my second time through the cohort and I'm taking a pretty different approach to not doing so much of myself because I know I want my team to help do the assessments and I want to have that done before I put them over into stage three. 
+
+
+And, um, you know, I probably ended up with about 150 pages worth of documents from the first cohort that I'm glad I did it. 
+
+
+Don't want to do it again like that. So yeah, maybe you can just sort of say a little, I know we're coming up later, but that was how ours, that's what we ended up discussing to not get burned out by people who are trying to go through the course and also share with their team alongside. 
+
+
+Yep. So what I, The way I approach this is I typically will do the first three sessions. They're done in a week, kind of giving the, they're fairly similar to the first three sessions of this cohort in terms of just giving people the foundation, the shared language around a lot of different things. 
+
+
+So stuff around like levels of process, types of process, et cetera. The What we do for like sessions four to nine in the Teams program is that they're asynchronous and they're much deeper and related only to the functions that the employee work in. 
+
+
+So if they work in fulfillment, if they work in sales, if they work in procurement, they work in finance, they work in HR, it's different sessions. 
+
+
+And basically they learn how to create by going back and forth in conversations with Claude, they create their own processes. 
+
+
+And like the culmination of that happens. in the next session, which is the clarity board, which is the thing I'll share here, which is basically taking, so it creates this role master prompt for each individual employee in addition to the company master prompt, which exists in the project. 
+
+
+And then based on this, it helps create a clarity board. And then that clarity board surfaces all of these opportunities and commitments for them to go out and create their own process. 
+
+
+So that's my approach is we go bottoms up, right? Teach people the fundamentals and then have them basically surface up the opportunities and commit to doing the opportunities. 
+
+
+Then that kind of culminates into a, let's take the collective intelligence of all the people that went through that and compare it to what you did, right? 
+
+
+And then from there, it surfaces gaps and discrepancies and divergences from what you understood the processes to be and what the actual people doing the processes understand them to be. 
+
+
+And then it now has Everyone has the ability to use stage three and build out those processes. You don't have to do it. And so it kind of takes the onus off of you because you're probably already the bottleneck in a bunch of different areas. 
+
+
+We don't need to add it. You as the bottleneck in AI and process creation as well. But that's sort of the design bottoms up. Just seeing a comment from Tim as well that, Nancy, you gave some really good recommendations on how to delegate certain tasks and assessments to colleagues and doing feedback loops. 
+
+
+Okay, so going back to this concept of performance standards, probably everyone's familiar with this concept of Parkinson's law that a task takes as long as you allocate to it, right? 
+
+
+And so often that's where a lot of procrastination can come from and busy work can come from. With that updated standards, productivity gains will not be, will not reach the company. 
+
+
+And so these are, this is like a simple table of like, I actually would update this table, but this is sort of the AI multiple. 
+
+
+So content creation is three and a half X faster. Therefore your standards need to be higher. Ideally three and a half X higher. I would update this to probably being more like 10 to 15 now. 
+
+
+Research analysis. Again, multiple times higher documentation, multiple times higher communication, multiple times higher. 
+
+
+So how do you if this is truly the case, how do you update your standards and how does that happen over time? 
+
+
+The other interesting question, I call it like AI arbitrage. So it's like a framework for actually saying, if I found something in my business that AI cuts the cost down substantially, right? 
+
+
+Rather than just saying, oh, content creation has dropped 10 X, right? And so therefore my existing content creation, which I do four videos a month now costs me, you know, $2,000 less per month. 
+
+
+That's sort of the first phase of thinking. The second phase of thinking, if you see the giant cost reduction, is what's the upper level of actual content creation in your business that doesn't provide diminishing returns? 
+
+
+And so that's the next level up. It's like, oh, I make four videos now, but actually I could make 20 videos a month and send it to my customer list and publish it to my YouTube channel without seeing many diminishing returns. 
+
+
+And then the third question is, what is the actual max surplus? And then how do you distribute that surplus? So as an example, with content creation, maybe my max surplus, I've actually, in one of our businesses, we've dropped content creation from what was a probably $3,000 three week per video down to about $200 one day per video. 
+
+
+And we kind of looked at that and said, okay, one person could actually create something like 80 videos a month, right? 
+
+
+But all we can really do on a single YouTube channel and a single email list is probably 20. So how do we identify the surplus for those 60? Well, we could, so you basically look at, am I hitting new markets or am I reactivating old markets, right? 
+
+
+And then you could say, I'm gonna look at segments. Instead of creating a generic video, Um, let's say for AI enablement, I could create AI enablement for, uh, construction companies, videos, or AI enabled and entirely different AI enablement for construction companies channels. 
+
+
+Right. Uh, if I knew segments of my customers, um, or I knew, uh, segments of my leads by objection, I could create entire videos around objections and reach out to my customers. 
+
+
+And if I know there's ROI there, then I need to say, okay, I have a plan. I've cut costs down, you know, by 15 X, and I have a plan to get to step two within 30 days or 60 days. 
+
+
+Right. And do 20 videos a month. And then I have a plan to hit step three, which is this allocation of cost surplus, um, within 90 days. 
+
+
+And my new standard is going to go from two to 80. Right. And that can happen with anything. That can happen with each of these elements, right? And these are actually the elements that AI is probably best at, right? 
+
+
+It's production of content in any of its forms. It's research analysis. It's documentation, which is really content creation. And it's communication, which is also content creation. 
+
+
+In one of my businesses, same concept, we were looking at basically creating videos for our lead lists that had So basically we had leads of buyers based on state and we realized we could just enable one person on our team with cloud code to create videos, custom videos for each person based on state and like 10X our conversion rates in that outreach. 
+
+
+And because our cost and creation of that video was like down to $200, it was actually worth doing it to distribute to under a thousand customers, right? 
+
+
+It's still super high ROI. So same kind of concept. Okay, so in the performance management side, typically in most companies, your regular performance meetings are in the form of one-on-ones, which happen either weekly, biweekly, or monthly, depending on the business. 
+
+
+Performance reviews, which happen either quarterly, semi-annually, or annually, depending on the business. 
+
+
+And then sort of performance and compensation calibration, which should happen ideally annually in most businesses. 
+
+
+Obviously, AI can help you with all of these. If you don't currently have structured versions of these, and you don't currently actually do quarterly or semiannual performance reviews, I would highly, highly suggest you work with AI, which already knows all your core values, which already knows everything about your company, and just ask you to help me with my performance review structure. 
+
+
+Ask me to help with the performance review for Joe John Smith. And just schedule it. It's really worth doing. And it cuts the preparation down massively. And this is something that often people kind of dread doing. 
+
+
+So if you can cut the time of dread, it takes down the probability of it happening. It goes way up. Performance documentation is another area that most small businesses do not actually manage, partially because it's a bunch of work to even set up the documentation in the first place. 
+
+
+With AI, it's a single 20-minute conversation with an output. So first of all, we need to start with performance standards on roles. 
+
+
+So everyone needs to know what success looks like in their role. That's probably the number one most important thing. I personally like the top grading approach. 
+
+
+which suggests what success looks like in outcomes each month for the next three months, right? So that's very, very clear and unambiguous to say that, you know, as of March, I expect this X, Y, and Z in these metrics, as of April, X, Y, and Z of these metrics, as of May, X, Y, and Z, and we will review again at the end of May. 
+
+
+Secondly, I, Performance, so PIPS, performance improvement plans. This can be built in 15 minutes with Claude. If you don't currently have one, just same idea, ask it to ask you questions and then build me a performance improvement plan that matches my core values. 
+
+
+And it aligns to the key metrics in the business. Just note that if you make this, if you don't have this, It's very difficult to actually enforce accountability. 
+
+
+If you have this and you don't use it, it's actually worse than not having it because people then basically see that even though the system exists, there's no repercussion. 
+
+
+So if you choose to make this, I think it's really important that you follow it. And then everything else on performance documentation goes down to some of those performance reviews. 
+
+
+And again, I highly recommend you have AI help you with your performance review structure. Try to have it create objective scoring, where people do self-scoring beforehand. 
+
+
+And so if you're objectively self-scoring one to five across various criteria, have AI create the examples of what one, two, three, four, and five looks like for every given role. 
+
+
+Again, that wouldn't have been possible before AI. And now it's a matter of a simple five-minute conversation. Most people, so management is the next piece here. 
+
+
+Most people quit their jobs because of bad managers. AI can make people way, way better managers and can especially make first time, like bring first time managers up to speed a lot quicker. 
+
+
+So one of these elements is just teaching managers how to use AI as a coach on how to deliver effective feedback to their reports, right? 
+
+
+So literally, if you feel... Before just reaching out and blurting something out to somebody and giving feedback, critical feedback, ask AI how to give this feedback, right? 
+
+
+And everyone here should do this as well. I do this constantly, right? Because I'm not nearly as... diplomatic and tactful as AI. And sometimes AI will point out that this is my problem, not theirs. 
+
+
+This was a lack of, this is poor delegation on my part, right? Or this was a lack of delivering what success looks like. Obviously documentation standards are much faster to create with AI. 
+
+
+Performance coaching. So actually in your PIP, actually coaching people to improvement, a lot easier to do with AI, a lot easier to outline with AI on a custom role by role basis. 
+
+
+And then analysis. Like I will often take calls that I have. I might take a one-on-one call Right. And, you know, put put it in to Claude and basically ask, you know, how did I do in this call as a manager? 
+
+
+What could I have done better? Right. Again, if that becomes second nature to people, they will become better managers. 
+
+
+Right. Over time. So individual accountability systems, again, this kind of ties into the clarity board. So I always want to have individual success metrics tied directly back to the company scorecard metrics. 
+
+
+Even if they are different metrics, they need to understand what company scorecard metrics they relate to and how. 
+
+
+So remember that where's the company going, clarity in where the company is going, clarity in how my role helps it get there, and then clarity in how success is measured. 
+
+
+Um, performance-based compensation is a huge, I think a huge part of, uh, business. And so if you're currently have people on, you know, on basis without variable, uh, I would, I would immediately start talking to AI about how can I create a incentive plan for this role? 
+
+
+Um, that, you know, only pays them more as we, as a company succeed, uh, it'll get very specific. And then career development integration is also key. 
+
+
+So having an actual sort of development plan. So Don, if you're in construction, one of the things that we do when we buy a company is we actually create a development plan that basically sets like, you know, rough in level one, rough in level two, rough in level three, that each correspond with like, you know, hourly increases of maybe a dollar or 50 cents so that people understand that there is an actual progression. 
+
+
+And that pay is not based on whether the owner likes you or not. It's based on merit. And again, that's something that AI can set up for you. So in terms of performance, like under performance management, so through the use of a PIP, performance improvement plan, just remember that the goal is actually improvement first. 
+
+
+It's not, I'm going to put you on a PIP so I can fire you and it's been documented. The goal is improvement first and then termination only when improvement fails. 
+
+
+The main key here is like your understanding that if you're not avoiding an uncomfortable conversation and dragging out the process, When someone's on a PIP, you set a very clear timeline and very clear metrics on what improvement looks like with their expectations and support and stick to it. 
+
+
+And so typically, if you do a good job in performance improvements, most of the time you do actually are able to coach people out or coach people up rather than coaching them out. 
+
+
+But it's only if you actually put in the effort and again, It can be a single AI prompt that literally you could screenshot the slide and say, X person is being put on a performance improvement plan. 
+
+
+Set this up for me for the next 30, 60, 90. And like, it's done. And by the way, the reason some of these presentations and calls are so dense is so that you actually do do this. 
+
+
+They're able to kind of look at it and return back to it and work with Claude through a lot of it. So we're on part three. We're a little behind it. Are there any questions right now or? 
+
+
+I don't see any questions related to this last portion. So this is reiterating some of the things in the previous slide. So basically, it's typically poor managers that people quit due to, or a career ceiling and development stagnation. 
+
+
+Nice thing about AI is that for people who are motivated by mastery and by learning, the pace of learning has never been anywhere near what it's at today. 
+
+
+And their roles are likely going to change and evolve. Um, Some things that you can do proactively. Again, typically these are systems reserved for larger companies. 
+
+
+Most smaller companies don't have the resources to do it. And so because of that, basically people just quit and it seems unexpected and now they have to rush to hire. 
+
+
+What larger companies will do and what AI can allow you to do are simple monthly pulse surveys. stay interviews, all with the ideal effect of actually identifying engagement risks before they actually become retention issues. 
+
+
+So you look at it as preventative maintenance. So I think the easiest thing here to set up, again, single prompt with Claude is a pulse survey, right? 
+
+
+Anonymous. You can make it anonymous. You can just track engagement scores. You can track manager ratings. You can track growth satisfaction. Um, you can track how appreciative people feel. 
+
+
+Um, all of that is super useful. Um, and again, with AI, it's a 30 minute task. Um, The one thing I think that AI is exceptionally good at is actually personalized recognition. 
+
+
+So recognition is like it's the tool that costs absolutely nothing, but makes people just provide such like job satisfaction. 
+
+
+And so if you are not naturally good at recognition, asking AI and building it into your processes to allow managers to provide recognition is extremely effective and like infinite ROI because it costs nothing. 
+
+
+This could be as simple as having recognition built into every single meeting, right? Whether that's a one-on-one, whether that's like a town hall or all hands, whether those are standups, it could be based on any regularly sort of recurring reports that go into manager's hands to come up with recognition possibilities. 
+
+
+So the manager does it every single time. Again, if everyone could be recognized for something that they did well, whether that's performing well in their job or learning or curiosity or taking a shot, the business becomes a lot more fun place to work. 
+
+
+So some recognition systems you can build in beyond your core values. So in case you don't have it, core values are probably the first place to look, right? 
+
+
+Because not only does it give recognition, it also reinforces the core values and sort of the personality of the company. 
+
+
+Obviously, achievement is a big one. Peer recognition is a big one. Build it into processes where peers can recognize each other. Learning recognition and process improvement or creative solution. 
+
+
+or just taking a shot on something is something I try to recognize. Again, just understanding that if everyone were to take more shots, the company would likely do much better. 
+
+
+So what are the things that if everyone did it, the company would be way better? Recognize them. And again, build it into your systems, your frequently recurring processes and systems such that managers identify the recognition and almost automatically, not necessarily automatically, but are reminded of it and give it out. 
+
+
+And that turns into a nice flywheel. Okay, so in terms of development, some things that I would recommend you use AI for are like career progression charts. 
+
+
+Again, simple, that's just a new chat that you can add and say, help me create a career progression chart for this role. 
+
+
+First-time manager training. So I have a couple different books that we always recommend people read. Radical Candor is a personal favorite of mine. Um, but you also might want to even just create your own sort of management training, uh, with AI, um, that people can go through. 
+
+
+I continuing education is something I try to put. So voracious learning is one of the core values in every single one of my businesses. 
+
+
+Um, and so including things like book clubs, including AI training programs, always having basically a training program that's optional, um, within the company that people can join. 
+
+
+I find is extremely important. You can do that on, people can do it on their own time if you make it optional. I probably, you know, in one of my companies, we've probably done something like read about 30 or 40 books together over the course of like five years, the last five years, as well as gone through probably about 30 sessions of AI training. 
+
+
+So you can imagine that that compounds a lot. A lot of successful companies I've seen also do community and volunteering work. 
+
+
+So that can be paid or unpaid and optional. But I found that that's especially that's part of your identity and your core values. 
+
+
+That's something that makes the company a much better place to work and gives people pride. So the management is a very different skill set from being a strong technical worker or individual contributor. 
+
+
+And so just something that I'm sure everyone's aware of, but it bears reminding. You need to develop management skills in people before promoting them. 
+
+
+That is not something that happens overnight. I think that's something that should be understood at least a couple of months in advance. 
+
+
+You need to separate technical excellence from management capability in your evaluation and promotion criteria. 
+
+
+The absolute worst case scenario, which happens every day, is that you basically promote a strong individual contributor who's a poor manager and end up having one fewer strong individual contributor and one more incompetent manager. 
+
+
+So just make sure to look out for this. And again, on the manager training side, this is something that AI can help with quite a bit, both for preparing and for the first month or two in management. 
+
+
+In terms of AI leverage, again, this is more of a slide for everyone to review on their own afterwards, but these are all areas that AI absolutely excels in. 
+
+
+So personalized development, so growth plans for every single person on an individual basis that aligns with their current skills, career aspirations, as well as your organizational needs. 
+
+
+Again, one of the things that we look at is building a role master prompt for each person so that AI understands each person's role really well. 
+
+
+And so we usually do that as part of the personal preferences within cloud settings and then have the master prompt as part of the project that they work in. 
+
+
+That way, every single employee has context for both their role and the company. Engagement analysis. So predicting retention issues. Again, this is something that probably requires a bit more AI integration throughout your organization, but I've, and I personally am not doing this, Um, but it's something that I've seen other companies do and talk about. 
+
+
+Um, onboarding automation is a big, big, big one. Uh, so personalized learning paths for new hires. Like there's no excuse now to not have any, like just an incredible onboarding plan that, you know, goes over the first 30 days and has, you know, 10 touch points with four different people and, you know, three different mediums. 
+
+
+Right. That's typically our, our minimum expectation now on onboarding. Um, Performance coaching, skills gap analysis, also great simple things that AI can help with. 
+
+
+So again, in terms of the requirements for the AI era, this is what you're going to, as you build AI and build your teams out and adopt your teams into using AI, this concept of dynamic job descriptions needs to be communicated. 
+
+
+That what your job is today is going to, the idea here is that we are able to identify pieces of processes that you're involved in and automate them, delegate them, eliminate them. 
+
+
+in order for you to then take on higher leverage work that is also enabled by AI. And so what that means is that honestly, a job description today probably needs to be reviewed every other month in a truly sort of AI adopted organization as people basically replace their low leverage tasks with higher leverage tasks. 
+
+
+Along with that comes evolving performance standards, right? Again, if we drop the cost of something, By 10x, how do we increase the output of it 10x without diminishing returns? 
+
+
+And how does that turn into a performance standard? That's what transforms an organization. AI-aware career progression. So how do we, I look at this as typically when you train teams, there are phases. 
+
+
+The first phase is from the bottom up. using AI on a day-to-day basis to automate a lot of what you're already doing. As you train your team, you'll notice that certain people thrive and certain people, again, it's typically people who are curious, relatively confident with technology, but not necessarily like a developer, somewhat obsessive. 
+
+
+Those people really thrive in being able to create workflows and pipelines and And so the next phase is to eventually get them into helping cross-functionally, to helping other people on the team with those things. 
+
+
+And then the final phase is this AI operator role, which we have at all our companies. And it's, I believe, going to be a primary important role for every single company in the future, which is kind of the architect of much of these systems for AI. 
+
+
+And then compensation systems, I really believe need to reflect the scale of value creation patterns and the scale of a single individual AI operator. 
+
+
+The reality here is that if this doesn't happen, people who become way more leveraged in their work will just quit and they'll become entrepreneurs because they can. 
+
+
+And they can now do the work of, 10 different people in their company. The way to kind of overcome that is to obviously have the organization be a fun place to work and collaborate in, but also give them a lot of autonomy and a almost endless path of career progression and compensation. 
+
+
+So I really do believe anyone who does this and fully AI enables their people without doing this value-based compensation piece will probably risk the flight of the vast majority of those people We have one comment in the chat from Tim. 
+
+
+Is there also a team master prompt regarding the team slash department area besides the master prompt for the whole company? 
+
+
+So there's an individual master prompt for each role. That's basically each person in the company. There's no separate master prompt for a department, if that's the question. 
+
+
+If you wanted to do that in a department, I think the right way to do that is to do it as a skill in Cloud as opposed to part of the master prompt. 
+
+
+Any, so we only have five minutes here. So I probably will skip a few of these slides here as we, it's mainly recapping. 
+
+
+Any questions? Hey, Naito, I just have more general questions, like if there's more details on how you do the onboarding from a bottom-up perspective, which tools you use, and kind of aligned with that, you had mentioned this business brain, and I haven't used Notebook LLM or LM much, but wondering when you think about where to store knowledge as a business, is it in databases or is it in something like Notebook LM or and then accessing it through Cloud. 
+
+
+So I just wonder if you have any recommendations regarding how to use tools to accomplish any of these things. 
+
+
+Yeah, so I personally am not a huge fan of Notebook LM. It has really good, it's really strong at like very, very specific use cases, but it's actually surprisingly weak at like actual organizational use cases. 
+
+
+As an example, despite it being a Google product, if you put a Google Drive, like a Google Doc as a source, it does not dynamically update that source based on the Google Doc updating. 
+
+
+Yet Claude does, which is odd. So to answer the question, I think it's very important that you have a single system of record that holds your truth. 
+
+
+So in my case, in my companies, I use stage three as the system of record. You need two things. You need a single system of record, and then you need a synchronization layer across. 
+
+
+So in my case, I use stage three as the system of record. And then I synchronize. Most of my AI operators use Cloud Code. And so I synchronize stage three with Cloud Code to make sure that everyone stays up to date. 
+
+
+You could do the same thing with Airtable, with Notion. Those are common systems of record. But the key there is to make sure you also have the synchronization layer, because you need to be able to keep your master prompts up to date across all platforms. 
+
+
+And does that include items within your business that may be very industry specific that aren't specifically related to SOPs? 
+
+
+So when I think of a brain for the business, it may include a lot of technical reference materials. 
+
+
+that we would want to be able to access easily within AI, but not have them, but just where to store those. 
+
+
+Would you store things like that in state three at some point? Yes, you can either store it in state. So if you're using Claude, you can store that in your master prompt or you can store it as a skill, right? 
+
+
+So if you go to your settings and you go to capabilities, you can add skills and there's a way to add a skill by just having Claude interview you and it creates the skill. 
+
+
+Right. And so then the idea of a skill is it's not being added into your context unless it's being called. 
+
+
+And Claude knows when to call it. Right. So if there's something in your industry around what's your industry? Commercial landscaping. So it might be irrigation. Yeah. Yeah. So if you have like an irrigation guide or something like irrigation book, playbook or whatever, you could create as a skill. 
+
+
+And then Claude would know to look it up every time irrigation is mentioned. Right. Or every time you tell it to look up the skill. That's probably the easiest. More than thinking of a library of materials from all sorts of places, consolidating that into what's most relevant to our business and then saving that as a skill. 
+
+
+Yeah. Yeah. Yeah. So the next step for a lot of people will be to figure out, okay, what stays in the master prompt? 
+
+
+What goes in as skills? And then how do I share this with my team? So that's going to be like the session 11 and 12 stuff. Okay. Okay. So things like skills, though, you would anticipate sharing and keeping those up to date in Stage 3 as well, potentially? 
+
+
+Yep. Again, depending on what tools you're using, skills themselves are a Cloud function. And so you'd want to share the skills in Cloud with your team. 
+
+
+MasterPrompt has its own knowledge document version of that. Sorry, Stage 3 has its own. So you might have versions and like managing those versions. 
+
+
+Would you potentially do that in something like stage three then? Yeah. Yep. Alternatively, you could come up with a Google drive structure. 
+
+
+You can come up with a GitHub structure. Those are probably currently where I just made in the same, same page. I have archived, you know, versions. Yep. Aiden, do you want to throw the slides back up for a moment and I'll just run through next steps? 
+
+
+Sure. And I know you had mentioned a Clarity Board example. Does that make sense to throw up as a post in circle? Yeah, I have it open right here. But yeah, I can put this as a post in circle. 
+
+
+And this is actually part of the team session. I can probably just share that session if people are curious. But basically, this is like an HTML document that gets created based on an interview with each employee. 
+
+
+And so it sort of creates a KPI scorecard. It creates sort of all of their meetings in one place, all of their process involvements, all of their sort of large automation outcomes that they could build, an implementation roadmap, and onboarding. 
+
+
+So again, it's all based on one conversation, one prompt. Pretty useful. And I typically have people do this like every other month in my companies. 
+
+
+but I'll share this on Circle. Okay, so between now and next Monday, you'll be running the Workforce and Leadership Diagnostic to identify your biggest opportunities for organizational effectiveness, employee engagement, leadership development, and systematic delegation. 
+
+
+You have the option to create Level 1 and Level 2 SOPs, as well as explore an AI hiring protocol. which is incredibly valuable. Our next session is Wednesday. We have office hours. 
+
+
+This week, they're going to be at 4 p.m. Eastern time. So please note the change in hours for this week. And then we follow up with our ninth session on Monday, March the 2nd at 1 p.m., where we'll be discussing execution systems. 
+
+
+Thank you, everybody, for joining us today. So great to see you all and get your questions. Thanks. Bye. Thanks, everyone. See you on Wednesday. Bye. Thanks. Bye-bye. 

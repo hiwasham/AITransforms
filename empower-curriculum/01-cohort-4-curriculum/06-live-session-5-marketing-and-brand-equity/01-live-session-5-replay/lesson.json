@@ -1,0 +1,511 @@
+{
+  "id": 3405888,
+  "name": "Live Session 5: Replay",
+  "status": "published",
+  "featured_media_enabled": true,
+  "download_featured_media": false,
+  "created_at": "2026-02-04T22:48:28.398Z",
+  "updated_at": "2026-02-06T22:13:47.398Z",
+  "comments_enabled": true,
+  "default_tab": "curriculum",
+  "enforce_featured_media_completion": false,
+  "autocomplete_on_featured_media_completion": true,
+  "dripped_at": null,
+  "is_dripped": true,
+  "needs_to_complete_previous_lesson": false,
+  "completed": false,
+  "notify_students_enabled": false,
+  "bookmark_id": null,
+  "featured_media": {
+    "playback_url": "https://cdn-media.circle.so/bcdn_token=qBnB_lklsGJTjeXdnuXA5NKws_bGa5p_Qil6PpRUPNk&token_path=%2F0c997630-7816-41fc-a321-1460b1f52ccb%2F&expires=1787964942/0c997630-7816-41fc-a321-1460b1f52ccb/hls/playlist.m3u8",
+    "current_storage": "in_house",
+    "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCR2VIYXdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--88e3bbc0a52993c3bbbe574c3ba9fccf115c0b23",
+    "filename": "empower_labs_cohort_4_2026-02-06_17_35_14_v1 (1080p) (1).mp4",
+    "content_type": "video/mp4",
+    "duration": "01:24:58",
+    "is_downloadable": false,
+    "url": "https://assets-v2.circle.so/awd8keznm2x7tsdetaqvcw5k614o",
+    "thumbnail_image_url": "https://cdn-media.circle.so/bcdn_token=qBnB_lklsGJTjeXdnuXA5NKws_bGa5p_Qil6PpRUPNk&token_path=%2F0c997630-7816-41fc-a321-1460b1f52ccb%2F&expires=1787964942/0c997630-7816-41fc-a321-1460b1f52ccb/thumbnail.jpg",
+    "media_transcript_id": 3643031,
+    "media_transcoding": {
+      "status": "succeeded"
+    },
+    "chapters_url": null,
+    "preview_thumbnails_url": "https://cdn-media.circle.so/bcdn_token=qBnB_lklsGJTjeXdnuXA5NKws_bGa5p_Qil6PpRUPNk&token_path=%2F0c997630-7816-41fc-a321-1460b1f52ccb%2F&expires=1787964942/0c997630-7816-41fc-a321-1460b1f52ccb/mosaic.vtt",
+    "video_variants": {
+      "original": "https://assets-v2.circle.so/awd8keznm2x7tsdetaqvcw5k614o",
+      "hls": "https://cdn-media.circle.so/bcdn_token=qBnB_lklsGJTjeXdnuXA5NKws_bGa5p_Qil6PpRUPNk&token_path=%2F0c997630-7816-41fc-a321-1460b1f52ccb%2F&expires=1787964942/0c997630-7816-41fc-a321-1460b1f52ccb/hls/playlist.m3u8"
+    }
+  },
+  "serialized_rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Slides",
+              "type": "text",
+              "circle_ios_fallback_text": "Slides"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQzBIYXdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--069fa8381faeefe28cd3bbc97f225ab6f7503234"
+          }
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "Summary",
+              "type": "text",
+              "circle_ios_fallback_text": "Summary"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI-Driven Marketing Strategy",
+              "type": "text",
+              "circle_ios_fallback_text": "AI-Driven Marketing Strategy"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The meeting focused on marketing and brand equity, with Midori introducing the session and Josh explaining the concept of a unique value proposition. They discussed becoming a category of one, which allows businesses to avoid price competition and focus on value. Josh emphasized the importance of AI in disrupting markets and suggested thinking about how businesses would be designed differently if they were AI-first organizations. The session covered the four basic units of marketing economics and the four channels of customer acquisition, with Josh explaining how AI can make these more efficient and scalable.",
+              "type": "text",
+              "circle_ios_fallback_text": "The meeting focused on marketing and brand equity, with Midori introducing the session and Josh explaining the concept of a unique value proposition. They discussed becoming a category of one, which allows businesses to avoid price competition and focus on value. Josh emphasized the importance of AI in disrupting markets and suggested thinking about how businesses would be designed differently if they were AI-first organizations. The session covered the four basic units of marketing economics and the four channels of customer acquisition, with Josh explaining how AI can make these more efficient and scalable."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Category of One Strategy Insights",
+              "type": "text",
+              "circle_ios_fallback_text": "Category of One Strategy Insights"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Josh discussed the implications of AI on competition, emphasizing that execution alone is no longer a sustainable advantage. He highlighted the need for businesses to build a unique value proposition to avoid price competition, which is the most brutal environment. Midori introduced a session on becoming a category of one, and Josh provided insights on how to handle technical issues during assessments. They also discussed the importance of understanding the curriculum and assessments to better support participants.",
+              "type": "text",
+              "circle_ios_fallback_text": "Josh discussed the implications of AI on competition, emphasizing that execution alone is no longer a sustainable advantage. He highlighted the need for businesses to build a unique value proposition to avoid price competition, which is the most brutal environment. Midori introduced a session on becoming a category of one, and Josh provided insights on how to handle technical issues during assessments. They also discussed the importance of understanding the curriculum and assessments to better support participants."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Category of One Marketing Strategy",
+              "type": "text",
+              "circle_ios_fallback_text": "Category of One Marketing Strategy"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The group discussed becoming a category of one, with Jonas and Kristina sharing insights about their company's unique value proposition centered around customer values. Josh emphasized the importance of understanding customer feelings as an outcome and suggested exploring AI-first strategies to enhance their UVP. The meeting then shifted to focus on the foundational math of marketing, introducing key metrics such as Customer Acquisition Cost (CAC) and 90-day customer value, which are crucial for evaluating marketing channels and growth strategies.",
+              "type": "text",
+              "circle_ios_fallback_text": "The group discussed becoming a category of one, with Jonas and Kristina sharing insights about their company's unique value proposition centered around customer values. Josh emphasized the importance of understanding customer feelings as an outcome and suggested exploring AI-first strategies to enhance their UVP. The meeting then shifted to focus on the foundational math of marketing, introducing key metrics such as Customer Acquisition Cost (CAC) and 90-day customer value, which are crucial for evaluating marketing channels and growth strategies."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Unit Economics and AI Customer Acquisition",
+              "type": "text",
+              "circle_ios_fallback_text": "Unit Economics and AI Customer Acquisition"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Josh explained the importance of understanding unit economics, particularly for customer acquisition, and introduced key metrics such as customer acquisition cost (CAC), 90-day customer value, the golden ratio, and payback period. He emphasized the need to focus on variable costs for CAC and highlighted the significance of the 90-day window for customer value in the AI era. Josh also discussed the four main channels for customer acquisition: inbound, outbound, paid, and partnerships/referrals, and outlined how AI can enhance these channels. The session concluded with a review of prompts and exercises for the cohort to work on, including defining unique value propositions and creating SOPs.",
+              "type": "text",
+              "circle_ios_fallback_text": "Josh explained the importance of understanding unit economics, particularly for customer acquisition, and introduced key metrics such as customer acquisition cost (CAC), 90-day customer value, the golden ratio, and payback period. He emphasized the need to focus on variable costs for CAC and highlighted the significance of the 90-day window for customer value in the AI era. Josh also discussed the four main channels for customer acquisition: inbound, outbound, paid, and partnerships/referrals, and outlined how AI can enhance these channels. The session concluded with a review of prompts and exercises for the cohort to work on, including defining unique value propositions and creating SOPs."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Implementation in Euro Business Model",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Implementation in Euro Business Model"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The meeting focused on the Euro Business Model and the implementation of AI-enabled processes within organizations. Josh explained that Empower for Teams is suitable for larger companies and emphasized the importance of change management in AI adoption. Donovan raised questions about updating master prompts from previous cohorts, and Josh advised a hybrid approach to assess and refine prompts. The group discussed the comprehensive coverage of business processes in the EMPOWER framework, with Josh reassuring Donovan that all areas would be addressed. Nancy inquired about sharing refined processes with her team and updating the master prompt, to which Josh provided guidance on using Stage 3 and Claude effectively. Midori outlined the next steps for participants, including researching competitors, conducting market-to-lead assessments, crafting unique value propositions, analyzing economics, creating SOPs, and drafting inbound content marketing material. The session concluded with a reminder of the upcoming Monday session, where profitability metrics would be discussed.",
+              "type": "text",
+              "circle_ios_fallback_text": "The meeting focused on the Euro Business Model and the implementation of AI-enabled processes within organizations. Josh explained that Empower for Teams is suitable for larger companies and emphasized the importance of change management in AI adoption. Donovan raised questions about updating master prompts from previous cohorts, and Josh advised a hybrid approach to assess and refine prompts. The group discussed the comprehensive coverage of business processes in the EMPOWER framework, with Josh reassuring Donovan that all areas would be addressed. Nancy inquired about sharing refined processes with her team and updating the master prompt, to which Josh provided guidance on using Stage 3 and Claude effectively. Midori outlined the next steps for participants, including researching competitors, conducting market-to-lead assessments, crafting unique value propositions, analyzing economics, creating SOPs, and drafting inbound content marketing material. The session concluded with a reminder of the upcoming Monday session, where profitability metrics would be discussed."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Transcript & Chat",
+              "type": "text",
+              "circle_ios_fallback_text": "Transcript & Chat"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTE9NYXdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--715ef077abbf80f2e265d4e1f8b60ddab6d58862"
+          }
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQUZyYXdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--2ff51e9ddb0946aa3b21bb0e3897da02ee03088a"
+          }
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "Slides\nSummaryAI-Driven Marketing StrategyThe meeting focused on marketing and brand equity, with Midori introducing the session and Josh explaining the concept of a unique value proposition. They discussed becoming a category of one, which allows businesses to avoid price competition and focus on value. Josh emphasized the importance of AI in disrupting markets and suggested thinking about how businesses would be designed differently if they were AI-first organizations. The session covered the four basic units of marketing economics and the four channels of customer acquisition, with Josh explaining how AI can make these more efficient and scalable.Category of One Strategy InsightsJosh discussed the implications of AI on competition, emphasizing that execution alone is no longer a sustainable advantage. He highlighted the need for businesses to build a unique value proposition to avoid price competition, which is the most brutal environment. Midori introduced a session on becoming a category of one, and Josh provided insights on how to handle technical issues during assessments. They also discussed the importance of understanding the curriculum and assessments to better support participants.Category of One Marketing StrategyThe group discussed becoming a category of one, with Jonas and Kristina sharing insights about their company's unique value proposition centered around customer values. Josh emphasized the importance of understanding customer feelings as an outcome and suggested exploring AI-first strategies to enhance their UVP. The meeting then shifted to focus on the foundational math of marketing, introducing key metrics such as Customer Acquisition Cost (CAC) and 90-day customer value, which are crucial for evaluating marketing channels and growth strategies.Unit Economics and AI Customer AcquisitionJosh explained the importance of understanding unit economics, particularly for customer acquisition, and introduced key metrics such as customer acquisition cost (CAC), 90-day customer value, the golden ratio, and payback period. He emphasized the need to focus on variable costs for CAC and highlighted the significance of the 90-day window for customer value in the AI era. Josh also discussed the four main channels for customer acquisition: inbound, outbound, paid, and partnerships/referrals, and outlined how AI can enhance these channels. The session concluded with a review of prompts and exercises for the cohort to work on, including defining unique value propositions and creating SOPs.AI Implementation in Euro Business ModelThe meeting focused on the Euro Business Model and the implementation of AI-enabled processes within organizations. Josh explained that Empower for Teams is suitable for larger companies and emphasized the importance of change management in AI adoption. Donovan raised questions about updating master prompts from previous cohorts, and Josh advised a hybrid approach to assess and refine prompts. The group discussed the comprehensive coverage of business processes in the EMPOWER framework, with Josh reassuring Donovan that all areas would be addressed. Nancy inquired about sharing refined processes with her team and updating the master prompt, to which Josh provided guidance on using Stage 3 and Claude effectively. Midori outlined the next steps for participants, including researching competitors, conducting market-to-lead assessments, crafting unique value propositions, analyzing economics, creating SOPs, and drafting inbound content marketing material. The session concluded with a reminder of the upcoming Monday session, where profitability metrics would be discussed.Transcript & Chat",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "Session-5-Marketing-and-Brand-Equity.pdf",
+        "content_type": "application/pdf",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 3232590,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQzBIYXdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--069fa8381faeefe28cd3bbc97f225ab6f7503234",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/r0lv4kh3wkao58v42hut327arv03",
+        "is_downloadable": true,
+        "image_variants": {
+          "thumbnail": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQzBIYXdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--069fa8381faeefe28cd3bbc97f225ab6f7503234/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VY21WemFYcGxYM1J2WDJ4cGJXbDBXd2RwQWlBRGFRSkFCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--07a046a624ee42d116e6b9403cb3c1dc2823e2af/Session-5-Marketing-and-Brand-Equity.pdf"
+        }
+      },
+      {
+        "filename": "Cohort 4 Live session 5- chat.txt",
+        "content_type": "text/plain",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 1350,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQUZyYXdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--2ff51e9ddb0946aa3b21bb0e3897da02ee03088a",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/47zddz5epafw6ewb0ezahtnt2ide",
+        "is_downloadable": true
+      },
+      {
+        "filename": "Cohort 4 Live Session 5- Transcript.vtt",
+        "content_type": "text/vtt",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 163667,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTE9NYXdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--715ef077abbf80f2e265d4e1f8b60ddab6d58862",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/4qsh0grt8a6ldjhje7xzif399e19",
+        "is_downloadable": true
+      }
+    ],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Slides",
+              "type": "text",
+              "circle_ios_fallback_text": "Slides"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQzBIYXdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--069fa8381faeefe28cd3bbc97f225ab6f7503234"
+          }
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "Summary",
+              "type": "text",
+              "circle_ios_fallback_text": "Summary"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI-Driven Marketing Strategy",
+              "type": "text",
+              "circle_ios_fallback_text": "AI-Driven Marketing Strategy"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The meeting focused on marketing and brand equity, with Midori introducing the session and Josh explaining the concept of a unique value proposition. They discussed becoming a category of one, which allows businesses to avoid price competition and focus on value. Josh emphasized the importance of AI in disrupting markets and suggested thinking about how businesses would be designed differently if they were AI-first organizations. The session covered the four basic units of marketing economics and the four channels of customer acquisition, with Josh explaining how AI can make these more efficient and scalable.",
+              "type": "text",
+              "circle_ios_fallback_text": "The meeting focused on marketing and brand equity, with Midori introducing the session and Josh explaining the concept of a unique value proposition. They discussed becoming a category of one, which allows businesses to avoid price competition and focus on value. Josh emphasized the importance of AI in disrupting markets and suggested thinking about how businesses would be designed differently if they were AI-first organizations. The session covered the four basic units of marketing economics and the four channels of customer acquisition, with Josh explaining how AI can make these more efficient and scalable."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Category of One Strategy Insights",
+              "type": "text",
+              "circle_ios_fallback_text": "Category of One Strategy Insights"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Josh discussed the implications of AI on competition, emphasizing that execution alone is no longer a sustainable advantage. He highlighted the need for businesses to build a unique value proposition to avoid price competition, which is the most brutal environment. Midori introduced a session on becoming a category of one, and Josh provided insights on how to handle technical issues during assessments. They also discussed the importance of understanding the curriculum and assessments to better support participants.",
+              "type": "text",
+              "circle_ios_fallback_text": "Josh discussed the implications of AI on competition, emphasizing that execution alone is no longer a sustainable advantage. He highlighted the need for businesses to build a unique value proposition to avoid price competition, which is the most brutal environment. Midori introduced a session on becoming a category of one, and Josh provided insights on how to handle technical issues during assessments. They also discussed the importance of understanding the curriculum and assessments to better support participants."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Category of One Marketing Strategy",
+              "type": "text",
+              "circle_ios_fallback_text": "Category of One Marketing Strategy"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The group discussed becoming a category of one, with Jonas and Kristina sharing insights about their company's unique value proposition centered around customer values. Josh emphasized the importance of understanding customer feelings as an outcome and suggested exploring AI-first strategies to enhance their UVP. The meeting then shifted to focus on the foundational math of marketing, introducing key metrics such as Customer Acquisition Cost (CAC) and 90-day customer value, which are crucial for evaluating marketing channels and growth strategies.",
+              "type": "text",
+              "circle_ios_fallback_text": "The group discussed becoming a category of one, with Jonas and Kristina sharing insights about their company's unique value proposition centered around customer values. Josh emphasized the importance of understanding customer feelings as an outcome and suggested exploring AI-first strategies to enhance their UVP. The meeting then shifted to focus on the foundational math of marketing, introducing key metrics such as Customer Acquisition Cost (CAC) and 90-day customer value, which are crucial for evaluating marketing channels and growth strategies."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Unit Economics and AI Customer Acquisition",
+              "type": "text",
+              "circle_ios_fallback_text": "Unit Economics and AI Customer Acquisition"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Josh explained the importance of understanding unit economics, particularly for customer acquisition, and introduced key metrics such as customer acquisition cost (CAC), 90-day customer value, the golden ratio, and payback period. He emphasized the need to focus on variable costs for CAC and highlighted the significance of the 90-day window for customer value in the AI era. Josh also discussed the four main channels for customer acquisition: inbound, outbound, paid, and partnerships/referrals, and outlined how AI can enhance these channels. The session concluded with a review of prompts and exercises for the cohort to work on, including defining unique value propositions and creating SOPs.",
+              "type": "text",
+              "circle_ios_fallback_text": "Josh explained the importance of understanding unit economics, particularly for customer acquisition, and introduced key metrics such as customer acquisition cost (CAC), 90-day customer value, the golden ratio, and payback period. He emphasized the need to focus on variable costs for CAC and highlighted the significance of the 90-day window for customer value in the AI era. Josh also discussed the four main channels for customer acquisition: inbound, outbound, paid, and partnerships/referrals, and outlined how AI can enhance these channels. The session concluded with a review of prompts and exercises for the cohort to work on, including defining unique value propositions and creating SOPs."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Implementation in Euro Business Model",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Implementation in Euro Business Model"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The meeting focused on the Euro Business Model and the implementation of AI-enabled processes within organizations. Josh explained that Empower for Teams is suitable for larger companies and emphasized the importance of change management in AI adoption. Donovan raised questions about updating master prompts from previous cohorts, and Josh advised a hybrid approach to assess and refine prompts. The group discussed the comprehensive coverage of business processes in the EMPOWER framework, with Josh reassuring Donovan that all areas would be addressed. Nancy inquired about sharing refined processes with her team and updating the master prompt, to which Josh provided guidance on using Stage 3 and Claude effectively. Midori outlined the next steps for participants, including researching competitors, conducting market-to-lead assessments, crafting unique value propositions, analyzing economics, creating SOPs, and drafting inbound content marketing material. The session concluded with a reminder of the upcoming Monday session, where profitability metrics would be discussed.",
+              "type": "text",
+              "circle_ios_fallback_text": "The meeting focused on the Euro Business Model and the implementation of AI-enabled processes within organizations. Josh explained that Empower for Teams is suitable for larger companies and emphasized the importance of change management in AI adoption. Donovan raised questions about updating master prompts from previous cohorts, and Josh advised a hybrid approach to assess and refine prompts. The group discussed the comprehensive coverage of business processes in the EMPOWER framework, with Josh reassuring Donovan that all areas would be addressed. Nancy inquired about sharing refined processes with her team and updating the master prompt, to which Josh provided guidance on using Stage 3 and Claude effectively. Midori outlined the next steps for participants, including researching competitors, conducting market-to-lead assessments, crafting unique value propositions, analyzing economics, creating SOPs, and drafting inbound content marketing material. The session concluded with a reminder of the upcoming Monday session, where profitability metrics would be discussed."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Transcript & Chat",
+              "type": "text",
+              "circle_ios_fallback_text": "Transcript & Chat"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTE9NYXdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--715ef077abbf80f2e265d4e1f8b60ddab6d58862"
+          }
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQUZyYXdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--2ff51e9ddb0946aa3b21bb0e3897da02ee03088a"
+          }
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "Slides\nSummaryAI-Driven Marketing StrategyThe meeting focused on marketing and brand equity, with Midori introducing the session and Josh explaining the concept of a unique value proposition. They discussed becoming a category of one, which allows businesses to avoid price competition and focus on value. Josh emphasized the importance of AI in disrupting markets and suggested thinking about how businesses would be designed differently if they were AI-first organizations. The session covered the four basic units of marketing economics and the four channels of customer acquisition, with Josh explaining how AI can make these more efficient and scalable.Category of One Strategy InsightsJosh discussed the implications of AI on competition, emphasizing that execution alone is no longer a sustainable advantage. He highlighted the need for businesses to build a unique value proposition to avoid price competition, which is the most brutal environment. Midori introduced a session on becoming a category of one, and Josh provided insights on how to handle technical issues during assessments. They also discussed the importance of understanding the curriculum and assessments to better support participants.Category of One Marketing StrategyThe group discussed becoming a category of one, with Jonas and Kristina sharing insights about their company's unique value proposition centered around customer values. Josh emphasized the importance of understanding customer feelings as an outcome and suggested exploring AI-first strategies to enhance their UVP. The meeting then shifted to focus on the foundational math of marketing, introducing key metrics such as Customer Acquisition Cost (CAC) and 90-day customer value, which are crucial for evaluating marketing channels and growth strategies.Unit Economics and AI Customer AcquisitionJosh explained the importance of understanding unit economics, particularly for customer acquisition, and introduced key metrics such as customer acquisition cost (CAC), 90-day customer value, the golden ratio, and payback period. He emphasized the need to focus on variable costs for CAC and highlighted the significance of the 90-day window for customer value in the AI era. Josh also discussed the four main channels for customer acquisition: inbound, outbound, paid, and partnerships/referrals, and outlined how AI can enhance these channels. The session concluded with a review of prompts and exercises for the cohort to work on, including defining unique value propositions and creating SOPs.AI Implementation in Euro Business ModelThe meeting focused on the Euro Business Model and the implementation of AI-enabled processes within organizations. Josh explained that Empower for Teams is suitable for larger companies and emphasized the importance of change management in AI adoption. Donovan raised questions about updating master prompts from previous cohorts, and Josh advised a hybrid approach to assess and refine prompts. The group discussed the comprehensive coverage of business processes in the EMPOWER framework, with Josh reassuring Donovan that all areas would be addressed. Nancy inquired about sharing refined processes with her team and updating the master prompt, to which Josh provided guidance on using Stage 3 and Claude effectively. Midori outlined the next steps for participants, including researching competitors, conducting market-to-lead assessments, crafting unique value propositions, analyzing economics, creating SOPs, and drafting inbound content marketing material. The session concluded with a reminder of the upcoming Monday session, where profitability metrics would be discussed.Transcript & Chat",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "Session-5-Marketing-and-Brand-Equity.pdf",
+        "content_type": "application/pdf",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 3232590,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQzBIYXdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--069fa8381faeefe28cd3bbc97f225ab6f7503234",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/r0lv4kh3wkao58v42hut327arv03",
+        "is_downloadable": true,
+        "image_variants": {
+          "thumbnail": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQzBIYXdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--069fa8381faeefe28cd3bbc97f225ab6f7503234/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VY21WemFYcGxYM1J2WDJ4cGJXbDBXd2RwQWlBRGFRSkFCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--07a046a624ee42d116e6b9403cb3c1dc2823e2af/Session-5-Marketing-and-Brand-Equity.pdf"
+        }
+      },
+      {
+        "filename": "Cohort 4 Live session 5- chat.txt",
+        "content_type": "text/plain",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 1350,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQUZyYXdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--2ff51e9ddb0946aa3b21bb0e3897da02ee03088a",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/47zddz5epafw6ewb0ezahtnt2ide",
+        "is_downloadable": true
+      },
+      {
+        "filename": "Cohort 4 Live Session 5- Transcript.vtt",
+        "content_type": "text/vtt",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 163667,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTE9NYXdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--715ef077abbf80f2e265d4e1f8b60ddab6d58862",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/4qsh0grt8a6ldjhje7xzif399e19",
+        "is_downloadable": true
+      }
+    ],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "chat_room_uuid": "69891977-3505-49a0-a63f-5b3f6eaec6a0"
+}

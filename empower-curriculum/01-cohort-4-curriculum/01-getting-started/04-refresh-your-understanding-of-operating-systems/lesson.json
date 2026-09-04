@@ -1,0 +1,314 @@
+{
+  "id": 3281852,
+  "name": "4. Refresh Your Understanding of Operating Systems",
+  "status": "published",
+  "featured_media_enabled": false,
+  "download_featured_media": false,
+  "created_at": "2026-01-09T18:52:35.003Z",
+  "updated_at": "2026-01-09T19:00:06.331Z",
+  "comments_enabled": false,
+  "default_tab": "curriculum",
+  "enforce_featured_media_completion": false,
+  "autocomplete_on_featured_media_completion": true,
+  "dripped_at": null,
+  "is_dripped": true,
+  "needs_to_complete_previous_lesson": false,
+  "completed": true,
+  "notify_students_enabled": false,
+  "bookmark_id": null,
+  "serialized_rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This program will help you build an AI-powered business OS. If you’re not familiar with the concept of a business operating system, we highly recommend the book ",
+              "type": "text",
+              "circle_ios_fallback_text": "This program will help you build an AI-powered business OS. If you’re not familiar with the concept of a business operating system, we highly recommend the book "
+            },
+            {
+              "text": "​",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://www.amazon.com/Traction-Get-Grip-Your-Business-ebook/dp/B007QWLLV2/ref=sr_1_1?crid=2LXR2L063XZ8K&dib=eyJ2IjoiMSJ9.Xji5EfQt4a6ufzXh1cn92iJO0BbUz3rwtVuhuY_iM_eZoVvGnVctdzKqmm5HoyQheBfaJKQo6nL1BWrksrf6t1G5lrE6gTC_pC_zRu6HXd8uYQ-lN-q2qnKFIlCLcjRU4JU6VIQm4--JGBDLIMBxJrtoXXbW_nZdBDjqv2CFTPVPpvGHyswnzNF7LBfw3s7Msz_kWkSrfG6uw5T6d0Oo3Ro54z134hiLz3NLz6gWeEg.D8gJlrdMnEcjIdzAnlj8nKaPowFLq6R0jT57LE-PwwQ&dib_tag=se&keywords=traction+book&qid=1745355591&s=digital-text&sprefix=traction,digital-text,86&sr=1-1",
+                    "class": "ck-link",
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "circle_ios_fallback_text": "​"
+            },
+            {
+              "text": "Traction",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://www.amazon.com/Traction-Get-Grip-Your-Business-ebook/dp/B007QWLLV2/ref=sr_1_1?crid=2LXR2L063XZ8K&dib=eyJ2IjoiMSJ9.Xji5EfQt4a6ufzXh1cn92iJO0BbUz3rwtVuhuY_iM_eZoVvGnVctdzKqmm5HoyQheBfaJKQo6nL1BWrksrf6t1G5lrE6gTC_pC_zRu6HXd8uYQ-lN-q2qnKFIlCLcjRU4JU6VIQm4--JGBDLIMBxJrtoXXbW_nZdBDjqv2CFTPVPpvGHyswnzNF7LBfw3s7Msz_kWkSrfG6uw5T6d0Oo3Ro54z134hiLz3NLz6gWeEg.D8gJlrdMnEcjIdzAnlj8nKaPowFLq6R0jT57LE-PwwQ&dib_tag=se&keywords=traction+book&qid=1745355591&s=digital-text&sprefix=traction,digital-text,86&sr=1-1",
+                    "class": "ck-link",
+                    "target": "_blank"
+                  }
+                },
+                {
+                  "type": "italic"
+                }
+              ],
+              "circle_ios_fallback_text": "Traction"
+            },
+            {
+              "text": "​",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://www.amazon.com/Traction-Get-Grip-Your-Business-ebook/dp/B007QWLLV2/ref=sr_1_1?crid=2LXR2L063XZ8K&dib=eyJ2IjoiMSJ9.Xji5EfQt4a6ufzXh1cn92iJO0BbUz3rwtVuhuY_iM_eZoVvGnVctdzKqmm5HoyQheBfaJKQo6nL1BWrksrf6t1G5lrE6gTC_pC_zRu6HXd8uYQ-lN-q2qnKFIlCLcjRU4JU6VIQm4--JGBDLIMBxJrtoXXbW_nZdBDjqv2CFTPVPpvGHyswnzNF7LBfw3s7Msz_kWkSrfG6uw5T6d0Oo3Ro54z134hiLz3NLz6gWeEg.D8gJlrdMnEcjIdzAnlj8nKaPowFLq6R0jT57LE-PwwQ&dib_tag=se&keywords=traction+book&qid=1745355591&s=digital-text&sprefix=traction,digital-text,86&sr=1-1",
+                    "class": "ck-link",
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "circle_ios_fallback_text": "​"
+            },
+            {
+              "text": ".",
+              "type": "text",
+              "circle_ios_fallback_text": "."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Check out these two quick resources as a refresher:",
+              "type": "text",
+              "circle_ios_fallback_text": "Check out these two quick resources as a refresher:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "​Traction book summary ​",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://readingraphics.com/book-summary-traction-get-a-grip-on-your-business/",
+                            "class": "ck-link",
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "​7-minute video overview by the author",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://www.youtube.com/watch?v=2L_nEp70HI8&ab_channel=GlobalLeadersOrganization",
+                            "class": "ck-link",
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "This program will help you build an AI-powered business OS. If you’re not familiar with the concept of a business operating system, we highly recommend the book ​Traction​.Check out these two quick resources as a refresher:",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This program will help you build an AI-powered business OS. If you’re not familiar with the concept of a business operating system, we highly recommend the book ",
+              "type": "text",
+              "circle_ios_fallback_text": "This program will help you build an AI-powered business OS. If you’re not familiar with the concept of a business operating system, we highly recommend the book "
+            },
+            {
+              "text": "​",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://www.amazon.com/Traction-Get-Grip-Your-Business-ebook/dp/B007QWLLV2/ref=sr_1_1?crid=2LXR2L063XZ8K&dib=eyJ2IjoiMSJ9.Xji5EfQt4a6ufzXh1cn92iJO0BbUz3rwtVuhuY_iM_eZoVvGnVctdzKqmm5HoyQheBfaJKQo6nL1BWrksrf6t1G5lrE6gTC_pC_zRu6HXd8uYQ-lN-q2qnKFIlCLcjRU4JU6VIQm4--JGBDLIMBxJrtoXXbW_nZdBDjqv2CFTPVPpvGHyswnzNF7LBfw3s7Msz_kWkSrfG6uw5T6d0Oo3Ro54z134hiLz3NLz6gWeEg.D8gJlrdMnEcjIdzAnlj8nKaPowFLq6R0jT57LE-PwwQ&dib_tag=se&keywords=traction+book&qid=1745355591&s=digital-text&sprefix=traction,digital-text,86&sr=1-1",
+                    "class": "ck-link",
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "circle_ios_fallback_text": "​"
+            },
+            {
+              "text": "Traction",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://www.amazon.com/Traction-Get-Grip-Your-Business-ebook/dp/B007QWLLV2/ref=sr_1_1?crid=2LXR2L063XZ8K&dib=eyJ2IjoiMSJ9.Xji5EfQt4a6ufzXh1cn92iJO0BbUz3rwtVuhuY_iM_eZoVvGnVctdzKqmm5HoyQheBfaJKQo6nL1BWrksrf6t1G5lrE6gTC_pC_zRu6HXd8uYQ-lN-q2qnKFIlCLcjRU4JU6VIQm4--JGBDLIMBxJrtoXXbW_nZdBDjqv2CFTPVPpvGHyswnzNF7LBfw3s7Msz_kWkSrfG6uw5T6d0Oo3Ro54z134hiLz3NLz6gWeEg.D8gJlrdMnEcjIdzAnlj8nKaPowFLq6R0jT57LE-PwwQ&dib_tag=se&keywords=traction+book&qid=1745355591&s=digital-text&sprefix=traction,digital-text,86&sr=1-1",
+                    "class": "ck-link",
+                    "target": "_blank"
+                  }
+                },
+                {
+                  "type": "italic"
+                }
+              ],
+              "circle_ios_fallback_text": "Traction"
+            },
+            {
+              "text": "​",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://www.amazon.com/Traction-Get-Grip-Your-Business-ebook/dp/B007QWLLV2/ref=sr_1_1?crid=2LXR2L063XZ8K&dib=eyJ2IjoiMSJ9.Xji5EfQt4a6ufzXh1cn92iJO0BbUz3rwtVuhuY_iM_eZoVvGnVctdzKqmm5HoyQheBfaJKQo6nL1BWrksrf6t1G5lrE6gTC_pC_zRu6HXd8uYQ-lN-q2qnKFIlCLcjRU4JU6VIQm4--JGBDLIMBxJrtoXXbW_nZdBDjqv2CFTPVPpvGHyswnzNF7LBfw3s7Msz_kWkSrfG6uw5T6d0Oo3Ro54z134hiLz3NLz6gWeEg.D8gJlrdMnEcjIdzAnlj8nKaPowFLq6R0jT57LE-PwwQ&dib_tag=se&keywords=traction+book&qid=1745355591&s=digital-text&sprefix=traction,digital-text,86&sr=1-1",
+                    "class": "ck-link",
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "circle_ios_fallback_text": "​"
+            },
+            {
+              "text": ".",
+              "type": "text",
+              "circle_ios_fallback_text": "."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Check out these two quick resources as a refresher:",
+              "type": "text",
+              "circle_ios_fallback_text": "Check out these two quick resources as a refresher:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "​Traction book summary ​",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://readingraphics.com/book-summary-traction-get-a-grip-on-your-business/",
+                            "class": "ck-link",
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "​7-minute video overview by the author",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://www.youtube.com/watch?v=2L_nEp70HI8&ab_channel=GlobalLeadersOrganization",
+                            "class": "ck-link",
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "This program will help you build an AI-powered business OS. If you’re not familiar with the concept of a business operating system, we highly recommend the book ​Traction​.Check out these two quick resources as a refresher:",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "chat_room_uuid": "e4c86881-7119-4005-a009-0219bc04b530"
+}

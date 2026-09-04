@@ -1,0 +1,387 @@
+{
+  "id": 3547855,
+  "name": "Office Hours 5",
+  "status": "published",
+  "featured_media_enabled": true,
+  "download_featured_media": false,
+  "created_at": "2026-03-04T20:06:58.132Z",
+  "updated_at": "2026-03-04T21:29:22.842Z",
+  "comments_enabled": false,
+  "default_tab": "curriculum",
+  "enforce_featured_media_completion": false,
+  "autocomplete_on_featured_media_completion": true,
+  "dripped_at": null,
+  "is_dripped": true,
+  "needs_to_complete_previous_lesson": false,
+  "completed": false,
+  "notify_students_enabled": false,
+  "bookmark_id": null,
+  "featured_media": {
+    "playback_url": "https://cdn-media.circle.so/bcdn_token=xVVGQ3T9K1CYsImyyJcEL5xM7O2kJzsz7B4FmDdyR-Y&token_path=%2F658c650b-4b9e-4206-b5e8-41ef6acda732%2F&expires=1787965090/658c650b-4b9e-4206-b5e8-41ef6acda732/hls/playlist.m3u8",
+    "current_storage": "in_house",
+    "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSU5OM3dnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--0131c073a5d7b6219265f46d71b05d3249f9836b",
+    "filename": "empower_labs_cohort_4_2026-03-04_17_39_59_v1 (1080p) (1).mp4",
+    "content_type": "video/mp4",
+    "duration": "01:01:43",
+    "is_downloadable": false,
+    "url": "https://assets-v2.circle.so/uq288uu6mrk43pnq27f6ujcs4ziu",
+    "thumbnail_image_url": "https://cdn-media.circle.so/bcdn_token=xVVGQ3T9K1CYsImyyJcEL5xM7O2kJzsz7B4FmDdyR-Y&token_path=%2F658c650b-4b9e-4206-b5e8-41ef6acda732%2F&expires=1787965090/658c650b-4b9e-4206-b5e8-41ef6acda732/thumbnail.jpg",
+    "media_transcript_id": 3726738,
+    "media_transcoding": {
+      "status": "succeeded"
+    },
+    "chapters_url": null,
+    "preview_thumbnails_url": "https://cdn-media.circle.so/bcdn_token=xVVGQ3T9K1CYsImyyJcEL5xM7O2kJzsz7B4FmDdyR-Y&token_path=%2F658c650b-4b9e-4206-b5e8-41ef6acda732%2F&expires=1787965090/658c650b-4b9e-4206-b5e8-41ef6acda732/mosaic.vtt",
+    "video_variants": {
+      "original": "https://assets-v2.circle.so/uq288uu6mrk43pnq27f6ujcs4ziu",
+      "hls": "https://cdn-media.circle.so/bcdn_token=xVVGQ3T9K1CYsImyyJcEL5xM7O2kJzsz7B4FmDdyR-Y&token_path=%2F658c650b-4b9e-4206-b5e8-41ef6acda732%2F&expires=1787965090/658c650b-4b9e-4206-b5e8-41ef6acda732/hls/playlist.m3u8"
+    }
+  },
+  "serialized_rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Summary",
+              "type": "text",
+              "circle_ios_fallback_text": "Summary"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI-Driven Role Understanding Program",
+              "type": "text",
+              "circle_ios_fallback_text": "AI-Driven Role Understanding Program"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed the Teams program's approach to helping employees understand their roles and create value through AI. The program starts with creating a role master prompt, which helps employees identify tasks and opportunities for AI enablement. The Clarity Board, powered by AI, surfaces new tasks and helps employees create KPIs and OKRs. This bottom-up approach is repeated in 60-day cycles, with AI providing support and follow-up. The program aims to make delegation more effective and help employees identify and build opportunities for automation and prompt creation.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed the Teams program's approach to helping employees understand their roles and create value through AI. The program starts with creating a role master prompt, which helps employees identify tasks and opportunities for AI enablement. The Clarity Board, powered by AI, surfaces new tasks and helps employees create KPIs and OKRs. This bottom-up approach is repeated in 60-day cycles, with AI providing support and follow-up. The program aims to make delegation more effective and help employees identify and build opportunities for automation and prompt creation."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Tools for Organizational Insights",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Tools for Organizational Insights"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden and Don discussed the use of AI, particularly Claude, to gather insights and address organizational issues. Hayden emphasized the importance of building context and using master prompts to facilitate employee interviews and uncover valuable insights. Nancy shared her experience using Claude to gather feedback from reception staff, which will be incorporated into a Claude team project. Jonas inquired about practical ways to work with his team using AI, and Hayden suggested using Claude projects and master prompts to manage privacy and share information effectively.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden and Don discussed the use of AI, particularly Claude, to gather insights and address organizational issues. Hayden emphasized the importance of building context and using master prompts to facilitate employee interviews and uncover valuable insights. Nancy shared her experience using Claude to gather feedback from reception staff, which will be incorporated into a Claude team project. Jonas inquired about practical ways to work with his team using AI, and Hayden suggested using Claude projects and master prompts to manage privacy and share information effectively."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Master Prompt Management in Claude",
+              "type": "text",
+              "circle_ios_fallback_text": "Master Prompt Management in Claude"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden explained the process of managing master prompts in Claude and Stage 3, highlighting the ability to update prompts through chat with an approval system. He demonstrated how team members can add to their individual role master prompts, which increases the AI's knowledge of each person's context. Nancy shared her experience of using Claude to create a summary of project outputs, which she then added to her master prompt. Pavlo asked questions about using clarity boards in Excel and creating KPI dashboards for different departments, which Hayden confirmed were possible without needing specific instructions in the master prompt.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden explained the process of managing master prompts in Claude and Stage 3, highlighting the ability to update prompts through chat with an approval system. He demonstrated how team members can add to their individual role master prompts, which increases the AI's knowledge of each person's context. Nancy shared her experience of using Claude to create a summary of project outputs, which she then added to her master prompt. Pavlo asked questions about using clarity boards in Excel and creating KPI dashboards for different departments, which Hayden confirmed were possible without needing specific instructions in the master prompt."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Stage 3 Sharing and Integration",
+              "type": "text",
+              "circle_ios_fallback_text": "Stage 3 Sharing and Integration"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden demonstrated how to use Stage 3's sharing features and AI master prompts, explaining that sharing can be done at different levels (core process, blueprint, or individual guide) and showing how to set up and use master prompts for team members. Mike inquired about creating role prompts, and Hayden clarified that this curriculum hasn't been taught yet but will be added to Stage 3 in the coming weeks. The group discussed various tools for capturing business knowledge, including email mining, with Don recommending Mail Suite add-ons for Gmail and Hayden suggesting future integration possibilities. Pavlo shared a workflow using CloudCode for strategic initiatives tracking and feedback, which Hayden noted could be enhanced using Stage 3's routine agents for scheduled follow-ups.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden demonstrated how to use Stage 3's sharing features and AI master prompts, explaining that sharing can be done at different levels (core process, blueprint, or individual guide) and showing how to set up and use master prompts for team members. Mike inquired about creating role prompts, and Hayden clarified that this curriculum hasn't been taught yet but will be added to Stage 3 in the coming weeks. The group discussed various tools for capturing business knowledge, including email mining, with Don recommending Mail Suite add-ons for Gmail and Hayden suggesting future integration possibilities. Pavlo shared a workflow using CloudCode for strategic initiatives tracking and feedback, which Hayden noted could be enhanced using Stage 3's routine agents for scheduled follow-ups."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Transcript & Chat",
+              "type": "text",
+              "circle_ios_fallback_text": "Transcript & Chat"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQXBPM3dnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--14d9b04d424e25c79201365aeabeb4af46db2604"
+          }
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRjFPM3dnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--005a57424e3969ba57bcd5cd9487d394faf1e5bc"
+          }
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "SummaryAI-Driven Role Understanding ProgramHayden discussed the Teams program's approach to helping employees understand their roles and create value through AI. The program starts with creating a role master prompt, which helps employees identify tasks and opportunities for AI enablement. The Clarity Board, powered by AI, surfaces new tasks and helps employees create KPIs and OKRs. This bottom-up approach is repeated in 60-day cycles, with AI providing support and follow-up. The program aims to make delegation more effective and help employees identify and build opportunities for automation and prompt creation.AI Tools for Organizational InsightsHayden and Don discussed the use of AI, particularly Claude, to gather insights and address organizational issues. Hayden emphasized the importance of building context and using master prompts to facilitate employee interviews and uncover valuable insights. Nancy shared her experience using Claude to gather feedback from reception staff, which will be incorporated into a Claude team project. Jonas inquired about practical ways to work with his team using AI, and Hayden suggested using Claude projects and master prompts to manage privacy and share information effectively.Master Prompt Management in ClaudeHayden explained the process of managing master prompts in Claude and Stage 3, highlighting the ability to update prompts through chat with an approval system. He demonstrated how team members can add to their individual role master prompts, which increases the AI's knowledge of each person's context. Nancy shared her experience of using Claude to create a summary of project outputs, which she then added to her master prompt. Pavlo asked questions about using clarity boards in Excel and creating KPI dashboards for different departments, which Hayden confirmed were possible without needing specific instructions in the master prompt.Stage 3 Sharing and IntegrationHayden demonstrated how to use Stage 3's sharing features and AI master prompts, explaining that sharing can be done at different levels (core process, blueprint, or individual guide) and showing how to set up and use master prompts for team members. Mike inquired about creating role prompts, and Hayden clarified that this curriculum hasn't been taught yet but will be added to Stage 3 in the coming weeks. The group discussed various tools for capturing business knowledge, including email mining, with Don recommending Mail Suite add-ons for Gmail and Hayden suggesting future integration possibilities. Pavlo shared a workflow using CloudCode for strategic initiatives tracking and feedback, which Hayden noted could be enhanced using Stage 3's routine agents for scheduled follow-ups.Transcript & Chat",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "Cohort 4 Office Hours 5-Transcript.txt",
+        "content_type": "text/plain",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 51310,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQXBPM3dnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--14d9b04d424e25c79201365aeabeb4af46db2604",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/2uwoot19jmcetoy0o0mduzouzxg0",
+        "is_downloadable": true
+      },
+      {
+        "filename": "Cohort 4 Office Hours 5-Chat.srt",
+        "content_type": "application/x-subrip",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 114612,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRjFPM3dnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--005a57424e3969ba57bcd5cd9487d394faf1e5bc",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/6zm2egcjv4sa0tcxm3pfjdnq2yd5",
+        "is_downloadable": true
+      }
+    ],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Summary",
+              "type": "text",
+              "circle_ios_fallback_text": "Summary"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI-Driven Role Understanding Program",
+              "type": "text",
+              "circle_ios_fallback_text": "AI-Driven Role Understanding Program"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed the Teams program's approach to helping employees understand their roles and create value through AI. The program starts with creating a role master prompt, which helps employees identify tasks and opportunities for AI enablement. The Clarity Board, powered by AI, surfaces new tasks and helps employees create KPIs and OKRs. This bottom-up approach is repeated in 60-day cycles, with AI providing support and follow-up. The program aims to make delegation more effective and help employees identify and build opportunities for automation and prompt creation.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed the Teams program's approach to helping employees understand their roles and create value through AI. The program starts with creating a role master prompt, which helps employees identify tasks and opportunities for AI enablement. The Clarity Board, powered by AI, surfaces new tasks and helps employees create KPIs and OKRs. This bottom-up approach is repeated in 60-day cycles, with AI providing support and follow-up. The program aims to make delegation more effective and help employees identify and build opportunities for automation and prompt creation."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Tools for Organizational Insights",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Tools for Organizational Insights"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden and Don discussed the use of AI, particularly Claude, to gather insights and address organizational issues. Hayden emphasized the importance of building context and using master prompts to facilitate employee interviews and uncover valuable insights. Nancy shared her experience using Claude to gather feedback from reception staff, which will be incorporated into a Claude team project. Jonas inquired about practical ways to work with his team using AI, and Hayden suggested using Claude projects and master prompts to manage privacy and share information effectively.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden and Don discussed the use of AI, particularly Claude, to gather insights and address organizational issues. Hayden emphasized the importance of building context and using master prompts to facilitate employee interviews and uncover valuable insights. Nancy shared her experience using Claude to gather feedback from reception staff, which will be incorporated into a Claude team project. Jonas inquired about practical ways to work with his team using AI, and Hayden suggested using Claude projects and master prompts to manage privacy and share information effectively."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Master Prompt Management in Claude",
+              "type": "text",
+              "circle_ios_fallback_text": "Master Prompt Management in Claude"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden explained the process of managing master prompts in Claude and Stage 3, highlighting the ability to update prompts through chat with an approval system. He demonstrated how team members can add to their individual role master prompts, which increases the AI's knowledge of each person's context. Nancy shared her experience of using Claude to create a summary of project outputs, which she then added to her master prompt. Pavlo asked questions about using clarity boards in Excel and creating KPI dashboards for different departments, which Hayden confirmed were possible without needing specific instructions in the master prompt.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden explained the process of managing master prompts in Claude and Stage 3, highlighting the ability to update prompts through chat with an approval system. He demonstrated how team members can add to their individual role master prompts, which increases the AI's knowledge of each person's context. Nancy shared her experience of using Claude to create a summary of project outputs, which she then added to her master prompt. Pavlo asked questions about using clarity boards in Excel and creating KPI dashboards for different departments, which Hayden confirmed were possible without needing specific instructions in the master prompt."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Stage 3 Sharing and Integration",
+              "type": "text",
+              "circle_ios_fallback_text": "Stage 3 Sharing and Integration"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden demonstrated how to use Stage 3's sharing features and AI master prompts, explaining that sharing can be done at different levels (core process, blueprint, or individual guide) and showing how to set up and use master prompts for team members. Mike inquired about creating role prompts, and Hayden clarified that this curriculum hasn't been taught yet but will be added to Stage 3 in the coming weeks. The group discussed various tools for capturing business knowledge, including email mining, with Don recommending Mail Suite add-ons for Gmail and Hayden suggesting future integration possibilities. Pavlo shared a workflow using CloudCode for strategic initiatives tracking and feedback, which Hayden noted could be enhanced using Stage 3's routine agents for scheduled follow-ups.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden demonstrated how to use Stage 3's sharing features and AI master prompts, explaining that sharing can be done at different levels (core process, blueprint, or individual guide) and showing how to set up and use master prompts for team members. Mike inquired about creating role prompts, and Hayden clarified that this curriculum hasn't been taught yet but will be added to Stage 3 in the coming weeks. The group discussed various tools for capturing business knowledge, including email mining, with Don recommending Mail Suite add-ons for Gmail and Hayden suggesting future integration possibilities. Pavlo shared a workflow using CloudCode for strategic initiatives tracking and feedback, which Hayden noted could be enhanced using Stage 3's routine agents for scheduled follow-ups."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Transcript & Chat",
+              "type": "text",
+              "circle_ios_fallback_text": "Transcript & Chat"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQXBPM3dnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--14d9b04d424e25c79201365aeabeb4af46db2604"
+          }
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRjFPM3dnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--005a57424e3969ba57bcd5cd9487d394faf1e5bc"
+          }
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "SummaryAI-Driven Role Understanding ProgramHayden discussed the Teams program's approach to helping employees understand their roles and create value through AI. The program starts with creating a role master prompt, which helps employees identify tasks and opportunities for AI enablement. The Clarity Board, powered by AI, surfaces new tasks and helps employees create KPIs and OKRs. This bottom-up approach is repeated in 60-day cycles, with AI providing support and follow-up. The program aims to make delegation more effective and help employees identify and build opportunities for automation and prompt creation.AI Tools for Organizational InsightsHayden and Don discussed the use of AI, particularly Claude, to gather insights and address organizational issues. Hayden emphasized the importance of building context and using master prompts to facilitate employee interviews and uncover valuable insights. Nancy shared her experience using Claude to gather feedback from reception staff, which will be incorporated into a Claude team project. Jonas inquired about practical ways to work with his team using AI, and Hayden suggested using Claude projects and master prompts to manage privacy and share information effectively.Master Prompt Management in ClaudeHayden explained the process of managing master prompts in Claude and Stage 3, highlighting the ability to update prompts through chat with an approval system. He demonstrated how team members can add to their individual role master prompts, which increases the AI's knowledge of each person's context. Nancy shared her experience of using Claude to create a summary of project outputs, which she then added to her master prompt. Pavlo asked questions about using clarity boards in Excel and creating KPI dashboards for different departments, which Hayden confirmed were possible without needing specific instructions in the master prompt.Stage 3 Sharing and IntegrationHayden demonstrated how to use Stage 3's sharing features and AI master prompts, explaining that sharing can be done at different levels (core process, blueprint, or individual guide) and showing how to set up and use master prompts for team members. Mike inquired about creating role prompts, and Hayden clarified that this curriculum hasn't been taught yet but will be added to Stage 3 in the coming weeks. The group discussed various tools for capturing business knowledge, including email mining, with Don recommending Mail Suite add-ons for Gmail and Hayden suggesting future integration possibilities. Pavlo shared a workflow using CloudCode for strategic initiatives tracking and feedback, which Hayden noted could be enhanced using Stage 3's routine agents for scheduled follow-ups.Transcript & Chat",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "Cohort 4 Office Hours 5-Transcript.txt",
+        "content_type": "text/plain",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 51310,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQXBPM3dnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--14d9b04d424e25c79201365aeabeb4af46db2604",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/2uwoot19jmcetoy0o0mduzouzxg0",
+        "is_downloadable": true
+      },
+      {
+        "filename": "Cohort 4 Office Hours 5-Chat.srt",
+        "content_type": "application/x-subrip",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 114612,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRjFPM3dnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--005a57424e3969ba57bcd5cd9487d394faf1e5bc",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/6zm2egcjv4sa0tcxm3pfjdnq2yd5",
+        "is_downloadable": true
+      }
+    ],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "chat_room_uuid": "9cee6ee8-fd1b-4ef3-9be6-6ede66d86f06"
+}

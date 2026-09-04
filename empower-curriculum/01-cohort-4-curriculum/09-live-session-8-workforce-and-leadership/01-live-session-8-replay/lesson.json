@@ -1,0 +1,557 @@
+{
+  "id": 3493731,
+  "name": "Live Session 8: Replay",
+  "status": "published",
+  "featured_media_enabled": true,
+  "download_featured_media": false,
+  "created_at": "2026-02-23T06:33:45.832Z",
+  "updated_at": "2026-02-24T17:17:12.097Z",
+  "comments_enabled": false,
+  "default_tab": "curriculum",
+  "enforce_featured_media_completion": false,
+  "autocomplete_on_featured_media_completion": true,
+  "dripped_at": null,
+  "is_dripped": true,
+  "needs_to_complete_previous_lesson": false,
+  "completed": false,
+  "notify_students_enabled": false,
+  "bookmark_id": null,
+  "featured_media": {
+    "playback_url": "https://cdn-media.circle.so/bcdn_token=LTINxiuKaZkrq9E9Jy1saFMkZO7ukQOvGMlCRp6v7OE&token_path=%2F0037743b-219f-4749-94f4-311476d92dfa%2F&expires=1787965001/0037743b-219f-4749-94f4-311476d92dfa/hls/playlist.m3u8",
+    "current_storage": "in_house",
+    "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSjJtcVFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--691304c1a6fa2802306beeff2c6f11b9646cb074",
+    "filename": "empower_labs_cohort_4_2026-02-23_17_32_09_v1 (1440p)(1).mp4",
+    "content_type": "video/mp4",
+    "duration": "01:13:52",
+    "is_downloadable": false,
+    "url": "https://assets-v2.circle.so/lw88c7aq0u88357gmvh3qje0k13y",
+    "thumbnail_image_url": "https://cdn-media.circle.so/bcdn_token=LTINxiuKaZkrq9E9Jy1saFMkZO7ukQOvGMlCRp6v7OE&token_path=%2F0037743b-219f-4749-94f4-311476d92dfa%2F&expires=1787965001/0037743b-219f-4749-94f4-311476d92dfa/thumbnail.jpg",
+    "media_transcript_id": 3702155,
+    "media_transcoding": {
+      "status": "succeeded"
+    },
+    "chapters_url": null,
+    "preview_thumbnails_url": "https://cdn-media.circle.so/bcdn_token=LTINxiuKaZkrq9E9Jy1saFMkZO7ukQOvGMlCRp6v7OE&token_path=%2F0037743b-219f-4749-94f4-311476d92dfa%2F&expires=1787965001/0037743b-219f-4749-94f4-311476d92dfa/mosaic.vtt",
+    "video_variants": {
+      "original": "https://assets-v2.circle.so/lw88c7aq0u88357gmvh3qje0k13y",
+      "hls": "https://cdn-media.circle.so/bcdn_token=LTINxiuKaZkrq9E9Jy1saFMkZO7ukQOvGMlCRp6v7OE&token_path=%2F0037743b-219f-4749-94f4-311476d92dfa%2F&expires=1787965001/0037743b-219f-4749-94f4-311476d92dfa/hls/playlist.m3u8"
+    }
+  },
+  "serialized_rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Slides",
+              "type": "text",
+              "circle_ios_fallback_text": "Slides"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTFvckFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--92821d43d2a3f3ab5f9ca9e9e1537902de5e79aa"
+          }
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Summary",
+              "type": "text",
+              "circle_ios_fallback_text": "Summary"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Empowers Small Business Leadership",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Empowers Small Business Leadership"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed the challenges small business owners face when their growth is limited by their own bottleneck due to centralized decision-making and hoarding critical knowledge. He emphasized the importance of building a leadership team to delegate responsibilities and shared his requirements for leadership team members, including process ownership, time for strategic thinking, and financial literacy. Hayden also highlighted the role of AI in enabling small businesses to adopt frameworks previously only available to larger companies, such as AI-assisted decision-making, meeting optimization, and automated accountability.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed the challenges small business owners face when their growth is limited by their own bottleneck due to centralized decision-making and hoarding critical knowledge. He emphasized the importance of building a leadership team to delegate responsibilities and shared his requirements for leadership team members, including process ownership, time for strategic thinking, and financial literacy. Hayden also highlighted the role of AI in enabling small businesses to adopt frameworks previously only available to larger companies, such as AI-assisted decision-making, meeting optimization, and automated accountability."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Leadership and Compensation Strategies",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Leadership and Compensation Strategies"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed AI leadership roles and decision support, emphasizing the importance of context and proper data input for effective AI assistance. He shared his experience with owner-aligned compensation in construction, focusing on cash-based incentives linked to EBITDA growth, and highlighted the use of ESOPs as a liquidity tool for companies. Don inquired about specific examples of leadership-based compensation, and Hayden provided insights on bonus structures and the importance of maintaining financial flexibility for businesses.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed AI leadership roles and decision support, emphasizing the importance of context and proper data input for effective AI assistance. He shared his experience with owner-aligned compensation in construction, focusing on cash-based incentives linked to EBITDA growth, and highlighted the use of ESOPs as a liquidity tool for companies. Don inquired about specific examples of leadership-based compensation, and Hayden provided insights on bonus structures and the importance of maintaining financial flexibility for businesses."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI-Driven Business Process Evolution",
+              "type": "text",
+              "circle_ios_fallback_text": "AI-Driven Business Process Evolution"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed building a business brain by teaching AI to interview teams to identify process ownership and delegation opportunities from the bottom up. He emphasized that roles should be defined as collections of responsibilities tied to processes with success metrics, and predicted that traditional roles like CMO would evolve due to automation. Hayden also introduced Clarity Boards, which provide employees with comprehensive information about their roles, processes, and success metrics, and explained how AI can be used to create and maintain these boards. Finally, he discussed the importance of resetting expectations when implementing AI, highlighting the need for faster work, higher quality, and accountability, while also emphasizing the importance of hiring slowly and firing quickly with clear standards.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed building a business brain by teaching AI to interview teams to identify process ownership and delegation opportunities from the bottom up. He emphasized that roles should be defined as collections of responsibilities tied to processes with success metrics, and predicted that traditional roles like CMO would evolve due to automation. Hayden also introduced Clarity Boards, which provide employees with comprehensive information about their roles, processes, and success metrics, and explained how AI can be used to create and maintain these boards. Finally, he discussed the importance of resetting expectations when implementing AI, highlighting the need for faster work, higher quality, and accountability, while also emphasizing the importance of hiring slowly and firing quickly with clear standards."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Breakout Room Participant Management",
+              "type": "text",
+              "circle_ios_fallback_text": "Breakout Room Participant Management"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden and Midori discussed dividing participants into breakout rooms for a performance conversation exercise. They adjusted the number of rooms based on attendance, with some rooms having fewer participants than expected. After the breakout sessions, participants returned to the main room for Q&A.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden and Midori discussed dividing participants into breakout rooms for a performance conversation exercise. They adjusted the number of rooms based on attendance, with some rooms having fewer participants than expected. After the breakout sessions, participants returned to the main room for Q&A."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Implementation Strategy Discussion",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Implementation Strategy Discussion"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed the approach to implementing AI processes with teams, emphasizing a bottom-up strategy where employees learn fundamentals and create their own processes. He explained how the Clarity Board helps surface opportunities and commitments, allowing teams to collaborate and identify gaps in process understanding. Hayden also covered the concept of updating performance standards in light of AI's ability to significantly increase productivity, introducing the idea of AI arbitrage and cost surplus distribution.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed the approach to implementing AI processes with teams, emphasizing a bottom-up strategy where employees learn fundamentals and create their own processes. He explained how the Clarity Board helps surface opportunities and commitments, allowing teams to collaborate and identify gaps in process understanding. Hayden also covered the concept of updating performance standards in light of AI's ability to significantly increase productivity, introducing the idea of AI arbitrage and cost surplus distribution."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI-Driven Performance Management Strategies",
+              "type": "text",
+              "circle_ios_fallback_text": "AI-Driven Performance Management Strategies"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed performance management strategies, emphasizing the use of AI to streamline processes such as performance reviews, documentation, and coaching. He highlighted the importance of clear performance standards, personalized development plans, and recognition systems to improve employee engagement and retention. Hayden also addressed the need for dynamic job descriptions and evolving performance standards in an AI-enabled organization. The session concluded with a review of next steps, including running a diagnostic to identify organizational effectiveness opportunities and exploring AI hiring protocols.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed performance management strategies, emphasizing the use of AI to streamline processes such as performance reviews, documentation, and coaching. He highlighted the importance of clear performance standards, personalized development plans, and recognition systems to improve employee engagement and retention. Hayden also addressed the need for dynamic job descriptions and evolving performance standards in an AI-enabled organization. The session concluded with a review of next steps, including running a diagnostic to identify organizational effectiveness opportunities and exploring AI hiring protocols."
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Transcript and Chat",
+              "type": "text",
+              "circle_ios_fallback_text": "Transcript and Chat"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTJzcVFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--9b416bb0b3077ea9b9668bfbeebb6299a47f79d8"
+          }
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTUtucVFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--ab74b8fbea53549bce4a42686a1a75feb25ab324"
+          }
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "SlidesSummaryAI Empowers Small Business LeadershipHayden discussed the challenges small business owners face when their growth is limited by their own bottleneck due to centralized decision-making and hoarding critical knowledge. He emphasized the importance of building a leadership team to delegate responsibilities and shared his requirements for leadership team members, including process ownership, time for strategic thinking, and financial literacy. Hayden also highlighted the role of AI in enabling small businesses to adopt frameworks previously only available to larger companies, such as AI-assisted decision-making, meeting optimization, and automated accountability.AI Leadership and Compensation StrategiesHayden discussed AI leadership roles and decision support, emphasizing the importance of context and proper data input for effective AI assistance. He shared his experience with owner-aligned compensation in construction, focusing on cash-based incentives linked to EBITDA growth, and highlighted the use of ESOPs as a liquidity tool for companies. Don inquired about specific examples of leadership-based compensation, and Hayden provided insights on bonus structures and the importance of maintaining financial flexibility for businesses.AI-Driven Business Process EvolutionHayden discussed building a business brain by teaching AI to interview teams to identify process ownership and delegation opportunities from the bottom up. He emphasized that roles should be defined as collections of responsibilities tied to processes with success metrics, and predicted that traditional roles like CMO would evolve due to automation. Hayden also introduced Clarity Boards, which provide employees with comprehensive information about their roles, processes, and success metrics, and explained how AI can be used to create and maintain these boards. Finally, he discussed the importance of resetting expectations when implementing AI, highlighting the need for faster work, higher quality, and accountability, while also emphasizing the importance of hiring slowly and firing quickly with clear standards.Breakout Room Participant ManagementHayden and Midori discussed dividing participants into breakout rooms for a performance conversation exercise. They adjusted the number of rooms based on attendance, with some rooms having fewer participants than expected. After the breakout sessions, participants returned to the main room for Q&A.AI Implementation Strategy DiscussionHayden discussed the approach to implementing AI processes with teams, emphasizing a bottom-up strategy where employees learn fundamentals and create their own processes. He explained how the Clarity Board helps surface opportunities and commitments, allowing teams to collaborate and identify gaps in process understanding. Hayden also covered the concept of updating performance standards in light of AI's ability to significantly increase productivity, introducing the idea of AI arbitrage and cost surplus distribution.AI-Driven Performance Management StrategiesHayden discussed performance management strategies, emphasizing the use of AI to streamline processes such as performance reviews, documentation, and coaching. He highlighted the importance of clear performance standards, personalized development plans, and recognition systems to improve employee engagement and retention. Hayden also addressed the need for dynamic job descriptions and evolving performance standards in an AI-enabled organization. The session concluded with a review of next steps, including running a diagnostic to identify organizational effectiveness opportunities and exploring AI hiring protocols.\nTranscript and Chat",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "Cohort 4 Live Session 8- Transcript.srt",
+        "content_type": "application/x-subrip",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 135858,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTUtucVFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--ab74b8fbea53549bce4a42686a1a75feb25ab324",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/supper7sgpmiqi4sxs6tj3celaeg",
+        "is_downloadable": true
+      },
+      {
+        "filename": "Cohort 4 Live Session 8- Chat.txt",
+        "content_type": "text/plain",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 62596,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTJzcVFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--9b416bb0b3077ea9b9668bfbeebb6299a47f79d8",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/eelq5vlta5h1ti8sttlrr0vln8zt",
+        "is_downloadable": true
+      },
+      {
+        "filename": "Empower Labs Cohort 4-Session-8-Workforce-and-Leadershipise.pdf",
+        "content_type": "application/pdf",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 2993835,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTFvckFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--92821d43d2a3f3ab5f9ca9e9e1537902de5e79aa",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/0rns4c4o4n5zqxu9b61fpo5c00rx",
+        "is_downloadable": true,
+        "image_variants": {
+          "thumbnail": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTFvckFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--92821d43d2a3f3ab5f9ca9e9e1537902de5e79aa/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VY21WemFYcGxYM1J2WDJ4cGJXbDBXd2RwQWlBRGFRSkFCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--07a046a624ee42d116e6b9403cb3c1dc2823e2af/Empower%20Labs%20Cohort%204-Session-8-Workforce-and-Leadershipise.pdf"
+        }
+      }
+    ],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Slides",
+              "type": "text",
+              "circle_ios_fallback_text": "Slides"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTFvckFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--92821d43d2a3f3ab5f9ca9e9e1537902de5e79aa"
+          }
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Summary",
+              "type": "text",
+              "circle_ios_fallback_text": "Summary"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Empowers Small Business Leadership",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Empowers Small Business Leadership"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed the challenges small business owners face when their growth is limited by their own bottleneck due to centralized decision-making and hoarding critical knowledge. He emphasized the importance of building a leadership team to delegate responsibilities and shared his requirements for leadership team members, including process ownership, time for strategic thinking, and financial literacy. Hayden also highlighted the role of AI in enabling small businesses to adopt frameworks previously only available to larger companies, such as AI-assisted decision-making, meeting optimization, and automated accountability.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed the challenges small business owners face when their growth is limited by their own bottleneck due to centralized decision-making and hoarding critical knowledge. He emphasized the importance of building a leadership team to delegate responsibilities and shared his requirements for leadership team members, including process ownership, time for strategic thinking, and financial literacy. Hayden also highlighted the role of AI in enabling small businesses to adopt frameworks previously only available to larger companies, such as AI-assisted decision-making, meeting optimization, and automated accountability."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Leadership and Compensation Strategies",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Leadership and Compensation Strategies"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed AI leadership roles and decision support, emphasizing the importance of context and proper data input for effective AI assistance. He shared his experience with owner-aligned compensation in construction, focusing on cash-based incentives linked to EBITDA growth, and highlighted the use of ESOPs as a liquidity tool for companies. Don inquired about specific examples of leadership-based compensation, and Hayden provided insights on bonus structures and the importance of maintaining financial flexibility for businesses.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed AI leadership roles and decision support, emphasizing the importance of context and proper data input for effective AI assistance. He shared his experience with owner-aligned compensation in construction, focusing on cash-based incentives linked to EBITDA growth, and highlighted the use of ESOPs as a liquidity tool for companies. Don inquired about specific examples of leadership-based compensation, and Hayden provided insights on bonus structures and the importance of maintaining financial flexibility for businesses."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI-Driven Business Process Evolution",
+              "type": "text",
+              "circle_ios_fallback_text": "AI-Driven Business Process Evolution"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed building a business brain by teaching AI to interview teams to identify process ownership and delegation opportunities from the bottom up. He emphasized that roles should be defined as collections of responsibilities tied to processes with success metrics, and predicted that traditional roles like CMO would evolve due to automation. Hayden also introduced Clarity Boards, which provide employees with comprehensive information about their roles, processes, and success metrics, and explained how AI can be used to create and maintain these boards. Finally, he discussed the importance of resetting expectations when implementing AI, highlighting the need for faster work, higher quality, and accountability, while also emphasizing the importance of hiring slowly and firing quickly with clear standards.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed building a business brain by teaching AI to interview teams to identify process ownership and delegation opportunities from the bottom up. He emphasized that roles should be defined as collections of responsibilities tied to processes with success metrics, and predicted that traditional roles like CMO would evolve due to automation. Hayden also introduced Clarity Boards, which provide employees with comprehensive information about their roles, processes, and success metrics, and explained how AI can be used to create and maintain these boards. Finally, he discussed the importance of resetting expectations when implementing AI, highlighting the need for faster work, higher quality, and accountability, while also emphasizing the importance of hiring slowly and firing quickly with clear standards."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Breakout Room Participant Management",
+              "type": "text",
+              "circle_ios_fallback_text": "Breakout Room Participant Management"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden and Midori discussed dividing participants into breakout rooms for a performance conversation exercise. They adjusted the number of rooms based on attendance, with some rooms having fewer participants than expected. After the breakout sessions, participants returned to the main room for Q&A.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden and Midori discussed dividing participants into breakout rooms for a performance conversation exercise. They adjusted the number of rooms based on attendance, with some rooms having fewer participants than expected. After the breakout sessions, participants returned to the main room for Q&A."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Implementation Strategy Discussion",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Implementation Strategy Discussion"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed the approach to implementing AI processes with teams, emphasizing a bottom-up strategy where employees learn fundamentals and create their own processes. He explained how the Clarity Board helps surface opportunities and commitments, allowing teams to collaborate and identify gaps in process understanding. Hayden also covered the concept of updating performance standards in light of AI's ability to significantly increase productivity, introducing the idea of AI arbitrage and cost surplus distribution.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed the approach to implementing AI processes with teams, emphasizing a bottom-up strategy where employees learn fundamentals and create their own processes. He explained how the Clarity Board helps surface opportunities and commitments, allowing teams to collaborate and identify gaps in process understanding. Hayden also covered the concept of updating performance standards in light of AI's ability to significantly increase productivity, introducing the idea of AI arbitrage and cost surplus distribution."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI-Driven Performance Management Strategies",
+              "type": "text",
+              "circle_ios_fallback_text": "AI-Driven Performance Management Strategies"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed performance management strategies, emphasizing the use of AI to streamline processes such as performance reviews, documentation, and coaching. He highlighted the importance of clear performance standards, personalized development plans, and recognition systems to improve employee engagement and retention. Hayden also addressed the need for dynamic job descriptions and evolving performance standards in an AI-enabled organization. The session concluded with a review of next steps, including running a diagnostic to identify organizational effectiveness opportunities and exploring AI hiring protocols.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed performance management strategies, emphasizing the use of AI to streamline processes such as performance reviews, documentation, and coaching. He highlighted the importance of clear performance standards, personalized development plans, and recognition systems to improve employee engagement and retention. Hayden also addressed the need for dynamic job descriptions and evolving performance standards in an AI-enabled organization. The session concluded with a review of next steps, including running a diagnostic to identify organizational effectiveness opportunities and exploring AI hiring protocols."
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Transcript and Chat",
+              "type": "text",
+              "circle_ios_fallback_text": "Transcript and Chat"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTJzcVFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--9b416bb0b3077ea9b9668bfbeebb6299a47f79d8"
+          }
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTUtucVFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--ab74b8fbea53549bce4a42686a1a75feb25ab324"
+          }
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "SlidesSummaryAI Empowers Small Business LeadershipHayden discussed the challenges small business owners face when their growth is limited by their own bottleneck due to centralized decision-making and hoarding critical knowledge. He emphasized the importance of building a leadership team to delegate responsibilities and shared his requirements for leadership team members, including process ownership, time for strategic thinking, and financial literacy. Hayden also highlighted the role of AI in enabling small businesses to adopt frameworks previously only available to larger companies, such as AI-assisted decision-making, meeting optimization, and automated accountability.AI Leadership and Compensation StrategiesHayden discussed AI leadership roles and decision support, emphasizing the importance of context and proper data input for effective AI assistance. He shared his experience with owner-aligned compensation in construction, focusing on cash-based incentives linked to EBITDA growth, and highlighted the use of ESOPs as a liquidity tool for companies. Don inquired about specific examples of leadership-based compensation, and Hayden provided insights on bonus structures and the importance of maintaining financial flexibility for businesses.AI-Driven Business Process EvolutionHayden discussed building a business brain by teaching AI to interview teams to identify process ownership and delegation opportunities from the bottom up. He emphasized that roles should be defined as collections of responsibilities tied to processes with success metrics, and predicted that traditional roles like CMO would evolve due to automation. Hayden also introduced Clarity Boards, which provide employees with comprehensive information about their roles, processes, and success metrics, and explained how AI can be used to create and maintain these boards. Finally, he discussed the importance of resetting expectations when implementing AI, highlighting the need for faster work, higher quality, and accountability, while also emphasizing the importance of hiring slowly and firing quickly with clear standards.Breakout Room Participant ManagementHayden and Midori discussed dividing participants into breakout rooms for a performance conversation exercise. They adjusted the number of rooms based on attendance, with some rooms having fewer participants than expected. After the breakout sessions, participants returned to the main room for Q&A.AI Implementation Strategy DiscussionHayden discussed the approach to implementing AI processes with teams, emphasizing a bottom-up strategy where employees learn fundamentals and create their own processes. He explained how the Clarity Board helps surface opportunities and commitments, allowing teams to collaborate and identify gaps in process understanding. Hayden also covered the concept of updating performance standards in light of AI's ability to significantly increase productivity, introducing the idea of AI arbitrage and cost surplus distribution.AI-Driven Performance Management StrategiesHayden discussed performance management strategies, emphasizing the use of AI to streamline processes such as performance reviews, documentation, and coaching. He highlighted the importance of clear performance standards, personalized development plans, and recognition systems to improve employee engagement and retention. Hayden also addressed the need for dynamic job descriptions and evolving performance standards in an AI-enabled organization. The session concluded with a review of next steps, including running a diagnostic to identify organizational effectiveness opportunities and exploring AI hiring protocols.\nTranscript and Chat",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "Cohort 4 Live Session 8- Transcript.srt",
+        "content_type": "application/x-subrip",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 135858,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTUtucVFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--ab74b8fbea53549bce4a42686a1a75feb25ab324",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/supper7sgpmiqi4sxs6tj3celaeg",
+        "is_downloadable": true
+      },
+      {
+        "filename": "Cohort 4 Live Session 8- Chat.txt",
+        "content_type": "text/plain",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 62596,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTJzcVFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--9b416bb0b3077ea9b9668bfbeebb6299a47f79d8",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/eelq5vlta5h1ti8sttlrr0vln8zt",
+        "is_downloadable": true
+      },
+      {
+        "filename": "Empower Labs Cohort 4-Session-8-Workforce-and-Leadershipise.pdf",
+        "content_type": "application/pdf",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 2993835,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTFvckFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--92821d43d2a3f3ab5f9ca9e9e1537902de5e79aa",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/0rns4c4o4n5zqxu9b61fpo5c00rx",
+        "is_downloadable": true,
+        "image_variants": {
+          "thumbnail": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTFvckFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--92821d43d2a3f3ab5f9ca9e9e1537902de5e79aa/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VY21WemFYcGxYM1J2WDJ4cGJXbDBXd2RwQWlBRGFRSkFCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--07a046a624ee42d116e6b9403cb3c1dc2823e2af/Empower%20Labs%20Cohort%204-Session-8-Workforce-and-Leadershipise.pdf"
+        }
+      }
+    ],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "chat_room_uuid": "3d11dd58-10d4-4c66-998d-cd4bd93be5ea"
+}

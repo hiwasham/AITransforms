@@ -1,0 +1,330 @@
+[
+  {
+    "id": 94577002,
+    "parent_comment_id": null,
+    "post_id": 29354007,
+    "user_id": 52764785,
+    "editor": "tiptap",
+    "flagged_for_approval_at": null,
+    "created_at": "2026-02-04T17:29:39.319Z",
+    "updated_at": "2026-02-04T17:29:39.331Z",
+    "is_replying_enabled": true,
+    "is_liking_enabled": true,
+    "bookmark_id": null,
+    "is_liked": false,
+    "likes_count": 0,
+    "unresolved_flagged_reports_count": 0,
+    "show_url": "https://community.empowerlabs.ai/c/discussion-b92449/exercise-4-4-correction-proposal#comment_wrapper_94577002",
+    "author_type": "CommunityMember",
+    "community_member": {
+      "id": 75976965,
+      "user_id": 52764785,
+      "public_uid": "8de5ec09",
+      "first_name": "Beni",
+      "last_name": "Hirt",
+      "name": "Beni Hirt",
+      "admin": null,
+      "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzUyNzY0Nzg1P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--b817a665fc97e58615c10d19c1983348a13477db",
+      "type": "CommunityMember",
+      "headline": "CEO",
+      "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNzU5NzY5NjU_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--528925d008f14d65deac105e22a69408276832d8",
+      "avatar_url": "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRFhQUXdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--feafb3ab3c9d6f6bfeb7edcee6adab96c6cb0425/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJc0FXa0NMQUU2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--86d5a93b1fb9d9a40ce4e61c041294c46ab790a5/Beni_ProfileSquare@3x.png"
+    },
+    "member_tags_html": "\n\n          <label class=\"member-tags--label\" style=\"background-color: #ffffff;\">\n            <span class=\"name\">Cohort 4</span>\n          </label>\n      <label class=\"member-tags--label label-neutral\" data-tippy-delay=\"0\" data-tippy-arrow=\"true\" data-tippy-size=\"small\" data-tippy-animation=\"fade\"\n             data-tippy-content=\"Decomplix AG</a><br>\">\n        <span class=\"name\">+ more</span>\n      </label>\n",
+    "member_tags": [
+      {
+        "id": 137516322,
+        "name": "Cohort 4",
+        "emoji": "",
+        "color": "#ffffff",
+        "is_public": true,
+        "is_background_enabled": false,
+        "display_format": "label",
+        "display_locations": {
+          "post_bio": true,
+          "profile_page": true,
+          "member_directory": true
+        },
+        "custom_emoji_url": null,
+        "custom_emoji_dark_url": null
+      },
+      {
+        "id": 160182752,
+        "name": "Decomplix AG",
+        "emoji": "",
+        "color": "#ffffff",
+        "is_public": true,
+        "is_background_enabled": false,
+        "display_format": "label",
+        "display_locations": {
+          "post_bio": true,
+          "profile_page": true,
+          "member_directory": true
+        },
+        "custom_emoji_url": null,
+        "custom_emoji_dark_url": null
+      }
+    ],
+    "body_trix_content": null,
+    "body_for_editor": null,
+    "tiptap_body": {
+      "body": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "When doing it in the same chat, Claude alerts me “You have used 90% of your session limit.” Better to write it in a new chat but with a slightly different prompt?",
+                "type": "text",
+                "circle_ios_fallback_text": "When doing it in the same chat, Claude alerts me “You have used 90% of your session limit.” Better to write it in a new chat but with a slightly different prompt?"
+              }
+            ]
+          }
+        ]
+      },
+      "circle_ios_fallback_text": "When doing it in the same chat, Claude alerts me “You have used 90% of your session limit.” Better to write it in a new chat but with a slightly different prompt?",
+      "attachments": [],
+      "inline_attachments": [],
+      "sgids_to_object_map": {},
+      "format": "post",
+      "community_members": [],
+      "entities": [],
+      "group_mentions": [],
+      "polls": []
+    },
+    "policies": {
+      "can_report": true,
+      "can_manage": false,
+      "can_edit": false,
+      "can_destroy": false,
+      "can_bookmark": true
+    },
+    "replies_count": 0,
+    "replies": []
+  },
+  {
+    "id": 94580147,
+    "parent_comment_id": null,
+    "post_id": 29354007,
+    "user_id": 51792536,
+    "editor": "tiptap",
+    "flagged_for_approval_at": null,
+    "created_at": "2026-02-04T17:58:45.560Z",
+    "updated_at": "2026-02-04T17:58:45.576Z",
+    "is_replying_enabled": true,
+    "is_liking_enabled": true,
+    "bookmark_id": null,
+    "is_liked": false,
+    "likes_count": 0,
+    "unresolved_flagged_reports_count": 0,
+    "show_url": "https://community.empowerlabs.ai/c/discussion-b92449/exercise-4-4-correction-proposal#comment_wrapper_94580147",
+    "author_type": "CommunityMember",
+    "community_member": {
+      "id": 74607298,
+      "user_id": 51792536,
+      "public_uid": "4bc7cce2",
+      "first_name": "Midori",
+      "last_name": "Miyamoto",
+      "name": "Midori Miyamoto",
+      "admin": true,
+      "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzUxNzkyNTM2P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--ced0e37f7b64b2447549eda80469661a46101b7f",
+      "type": "CommunityMember",
+      "headline": "Lead Consultant/Founder",
+      "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNzQ2MDcyOTg_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--d3adab1fa975fbc440328fd8bbb68998b5f48093",
+      "avatar_url": "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCT2dVT1FnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--587a289fe4fbf1f6a2362845f3e7a848a4cc0b76/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJc0FXa0NMQUU2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--86d5a93b1fb9d9a40ce4e61c041294c46ab790a5/headshot%202026.png"
+    },
+    "member_tags_html": "  <span class=\"author__is-admin\">\n    admin\n  </span>\n\n\n          <label class=\"member-tags--label\" style=\"background-color: #ffffff;\">\n            <span class=\"name\">Cohort 3</span>\n          </label>\n      <label class=\"member-tags--label label-neutral\" data-tippy-delay=\"0\" data-tippy-arrow=\"true\" data-tippy-size=\"small\" data-tippy-animation=\"fade\"\n             data-tippy-content=\"Decomplix AG</a><br>Cohort 4</a><br>\">\n        <span class=\"name\">+ more</span>\n      </label>\n",
+    "member_tags": [
+      {
+        "id": 132960628,
+        "name": "Cohort 3",
+        "emoji": "",
+        "color": "#ffffff",
+        "is_public": true,
+        "is_background_enabled": false,
+        "display_format": "label",
+        "display_locations": {
+          "post_bio": true,
+          "profile_page": true,
+          "member_directory": true
+        },
+        "custom_emoji_url": null,
+        "custom_emoji_dark_url": null
+      },
+      {
+        "id": 160436080,
+        "name": "Decomplix AG",
+        "emoji": "",
+        "color": "#ffffff",
+        "is_public": true,
+        "is_background_enabled": false,
+        "display_format": "label",
+        "display_locations": {
+          "post_bio": true,
+          "profile_page": true,
+          "member_directory": true
+        },
+        "custom_emoji_url": null,
+        "custom_emoji_dark_url": null
+      },
+      {
+        "id": 160436081,
+        "name": "Cohort 4",
+        "emoji": "",
+        "color": "#ffffff",
+        "is_public": true,
+        "is_background_enabled": false,
+        "display_format": "label",
+        "display_locations": {
+          "post_bio": true,
+          "profile_page": true,
+          "member_directory": true
+        },
+        "custom_emoji_url": null,
+        "custom_emoji_dark_url": null
+      }
+    ],
+    "body_trix_content": null,
+    "body_for_editor": null,
+    "tiptap_body": {
+      "body": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Thanks for this, Beni Hirt - the Google Doc is correct, we’ve just updated Circle to match it. Try /compact in Claude so you don’t reach your session limit. Claude should do this automatically, but this is the solution if it doesn’t. ",
+                "type": "text",
+                "circle_ios_fallback_text": "Thanks for this, Beni Hirt - the Google Doc is correct, we’ve just updated Circle to match it. Try /compact in Claude so you don’t reach your session limit. Claude should do this automatically, but this is the solution if it doesn’t. "
+              }
+            ]
+          }
+        ]
+      },
+      "circle_ios_fallback_text": "Thanks for this, Beni Hirt - the Google Doc is correct, we’ve just updated Circle to match it. Try /compact in Claude so you don’t reach your session limit. Claude should do this automatically, but this is the solution if it doesn’t. ",
+      "attachments": [],
+      "inline_attachments": [],
+      "sgids_to_object_map": {},
+      "format": "post",
+      "community_members": [],
+      "entities": [],
+      "group_mentions": [],
+      "polls": []
+    },
+    "policies": {
+      "can_report": false,
+      "can_manage": false,
+      "can_edit": false,
+      "can_destroy": false,
+      "can_bookmark": true
+    },
+    "replies_count": 0,
+    "replies": []
+  },
+  {
+    "id": 94789468,
+    "parent_comment_id": null,
+    "post_id": 29354007,
+    "user_id": 52764785,
+    "editor": "tiptap",
+    "flagged_for_approval_at": null,
+    "created_at": "2026-02-06T15:45:09.914Z",
+    "updated_at": "2026-02-06T15:45:09.942Z",
+    "is_replying_enabled": true,
+    "is_liking_enabled": true,
+    "bookmark_id": null,
+    "is_liked": false,
+    "likes_count": 0,
+    "unresolved_flagged_reports_count": 0,
+    "show_url": "https://community.empowerlabs.ai/c/discussion-b92449/exercise-4-4-correction-proposal#comment_wrapper_94789468",
+    "author_type": "CommunityMember",
+    "community_member": {
+      "id": 75976965,
+      "user_id": 52764785,
+      "public_uid": "8de5ec09",
+      "first_name": "Beni",
+      "last_name": "Hirt",
+      "name": "Beni Hirt",
+      "admin": null,
+      "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzUyNzY0Nzg1P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--b817a665fc97e58615c10d19c1983348a13477db",
+      "type": "CommunityMember",
+      "headline": "CEO",
+      "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNzU5NzY5NjU_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--528925d008f14d65deac105e22a69408276832d8",
+      "avatar_url": "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRFhQUXdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--feafb3ab3c9d6f6bfeb7edcee6adab96c6cb0425/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJc0FXa0NMQUU2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--86d5a93b1fb9d9a40ce4e61c041294c46ab790a5/Beni_ProfileSquare@3x.png"
+    },
+    "member_tags_html": "\n\n          <label class=\"member-tags--label\" style=\"background-color: #ffffff;\">\n            <span class=\"name\">Cohort 4</span>\n          </label>\n      <label class=\"member-tags--label label-neutral\" data-tippy-delay=\"0\" data-tippy-arrow=\"true\" data-tippy-size=\"small\" data-tippy-animation=\"fade\"\n             data-tippy-content=\"Decomplix AG</a><br>\">\n        <span class=\"name\">+ more</span>\n      </label>\n",
+    "member_tags": [
+      {
+        "id": 137516322,
+        "name": "Cohort 4",
+        "emoji": "",
+        "color": "#ffffff",
+        "is_public": true,
+        "is_background_enabled": false,
+        "display_format": "label",
+        "display_locations": {
+          "post_bio": true,
+          "profile_page": true,
+          "member_directory": true
+        },
+        "custom_emoji_url": null,
+        "custom_emoji_dark_url": null
+      },
+      {
+        "id": 160182752,
+        "name": "Decomplix AG",
+        "emoji": "",
+        "color": "#ffffff",
+        "is_public": true,
+        "is_background_enabled": false,
+        "display_format": "label",
+        "display_locations": {
+          "post_bio": true,
+          "profile_page": true,
+          "member_directory": true
+        },
+        "custom_emoji_url": null,
+        "custom_emoji_dark_url": null
+      }
+    ],
+    "body_trix_content": null,
+    "body_for_editor": null,
+    "tiptap_body": {
+      "body": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Hi Midori, thanks for your feedback. Circle is not updated yet, 3.5 and 4.4 write it different to Google Doc.",
+                "type": "text",
+                "circle_ios_fallback_text": "Hi Midori, thanks for your feedback. Circle is not updated yet, 3.5 and 4.4 write it different to Google Doc."
+              }
+            ]
+          }
+        ]
+      },
+      "circle_ios_fallback_text": "Hi Midori, thanks for your feedback. Circle is not updated yet, 3.5 and 4.4 write it different to Google Doc.",
+      "attachments": [],
+      "inline_attachments": [],
+      "sgids_to_object_map": {},
+      "format": "post",
+      "community_members": [],
+      "entities": [],
+      "group_mentions": [],
+      "polls": []
+    },
+    "policies": {
+      "can_report": true,
+      "can_manage": false,
+      "can_edit": false,
+      "can_destroy": false,
+      "can_bookmark": true
+    },
+    "replies_count": 0,
+    "replies": []
+  }
+]

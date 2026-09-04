@@ -1,0 +1,1030 @@
+{
+  "id": 28469045,
+  "name": "Case Study: Market to Lead - B2B Seller Outreach",
+  "slug": "case-study-market-to-lead-b2b-seller-outreach",
+  "type": "Posts::Basic",
+  "status": "published",
+  "user_id": 14012483,
+  "published_at": "2026-01-15T11:34:00.000Z",
+  "updated_at": "2026-01-15T11:34:01.329Z",
+  "created_at": "2026-01-15T11:34:00.000Z",
+  "hide_meta_info": false,
+  "community_member_id": 51521286,
+  "is_truncation_disabled": null,
+  "hide_from_featured_areas": false,
+  "flagged_for_approval_at": null,
+  "pinned_at": null,
+  "internal_custom_html": null,
+  "is_comments_enabled": true,
+  "is_liking_enabled": true,
+  "share_post_enabled": null,
+  "share_uid": null,
+  "minimal_layout": false,
+  "show_post_teaser": false,
+  "editor": "tiptap",
+  "is_comments_closed": false,
+  "is_comments_disabled": false,
+  "is_liking_disabled": false,
+  "display_title": "Case Study: Market to Lead - B2B Seller Outreach",
+  "cover_image": null,
+  "cover_image_url": null,
+  "cover_image_variants": {},
+  "cardview_thumbnail": null,
+  "cardview_thumbnail_url": null,
+  "cardview_image_url": null,
+  "space_name": "Case Studies",
+  "space_slug": "case-studies",
+  "community_slug": "empower-labs",
+  "space_id": 2345699,
+  "pin_to_top": false,
+  "pinned_at_top_of_space": false,
+  "bookmark_id": null,
+  "topics": [],
+  "community_member": {
+    "id": 51521286,
+    "user_id": 14012483,
+    "public_uid": "c8fdee0b",
+    "first_name": "Dale",
+    "last_name": "Meador",
+    "name": "Dale Meador",
+    "admin": false,
+    "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzE0MDEyNDgzP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--548723ac2f882f7d6c4b38d386dde5c99a83d749",
+    "type": "CommunityMember",
+    "headline": "CEO",
+    "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTE1MjEyODY_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--37d6c05382f3ccc922074eebf012226f0bf978ce",
+    "avatar_url": "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTmRIaWdZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--cab8974193f15b01abe14df94c5689e75f7e7579/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJc0FXa0NMQUU2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--67365f61f655fbc86c65a51f2e9992ab818c41cd/IMAGE_DBM%20-%20002%20(small).jpg"
+  },
+  "conversation_summary_overview": "",
+  "body_trix_content": "",
+  "body_for_editor": null,
+  "truncated_content": "This case study examines the seller side at Acquira \n\n—helping business owners considering a sale or transition. B2B outreach is more straightforward than B2C since business databases exist and targeted contact is easier.\n\nThe Starting Point\n\nAcquira o...",
+  "show_more": true,
+  "tiptap_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This case study examines the seller side at Acquira ",
+              "type": "text",
+              "circle_ios_fallback_text": "This case study examines the seller side at Acquira "
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTUVBL1FjPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e83a994965fe6698ed7f740f353f8a908547fd56"
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "—helping business owners considering a sale or transition. B2B outreach is more straightforward than B2C since business databases exist and targeted contact is easier.",
+              "type": "text",
+              "circle_ios_fallback_text": "—helping business owners considering a sale or transition. B2B outreach is more straightforward than B2C since business databases exist and targeted contact is easier."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The Starting Point",
+              "type": "text",
+              "circle_ios_fallback_text": "The Starting Point"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Acquira operated a call center with 10-12 people:",
+              "type": "text",
+              "circle_ios_fallback_text": "Acquira operated a call center with 10-12 people:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "3 List Builders:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Manually created business lists daily via Google searches, finding owner names and contact details through websites.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "6 BDRs (Business Development Representatives):",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Made ~100 calls daily each (600 total). Spent 30 seconds with gatekeepers (to get the owner's personal email address or phone number), 3 minutes qualifying owners, booking ~2 SDR calls per day each.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "2-3 SDRs (Sales Development Representatives):",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " North America-based, conducted detailed discovery calls with business owners.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "1 Manager:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Coordinated everything.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Infrastructure:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Infrastructure:"
+            },
+            {
+              "text": " 9-10 Salesforce licenses at $200/month each.",
+              "type": "text",
+              "circle_ios_fallback_text": " 9-10 Salesforce licenses at $200/month each."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "The Numbers",
+              "type": "text",
+              "circle_ios_fallback_text": "The Numbers"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Total monthly cost: ~$20,000",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Output: ~150 seller conversations monthly",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Cost per conversation: $133",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Monetization: Connected qualified sellers with buyers or referred smaller businesses to brokers for commission.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Phase 1: Outsource List Building",
+              "type": "text",
+              "circle_ios_fallback_text": "Phase 1: Outsource List Building"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Acquira found a contractor selling pre-built lists at $0.20 per contact—roughly what the company paid manual list builders. The team compared quality and found purchased lists were actually better.",
+              "type": "text",
+              "circle_ios_fallback_text": "Acquira found a contractor selling pre-built lists at $0.20 per contact—roughly what the company paid manual list builders. The team compared quality and found purchased lists were actually better."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Decision:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Decision:"
+            },
+            {
+              "text": " Eliminated all 3 list builder positions. Same cost, less complexity, better quality. List volume increased to 50,000/month.",
+              "type": "text",
+              "circle_ios_fallback_text": " Eliminated all 3 list builder positions. Same cost, less complexity, better quality. List volume increased to 50,000/month."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Phase 2: Replace Calls with AI Texting",
+              "type": "text",
+              "circle_ios_fallback_text": "Phase 2: Replace Calls with AI Texting"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The trigger was success from Case Study 1. After seeing Woo Sender generate 8x more buyer appointments, Hayden and the team asked: \"Could this work for B2B?\"",
+              "type": "text",
+              "circle_ios_fallback_text": "The trigger was success from Case Study 1. After seeing Woo Sender generate 8x more buyer appointments, Hayden and the team asked: \"Could this work for B2B?\""
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Acquira implemented Woo Sender for B2B with personalized texts.",
+              "type": "text",
+              "circle_ios_fallback_text": "Acquira implemented Woo Sender for B2B with personalized texts."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Results:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Results:"
+            },
+            {
+              "text": " 8X more appointments versus the BDR callers.",
+              "type": "text",
+              "circle_ios_fallback_text": " 8X more appointments versus the BDR callers."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The company ran both systems in parallel for months to validate before eliminating the BDR positions.",
+              "type": "text",
+              "circle_ios_fallback_text": "The company ran both systems in parallel for months to validate before eliminating the BDR positions."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Phase 3: Pivot to Email and Back to Manual List Building",
+              "type": "text",
+              "circle_ios_fallback_text": "Phase 3: Pivot to Email and Back to Manual List Building"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "After initial texting success, the team realized email would be more scalable, cheaper, and carry less legal risk.",
+              "type": "text",
+              "circle_ios_fallback_text": "After initial texting success, the team realized email would be more scalable, cheaper, and carry less legal risk."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "They tested sending emails to the purchased lists. Response rate: 0.2%. Abysmal.",
+              "type": "text",
+              "circle_ios_fallback_text": "They tested sending emails to the purchased lists. Response rate: 0.2%. Abysmal."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The problem wasn't the channel—it was the list quality. Emails weren't reaching the right people or were bouncing. And there was a reason for that.",
+              "type": "text",
+              "circle_ios_fallback_text": "The problem wasn't the channel—it was the list quality. Emails weren't reaching the right people or were bouncing. And there was a reason for that."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The team discovered their contractor had been defrauding them—buying lists for 10 cents, selling them at 20 cents while claiming \"at cost,\" and cutting corners on quality to maximize profit. They let him go.",
+              "type": "text",
+              "circle_ios_fallback_text": "The team discovered their contractor had been defrauding them—buying lists for 10 cents, selling them at 20 cents while claiming \"at cost,\" and cutting corners on quality to maximize profit. They let him go."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This setback became a breakthrough. Acquira spent three months building their own list infrastructure from scratch. Hayden, who had years of experience with off-market deals, led the effort using tools like Outscraper and Apify to scrape Google Maps for service businesses (HVAC, plumbing, roofing).",
+              "type": "text",
+              "circle_ios_fallback_text": "This setback became a breakthrough. Acquira spent three months building their own list infrastructure from scratch. Hayden, who had years of experience with off-market deals, led the effort using tools like Outscraper and Apify to scrape Google Maps for service businesses (HVAC, plumbing, roofing)."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The result: much higher quality lists at a fraction of the previous cost.",
+              "type": "text",
+              "circle_ios_fallback_text": "The result: much higher quality lists at a fraction of the previous cost."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "The Process",
+              "type": "text",
+              "circle_ios_fallback_text": "The Process"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Scrape Google Maps using tools like Outscraper and Apify for service businesses (HVAC, plumbing, roofing) in specific areas.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Enrich with ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Clay.com",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "http://clay.com/",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "text": ":",
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "type": "bulletList",
+                  "content": [
+                    {
+                      "type": "listItem",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "text": "Upload scraped list (10,000 businesses)",
+                              "type": "text"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "text": "Use Clay's AI to find owner names",
+                              "type": "text"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "text": "Find LinkedIn profiles",
+                              "type": "text"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "text": "Extract personal email/phone from LinkedIn via Wiza",
+                              "type": "text"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "text": "Use waterfalls—if data isn't found at one source, automatically check the next",
+                              "type": "text"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "After three months of refinement, the team achieved 80%+ success finding actual owner personal emails.",
+              "type": "text",
+              "circle_ios_fallback_text": "After three months of refinement, the team achieved 80%+ success finding actual owner personal emails."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The payoff:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "The payoff:"
+            },
+            {
+              "text": " Reply rates jumped from 0.2% to 1.5%—a 10X improvement.",
+              "type": "text",
+              "circle_ios_fallback_text": " Reply rates jumped from 0.2% to 1.5%—a 10X improvement."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Phase 4: Personalized Video",
+              "type": "text",
+              "circle_ios_fallback_text": "Phase 4: Personalized Video"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Acquira is currently implementing AI-generated personalized videos. When someone replies to an email, Potion automatically generates a video showing their actual website and discussing their specific business.",
+              "type": "text",
+              "circle_ios_fallback_text": "Acquira is currently implementing AI-generated personalized videos. When someone replies to an email, Potion automatically generates a video showing their actual website and discussing their specific business."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Competitors using this achieve 3-5% reply rates. Acquira's target: 5%, which would represent another 3X improvement.",
+              "type": "text",
+              "circle_ios_fallback_text": "Competitors using this achieve 3-5% reply rates. Acquira's target: 5%, which would represent another 3X improvement."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The Results",
+              "type": "text",
+              "circle_ios_fallback_text": "The Results"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Before AI:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Before AI:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Monthly cost: $20,000",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Output: 150 conversations/month",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Cost per conversation: $133",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Team size: 13+ people",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "After AI:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "After AI:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Monthly cost: ~$10,000",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Output capacity: 1,500+ conversations/month",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Cost per conversation: ~$7",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Team size: 2-3 people",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Critical Success Factors",
+              "type": "text",
+              "circle_ios_fallback_text": "Critical Success Factors"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Let's examine what made this transformation work:",
+              "type": "text",
+              "circle_ios_fallback_text": "Let's examine what made this transformation work:"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "List quality is everything.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " The team learned that perfect outreach means nothing if you're contacting the wrong people or emails bounce. They spent three months and six figures learning this lesson.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Test in parallel before switching.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Acquira kept the BDR team running alongside AI texting for months, giving them confidence before making the change.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Be patient with infrastructure.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Three months of full-time work to dial this in is normal for this type of transformation.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Build for permanence.",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Once it works, you have permanent infrastructure that scales infinitely. The upfront investment pays off forever.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The strategic shift:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "The strategic shift:"
+            },
+            {
+              "text": " Instead of building a massive internal sales team to handle conversations (requiring 20+ people), Acquira now routes seller conversations directly to their Acquisition Entrepreneur customers. They handle qualification and pursuit. This means the company can handle 10X volume without proportional headcount growth.",
+              "type": "text",
+              "circle_ios_fallback_text": " Instead of building a massive internal sales team to handle conversations (requiring 20+ people), Acquira now routes seller conversations directly to their Acquisition Entrepreneur customers. They handle qualification and pursuit. This means the company can handle 10X volume without proportional headcount growth."
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "This case study examines the seller side at Acquira —helping business owners considering a sale or transition. B2B outreach is more straightforward than B2C since business databases exist and targeted contact is easier.The Starting PointAcquira operated a call center with 10-12 people:Infrastructure: 9-10 Salesforce licenses at $200/month each.The NumbersPhase 1: Outsource List BuildingAcquira found a contractor selling pre-built lists at $0.20 per contact—roughly what the company paid manual list builders. The team compared quality and found purchased lists were actually better.Decision: Eliminated all 3 list builder positions. Same cost, less complexity, better quality. List volume increased to 50,000/month.Phase 2: Replace Calls with AI TextingThe trigger was success from Case Study 1. After seeing Woo Sender generate 8x more buyer appointments, Hayden and the team asked: \"Could this work for B2B?\"Acquira implemented Woo Sender for B2B with personalized texts.Results: 8X more appointments versus the BDR callers.The company ran both systems in parallel for months to validate before eliminating the BDR positions.Phase 3: Pivot to Email and Back to Manual List BuildingAfter initial texting success, the team realized email would be more scalable, cheaper, and carry less legal risk.They tested sending emails to the purchased lists. Response rate: 0.2%. Abysmal.The problem wasn't the channel—it was the list quality. Emails weren't reaching the right people or were bouncing. And there was a reason for that.The team discovered their contractor had been defrauding them—buying lists for 10 cents, selling them at 20 cents while claiming \"at cost,\" and cutting corners on quality to maximize profit. They let him go.This setback became a breakthrough. Acquira spent three months building their own list infrastructure from scratch. Hayden, who had years of experience with off-market deals, led the effort using tools like Outscraper and Apify to scrape Google Maps for service businesses (HVAC, plumbing, roofing).The result: much higher quality lists at a fraction of the previous cost.The ProcessAfter three months of refinement, the team achieved 80%+ success finding actual owner personal emails.The payoff: Reply rates jumped from 0.2% to 1.5%—a 10X improvement.Phase 4: Personalized VideoAcquira is currently implementing AI-generated personalized videos. When someone replies to an email, Potion automatically generates a video showing their actual website and discussing their specific business.Competitors using this achieve 3-5% reply rates. Acquira's target: 5%, which would represent another 3X improvement.The ResultsBefore AI:After AI:Critical Success FactorsLet's examine what made this transformation work:The strategic shift: Instead of building a massive internal sales team to handle conversations (requiring 20+ people), Acquira now routes seller conversations directly to their Acquisition Entrepreneur customers. They handle qualification and pursuit. This means the company can handle 10X volume without proportional headcount growth.",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "Market-to-Lead-AI-Powered-B2B-Seller-Outreach.pdf",
+        "content_type": "application/pdf",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 1093126,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTUVBL1FjPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e83a994965fe6698ed7f740f353f8a908547fd56",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/vgc7wjsm03lggevv47hql3t8x90d",
+        "is_downloadable": true,
+        "image_variants": {
+          "thumbnail": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTUVBL1FjPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e83a994965fe6698ed7f740f353f8a908547fd56/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VY21WemFYcGxYM1J2WDJ4cGJXbDBXd2RwQWlBRGFRSkFCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--07a046a624ee42d116e6b9403cb3c1dc2823e2af/Market-to-Lead-AI-Powered-B2B-Seller-Outreach.pdf"
+        }
+      }
+    ],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  }
+}

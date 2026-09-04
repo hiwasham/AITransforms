@@ -40,3 +40,17 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .gstack/
+
+# --- EMPOWER archive (added 2026-09-04) ---
+# Plaintext credential — belongs in Infisical, never in git
+hiwa-account-in-community-empower.json
+# Python bytecode from archive tooling
+__pycache__/
+*.pyc
+# Lesson videos: 453 MB, one file exceeds GitHub's 100 MB hard limit.
+# Kept on disk only. See specs/roadmap.md.
+empower-curriculum/**/*.mp4
+empower-curriculum/**/*.mov
+empower-curriculum/**/*.webm
+# Separate git repo that lives in this directory — not part of this project
+/loopbreaker/
