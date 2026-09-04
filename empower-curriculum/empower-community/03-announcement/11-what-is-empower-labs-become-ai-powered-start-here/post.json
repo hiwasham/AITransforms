@@ -1,0 +1,485 @@
+{
+  "id": 35678199,
+  "name": "What is EMPOWER Labs? Become AI-Powered | Start Here ",
+  "slug": "what-is-empower-labs-become-ai-powered-start-here",
+  "type": "Posts::Basic",
+  "status": "published",
+  "user_id": 59573912,
+  "published_at": "2026-08-20T20:13:20.632Z",
+  "updated_at": "2026-08-20T20:13:20.647Z",
+  "created_at": "2026-08-20T20:13:20.632Z",
+  "hide_meta_info": false,
+  "community_member_id": 85538714,
+  "is_truncation_disabled": null,
+  "hide_from_featured_areas": false,
+  "flagged_for_approval_at": null,
+  "pinned_at": null,
+  "internal_custom_html": null,
+  "is_comments_enabled": true,
+  "is_liking_enabled": true,
+  "share_post_enabled": null,
+  "share_uid": null,
+  "minimal_layout": false,
+  "show_post_teaser": false,
+  "editor": "tiptap",
+  "is_comments_closed": false,
+  "is_comments_disabled": false,
+  "is_liking_disabled": false,
+  "display_title": "What is EMPOWER Labs? Become AI-Powered | Start Here ",
+  "cover_image": null,
+  "cover_image_url": null,
+  "cover_image_variants": {},
+  "cardview_thumbnail": null,
+  "cardview_thumbnail_url": null,
+  "cardview_image_url": null,
+  "space_name": "Announcement",
+  "space_slug": "announcement",
+  "community_slug": "empower-labs",
+  "space_id": 2721841,
+  "pin_to_top": false,
+  "pinned_at_top_of_space": false,
+  "bookmark_id": null,
+  "topics": [],
+  "community_member": {
+    "id": 85538714,
+    "user_id": 59573912,
+    "public_uid": "89ea2fdb",
+    "first_name": "Ronnie",
+    "last_name": null,
+    "name": "Ronnie",
+    "admin": true,
+    "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzU5NTczOTEyP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--86d5ff77eb6b7c8282e1582d1728433aa9fb5e08",
+    "type": "CommunityMember",
+    "headline": "Admin",
+    "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvODU1Mzg3MTQ_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--4d28570696f744a549b25d82dbe6681db284cad0",
+    "avatar_url": null
+  },
+  "conversation_summary_overview": "",
+  "body_trix_content": "",
+  "body_for_editor": null,
+  "truncated_content": "If you're a business owner watching AI explode and thinking, \"That's cool, but how does this actually help my business?\" you're in the right place.\n\nAI isn't about theory, hype, or chasing every new tool that launches.\n\nThe real question is how to use ...",
+  "show_more": true,
+  "tiptap_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you're a business owner watching AI explode and thinking, ",
+              "type": "text",
+              "circle_ios_fallback_text": "If you're a business owner watching AI explode and thinking, "
+            },
+            {
+              "text": "\"That's cool, but how does this actually help my business?\"",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "\"That's cool, but how does this actually help my business?\""
+            },
+            {
+              "text": " you're in the right place.",
+              "type": "text",
+              "circle_ios_fallback_text": " you're in the right place."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "AI isn't about theory, hype, or chasing every new tool that launches.",
+              "type": "text",
+              "circle_ios_fallback_text": "AI isn't about theory, hype, or chasing every new tool that launches."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The real question is how to use AI to make real companies run better in the numbers, the operations, and the day to day interactions.",
+              "type": "text",
+              "circle_ios_fallback_text": "The real question is how to use AI to make real companies run better in the numbers, the operations, and the day to day interactions."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In this video, Hayden introduces Empower Labs, shares the experience behind the work, and explains how AI is being implemented and tested inside real businesse",
+              "type": "text",
+              "circle_ios_fallback_text": "In this video, Hayden introduces Empower Labs, shares the experience behind the work, and explains how AI is being implemented and tested inside real businesse"
+            }
+          ]
+        },
+        {
+          "type": "embed",
+          "attrs": {
+            "sgid": "BAh7CEkiCGdpZAY6BkVUSSI6Z2lkOi8vanVtcHN0YXJ0LWFwcC9SaWNoVGV4dE9lbWJlZC8yNTY3NDU2P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--6b762eb984bd63fd023fbf385e2b24add3063a2f"
+          }
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "In this video, you'll learn:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "In this video, you'll learn:"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "🏢 Why Hayden built an operating system for his companies and is now rebuilding it with AI as a first class layer",
+              "type": "text",
+              "circle_ios_fallback_text": "🏢 Why Hayden built an operating system for his companies and is now rebuilding it with AI as a first class layer"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "⚙️ How AI can improve practical business workflows, including clearer handoffs, better follow up, fewer mistakes, faster training, and cleaner reporting",
+              "type": "text",
+              "circle_ios_fallback_text": "⚙️ How AI can improve practical business workflows, including clearer handoffs, better follow up, fewer mistakes, faster training, and cleaner reporting"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "🧪 Why Empower Labs focuses on testing AI inside real companies, measuring what changes, and sharing the playbooks that actually work",
+              "type": "text",
+              "circle_ios_fallback_text": "🧪 Why Empower Labs focuses on testing AI inside real companies, measuring what changes, and sharing the playbooks that actually work"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "📚 Why process and documentation come first when implementing AI, because AI can't augment what isn't documented",
+              "type": "text",
+              "circle_ios_fallback_text": "📚 Why process and documentation come first when implementing AI, because AI can't augment what isn't documented"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "🏗️ How industry specific AI playbooks can help businesses apply AI to the workflows that actually fit their operations",
+              "type": "text",
+              "circle_ios_fallback_text": "🏗️ How industry specific AI playbooks can help businesses apply AI to the workflows that actually fit their operations"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "🚀 How an AI enabled operating system can help build a business that is less dependent on the owner",
+              "type": "text",
+              "circle_ios_fallback_text": "🚀 How an AI enabled operating system can help build a business that is less dependent on the owner"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "One of the biggest takeaways is that ",
+              "type": "text",
+              "circle_ios_fallback_text": "One of the biggest takeaways is that "
+            },
+            {
+              "text": "AI isn't going to save your business. You will.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "AI isn't going to save your business. You will."
+            },
+            {
+              "text": " AI is a tool that can make you faster, clearer, and more consistent, but you still have to do the work.",
+              "type": "text",
+              "circle_ios_fallback_text": " AI is a tool that can make you faster, clearer, and more consistent, but you still have to do the work."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Ready to Start Using AI in Your Business?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Ready to Start Using AI in Your Business?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The goal isn't to chase every new AI tool or follow theoretical frameworks.",
+              "type": "text",
+              "circle_ios_fallback_text": "The goal isn't to chase every new AI tool or follow theoretical frameworks."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Start by looking at your own business and identifying where better processes, clearer documentation, stronger handoffs, better follow up, or cleaner reporting could create real improvements.",
+              "type": "text",
+              "circle_ios_fallback_text": "Start by looking at your own business and identifying where better processes, clearer documentation, stronger handoffs, better follow up, or cleaner reporting could create real improvements."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Empower Labs is focused on practical implementation, real company case studies, industry specific playbooks, and an anti hype filter to help identify what's actually worth your time.",
+              "type": "text",
+              "circle_ios_fallback_text": "Empower Labs is focused on practical implementation, real company case studies, industry specific playbooks, and an anti hype filter to help identify what's actually worth your time."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "💬 Join the Discussion",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "💬 Join the Discussion"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "After watching the video, let us know in the comments:",
+              "type": "text",
+              "circle_ios_fallback_text": "After watching the video, let us know in the comments:"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "• 🏢 What is the biggest area of your business where you think AI could create a practical improvement?",
+              "type": "text",
+              "circle_ios_fallback_text": "• 🏢 What is the biggest area of your business where you think AI could create a practical improvement?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "• ⚙️What business process would you most like to make less dependent on you?",
+              "type": "text",
+              "circle_ios_fallback_text": "• ⚙️What business process would you most like to make less dependent on you?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "• 📚What part of Hayden's approach to practical AI implementation stood out to you?",
+              "type": "text",
+              "circle_ios_fallback_text": "• 📚What part of Hayden's approach to practical AI implementation stood out to you?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "• 💡What was your biggest takeaway from the video?",
+              "type": "text",
+              "circle_ios_fallback_text": "• 💡What was your biggest takeaway from the video?"
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "👋 New to the Community?",
+              "type": "text",
+              "circle_ios_fallback_text": "👋 New to the Community?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you haven't introduced yourself yet, we'd love to get to know you!",
+              "type": "text",
+              "circle_ios_fallback_text": "If you haven't introduced yourself yet, we'd love to get to know you!"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Head over to the ",
+              "type": "text",
+              "circle_ios_fallback_text": "Head over to the "
+            },
+            {
+              "text": "Introductions",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Introductions"
+            },
+            {
+              "text": " space and tell us:",
+              "type": "text",
+              "circle_ios_fallback_text": " space and tell us:"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "• 👤 Who you are",
+              "type": "text",
+              "circle_ios_fallback_text": "• 👤 Who you are"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "• 💼 Your role or business",
+              "type": "text",
+              "circle_ios_fallback_text": "• 💼 Your role or business"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "• 🌎 Where you're joining us from",
+              "type": "text",
+              "circle_ios_fallback_text": "• 🌎 Where you're joining us from"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "• 🤖 What you're hoping to accomplish with AI",
+              "type": "text",
+              "circle_ios_fallback_text": "• 🤖 What you're hoping to accomplish with AI"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "We look forward to hearing your biggest takeaway from the video and learning more about your AI journey!",
+              "type": "text",
+              "circle_ios_fallback_text": "We look forward to hearing your biggest takeaway from the video and learning more about your AI journey!"
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "If you're a business owner watching AI explode and thinking, \"That's cool, but how does this actually help my business?\" you're in the right place.AI isn't about theory, hype, or chasing every new tool that launches.The real question is how to use AI to make real companies run better in the numbers, the operations, and the day to day interactions.In this video, Hayden introduces Empower Labs, shares the experience behind the work, and explains how AI is being implemented and tested inside real businesseIn this video, you'll learn:🏢 Why Hayden built an operating system for his companies and is now rebuilding it with AI as a first class layer⚙️ How AI can improve practical business workflows, including clearer handoffs, better follow up, fewer mistakes, faster training, and cleaner reporting🧪 Why Empower Labs focuses on testing AI inside real companies, measuring what changes, and sharing the playbooks that actually work📚 Why process and documentation come first when implementing AI, because AI can't augment what isn't documented🏗️ How industry specific AI playbooks can help businesses apply AI to the workflows that actually fit their operations🚀 How an AI enabled operating system can help build a business that is less dependent on the ownerOne of the biggest takeaways is that AI isn't going to save your business. You will. AI is a tool that can make you faster, clearer, and more consistent, but you still have to do the work.Ready to Start Using AI in Your Business?The goal isn't to chase every new AI tool or follow theoretical frameworks.Start by looking at your own business and identifying where better processes, clearer documentation, stronger handoffs, better follow up, or cleaner reporting could create real improvements.Empower Labs is focused on practical implementation, real company case studies, industry specific playbooks, and an anti hype filter to help identify what's actually worth your time.💬 Join the DiscussionAfter watching the video, let us know in the comments:• 🏢 What is the biggest area of your business where you think AI could create a practical improvement?• ⚙️What business process would you most like to make less dependent on you?• 📚What part of Hayden's approach to practical AI implementation stood out to you?• 💡What was your biggest takeaway from the video?👋 New to the Community?If you haven't introduced yourself yet, we'd love to get to know you!Head over to the Introductions space and tell us:• 👤 Who you are• 💼 Your role or business• 🌎 Where you're joining us from• 🤖 What you're hoping to accomplish with AIWe look forward to hearing your biggest takeaway from the video and learning more about your AI journey!",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {
+      "BAh7CEkiCGdpZAY6BkVUSSI6Z2lkOi8vanVtcHN0YXJ0LWFwcC9SaWNoVGV4dE9lbWJlZC8yNTY3NDU2P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--6b762eb984bd63fd023fbf385e2b24add3063a2f": {
+        "id": 2567456,
+        "url": "https://youtu.be/hm_Vbua2aQ0?si=liUD9B3c6ecyvAwN",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSI6Z2lkOi8vanVtcHN0YXJ0LWFwcC9SaWNoVGV4dE9lbWJlZC8yNTY3NDU2P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--6b762eb984bd63fd023fbf385e2b24add3063a2f",
+        "type": "embed",
+        "embed_type": "video",
+        "embed_provider": "iframely",
+        "circle_embed_url": "https://community.empowerlabs.ai/rich_text_oembeds/BAh7CEkiCGdpZAY6BkVUSSI6Z2lkOi8vanVtcHN0YXJ0LWFwcC9SaWNoVGV4dE9lbWJlZC8yNTY3NDU2P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--6b762eb984bd63fd023fbf385e2b24add3063a2f",
+        "html": "<div style=\"left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;\"><iframe src=\"https://www.youtube.com/embed/hm_Vbua2aQ0?rel=0\" width=\"360\" height=\"202\" style=\"top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;\" allowfullscreen scrolling=\"no\" allow=\"accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;\" referrerpolicy=\"strict-origin\"></iframe></div>",
+        "title": "What is EMPOWER Labs? Become AI-Powered | Start Here",
+        "width": 360,
+        "height": 202,
+        "version": "1.0",
+        "author_url": "https://www.youtube.com/channel/UCDMYoClgeu5QJpEfDaJLnHA",
+        "author_name": null,
+        "description": "I'm not a tech guy. I'm not an AI researcher. I'm a business builder who's bought 30+ companies, sold 8, and bootstrapped multiple businesses into the 7 and 8-figure range. \n\nAfter seeing that many operations up close, one thing became clear — AI can't augment what isn't documented. Most people are plugging AI tools on top of personal or organizational chaos and wondering why it isn't working. That's not an AI problem. That's a systems problem. \n\nEMPOWER Labs exists to fix that. \n\nWe don't just teach AI theory—we build and run real-world workflows inside actual operations. From essential local trades to modern digital systems, we test it, measure it, break it, and share exactly what we find.  What you'll find on this channel:\n\n→ *Systems-First AI:* How to properly structure your workflows so AI can actually step in and help.\n→ *Real-World Case Studies:* What we tested inside active companies, what worked, what failed, and why.\n→ *Actionable Playbooks:* Step-by-step blueprints to make your daily output faster, clearer, and more consistent.\n→ *True Leverage:* How to build automated infrastructure that reduces team and owner dependency.\n\nNo hype. If a tool or strategy isn't worth your time, I'll tell you straight up before you waste a single second on it. \n\n🔔 Subscribe to EMPOWER Labs and build your AI-powered advantage.\n\n___________________________________________________\n\n0:00 Who this channel is for\n0:30 Background — 30+ companies bought and sold\n0:45 The patterns that separate chaos from scalable\n1:11 Acquira — buying essential businesses\n1:40 Empower Labs — AI implementation in real companies\n2:04 Why this is different (we run it live)\n2:25 What this channel covers\n3:10 The anti-hype filter\n\n#EMPOWERLabs #SystemsFirstAI #AIForBusiness #WorkflowAutomation",
+        "provider_url": null,
+        "provider_name": "YouTube",
+        "thumbnail_url": "https://i.ytimg.com/vi/hm_Vbua2aQ0/maxresdefault.jpg",
+        "thumbnail_width": 1280,
+        "thumbnail_height": 720
+      }
+    },
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  }
+}

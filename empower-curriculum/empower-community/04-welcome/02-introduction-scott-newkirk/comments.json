@@ -1,0 +1,122 @@
+[
+  {
+    "id": 109710060,
+    "parent_comment_id": null,
+    "post_id": 34587128,
+    "user_id": 39364111,
+    "editor": "tiptap",
+    "flagged_for_approval_at": null,
+    "created_at": "2026-07-20T16:05:55.453Z",
+    "updated_at": "2026-07-20T16:05:55.463Z",
+    "is_replying_enabled": true,
+    "is_liking_enabled": true,
+    "bookmark_id": null,
+    "is_liked": false,
+    "likes_count": 0,
+    "unresolved_flagged_reports_count": 0,
+    "show_url": "https://community.empowerlabs.ai/c/welcome/introduction-scott-newkirk#comment_wrapper_109710060",
+    "author_type": "CommunityMember",
+    "community_member": {
+      "id": 51527687,
+      "user_id": 39364111,
+      "public_uid": "b2be8b1e",
+      "first_name": "Ronnie",
+      "last_name": "Seguilla",
+      "name": "Ronnie Seguilla",
+      "admin": true,
+      "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzM5MzY0MTExP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--526c8da859ab73228e0fe33cfc7e422ab8b19331",
+      "type": "CommunityMember",
+      "headline": "Admin",
+      "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTE1Mjc2ODc_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--ff7e32066a01f1a91da71adf5a71bc9c75b95f13",
+      "avatar_url": null
+    },
+    "member_tags_html": "  <span class=\"author__is-admin\">\n    admin\n  </span>\n\n\n          <label class=\"member-tags--label\" style=\"background-color: #ffffff;\">\n            <span class=\"name\">Cohort 4</span>\n          </label>\n      <label class=\"member-tags--label label-neutral\" data-tippy-delay=\"0\" data-tippy-arrow=\"true\" data-tippy-size=\"small\" data-tippy-animation=\"fade\"\n             data-tippy-content=\"Cohort 5</a><br>Decomplix AG</a><br>\">\n        <span class=\"name\">+ more</span>\n      </label>\n",
+    "member_tags": [
+      {
+        "id": 134259728,
+        "name": "Cohort 4",
+        "emoji": "",
+        "color": "#ffffff",
+        "is_public": true,
+        "is_background_enabled": false,
+        "display_format": "label",
+        "display_locations": {
+          "post_bio": true,
+          "profile_page": true,
+          "member_directory": true
+        },
+        "custom_emoji_url": null,
+        "custom_emoji_dark_url": null
+      },
+      {
+        "id": 140600030,
+        "name": "Cohort 5",
+        "emoji": "",
+        "color": "#ffffff",
+        "is_public": true,
+        "is_background_enabled": false,
+        "display_format": "label",
+        "display_locations": {
+          "post_bio": true,
+          "profile_page": true,
+          "member_directory": true
+        },
+        "custom_emoji_url": null,
+        "custom_emoji_dark_url": null
+      },
+      {
+        "id": 160406246,
+        "name": "Decomplix AG",
+        "emoji": "",
+        "color": "#ffffff",
+        "is_public": true,
+        "is_background_enabled": false,
+        "display_format": "label",
+        "display_locations": {
+          "post_bio": true,
+          "profile_page": true,
+          "member_directory": true
+        },
+        "custom_emoji_url": null,
+        "custom_emoji_dark_url": null
+      }
+    ],
+    "body_trix_content": null,
+    "body_for_editor": null,
+    "tiptap_body": {
+      "body": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Welcome, Scott! 👋 Great to have you here. Your business sounds fascinating, and you're in the right place to explore how AI can help grow it. Looking forward to seeing what you build!",
+                "type": "text",
+                "circle_ios_fallback_text": "Welcome, Scott! 👋 Great to have you here. Your business sounds fascinating, and you're in the right place to explore how AI can help grow it. Looking forward to seeing what you build!"
+              }
+            ]
+          }
+        ]
+      },
+      "circle_ios_fallback_text": "Welcome, Scott! 👋 Great to have you here. Your business sounds fascinating, and you're in the right place to explore how AI can help grow it. Looking forward to seeing what you build!",
+      "attachments": [],
+      "inline_attachments": [],
+      "sgids_to_object_map": {},
+      "format": "post",
+      "community_members": [],
+      "entities": [],
+      "group_mentions": [],
+      "polls": []
+    },
+    "policies": {
+      "can_report": false,
+      "can_manage": false,
+      "can_edit": false,
+      "can_destroy": false,
+      "can_bookmark": true
+    },
+    "replies_count": 0,
+    "replies": []
+  }
+]

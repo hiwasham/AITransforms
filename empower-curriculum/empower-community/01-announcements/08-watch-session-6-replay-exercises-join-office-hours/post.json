@@ -1,0 +1,399 @@
+{
+  "id": 29525293,
+  "name": "Watch Session 6 Replay + Exercises + Join Office Hours",
+  "slug": "watch-session-6-replay-exercises-join-office-hours",
+  "type": "Posts::Basic",
+  "status": "published",
+  "user_id": 39364111,
+  "published_at": "2026-02-09T23:36:22.559Z",
+  "updated_at": "2026-02-09T23:36:22.591Z",
+  "created_at": "2026-02-09T23:36:22.559Z",
+  "hide_meta_info": false,
+  "community_member_id": 51527687,
+  "is_truncation_disabled": null,
+  "hide_from_featured_areas": false,
+  "flagged_for_approval_at": null,
+  "pinned_at": null,
+  "internal_custom_html": null,
+  "is_comments_enabled": true,
+  "is_liking_enabled": true,
+  "share_post_enabled": null,
+  "share_uid": null,
+  "minimal_layout": false,
+  "show_post_teaser": false,
+  "editor": "tiptap",
+  "is_comments_closed": false,
+  "is_comments_disabled": false,
+  "is_liking_disabled": false,
+  "display_title": "Watch Session 6 Replay + Exercises + Join Office Hours",
+  "cover_image": null,
+  "cover_image_url": null,
+  "cover_image_variants": {},
+  "cardview_thumbnail": null,
+  "cardview_thumbnail_url": null,
+  "cardview_image_url": null,
+  "space_name": "Announcements",
+  "space_slug": "announcements-4101a0",
+  "community_slug": "empower-labs",
+  "space_id": 2414936,
+  "pin_to_top": false,
+  "pinned_at_top_of_space": false,
+  "bookmark_id": null,
+  "topics": [],
+  "community_member": {
+    "id": 51527687,
+    "user_id": 39364111,
+    "public_uid": "b2be8b1e",
+    "first_name": "Ronnie",
+    "last_name": "Seguilla",
+    "name": "Ronnie Seguilla",
+    "admin": true,
+    "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzM5MzY0MTExP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--526c8da859ab73228e0fe33cfc7e422ab8b19331",
+    "type": "CommunityMember",
+    "headline": "Admin",
+    "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTE1Mjc2ODc_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--ff7e32066a01f1a91da71adf5a71bc9c75b95f13",
+    "avatar_url": null
+  },
+  "conversation_summary_overview": "",
+  "body_trix_content": "",
+  "body_for_editor": null,
+  "truncated_content": "Unlocking the levers of profitability, this session turned financial insights into actionable strategies for growth. Here's your Session 6 replay and exercises to keep you moving forward.\n\n1. Watch the Replay of Session 6\n\nIf you couldn’t attend or wou...",
+  "show_more": true,
+  "tiptap_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Unlocking the levers of profitability, this session turned financial insights into actionable strategies for growth. Here's your Session 6 replay and exercises to keep you moving forward.",
+              "type": "text",
+              "circle_ios_fallback_text": "Unlocking the levers of profitability, this session turned financial insights into actionable strategies for growth. Here's your Session 6 replay and exercises to keep you moving forward."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "1. Watch the Replay of Session 6",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "1. Watch the Replay of Session 6"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you couldn’t attend or would like to revisit any part of the session, the recording is now ready for you to watch.",
+              "type": "text",
+              "circle_ios_fallback_text": "If you couldn’t attend or would like to revisit any part of the session, the recording is now ready for you to watch."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In addition to the video replay, you’ll also find a downloadable version of the slides, access to the chat and transcript, and a summary of the main points for reference.",
+              "type": "text",
+              "circle_ios_fallback_text": "In addition to the video replay, you’ll also find a downloadable version of the slides, access to the chat and transcript, and a summary of the main points for reference."
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/edit-lesson/sections/901140/lessons/3421025",
+            "color": "#2B2E33",
+            "label": "Watch the Replay",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "2. Start the Exercises",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "2. Start the Exercises"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Please ",
+              "type": "text",
+              "circle_ios_fallback_text": "Please "
+            },
+            {
+              "text": "work on the following exercises ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "work on the following exercises "
+            },
+            {
+              "text": "before our next live session:",
+              "type": "text",
+              "circle_ios_fallback_text": "before our next live session:"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 6.1: Run the Assessment (Financial Performance Management)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 6.2: Create the Level 1 & 2 SOP (Financial Performance Management) (Optional)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 6.3: Create an Interactive Artifact with Claude (Optional)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 6.4: Use Claude as Your Fractional CFO (Optional)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 6.5: Add Core Process to Stage 3",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/edit-lesson/sections/901140/lessons/3421028",
+            "color": "#2B2E33",
+            "label": "Start the Exercises",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "3. Join the Office Hours This Wednesday",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "3. Join the Office Hours This Wednesday"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Have a question about how to apply what you’re learning in the program? Join us for our second Office Hours this",
+              "type": "text",
+              "circle_ios_fallback_text": "Have a question about how to apply what you’re learning in the program? Join us for our second Office Hours this"
+            },
+            {
+              "text": " Wednesday, Feb 11, 1:00 – 2:00 PM EST",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": " Wednesday, Feb 11, 1:00 – 2:00 PM EST"
+            },
+            {
+              "text": ", to get direct, real-time support from us.",
+              "type": "text",
+              "circle_ios_fallback_text": ", to get direct, real-time support from us."
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://community.empowerlabs.ai/c/calendar/office-hours-2",
+            "color": "#2B2E33",
+            "label": "Join the Office Hours 2",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "If you have questions, ideas, or feedback...",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "If you have questions, ideas, or feedback..."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Don’t hesitate to post in the ",
+              "type": "text",
+              "circle_ios_fallback_text": "Don’t hesitate to post in the "
+            },
+            {
+              "type": "entity",
+              "attrs": {
+                "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa"
+              },
+              "circle_ios_fallback_text": "#Discussion"
+            },
+            {
+              "text": " space. Our team is checking in there every day, and we’re here to support you throughout the program.",
+              "type": "text",
+              "circle_ios_fallback_text": " space. Our team is checking in there every day, and we’re here to support you throughout the program."
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "Unlocking the levers of profitability, this session turned financial insights into actionable strategies for growth. Here's your Session 6 replay and exercises to keep you moving forward.1. Watch the Replay of Session 6If you couldn’t attend or would like to revisit any part of the session, the recording is now ready for you to watch.In addition to the video replay, you’ll also find a downloadable version of the slides, access to the chat and transcript, and a summary of the main points for reference.2. Start the ExercisesPlease work on the following exercises before our next live session:3. Join the Office Hours This WednesdayHave a question about how to apply what you’re learning in the program? Join us for our second Office Hours this Wednesday, Feb 11, 1:00 – 2:00 PM EST, to get direct, real-time support from us.If you have questions, ideas, or feedback...Don’t hesitate to post in the #Discussion space. Our team is checking in there every day, and we’re here to support you throughout the program.",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa": {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    },
+    "format": "post",
+    "community_members": [],
+    "entities": [
+      {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    ],
+    "group_mentions": [],
+    "polls": []
+  }
+}

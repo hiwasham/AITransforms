@@ -1,0 +1,125 @@
+{
+  "id": 29031735,
+  "name": "Naming Convention Prompt that Claude made for me.",
+  "slug": "naming-convention-prompt-that-claude-made-for-me",
+  "type": "Posts::Basic",
+  "status": "published",
+  "user_id": 31043807,
+  "published_at": "2026-01-26T21:40:03.709Z",
+  "updated_at": "2026-01-29T12:34:59.321Z",
+  "created_at": "2026-01-26T21:40:03.709Z",
+  "hide_meta_info": false,
+  "community_member_id": 52281051,
+  "is_truncation_disabled": null,
+  "hide_from_featured_areas": false,
+  "flagged_for_approval_at": null,
+  "pinned_at": null,
+  "internal_custom_html": null,
+  "is_comments_enabled": true,
+  "is_liking_enabled": true,
+  "share_post_enabled": null,
+  "share_uid": null,
+  "minimal_layout": false,
+  "show_post_teaser": false,
+  "editor": "tiptap",
+  "is_comments_closed": false,
+  "is_comments_disabled": false,
+  "is_liking_disabled": false,
+  "display_title": "Naming Convention Prompt that Claude made for me.",
+  "cover_image": null,
+  "cover_image_url": null,
+  "cover_image_variants": {},
+  "cardview_thumbnail": null,
+  "cardview_thumbnail_url": null,
+  "cardview_image_url": null,
+  "space_name": "Discussion",
+  "space_slug": "discussion-b92449",
+  "community_slug": "empower-labs",
+  "space_id": 2414947,
+  "pin_to_top": false,
+  "pinned_at_top_of_space": false,
+  "bookmark_id": null,
+  "topics": [
+    336019,
+    336020,
+    336021
+  ],
+  "community_member": {
+    "id": 52281051,
+    "user_id": 31043807,
+    "public_uid": "ab6468c9",
+    "first_name": "lee@refreshcollective.org",
+    "last_name": null,
+    "name": "lee@refreshcollective.org",
+    "admin": false,
+    "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzMxMDQzODA3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--b1b98ffbf8200a189ff37f5fd5e85a271243fe74",
+    "type": "CommunityMember",
+    "headline": "Integrator",
+    "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTIyODEwNTE_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--6bca5c85446edefc9599b7ecb72b1f8b4d86a0ef",
+    "avatar_url": "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTmN3YWdZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b9d497839d6eb86147c695ee00d9f0ecf2ce7dc6/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lKYW5CbFp3WTZCa1ZVT2hSeVpYTnBlbVZmZEc5ZmJHbHRhWFJiQjJrQ0xBRnBBaXdCT2dwellYWmxjbnNHT2dwemRISnBjRlE9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--ef295ed08e817a599d692fd6d8761673d3ed547f/IMG_2681.jpeg"
+  },
+  "conversation_summary_overview": "",
+  "body_trix_content": "",
+  "body_for_editor": null,
+  "truncated_content": "Hey Cohort!\n\nOne thing I struggled with the first time through the cohort was applying the naming convention guide to the vast amount of helpful artifacts and documents I created with Claude.  \n\nSo this time through, I took the naming convention and cr...",
+  "show_more": true,
+  "tiptap_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hey Cohort!",
+              "type": "text",
+              "circle_ios_fallback_text": "Hey Cohort!"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "One thing I struggled with the first time through the cohort was applying the naming convention guide to the vast amount of helpful artifacts and documents I created with Claude.  ",
+              "type": "text",
+              "circle_ios_fallback_text": "One thing I struggled with the first time through the cohort was applying the naming convention guide to the vast amount of helpful artifacts and documents I created with Claude.  "
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "So this time through, I took the naming convention and created a prompt from it so that Claude can help me name my artifacts before I move them to drive.  I’m still testing it, and will report back on how it works, but so far, VERY HELPFUL for someone who like me who tends to loose my train of thought when I switch applications, screens or tasks. Claude is my ADHD helper in this scenario!",
+              "type": "text",
+              "circle_ios_fallback_text": "So this time through, I took the naming convention and created a prompt from it so that Claude can help me name my artifacts before I move them to drive.  I’m still testing it, and will report back on how it works, but so far, VERY HELPFUL for someone who like me who tends to loose my train of thought when I switch applications, screens or tasks. Claude is my ADHD helper in this scenario!"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you want to try it, I’m happy to give it to you, or simply paste the naming convention copy from the curriculum into a chat and say “Claude, make prompt from this so that I can put it into the project knowledge. I want you to use this to help me properly name artifacts as they are created in this project.”",
+              "type": "text",
+              "circle_ios_fallback_text": "If you want to try it, I’m happy to give it to you, or simply paste the naming convention copy from the curriculum into a chat and say “Claude, make prompt from this so that I can put it into the project knowledge. I want you to use this to help me properly name artifacts as they are created in this project.”"
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "Hey Cohort!One thing I struggled with the first time through the cohort was applying the naming convention guide to the vast amount of helpful artifacts and documents I created with Claude.  \n\nSo this time through, I took the naming convention and created a prompt from it so that Claude can help me name my artifacts before I move them to drive.  I’m still testing it, and will report back on how it works, but so far, VERY HELPFUL for someone who like me who tends to loose my train of thought when I switch applications, screens or tasks. Claude is my ADHD helper in this scenario!If you want to try it, I’m happy to give it to you, or simply paste the naming convention copy from the curriculum into a chat and say “Claude, make prompt from this so that I can put it into the project knowledge. I want you to use this to help me properly name artifacts as they are created in this project.”",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  }
+}

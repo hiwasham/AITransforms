@@ -1,0 +1,670 @@
+how welcome to office hours. So nice to see all of you here. It's a smaller group, I think, given our change in office hours for this week. 
+
+
+But that means we can have a richer conversation. Our most recent session covered workforce and leadership. But don't feel like you need to limit yourself to questions from that session. 
+
+
+Again, it's an open forum to troubleshoot, discuss insights and tensions. and more broadly, the future of ANA enablement. We're a really small group, so just feel free to unmute yourself and ask your questions. 
+
+
+I don't think we need to raise hands today. Well, is Don. Okay, Don, you go first. While we're waiting for the first question, Hayden, what happens when your brain explodes? 
+
+
+Because I've been kind of feeling that way with all of the amazing stuff that's been opening up all over the place. 
+
+
+It's just like really have to contain the beast a little bit and focus on one thing at a time and use your notion correctly. 
+
+
+Yep, sure. Yeah, I find with like using AI, there's just so many things going on that even, I just can't, I find I have to everything just to close loops on all the things that I'm doing. 
+
+
+I don't know if you found the same thing. Yeah, it does help to get Claude to summarize stuff and refocus stuff and create some fresh documents. 
+
+
+It helps eliminate the scatter. But you made a comment about the brain of the organization. And so we're kind of speaking to that a little bit, too. 
+
+
+But I wonder if you want to talk about that a little bit, about how you see that or what it means to you, anything. 
+
+
+Yeah, so to me, having a business brain it's basically having a single, having a source of information, um, that has all of the most updated source of information from your team, which is usually where most of, um, obviously most of the information lies. 
+
+
+Um, and then making sure that that's constantly synchronized across all platforms. And then eventually that you have proactive agents, uh, working with that information. 
+
+
+So like the master prompt as a concept, is sort of the first step of a business brain, right? And so what you've gone through is basically like, I would say, a very wide and shallow snapshot of your brain and how it's related to the business, right? 
+
+
+But for it to be a business brain, you actually have to have your team have probably deeper snapshots to go in. 
+
+
+And then you also need to be able to kind of make sure that you have a way to refine and update and identify like divergences between different people's brains and snapshots to find a single source of truth. 
+
+
+And then you need to be able to update and cascade constantly. So that last piece is kind of like, how do you keep the brain up to date? 
+
+
+And so I think keeping the brain up to date is proactive agents asking people on your team questions. 
+
+
+It's like a proactive CHRO agent asking if anyone was hired, fired, demoted, promoted in the last seven days, as an example. 
+
+
+So that's kind of the way I see it is like right now your business brain is a wide and narrow snapshot of your brain as it relates to your business. 
+
+
+As you grow this concept, it will take deeper and narrower snapshots of each employee's brain as it relates to their role. 
+
+
+There needs to be a process to refine and identify discrepancies, divergences, what the actual single source of truth is. 
+
+
+and then a way to kind of constantly update. Does that help? And to keep organizing it, too. Exactly. Because, like, when this first came to my attention, I went, wow, there's so much wealth in the email files of the organization. 
+
+
+You know, not accessible to anybody. Well, you know, I'm just delighted to see I plugged Claude into my email. It gives me way better answers than Gemini when I'm looking for something. 
+
+
+And so if you have an employee able to access that resource about how to contact this vendor or the history of this vendor or whatever, those are the kind of things that make the organization so much smarter so fast. 
+
+
+Yep. And that's a whole other approach that other businesses have taken too, right? Which is just have solutions that are heavy on integrations, right? 
+
+
+So they integrate with your email, they integrate with you know, your Asana, they integrate with absolutely everything, Salesforce, every CRM, and try to build, automatically build a knowledge base based on that. 
+
+
+I think that's been actually the more common approach, as opposed to saying, like, you know, here's how a business is individually set up, and let's create sort of a knowledge base based on the component pieces of a business. 
+
+
+What I've just noticed thus far, at least, is that way those kind of rag systems set up don't necessarily get the information that you need, um, quite as efficiently. 
+
+
+So, but it's another, it could, that could be the future. I don't know yet yeah we're gonna follow up. Yeah. Nancy, did you know what i did i did i sort of want to just say where i think i am, it's given that we have this small group and it follows from what don said, which You know, I was sure as we started, all right, I got a Teams program and I still have all the information of the like hundreds of documents that were created in June in my pro account. 
+
+
+And I definitely don't wanna repeat all of that. You know, I did a little bit, I brought some in, I did some comparisons, but I wanna confirm that your advice is still to go ahead and do the assessments of each of the cycles from my brain and make that part of the project knowledge. 
+
+
+Then what I've been doing I've only put one really so far into stage three because I've been sharing with my team the videos and the slides so that they can be following along. 
+
+
+is my management team so that when this course is over, I want to have each of those leaders kind of do that same assessment, like you said, and then can compare them. 
+
+
+And I want the, there's like three other people and me to be our, enterprise brain. And I want them to work with me putting it into stage three so that they feel like ownership with what you're saying, that that's a one place of truth and that that's where we'll update it. 
+
+
+Even though I'm still confused, like, all right, if I'm updating in stage three and is the Claude thing still up to date? 
+
+
+And I think you've said something about them sinking, but I, you know, so that's kind of my strategy. 
+
+
+I'm, I haven't done all the assessments and I haven't put them in there, but I'm, Also like Don, you know, there's so many things happening in this cloud code and the possibilities of, you know, it's too exciting and at the same time exhausting. 
+
+
+But that flow of what's going on, I'd just like to hear you react to it. Yeah, I think everything you're doing is the right thing. So you're teaching other people, you're giving them the foundations, you're getting them bought in. 
+
+
+That's absolutely the right thing. I agree on the Claude side. Yes, you should still be going through those assessments in the separate Teams account. 
+
+
+In terms of what is up to date and keeping things up to date, we're not quite there yet. In a few more sessions, we're going to talk about what is your single source of truth, how do you keep that up to date, and then how do you synchronize everything else? 
+
+
+And so my approach has been stage three is my single source of truth, and then I synchronize with stage three and I synchronize Claude code with stage three and vice versa. 
+
+
+It means when you're updating in stage three, it will go back to Claude and. Yeah. Okay. Yeah. So, so like the way you can do it with a Google is in Claude as a project, you have a Google doc as your project knowledge source, right? 
+
+
+So as opposed to a markdown file, it's a Google doc. And then stage three can basically write to that Google doc, with the most up-to-date information. 
+
+
+And so that way, as long as Stage 3 is up-to-date, Cloud is always staying up-to-date, right? That's one way to do it. There's other ways you could do it. And again, Stage 3 doesn't need to be the thing. 
+
+
+If you want to like vibe code your own version of Stage 3 and then have it do the same thing, that could also work. 
+
+
+So are you saying that we're covering this in a future session? Yeah, in the last session. I think you should speak up and say other cool things that you're doing because you really inspired me with the invoice scanning thing. 
+
+
+Who's this? Mike. Oh, I'm sorry. I think my internet broke up for a minute. Oh, yeah. Well, I've been playing around a little bit with co-work and the last time I talked a little bit about the invoicing process or processing of receipts, creating a spreadsheet. 
+
+
+What we're working on now is our proposal system. So our core system doesn't do a great job of generating proposals. So I had Claude create a format for those. 
+
+
+And we just give it some core documents on the desktop, a price list, a customer list with primary contacts. 
+
+
+And then our managers can just use whisper flow or something like that and dictate what we want a proposal to be, and it makes all the line items, automatically puts that in a PDF, and then creates a spreadsheet. 
+
+
+So for us, it's sort of a workaround for what an ERP might do, but it's actually working a lot better than what we had. 
+
+
+Awesome. So I found that with my minimal knowledge, How much time did the proposal take before and how long does it take now? 
+
+
+So what's like the cost collapse for you? We were just late. It took us a long time to do them. And we actually haven't, we just, I mean, I just, I didn't even finish it yet. 
+
+
+It's basically close to finish. We have to update our list because we can't have a close list of who the primary contact was. 
+
+
+So I ran with not the correct data. So I don't know yet. But I anticipate we'll probably save 15 minutes per proposal. And we do lots of these for irrigation and enhancements. 
+
+
+So I think each manager will potentially save one to two hours a week just doing that. And we'll be much more organized. We had things slipping through the cracks sometimes too, because it's a bit of a manual process and keeping track whether it was submitted and then invoiced after it was done. 
+
+
+So it just ties into our whole workflow where we can track it better. Thanks for sharing. Do you have any questions? I had a question. I just wanted to follow up on your mention of RAG. 
+
+
+And, you know, I guess I would consider some of the comments you've made before about using Slack integration to Salesforce and things like that may be part of the RAG system. 
+
+
+And what we're doing in the class, more formally structured, So would you say that you really consider the best approach to use both of those, depending on the circumstances where you have the more formalized SOPs, but you're also using a little bit more formal calling out of data that resides in different areas so that people can keep up to date on the knowledge? 
+
+
+And tied to that, I'm also curious why you decided to build your CRM in Airtable Because I think you had mentioned last summer potentially just using Slack to interact with one license of Salesforce. 
+
+
+Just your thoughts on that. So on the first question, I'll answer the second question first because that's easier. 
+
+
+It was actually a different company that set up the Airtable instance. I didn't set it up. One of the people in my leadership team did. Um, so it was this company in power labs. 
+
+
+Um, and so we didn't have Salesforce or any licenses. Um, and, and he just, I don't know why he chose air table. I said, take a look at notion air table and a few other things, pick and choose. 
+
+
+Um, I am moving actually from, uh, so Salesforce, obviously big company has like these minimum licenses and annual structures. 
+
+
+And so I actually will be, I actually did cancel my Salesforce account. I think it's done as of May and I'm actually moving to that same Airtable integration because they would not let me reduce it to one or two accounts. 
+
+
+Hence their stock dying. As your second question, so set up a few different things with RAG in the past. So I think my comment was, I initially thought there's this interesting thing as, as models are coming out so fast and with such wide improvements that my current position is that rag may be unnecessary for, for almost all use cases, simply because both token windows and like needle in a haystack benchmarks are just going up and up and up and up. 
+
+
+And so like all you really need is just slightly better context management. So you don't have just ridiculously large master prompts. And I've actually found that that's probably more accurate than RAG and it's like a lot easier to set up. 
+
+
+And also obviously tokens are getting cheaper. So because of that, I would say like RAG makes a lot of sense in certain use cases that are outside of the scope of the standard curriculum. 
+
+
+For sure, if you want to like set up like a double of yourself, right? And you want to feed like, you know, all of the content you've ever written and then have turned that into a chat bot that other people can interact with, 100% you need RAG for that, right? 
+
+
+Like you can't just tokenize that. But I think for most use cases, and in your example of like the Slack Salesforce integration, originally that used RAG, it no longer needs to. 
+
+
+Like you could easily do that in, you know, Zapier, Lindy, even without code. So I would actually say RAG is now needed for fairly sophisticated use cases. 
+
+
+And in every iteration of a model that comes out, I'm seeing it less and less necessary. But that's just my experience. I had to look up that means retrieval augmented generation. 
+
+
+So we're talking about. Yeah. Okay. Basically you're, you're creating a vector database based on, and you can, IBM actually, IBM has a good YouTube channel on AI and they have some good stuff on rag. 
+
+
+If you're curious to learn a bit more. No. I think a cloud is sufficing for now on that one. Yeah. You're welcome. Wow. So I do have another comment if I don't want to... 
+
+
+Let me just say something, John, about that rag thing, right? I just was flipping through and I saw some, I don't know if he's Dutch, but a guy who was teaching about Claude Code and how it worked and what all the stuff was. 
+
+
+And then he says, in case you don't know me, let me introduce myself. I am the avatar of this guy, you know, but he reads every one of your things while I'm here with you. 
+
+
+He's out there talking, you know, making more content and answering things. But it was so realistic and really... Charlie. Look that. He introduced himself as the avatar of this guy. 
+
+
+And he says, but he's, he's out there talking with clients and he will, he will read every one of your things. 
+
+
+Who was it? I've been studying AI avatar YouTubes. All right. I'll, I'll send the link in here. I have him saved someplace. Just, you can go out and I'll find that. 
+
+
+There's another woman who does a Julia something. So I have a leadership related question around, I wanted to invite you to speak a little bit more about a bottom up training. 
+
+
+So you're asking staff people to describe their roles and responsibilities and create, you know, come up with their point of view on how they, on what they're supposed to be doing. 
+
+
+Yeah. So I have, so we have a teams program that we train teams on the first three sessions are very similar to kind of the first three sessions you guys went through. 
+
+
+And basically the concept is you're creating prompts to effectively interview each person. And then based on that interview about certain things, based on that interview, create certain artifacts that they can add to their own role master prompt. 
+
+
+And so just like what you went through, you know, that kind of grows and grows and grows. and then goes through an asynchronous track where that's related to specifically the processes that they, they work in. 
+
+
+And then they start kind of building out processes there, and then they build out the clarity board. 
+
+
+Um, but basically the same, it's the same concept where they put in prompts into Claude interact with Claude creates artifacts that builds a role master prompt for them. 
+
+
+Right. And then that surfaces commitments for process ownership, um, pretty early on services commitments. 
+
+
+It services AI automation and delegation opportunities. It helps them create a prompt library related to all the things that they work on. 
+
+
+And then basically the end of the first, we had 13 sessions, right? Everybody, so we just trained a team of 60 and all 60 of them had like all these artifacts. 
+
+
+And that goes into basically this kind of business brain processing period where we identify, All of the ways that the master prompt needs to be adjusted. 
+
+
+We identify discrepancies between different people and what they say about the organization. We identify all the biggest opportunities for AI implementation within the organization and kind of stack rank them. 
+
+
+So that's the approach in terms of bottoms up is like, let AI work with each person individually and sort of bring out these artifacts of surface opportunities, surface ideas. 
+
+
+surface process ownership for them. And then, yeah, put it all together and kind of stack rank from the bottom down. Do they come up with their own KPIs? And then you mentioned how handy the AI is for nudging people when they're not meeting the growth expectations and so on. 
+
+
+I wanted to invite you to say a little bit more about what that looks like. So for me, it's mainly Slack integrations. And So basically Slack integrations, usually it's within a channel, right? 
+
+
+Someone will kind of add someone in the channel in order to usually update something or reply to something. 
+
+
+I haven't had the need to kind of do the whole sort of manager integration. because I haven't done this with like large organizations where like, if you're multiple levels deep and someone, you know, doesn't update it, then the manager gets notified and, you know, if that happens too many times, you have an incident report. 
+
+
+I haven't had to do that, but that would be, I would imagine the next level of it. But yeah, for me, it's all been Slack just because that's where we work. 
+
+
+Very interesting. But yeah, I mean, when you have, you definitely eliminate a lot of uncomfortable conversations when you have a system that's reporting and functioning, people can see their own numbers. 
+
+
+And when you're, What gets measured gets done, right? And so if you're measuring the right things, then probably humans will tend to be more productive. 
+
+
+Yeah, just even for a lot of organizations, just the creation of that clarity board, which is, again, it's a prompt, right? 
+
+
+It's a long prompt. Like it's probably a three to four hour piece of homework that people go through. But just that helps them identify. So that session has them create it. 
+
+
+and then a meeting with their manager and then go over it with their manager, which creates all sorts of questions and which are, which is good. 
+
+
+Right. Right. And in many, many cases, like there was no scorecard before at all. And so scorecard gets created and then the manager like thinks about it and, you know, adjust a little bit. 
+
+
+And so that's great to see because it's like a bottom up scorecard creation as opposed to this top down one. 
+
+
+Cause we all know how long it takes and then how quickly they go at a date. So the idea is for this process, right? So the clarity board process, which again, creates these opportunities as well, which is kind of like your OKRs, your rocks for it to be actually instigated on a periodic basis. 
+
+
+Let's call it every 60 days by each employee from the bottom up, as opposed to from the top down, which is the way OKRs are supposed to be built. 
+
+
+in the way rocks are supposed to be built, but it's often still instigates from Thank you. Lots to think about there. Speaking of the clarity boards, did you mention that you were going to share something about that, and did I miss it, or is that still something we'll be able to see? 
+
+
+Let me check. I thought I put it in the forum. Yeah, look in the chat discussion thing, and there was a very interesting post going up in here, including the clarity board and the loom thing, and There's more to learn. 
+
+
+Were you saying, Don, that it's in Circle? Is that what you were saying? Yeah, yeah, I believe so. Josh, yeah, Josh, AI Sales Workflow is here. Anyhow, yeah, so I was finding amazing stuff in the discussion thing. 
+
+
+A Loom video showing the overview of sales management. think you did a screen share at the end of the session, but maybe it's worth. 
+
+
+I thought I put it in here. I will post it right now. I just posted it. Yeah, sorry, I thought I had posted it. I didn't see it there. And also, you're putting up YouTube videos on a channel which is under Empower, I think, isn't it? 
+
+
+I've got a whole bank of them that I have not published yet because we're still figuring out ownership of the channel, and I've been a bit busy. 
+
+
+But yes, they will be going up on the Empower Labs channel. probably starting in a week or two. That's good to hear, Hayden, because you make great videos. 
+
+
+Thank you. Come out of the forest and talk to us. You probably have a man cave in a tree somewhere. You can just do it from there. Pablo, do you have any questions? Note, Hayden, that I think it's posted in not the cohort four. 
+
+
+So you might want to migrate. Oh, okay. That's why. Okay. That's why. Thank you. Sorry, Pablo, go ahead. I have right now late night in Ukraine. I was thinking I have to wait, not go to sleep. 
+
+
+And so I have some questions. I am struggling with the language because I don't know English very well. It's a little bit difficult. So I use Notebook.LM and I put transcribe and presentation in Notebook.LM and make Ukrainian presentation to myself to understand better. 
+
+
+And then I found it's great source to my employees. So I give them all presentations and explain master prompt how it works. So it's, I think, very good idea to everyone to use it to share this knowledge with their employers, employees. 
+
+
+And then it's next good idea like Tiago Forte share his second brain books like sources from notebook.lm to everyone. 
+
+
+It's very good. So in this chat, I can write right now questions. If I forget something, I can have answers. And I even make to-do list from each presentation, what to do. 
+
+
+Maybe some insights, some to-do list. It's very good life hack. And I have problems with... download SOP to stage 3 I don't know why I put this SOP and press save. 
+
+
+It doesn't save and some lessons don't have HTML in this stage 3 there are place to put SOP and HTML. 
+
+
+I have to generate HTML each time? In like the actual SOP section? It's usually just Markdown. That's basically just text. Should just copy and paste that in. In the instructions there are save SOP like this. 
+
+
+Text, save, and then save HTML. All right. So are you talking about like importing the HTML from Claude into, uh, like for a core process? 
+
+
+Yeah. Okay. Yeah. So, so that's, uh, that's just to import, uh, basically all of the racy definitions in it's not really for the SOP. 
+
+
+You can also just chat with the bot. Um, so you can go to that core process and you can literally just chat with it and say, create everything for me. 
+
+
+Um, I just did it and taught to do it that way, just cause it's predictable. right, with an import. But if you want, and anyone here can, feel free to just chat with the bot and you can ask it to create all your blueprints, create all your guides. 
+
+
+It'll batch it for you. You just make sure when you go to the chat that you have on the bottom right, like underneath the chat window, there's a master prompt. 
+
+
+Make sure you have it enabled. Just like a little toggle. Do you want to share your screen and we can walk through it? Or do you want to maybe send me a screenshot? 
+
+
+Whatever you like. If you have some screenshot, if you can share, it will be good. Well, if you want to send it to me in like a direct message and circle like a screenshot, I can look at it directly or send it to my developer if it's a bug or something. 
+
+
+Sure, you don't want to screen share and then we can all watch? Unless it's private, I don't know. Um, Did you understand? Would you be willing to that you could share your screen and Hayden could talk you through and we could watch? 
+
+
+Sure, I can share the second. second second show Uh, you see, Oh, this is Ukrainian. This will be difficult. So I try to download in the market to lead, for example. 
+
+
+I open SOP. Download. Before it was here, right now it's empty. I don't have it. And I make it four times and it's the same. I can't save it. I press here save, create. It's create, but then it will disappear again. 
+
+
+Right now it's here, but after some time it's disappeared again. I don't know why. Okay. Okay. Yeah, I've never seen that happen. Let know if it still happens. For example, I have here one SOP. 
+
+
+And it's also gone. I don't know how to look at it. From sales to delivery. It must be here. Yes, somewhere is SOP. The core process should be there, yeah. But you would have to copy and paste it in unless you've already, unless you built it with the AI chat. 
+
+
+Yes, I copied this before here in SOP, but right now it's not here. It's not saved. For example, I write something here. I press create and save, yes? Yep. And it should be here. 
+
+
+But after some time, it will be gone again. Empty. Can you go back to it? Back to this, okay. SOP is here. This is like some kind of quantum theory. Whenever you show somebody a bug live, the bug suddenly works, right? 
+
+
+Yeah, if it continues, please send me your account, and I'll look into it. I've never seen this happen before. If it saves it as a version, it should never disappear. 
+
+
+I could imagine if you didn't click Create SOP or you didn't click Save Changes, then it might not save. 
+
+
+And the next question, I try to sort information. I show you, I sort it like in Google Drive. Like Tiago Ford has shown. I try like this. By these stages. Maybe you have some examples how to sort this information, all these archives, which is best way, simplest. 
+
+
+Because it's very difficult to update and refresh. I have Ukrainian language and English, it's a little bit difficult. I try even with cowork, give him work to sort all my files. 
+
+
+So I organize it mainly in stage three. In Cloud Code, so just in a local directory, the way I keep my Cloud Code directory is I have resources. 
+
+
+So I have companies and then under each company, I have resources, processes, priorities. And then under processes, I have separate folders for each, for the three layers of process, right? 
+
+
+So strategic planning, customer lifecycle and enabling processes. And then under each one, I have market to lead, for example, And then under each market to lead, then I have each of my individual processes. 
+
+
+But I do that in Cloud Code just so I can tell it where to look if it needs to follow certain processes. 
+
+
+But that's the way I organize it personally. And then if I actually want to look at SOPs, I organize it in stage three just because it's, yeah, version controlling and everything is a real pain. 
+
+
+Yes. Aiden, do you have any companies that have two languages? And if so, how... How do you recommend doing that? Because most of my staff speaks Portuguese better than they do English. 
+
+
+So I would just keep probably versions of the SOP in each language, right? So you could have two instances in Market to Lead in stage three, right? 
+
+
+One in Portuguese and one in English. For example, I open two windows, one window English, where I copy paste these prompts, and second, this is translated Ukrainian. 
+
+
+But I use English. Put both of those into stage three. Once you've made that. In my cloud, I put English version, but it speaks with me in Ukrainian. 
+
+
+And I always mark with emoji when I go to the stages to not forget, because Some stages go in the same time. 
+
+
+One information I give to one person and second give to another person and wait for answers. And it can be two or three days. So I forget. So do not forget. I mark this with emoji. 
+
+
+It's much more easy. And I found a lot of interesting information from persons. They give me answers. It is different from what I was thinking. Like it was in theory, but in fact, it was different. 
+
+
+It's great. Yep. And I have one more question. How your daily work, daily routine looks like when you work with AI, your standard work? 
+
+
+So I am typically working cloud code. I organize myself in Obsidian. My cloud code controls my Obsidian. So I have obsidians vaults within my cloud code directory. 
+
+
+And so that therefore I can use cloud code to, you know, play with all my notes and organize everything for me. 
+
+
+Um, I typically will be working on about three things at a time. That's sort of the max that, that, that maximally, uh, rides a line between anxiety and boredom for me. 
+
+
+Uh, and so I'll have typically three chats on cloud code running at a time. So usually, um, maybe I'll be writing curriculum on in one and then maybe doing a couple of videos and another, for example, um, I wake up early. 
+
+
+So I usually start around four 30 in the morning and usually between four 30 and eight, like before four 30 and seven 30 before like everyone else wakes up. 
+
+
+Um, I do all of my, um, sort of deep work. I, and then meetings stuff sort of happen after that. Um, Like I said to Mike or to Don, I find it challenge, like the most challenging piece, especially with Cloud Code is just having a system to actually close loops properly. 
+
+
+So you don't end up working like 15 hours a day because it's so addictive. And so usually I just kind of organize myself in Obsidian. I've seen some people have kind of their interesting like AI Kanbans where Cloud Code actually just updates its own Kanban for you. 
+
+
+to kind of solve this problem because it's apparently a common problem. Yeah, if you use Cloud Code and you use slash insights, maybe I'll do that once and share it with the group and you can sort of see how it gives you this pretty cool insights across all your sessions on how you use Cloud Code, what you use it for. 
+
+
+It gives you sort of suggestions on improvements. So for anyone who uses Cloud Code and didn't know that, that's a neat little tip. 
+
+
+Does that answer your question? Yeah. I built a second brain maybe one year ago with Evernote, in Evernote. It's very good. I spent maybe five days to build it, and I have 3,000 nodes and sorted it very well. 
+
+
+I don't know how it works at City, and maybe it's the same. But without Evernote, I think it will be to do this. Yeah, so I actually, I've been a OneNote user all my life since about, probably since about OneNote basically came out. 
+
+
+And I tried to move to Evernote multiple times and it was finally, it was Cloud Code that actually got me to move to Obsidian, which I'm enjoying so far. 
+
+
+But the fact that you can get Cloud Code to, take like mass batch actions on all your notes. It's, it's super useful. Right. So you can, you can tell it. I literally, so I just, when I first started using obsidian, I just loosely added everything and probably had like 40 or 50 notes before I finally like said, cloud could like organize my notes. 
+
+
+Like, and it just did in perfect folders, everything like, and then I can, I don't have to like move things around, you know, every once in a while, I'll just say like update my notes as a skill and it'll go in and it'll like check everything off and add dates and add tags. 
+
+
+And so that part of it's kind of cool. If you want to, I guess there's probably some note, some PKM geeks in here, if they want to check that out. 
+
+
+Yeah. just, when I started working in cowork, I, I never considered obsidian and I've just been watching videos the last couple of days because it's on the desktop. 
+
+
+And I'm like, I use notion for that, but I'm considering moving. I'm curious if you, I use TickTick for tasks. My personal task is just loaded with hundreds of tasks. 
+
+
+But I'm also considering if that's a viable alternative, putting notes and tasks. And as an extension of that question, do you really see software moving back more to the desktop than the cloud because of these tools in general? 
+
+
+Like it seems like they're a little more – there's more – value on having that on your desktop, especially marked downwards. 
+
+
+Did Mike cut for anyone else? Okay. Yes. I'll wait until he's back in before I answer. I came back and turned off video. I'm not sure. Did I get cut off in the middle of the question? 
+
+
+Yeah, you did. You asked, you were asking about whether software, if I saw a sort of software going back to the desktop, did you say anything after that? 
+
+
+No, that was pretty much the end. That's a good question. Probably not. I mean, temporarily, yes. But probably not. If you actually look at most of the functions that Cloud Code or Coworker are doing, it's a little faster on the desktop, but it's not limited to the desktop. 
+
+
+And you're still calling the API for a lot of different things. So I think that's probably a temporary moment in time that we're going to the desktop for this. 
+
+
+And I don't know how long that is, but I think people need to probably still create those solutions. 
+
+
+So me personally, what I'm working on now, I didn't have to do this until I started now sharing my cloud code with other team members. 
+
+
+but basically connecting Cloud Code to GitHub and then having GitHub act as your synchronization layer. 
+
+
+So effectively, I had to create a hack around this in order to desktop synchronized with Cloud. But I think that's probably for the next six months, I would guess, before there's a more elegant solution. 
+
+
+And I don't think Cloud Code's going to be the winner necessarily. Right? It's just the winner right now. I was wondering if it was a way to offload token use, you know, that if you're doing some of the processing on your own computer and everybody's doing that, it might be freeing up your cloud internet to do stuff. 
+
+
+Yeah, I haven't, I really haven't looked into exactly what is being used from a, like a token perspective versus, you know, and I guess I don't know enough about programming. 
+
+
+to fully understand that. I would imagine you're right. So somebody made a presentation about how code co-work worked and then they showed what the cost was per tokens and that it was a lot less of doing parts of it in co-work. 
+
+
+Okay, that's interesting. I know like most of, so one big piece of what's so useful about co-work and cloud code is just like the fact that you can use like grep searches, which is basically just like regular expressions, right. 
+
+
+To search anything. Um, and, and like that, that's something that I would imagine doesn't use a ton of tokens and, but is extremely efficient to do locally. 
+
+
+Mike is asking if you manage your tasks in Obsidian as well. I do. Yeah. Again, it's new. I've only moved over to it fairly recently. I was a OneNote person all my life. 
+
+
+I know it's one of the weaker platforms now. Yeah, I did see some interesting examples of how that can work, and I was just wondering because I manage in TickTick and I have a lot of tasks there. 
+
+
+And just coordinating, you know, I can't use Notion for that. It's just too messy. But I am considering doing it all in Obsidian now. Yeah, I mean, what I love about Obsidian is just that it's simple. 
+
+
+Everything is a markdown file, and it's loaded locally. And so, again, just using CloudCat, I haven't probably touched – 1% of what could be done. 
+
+
+So yeah, I definitely check it out. I have a feeling, I mean, this is actually in Cloud Code if you go to Cloud as one of the examples, but I have a feeling it'll become fairly common where you have like a single to-do.md, right? 
+
+
+That you're constantly updating, right? With your today's task, this week backlog, whatever. And you'll just tell Cloud Code, like identify tasks that you can do, right? 
+
+
+On my to-do. And I think that will be like a pretty common, and it's probably something that could work right now, I just haven't really tried it. 
+
+
+And it would just look through all your tasks and be like, calculate and be like, I think I could do like 80% of this task and I get started, right? 
+
+
+That's great, thanks. Go ahead, Don. So I am a little, I need to get clarified on, at the end of our cohort here, after two months, something is going away, right? 
+
+
+We're not going to have access to the login or what happens? I, yeah, after two months, the stage three, um, information goes away. 
+
+
+Um, I'm, I'm happy to keep it going for a while. I, again, I've been very loosely or I'm, I'm unsure what to do with it still. 
+
+
+Um, For now, as long as like the API costs are low, I'm, you know, probably just continue to give access. 
+
+
+Right now it's like beta for about 100 people. But yeah, the idea there was stage three would eventually become a paid product. 
+
+
+I don't think it's ready yet. And so I wouldn't charge for it yet. Okay. So the curriculum and discussion will all stay up for a while? Yep. Yeah, well, you're also part of the beta cohort, right? 
+
+
+So you have it for... long time, right? Mm hmm. How do we have it for? On the beta cohort? I think forever, as long as it exists, yeah. Oh, okay. That helps. That was part of the beta cohort thing, right? 
+
+
+Might be two months. Yeah. I see. Okay, thank you. Relieves a little anxiety. Wait, wait, wait. No. Okay, great. final questions or comments before we wrap up today? 
+
+
+have one more. Go ahead, Mike. Go ahead. Well, I already asked this last week, but I want to ask Aidan, too. It's really just about security because I'm watching a lot of videos and subject experts in AI. 
+
+
+And most of them seem to say to be cautious about how you use AI and give access. And I've seen some things I like, I don't use ClickUp, but I like the fact that it's a security based, like a role based where you give access and some of the stuff on the desktop, whether it's, um, cloud code or, uh, you know, open clot, you know, just for people who are novices just getting started, uh, You know, should we be thinking about security or setting things up? 
+
+
+Josh kind of felt like, well, AI is coming, so, you know, don't worry about it too much. But, you know, I just wonder what the frameworks are, if you have any way of thinking about that. 
+
+
+Should we be thinking about it? So, yeah, you should be thinking about it. Everything that has taught thus far has been, you know, pretty secure, right? 
+
+
+Because you're really just working with an LLM in a browser. The more you open, remove permissions from LLMs, the more risky it gets and the more useful they get, right? 
+
+
+So that's the trade-off. So Cloud Code, unless you bypass permissions in Cloud Code, which you have to know how to do that, Cloud Code is pretty safe, right? 
+
+
+Because it... basically asks you every single time and it's kind of, it's only exists within that directory and it can't delete stuff. 
+
+
+Um, and it, it typically doesn't go out and like message other people and open itself up to prompt injections. 
+
+
+Open claw is totally different. And my advice to anyone who's not a developer is don't touch it. Um, because of the security risks, but also because it's like not nearly as easy to set up and actually be, be made useful. 
+
+
+Um, as, you know, YouTube videos seem to indicate. Like I know Tiago said he, ever since he installed OpenClaw, he's become infinitely less productive because he's spent so much time trying to make it work. 
+
+
+So, yeah, I would say the, yeah, just understand that like the more access you give AI, right, the more useful it is, but the more you need to worry about security. 
+
+
+Everything we're talking about, cloud code, et cetera, I would say it's not that bad. When you start getting into agents that start talking to strangers on the web, when you start installing more skills and stuff like that, you need to be careful because there can be prompt injections, either through other people prompt injecting when they're chatting with an agent, or if you install a skill that can sometimes do malicious things like start mining crypto on your computer and stuff. 
+
+
+So, yeah, actually, that's two things to mention. So one is when you install skills, look at the skills. And then there are certain websites like skills.sh that I think Vercel actually checks all the time. 
+
+
+Do not check ratings and trust ratings. Ratings can be completely spoofed already. on skills, so that is not a trustable signal. So either look at it yourself or make sure it's on a marketplace that's maintained by an organization like Vercel, which is skills.sh. 
+
+
+If you do create agents, which I don't think anyone is doing yet here, but if you do create agents that talk to potential customers, like a customer service bot, a sales bot, anything like that, be aware that what prompt injection is is basically someone malicious can go and try to get, you know, internal customer information or internal company information by just chatting with the bot. 
+
+
+And so the way to typically overcome that is that you have another level of agent that checks every single communication from your main bot before it goes out, ensuring that it's not giving up any kind of sensitive data. 
+
+
+What that ends up doing is it ends up using twice as many tokens, right? and twice as many requests, but that's typically the standard way people are doing this. 
+
+
+Great. if you give Cloud Code, it's doing some work in your browser, and so it's opening a browser. I haven't actually paid attention to this, but my browser typically always has a password manager that's open. 
+
+
+Like, is there any risk? So I'm not giving it access to my passwords per se, They're actually accessible if it's opening my browser. 
+
+
+We worry about things like that. Yeah, that's a good question. I don't know how to answer that. Um, on the browser side, uh, probably ask, I would ask Cloud Code what it actually has access to. 
+
+
+I don't usually use the browser by the way. Most things that can be done with a browser extension can be done with another skill and actually just slows things down and probably is a bit of security risk. 
+
+
+But for me, it was mainly just an efficiency thing. So if Cloud Code gets you to use the browser extension, I would actually have it to find an alternative solution that doesn't use a browser extension. 
+
+
+All right, thanks. Well, thanks, everyone. That was fun. Thank you. Thank you. Nice to see you all. See you on Monday. Yeah. Good night, everyone. All right. Have a good weekend. 
+
+
+Bye for now. Bye-bye. 

@@ -1,0 +1,533 @@
+{
+  "id": 3436979,
+  "name": "Office Hours 2",
+  "status": "published",
+  "featured_media_enabled": true,
+  "download_featured_media": false,
+  "created_at": "2026-02-11T18:43:20.269Z",
+  "updated_at": "2026-02-11T21:24:26.711Z",
+  "comments_enabled": false,
+  "default_tab": "curriculum",
+  "enforce_featured_media_completion": false,
+  "autocomplete_on_featured_media_completion": true,
+  "dripped_at": null,
+  "is_dripped": true,
+  "needs_to_complete_previous_lesson": false,
+  "completed": false,
+  "notify_students_enabled": false,
+  "bookmark_id": null,
+  "featured_media": {
+    "playback_url": "https://cdn-media.circle.so/bcdn_token=QvSzTLvtfPCd40klqe1MJ2u1gYG9vvkyX7eRyqmsTws&token_path=%2Ffc10def0-4dcd-4176-9fcc-39ad457a2b43%2F&expires=1787965079/fc10def0-4dcd-4176-9fcc-39ad457a2b43/hls/playlist.m3u8",
+    "current_storage": "in_house",
+    "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCR0F0ZlFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--c7bcd0df086ab4339c901269cdcc4049872f4c4c",
+    "filename": "empower_labs_cohort_4_2026-02-11_17_39_45_v1 (360p) (1).mp4",
+    "content_type": "video/mp4",
+    "duration": "49:15",
+    "is_downloadable": false,
+    "url": "https://assets-v2.circle.so/fnjnwojqiqhzaum3lx0vrzhbknnk",
+    "thumbnail_image_url": "https://cdn-media.circle.so/bcdn_token=QvSzTLvtfPCd40klqe1MJ2u1gYG9vvkyX7eRyqmsTws&token_path=%2Ffc10def0-4dcd-4176-9fcc-39ad457a2b43%2F&expires=1787965079/fc10def0-4dcd-4176-9fcc-39ad457a2b43/thumbnail.jpg",
+    "media_transcript_id": 3671042,
+    "media_transcoding": {
+      "status": "succeeded"
+    },
+    "chapters_url": null,
+    "preview_thumbnails_url": "https://cdn-media.circle.so/bcdn_token=QvSzTLvtfPCd40klqe1MJ2u1gYG9vvkyX7eRyqmsTws&token_path=%2Ffc10def0-4dcd-4176-9fcc-39ad457a2b43%2F&expires=1787965079/fc10def0-4dcd-4176-9fcc-39ad457a2b43/mosaic.vtt",
+    "video_variants": {
+      "original": "https://assets-v2.circle.so/fnjnwojqiqhzaum3lx0vrzhbknnk",
+      "hls": "https://cdn-media.circle.so/bcdn_token=QvSzTLvtfPCd40klqe1MJ2u1gYG9vvkyX7eRyqmsTws&token_path=%2Ffc10def0-4dcd-4176-9fcc-39ad457a2b43%2F&expires=1787965079/fc10def0-4dcd-4176-9fcc-39ad457a2b43/hls/playlist.m3u8"
+    }
+  },
+  "serialized_rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Summary",
+              "type": "text",
+              "circle_ios_fallback_text": "Summary"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Optimizing Model and Performance",
+              "type": "text",
+              "circle_ios_fallback_text": "Optimizing Model and Performance"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden advised Romain to try using the Opus 4.6 model instead of Sonnet 4.5 for larger prompts, as Opus has a larger token window and should better handle conversation summaries. Hayden also suggested switching to the app from the web browser for better performance. Romain agreed to try these suggestions and thanked Hayden for the advice.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden advised Romain to try using the Opus 4.6 model instead of Sonnet 4.5 for larger prompts, as Opus has a larger token window and should better handle conversation summaries. Hayden also suggested switching to the app from the web browser for better performance. Romain agreed to try these suggestions and thanked Hayden for the advice."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Sonnet 4.5 Browser and CRM",
+              "type": "text",
+              "circle_ios_fallback_text": "Sonnet 4.5 Browser and CRM"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden advised Romain to try using a web browser for Sonnet 4.5 and suggested creating a separate Max account for Cloud Code to access infinite tokens. Hayden explained the process of updating artifacts by chatting with the system and demonstrated how to update an artifact even after deleting the conversation. Nancy inquired about updating artifacts in Stage 3 and Claude, and Hayden clarified that Stage 3 should be the source of truth for processes, while Claude can be used as a sandbox for experimenting. Don discussed building a CRM using Airtable synchronized with Microsoft Outlook via Make, and Hayden recommended Make or Zapier for this task, noting that Make is more cost-effective.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden advised Romain to try using a web browser for Sonnet 4.5 and suggested creating a separate Max account for Cloud Code to access infinite tokens. Hayden explained the process of updating artifacts by chatting with the system and demonstrated how to update an artifact even after deleting the conversation. Nancy inquired about updating artifacts in Stage 3 and Claude, and Hayden clarified that Stage 3 should be the source of truth for processes, while Claude can be used as a sandbox for experimenting. Don discussed building a CRM using Airtable synchronized with Microsoft Outlook via Make, and Hayden recommended Make or Zapier for this task, noting that Make is more cost-effective."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Client Template Management Strategies",
+              "type": "text",
+              "circle_ios_fallback_text": "Client Template Management Strategies"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden explained three options for managing client-specific templates and prompts in Claude: using separate projects with master prompts, adding skills for each client, or using Cloud Code with local directories for a more comprehensive solution. Mike asked about the leverage in blue-collar businesses like landscaping compared to digital businesses, and Hayden explained that while the Bury ratio improves significantly, the revenue per tech remains relatively unchanged, though such businesses are less susceptible to AI disruption in the near term.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden explained three options for managing client-specific templates and prompts in Claude: using separate projects with master prompts, adding skills for each client, or using Cloud Code with local directories for a more comprehensive solution. Mike asked about the leverage in blue-collar businesses like landscaping compared to digital businesses, and Hayden explained that while the Bury ratio improves significantly, the revenue per tech remains relatively unchanged, though such businesses are less susceptible to AI disruption in the near term."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Opportunities in Landscaping Business",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Opportunities in Landscaping Business"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Mike discussed the challenges and opportunities of using AI in his landscaping business, which has a customer value of around $60,000 per client compared to competitors with lower values. Hayden suggested leveraging AI in the lead-to-sale and sale-to-delivery processes, particularly in supply-constrained businesses, and emphasized the importance of the market-to-lead phase for demand-driven companies. Don highlighted the benefits of AI in compliance and safety, while Beni recommended capacity planning to improve efficiency. Mike noted that his business focuses on monthly maintenance for large apartments and some commercial buildings, with a recent expansion into municipal work and construction projects.",
+              "type": "text",
+              "circle_ios_fallback_text": "Mike discussed the challenges and opportunities of using AI in his landscaping business, which has a customer value of around $60,000 per client compared to competitors with lower values. Hayden suggested leveraging AI in the lead-to-sale and sale-to-delivery processes, particularly in supply-constrained businesses, and emphasized the importance of the market-to-lead phase for demand-driven companies. Don highlighted the benefits of AI in compliance and safety, while Beni recommended capacity planning to improve efficiency. Mike noted that his business focuses on monthly maintenance for large apartments and some commercial buildings, with a recent expansion into municipal work and construction projects."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Tools for Social Media",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Tools for Social Media"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden shared a technique using Vail 3.1 and NanoBanana Pro within Gemini to create photorealistic imagery and animations for social media, suggesting it could help capture before-and-after project photos. Mike expressed interest in this AI tool for improving case studies. Hayden recommended using Google Flow for accessing and creating videos with Gemini, and he offered to find a tutorial video for the team to learn from. Tim asked about Claude's memory of chat conversations in projects, and Hayden suggested exploring local directory methods for better context and process automation.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden shared a technique using Vail 3.1 and NanoBanana Pro within Gemini to create photorealistic imagery and animations for social media, suggesting it could help capture before-and-after project photos. Mike expressed interest in this AI tool for improving case studies. Hayden recommended using Google Flow for accessing and creating videos with Gemini, and he offered to find a tutorial video for the team to learn from. Tim asked about Claude's memory of chat conversations in projects, and Hayden suggested exploring local directory methods for better context and process automation."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Claude's Memory and Team Onboarding",
+              "type": "text",
+              "circle_ios_fallback_text": "Claude's Memory and Team Onboarding"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden explained that Claude's memory features are limited to project sources, personal preferences, and artifacts, with a memory function that occurs around 2-3 AM North America time. He advised copying important information to the project to maintain control over knowledge retention. Beni asked about deleting SOPs and artifacts at the end of the cohort, to which Hayden confirmed this process and explained how to keep master prompts up to date using Stage 3 and Google Docs integration. Kristina inquired about onboarding non-technical team members, to which Hayden suggested focusing on foundations of AI and building processes that teams can own, rather than relying solely on the individual with expertise.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden explained that Claude's memory features are limited to project sources, personal preferences, and artifacts, with a memory function that occurs around 2-3 AM North America time. He advised copying important information to the project to maintain control over knowledge retention. Beni asked about deleting SOPs and artifacts at the end of the cohort, to which Hayden confirmed this process and explained how to keep master prompts up to date using Stage 3 and Google Docs integration. Kristina inquired about onboarding non-technical team members, to which Hayden suggested focusing on foundations of AI and building processes that teams can own, rather than relying solely on the individual with expertise."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Player Development and Validation",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Player Development and Validation"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed how AI rewards curiosity and technical skills, leading to high-performing \"AI players\" within organizations who can significantly increase productivity. He emphasized enabling others through training to identify and develop these AI players. Beni inquired about updating artifacts and validation processes, particularly in the context of ISO 13485 certification for medical devices. Hayden suggested deleting old artifacts while keeping copies and explained methods for validating AI outputs, including the use of observing agents and separate validation steps. The conversation ended with a reminder of the next session on February 16th, led by Josh on offering and sales excellence.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed how AI rewards curiosity and technical skills, leading to high-performing \"AI players\" within organizations who can significantly increase productivity. He emphasized enabling others through training to identify and develop these AI players. Beni inquired about updating artifacts and validation processes, particularly in the context of ISO 13485 certification for medical devices. Hayden suggested deleting old artifacts while keeping copies and explained methods for validating AI outputs, including the use of observing agents and separate validation steps. The conversation ended with a reminder of the next session on February 16th, led by Josh on offering and sales excellence."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "Transcript and Chat",
+              "type": "text",
+              "circle_ios_fallback_text": "Transcript and Chat"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQ1V0ZlFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--53e6ee43cc153a4046c2b69ae93c185ab9c66a2d"
+          }
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUDhyZlFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5d6d4c5639de46cbf5698a32e61a25086df770ba"
+          }
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "SummaryOptimizing Model and PerformanceHayden advised Romain to try using the Opus 4.6 model instead of Sonnet 4.5 for larger prompts, as Opus has a larger token window and should better handle conversation summaries. Hayden also suggested switching to the app from the web browser for better performance. Romain agreed to try these suggestions and thanked Hayden for the advice.Sonnet 4.5 Browser and CRMHayden advised Romain to try using a web browser for Sonnet 4.5 and suggested creating a separate Max account for Cloud Code to access infinite tokens. Hayden explained the process of updating artifacts by chatting with the system and demonstrated how to update an artifact even after deleting the conversation. Nancy inquired about updating artifacts in Stage 3 and Claude, and Hayden clarified that Stage 3 should be the source of truth for processes, while Claude can be used as a sandbox for experimenting. Don discussed building a CRM using Airtable synchronized with Microsoft Outlook via Make, and Hayden recommended Make or Zapier for this task, noting that Make is more cost-effective.Client Template Management StrategiesHayden explained three options for managing client-specific templates and prompts in Claude: using separate projects with master prompts, adding skills for each client, or using Cloud Code with local directories for a more comprehensive solution. Mike asked about the leverage in blue-collar businesses like landscaping compared to digital businesses, and Hayden explained that while the Bury ratio improves significantly, the revenue per tech remains relatively unchanged, though such businesses are less susceptible to AI disruption in the near term.AI Opportunities in Landscaping BusinessMike discussed the challenges and opportunities of using AI in his landscaping business, which has a customer value of around $60,000 per client compared to competitors with lower values. Hayden suggested leveraging AI in the lead-to-sale and sale-to-delivery processes, particularly in supply-constrained businesses, and emphasized the importance of the market-to-lead phase for demand-driven companies. Don highlighted the benefits of AI in compliance and safety, while Beni recommended capacity planning to improve efficiency. Mike noted that his business focuses on monthly maintenance for large apartments and some commercial buildings, with a recent expansion into municipal work and construction projects.AI Tools for Social MediaHayden shared a technique using Vail 3.1 and NanoBanana Pro within Gemini to create photorealistic imagery and animations for social media, suggesting it could help capture before-and-after project photos. Mike expressed interest in this AI tool for improving case studies. Hayden recommended using Google Flow for accessing and creating videos with Gemini, and he offered to find a tutorial video for the team to learn from. Tim asked about Claude's memory of chat conversations in projects, and Hayden suggested exploring local directory methods for better context and process automation.Claude's Memory and Team OnboardingHayden explained that Claude's memory features are limited to project sources, personal preferences, and artifacts, with a memory function that occurs around 2-3 AM North America time. He advised copying important information to the project to maintain control over knowledge retention. Beni asked about deleting SOPs and artifacts at the end of the cohort, to which Hayden confirmed this process and explained how to keep master prompts up to date using Stage 3 and Google Docs integration. Kristina inquired about onboarding non-technical team members, to which Hayden suggested focusing on foundations of AI and building processes that teams can own, rather than relying solely on the individual with expertise.AI Player Development and ValidationHayden discussed how AI rewards curiosity and technical skills, leading to high-performing \"AI players\" within organizations who can significantly increase productivity. He emphasized enabling others through training to identify and develop these AI players. Beni inquired about updating artifacts and validation processes, particularly in the context of ISO 13485 certification for medical devices. Hayden suggested deleting old artifacts while keeping copies and explained methods for validating AI outputs, including the use of observing agents and separate validation steps. The conversation ended with a reminder of the next session on February 16th, led by Josh on offering and sales excellence.\nTranscript and Chat",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "EMPOWER Labs Cohort 4- Transcript.srt",
+        "content_type": "application/x-subrip",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 88761,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUDhyZlFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5d6d4c5639de46cbf5698a32e61a25086df770ba",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/jnrdueo3ow2oyikl5y9393llpdbf",
+        "is_downloadable": true
+      },
+      {
+        "filename": "EMPOWER Labs Cohort 4- Chat.txt",
+        "content_type": "text/plain",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 664,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQ1V0ZlFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--53e6ee43cc153a4046c2b69ae93c185ab9c66a2d",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/y8jlsgapot1l24cb8e1j7m7nkric",
+        "is_downloadable": true
+      }
+    ],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Summary",
+              "type": "text",
+              "circle_ios_fallback_text": "Summary"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Optimizing Model and Performance",
+              "type": "text",
+              "circle_ios_fallback_text": "Optimizing Model and Performance"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden advised Romain to try using the Opus 4.6 model instead of Sonnet 4.5 for larger prompts, as Opus has a larger token window and should better handle conversation summaries. Hayden also suggested switching to the app from the web browser for better performance. Romain agreed to try these suggestions and thanked Hayden for the advice.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden advised Romain to try using the Opus 4.6 model instead of Sonnet 4.5 for larger prompts, as Opus has a larger token window and should better handle conversation summaries. Hayden also suggested switching to the app from the web browser for better performance. Romain agreed to try these suggestions and thanked Hayden for the advice."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Sonnet 4.5 Browser and CRM",
+              "type": "text",
+              "circle_ios_fallback_text": "Sonnet 4.5 Browser and CRM"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden advised Romain to try using a web browser for Sonnet 4.5 and suggested creating a separate Max account for Cloud Code to access infinite tokens. Hayden explained the process of updating artifacts by chatting with the system and demonstrated how to update an artifact even after deleting the conversation. Nancy inquired about updating artifacts in Stage 3 and Claude, and Hayden clarified that Stage 3 should be the source of truth for processes, while Claude can be used as a sandbox for experimenting. Don discussed building a CRM using Airtable synchronized with Microsoft Outlook via Make, and Hayden recommended Make or Zapier for this task, noting that Make is more cost-effective.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden advised Romain to try using a web browser for Sonnet 4.5 and suggested creating a separate Max account for Cloud Code to access infinite tokens. Hayden explained the process of updating artifacts by chatting with the system and demonstrated how to update an artifact even after deleting the conversation. Nancy inquired about updating artifacts in Stage 3 and Claude, and Hayden clarified that Stage 3 should be the source of truth for processes, while Claude can be used as a sandbox for experimenting. Don discussed building a CRM using Airtable synchronized with Microsoft Outlook via Make, and Hayden recommended Make or Zapier for this task, noting that Make is more cost-effective."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Client Template Management Strategies",
+              "type": "text",
+              "circle_ios_fallback_text": "Client Template Management Strategies"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden explained three options for managing client-specific templates and prompts in Claude: using separate projects with master prompts, adding skills for each client, or using Cloud Code with local directories for a more comprehensive solution. Mike asked about the leverage in blue-collar businesses like landscaping compared to digital businesses, and Hayden explained that while the Bury ratio improves significantly, the revenue per tech remains relatively unchanged, though such businesses are less susceptible to AI disruption in the near term.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden explained three options for managing client-specific templates and prompts in Claude: using separate projects with master prompts, adding skills for each client, or using Cloud Code with local directories for a more comprehensive solution. Mike asked about the leverage in blue-collar businesses like landscaping compared to digital businesses, and Hayden explained that while the Bury ratio improves significantly, the revenue per tech remains relatively unchanged, though such businesses are less susceptible to AI disruption in the near term."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Opportunities in Landscaping Business",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Opportunities in Landscaping Business"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Mike discussed the challenges and opportunities of using AI in his landscaping business, which has a customer value of around $60,000 per client compared to competitors with lower values. Hayden suggested leveraging AI in the lead-to-sale and sale-to-delivery processes, particularly in supply-constrained businesses, and emphasized the importance of the market-to-lead phase for demand-driven companies. Don highlighted the benefits of AI in compliance and safety, while Beni recommended capacity planning to improve efficiency. Mike noted that his business focuses on monthly maintenance for large apartments and some commercial buildings, with a recent expansion into municipal work and construction projects.",
+              "type": "text",
+              "circle_ios_fallback_text": "Mike discussed the challenges and opportunities of using AI in his landscaping business, which has a customer value of around $60,000 per client compared to competitors with lower values. Hayden suggested leveraging AI in the lead-to-sale and sale-to-delivery processes, particularly in supply-constrained businesses, and emphasized the importance of the market-to-lead phase for demand-driven companies. Don highlighted the benefits of AI in compliance and safety, while Beni recommended capacity planning to improve efficiency. Mike noted that his business focuses on monthly maintenance for large apartments and some commercial buildings, with a recent expansion into municipal work and construction projects."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Tools for Social Media",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Tools for Social Media"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden shared a technique using Vail 3.1 and NanoBanana Pro within Gemini to create photorealistic imagery and animations for social media, suggesting it could help capture before-and-after project photos. Mike expressed interest in this AI tool for improving case studies. Hayden recommended using Google Flow for accessing and creating videos with Gemini, and he offered to find a tutorial video for the team to learn from. Tim asked about Claude's memory of chat conversations in projects, and Hayden suggested exploring local directory methods for better context and process automation.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden shared a technique using Vail 3.1 and NanoBanana Pro within Gemini to create photorealistic imagery and animations for social media, suggesting it could help capture before-and-after project photos. Mike expressed interest in this AI tool for improving case studies. Hayden recommended using Google Flow for accessing and creating videos with Gemini, and he offered to find a tutorial video for the team to learn from. Tim asked about Claude's memory of chat conversations in projects, and Hayden suggested exploring local directory methods for better context and process automation."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Claude's Memory and Team Onboarding",
+              "type": "text",
+              "circle_ios_fallback_text": "Claude's Memory and Team Onboarding"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden explained that Claude's memory features are limited to project sources, personal preferences, and artifacts, with a memory function that occurs around 2-3 AM North America time. He advised copying important information to the project to maintain control over knowledge retention. Beni asked about deleting SOPs and artifacts at the end of the cohort, to which Hayden confirmed this process and explained how to keep master prompts up to date using Stage 3 and Google Docs integration. Kristina inquired about onboarding non-technical team members, to which Hayden suggested focusing on foundations of AI and building processes that teams can own, rather than relying solely on the individual with expertise.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden explained that Claude's memory features are limited to project sources, personal preferences, and artifacts, with a memory function that occurs around 2-3 AM North America time. He advised copying important information to the project to maintain control over knowledge retention. Beni asked about deleting SOPs and artifacts at the end of the cohort, to which Hayden confirmed this process and explained how to keep master prompts up to date using Stage 3 and Google Docs integration. Kristina inquired about onboarding non-technical team members, to which Hayden suggested focusing on foundations of AI and building processes that teams can own, rather than relying solely on the individual with expertise."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Player Development and Validation",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Player Development and Validation"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed how AI rewards curiosity and technical skills, leading to high-performing \"AI players\" within organizations who can significantly increase productivity. He emphasized enabling others through training to identify and develop these AI players. Beni inquired about updating artifacts and validation processes, particularly in the context of ISO 13485 certification for medical devices. Hayden suggested deleting old artifacts while keeping copies and explained methods for validating AI outputs, including the use of observing agents and separate validation steps. The conversation ended with a reminder of the next session on February 16th, led by Josh on offering and sales excellence.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed how AI rewards curiosity and technical skills, leading to high-performing \"AI players\" within organizations who can significantly increase productivity. He emphasized enabling others through training to identify and develop these AI players. Beni inquired about updating artifacts and validation processes, particularly in the context of ISO 13485 certification for medical devices. Hayden suggested deleting old artifacts while keeping copies and explained methods for validating AI outputs, including the use of observing agents and separate validation steps. The conversation ended with a reminder of the next session on February 16th, led by Josh on offering and sales excellence."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "Transcript and Chat",
+              "type": "text",
+              "circle_ios_fallback_text": "Transcript and Chat"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQ1V0ZlFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--53e6ee43cc153a4046c2b69ae93c185ab9c66a2d"
+          }
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUDhyZlFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5d6d4c5639de46cbf5698a32e61a25086df770ba"
+          }
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "SummaryOptimizing Model and PerformanceHayden advised Romain to try using the Opus 4.6 model instead of Sonnet 4.5 for larger prompts, as Opus has a larger token window and should better handle conversation summaries. Hayden also suggested switching to the app from the web browser for better performance. Romain agreed to try these suggestions and thanked Hayden for the advice.Sonnet 4.5 Browser and CRMHayden advised Romain to try using a web browser for Sonnet 4.5 and suggested creating a separate Max account for Cloud Code to access infinite tokens. Hayden explained the process of updating artifacts by chatting with the system and demonstrated how to update an artifact even after deleting the conversation. Nancy inquired about updating artifacts in Stage 3 and Claude, and Hayden clarified that Stage 3 should be the source of truth for processes, while Claude can be used as a sandbox for experimenting. Don discussed building a CRM using Airtable synchronized with Microsoft Outlook via Make, and Hayden recommended Make or Zapier for this task, noting that Make is more cost-effective.Client Template Management StrategiesHayden explained three options for managing client-specific templates and prompts in Claude: using separate projects with master prompts, adding skills for each client, or using Cloud Code with local directories for a more comprehensive solution. Mike asked about the leverage in blue-collar businesses like landscaping compared to digital businesses, and Hayden explained that while the Bury ratio improves significantly, the revenue per tech remains relatively unchanged, though such businesses are less susceptible to AI disruption in the near term.AI Opportunities in Landscaping BusinessMike discussed the challenges and opportunities of using AI in his landscaping business, which has a customer value of around $60,000 per client compared to competitors with lower values. Hayden suggested leveraging AI in the lead-to-sale and sale-to-delivery processes, particularly in supply-constrained businesses, and emphasized the importance of the market-to-lead phase for demand-driven companies. Don highlighted the benefits of AI in compliance and safety, while Beni recommended capacity planning to improve efficiency. Mike noted that his business focuses on monthly maintenance for large apartments and some commercial buildings, with a recent expansion into municipal work and construction projects.AI Tools for Social MediaHayden shared a technique using Vail 3.1 and NanoBanana Pro within Gemini to create photorealistic imagery and animations for social media, suggesting it could help capture before-and-after project photos. Mike expressed interest in this AI tool for improving case studies. Hayden recommended using Google Flow for accessing and creating videos with Gemini, and he offered to find a tutorial video for the team to learn from. Tim asked about Claude's memory of chat conversations in projects, and Hayden suggested exploring local directory methods for better context and process automation.Claude's Memory and Team OnboardingHayden explained that Claude's memory features are limited to project sources, personal preferences, and artifacts, with a memory function that occurs around 2-3 AM North America time. He advised copying important information to the project to maintain control over knowledge retention. Beni asked about deleting SOPs and artifacts at the end of the cohort, to which Hayden confirmed this process and explained how to keep master prompts up to date using Stage 3 and Google Docs integration. Kristina inquired about onboarding non-technical team members, to which Hayden suggested focusing on foundations of AI and building processes that teams can own, rather than relying solely on the individual with expertise.AI Player Development and ValidationHayden discussed how AI rewards curiosity and technical skills, leading to high-performing \"AI players\" within organizations who can significantly increase productivity. He emphasized enabling others through training to identify and develop these AI players. Beni inquired about updating artifacts and validation processes, particularly in the context of ISO 13485 certification for medical devices. Hayden suggested deleting old artifacts while keeping copies and explained methods for validating AI outputs, including the use of observing agents and separate validation steps. The conversation ended with a reminder of the next session on February 16th, led by Josh on offering and sales excellence.\nTranscript and Chat",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "EMPOWER Labs Cohort 4- Transcript.srt",
+        "content_type": "application/x-subrip",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 88761,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUDhyZlFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5d6d4c5639de46cbf5698a32e61a25086df770ba",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/jnrdueo3ow2oyikl5y9393llpdbf",
+        "is_downloadable": true
+      },
+      {
+        "filename": "EMPOWER Labs Cohort 4- Chat.txt",
+        "content_type": "text/plain",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 664,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQ1V0ZlFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--53e6ee43cc153a4046c2b69ae93c185ab9c66a2d",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/y8jlsgapot1l24cb8e1j7m7nkric",
+        "is_downloadable": true
+      }
+    ],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "chat_room_uuid": "955e1792-7357-4be4-9966-fdd66c48f093"
+}

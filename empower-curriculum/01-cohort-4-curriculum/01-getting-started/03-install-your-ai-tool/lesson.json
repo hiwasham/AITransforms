@@ -1,0 +1,682 @@
+{
+  "id": 3281845,
+  "name": "3. Install Your AI Tool",
+  "status": "published",
+  "featured_media_enabled": false,
+  "download_featured_media": false,
+  "created_at": "2026-01-09T18:45:34.650Z",
+  "updated_at": "2026-01-09T19:00:04.369Z",
+  "comments_enabled": false,
+  "default_tab": "curriculum",
+  "enforce_featured_media_completion": false,
+  "autocomplete_on_featured_media_completion": true,
+  "dripped_at": null,
+  "is_dripped": true,
+  "needs_to_complete_previous_lesson": false,
+  "completed": true,
+  "notify_students_enabled": false,
+  "bookmark_id": null,
+  "serialized_rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To get the most out of this program, you'll need access to a capable LLM. Since all our demonstrations and examples will be done using Claude, we strongly recommend you use Claude as well.",
+              "type": "text",
+              "circle_ios_fallback_text": "To get the most out of this program, you'll need access to a capable LLM. Since all our demonstrations and examples will be done using Claude, we strongly recommend you use Claude as well."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Why Claude?",
+              "type": "text",
+              "circle_ios_fallback_text": "Why Claude?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Using the same AI tool as your instructors means:",
+              "type": "text",
+              "circle_ios_fallback_text": "Using the same AI tool as your instructors means:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You can follow along with every demonstration",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "The prompts and techniques we teach will work exactly as shown",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You'll get consistent results when practicing what you learn",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Get Claude Pro or Team",
+              "type": "text",
+              "circle_ios_fallback_text": "Get Claude Pro or Team"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "You'll need a paid Claude account",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "You'll need a paid Claude account"
+            },
+            {
+              "text": " to participate fully in this program. The free version has limitations that will prevent you from completing many of the exercises.",
+              "type": "text",
+              "circle_ios_fallback_text": " to participate fully in this program. The free version has limitations that will prevent you from completing many of the exercises."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Choose between:",
+              "type": "text",
+              "circle_ios_fallback_text": "Choose between:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Claude Pro",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " ($20/month) - Perfect for individual use",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Claude Team",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " ($25/month per user with 5 users minimum) - Better if you're planning to share with your team",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://claude.ai/upgrade",
+            "color": "#2B2E33",
+            "label": "Sign up for a paid Claude account",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Download the Claude Desktop App",
+              "type": "text",
+              "circle_ios_fallback_text": "Download the Claude Desktop App"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For the best experience, ",
+              "type": "text",
+              "circle_ios_fallback_text": "For the best experience, "
+            },
+            {
+              "text": "download the Claude desktop app",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "download the Claude desktop app"
+            },
+            {
+              "text": " rather than using it in your browser. ",
+              "type": "text",
+              "circle_ios_fallback_text": " rather than using it in your browser. "
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Mac",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://claude.ai/download/mac",
+                            "class": "underline",
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Windows",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://claude.ai/download/windows",
+                            "class": "underline",
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Check out our Beginner’s Guide to Claude ",
+              "type": "text",
+              "circle_ios_fallback_text": "Check out our Beginner’s Guide to Claude "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "We’ve put together a mini-course that will get you up to speed with the basic functionalities and intricacies of Claude. ",
+              "type": "text",
+              "circle_ios_fallback_text": "We’ve put together a mini-course that will get you up to speed with the basic functionalities and intricacies of Claude. "
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://community.empowerlabs.ai/c/beginner-s-guide-to-claude",
+            "color": "#2B2E33",
+            "label": "Take the Course",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "To get the most out of this program, you'll need access to a capable LLM. Since all our demonstrations and examples will be done using Claude, we strongly recommend you use Claude as well.Why Claude?Using the same AI tool as your instructors means:Get Claude Pro or TeamYou'll need a paid Claude account to participate fully in this program. The free version has limitations that will prevent you from completing many of the exercises.Choose between:Download the Claude Desktop AppFor the best experience, download the Claude desktop app rather than using it in your browser. Check out our Beginner’s Guide to Claude We’ve put together a mini-course that will get you up to speed with the basic functionalities and intricacies of Claude. ",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To get the most out of this program, you'll need access to a capable LLM. Since all our demonstrations and examples will be done using Claude, we strongly recommend you use Claude as well.",
+              "type": "text",
+              "circle_ios_fallback_text": "To get the most out of this program, you'll need access to a capable LLM. Since all our demonstrations and examples will be done using Claude, we strongly recommend you use Claude as well."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Why Claude?",
+              "type": "text",
+              "circle_ios_fallback_text": "Why Claude?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Using the same AI tool as your instructors means:",
+              "type": "text",
+              "circle_ios_fallback_text": "Using the same AI tool as your instructors means:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You can follow along with every demonstration",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "The prompts and techniques we teach will work exactly as shown",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You'll get consistent results when practicing what you learn",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Get Claude Pro or Team",
+              "type": "text",
+              "circle_ios_fallback_text": "Get Claude Pro or Team"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "You'll need a paid Claude account",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "You'll need a paid Claude account"
+            },
+            {
+              "text": " to participate fully in this program. The free version has limitations that will prevent you from completing many of the exercises.",
+              "type": "text",
+              "circle_ios_fallback_text": " to participate fully in this program. The free version has limitations that will prevent you from completing many of the exercises."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Choose between:",
+              "type": "text",
+              "circle_ios_fallback_text": "Choose between:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Claude Pro",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " ($20/month) - Perfect for individual use",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Claude Team",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " ($25/month per user with 5 users minimum) - Better if you're planning to share with your team",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://claude.ai/upgrade",
+            "color": "#2B2E33",
+            "label": "Sign up for a paid Claude account",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Download the Claude Desktop App",
+              "type": "text",
+              "circle_ios_fallback_text": "Download the Claude Desktop App"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For the best experience, ",
+              "type": "text",
+              "circle_ios_fallback_text": "For the best experience, "
+            },
+            {
+              "text": "download the Claude desktop app",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "download the Claude desktop app"
+            },
+            {
+              "text": " rather than using it in your browser. ",
+              "type": "text",
+              "circle_ios_fallback_text": " rather than using it in your browser. "
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Mac",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://claude.ai/download/mac",
+                            "class": "underline",
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Windows",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://claude.ai/download/windows",
+                            "class": "underline",
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Check out our Beginner’s Guide to Claude ",
+              "type": "text",
+              "circle_ios_fallback_text": "Check out our Beginner’s Guide to Claude "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "We’ve put together a mini-course that will get you up to speed with the basic functionalities and intricacies of Claude. ",
+              "type": "text",
+              "circle_ios_fallback_text": "We’ve put together a mini-course that will get you up to speed with the basic functionalities and intricacies of Claude. "
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://community.empowerlabs.ai/c/beginner-s-guide-to-claude",
+            "color": "#2B2E33",
+            "label": "Take the Course",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "To get the most out of this program, you'll need access to a capable LLM. Since all our demonstrations and examples will be done using Claude, we strongly recommend you use Claude as well.Why Claude?Using the same AI tool as your instructors means:Get Claude Pro or TeamYou'll need a paid Claude account to participate fully in this program. The free version has limitations that will prevent you from completing many of the exercises.Choose between:Download the Claude Desktop AppFor the best experience, download the Claude desktop app rather than using it in your browser. Check out our Beginner’s Guide to Claude We’ve put together a mini-course that will get you up to speed with the basic functionalities and intricacies of Claude. ",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "chat_room_uuid": "9633a731-38fc-4c99-ac98-7d8a1793ee77"
+}

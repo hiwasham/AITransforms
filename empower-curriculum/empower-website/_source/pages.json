@@ -1,0 +1,138 @@
+[
+  {
+    "n": 1,
+    "file": "01-home.md",
+    "path": "/",
+    "h1": "Build Your Business Brain",
+    "words": 1246,
+    "links": 24
+  },
+  {
+    "n": 2,
+    "file": "02-how-it-works.md",
+    "path": "/how-it-works",
+    "h1": "Systematize Your Advisory",
+    "words": 416,
+    "links": 0
+  },
+  {
+    "n": 3,
+    "file": "03-business-brain.md",
+    "path": "/business-brain",
+    "h1": "\ud83e\udde0 Build Your",
+    "words": 167,
+    "links": 4
+  },
+  {
+    "n": 4,
+    "file": "04-business-brain--lesson-1.md",
+    "path": "/business-brain/lesson-1",
+    "h1": "Create Your AI Business Advisor",
+    "words": 793,
+    "links": 8
+  },
+  {
+    "n": 5,
+    "file": "05-business-brain--lesson-2.md",
+    "path": "/business-brain/lesson-2",
+    "h1": "The Business Framework",
+    "words": 2278,
+    "links": 6
+  },
+  {
+    "n": 6,
+    "file": "06-business-brain--lesson-3.md",
+    "path": "/business-brain/lesson-3",
+    "h1": "Process Mapping With AI",
+    "words": 8748,
+    "links": 7
+  },
+  {
+    "n": 7,
+    "file": "07-cohort.md",
+    "path": "/cohort",
+    "h1": "Document Your Business",
+    "words": 3750,
+    "links": 24
+  },
+  {
+    "n": 8,
+    "file": "08-teams.md",
+    "path": "/teams",
+    "h1": "Document Your Organization's Brain",
+    "words": 1351,
+    "links": 21
+  },
+  {
+    "n": 9,
+    "file": "09-five-hour-agency.md",
+    "path": "/five-hour-agency",
+    "h1": "The Five-Hour",
+    "words": 2418,
+    "links": 8
+  },
+  {
+    "n": 10,
+    "file": "10-ai-audit.md",
+    "path": "/ai-audit",
+    "h1": "Find The Right AI Starting Point In Your Customer Lifecycle",
+    "words": 1253,
+    "links": 18
+  },
+  {
+    "n": 11,
+    "file": "11-masterclass-replay.md",
+    "path": "/masterclass-replay",
+    "h1": "AI Masterclass:",
+    "words": 360,
+    "links": 17
+  },
+  {
+    "n": 12,
+    "file": "12-blog.md",
+    "path": "/blog",
+    "h1": "Practical notes from inside the work.",
+    "words": 227,
+    "links": 20
+  },
+  {
+    "n": 13,
+    "file": "13-blog--acquira-crm-transformation.md",
+    "path": "/blog/acquira-crm-transformation",
+    "h1": "We Cut Nearly $94,000 a Year From Our Software Stack",
+    "words": 1578,
+    "links": 22
+  },
+  {
+    "n": 14,
+    "file": "14-blog--ai-provider-sovereignty.md",
+    "path": "/blog/ai-provider-sovereignty",
+    "h1": "If You Can\u2019t Change AI Providers, You Don\u2019t Own Your AI System",
+    "words": 1246,
+    "links": 20
+  },
+  {
+    "n": 15,
+    "file": "15-apply.md",
+    "path": "/apply",
+    "h1": "Apply for the Live Cohort",
+    "words": 317,
+    "links": 18
+  },
+  {
+    "n": 16,
+    "file": "16-logo.md",
+    "path": "/logo",
+    "h1": "Official Brand Assets",
+    "words": 119,
+    "links": 3
+  },
+  {
+    "n": 17,
+    "file": "17-privacy.md",
+    "path": "/privacy",
+    "h1": "EMPOWER Labs \u2013 Privacy Policy",
+    "words": 1424,
+    "links": 0
+  }
+]

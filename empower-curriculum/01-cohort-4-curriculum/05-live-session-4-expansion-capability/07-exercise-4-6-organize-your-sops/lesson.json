@@ -1,0 +1,1328 @@
+{
+  "id": 3391972,
+  "name": "Exercise 4.6: Organize Your SOPs",
+  "status": "published",
+  "featured_media_enabled": false,
+  "download_featured_media": false,
+  "created_at": "2026-02-02T15:42:19.815Z",
+  "updated_at": "2026-02-02T21:48:06.099Z",
+  "comments_enabled": false,
+  "default_tab": "curriculum",
+  "enforce_featured_media_completion": false,
+  "autocomplete_on_featured_media_completion": true,
+  "dripped_at": null,
+  "is_dripped": true,
+  "needs_to_complete_previous_lesson": false,
+  "completed": false,
+  "notify_students_enabled": false,
+  "bookmark_id": null,
+  "serialized_rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Now that you've created powerful SOPs with Claude's help, it's time to get them out of the AI and into a system your team will actually use every day. ",
+              "type": "text",
+              "circle_ios_fallback_text": "Now that you've created powerful SOPs with Claude's help, it's time to get them out of the AI and into a system your team will actually use every day. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The best SOP storage solution isn't necessarily the most advanced one—",
+              "type": "text",
+              "circle_ios_fallback_text": "The best SOP storage solution isn't necessarily the most advanced one—"
+            },
+            {
+              "text": "it's the one your team will consistently access, update, and follow.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "it's the one your team will consistently access, update, and follow."
+            },
+            {
+              "text": " ",
+              "type": "text",
+              "circle_ios_fallback_text": " "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "That's why we recommend starting with tools your team already knows and uses, rather than forcing them to learn an entirely new platform. ",
+              "type": "text",
+              "circle_ios_fallback_text": "That's why we recommend starting with tools your team already knows and uses, rather than forcing them to learn an entirely new platform. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The goal here is simple: ",
+              "type": "text",
+              "circle_ios_fallback_text": "The goal here is simple: "
+            },
+            {
+              "text": "transform these SOPs from interesting documents into practical, living tools",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "transform these SOPs from interesting documents into practical, living tools"
+            },
+            {
+              "text": " that drive real improvements in how your business operates.",
+              "type": "text",
+              "circle_ios_fallback_text": " that drive real improvements in how your business operates."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Here are 3 options to consider:",
+              "type": "text",
+              "circle_ios_fallback_text": "Here are 3 options to consider:"
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "🗂️ Organizational Knowledge Management",
+              "type": "text",
+              "circle_ios_fallback_text": "🗂️ Organizational Knowledge Management"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Examples",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Examples"
+            },
+            {
+              "text": ": ",
+              "type": "text",
+              "circle_ios_fallback_text": ": "
+            },
+            {
+              "text": "Notion",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://www.notion.so/",
+                    "class": null,
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "circle_ios_fallback_text": "Notion"
+            },
+            {
+              "text": ", ",
+              "type": "text",
+              "circle_ios_fallback_text": ", "
+            },
+            {
+              "text": "Coda",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://coda.io/",
+                    "class": null,
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "circle_ios_fallback_text": "Coda"
+            },
+            {
+              "text": ", ",
+              "type": "text",
+              "circle_ios_fallback_text": ", "
+            },
+            {
+              "text": "ClickUp",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://clickup.com/",
+                    "class": null,
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "circle_ios_fallback_text": "ClickUp"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Use when:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Use when:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You already use one of these platforms for other business functions",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You want SOPs integrated with your broader business knowledge base",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Your team is comfortable with these tools",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You need rich formatting, databases, and cross-linking capabilities",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://concise-wednesday-9e2.notion.site/29afeeda78e98195a9cce7b997d070a1?v=29afeeda78e9810fa12c000c3e156f7f&source=copy_link",
+            "color": "#2B2E33",
+            "label": "Get the Notion Template",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Select “Duplicate” in the upper right-hand corner to create a copy in your own Notion workspace. ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "circle_ios_fallback_text": "Select “Duplicate” in the upper right-hand corner to create a copy in your own Notion workspace. "
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "☁️ Shared Cloud Storage",
+              "type": "text",
+              "circle_ios_fallback_text": "☁️ Shared Cloud Storage"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Examples",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Examples"
+            },
+            {
+              "text": ": Google Drive, Microsoft OneDrive, Dropbox, Box",
+              "type": "text",
+              "circle_ios_fallback_text": ": Google Drive, Microsoft OneDrive, Dropbox, Box"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Use when:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Use when:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You're just starting with SOP documentation",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Your team is already deeply embedded in Google or Microsoft ecosystems",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You want the simplest, most familiar solution",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You primarily need document storage with basic collaboration",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Tiago walks you through storing SOPs in Google Drive in this demo: ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Tiago walks you through storing SOPs in Google Drive in this demo: "
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRnEzdVFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--fc856aca36ae024ed4399aecaf67236cb0424d08"
+          }
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "⚙️ Specialized Software",
+              "type": "text",
+              "circle_ios_fallback_text": "⚙️ Specialized Software"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Examples",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Examples"
+            },
+            {
+              "text": ": ",
+              "type": "text",
+              "circle_ios_fallback_text": ": "
+            },
+            {
+              "text": "Process Street",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://www.process.st/",
+                    "class": null,
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "circle_ios_fallback_text": "Process Street"
+            },
+            {
+              "text": ", Stage 3 ERP (coming)",
+              "type": "text",
+              "circle_ios_fallback_text": ", Stage 3 ERP (coming)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Use when:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Use when:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You need workflow automation and approval processes",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You want advanced analytics on process completion",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You have complex, multi-step processes requiring tracking",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You're ready to invest in process optimization and enforcement",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Questions?",
+              "type": "text",
+              "circle_ios_fallback_text": "Questions?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the ",
+              "type": "text",
+              "circle_ios_fallback_text": "If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the "
+            },
+            {
+              "type": "entity",
+              "attrs": {
+                "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yMjU1NTE0P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--542542d8a19168dd51b965438658b18ff5dae6ec"
+              },
+              "circle_ios_fallback_text": "#Discussion"
+            },
+            {
+              "text": " space. ",
+              "type": "text",
+              "circle_ios_fallback_text": " space. "
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "Now that you've created powerful SOPs with Claude's help, it's time to get them out of the AI and into a system your team will actually use every day. The best SOP storage solution isn't necessarily the most advanced one—it's the one your team will consistently access, update, and follow. That's why we recommend starting with tools your team already knows and uses, rather than forcing them to learn an entirely new platform. The goal here is simple: transform these SOPs from interesting documents into practical, living tools that drive real improvements in how your business operates.Here are 3 options to consider:🗂️ Organizational Knowledge ManagementExamples: Notion, Coda, ClickUpUse when:Select “Duplicate” in the upper right-hand corner to create a copy in your own Notion workspace. ☁️ Shared Cloud StorageExamples: Google Drive, Microsoft OneDrive, Dropbox, BoxUse when:Tiago walks you through storing SOPs in Google Drive in this demo: ⚙️ Specialized SoftwareExamples: Process Street, Stage 3 ERP (coming)Use when:Questions?If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the #Discussion space. ",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "SBE Cohort 2_ Exercise 3.6 Organize Your SOPs - Google Drive Demo_default_f8726e30.mp4",
+        "content_type": "video/mp4",
+        "metadata": {
+          "identified": true,
+          "width": 1920,
+          "height": 1080,
+          "duration": 478.996667,
+          "audio": true,
+          "video": true,
+          "analyzed": true,
+          "transcript_id": 3108099,
+          "transcript_preview": "Alright. This is a little tutorial on how to or..."
+        },
+        "byte_size": 40270613,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRnEzdVFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--fc856aca36ae024ed4399aecaf67236cb0424d08",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/uclfn4rjl2u57fit6v44hsh8uokg",
+        "is_downloadable": false,
+        "webvtt_file_url": "https://assets-v2.circle.so/3oqsio20h4zd5ayb7hthkhctmvpl",
+        "chapters_url": null,
+        "preview_thumbnails_url": "https://cdn-media.circle.so/bcdn_token=9wL5LkRonrtNyCJQf3KhoBgRWmN_QhQX4pwGUXdgFrs&token_path=%2F53b4f112-96c8-4785-838d-7a8a911e494c%2F&expires=1787964931/53b4f112-96c8-4785-838d-7a8a911e494c/mosaic.vtt",
+        "media_transcript_id": 3108099,
+        "image_variants": {
+          "thumbnail": "https://cdn-media.circle.so/bcdn_token=9wL5LkRonrtNyCJQf3KhoBgRWmN_QhQX4pwGUXdgFrs&token_path=%2F53b4f112-96c8-4785-838d-7a8a911e494c%2F&expires=1787964931/53b4f112-96c8-4785-838d-7a8a911e494c/thumbnail.jpg"
+        },
+        "video_variants": {
+          "original": "https://assets-v2.circle.so/uclfn4rjl2u57fit6v44hsh8uokg",
+          "hls": "https://cdn-media.circle.so/bcdn_token=9wL5LkRonrtNyCJQf3KhoBgRWmN_QhQX4pwGUXdgFrs&token_path=%2F53b4f112-96c8-4785-838d-7a8a911e494c%2F&expires=1787964931/53b4f112-96c8-4785-838d-7a8a911e494c/hls/playlist.m3u8"
+        },
+        "media_transcoding": {
+          "status": "succeeded"
+        }
+      }
+    ],
+    "sgids_to_object_map": {
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yMjU1NTE0P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--542542d8a19168dd51b965438658b18ff5dae6ec": {
+        "id": 2255514,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yMjU1NTE0P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--542542d8a19168dd51b965438658b18ff5dae6ec",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion",
+        "slug": "discussion"
+      }
+    },
+    "format": "post",
+    "community_members": [],
+    "entities": [
+      {
+        "id": 2255514,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yMjU1NTE0P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--542542d8a19168dd51b965438658b18ff5dae6ec",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion",
+        "slug": "discussion"
+      }
+    ],
+    "group_mentions": [],
+    "polls": []
+  },
+  "rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Now that you've created powerful SOPs with Claude's help, it's time to get them out of the AI and into a system your team will actually use every day. ",
+              "type": "text",
+              "circle_ios_fallback_text": "Now that you've created powerful SOPs with Claude's help, it's time to get them out of the AI and into a system your team will actually use every day. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The best SOP storage solution isn't necessarily the most advanced one—",
+              "type": "text",
+              "circle_ios_fallback_text": "The best SOP storage solution isn't necessarily the most advanced one—"
+            },
+            {
+              "text": "it's the one your team will consistently access, update, and follow.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "it's the one your team will consistently access, update, and follow."
+            },
+            {
+              "text": " ",
+              "type": "text",
+              "circle_ios_fallback_text": " "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "That's why we recommend starting with tools your team already knows and uses, rather than forcing them to learn an entirely new platform. ",
+              "type": "text",
+              "circle_ios_fallback_text": "That's why we recommend starting with tools your team already knows and uses, rather than forcing them to learn an entirely new platform. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The goal here is simple: ",
+              "type": "text",
+              "circle_ios_fallback_text": "The goal here is simple: "
+            },
+            {
+              "text": "transform these SOPs from interesting documents into practical, living tools",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "transform these SOPs from interesting documents into practical, living tools"
+            },
+            {
+              "text": " that drive real improvements in how your business operates.",
+              "type": "text",
+              "circle_ios_fallback_text": " that drive real improvements in how your business operates."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Here are 3 options to consider:",
+              "type": "text",
+              "circle_ios_fallback_text": "Here are 3 options to consider:"
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "🗂️ Organizational Knowledge Management",
+              "type": "text",
+              "circle_ios_fallback_text": "🗂️ Organizational Knowledge Management"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Examples",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Examples"
+            },
+            {
+              "text": ": ",
+              "type": "text",
+              "circle_ios_fallback_text": ": "
+            },
+            {
+              "text": "Notion",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://www.notion.so/",
+                    "class": null,
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "circle_ios_fallback_text": "Notion"
+            },
+            {
+              "text": ", ",
+              "type": "text",
+              "circle_ios_fallback_text": ", "
+            },
+            {
+              "text": "Coda",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://coda.io/",
+                    "class": null,
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "circle_ios_fallback_text": "Coda"
+            },
+            {
+              "text": ", ",
+              "type": "text",
+              "circle_ios_fallback_text": ", "
+            },
+            {
+              "text": "ClickUp",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://clickup.com/",
+                    "class": null,
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "circle_ios_fallback_text": "ClickUp"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Use when:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Use when:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You already use one of these platforms for other business functions",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You want SOPs integrated with your broader business knowledge base",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Your team is comfortable with these tools",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You need rich formatting, databases, and cross-linking capabilities",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://concise-wednesday-9e2.notion.site/29afeeda78e98195a9cce7b997d070a1?v=29afeeda78e9810fa12c000c3e156f7f&source=copy_link",
+            "color": "#2B2E33",
+            "label": "Get the Notion Template",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Select “Duplicate” in the upper right-hand corner to create a copy in your own Notion workspace. ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "circle_ios_fallback_text": "Select “Duplicate” in the upper right-hand corner to create a copy in your own Notion workspace. "
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "☁️ Shared Cloud Storage",
+              "type": "text",
+              "circle_ios_fallback_text": "☁️ Shared Cloud Storage"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Examples",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Examples"
+            },
+            {
+              "text": ": Google Drive, Microsoft OneDrive, Dropbox, Box",
+              "type": "text",
+              "circle_ios_fallback_text": ": Google Drive, Microsoft OneDrive, Dropbox, Box"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Use when:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Use when:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You're just starting with SOP documentation",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Your team is already deeply embedded in Google or Microsoft ecosystems",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You want the simplest, most familiar solution",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You primarily need document storage with basic collaboration",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Tiago walks you through storing SOPs in Google Drive in this demo: ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Tiago walks you through storing SOPs in Google Drive in this demo: "
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRnEzdVFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--fc856aca36ae024ed4399aecaf67236cb0424d08"
+          }
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "⚙️ Specialized Software",
+              "type": "text",
+              "circle_ios_fallback_text": "⚙️ Specialized Software"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Examples",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Examples"
+            },
+            {
+              "text": ": ",
+              "type": "text",
+              "circle_ios_fallback_text": ": "
+            },
+            {
+              "text": "Process Street",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://www.process.st/",
+                    "class": null,
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "circle_ios_fallback_text": "Process Street"
+            },
+            {
+              "text": ", Stage 3 ERP (coming)",
+              "type": "text",
+              "circle_ios_fallback_text": ", Stage 3 ERP (coming)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Use when:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Use when:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You need workflow automation and approval processes",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You want advanced analytics on process completion",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You have complex, multi-step processes requiring tracking",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You're ready to invest in process optimization and enforcement",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Questions?",
+              "type": "text",
+              "circle_ios_fallback_text": "Questions?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the ",
+              "type": "text",
+              "circle_ios_fallback_text": "If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the "
+            },
+            {
+              "type": "entity",
+              "attrs": {
+                "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yMjU1NTE0P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--542542d8a19168dd51b965438658b18ff5dae6ec"
+              },
+              "circle_ios_fallback_text": "#Discussion"
+            },
+            {
+              "text": " space. ",
+              "type": "text",
+              "circle_ios_fallback_text": " space. "
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "Now that you've created powerful SOPs with Claude's help, it's time to get them out of the AI and into a system your team will actually use every day. The best SOP storage solution isn't necessarily the most advanced one—it's the one your team will consistently access, update, and follow. That's why we recommend starting with tools your team already knows and uses, rather than forcing them to learn an entirely new platform. The goal here is simple: transform these SOPs from interesting documents into practical, living tools that drive real improvements in how your business operates.Here are 3 options to consider:🗂️ Organizational Knowledge ManagementExamples: Notion, Coda, ClickUpUse when:Select “Duplicate” in the upper right-hand corner to create a copy in your own Notion workspace. ☁️ Shared Cloud StorageExamples: Google Drive, Microsoft OneDrive, Dropbox, BoxUse when:Tiago walks you through storing SOPs in Google Drive in this demo: ⚙️ Specialized SoftwareExamples: Process Street, Stage 3 ERP (coming)Use when:Questions?If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the #Discussion space. ",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "SBE Cohort 2_ Exercise 3.6 Organize Your SOPs - Google Drive Demo_default_f8726e30.mp4",
+        "content_type": "video/mp4",
+        "metadata": {
+          "identified": true,
+          "width": 1920,
+          "height": 1080,
+          "duration": 478.996667,
+          "audio": true,
+          "video": true,
+          "analyzed": true,
+          "transcript_id": 3108099,
+          "transcript_preview": "Alright. This is a little tutorial on how to or..."
+        },
+        "byte_size": 40270613,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRnEzdVFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--fc856aca36ae024ed4399aecaf67236cb0424d08",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/uclfn4rjl2u57fit6v44hsh8uokg",
+        "is_downloadable": false,
+        "webvtt_file_url": "https://assets-v2.circle.so/3oqsio20h4zd5ayb7hthkhctmvpl",
+        "chapters_url": null,
+        "preview_thumbnails_url": "https://cdn-media.circle.so/bcdn_token=9wL5LkRonrtNyCJQf3KhoBgRWmN_QhQX4pwGUXdgFrs&token_path=%2F53b4f112-96c8-4785-838d-7a8a911e494c%2F&expires=1787964931/53b4f112-96c8-4785-838d-7a8a911e494c/mosaic.vtt",
+        "media_transcript_id": 3108099,
+        "image_variants": {
+          "thumbnail": "https://cdn-media.circle.so/bcdn_token=9wL5LkRonrtNyCJQf3KhoBgRWmN_QhQX4pwGUXdgFrs&token_path=%2F53b4f112-96c8-4785-838d-7a8a911e494c%2F&expires=1787964931/53b4f112-96c8-4785-838d-7a8a911e494c/thumbnail.jpg"
+        },
+        "video_variants": {
+          "original": "https://assets-v2.circle.so/uclfn4rjl2u57fit6v44hsh8uokg",
+          "hls": "https://cdn-media.circle.so/bcdn_token=9wL5LkRonrtNyCJQf3KhoBgRWmN_QhQX4pwGUXdgFrs&token_path=%2F53b4f112-96c8-4785-838d-7a8a911e494c%2F&expires=1787964931/53b4f112-96c8-4785-838d-7a8a911e494c/hls/playlist.m3u8"
+        },
+        "media_transcoding": {
+          "status": "succeeded"
+        }
+      }
+    ],
+    "sgids_to_object_map": {
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yMjU1NTE0P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--542542d8a19168dd51b965438658b18ff5dae6ec": {
+        "id": 2255514,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yMjU1NTE0P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--542542d8a19168dd51b965438658b18ff5dae6ec",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion",
+        "slug": "discussion"
+      }
+    },
+    "format": "post",
+    "community_members": [],
+    "entities": [
+      {
+        "id": 2255514,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yMjU1NTE0P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--542542d8a19168dd51b965438658b18ff5dae6ec",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion",
+        "slug": "discussion"
+      }
+    ],
+    "group_mentions": [],
+    "polls": []
+  },
+  "chat_room_uuid": "72278589-9cdd-45e7-b758-30f8ca52afa4"
+}

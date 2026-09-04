@@ -1,0 +1,1226 @@
+{
+  "id": 3359191,
+  "name": "Exercise 2.4: Add \"Shared Language\" to Your Master Prompt",
+  "status": "published",
+  "featured_media_enabled": false,
+  "download_featured_media": false,
+  "created_at": "2026-01-26T17:56:06.314Z",
+  "updated_at": "2026-05-29T18:18:00.923Z",
+  "comments_enabled": false,
+  "default_tab": "curriculum",
+  "enforce_featured_media_completion": false,
+  "autocomplete_on_featured_media_completion": true,
+  "dripped_at": null,
+  "is_dripped": true,
+  "needs_to_complete_previous_lesson": false,
+  "completed": true,
+  "notify_students_enabled": false,
+  "bookmark_id": null,
+  "serialized_rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCR1J4T3dnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--3d341fbf56c90406cc8691a8f3cc9f1eee8d7223"
+          }
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Add the Business Process Framework ",
+              "type": "text",
+              "circle_ios_fallback_text": "Add the Business Process Framework "
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Purpose",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Purpose"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To provide Claude with the business process framework we covered so we have a shared understanding, and it can help you apply this framework in your own business. ",
+              "type": "text",
+              "circle_ios_fallback_text": "To provide Claude with the business process framework we covered so we have a shared understanding, and it can help you apply this framework in your own business. "
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Instructions",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Instructions"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Open your Master Prompt project",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Click the “+” under Files (formerly called Project Knowledge) and choose “Add text content” ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Copy and paste the text into the content box. Add the title “Business Process Framework”",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Click “Add Content” ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://docs.google.com/document/d/130JlqKzDo6eQLeXve0yE9v54CSILlt1ahdnf4GSJp28/edit?tab=t.7p310x6jrwry",
+            "color": "#2B2E33",
+            "label": "Access the prompt",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Time to complete:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Time to complete:"
+            },
+            {
+              "text": " 2 minutes",
+              "type": "text",
+              "circle_ios_fallback_text": " 2 minutes"
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Add Your Style Preferences",
+              "type": "text",
+              "circle_ios_fallback_text": "Add Your Style Preferences"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Purpose",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Purpose"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To give Claude guidelines on how you want it to respond to you and what you want its output to look and sound like. ",
+              "type": "text",
+              "circle_ios_fallback_text": "To give Claude guidelines on how you want it to respond to you and what you want its output to look and sound like. "
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Instructions",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Instructions"
+            },
+            {
+              "text": " ",
+              "type": "text",
+              "circle_ios_fallback_text": " "
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Open your Master Prompt project",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Click the “+” under Files (formerly called Project Knowledge) and choose “Add text content” ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Copy and paste the text into the content box. Add the title “Style Preferences”",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Click “Add Content” ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://docs.google.com/document/d/130JlqKzDo6eQLeXve0yE9v54CSILlt1ahdnf4GSJp28/edit?tab=t.iwqd11dydz3j",
+            "color": "#2B2E33",
+            "label": "Access the Prompt",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Time to complete:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Time to complete:"
+            },
+            {
+              "text": " 2 minutes",
+              "type": "text",
+              "circle_ios_fallback_text": " 2 minutes"
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Add Strategic Approaches",
+              "type": "text",
+              "circle_ios_fallback_text": "Add Strategic Approaches"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Purpose",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Purpose"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To give Claude a set of tools that you can call on at any time to help you think through or approach a certain challenge. ",
+              "type": "text",
+              "circle_ios_fallback_text": "To give Claude a set of tools that you can call on at any time to help you think through or approach a certain challenge. "
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Instructions",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Instructions"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Open your Master Prompt project",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Click the “+” under Files (formerly called Project Knowledge) and choose “Add text content” ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Copy and paste the text into the content box. Add the title “Strategic Approaches”",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Click “Add Content” ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://docs.google.com/document/d/130JlqKzDo6eQLeXve0yE9v54CSILlt1ahdnf4GSJp28/edit?tab=t.jovsbpanwnw9",
+            "color": "#2B2E33",
+            "label": "Access the prompt",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Time to complete:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Time to complete:"
+            },
+            {
+              "text": " 2 minutes  ",
+              "type": "text",
+              "circle_ios_fallback_text": " 2 minutes  "
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Questions?",
+              "type": "text",
+              "circle_ios_fallback_text": "Questions?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the ",
+              "type": "text",
+              "circle_ios_fallback_text": "If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the "
+            },
+            {
+              "type": "entity",
+              "attrs": {
+                "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa"
+              },
+              "circle_ios_fallback_text": "#Discussion"
+            },
+            {
+              "text": " space. ",
+              "type": "text",
+              "circle_ios_fallback_text": " space. "
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "Add the Business Process Framework PurposeTo provide Claude with the business process framework we covered so we have a shared understanding, and it can help you apply this framework in your own business. InstructionsTime to complete: 2 minutesAdd Your Style PreferencesPurposeTo give Claude guidelines on how you want it to respond to you and what you want its output to look and sound like. Instructions Time to complete: 2 minutesAdd Strategic ApproachesPurposeTo give Claude a set of tools that you can call on at any time to help you think through or approach a certain challenge. InstructionsTime to complete: 2 minutes  Questions?If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the #Discussion space. ",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "SBE Cohort 2_ Exercise 1.4 Add _Shared Language_ to Your Master Prompt_default_45ddbb91 (1).mp4",
+        "content_type": "video/mp4",
+        "metadata": {
+          "identified": true,
+          "width": 960,
+          "height": 540,
+          "duration": 243.75,
+          "audio": true,
+          "video": true,
+          "analyzed": true,
+          "transcript_id": 3565851,
+          "transcript_preview": "This is a quick walkthrough on how to add the s..."
+        },
+        "byte_size": 12169140,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCR1J4T3dnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--3d341fbf56c90406cc8691a8f3cc9f1eee8d7223",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/337db1i1z5zoof45ocqkd6ucmcgv",
+        "is_downloadable": false,
+        "webvtt_file_url": "https://assets-v2.circle.so/kngq2ft7imv33hfl5yk29rfq5eg2",
+        "chapters_url": null,
+        "preview_thumbnails_url": "https://cdn-media.circle.so/bcdn_token=59XE4jntfqxqfwnm-kGywDevtBhJQ-y43SWbzweWdTQ&token_path=%2F6f2b7ac0-d524-4915-a26a-5bbe38eec943%2F&expires=1787964887/6f2b7ac0-d524-4915-a26a-5bbe38eec943/mosaic.vtt",
+        "media_transcript_id": 3565851,
+        "image_variants": {
+          "thumbnail": "https://cdn-media.circle.so/bcdn_token=59XE4jntfqxqfwnm-kGywDevtBhJQ-y43SWbzweWdTQ&token_path=%2F6f2b7ac0-d524-4915-a26a-5bbe38eec943%2F&expires=1787964887/6f2b7ac0-d524-4915-a26a-5bbe38eec943/thumbnail.jpg"
+        },
+        "video_variants": {
+          "original": "https://assets-v2.circle.so/337db1i1z5zoof45ocqkd6ucmcgv",
+          "hls": "https://cdn-media.circle.so/bcdn_token=59XE4jntfqxqfwnm-kGywDevtBhJQ-y43SWbzweWdTQ&token_path=%2F6f2b7ac0-d524-4915-a26a-5bbe38eec943%2F&expires=1787964887/6f2b7ac0-d524-4915-a26a-5bbe38eec943/hls/playlist.m3u8"
+        },
+        "media_transcoding": {
+          "status": "succeeded"
+        }
+      }
+    ],
+    "sgids_to_object_map": {
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa": {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    },
+    "format": "post",
+    "community_members": [],
+    "entities": [
+      {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    ],
+    "group_mentions": [],
+    "polls": []
+  },
+  "rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCR1J4T3dnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--3d341fbf56c90406cc8691a8f3cc9f1eee8d7223"
+          }
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Add the Business Process Framework ",
+              "type": "text",
+              "circle_ios_fallback_text": "Add the Business Process Framework "
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Purpose",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Purpose"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To provide Claude with the business process framework we covered so we have a shared understanding, and it can help you apply this framework in your own business. ",
+              "type": "text",
+              "circle_ios_fallback_text": "To provide Claude with the business process framework we covered so we have a shared understanding, and it can help you apply this framework in your own business. "
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Instructions",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Instructions"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Open your Master Prompt project",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Click the “+” under Files (formerly called Project Knowledge) and choose “Add text content” ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Copy and paste the text into the content box. Add the title “Business Process Framework”",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Click “Add Content” ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://docs.google.com/document/d/130JlqKzDo6eQLeXve0yE9v54CSILlt1ahdnf4GSJp28/edit?tab=t.7p310x6jrwry",
+            "color": "#2B2E33",
+            "label": "Access the prompt",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Time to complete:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Time to complete:"
+            },
+            {
+              "text": " 2 minutes",
+              "type": "text",
+              "circle_ios_fallback_text": " 2 minutes"
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Add Your Style Preferences",
+              "type": "text",
+              "circle_ios_fallback_text": "Add Your Style Preferences"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Purpose",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Purpose"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To give Claude guidelines on how you want it to respond to you and what you want its output to look and sound like. ",
+              "type": "text",
+              "circle_ios_fallback_text": "To give Claude guidelines on how you want it to respond to you and what you want its output to look and sound like. "
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Instructions",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Instructions"
+            },
+            {
+              "text": " ",
+              "type": "text",
+              "circle_ios_fallback_text": " "
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Open your Master Prompt project",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Click the “+” under Files (formerly called Project Knowledge) and choose “Add text content” ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Copy and paste the text into the content box. Add the title “Style Preferences”",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Click “Add Content” ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://docs.google.com/document/d/130JlqKzDo6eQLeXve0yE9v54CSILlt1ahdnf4GSJp28/edit?tab=t.iwqd11dydz3j",
+            "color": "#2B2E33",
+            "label": "Access the Prompt",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Time to complete:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Time to complete:"
+            },
+            {
+              "text": " 2 minutes",
+              "type": "text",
+              "circle_ios_fallback_text": " 2 minutes"
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Add Strategic Approaches",
+              "type": "text",
+              "circle_ios_fallback_text": "Add Strategic Approaches"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Purpose",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Purpose"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To give Claude a set of tools that you can call on at any time to help you think through or approach a certain challenge. ",
+              "type": "text",
+              "circle_ios_fallback_text": "To give Claude a set of tools that you can call on at any time to help you think through or approach a certain challenge. "
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Instructions",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Instructions"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Open your Master Prompt project",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Click the “+” under Files (formerly called Project Knowledge) and choose “Add text content” ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Copy and paste the text into the content box. Add the title “Strategic Approaches”",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Click “Add Content” ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://docs.google.com/document/d/130JlqKzDo6eQLeXve0yE9v54CSILlt1ahdnf4GSJp28/edit?tab=t.jovsbpanwnw9",
+            "color": "#2B2E33",
+            "label": "Access the prompt",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Time to complete:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Time to complete:"
+            },
+            {
+              "text": " 2 minutes  ",
+              "type": "text",
+              "circle_ios_fallback_text": " 2 minutes  "
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Questions?",
+              "type": "text",
+              "circle_ios_fallback_text": "Questions?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the ",
+              "type": "text",
+              "circle_ios_fallback_text": "If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the "
+            },
+            {
+              "type": "entity",
+              "attrs": {
+                "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa"
+              },
+              "circle_ios_fallback_text": "#Discussion"
+            },
+            {
+              "text": " space. ",
+              "type": "text",
+              "circle_ios_fallback_text": " space. "
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "Add the Business Process Framework PurposeTo provide Claude with the business process framework we covered so we have a shared understanding, and it can help you apply this framework in your own business. InstructionsTime to complete: 2 minutesAdd Your Style PreferencesPurposeTo give Claude guidelines on how you want it to respond to you and what you want its output to look and sound like. Instructions Time to complete: 2 minutesAdd Strategic ApproachesPurposeTo give Claude a set of tools that you can call on at any time to help you think through or approach a certain challenge. InstructionsTime to complete: 2 minutes  Questions?If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the #Discussion space. ",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "SBE Cohort 2_ Exercise 1.4 Add _Shared Language_ to Your Master Prompt_default_45ddbb91 (1).mp4",
+        "content_type": "video/mp4",
+        "metadata": {
+          "identified": true,
+          "width": 960,
+          "height": 540,
+          "duration": 243.75,
+          "audio": true,
+          "video": true,
+          "analyzed": true,
+          "transcript_id": 3565851,
+          "transcript_preview": "This is a quick walkthrough on how to add the s..."
+        },
+        "byte_size": 12169140,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCR1J4T3dnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--3d341fbf56c90406cc8691a8f3cc9f1eee8d7223",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/337db1i1z5zoof45ocqkd6ucmcgv",
+        "is_downloadable": false,
+        "webvtt_file_url": "https://assets-v2.circle.so/kngq2ft7imv33hfl5yk29rfq5eg2",
+        "chapters_url": null,
+        "preview_thumbnails_url": "https://cdn-media.circle.so/bcdn_token=59XE4jntfqxqfwnm-kGywDevtBhJQ-y43SWbzweWdTQ&token_path=%2F6f2b7ac0-d524-4915-a26a-5bbe38eec943%2F&expires=1787964887/6f2b7ac0-d524-4915-a26a-5bbe38eec943/mosaic.vtt",
+        "media_transcript_id": 3565851,
+        "image_variants": {
+          "thumbnail": "https://cdn-media.circle.so/bcdn_token=59XE4jntfqxqfwnm-kGywDevtBhJQ-y43SWbzweWdTQ&token_path=%2F6f2b7ac0-d524-4915-a26a-5bbe38eec943%2F&expires=1787964887/6f2b7ac0-d524-4915-a26a-5bbe38eec943/thumbnail.jpg"
+        },
+        "video_variants": {
+          "original": "https://assets-v2.circle.so/337db1i1z5zoof45ocqkd6ucmcgv",
+          "hls": "https://cdn-media.circle.so/bcdn_token=59XE4jntfqxqfwnm-kGywDevtBhJQ-y43SWbzweWdTQ&token_path=%2F6f2b7ac0-d524-4915-a26a-5bbe38eec943%2F&expires=1787964887/6f2b7ac0-d524-4915-a26a-5bbe38eec943/hls/playlist.m3u8"
+        },
+        "media_transcoding": {
+          "status": "succeeded"
+        }
+      }
+    ],
+    "sgids_to_object_map": {
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa": {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    },
+    "format": "post",
+    "community_members": [],
+    "entities": [
+      {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    ],
+    "group_mentions": [],
+    "polls": []
+  },
+  "chat_room_uuid": "2a285038-5b8c-43db-a7bd-604a03dfcb03"
+}
