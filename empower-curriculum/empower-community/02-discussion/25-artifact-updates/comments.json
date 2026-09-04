@@ -1,0 +1,291 @@
+[
+  {
+    "id": 94321184,
+    "parent_comment_id": null,
+    "post_id": 29252728,
+    "user_id": 50501199,
+    "editor": "tiptap",
+    "flagged_for_approval_at": null,
+    "created_at": "2026-02-02T10:48:36.920Z",
+    "updated_at": "2026-02-02T10:48:36.938Z",
+    "is_replying_enabled": true,
+    "is_liking_enabled": true,
+    "bookmark_id": null,
+    "is_liked": false,
+    "likes_count": 0,
+    "unresolved_flagged_reports_count": 0,
+    "show_url": "https://community.empowerlabs.ai/c/discussion-b92449/artefact-updates#comment_wrapper_94321184",
+    "author_type": "CommunityMember",
+    "community_member": {
+      "id": 75923570,
+      "user_id": 50501199,
+      "public_uid": "c00c6792",
+      "first_name": "Romain",
+      "last_name": "Collignon",
+      "name": "Romain Collignon",
+      "admin": null,
+      "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzUwNTAxMTk5P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--1dee4fd8df63df3bacc82ede7019444b9399471a",
+      "type": "CommunityMember",
+      "headline": "Founder",
+      "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNzU5MjM1NzA_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--5f51b6ccf5764d7b7ce86d193efd6514c299c7d3",
+      "avatar_url": "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQlVGUGdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--9e976b75b324a63a4041ff0a6fb58819bd36ec9a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJc0FXa0NMQUU2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--86d5a93b1fb9d9a40ce4e61c041294c46ab790a5/avatar_75923570.jpg"
+    },
+    "member_tags_html": "\n\n          <label class=\"member-tags--label\" style=\"background-color: #ffffff;\">\n            <span class=\"name\">Cohort 4</span>\n          </label>\n",
+    "member_tags": [
+      {
+        "id": 137342629,
+        "name": "Cohort 4",
+        "emoji": "",
+        "color": "#ffffff",
+        "is_public": true,
+        "is_background_enabled": false,
+        "display_format": "label",
+        "display_locations": {
+          "post_bio": true,
+          "profile_page": true,
+          "member_directory": true
+        },
+        "custom_emoji_url": null,
+        "custom_emoji_dark_url": null
+      }
+    ],
+    "body_trix_content": null,
+    "body_for_editor": null,
+    "tiptap_body": {
+      "body": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "+1 on this question :)",
+                "type": "text",
+                "circle_ios_fallback_text": "+1 on this question :)"
+              }
+            ]
+          }
+        ]
+      },
+      "circle_ios_fallback_text": "+1 on this question :)",
+      "attachments": [],
+      "inline_attachments": [],
+      "sgids_to_object_map": {},
+      "format": "post",
+      "community_members": [],
+      "entities": [],
+      "group_mentions": [],
+      "polls": []
+    },
+    "policies": {
+      "can_report": true,
+      "can_manage": false,
+      "can_edit": false,
+      "can_destroy": false,
+      "can_bookmark": true
+    },
+    "replies_count": 0,
+    "replies": []
+  },
+  {
+    "id": 94325509,
+    "parent_comment_id": null,
+    "post_id": 29252728,
+    "user_id": 52713647,
+    "editor": "tiptap",
+    "flagged_for_approval_at": null,
+    "created_at": "2026-02-02T11:58:45.912Z",
+    "updated_at": "2026-02-02T11:58:45.923Z",
+    "is_replying_enabled": true,
+    "is_liking_enabled": true,
+    "bookmark_id": null,
+    "is_liked": false,
+    "likes_count": 2,
+    "unresolved_flagged_reports_count": 0,
+    "show_url": "https://community.empowerlabs.ai/c/discussion-b92449/artefact-updates#comment_wrapper_94325509",
+    "author_type": "CommunityMember",
+    "community_member": {
+      "id": 75906757,
+      "user_id": 52713647,
+      "public_uid": "297fe29f",
+      "first_name": "Jonas",
+      "last_name": null,
+      "name": "Jonas",
+      "admin": null,
+      "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzUyNzEzNjQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--96bb8bb81d3120c0996ab3255ce5ba8b94f8ba5d",
+      "type": "CommunityMember",
+      "headline": "CEO",
+      "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNzU5MDY3NTc_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--b9cf5f0dcd3393f8be89fb4103a9f32392cfaf33",
+      "avatar_url": "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQjNkVEFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--4fe91c1ba1dd1045cc63ec898afca411a102e3a2/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJc0FXa0NMQUU2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--86d5a93b1fb9d9a40ce4e61c041294c46ab790a5/1757344118193.png"
+    },
+    "member_tags_html": "\n\n          <label class=\"member-tags--label\" style=\"background-color: #ffffff;\">\n            <span class=\"name\">Cohort 4</span>\n          </label>\n",
+    "member_tags": [
+      {
+        "id": 137302983,
+        "name": "Cohort 4",
+        "emoji": "",
+        "color": "#ffffff",
+        "is_public": true,
+        "is_background_enabled": false,
+        "display_format": "label",
+        "display_locations": {
+          "post_bio": true,
+          "profile_page": true,
+          "member_directory": true
+        },
+        "custom_emoji_url": null,
+        "custom_emoji_dark_url": null
+      }
+    ],
+    "body_trix_content": null,
+    "body_for_editor": null,
+    "tiptap_body": {
+      "body": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "I always download mine as mark down and save it locally.",
+                "type": "text",
+                "circle_ios_fallback_text": "I always download mine as mark down and save it locally."
+              },
+              {
+                "type": "hardBreak",
+                "circle_ios_fallback_text": "\n"
+              },
+              {
+                "text": "If I need to change something I usually open a new chat (or the existing) depending on what I need or want, copy my existing one and prompt it so I can create the necessary changes in a conversation mode. Then it creates a new artifact which I replace the old one with. Not sure if this is the most efficient one but it works for me, as I A) want to make sure I have all the information stored (locally) and not somewhere lost in a conversation with AI and B) I can directly work with my latest artifact (even if I’d switch the AI model for example). Hope it helps.",
+                "type": "text",
+                "circle_ios_fallback_text": "If I need to change something I usually open a new chat (or the existing) depending on what I need or want, copy my existing one and prompt it so I can create the necessary changes in a conversation mode. Then it creates a new artifact which I replace the old one with. Not sure if this is the most efficient one but it works for me, as I A) want to make sure I have all the information stored (locally) and not somewhere lost in a conversation with AI and B) I can directly work with my latest artifact (even if I’d switch the AI model for example). Hope it helps."
+              }
+            ]
+          }
+        ]
+      },
+      "circle_ios_fallback_text": "I always download mine as mark down and save it locally.\nIf I need to change something I usually open a new chat (or the existing) depending on what I need or want, copy my existing one and prompt it so I can create the necessary changes in a conversation mode. Then it creates a new artifact which I replace the old one with. Not sure if this is the most efficient one but it works for me, as I A) want to make sure I have all the information stored (locally) and not somewhere lost in a conversation with AI and B) I can directly work with my latest artifact (even if I’d switch the AI model for example). Hope it helps.",
+      "attachments": [],
+      "inline_attachments": [],
+      "sgids_to_object_map": {},
+      "format": "post",
+      "community_members": [],
+      "entities": [],
+      "group_mentions": [],
+      "polls": []
+    },
+    "policies": {
+      "can_report": true,
+      "can_manage": false,
+      "can_edit": false,
+      "can_destroy": false,
+      "can_bookmark": true
+    },
+    "replies_count": 0,
+    "replies": []
+  },
+  {
+    "id": 94355971,
+    "parent_comment_id": null,
+    "post_id": 29252728,
+    "user_id": 30774298,
+    "editor": "tiptap",
+    "flagged_for_approval_at": null,
+    "created_at": "2026-02-02T17:16:37.974Z",
+    "updated_at": "2026-02-02T17:16:37.989Z",
+    "is_replying_enabled": true,
+    "is_liking_enabled": true,
+    "bookmark_id": null,
+    "is_liked": false,
+    "likes_count": 2,
+    "unresolved_flagged_reports_count": 0,
+    "show_url": "https://community.empowerlabs.ai/c/discussion-b92449/artefact-updates#comment_wrapper_94355971",
+    "author_type": "CommunityMember",
+    "community_member": {
+      "id": 51521280,
+      "user_id": 30774298,
+      "public_uid": "0cb8998d",
+      "first_name": "Josh",
+      "last_name": "Cordes",
+      "name": "Josh Cordes",
+      "admin": true,
+      "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzMwNzc0Mjk4P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--02e79904909f662e09046f35108f48e28a901978",
+      "type": "CommunityMember",
+      "headline": "Customer Acquisition Leader",
+      "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTE1MjEyODA_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--48e1ccf99069c61215c8c923551e00b75da7659b",
+      "avatar_url": "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSTFsY3dZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--7bc1b33cca113c20a49c2d97402b17ac6fb5183a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lKYW5CbFp3WTZCa1ZVT2hSeVpYTnBlbVZmZEc5ZmJHbHRhWFJiQjJrQ0xBRnBBaXdCT2dwellYWmxjbnNHT2dwemRISnBjRlE9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--ef295ed08e817a599d692fd6d8761673d3ed547f/Headshot.jpeg"
+    },
+    "member_tags_html": "  <span class=\"author__is-admin\">\n    admin\n  </span>\n\n",
+    "member_tags": [
+      {
+        "id": 115121971,
+        "name": "Acquira",
+        "emoji": "",
+        "color": "#ffffff",
+        "is_public": false,
+        "is_background_enabled": false,
+        "display_format": "label",
+        "display_locations": {
+          "post_bio": true,
+          "profile_page": true,
+          "member_directory": true
+        },
+        "custom_emoji_url": null,
+        "custom_emoji_dark_url": null
+      },
+      {
+        "id": 116216603,
+        "name": "Ads Lead",
+        "emoji": "",
+        "color": "#ffffff",
+        "is_public": false,
+        "is_background_enabled": false,
+        "display_format": "label",
+        "display_locations": {
+          "post_bio": true,
+          "profile_page": true,
+          "member_directory": true
+        },
+        "custom_emoji_url": null,
+        "custom_emoji_dark_url": null
+      }
+    ],
+    "body_trix_content": null,
+    "body_for_editor": null,
+    "tiptap_body": {
+      "body": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "There are a variety of ways to do this, but you can do what you suggested by replacing the new file by deleting the existing one and adding the updated one.  However you may not need to create a new chat, it would be better to go into the same chat with the finalized artifact & just make the revision there.  You will be able to see all your artifacts from the past & thats why its good to date them.  Hope that helps.  ",
+                "type": "text",
+                "circle_ios_fallback_text": "There are a variety of ways to do this, but you can do what you suggested by replacing the new file by deleting the existing one and adding the updated one.  However you may not need to create a new chat, it would be better to go into the same chat with the finalized artifact & just make the revision there.  You will be able to see all your artifacts from the past & thats why its good to date them.  Hope that helps.  "
+              }
+            ]
+          }
+        ]
+      },
+      "circle_ios_fallback_text": "There are a variety of ways to do this, but you can do what you suggested by replacing the new file by deleting the existing one and adding the updated one.  However you may not need to create a new chat, it would be better to go into the same chat with the finalized artifact & just make the revision there.  You will be able to see all your artifacts from the past & thats why its good to date them.  Hope that helps.  ",
+      "attachments": [],
+      "inline_attachments": [],
+      "sgids_to_object_map": {},
+      "format": "post",
+      "community_members": [],
+      "entities": [],
+      "group_mentions": [],
+      "polls": []
+    },
+    "policies": {
+      "can_report": false,
+      "can_manage": false,
+      "can_edit": false,
+      "can_destroy": false,
+      "can_bookmark": true
+    },
+    "replies_count": 0,
+    "replies": []
+  }
+]

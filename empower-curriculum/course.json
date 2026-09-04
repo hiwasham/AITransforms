@@ -1,0 +1,722 @@
+{
+  "source": "https://community.empowerlabs.ai",
+  "community": "EMPOWER Labs",
+  "scraped_at": "2026-08-27T21:39:56+00:00",
+  "courses": [
+    {
+      "space_id": 2263196,
+      "name": "Beginner's Guide to Claude",
+      "slug": "beginner-s-guide-to-claude",
+      "space_group": "Welcome",
+      "url": "https://community.empowerlabs.ai/c/beginner-s-guide-to-claude",
+      "sections": [
+        {
+          "id": 748240,
+          "name": "How to Use Claude",
+          "lesson_count": 7,
+          "lessons": [
+            {
+              "id": 2837850,
+              "name": "Lesson 1: Understanding the Interface",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/beginner-s-guide-to-claude/sections/748240/lessons/2837850"
+            },
+            {
+              "id": 2837852,
+              "name": "Lesson 2: Choosing the Pro vs. Max vs. Team Plan",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/beginner-s-guide-to-claude/sections/748240/lessons/2837852"
+            },
+            {
+              "id": 2837854,
+              "name": "Lesson 3: Mastering Chats",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/beginner-s-guide-to-claude/sections/748240/lessons/2837854"
+            },
+            {
+              "id": 2837858,
+              "name": "Lesson 4: Working with Artifacts",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/beginner-s-guide-to-claude/sections/748240/lessons/2837858"
+            },
+            {
+              "id": 2837860,
+              "name": "Lesson 5: Organizing Your Work in Projects",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/beginner-s-guide-to-claude/sections/748240/lessons/2837860"
+            },
+            {
+              "id": 2837867,
+              "name": "Lesson 6: Effective Prompting",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/beginner-s-guide-to-claude/sections/748240/lessons/2837867"
+            },
+            {
+              "id": 2837873,
+              "name": "Lesson 7: Understanding Privacy in Claude",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/beginner-s-guide-to-claude/sections/748240/lessons/2837873"
+            }
+          ]
+        }
+      ],
+      "lesson_count": 7
+    },
+    {
+      "space_id": 2414943,
+      "name": "Curriculum",
+      "slug": "curriculum-f7e760",
+      "space_group": "Cohort 4",
+      "url": "https://community.empowerlabs.ai/c/curriculum-f7e760",
+      "sections": [
+        {
+          "id": 864454,
+          "name": "Getting Started",
+          "lesson_count": 5,
+          "lessons": [
+            {
+              "id": 3281779,
+              "name": "1. Get to Know Circle & Download the Mobile App",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/864454/lessons/3281779"
+            },
+            {
+              "id": 3281821,
+              "name": "2. Set Up for Live Sessions & Office Hours",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/864454/lessons/3281821"
+            },
+            {
+              "id": 3281845,
+              "name": "3. Install Your AI Tool",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/864454/lessons/3281845"
+            },
+            {
+              "id": 3281852,
+              "name": "4. Refresh Your Understanding of Operating Systems",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/864454/lessons/3281852"
+            },
+            {
+              "id": 3281856,
+              "name": "5. Introduce Yourself",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/864454/lessons/3281856"
+            }
+          ]
+        },
+        {
+          "id": 886669,
+          "name": "Live Session 1 : Tech Setup & Overview",
+          "lesson_count": 4,
+          "lessons": [
+            {
+              "id": 3357895,
+              "name": "Live Session 1: Replay",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/886669/lessons/3357895"
+            },
+            {
+              "id": 3359709,
+              "name": "Session 1 : Tech Setup & Overview",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/886669/lessons/3359709"
+            },
+            {
+              "id": 3357898,
+              "name": "Exercise 1.1: Create Your Master Prompt v.1",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/886669/lessons/3357898"
+            },
+            {
+              "id": 3357914,
+              "name": "Google Drive Master Prompt Archive Protocol (optional)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/886669/lessons/3357914"
+            }
+          ]
+        },
+        {
+          "id": 887007,
+          "name": "Live Session 2: The Invisible Structure of Business",
+          "lesson_count": 9,
+          "lessons": [
+            {
+              "id": 3359091,
+              "name": "Live Session 2: Replay",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/887007/lessons/3359091"
+            },
+            {
+              "id": 3359092,
+              "name": "Exercise 2.1: Know Your Customer Lifecycle",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/887007/lessons/3359092"
+            },
+            {
+              "id": 3359099,
+              "name": "Quiz 2.1: Test Your Understanding of the Customer Lifecycle",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/887007/lessons/3359099"
+            },
+            {
+              "id": 3372391,
+              "name": "Exercise 2.2: Explore the Three Layers of Business Processes",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/887007/lessons/3372391"
+            },
+            {
+              "id": 3372397,
+              "name": "Quiz 2.2: Test Your Understanding of the Three Layers of Business Processes",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/887007/lessons/3372397"
+            },
+            {
+              "id": 3359154,
+              "name": "Exercise 2.3: Learn How RACI Connects People and Process",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/887007/lessons/3359154"
+            },
+            {
+              "id": 3359158,
+              "name": "Quiz 2.3: Test Your Understanding of RACI Charts",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/887007/lessons/3359158"
+            },
+            {
+              "id": 3359191,
+              "name": "Exercise 2.4: Add \"Shared Language\" to Your Master Prompt",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/887007/lessons/3359191"
+            },
+            {
+              "id": 3359208,
+              "name": "Exercise 2.5: Add Your Resources to Your Master Prompt",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/887007/lessons/3359208"
+            }
+          ]
+        },
+        {
+          "id": 892608,
+          "name": "Live Session 3: The EMPOWER Operating System",
+          "lesson_count": 9,
+          "lessons": [
+            {
+              "id": 3381088,
+              "name": "Live Session 3: Replay",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/892608/lessons/3381088"
+            },
+            {
+              "id": 3381151,
+              "name": "Exercise 3.1: Run the Assessment (Sale to Delivery)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/892608/lessons/3381151"
+            },
+            {
+              "id": 3381155,
+              "name": "Exercise 3.2: Discover the 4-Level Documentation Framework",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/892608/lessons/3381155"
+            },
+            {
+              "id": 3381276,
+              "name": "Quiz 3.2: Test Your Understanding of the 4-Level Documentation Framework",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/892608/lessons/3381276"
+            },
+            {
+              "id": 3381291,
+              "name": "Exercise 3.3: Add the 4-Level Documentation Framework to Your Master Prompt",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/892608/lessons/3381291"
+            },
+            {
+              "id": 3381293,
+              "name": "Exercise 3.4: Explore AI-First Process Creation",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/892608/lessons/3381293"
+            },
+            {
+              "id": 3381300,
+              "name": "Quiz 3.4: Test Your Understanding of AI-First Process Creation",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/892608/lessons/3381300"
+            },
+            {
+              "id": 3381359,
+              "name": "Exercise 3.5: Create the Level 1 & 2 SOP (Sale to Delivery)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/892608/lessons/3381359"
+            },
+            {
+              "id": 3381402,
+              "name": "Exercise 3.6:  Register Your Organization",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/892608/lessons/3381402"
+            }
+          ]
+        },
+        {
+          "id": 895381,
+          "name": "Live Session 4: Expansion Capability",
+          "lesson_count": 8,
+          "lessons": [
+            {
+              "id": 3391927,
+              "name": "Live Session 4: Replay",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/895381/lessons/3391927"
+            },
+            {
+              "id": 3391958,
+              "name": "Exercise 4.1: Add the 5 Rs to Your Master Prompt",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/895381/lessons/3391958"
+            },
+            {
+              "id": 3391960,
+              "name": "Exercise 4.2: Run the Assessment (Delivery to Success)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/895381/lessons/3391960"
+            },
+            {
+              "id": 3391961,
+              "name": "Exercise 4.3: Map Out Your Customer Journey & Ascension Points",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/895381/lessons/3391961"
+            },
+            {
+              "id": 3391966,
+              "name": "Exercise 4.4: Create the Level 1 & 2 SOP (Delivery to Success)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/895381/lessons/3391966"
+            },
+            {
+              "id": 3391969,
+              "name": "Exercise 4.5: Create Your Priority Implementation Matrix",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/895381/lessons/3391969"
+            },
+            {
+              "id": 3391972,
+              "name": "Exercise 4.6: Organize Your SOPs",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/895381/lessons/3391972"
+            },
+            {
+              "id": 3405524,
+              "name": "Exercise 4.7:  Add Core Process to Stage 3",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/895381/lessons/3405524"
+            }
+          ]
+        },
+        {
+          "id": 899123,
+          "name": "Live Session 5: Marketing & Brand Equity",
+          "lesson_count": 8,
+          "lessons": [
+            {
+              "id": 3405888,
+              "name": "Live Session 5: Replay",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/899123/lessons/3405888"
+            },
+            {
+              "id": 3405890,
+              "name": "Exercise 5.1: Research Your Competitors (Optional)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/899123/lessons/3405890"
+            },
+            {
+              "id": 3406078,
+              "name": "Exercise 5.2: Craft Your UVP v1",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/899123/lessons/3406078"
+            },
+            {
+              "id": 3406079,
+              "name": "Exercise 5.3 : Run the Assessment (Market to Lead)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/899123/lessons/3406079"
+            },
+            {
+              "id": 3406080,
+              "name": "Exercise 5.4: Analyze Your Unit Economics (Fractional CRO)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/899123/lessons/3406080"
+            },
+            {
+              "id": 3406107,
+              "name": "Exercise 5.5: Create Level 1 & 2 SOP (Market to Lead)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/899123/lessons/3406107"
+            },
+            {
+              "id": 3406115,
+              "name": "Exercise 5.6: Draft Inbound Content Marketing Material (Optional)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/899123/lessons/3406115"
+            },
+            {
+              "id": 3406117,
+              "name": "Exercise 5.7: Add Core Process to Stage 3",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/899123/lessons/3406117"
+            }
+          ]
+        },
+        {
+          "id": 901140,
+          "name": "Live Session 6: Profitability Metrics",
+          "lesson_count": 6,
+          "lessons": [
+            {
+              "id": 3421025,
+              "name": "Live Session 6: Replay",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/901140/lessons/3421025"
+            },
+            {
+              "id": 3421028,
+              "name": "Exercise 6.1: Run the Assessment (Financial Performance Management)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/901140/lessons/3421028"
+            },
+            {
+              "id": 3421039,
+              "name": "Exercise 6.2: Create the Level 1 & 2 SOP (Financial Performance Management) (Optional)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/901140/lessons/3421039"
+            },
+            {
+              "id": 3421040,
+              "name": "Exercise 6.3: Build a Financial Spreadsheet with Claude (Optional)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/901140/lessons/3421040"
+            },
+            {
+              "id": 3421042,
+              "name": "Exercise 6.4: Use Claude as Your Fractional CFO (Optional)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/901140/lessons/3421042"
+            },
+            {
+              "id": 3414676,
+              "name": "Exercise 6.5: Add Core Process to Stage 3",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/901140/lessons/3414676"
+            }
+          ]
+        },
+        {
+          "id": 905447,
+          "name": "Live Session 7: Offering & Sales Effectiveness",
+          "lesson_count": 4,
+          "lessons": [
+            {
+              "id": 3429683,
+              "name": "Live Session 7: Replay",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/905447/lessons/3429683"
+            },
+            {
+              "id": 3429685,
+              "name": "Exercise 7.1: Run the Assessment (Lead to Sale)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/905447/lessons/3429685"
+            },
+            {
+              "id": 3429686,
+              "name": "Exercise 7.2: Create the Level 1 & 2 SOP (Lead to Sale) (Optional)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/905447/lessons/3429686"
+            },
+            {
+              "id": 3429693,
+              "name": "Exercise 7.3: Add Core Process to Stage 3",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/905447/lessons/3429693"
+            }
+          ]
+        },
+        {
+          "id": 922314,
+          "name": "Live Session 8: Workforce & Leadership",
+          "lesson_count": 5,
+          "lessons": [
+            {
+              "id": 3493731,
+              "name": "Live Session 8: Replay",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/922314/lessons/3493731"
+            },
+            {
+              "id": 3493733,
+              "name": "Exercise 8.1: Run the Workforce & Leadership Diagnostic",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/922314/lessons/3493733"
+            },
+            {
+              "id": 3493734,
+              "name": "Exercise 8.2: Create Level 1 & 2 SOP (Hire to Retire) (Optional)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/922314/lessons/3493734"
+            },
+            {
+              "id": 3493735,
+              "name": "Exercise 8.3: Add and Run the AI Hiring Protocol (Optional)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/922314/lessons/3493735"
+            },
+            {
+              "id": 3493737,
+              "name": "Exercise 8.4: Add Core Process to Stage 3",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/922314/lessons/3493737"
+            }
+          ]
+        },
+        {
+          "id": 931277,
+          "name": "Live Session 9: Execution Systems",
+          "lesson_count": 10,
+          "lessons": [
+            {
+              "id": 3530699,
+              "name": "Live Session 9: Replay",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/931277/lessons/3530699"
+            },
+            {
+              "id": 3530702,
+              "name": "Exercise 9.1: Build and run an Execution Systems Assessment Prompt",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/931277/lessons/3530702"
+            },
+            {
+              "id": 3530703,
+              "name": "Exercise 9.2: Prepare for Implementation",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/931277/lessons/3530703"
+            },
+            {
+              "id": 3530704,
+              "name": "Exercise 9.3: Create Your Initial Implementation Plan",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/931277/lessons/3530704"
+            },
+            {
+              "id": 3530705,
+              "name": "Read This Before Proceeding to the Optional Exercises",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/931277/lessons/3530705"
+            },
+            {
+              "id": 3530706,
+              "name": "Exercise 9.4: Design a Process Quality Management System (Optional)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/931277/lessons/3530706"
+            },
+            {
+              "id": 3530707,
+              "name": "Exercise 9.5: Run Advanced Process Optimization (Optional)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/931277/lessons/3530707"
+            },
+            {
+              "id": 3530721,
+              "name": "Exercise 9.6: Create Your Advanced Implementation Plan (Optional)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/931277/lessons/3530721"
+            },
+            {
+              "id": 3530726,
+              "name": "Exercise 9.7: Design an AI-Enhanced Business Intelligence System (Optional)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/931277/lessons/3530726"
+            },
+            {
+              "id": 3532702,
+              "name": "Exercise 9.8: Add Core Process to Stage 3",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/931277/lessons/3532702"
+            }
+          ]
+        },
+        {
+          "id": 938489,
+          "name": "Live Session 10: Robust Market Position",
+          "lesson_count": 7,
+          "lessons": [
+            {
+              "id": 3557900,
+              "name": "Live Session 10: Replay",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/938489/lessons/3557900"
+            },
+            {
+              "id": 3557901,
+              "name": "Exercise 10.1: Create Level 1 & 2 SOP (Product/Service Design)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/938489/lessons/3557901"
+            },
+            {
+              "id": 3557902,
+              "name": "Exercise 10.2: Run the AI-First Competitor Threat Analysis (Optional)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/938489/lessons/3557902"
+            },
+            {
+              "id": 3557905,
+              "name": "Exercise 10.3: Try the Expansion Revenue Calculator (Optional)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/938489/lessons/3557905"
+            },
+            {
+              "id": 3557907,
+              "name": "Exercise 10.4: Map Out Your Current Market Position & Expansion Strategy (Optional)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/938489/lessons/3557907"
+            },
+            {
+              "id": 3557908,
+              "name": "Exercise 10.5: Optimize Your Product Portfolio (Optional)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/938489/lessons/3557908"
+            },
+            {
+              "id": 3557910,
+              "name": "Exercise 10.6: Try Additional Prompts for Robust Market Position (Optional)",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/938489/lessons/3557910"
+            }
+          ]
+        },
+        {
+          "id": 941015,
+          "name": "Live Session 11: Sustainable AI Integration",
+          "lesson_count": 3,
+          "lessons": [
+            {
+              "id": 3567655,
+              "name": "Live Session 11: Replay",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/941015/lessons/3567655"
+            },
+            {
+              "id": 3567656,
+              "name": "Exercise 11.1: Export Your Master Prompt",
+              "status": "draft",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/941015/lessons/3567656"
+            },
+            {
+              "id": 3574927,
+              "name": "Exercise 11.1: Clean Up your Master Prompt",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/941015/lessons/3574927"
+            }
+          ]
+        },
+        {
+          "id": 947443,
+          "name": "Live Session 12: Strategic Alignment and Team Buildout",
+          "lesson_count": 2,
+          "lessons": [
+            {
+              "id": 3591133,
+              "name": "Live Session 12: Replay",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/947443/lessons/3591133"
+            },
+            {
+              "id": 3591137,
+              "name": "Take the Final Feedback Survey & Book Your Implementation Call",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/947443/lessons/3591137"
+            }
+          ]
+        },
+        {
+          "id": 872005,
+          "name": "FAQs",
+          "lesson_count": 5,
+          "lessons": [
+            {
+              "id": 3304985,
+              "name": "What do I do if I have a question?",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/872005/lessons/3304985"
+            },
+            {
+              "id": 3305032,
+              "name": "How do I join the live sessions and office hours?",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/872005/lessons/3305032"
+            },
+            {
+              "id": 3305041,
+              "name": "Where do I find the recordings of live sessions and office hours and when will they be posted?",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/872005/lessons/3305041"
+            },
+            {
+              "id": 3305045,
+              "name": "How do I update my email address on Circle?",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/872005/lessons/3305045"
+            },
+            {
+              "id": 3305047,
+              "name": "Can I use my own AI meeting agent or note-taker during live sessions?",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/872005/lessons/3305047"
+            }
+          ]
+        },
+        {
+          "id": 899088,
+          "name": "Office Hours",
+          "lesson_count": 5,
+          "lessons": [
+            {
+              "id": 3405759,
+              "name": "Office Hours 1",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/899088/lessons/3405759"
+            },
+            {
+              "id": 3436979,
+              "name": "Office Hours 2",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/899088/lessons/3436979"
+            },
+            {
+              "id": 3472650,
+              "name": "Office Hours 3",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/899088/lessons/3472650"
+            },
+            {
+              "id": 3513055,
+              "name": "Office Hours 4",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/899088/lessons/3513055"
+            },
+            {
+              "id": 3547855,
+              "name": "Office Hours 5",
+              "status": "published",
+              "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/899088/lessons/3547855"
+            }
+          ]
+        }
+      ],
+      "lesson_count": 90
+    }
+  ],
+  "total_lessons": 97
+}

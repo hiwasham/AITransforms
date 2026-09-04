@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/fa`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/ar`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/apply`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/ai-audit`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/fa/apply`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/ar/apply`, changeFrequency: "monthly", priority: 0.7 },
   ];

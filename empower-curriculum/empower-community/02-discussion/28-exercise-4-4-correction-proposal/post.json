@@ -1,0 +1,176 @@
+{
+  "id": 29354007,
+  "name": "Exercise 4.4 correction proposal",
+  "slug": "exercise-4-4-correction-proposal",
+  "type": "Posts::Basic",
+  "status": "published",
+  "user_id": 52764785,
+  "published_at": "2026-02-04T17:16:52.894Z",
+  "updated_at": "2026-02-08T23:15:58.484Z",
+  "created_at": "2026-02-04T17:16:52.894Z",
+  "hide_meta_info": false,
+  "community_member_id": 75976965,
+  "is_truncation_disabled": null,
+  "hide_from_featured_areas": false,
+  "flagged_for_approval_at": null,
+  "pinned_at": null,
+  "internal_custom_html": null,
+  "is_comments_enabled": true,
+  "is_liking_enabled": true,
+  "share_post_enabled": null,
+  "share_uid": null,
+  "minimal_layout": false,
+  "show_post_teaser": false,
+  "editor": "tiptap",
+  "is_comments_closed": false,
+  "is_comments_disabled": false,
+  "is_liking_disabled": false,
+  "display_title": "Exercise 4.4 correction proposal",
+  "cover_image": null,
+  "cover_image_url": null,
+  "cover_image_variants": {},
+  "cardview_thumbnail": null,
+  "cardview_thumbnail_url": null,
+  "cardview_image_url": null,
+  "space_name": "Discussion",
+  "space_slug": "discussion-b92449",
+  "community_slug": "empower-labs",
+  "space_id": 2414947,
+  "pin_to_top": false,
+  "pinned_at_top_of_space": false,
+  "bookmark_id": null,
+  "topics": [
+    336020,
+    336022
+  ],
+  "community_member": {
+    "id": 75976965,
+    "user_id": 52764785,
+    "public_uid": "8de5ec09",
+    "first_name": "Beni",
+    "last_name": "Hirt",
+    "name": "Beni Hirt",
+    "admin": null,
+    "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzUyNzY0Nzg1P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--b817a665fc97e58615c10d19c1983348a13477db",
+    "type": "CommunityMember",
+    "headline": "CEO",
+    "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNzU5NzY5NjU_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--528925d008f14d65deac105e22a69408276832d8",
+    "avatar_url": "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRFhQUXdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--feafb3ab3c9d6f6bfeb7edcee6adab96c6cb0425/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJc0FXa0NMQUU2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--86d5a93b1fb9d9a40ce4e61c041294c46ab790a5/Beni_ProfileSquare@3x.png"
+  },
+  "conversation_summary_overview": "",
+  "body_trix_content": "",
+  "body_for_editor": null,
+  "truncated_content": "Hi, in the Exercise 4.4 description in the curriculum (Create the Level 1 & 2 SOP (Delivery to Success)) is a mismatch with the Google Doc “Cohort 4 Prompt”:\n\nCurriculum says: “Copy and paste prompt 1 into a new chat and label it “Delivery to Success S...",
+  "show_more": true,
+  "tiptap_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hi, in the Exercise 4.4 description in the curriculum (Create the Level 1 & 2 SOP (Delivery to Success)) is a mismatch with the Google Doc “Cohort 4 Prompt”:",
+              "type": "text",
+              "circle_ios_fallback_text": "Hi, in the Exercise 4.4 description in the curriculum (Create the Level 1 & 2 SOP (Delivery to Success)) is a mismatch with the Google Doc “Cohort 4 Prompt”:"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Curriculum says: “Copy and paste prompt 1 into a ",
+              "type": "text",
+              "circle_ios_fallback_text": "Curriculum says: “Copy and paste prompt 1 into a "
+            },
+            {
+              "text": "new",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "new"
+            },
+            {
+              "text": " chat and label it “Delivery to Success SOPs”  within your Master Prompt project”.",
+              "type": "text",
+              "circle_ios_fallback_text": " chat and label it “Delivery to Success SOPs”  within your Master Prompt project”."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Google Doc says: “Copy and paste prompt 1 into the ",
+              "type": "text",
+              "circle_ios_fallback_text": "Google Doc says: “Copy and paste prompt 1 into the "
+            },
+            {
+              "text": "same",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "same"
+            },
+            {
+              "text": " chat you used for the Delivery to Success assessment in Claude.“",
+              "type": "text",
+              "circle_ios_fallback_text": " chat you used for the Delivery to Success assessment in Claude.“"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I presume Google Doc is right because the prompt says “Generate a Level 1 Core Process SOP for my company, based on ",
+              "type": "text",
+              "circle_ios_fallback_text": "I presume Google Doc is right because the prompt says “Generate a Level 1 Core Process SOP for my company, based on "
+            },
+            {
+              "text": "this conversation",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "this conversation"
+            },
+            {
+              "text": "…”",
+              "type": "text",
+              "circle_ios_fallback_text": "…”"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Correct?",
+              "type": "text",
+              "circle_ios_fallback_text": "Correct?"
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "Hi, in the Exercise 4.4 description in the curriculum (Create the Level 1 & 2 SOP (Delivery to Success)) is a mismatch with the Google Doc “Cohort 4 Prompt”:Curriculum says: “Copy and paste prompt 1 into a new chat and label it “Delivery to Success SOPs”  within your Master Prompt project”.Google Doc says: “Copy and paste prompt 1 into the same chat you used for the Delivery to Success assessment in Claude.“I presume Google Doc is right because the prompt says “Generate a Level 1 Core Process SOP for my company, based on this conversation…”Correct?",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  }
+}

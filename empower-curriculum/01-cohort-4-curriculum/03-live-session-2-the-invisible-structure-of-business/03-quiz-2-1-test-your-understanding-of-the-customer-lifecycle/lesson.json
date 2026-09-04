@@ -1,0 +1,167 @@
+{
+  "id": 3359099,
+  "name": "Quiz 2.1: Test Your Understanding of the Customer Lifecycle",
+  "status": "published",
+  "featured_media_enabled": true,
+  "download_featured_media": false,
+  "created_at": "2026-01-26T17:34:46.918Z",
+  "updated_at": "2026-01-28T20:37:38.001Z",
+  "comments_enabled": false,
+  "default_tab": "curriculum",
+  "enforce_featured_media_completion": false,
+  "autocomplete_on_featured_media_completion": true,
+  "dripped_at": null,
+  "is_dripped": true,
+  "needs_to_complete_previous_lesson": false,
+  "completed": true,
+  "notify_students_enabled": false,
+  "bookmark_id": null,
+  "serialized_rich_text_body": null,
+  "rich_text_body": {},
+  "chat_room_uuid": "207d41bb-a9c0-4429-991f-ef66b0c0bbc6",
+  "latest_quiz_attempt_id": 4849640,
+  "quiz": {
+    "id": 103175,
+    "passing_grade": 80,
+    "enforce_passing_grade": false,
+    "hide_answers": false,
+    "description": null,
+    "questions": [
+      {
+        "id": 497910,
+        "question_type": "single_choice",
+        "statement": "1. What distinguishes a \"great business\" from an \"average business\" according to the lesson?",
+        "options": [
+          {
+            "id": 1776808,
+            "value": " Great businesses have larger marketing budgets and more employees"
+          },
+          {
+            "id": 1776809,
+            "value": "Great businesses create a virtuous cycle where customer success generates new leads and improves marketing"
+          },
+          {
+            "id": 1776810,
+            "value": " Great businesses focus only on acquiring new customers rather than serving existing ones"
+          },
+          {
+            "id": 1776811,
+            "value": " Great businesses end their process after successful delivery to avoid additional costsn 4"
+          },
+          {
+            "id": 1776812,
+            "value": " Great businesses use more advanced technology in their operations"
+          }
+        ]
+      },
+      {
+        "id": 497911,
+        "question_type": "single_choice",
+        "statement": "2. In the customer lifecycle, what specific activities happen during the \"Success to Lead\" stage?",
+        "options": [
+          {
+            "id": 1776813,
+            "value": "Initial marketing campaigns, social media advertising, and brand awareness"
+          },
+          {
+            "id": 1776814,
+            "value": " Product development, pricing strategy, and competitive analysis"
+          },
+          {
+            "id": 1776815,
+            "value": " Referrals, testimonials, case studies, and repeat business from successful customers"
+          },
+          {
+            "id": 1776816,
+            "value": " Lead qualification, needs assessment, and sales presentations"
+          },
+          {
+            "id": 1776817,
+            "value": " Order fulfillment, shipping logistics, and inventory management"
+          }
+        ]
+      },
+      {
+        "id": 497912,
+        "question_type": "single_choice",
+        "statement": "3. According to the lesson, what is the primary goal of Stage 1 in the AI integration program?",
+        "options": [
+          {
+            "id": 1776818,
+            "value": " To completely automate all business processes using AI"
+          },
+          {
+            "id": 1776819,
+            "value": "To eliminate the need for human involvement in customer service"
+          },
+          {
+            "id": 1776820,
+            "value": " To have existing processes fully documented"
+          },
+          {
+            "id": 1776821,
+            "value": "To increase marketing spend by 50%"
+          },
+          {
+            "id": 1776822,
+            "value": " To hire AI specialists for each department"
+          }
+        ]
+      },
+      {
+        "id": 497913,
+        "question_type": "single_choice",
+        "statement": "4. Which of the following best describes the relationship between \"Success to Market\" and overall business growth?",
+        "options": [
+          {
+            "id": 1776823,
+            "value": "Customer reviews and success stories become powerful marketing content that attracts new customers"
+          },
+          {
+            "id": 1776824,
+            "value": " It requires hiring a dedicated success team separate from marketing"
+          },
+          {
+            "id": 1776825,
+            "value": " It focuses on reducing marketing costs by eliminating traditional advertising"
+          },
+          {
+            "id": 1776826,
+            "value": " It only applies to technology companies with digital products"
+          },
+          {
+            "id": 1776827,
+            "value": " It involves purchasing customer data from third-party providers"
+          }
+        ]
+      },
+      {
+        "id": 497914,
+        "question_type": "single_choice",
+        "statement": "5. What is the stated reason for using consistent terminology throughout the program?",
+        "options": [
+          {
+            "id": 1776828,
+            "value": " To make the course materials easier to copyright and protect"
+          },
+          {
+            "id": 1776829,
+            "value": " To ensure all participants and AI tools can refer to the same stages of the customer lifecycle"
+          },
+          {
+            "id": 1776830,
+            "value": " To comply with industry regulations and standards"
+          },
+          {
+            "id": 1776831,
+            "value": " To make it easier to translate the course into other languages"
+          },
+          {
+            "id": 1776832,
+            "value": " To align with specific software requirements for automation"
+          }
+        ]
+      }
+    ]
+  }
+}

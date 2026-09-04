@@ -1,0 +1,653 @@
+[
+  {
+    "id": 93731285,
+    "parent_comment_id": null,
+    "post_id": 29053361,
+    "user_id": 50501199,
+    "editor": "tiptap",
+    "flagged_for_approval_at": null,
+    "created_at": "2026-01-27T15:43:38.313Z",
+    "updated_at": "2026-01-27T15:43:38.337Z",
+    "is_replying_enabled": true,
+    "is_liking_enabled": true,
+    "bookmark_id": null,
+    "is_liked": false,
+    "likes_count": 0,
+    "unresolved_flagged_reports_count": 0,
+    "show_url": "https://community.empowerlabs.ai/c/discussion-b92449/hey-everyone-quick-update-regarding-session-1#comment_wrapper_93731285",
+    "author_type": "CommunityMember",
+    "community_member": {
+      "id": 75923570,
+      "user_id": 50501199,
+      "public_uid": "c00c6792",
+      "first_name": "Romain",
+      "last_name": "Collignon",
+      "name": "Romain Collignon",
+      "admin": null,
+      "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzUwNTAxMTk5P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--1dee4fd8df63df3bacc82ede7019444b9399471a",
+      "type": "CommunityMember",
+      "headline": "Founder",
+      "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNzU5MjM1NzA_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--5f51b6ccf5764d7b7ce86d193efd6514c299c7d3",
+      "avatar_url": "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQlVGUGdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--9e976b75b324a63a4041ff0a6fb58819bd36ec9a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJc0FXa0NMQUU2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--86d5a93b1fb9d9a40ce4e61c041294c46ab790a5/avatar_75923570.jpg"
+    },
+    "member_tags_html": "\n\n          <label class=\"member-tags--label\" style=\"background-color: #ffffff;\">\n            <span class=\"name\">Cohort 4</span>\n          </label>\n",
+    "member_tags": [
+      {
+        "id": 137342629,
+        "name": "Cohort 4",
+        "emoji": "",
+        "color": "#ffffff",
+        "is_public": true,
+        "is_background_enabled": false,
+        "display_format": "label",
+        "display_locations": {
+          "post_bio": true,
+          "profile_page": true,
+          "member_directory": true
+        },
+        "custom_emoji_url": null,
+        "custom_emoji_dark_url": null
+      }
+    ],
+    "body_trix_content": null,
+    "body_for_editor": null,
+    "tiptap_body": {
+      "body": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Thank you, Josh, for the heads up.",
+                "type": "text",
+                "circle_ios_fallback_text": "Thank you, Josh, for the heads up."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "I couldn’t attend yesterday. I definitely appreciate the resources you mentioned. One idea could be to access a recording from a previous cohort — not sure if that makes sense, if it’s possible, or even necessary. In any case, I’ll go through the materials you will share.",
+                "type": "text",
+                "circle_ios_fallback_text": "I couldn’t attend yesterday. I definitely appreciate the resources you mentioned. One idea could be to access a recording from a previous cohort — not sure if that makes sense, if it’s possible, or even necessary. In any case, I’ll go through the materials you will share."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Thanks again,",
+                "type": "text",
+                "circle_ios_fallback_text": "Thanks again,"
+              },
+              {
+                "type": "hardBreak",
+                "circle_ios_fallback_text": "\n"
+              },
+              {
+                "text": "Romain",
+                "type": "text",
+                "circle_ios_fallback_text": "Romain"
+              }
+            ]
+          }
+        ]
+      },
+      "circle_ios_fallback_text": "Thank you, Josh, for the heads up.I couldn’t attend yesterday. I definitely appreciate the resources you mentioned. One idea could be to access a recording from a previous cohort — not sure if that makes sense, if it’s possible, or even necessary. In any case, I’ll go through the materials you will share.Thanks again,\nRomain",
+      "attachments": [],
+      "inline_attachments": [],
+      "sgids_to_object_map": {},
+      "format": "post",
+      "community_members": [],
+      "entities": [],
+      "group_mentions": [],
+      "polls": []
+    },
+    "policies": {
+      "can_report": true,
+      "can_manage": false,
+      "can_edit": false,
+      "can_destroy": false,
+      "can_bookmark": true
+    },
+    "replies_count": 2,
+    "replies": [
+      {
+        "id": 93738109,
+        "parent_comment_id": 93731285,
+        "post_id": 29053361,
+        "user_id": 30774298,
+        "editor": "tiptap",
+        "flagged_for_approval_at": null,
+        "created_at": "2026-01-27T16:43:38.529Z",
+        "updated_at": "2026-01-27T17:23:07.803Z",
+        "is_replying_enabled": true,
+        "is_liking_enabled": true,
+        "bookmark_id": null,
+        "is_liked": false,
+        "likes_count": 0,
+        "unresolved_flagged_reports_count": 0,
+        "show_url": "https://community.empowerlabs.ai/c/discussion-b92449/hey-everyone-quick-update-regarding-session-1#comment_wrapper_93738109",
+        "author_type": "CommunityMember",
+        "community_member": {
+          "id": 51521280,
+          "user_id": 30774298,
+          "public_uid": "0cb8998d",
+          "first_name": "Josh",
+          "last_name": "Cordes",
+          "name": "Josh Cordes",
+          "admin": true,
+          "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzMwNzc0Mjk4P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--02e79904909f662e09046f35108f48e28a901978",
+          "type": "CommunityMember",
+          "headline": "Customer Acquisition Leader",
+          "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTE1MjEyODA_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--48e1ccf99069c61215c8c923551e00b75da7659b",
+          "avatar_url": "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSTFsY3dZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--7bc1b33cca113c20a49c2d97402b17ac6fb5183a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lKYW5CbFp3WTZCa1ZVT2hSeVpYTnBlbVZmZEc5ZmJHbHRhWFJiQjJrQ0xBRnBBaXdCT2dwellYWmxjbnNHT2dwemRISnBjRlE9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--ef295ed08e817a599d692fd6d8761673d3ed547f/Headshot.jpeg"
+        },
+        "member_tags_html": "  <span class=\"author__is-admin\">\n    admin\n  </span>\n\n",
+        "member_tags": [
+          {
+            "id": 115121971,
+            "name": "Acquira",
+            "emoji": "",
+            "color": "#ffffff",
+            "is_public": false,
+            "is_background_enabled": false,
+            "display_format": "label",
+            "display_locations": {
+              "post_bio": true,
+              "profile_page": true,
+              "member_directory": true
+            },
+            "custom_emoji_url": null,
+            "custom_emoji_dark_url": null
+          },
+          {
+            "id": 116216603,
+            "name": "Ads Lead",
+            "emoji": "",
+            "color": "#ffffff",
+            "is_public": false,
+            "is_background_enabled": false,
+            "display_format": "label",
+            "display_locations": {
+              "post_bio": true,
+              "profile_page": true,
+              "member_directory": true
+            },
+            "custom_emoji_url": null,
+            "custom_emoji_dark_url": null
+          }
+        ],
+        "body_trix_content": null,
+        "body_for_editor": null,
+        "tiptap_body": {
+          "body": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "mention",
+                    "attrs": {
+                      "sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNzU5MjM1NzA_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--5f51b6ccf5764d7b7ce86d193efd6514c299c7d3"
+                    },
+                    "circle_ios_fallback_text": "@Romain Collignon"
+                  },
+                  {
+                    "text": " I can share the first session from the last cohort with you if you’d like.  Some things to keep in mind though: The sessions along with dates will all be wrong, and when we share the screen showing how to build you Master Prompt version 1, there have been some subtle changes as Claude has updated.  With that said, I will upload it with that disclaimer if helpful for you & everyone else.  ",
+                    "type": "text",
+                    "circle_ios_fallback_text": " I can share the first session from the last cohort with you if you’d like.  Some things to keep in mind though: The sessions along with dates will all be wrong, and when we share the screen showing how to build you Master Prompt version 1, there have been some subtle changes as Claude has updated.  With that said, I will upload it with that disclaimer if helpful for you & everyone else.  "
+                  }
+                ]
+              }
+            ]
+          },
+          "circle_ios_fallback_text": "@Romain Collignon I can share the first session from the last cohort with you if you’d like.  Some things to keep in mind though: The sessions along with dates will all be wrong, and when we share the screen showing how to build you Master Prompt version 1, there have been some subtle changes as Claude has updated.  With that said, I will upload it with that disclaimer if helpful for you & everyone else.  ",
+          "attachments": [],
+          "inline_attachments": [],
+          "sgids_to_object_map": {
+            "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNzU5MjM1NzA_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--5f51b6ccf5764d7b7ce86d193efd6514c299c7d3": {
+              "id": 75923570,
+              "name": "Romain Collignon",
+              "user_id": 50501199,
+              "avatar_url": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQlVGUGdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--9e976b75b324a63a4041ff0a6fb58819bd36ec9a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJc0FXa0NMQUU2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--86d5a93b1fb9d9a40ce4e61c041294c46ab790a5/avatar_75923570.jpg",
+              "public_uid": "c00c6792",
+              "sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNzU5MjM1NzA_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--5f51b6ccf5764d7b7ce86d193efd6514c299c7d3",
+              "type": "CommunityMember",
+              "public_profile_url": "https://community.empowerlabs.ai/u/c00c6792",
+              "circle_ios_fallback_text": "@Romain Collignon"
+            }
+          },
+          "format": "post",
+          "community_members": [
+            {
+              "id": 75923570,
+              "name": "Romain Collignon",
+              "user_id": 50501199,
+              "avatar_url": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQlVGUGdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--9e976b75b324a63a4041ff0a6fb58819bd36ec9a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJc0FXa0NMQUU2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--86d5a93b1fb9d9a40ce4e61c041294c46ab790a5/avatar_75923570.jpg",
+              "public_uid": "c00c6792",
+              "sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNzU5MjM1NzA_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--5f51b6ccf5764d7b7ce86d193efd6514c299c7d3",
+              "type": "CommunityMember",
+              "public_profile_url": "https://community.empowerlabs.ai/u/c00c6792",
+              "circle_ios_fallback_text": "@Romain Collignon"
+            }
+          ],
+          "entities": [],
+          "group_mentions": [],
+          "polls": []
+        },
+        "policies": {
+          "can_report": false,
+          "can_manage": false,
+          "can_edit": false,
+          "can_destroy": false,
+          "can_bookmark": true
+        }
+      },
+      {
+        "id": 93828412,
+        "parent_comment_id": 93731285,
+        "post_id": 29053361,
+        "user_id": 50501199,
+        "editor": "tiptap",
+        "flagged_for_approval_at": null,
+        "created_at": "2026-01-28T13:19:54.671Z",
+        "updated_at": "2026-01-28T13:19:54.692Z",
+        "is_replying_enabled": true,
+        "is_liking_enabled": true,
+        "bookmark_id": null,
+        "is_liked": false,
+        "likes_count": 0,
+        "unresolved_flagged_reports_count": 0,
+        "show_url": "https://community.empowerlabs.ai/c/discussion-b92449/hey-everyone-quick-update-regarding-session-1#comment_wrapper_93828412",
+        "author_type": "CommunityMember",
+        "community_member": {
+          "id": 75923570,
+          "user_id": 50501199,
+          "public_uid": "c00c6792",
+          "first_name": "Romain",
+          "last_name": "Collignon",
+          "name": "Romain Collignon",
+          "admin": null,
+          "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzUwNTAxMTk5P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--1dee4fd8df63df3bacc82ede7019444b9399471a",
+          "type": "CommunityMember",
+          "headline": "Founder",
+          "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNzU5MjM1NzA_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--5f51b6ccf5764d7b7ce86d193efd6514c299c7d3",
+          "avatar_url": "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQlVGUGdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--9e976b75b324a63a4041ff0a6fb58819bd36ec9a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJc0FXa0NMQUU2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--86d5a93b1fb9d9a40ce4e61c041294c46ab790a5/avatar_75923570.jpg"
+        },
+        "member_tags_html": "\n\n          <label class=\"member-tags--label\" style=\"background-color: #ffffff;\">\n            <span class=\"name\">Cohort 4</span>\n          </label>\n",
+        "member_tags": [
+          {
+            "id": 137342629,
+            "name": "Cohort 4",
+            "emoji": "",
+            "color": "#ffffff",
+            "is_public": true,
+            "is_background_enabled": false,
+            "display_format": "label",
+            "display_locations": {
+              "post_bio": true,
+              "profile_page": true,
+              "member_directory": true
+            },
+            "custom_emoji_url": null,
+            "custom_emoji_dark_url": null
+          }
+        ],
+        "body_trix_content": null,
+        "body_for_editor": null,
+        "tiptap_body": {
+          "body": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "mention",
+                    "attrs": {
+                      "sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTE1MjEyODA_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--48e1ccf99069c61215c8c923551e00b75da7659b"
+                    },
+                    "circle_ios_fallback_text": "@Josh Cordes"
+                  },
+                  {
+                    "text": " Honestly, the PDFs and transcripts covered what I needed. Appreciate it, Josh",
+                    "type": "text",
+                    "circle_ios_fallback_text": " Honestly, the PDFs and transcripts covered what I needed. Appreciate it, Josh"
+                  }
+                ]
+              }
+            ]
+          },
+          "circle_ios_fallback_text": "@Josh Cordes Honestly, the PDFs and transcripts covered what I needed. Appreciate it, Josh",
+          "attachments": [],
+          "inline_attachments": [],
+          "sgids_to_object_map": {
+            "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTE1MjEyODA_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--48e1ccf99069c61215c8c923551e00b75da7659b": {
+              "id": 51521280,
+              "name": "Josh Cordes",
+              "user_id": 30774298,
+              "avatar_url": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSTFsY3dZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--7bc1b33cca113c20a49c2d97402b17ac6fb5183a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lKYW5CbFp3WTZCa1ZVT2hSeVpYTnBlbVZmZEc5ZmJHbHRhWFJiQjJrQ0xBRnBBaXdCT2dwellYWmxjbnNHT2dwemRISnBjRlE9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--ef295ed08e817a599d692fd6d8761673d3ed547f/Headshot.jpeg",
+              "public_uid": "0cb8998d",
+              "sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTE1MjEyODA_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--48e1ccf99069c61215c8c923551e00b75da7659b",
+              "type": "CommunityMember",
+              "public_profile_url": "https://community.empowerlabs.ai/u/0cb8998d",
+              "circle_ios_fallback_text": "@Josh Cordes"
+            }
+          },
+          "format": "post",
+          "community_members": [
+            {
+              "id": 51521280,
+              "name": "Josh Cordes",
+              "user_id": 30774298,
+              "avatar_url": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSTFsY3dZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--7bc1b33cca113c20a49c2d97402b17ac6fb5183a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lKYW5CbFp3WTZCa1ZVT2hSeVpYTnBlbVZmZEc5ZmJHbHRhWFJiQjJrQ0xBRnBBaXdCT2dwellYWmxjbnNHT2dwemRISnBjRlE9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--ef295ed08e817a599d692fd6d8761673d3ed547f/Headshot.jpeg",
+              "public_uid": "0cb8998d",
+              "sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTE1MjEyODA_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--48e1ccf99069c61215c8c923551e00b75da7659b",
+              "type": "CommunityMember",
+              "public_profile_url": "https://community.empowerlabs.ai/u/0cb8998d",
+              "circle_ios_fallback_text": "@Josh Cordes"
+            }
+          ],
+          "entities": [],
+          "group_mentions": [],
+          "polls": []
+        },
+        "policies": {
+          "can_report": true,
+          "can_manage": false,
+          "can_edit": false,
+          "can_destroy": false,
+          "can_bookmark": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 93771237,
+    "parent_comment_id": null,
+    "post_id": 29053361,
+    "user_id": 2711177,
+    "editor": "tiptap",
+    "flagged_for_approval_at": null,
+    "created_at": "2026-01-27T21:39:22.953Z",
+    "updated_at": "2026-01-27T21:39:22.977Z",
+    "is_replying_enabled": true,
+    "is_liking_enabled": true,
+    "bookmark_id": null,
+    "is_liked": false,
+    "likes_count": 0,
+    "unresolved_flagged_reports_count": 0,
+    "show_url": "https://community.empowerlabs.ai/c/discussion-b92449/hey-everyone-quick-update-regarding-session-1#comment_wrapper_93771237",
+    "author_type": "CommunityMember",
+    "community_member": {
+      "id": 52281178,
+      "user_id": 2711177,
+      "public_uid": "858e79fd",
+      "first_name": "Yury",
+      "last_name": null,
+      "name": "Yury",
+      "admin": false,
+      "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIwZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzI3MTExNzc_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiD2F0dGFjaGFibGUGOwBUSSIPZXhwaXJlc19hdAY7AFQw--8b923e4bdfe040bd6be9c8de6f463ac41e891637",
+      "type": "CommunityMember",
+      "headline": "Managing Director",
+      "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTIyODExNzg_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--c7ab39ee805659c276fe6f7766d00574fc1e80bb",
+      "avatar_url": null
+    },
+    "member_tags_html": "\n\n          <label class=\"member-tags--label\" style=\"background-color: #ffffff;\">\n            <span class=\"name\">Beta Cohort</span>\n          </label>\n      <label class=\"member-tags--label label-neutral\" data-tippy-delay=\"0\" data-tippy-arrow=\"true\" data-tippy-size=\"small\" data-tippy-animation=\"fade\"\n             data-tippy-content=\"Cohort 4</a><br>\">\n        <span class=\"name\">+ more</span>\n      </label>\n",
+    "member_tags": [
+      {
+        "id": 115122738,
+        "name": "Beta Cohort",
+        "emoji": "",
+        "color": "#ffffff",
+        "is_public": true,
+        "is_background_enabled": false,
+        "display_format": "label",
+        "display_locations": {
+          "post_bio": true,
+          "profile_page": true,
+          "member_directory": true
+        },
+        "custom_emoji_url": null,
+        "custom_emoji_dark_url": null
+      },
+      {
+        "id": 137347995,
+        "name": "Cohort 4",
+        "emoji": "",
+        "color": "#ffffff",
+        "is_public": true,
+        "is_background_enabled": false,
+        "display_format": "label",
+        "display_locations": {
+          "post_bio": true,
+          "profile_page": true,
+          "member_directory": true
+        },
+        "custom_emoji_url": null,
+        "custom_emoji_dark_url": null
+      }
+    ],
+    "body_trix_content": null,
+    "body_for_editor": null,
+    "tiptap_body": {
+      "body": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "I also couldn’t make it this time; this would be great alternative, ",
+                "type": "text",
+                "circle_ios_fallback_text": "I also couldn’t make it this time; this would be great alternative, "
+              },
+              {
+                "type": "mention",
+                "attrs": {
+                  "sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTE1MjEyODA_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--48e1ccf99069c61215c8c923551e00b75da7659b"
+                },
+                "circle_ios_fallback_text": "@Josh Cordes"
+              },
+              {
+                "text": " ",
+                "type": "text",
+                "circle_ios_fallback_text": " "
+              },
+              {
+                "type": "hardBreak",
+                "circle_ios_fallback_text": "\n"
+              },
+              {
+                "text": "thank you",
+                "type": "text",
+                "circle_ios_fallback_text": "thank you"
+              }
+            ]
+          }
+        ]
+      },
+      "circle_ios_fallback_text": "I also couldn’t make it this time; this would be great alternative, @Josh Cordes \nthank you",
+      "attachments": [],
+      "inline_attachments": [],
+      "sgids_to_object_map": {
+        "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTE1MjEyODA_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--48e1ccf99069c61215c8c923551e00b75da7659b": {
+          "id": 51521280,
+          "name": "Josh Cordes",
+          "user_id": 30774298,
+          "avatar_url": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSTFsY3dZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--7bc1b33cca113c20a49c2d97402b17ac6fb5183a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lKYW5CbFp3WTZCa1ZVT2hSeVpYTnBlbVZmZEc5ZmJHbHRhWFJiQjJrQ0xBRnBBaXdCT2dwellYWmxjbnNHT2dwemRISnBjRlE9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--ef295ed08e817a599d692fd6d8761673d3ed547f/Headshot.jpeg",
+          "public_uid": "0cb8998d",
+          "sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTE1MjEyODA_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--48e1ccf99069c61215c8c923551e00b75da7659b",
+          "type": "CommunityMember",
+          "public_profile_url": "https://community.empowerlabs.ai/u/0cb8998d",
+          "circle_ios_fallback_text": "@Josh Cordes"
+        }
+      },
+      "format": "post",
+      "community_members": [
+        {
+          "id": 51521280,
+          "name": "Josh Cordes",
+          "user_id": 30774298,
+          "avatar_url": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSTFsY3dZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--7bc1b33cca113c20a49c2d97402b17ac6fb5183a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lKYW5CbFp3WTZCa1ZVT2hSeVpYTnBlbVZmZEc5ZmJHbHRhWFJiQjJrQ0xBRnBBaXdCT2dwellYWmxjbnNHT2dwemRISnBjRlE9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--ef295ed08e817a599d692fd6d8761673d3ed547f/Headshot.jpeg",
+          "public_uid": "0cb8998d",
+          "sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTE1MjEyODA_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--48e1ccf99069c61215c8c923551e00b75da7659b",
+          "type": "CommunityMember",
+          "public_profile_url": "https://community.empowerlabs.ai/u/0cb8998d",
+          "circle_ios_fallback_text": "@Josh Cordes"
+        }
+      ],
+      "entities": [],
+      "group_mentions": [],
+      "polls": []
+    },
+    "policies": {
+      "can_report": true,
+      "can_manage": false,
+      "can_edit": false,
+      "can_destroy": false,
+      "can_bookmark": true
+    },
+    "replies_count": 1,
+    "replies": [
+      {
+        "id": 93778824,
+        "parent_comment_id": 93771237,
+        "post_id": 29053361,
+        "user_id": 30774298,
+        "editor": "tiptap",
+        "flagged_for_approval_at": null,
+        "created_at": "2026-01-27T22:59:51.179Z",
+        "updated_at": "2026-01-27T22:59:51.198Z",
+        "is_replying_enabled": true,
+        "is_liking_enabled": true,
+        "bookmark_id": null,
+        "is_liked": false,
+        "likes_count": 0,
+        "unresolved_flagged_reports_count": 0,
+        "show_url": "https://community.empowerlabs.ai/c/discussion-b92449/hey-everyone-quick-update-regarding-session-1#comment_wrapper_93778824",
+        "author_type": "CommunityMember",
+        "community_member": {
+          "id": 51521280,
+          "user_id": 30774298,
+          "public_uid": "0cb8998d",
+          "first_name": "Josh",
+          "last_name": "Cordes",
+          "name": "Josh Cordes",
+          "admin": true,
+          "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzMwNzc0Mjk4P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--02e79904909f662e09046f35108f48e28a901978",
+          "type": "CommunityMember",
+          "headline": "Customer Acquisition Leader",
+          "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTE1MjEyODA_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--48e1ccf99069c61215c8c923551e00b75da7659b",
+          "avatar_url": "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSTFsY3dZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--7bc1b33cca113c20a49c2d97402b17ac6fb5183a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lKYW5CbFp3WTZCa1ZVT2hSeVpYTnBlbVZmZEc5ZmJHbHRhWFJiQjJrQ0xBRnBBaXdCT2dwellYWmxjbnNHT2dwemRISnBjRlE9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--ef295ed08e817a599d692fd6d8761673d3ed547f/Headshot.jpeg"
+        },
+        "member_tags_html": "  <span class=\"author__is-admin\">\n    admin\n  </span>\n\n",
+        "member_tags": [
+          {
+            "id": 115121971,
+            "name": "Acquira",
+            "emoji": "",
+            "color": "#ffffff",
+            "is_public": false,
+            "is_background_enabled": false,
+            "display_format": "label",
+            "display_locations": {
+              "post_bio": true,
+              "profile_page": true,
+              "member_directory": true
+            },
+            "custom_emoji_url": null,
+            "custom_emoji_dark_url": null
+          },
+          {
+            "id": 116216603,
+            "name": "Ads Lead",
+            "emoji": "",
+            "color": "#ffffff",
+            "is_public": false,
+            "is_background_enabled": false,
+            "display_format": "label",
+            "display_locations": {
+              "post_bio": true,
+              "profile_page": true,
+              "member_directory": true
+            },
+            "custom_emoji_url": null,
+            "custom_emoji_dark_url": null
+          }
+        ],
+        "body_trix_content": null,
+        "body_for_editor": null,
+        "tiptap_body": {
+          "body": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "mention",
+                    "attrs": {
+                      "sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTIyODExNzg_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--c7ab39ee805659c276fe6f7766d00574fc1e80bb"
+                    },
+                    "circle_ios_fallback_text": "@Yury"
+                  },
+                  {
+                    "text": " no problem. It’s already been added to the curriculum for you to watch, just see the disclaimer under the video to understand the obvious differences.  Hope to see you on tomorrows live session!  ",
+                    "type": "text",
+                    "circle_ios_fallback_text": " no problem. It’s already been added to the curriculum for you to watch, just see the disclaimer under the video to understand the obvious differences.  Hope to see you on tomorrows live session!  "
+                  }
+                ]
+              }
+            ]
+          },
+          "circle_ios_fallback_text": "@Yury no problem. It’s already been added to the curriculum for you to watch, just see the disclaimer under the video to understand the obvious differences.  Hope to see you on tomorrows live session!  ",
+          "attachments": [],
+          "inline_attachments": [],
+          "sgids_to_object_map": {
+            "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTIyODExNzg_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--c7ab39ee805659c276fe6f7766d00574fc1e80bb": {
+              "id": 52281178,
+              "name": "Yury",
+              "user_id": 2711177,
+              "avatar_url": null,
+              "public_uid": "858e79fd",
+              "sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTIyODExNzg_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--c7ab39ee805659c276fe6f7766d00574fc1e80bb",
+              "type": "CommunityMember",
+              "public_profile_url": "https://community.empowerlabs.ai/u/858e79fd",
+              "circle_ios_fallback_text": "@Yury"
+            }
+          },
+          "format": "post",
+          "community_members": [
+            {
+              "id": 52281178,
+              "name": "Yury",
+              "user_id": 2711177,
+              "avatar_url": null,
+              "public_uid": "858e79fd",
+              "sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTIyODExNzg_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--c7ab39ee805659c276fe6f7766d00574fc1e80bb",
+              "type": "CommunityMember",
+              "public_profile_url": "https://community.empowerlabs.ai/u/858e79fd",
+              "circle_ios_fallback_text": "@Yury"
+            }
+          ],
+          "entities": [],
+          "group_mentions": [],
+          "polls": []
+        },
+        "policies": {
+          "can_report": false,
+          "can_manage": false,
+          "can_edit": false,
+          "can_destroy": false,
+          "can_bookmark": true
+        }
+      }
+    ]
+  }
+]

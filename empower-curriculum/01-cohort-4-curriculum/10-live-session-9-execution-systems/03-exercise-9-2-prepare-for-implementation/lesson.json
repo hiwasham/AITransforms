@@ -1,0 +1,1838 @@
+{
+  "id": 3530703,
+  "name": "Exercise 9.2: Prepare for Implementation",
+  "status": "published",
+  "featured_media_enabled": false,
+  "download_featured_media": false,
+  "created_at": "2026-03-02T11:34:12.908Z",
+  "updated_at": "2026-03-02T19:26:19.780Z",
+  "comments_enabled": false,
+  "default_tab": "curriculum",
+  "enforce_featured_media_completion": false,
+  "autocomplete_on_featured_media_completion": true,
+  "dripped_at": null,
+  "is_dripped": true,
+  "needs_to_complete_previous_lesson": false,
+  "completed": false,
+  "notify_students_enabled": false,
+  "bookmark_id": null,
+  "serialized_rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The following exercises will transform everything you’ve learned and all the work you’ve done so far into action. You'll choose your highest-priority implementation, select your AI Operator, create an implementation plan, and set up your AI systems.",
+              "type": "text",
+              "circle_ios_fallback_text": "The following exercises will transform everything you’ve learned and all the work you’ve done so far into action. You'll choose your highest-priority implementation, select your AI Operator, create an implementation plan, and set up your AI systems."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preparation Before Starting",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Preparation Before Starting"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Before continuing, collect these materials from previous sessions. You'll use them at specific points to get better AI advice.",
+              "type": "text",
+              "circle_ios_fallback_text": "Before continuing, collect these materials from previous sessions. You'll use them at specific points to get better AI advice."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "📊 #1 – All Assessment & Diagnostic Results",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "📊 #1 – All Assessment & Diagnostic Results"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Why:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Shows AI your weakest processes objectively, allowing it to validate priority choices",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "When to use:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Phase 1 (Priority Assessment) - attach when discussing ratings",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "📋 #2 – All Core Process Level 1 SOPs",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "📋 #2 – All Core Process Level 1 SOPs"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Why:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " AI can review your ACTUAL processes vs. giving generic advice and identify specific gaps",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "When to use:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Phase 3 (Implementation Planning) - attach the SOP for your CHOSEN process only",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "🗺️ #3 – All Blueprint Level 2 SOPs",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "🗺️ #3 – All Blueprint Level 2 SOPs"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Why:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " AI can optimize your real workflows instead of starting from scratch",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "When to use:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Phase 3 (Implementation Planning) - attach the Blueprint for your CHOSEN process only",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "📈 #4 – Any Implementation Plans from Previous Sessions",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "📈 #4 – Any Implementation Plans from Previous Sessions"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Why:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Builds continuity, avoids repeating work, and references previous AI recommendations",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "When to use:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Phase 3 (Implementation Planning) - mention relevant plans for context",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Bringing the Right Context Together",
+              "type": "text",
+              "circle_ios_fallback_text": "Bringing the Right Context Together"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "✅ If you’ve already added each of these to your Master Prompt project, you’re good to go. ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "✅ If you’ve already added each of these to your Master Prompt project, you’re good to go. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "❌ If not, go to ",
+              "type": "text",
+              "circle_ios_fallback_text": "❌ If not, go to "
+            },
+            {
+              "text": "https://claude.ai/recents",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://claude.ai/recents",
+                    "class": null,
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "circle_ios_fallback_text": "https://claude.ai/recents"
+            },
+            {
+              "text": " and open each chat in a new tab, “star” the ones you need, and one by one, download all the artifacts they contain.",
+              "type": "text",
+              "circle_ios_fallback_text": " and open each chat in a new tab, “star” the ones you need, and one by one, download all the artifacts they contain."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "🚨 If you don’t have all the artifacts, don’t worry. Just use what you have! ",
+              "type": "text",
+              "circle_ios_fallback_text": "🚨 If you don’t have all the artifacts, don’t worry. Just use what you have! "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Here’s a summary of when and where we covered the material you’ll need:",
+              "type": "text",
+              "circle_ios_fallback_text": "Here’s a summary of when and where we covered the material you’ll need:"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Sale to Delivery (Covered in Session 3: The EMPOWER Operating System)",
+              "type": "text",
+              "circle_ios_fallback_text": "Sale to Delivery (Covered in Session 3: The EMPOWER Operating System)"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 3.1: Run the Assessment (Sale to Delivery)",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/892608/lessons/3381151",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 3.5: Create the Level 1 & 2 SOP (Sale to Delivery)",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/892608/lessons/3381359",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Delivery to Success (Covered in Session 4: Expansion Capability)",
+              "type": "text",
+              "circle_ios_fallback_text": "Delivery to Success (Covered in Session 4: Expansion Capability)"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 4.2: Run the Assessment (Delivery to Success)",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/895381/lessons/3391960",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 4.4: Create the Level 1 & 2 SOP (Delivery to Success)",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/895381/lessons/3391966",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 4.5: Create Your Priority Implementation Matrix",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/895381/lessons/3391969",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Market to Lead (Covered in Session 5: Marketing and Brand Equity)",
+              "type": "text",
+              "circle_ios_fallback_text": "Market to Lead (Covered in Session 5: Marketing and Brand Equity)"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 5.3 : Run the Assessment (Market to Lead)",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/899123/lessons/3406079https://community.empowerlabs.ai/c/curriculum-f7e760/sections/899123/lessons/3406079https://community.empowerlabs.ai/c/curriculum-f7e760/sections/899123/lessons/3406079https://community.empowerlabs.ai/c/curriculum-f7e760/sections/899123/lessons/3406079",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 5.5: Create Level 1 & 2 SOP (Market to Lead)",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/899123/lessons/3406107",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Financial Performance Management (Covered in Session 6: Profitability Metrics)",
+              "type": "text",
+              "circle_ios_fallback_text": "Financial Performance Management (Covered in Session 6: Profitability Metrics)"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 6.1: Run the Assessment (Financial Performance Management)",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/901140/lessons/3421028",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 6.2: Create the Level 1 & 2 SOP (Financial Performance Management) (Optional)",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/901140/lessons/3421039",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Lead to Sale (Covered in Session 7: Offering & Sales Effectiveness)",
+              "type": "text",
+              "circle_ios_fallback_text": "Lead to Sale (Covered in Session 7: Offering & Sales Effectiveness)"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 7.1: Run the Assessment (Lead to Sale)",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/905447/lessons/3429685",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 7.2: Create the Level 1 & 2 SOP (Lead to Sale) (Optional)",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/905447/lessons/3429686",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Hire to Retire (Covered in Session 8: Workforce & Leadership)",
+              "type": "text",
+              "circle_ios_fallback_text": "Hire to Retire (Covered in Session 8: Workforce & Leadership)"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 8.1: Run the Workforce & Leadership Diagnostic",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/922314/lessons/3493733",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 8.2: Create Level 1 & 2 SOP (Hire to Retire) (Optional)",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/922314/lessons/3493734",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Questions?",
+              "type": "text",
+              "circle_ios_fallback_text": "Questions?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the ",
+              "type": "text",
+              "circle_ios_fallback_text": "If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the "
+            },
+            {
+              "type": "entity",
+              "attrs": {
+                "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa"
+              },
+              "circle_ios_fallback_text": "#Discussion"
+            },
+            {
+              "text": " space. ",
+              "type": "text",
+              "circle_ios_fallback_text": " space. "
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "The following exercises will transform everything you’ve learned and all the work you’ve done so far into action. You'll choose your highest-priority implementation, select your AI Operator, create an implementation plan, and set up your AI systems.Preparation Before StartingBefore continuing, collect these materials from previous sessions. You'll use them at specific points to get better AI advice.📊 #1 – All Assessment & Diagnostic Results📋 #2 – All Core Process Level 1 SOPs🗺️ #3 – All Blueprint Level 2 SOPs📈 #4 – Any Implementation Plans from Previous SessionsBringing the Right Context Together✅ If you’ve already added each of these to your Master Prompt project, you’re good to go. ❌ If not, go to https://claude.ai/recents and open each chat in a new tab, “star” the ones you need, and one by one, download all the artifacts they contain.🚨 If you don’t have all the artifacts, don’t worry. Just use what you have! Here’s a summary of when and where we covered the material you’ll need:Sale to Delivery (Covered in Session 3: The EMPOWER Operating System)Delivery to Success (Covered in Session 4: Expansion Capability)Market to Lead (Covered in Session 5: Marketing and Brand Equity)Financial Performance Management (Covered in Session 6: Profitability Metrics)Lead to Sale (Covered in Session 7: Offering & Sales Effectiveness)Hire to Retire (Covered in Session 8: Workforce & Leadership)Questions?If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the #Discussion space. ",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa": {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    },
+    "format": "post",
+    "community_members": [],
+    "entities": [
+      {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    ],
+    "group_mentions": [],
+    "polls": []
+  },
+  "rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The following exercises will transform everything you’ve learned and all the work you’ve done so far into action. You'll choose your highest-priority implementation, select your AI Operator, create an implementation plan, and set up your AI systems.",
+              "type": "text",
+              "circle_ios_fallback_text": "The following exercises will transform everything you’ve learned and all the work you’ve done so far into action. You'll choose your highest-priority implementation, select your AI Operator, create an implementation plan, and set up your AI systems."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Preparation Before Starting",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Preparation Before Starting"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Before continuing, collect these materials from previous sessions. You'll use them at specific points to get better AI advice.",
+              "type": "text",
+              "circle_ios_fallback_text": "Before continuing, collect these materials from previous sessions. You'll use them at specific points to get better AI advice."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "📊 #1 – All Assessment & Diagnostic Results",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "📊 #1 – All Assessment & Diagnostic Results"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Why:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Shows AI your weakest processes objectively, allowing it to validate priority choices",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "When to use:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Phase 1 (Priority Assessment) - attach when discussing ratings",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "📋 #2 – All Core Process Level 1 SOPs",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "📋 #2 – All Core Process Level 1 SOPs"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Why:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " AI can review your ACTUAL processes vs. giving generic advice and identify specific gaps",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "When to use:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Phase 3 (Implementation Planning) - attach the SOP for your CHOSEN process only",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "🗺️ #3 – All Blueprint Level 2 SOPs",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "🗺️ #3 – All Blueprint Level 2 SOPs"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Why:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " AI can optimize your real workflows instead of starting from scratch",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "When to use:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Phase 3 (Implementation Planning) - attach the Blueprint for your CHOSEN process only",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "📈 #4 – Any Implementation Plans from Previous Sessions",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "📈 #4 – Any Implementation Plans from Previous Sessions"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Why:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Builds continuity, avoids repeating work, and references previous AI recommendations",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "When to use:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Phase 3 (Implementation Planning) - mention relevant plans for context",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Bringing the Right Context Together",
+              "type": "text",
+              "circle_ios_fallback_text": "Bringing the Right Context Together"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "✅ If you’ve already added each of these to your Master Prompt project, you’re good to go. ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "✅ If you’ve already added each of these to your Master Prompt project, you’re good to go. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "❌ If not, go to ",
+              "type": "text",
+              "circle_ios_fallback_text": "❌ If not, go to "
+            },
+            {
+              "text": "https://claude.ai/recents",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://claude.ai/recents",
+                    "class": null,
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "circle_ios_fallback_text": "https://claude.ai/recents"
+            },
+            {
+              "text": " and open each chat in a new tab, “star” the ones you need, and one by one, download all the artifacts they contain.",
+              "type": "text",
+              "circle_ios_fallback_text": " and open each chat in a new tab, “star” the ones you need, and one by one, download all the artifacts they contain."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "🚨 If you don’t have all the artifacts, don’t worry. Just use what you have! ",
+              "type": "text",
+              "circle_ios_fallback_text": "🚨 If you don’t have all the artifacts, don’t worry. Just use what you have! "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Here’s a summary of when and where we covered the material you’ll need:",
+              "type": "text",
+              "circle_ios_fallback_text": "Here’s a summary of when and where we covered the material you’ll need:"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Sale to Delivery (Covered in Session 3: The EMPOWER Operating System)",
+              "type": "text",
+              "circle_ios_fallback_text": "Sale to Delivery (Covered in Session 3: The EMPOWER Operating System)"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 3.1: Run the Assessment (Sale to Delivery)",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/892608/lessons/3381151",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 3.5: Create the Level 1 & 2 SOP (Sale to Delivery)",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/892608/lessons/3381359",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Delivery to Success (Covered in Session 4: Expansion Capability)",
+              "type": "text",
+              "circle_ios_fallback_text": "Delivery to Success (Covered in Session 4: Expansion Capability)"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 4.2: Run the Assessment (Delivery to Success)",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/895381/lessons/3391960",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 4.4: Create the Level 1 & 2 SOP (Delivery to Success)",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/895381/lessons/3391966",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 4.5: Create Your Priority Implementation Matrix",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/895381/lessons/3391969",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Market to Lead (Covered in Session 5: Marketing and Brand Equity)",
+              "type": "text",
+              "circle_ios_fallback_text": "Market to Lead (Covered in Session 5: Marketing and Brand Equity)"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 5.3 : Run the Assessment (Market to Lead)",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/899123/lessons/3406079https://community.empowerlabs.ai/c/curriculum-f7e760/sections/899123/lessons/3406079https://community.empowerlabs.ai/c/curriculum-f7e760/sections/899123/lessons/3406079https://community.empowerlabs.ai/c/curriculum-f7e760/sections/899123/lessons/3406079",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 5.5: Create Level 1 & 2 SOP (Market to Lead)",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/899123/lessons/3406107",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Financial Performance Management (Covered in Session 6: Profitability Metrics)",
+              "type": "text",
+              "circle_ios_fallback_text": "Financial Performance Management (Covered in Session 6: Profitability Metrics)"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 6.1: Run the Assessment (Financial Performance Management)",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/901140/lessons/3421028",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 6.2: Create the Level 1 & 2 SOP (Financial Performance Management) (Optional)",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/901140/lessons/3421039",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Lead to Sale (Covered in Session 7: Offering & Sales Effectiveness)",
+              "type": "text",
+              "circle_ios_fallback_text": "Lead to Sale (Covered in Session 7: Offering & Sales Effectiveness)"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 7.1: Run the Assessment (Lead to Sale)",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/905447/lessons/3429685",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 7.2: Create the Level 1 & 2 SOP (Lead to Sale) (Optional)",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/905447/lessons/3429686",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Hire to Retire (Covered in Session 8: Workforce & Leadership)",
+              "type": "text",
+              "circle_ios_fallback_text": "Hire to Retire (Covered in Session 8: Workforce & Leadership)"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 8.1: Run the Workforce & Leadership Diagnostic",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/922314/lessons/3493733",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 8.2: Create Level 1 & 2 SOP (Hire to Retire) (Optional)",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/922314/lessons/3493734",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Questions?",
+              "type": "text",
+              "circle_ios_fallback_text": "Questions?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the ",
+              "type": "text",
+              "circle_ios_fallback_text": "If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the "
+            },
+            {
+              "type": "entity",
+              "attrs": {
+                "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa"
+              },
+              "circle_ios_fallback_text": "#Discussion"
+            },
+            {
+              "text": " space. ",
+              "type": "text",
+              "circle_ios_fallback_text": " space. "
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "The following exercises will transform everything you’ve learned and all the work you’ve done so far into action. You'll choose your highest-priority implementation, select your AI Operator, create an implementation plan, and set up your AI systems.Preparation Before StartingBefore continuing, collect these materials from previous sessions. You'll use them at specific points to get better AI advice.📊 #1 – All Assessment & Diagnostic Results📋 #2 – All Core Process Level 1 SOPs🗺️ #3 – All Blueprint Level 2 SOPs📈 #4 – Any Implementation Plans from Previous SessionsBringing the Right Context Together✅ If you’ve already added each of these to your Master Prompt project, you’re good to go. ❌ If not, go to https://claude.ai/recents and open each chat in a new tab, “star” the ones you need, and one by one, download all the artifacts they contain.🚨 If you don’t have all the artifacts, don’t worry. Just use what you have! Here’s a summary of when and where we covered the material you’ll need:Sale to Delivery (Covered in Session 3: The EMPOWER Operating System)Delivery to Success (Covered in Session 4: Expansion Capability)Market to Lead (Covered in Session 5: Marketing and Brand Equity)Financial Performance Management (Covered in Session 6: Profitability Metrics)Lead to Sale (Covered in Session 7: Offering & Sales Effectiveness)Hire to Retire (Covered in Session 8: Workforce & Leadership)Questions?If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the #Discussion space. ",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa": {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    },
+    "format": "post",
+    "community_members": [],
+    "entities": [
+      {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    ],
+    "group_mentions": [],
+    "polls": []
+  },
+  "chat_room_uuid": "ba61f6e9-8e96-4d46-8125-955966f0c769"
+}

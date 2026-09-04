@@ -1,0 +1,403 @@
+{
+  "id": 28886323,
+  "name": "\nStarting soon! 🏃",
+  "slug": "starting-soon",
+  "type": "Posts::Basic",
+  "status": "published",
+  "user_id": 39364111,
+  "published_at": "2026-01-23T17:31:17.033Z",
+  "updated_at": "2026-01-26T23:34:30.275Z",
+  "created_at": "2026-01-23T17:31:17.033Z",
+  "hide_meta_info": false,
+  "community_member_id": 51527687,
+  "is_truncation_disabled": null,
+  "hide_from_featured_areas": false,
+  "flagged_for_approval_at": null,
+  "pinned_at": null,
+  "internal_custom_html": null,
+  "is_comments_enabled": true,
+  "is_liking_enabled": true,
+  "share_post_enabled": null,
+  "share_uid": null,
+  "minimal_layout": false,
+  "show_post_teaser": false,
+  "editor": "tiptap",
+  "is_comments_closed": false,
+  "is_comments_disabled": false,
+  "is_liking_disabled": false,
+  "display_title": "\nStarting soon! 🏃",
+  "cover_image": null,
+  "cover_image_url": null,
+  "cover_image_variants": {},
+  "cardview_thumbnail": null,
+  "cardview_thumbnail_url": null,
+  "cardview_image_url": null,
+  "space_name": "Announcements",
+  "space_slug": "announcements-4101a0",
+  "community_slug": "empower-labs",
+  "space_id": 2414936,
+  "pin_to_top": false,
+  "pinned_at_top_of_space": false,
+  "bookmark_id": null,
+  "topics": [],
+  "community_member": {
+    "id": 51527687,
+    "user_id": 39364111,
+    "public_uid": "b2be8b1e",
+    "first_name": "Ronnie",
+    "last_name": "Seguilla",
+    "name": "Ronnie Seguilla",
+    "admin": true,
+    "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzM5MzY0MTExP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--526c8da859ab73228e0fe33cfc7e422ab8b19331",
+    "type": "CommunityMember",
+    "headline": "Admin",
+    "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTE1Mjc2ODc_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--ff7e32066a01f1a91da71adf5a71bc9c75b95f13",
+    "avatar_url": null
+  },
+  "conversation_summary_overview": "",
+  "body_trix_content": "",
+  "body_for_editor": null,
+  "truncated_content": "It’s almost time! We’re so excited to kick off Cohort 4 of EMPOWER Labs on Monday, January 26, with you.\n\nHere are two reminders for you...\n\n1. Complete Your Onboarding\n\nIf you haven’t already, please complete the 5 short lessons in the Getting Started...",
+  "show_more": true,
+  "tiptap_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "It’s almost time! We’re so excited to kick off Cohort 4 of EMPOWER Labs on ",
+              "type": "text",
+              "circle_ios_fallback_text": "It’s almost time! We’re so excited to kick off Cohort 4 of EMPOWER Labs on "
+            },
+            {
+              "text": "Monday, January 26,",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Monday, January 26,"
+            },
+            {
+              "text": " with you.",
+              "type": "text",
+              "circle_ios_fallback_text": " with you."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Here are two reminders for you...",
+              "type": "text",
+              "circle_ios_fallback_text": "Here are two reminders for you..."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "1. Complete Your Onboarding",
+              "type": "text",
+              "circle_ios_fallback_text": "1. Complete Your Onboarding"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you haven’t already, please complete the 5 short lessons in the ",
+              "type": "text",
+              "circle_ios_fallback_text": "If you haven’t already, please complete the 5 short lessons in the "
+            },
+            {
+              "text": "Getting Started",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Getting Started"
+            },
+            {
+              "text": "​",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://learn.buildingasecondbrain.com/c/curriculum-59604b/sections/651259/lessons/2464596",
+                    "class": "ck-link",
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "circle_ios_fallback_text": "​"
+            },
+            {
+              "text": " section of our ",
+              "type": "text",
+              "circle_ios_fallback_text": " section of our "
+            },
+            {
+              "type": "entity",
+              "attrs": {
+                "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQzP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--d85439759b0d7a5e6f92043c61ea5cc968e072ff"
+              },
+              "circle_ios_fallback_text": "# Curriculum"
+            },
+            {
+              "text": " here on Circle. ",
+              "type": "text",
+              "circle_ios_fallback_text": " here on Circle. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This will only take around 15-25 minutes.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "This will only take around 15-25 minutes."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "These lessons will set you up for success by walking you through the essential tools, introductions, and logistics you need to know.",
+              "type": "text",
+              "circle_ios_fallback_text": "These lessons will set you up for success by walking you through the essential tools, introductions, and logistics you need to know."
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/edit-lesson/sections/864454/lessons/3281779",
+            "color": "#2B2E33",
+            "label": "Complete Your Onboarding",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "2. Join Live Session 1: Tech Setup & Program Overview",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "2. Join Live Session 1: Tech Setup & Program Overview"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Our first live session takes place on,",
+              "type": "text",
+              "circle_ios_fallback_text": "Our first live session takes place on,"
+            },
+            {
+              "text": " Monday, Jan. 26, at 1 pm ET",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": " Monday, Jan. 26, at 1 pm ET"
+            },
+            {
+              "text": " and will run for 90 minutes.",
+              "type": "text",
+              "circle_ios_fallback_text": " and will run for 90 minutes."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This session is all about setting the stage. We’ll walk you through the course structure, answer questions, and make sure your tech setup is working smoothly—so you can focus on learning, not logistics.",
+              "type": "text",
+              "circle_ios_fallback_text": "This session is all about setting the stage. We’ll walk you through the course structure, answer questions, and make sure your tech setup is working smoothly—so you can focus on learning, not logistics."
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://community.empowerlabs.ai/c/calendar-83e687/live-session-1-tech-setup-overview",
+            "color": "#2B2E33",
+            "label": "Join Live Session 1",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "We're using the same Zoom link for all live sessions and office hours. ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "We're using the same Zoom link for all live sessions and office hours. "
+            },
+            {
+              "text": "Feel free to bookmark it: ",
+              "type": "text",
+              "circle_ios_fallback_text": "Feel free to bookmark it: "
+            },
+            {
+              "text": "https://zoom.us/j/93642051746?pwd=22jcKNyk4neboBc0vcnz7b9F5pSqwb.1",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://zoom.us/j/93642051746?pwd=22jcKNyk4neboBc0vcnz7b9F5pSqwb.1",
+                    "class": null,
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "circle_ios_fallback_text": "https://zoom.us/j/93642051746?pwd=22jcKNyk4neboBc0vcnz7b9F5pSqwb.1"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "We can't wait to see you",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "We can't wait to see you"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is the beginning of something powerful—we’re thrilled to have you with us.",
+              "type": "text",
+              "circle_ios_fallback_text": "This is the beginning of something powerful—we’re thrilled to have you with us."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Let us know in the ",
+              "type": "text",
+              "circle_ios_fallback_text": "Let us know in the "
+            },
+            {
+              "type": "entity",
+              "attrs": {
+                "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa"
+              },
+              "circle_ios_fallback_text": "#Discussion"
+            },
+            {
+              "text": " space if you have any questions as you go. We’re here to support you every step of the way!",
+              "type": "text",
+              "circle_ios_fallback_text": " space if you have any questions as you go. We’re here to support you every step of the way!"
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "It’s almost time! We’re so excited to kick off Cohort 4 of EMPOWER Labs on Monday, January 26, with you.Here are two reminders for you...1. Complete Your OnboardingIf you haven’t already, please complete the 5 short lessons in the Getting Started​ section of our # Curriculum here on Circle. This will only take around 15-25 minutes.These lessons will set you up for success by walking you through the essential tools, introductions, and logistics you need to know.2. Join Live Session 1: Tech Setup & Program OverviewOur first live session takes place on, Monday, Jan. 26, at 1 pm ET and will run for 90 minutes.This session is all about setting the stage. We’ll walk you through the course structure, answer questions, and make sure your tech setup is working smoothly—so you can focus on learning, not logistics.We're using the same Zoom link for all live sessions and office hours. Feel free to bookmark it: https://zoom.us/j/93642051746?pwd=22jcKNyk4neboBc0vcnz7b9F5pSqwb.1We can't wait to see youThis is the beginning of something powerful—we’re thrilled to have you with us.Let us know in the #Discussion space if you have any questions as you go. We’re here to support you every step of the way!",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQzP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--d85439759b0d7a5e6f92043c61ea5cc968e072ff": {
+        "id": 2414943,
+        "name": " Curriculum",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQzP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--d85439759b0d7a5e6f92043c61ea5cc968e072ff",
+        "type": "Space",
+        "circle_ios_fallback_text": "# Curriculum",
+        "url": "https://community.empowerlabs.ai/c/curriculum-f7e760",
+        "slug": "curriculum-f7e760"
+      },
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa": {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    },
+    "format": "post",
+    "community_members": [],
+    "entities": [
+      {
+        "id": 2414943,
+        "name": " Curriculum",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQzP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--d85439759b0d7a5e6f92043c61ea5cc968e072ff",
+        "type": "Space",
+        "circle_ios_fallback_text": "# Curriculum",
+        "url": "https://community.empowerlabs.ai/c/curriculum-f7e760",
+        "slug": "curriculum-f7e760"
+      },
+      {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    ],
+    "group_mentions": [],
+    "polls": []
+  }
+}

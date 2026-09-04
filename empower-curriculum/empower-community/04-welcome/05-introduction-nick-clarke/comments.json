@@ -1,0 +1,73 @@
+[
+  {
+    "id": 112710734,
+    "parent_comment_id": null,
+    "post_id": 35771275,
+    "user_id": 59573912,
+    "editor": "tiptap",
+    "flagged_for_approval_at": null,
+    "created_at": "2026-08-24T20:19:14.334Z",
+    "updated_at": "2026-08-24T20:19:14.349Z",
+    "is_replying_enabled": true,
+    "is_liking_enabled": true,
+    "bookmark_id": null,
+    "is_liked": false,
+    "likes_count": 1,
+    "unresolved_flagged_reports_count": 0,
+    "show_url": "https://community.empowerlabs.ai/c/welcome/introduction-nick-clarke#comment_wrapper_112710734",
+    "author_type": "CommunityMember",
+    "community_member": {
+      "id": 85538714,
+      "user_id": 59573912,
+      "public_uid": "89ea2fdb",
+      "first_name": "Ronnie",
+      "last_name": null,
+      "name": "Ronnie",
+      "admin": true,
+      "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzU5NTczOTEyP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--86d5ff77eb6b7c8282e1582d1728433aa9fb5e08",
+      "type": "CommunityMember",
+      "headline": "Admin",
+      "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvODU1Mzg3MTQ_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--4d28570696f744a549b25d82dbe6681db284cad0",
+      "avatar_url": null
+    },
+    "member_tags_html": "  <span class=\"author__is-admin\">\n    admin\n  </span>\n\n",
+    "member_tags": [],
+    "body_trix_content": null,
+    "body_for_editor": null,
+    "tiptap_body": {
+      "body": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Welcome, Nick! Great to have you here. Excited to learn more about your AI journey and the work you’re doing! Looking forward to connecting with you.",
+                "type": "text",
+                "circle_ios_fallback_text": "Welcome, Nick! Great to have you here. Excited to learn more about your AI journey and the work you’re doing! Looking forward to connecting with you."
+              }
+            ]
+          }
+        ]
+      },
+      "circle_ios_fallback_text": "Welcome, Nick! Great to have you here. Excited to learn more about your AI journey and the work you’re doing! Looking forward to connecting with you.",
+      "attachments": [],
+      "inline_attachments": [],
+      "sgids_to_object_map": {},
+      "format": "post",
+      "community_members": [],
+      "entities": [],
+      "group_mentions": [],
+      "polls": []
+    },
+    "policies": {
+      "can_report": false,
+      "can_manage": false,
+      "can_edit": false,
+      "can_destroy": false,
+      "can_bookmark": true
+    },
+    "replies_count": 0,
+    "replies": []
+  }
+]

@@ -1,0 +1,129 @@
+{
+  "id": 31413519,
+  "name": "Inner Circle Sign Up?",
+  "slug": "inner-circle-sign-up",
+  "type": "Posts::Basic",
+  "status": "published",
+  "user_id": 51985978,
+  "published_at": "2026-04-06T19:47:37.375Z",
+  "updated_at": "2026-04-07T16:50:40.398Z",
+  "created_at": "2026-04-06T19:47:37.375Z",
+  "hide_meta_info": false,
+  "community_member_id": 64421875,
+  "is_truncation_disabled": null,
+  "hide_from_featured_areas": false,
+  "flagged_for_approval_at": null,
+  "pinned_at": null,
+  "internal_custom_html": null,
+  "is_comments_enabled": true,
+  "is_liking_enabled": true,
+  "share_post_enabled": null,
+  "share_uid": null,
+  "minimal_layout": false,
+  "show_post_teaser": false,
+  "editor": "tiptap",
+  "is_comments_closed": false,
+  "is_comments_disabled": false,
+  "is_liking_disabled": false,
+  "display_title": "Inner Circle Sign Up?",
+  "cover_image": null,
+  "cover_image_url": null,
+  "cover_image_variants": {},
+  "cardview_thumbnail": null,
+  "cardview_thumbnail_url": null,
+  "cardview_image_url": null,
+  "space_name": "Discussion",
+  "space_slug": "discussion-b92449",
+  "community_slug": "empower-labs",
+  "space_id": 2414947,
+  "pin_to_top": false,
+  "pinned_at_top_of_space": false,
+  "bookmark_id": null,
+  "topics": [
+    336022
+  ],
+  "community_member": {
+    "id": 64421875,
+    "user_id": 51985978,
+    "public_uid": "d2c1dc3a",
+    "first_name": "Matt",
+    "last_name": "Clement",
+    "name": "Matt Clement",
+    "admin": false,
+    "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzUxOTg1OTc4P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--9d6a3b12bf14558bc15ae4b071821491b91eab85",
+    "type": "CommunityMember",
+    "headline": "EVP",
+    "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNjQ0MjE4NzU_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--f980f32c16af094093bf1921730be3af7a0b8b3d",
+    "avatar_url": null
+  },
+  "conversation_summary_overview": "",
+  "body_trix_content": "",
+  "body_for_editor": null,
+  "truncated_content": "Hi all,\n\nI haven’t seen anything on signing up for Inner Circle, is that still yet to release? If it is up and running, could someone shoot me a registration link?\n\nMany thanks!\n\nMatt",
+  "show_more": false,
+  "tiptap_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hi all,",
+              "type": "text",
+              "circle_ios_fallback_text": "Hi all,"
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "I haven’t seen anything on signing up for Inner Circle, is that still yet to release? If it is up and running, could someone shoot me a registration link?",
+              "type": "text",
+              "circle_ios_fallback_text": "I haven’t seen anything on signing up for Inner Circle, is that still yet to release? If it is up and running, could someone shoot me a registration link?"
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "Many thanks!",
+              "type": "text",
+              "circle_ios_fallback_text": "Many thanks!"
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "Matt",
+              "type": "text",
+              "circle_ios_fallback_text": "Matt"
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "Hi all,\n\nI haven’t seen anything on signing up for Inner Circle, is that still yet to release? If it is up and running, could someone shoot me a registration link?\n\nMany thanks!\n\nMatt",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  }
+}

@@ -1,0 +1,810 @@
+{
+  "id": 3406080,
+  "name": "Exercise 5.4: Analyze Your Unit Economics (Fractional CRO)",
+  "status": "published",
+  "featured_media_enabled": false,
+  "download_featured_media": false,
+  "created_at": "2026-02-04T23:11:14.242Z",
+  "updated_at": "2026-02-06T19:10:15.978Z",
+  "comments_enabled": false,
+  "default_tab": "curriculum",
+  "enforce_featured_media_completion": false,
+  "autocomplete_on_featured_media_completion": true,
+  "dripped_at": null,
+  "is_dripped": true,
+  "needs_to_complete_previous_lesson": false,
+  "completed": false,
+  "notify_students_enabled": false,
+  "bookmark_id": null,
+  "serialized_rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Overview of the Fractional CRO Prompt",
+              "type": "text",
+              "circle_ios_fallback_text": "Overview of the Fractional CRO Prompt"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQ0NGd3dZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--8c34cc2a1045bcad49cdfc1f8edc5f901a28f500"
+          }
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How to Collect Your Unit Economics Data Upfront",
+              "type": "text",
+              "circle_ios_fallback_text": "How to Collect Your Unit Economics Data Upfront"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRmlKd3dZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--ef2d092d96677f7e45b791c3d40206a79d94c26f"
+          }
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How to Run the Prompt With the Data You Already Have",
+              "type": "text",
+              "circle_ios_fallback_text": "How to Run the Prompt With the Data You Already Have"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSUtKd3dZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--29c7bd6284eb2b8fd9378489579c047b636fcf6c"
+          }
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Purpose",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Purpose"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To understand the performance of your marketing channels with the goal of optimizing your customer acquisition strategy. ",
+              "type": "text",
+              "circle_ios_fallback_text": "To understand the performance of your marketing channels with the goal of optimizing your customer acquisition strategy. "
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Instructions",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Instructions"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Copy and paste the prompt into a NEW chat within your Master Prompt project.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Rename the chat “Fractional CRO” (so you can easily find it later) ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Let Claude guide you through the questions. The more specific and honest you are, the more tailored and effective the guidance will be.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Claude will create an artifact as the output. Select “Copy to Project” to add the artifact to your project knowledge. ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://docs.google.com/document/d/130JlqKzDo6eQLeXve0yE9v54CSILlt1ahdnf4GSJp28/edit?tab=t.wfcr8fvtlrfm",
+            "color": "#2B2E33",
+            "label": "Access the Prompt",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "Time to complete:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Time to complete:"
+            },
+            {
+              "text": " around 60 minutes ",
+              "type": "text",
+              "circle_ios_fallback_text": " around 60 minutes "
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Questions?",
+              "type": "text",
+              "circle_ios_fallback_text": "Questions?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the ",
+              "type": "text",
+              "circle_ios_fallback_text": "If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the "
+            },
+            {
+              "type": "entity",
+              "attrs": {
+                "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa"
+              },
+              "circle_ios_fallback_text": "#Discussion"
+            },
+            {
+              "text": " space. ",
+              "type": "text",
+              "circle_ios_fallback_text": " space. "
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "Overview of the Fractional CRO PromptHow to Collect Your Unit Economics Data UpfrontHow to Run the Prompt With the Data You Already HavePurposeTo understand the performance of your marketing channels with the goal of optimizing your customer acquisition strategy. Instructions\nTime to complete: around 60 minutes Questions?If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the #Discussion space. ",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "SBE Cohort 2_ Exercise 4.3A - Analyze Your Unit Economics (Fractional CRO)_default_9c470f59.mp4",
+        "content_type": "video/mp4",
+        "metadata": {
+          "identified": true,
+          "width": 1920,
+          "height": 1080,
+          "duration": 935.233333,
+          "audio": true,
+          "video": true,
+          "analyzed": true,
+          "transcript_id": 3129824,
+          "transcript_preview": "Okay."
+        },
+        "byte_size": 110616728,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQ0NGd3dZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--8c34cc2a1045bcad49cdfc1f8edc5f901a28f500",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/ul9vugujmjsc6zynz8ik9rf6hudb",
+        "is_downloadable": false,
+        "webvtt_file_url": "https://assets-v2.circle.so/w0e3yldogsv86aga1fqvv3weij6v",
+        "chapters_url": null,
+        "preview_thumbnails_url": "https://cdn-media.circle.so/bcdn_token=9RgsB5KqaD2N9KaPmP8_lLRv4YnoNJekaTZ4laTtwcI&token_path=%2F3d28ddcf-7a68-40a5-ba02-2f44c5e870aa%2F&expires=1787964951/3d28ddcf-7a68-40a5-ba02-2f44c5e870aa/mosaic.vtt",
+        "media_transcript_id": 3129824,
+        "image_variants": {
+          "thumbnail": "https://cdn-media.circle.so/bcdn_token=9RgsB5KqaD2N9KaPmP8_lLRv4YnoNJekaTZ4laTtwcI&token_path=%2F3d28ddcf-7a68-40a5-ba02-2f44c5e870aa%2F&expires=1787964951/3d28ddcf-7a68-40a5-ba02-2f44c5e870aa/thumbnail.jpg"
+        },
+        "video_variants": {
+          "original": "https://assets-v2.circle.so/ul9vugujmjsc6zynz8ik9rf6hudb",
+          "hls": "https://cdn-media.circle.so/bcdn_token=9RgsB5KqaD2N9KaPmP8_lLRv4YnoNJekaTZ4laTtwcI&token_path=%2F3d28ddcf-7a68-40a5-ba02-2f44c5e870aa%2F&expires=1787964951/3d28ddcf-7a68-40a5-ba02-2f44c5e870aa/hls/playlist.m3u8"
+        },
+        "media_transcoding": {
+          "status": "succeeded"
+        }
+      },
+      {
+        "filename": "SBE Cohort 2_ Exercise 4.3B - Analyze Your Unit Economics (Fractional CRO)_default_c91d084f.mp4",
+        "content_type": "video/mp4",
+        "metadata": {
+          "identified": true,
+          "width": 1920,
+          "height": 1080,
+          "duration": 594.133333,
+          "audio": true,
+          "video": true,
+          "analyzed": true,
+          "transcript_id": 3129840,
+          "transcript_preview": "Okay."
+        },
+        "byte_size": 77925729,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRmlKd3dZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--ef2d092d96677f7e45b791c3d40206a79d94c26f",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/pqauz7ctjtvx1lzbxcqu3j393xa5",
+        "is_downloadable": false,
+        "webvtt_file_url": "https://assets-v2.circle.so/zigx9rsn5gvptfecflkawpqqd8y8",
+        "chapters_url": null,
+        "preview_thumbnails_url": "https://cdn-media.circle.so/bcdn_token=hsvZHH4i2x7Q35tK46HjBDKzysD6_z2MnSn7C2cSCCU&token_path=%2Ff058d425-b2e8-47b6-a664-fcc96634e607%2F&expires=1787964951/f058d425-b2e8-47b6-a664-fcc96634e607/mosaic.vtt",
+        "media_transcript_id": 3129840,
+        "image_variants": {
+          "thumbnail": "https://cdn-media.circle.so/bcdn_token=hsvZHH4i2x7Q35tK46HjBDKzysD6_z2MnSn7C2cSCCU&token_path=%2Ff058d425-b2e8-47b6-a664-fcc96634e607%2F&expires=1787964951/f058d425-b2e8-47b6-a664-fcc96634e607/thumbnail.jpg"
+        },
+        "video_variants": {
+          "original": "https://assets-v2.circle.so/pqauz7ctjtvx1lzbxcqu3j393xa5",
+          "hls": "https://cdn-media.circle.so/bcdn_token=hsvZHH4i2x7Q35tK46HjBDKzysD6_z2MnSn7C2cSCCU&token_path=%2Ff058d425-b2e8-47b6-a664-fcc96634e607%2F&expires=1787964951/f058d425-b2e8-47b6-a664-fcc96634e607/hls/playlist.m3u8"
+        },
+        "media_transcoding": {
+          "status": "succeeded"
+        }
+      },
+      {
+        "filename": "SBE Cohort 2_ Exercise 4.3C - Analyze Your Unit Economics (Fractional CRO)_default_ed84b05c.mp4",
+        "content_type": "video/mp4",
+        "metadata": {
+          "identified": true,
+          "width": 1920,
+          "height": 1080,
+          "duration": 696.533333,
+          "audio": true,
+          "video": true,
+          "analyzed": true,
+          "transcript_id": 3129839,
+          "transcript_preview": "Okay."
+        },
+        "byte_size": 96885571,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSUtKd3dZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--29c7bd6284eb2b8fd9378489579c047b636fcf6c",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/gknfm6zyj9m9br49gvunlkb2um8a",
+        "is_downloadable": false,
+        "webvtt_file_url": "https://assets-v2.circle.so/8dt0xf1ev7c0svp8d4esg572w1n3",
+        "chapters_url": null,
+        "preview_thumbnails_url": "https://cdn-media.circle.so/bcdn_token=Icn49g6BS-HpVp6DZgGX-JC48M2Slwe8zORRV0jcpyA&token_path=%2Ff889dbed-4adf-4c84-9fa0-29dbf94db47d%2F&expires=1787964951/f889dbed-4adf-4c84-9fa0-29dbf94db47d/mosaic.vtt",
+        "media_transcript_id": 3129839,
+        "image_variants": {
+          "thumbnail": "https://cdn-media.circle.so/bcdn_token=Icn49g6BS-HpVp6DZgGX-JC48M2Slwe8zORRV0jcpyA&token_path=%2Ff889dbed-4adf-4c84-9fa0-29dbf94db47d%2F&expires=1787964951/f889dbed-4adf-4c84-9fa0-29dbf94db47d/thumbnail.jpg"
+        },
+        "video_variants": {
+          "original": "https://assets-v2.circle.so/gknfm6zyj9m9br49gvunlkb2um8a",
+          "hls": "https://cdn-media.circle.so/bcdn_token=Icn49g6BS-HpVp6DZgGX-JC48M2Slwe8zORRV0jcpyA&token_path=%2Ff889dbed-4adf-4c84-9fa0-29dbf94db47d%2F&expires=1787964951/f889dbed-4adf-4c84-9fa0-29dbf94db47d/hls/playlist.m3u8"
+        },
+        "media_transcoding": {
+          "status": "succeeded"
+        }
+      }
+    ],
+    "sgids_to_object_map": {
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa": {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    },
+    "format": "post",
+    "community_members": [],
+    "entities": [
+      {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    ],
+    "group_mentions": [],
+    "polls": []
+  },
+  "rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Overview of the Fractional CRO Prompt",
+              "type": "text",
+              "circle_ios_fallback_text": "Overview of the Fractional CRO Prompt"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQ0NGd3dZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--8c34cc2a1045bcad49cdfc1f8edc5f901a28f500"
+          }
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How to Collect Your Unit Economics Data Upfront",
+              "type": "text",
+              "circle_ios_fallback_text": "How to Collect Your Unit Economics Data Upfront"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRmlKd3dZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--ef2d092d96677f7e45b791c3d40206a79d94c26f"
+          }
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How to Run the Prompt With the Data You Already Have",
+              "type": "text",
+              "circle_ios_fallback_text": "How to Run the Prompt With the Data You Already Have"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSUtKd3dZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--29c7bd6284eb2b8fd9378489579c047b636fcf6c"
+          }
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Purpose",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Purpose"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To understand the performance of your marketing channels with the goal of optimizing your customer acquisition strategy. ",
+              "type": "text",
+              "circle_ios_fallback_text": "To understand the performance of your marketing channels with the goal of optimizing your customer acquisition strategy. "
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Instructions",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Instructions"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Copy and paste the prompt into a NEW chat within your Master Prompt project.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Rename the chat “Fractional CRO” (so you can easily find it later) ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Let Claude guide you through the questions. The more specific and honest you are, the more tailored and effective the guidance will be.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Claude will create an artifact as the output. Select “Copy to Project” to add the artifact to your project knowledge. ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://docs.google.com/document/d/130JlqKzDo6eQLeXve0yE9v54CSILlt1ahdnf4GSJp28/edit?tab=t.wfcr8fvtlrfm",
+            "color": "#2B2E33",
+            "label": "Access the Prompt",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "Time to complete:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Time to complete:"
+            },
+            {
+              "text": " around 60 minutes ",
+              "type": "text",
+              "circle_ios_fallback_text": " around 60 minutes "
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Questions?",
+              "type": "text",
+              "circle_ios_fallback_text": "Questions?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the ",
+              "type": "text",
+              "circle_ios_fallback_text": "If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the "
+            },
+            {
+              "type": "entity",
+              "attrs": {
+                "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa"
+              },
+              "circle_ios_fallback_text": "#Discussion"
+            },
+            {
+              "text": " space. ",
+              "type": "text",
+              "circle_ios_fallback_text": " space. "
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "Overview of the Fractional CRO PromptHow to Collect Your Unit Economics Data UpfrontHow to Run the Prompt With the Data You Already HavePurposeTo understand the performance of your marketing channels with the goal of optimizing your customer acquisition strategy. Instructions\nTime to complete: around 60 minutes Questions?If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the #Discussion space. ",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "SBE Cohort 2_ Exercise 4.3A - Analyze Your Unit Economics (Fractional CRO)_default_9c470f59.mp4",
+        "content_type": "video/mp4",
+        "metadata": {
+          "identified": true,
+          "width": 1920,
+          "height": 1080,
+          "duration": 935.233333,
+          "audio": true,
+          "video": true,
+          "analyzed": true,
+          "transcript_id": 3129824,
+          "transcript_preview": "Okay."
+        },
+        "byte_size": 110616728,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQ0NGd3dZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--8c34cc2a1045bcad49cdfc1f8edc5f901a28f500",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/ul9vugujmjsc6zynz8ik9rf6hudb",
+        "is_downloadable": false,
+        "webvtt_file_url": "https://assets-v2.circle.so/w0e3yldogsv86aga1fqvv3weij6v",
+        "chapters_url": null,
+        "preview_thumbnails_url": "https://cdn-media.circle.so/bcdn_token=9RgsB5KqaD2N9KaPmP8_lLRv4YnoNJekaTZ4laTtwcI&token_path=%2F3d28ddcf-7a68-40a5-ba02-2f44c5e870aa%2F&expires=1787964951/3d28ddcf-7a68-40a5-ba02-2f44c5e870aa/mosaic.vtt",
+        "media_transcript_id": 3129824,
+        "image_variants": {
+          "thumbnail": "https://cdn-media.circle.so/bcdn_token=9RgsB5KqaD2N9KaPmP8_lLRv4YnoNJekaTZ4laTtwcI&token_path=%2F3d28ddcf-7a68-40a5-ba02-2f44c5e870aa%2F&expires=1787964951/3d28ddcf-7a68-40a5-ba02-2f44c5e870aa/thumbnail.jpg"
+        },
+        "video_variants": {
+          "original": "https://assets-v2.circle.so/ul9vugujmjsc6zynz8ik9rf6hudb",
+          "hls": "https://cdn-media.circle.so/bcdn_token=9RgsB5KqaD2N9KaPmP8_lLRv4YnoNJekaTZ4laTtwcI&token_path=%2F3d28ddcf-7a68-40a5-ba02-2f44c5e870aa%2F&expires=1787964951/3d28ddcf-7a68-40a5-ba02-2f44c5e870aa/hls/playlist.m3u8"
+        },
+        "media_transcoding": {
+          "status": "succeeded"
+        }
+      },
+      {
+        "filename": "SBE Cohort 2_ Exercise 4.3B - Analyze Your Unit Economics (Fractional CRO)_default_c91d084f.mp4",
+        "content_type": "video/mp4",
+        "metadata": {
+          "identified": true,
+          "width": 1920,
+          "height": 1080,
+          "duration": 594.133333,
+          "audio": true,
+          "video": true,
+          "analyzed": true,
+          "transcript_id": 3129840,
+          "transcript_preview": "Okay."
+        },
+        "byte_size": 77925729,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRmlKd3dZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--ef2d092d96677f7e45b791c3d40206a79d94c26f",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/pqauz7ctjtvx1lzbxcqu3j393xa5",
+        "is_downloadable": false,
+        "webvtt_file_url": "https://assets-v2.circle.so/zigx9rsn5gvptfecflkawpqqd8y8",
+        "chapters_url": null,
+        "preview_thumbnails_url": "https://cdn-media.circle.so/bcdn_token=hsvZHH4i2x7Q35tK46HjBDKzysD6_z2MnSn7C2cSCCU&token_path=%2Ff058d425-b2e8-47b6-a664-fcc96634e607%2F&expires=1787964951/f058d425-b2e8-47b6-a664-fcc96634e607/mosaic.vtt",
+        "media_transcript_id": 3129840,
+        "image_variants": {
+          "thumbnail": "https://cdn-media.circle.so/bcdn_token=hsvZHH4i2x7Q35tK46HjBDKzysD6_z2MnSn7C2cSCCU&token_path=%2Ff058d425-b2e8-47b6-a664-fcc96634e607%2F&expires=1787964951/f058d425-b2e8-47b6-a664-fcc96634e607/thumbnail.jpg"
+        },
+        "video_variants": {
+          "original": "https://assets-v2.circle.so/pqauz7ctjtvx1lzbxcqu3j393xa5",
+          "hls": "https://cdn-media.circle.so/bcdn_token=hsvZHH4i2x7Q35tK46HjBDKzysD6_z2MnSn7C2cSCCU&token_path=%2Ff058d425-b2e8-47b6-a664-fcc96634e607%2F&expires=1787964951/f058d425-b2e8-47b6-a664-fcc96634e607/hls/playlist.m3u8"
+        },
+        "media_transcoding": {
+          "status": "succeeded"
+        }
+      },
+      {
+        "filename": "SBE Cohort 2_ Exercise 4.3C - Analyze Your Unit Economics (Fractional CRO)_default_ed84b05c.mp4",
+        "content_type": "video/mp4",
+        "metadata": {
+          "identified": true,
+          "width": 1920,
+          "height": 1080,
+          "duration": 696.533333,
+          "audio": true,
+          "video": true,
+          "analyzed": true,
+          "transcript_id": 3129839,
+          "transcript_preview": "Okay."
+        },
+        "byte_size": 96885571,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSUtKd3dZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--29c7bd6284eb2b8fd9378489579c047b636fcf6c",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/gknfm6zyj9m9br49gvunlkb2um8a",
+        "is_downloadable": false,
+        "webvtt_file_url": "https://assets-v2.circle.so/8dt0xf1ev7c0svp8d4esg572w1n3",
+        "chapters_url": null,
+        "preview_thumbnails_url": "https://cdn-media.circle.so/bcdn_token=Icn49g6BS-HpVp6DZgGX-JC48M2Slwe8zORRV0jcpyA&token_path=%2Ff889dbed-4adf-4c84-9fa0-29dbf94db47d%2F&expires=1787964951/f889dbed-4adf-4c84-9fa0-29dbf94db47d/mosaic.vtt",
+        "media_transcript_id": 3129839,
+        "image_variants": {
+          "thumbnail": "https://cdn-media.circle.so/bcdn_token=Icn49g6BS-HpVp6DZgGX-JC48M2Slwe8zORRV0jcpyA&token_path=%2Ff889dbed-4adf-4c84-9fa0-29dbf94db47d%2F&expires=1787964951/f889dbed-4adf-4c84-9fa0-29dbf94db47d/thumbnail.jpg"
+        },
+        "video_variants": {
+          "original": "https://assets-v2.circle.so/gknfm6zyj9m9br49gvunlkb2um8a",
+          "hls": "https://cdn-media.circle.so/bcdn_token=Icn49g6BS-HpVp6DZgGX-JC48M2Slwe8zORRV0jcpyA&token_path=%2Ff889dbed-4adf-4c84-9fa0-29dbf94db47d%2F&expires=1787964951/f889dbed-4adf-4c84-9fa0-29dbf94db47d/hls/playlist.m3u8"
+        },
+        "media_transcoding": {
+          "status": "succeeded"
+        }
+      }
+    ],
+    "sgids_to_object_map": {
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa": {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    },
+    "format": "post",
+    "community_members": [],
+    "entities": [
+      {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    ],
+    "group_mentions": [],
+    "polls": []
+  },
+  "chat_room_uuid": "902fa9b7-5832-4b9d-bbdb-dec782a395e5"
+}
