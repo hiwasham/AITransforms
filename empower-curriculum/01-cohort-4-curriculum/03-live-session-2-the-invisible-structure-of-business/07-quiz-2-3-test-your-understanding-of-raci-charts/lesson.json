@@ -1,0 +1,167 @@
+{
+  "id": 3359158,
+  "name": "Quiz 2.3: Test Your Understanding of RACI Charts",
+  "status": "published",
+  "featured_media_enabled": true,
+  "download_featured_media": false,
+  "created_at": "2026-01-26T17:52:13.400Z",
+  "updated_at": "2026-01-28T20:37:40.629Z",
+  "comments_enabled": false,
+  "default_tab": "curriculum",
+  "enforce_featured_media_completion": false,
+  "autocomplete_on_featured_media_completion": true,
+  "dripped_at": null,
+  "is_dripped": true,
+  "needs_to_complete_previous_lesson": false,
+  "completed": true,
+  "notify_students_enabled": false,
+  "bookmark_id": null,
+  "serialized_rich_text_body": null,
+  "rich_text_body": {},
+  "chat_room_uuid": "c1a126a7-6d35-47cd-be67-3d58acdf2820",
+  "latest_quiz_attempt_id": 4849736,
+  "quiz": {
+    "id": 103177,
+    "passing_grade": 80,
+    "enforce_passing_grade": false,
+    "hide_answers": false,
+    "description": null,
+    "questions": [
+      {
+        "id": 497919,
+        "question_type": "single_choice",
+        "statement": "1. According to the RACI framework, what is the critical rule about the \"Accountable\" role?",
+        "options": [
+          {
+            "id": 1776849,
+            "value": " Multiple people should share accountability to ensure nothing is missed"
+          },
+          {
+            "id": 1776850,
+            "value": " The accountable person must also be the one doing the work"
+          },
+          {
+            "id": 1776851,
+            "value": " There should be only ONE accountable person for each task"
+          },
+          {
+            "id": 1776852,
+            "value": " Accountability can be delegated to external contractors"
+          },
+          {
+            "id": 1776853,
+            "value": " The accountable person should never be consulted during the process"
+          }
+        ]
+      },
+      {
+        "id": 497920,
+        "question_type": "single_choice",
+        "statement": "2. How does RACI help identify opportunities for AI integration in business processes?",
+        "options": [
+          {
+            "id": 1776854,
+            "value": " It eliminates the need for human involvement in all processes"
+          },
+          {
+            "id": 1776855,
+            "value": "It provides a framework to understand who does what, making it easier to identify which elements AI could take over"
+          },
+          {
+            "id": 1776856,
+            "value": " It automatically assigns AI to all Responsible roles"
+          },
+          {
+            "id": 1776857,
+            "value": " It prevents AI from being used in any Accountable positions"
+          },
+          {
+            "id": 1776858,
+            "value": " It requires all Consulted roles to be replaced by AI"
+          }
+        ]
+      },
+      {
+        "id": 497921,
+        "question_type": "single_choice",
+        "statement": "3. According to the lesson, what should you do if a process doesn't currently exist in your organization but represents a gap that needs to be filled soon?",
+        "options": [
+          {
+            "id": 1776859,
+            "value": " Mark it as \"N/A\""
+          },
+          {
+            "id": 1776860,
+            "value": " Ignore it until you're ready to implement it"
+          },
+          {
+            "id": 1776861,
+            "value": " Mark it as \"Future\""
+          },
+          {
+            "id": 1776862,
+            "value": " Assign multiple people as accountable immediately"
+          },
+          {
+            "id": 1776863,
+            "value": " Remove it from your process documentation"
+          }
+        ]
+      },
+      {
+        "id": 497922,
+        "question_type": "single_choice",
+        "statement": "4. What is one of the main business problems that RACI helps to solve?",
+        "options": [
+          {
+            "id": 1776864,
+            "value": "Reducing employee salaries"
+          },
+          {
+            "id": 1776865,
+            "value": " Eliminating the need for process documentation"
+          },
+          {
+            "id": 1776866,
+            "value": " Reducing the number of meetings required"
+          },
+          {
+            "id": 1776867,
+            "value": " Automating all business processes"
+          },
+          {
+            "id": 1776868,
+            "value": " Tasks falling through the cracks because people thought someone else was handling them"
+          }
+        ]
+      },
+      {
+        "id": 497923,
+        "question_type": "single_choice",
+        "statement": "5. Based on the instructor note, which RACI category will be de-emphasized in this program?",
+        "options": [
+          {
+            "id": 1776869,
+            "value": " Responsible"
+          },
+          {
+            "id": 1776870,
+            "value": " Accountable"
+          },
+          {
+            "id": 1776871,
+            "value": " Consulted"
+          },
+          {
+            "id": 1776872,
+            "value": " Informed"
+          },
+          {
+            "id": 1776873,
+            "value": " All categories will be equally emphasized"
+          }
+        ]
+      }
+    ]
+  }
+}

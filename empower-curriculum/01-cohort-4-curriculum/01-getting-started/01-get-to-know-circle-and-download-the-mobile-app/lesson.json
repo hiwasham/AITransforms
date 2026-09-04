@@ -1,0 +1,1028 @@
+{
+  "id": 3281779,
+  "name": "1. Get to Know Circle & Download the Mobile App",
+  "status": "published",
+  "featured_media_enabled": false,
+  "download_featured_media": false,
+  "created_at": "2026-01-09T18:22:48.811Z",
+  "updated_at": "2026-01-09T21:52:31.699Z",
+  "comments_enabled": false,
+  "default_tab": "curriculum",
+  "enforce_featured_media_completion": false,
+  "autocomplete_on_featured_media_completion": true,
+  "dripped_at": null,
+  "is_dripped": true,
+  "needs_to_complete_previous_lesson": false,
+  "completed": true,
+  "notify_students_enabled": false,
+  "bookmark_id": null,
+  "serialized_rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The EMPOWER Labs cohort lives inside our EMPOWER Labs community on Circle. ",
+              "type": "text",
+              "circle_ios_fallback_text": "The EMPOWER Labs cohort lives inside our EMPOWER Labs community on Circle. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If this is your first time using Circle, we strongly recommend that you ",
+              "type": "text",
+              "circle_ios_fallback_text": "If this is your first time using Circle, we strongly recommend that you "
+            },
+            {
+              "text": "review our walkthroughs below",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "review our walkthroughs below"
+            },
+            {
+              "text": " to get familiar with the platform. It will help you make the most of the beta cohort. ",
+              "type": "text",
+              "circle_ios_fallback_text": " to get familiar with the platform. It will help you make the most of the beta cohort. "
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "General structure",
+              "type": "text",
+              "circle_ios_fallback_text": "General structure"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In your left sidebar, you’ll see the following spaces: ",
+              "type": "text",
+              "circle_ios_fallback_text": "In your left sidebar, you’ll see the following spaces: "
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "entity",
+                      "attrs": {
+                        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTM2P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--9f4240295c2a9e2265ef11096b9ed22eef8f0975"
+                      }
+                    },
+                    {
+                      "text": " : This is where we share time-sensitive information about the cohort.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "entity",
+                      "attrs": {
+                        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQzP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--d85439759b0d7a5e6f92043c61ea5cc968e072ff"
+                      }
+                    },
+                    {
+                      "text": " : This is where you are right now. In this space, you’ll find the pre-work and FAQs. We’ll also post the recordings of the live sessions here as soon as they become available. ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "entity",
+                      "attrs": {
+                        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa"
+                      }
+                    },
+                    {
+                      "text": " ",
+                      "type": "text"
+                    },
+                    {
+                      "text": ": ",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "This is where you can share your questions, wins, reflections & takeaways, as well as your own tips, tricks, and tools. ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "entity",
+                      "attrs": {
+                        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTc5P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--aa77a037afeacdd707891b832cc2100fd01ad415"
+                      }
+                    },
+                    {
+                      "text": " : This space is showing all live sessions and office hours. Please RSVP and add them to your personal calendar. ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In the upper right corner, you’ll find your notifications, direct messages, chat threads, and bookmarks (more on these later). Click on your profile picture to view and edit your profile, adjust your notifications, or change your password.  ",
+              "type": "text",
+              "circle_ios_fallback_text": "In the upper right corner, you’ll find your notifications, direct messages, chat threads, and bookmarks (more on these later). Click on your profile picture to view and edit your profile, adjust your notifications, or change your password.  "
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Mobile & Desktop app",
+              "type": "text",
+              "circle_ios_fallback_text": "Mobile & Desktop app"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "We suggest that you download the free Circle mobile app. You’ll be able to access EMPOWER Labs easily on your mobile device or on your desktop and stay up to date on all activities inside the community. ",
+              "type": "text",
+              "circle_ios_fallback_text": "We suggest that you download the free Circle mobile app. You’ll be able to access EMPOWER Labs easily on your mobile device or on your desktop and stay up to date on all activities inside the community. "
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Download on iOS",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://apps.apple.com/us/app/circle-communities/id1509651625",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Download on Android",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://play.google.com/store/apps/details?id=so.circle.circle&utm_source=community_nav",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Download for desktop",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://circle.so/desktop-app",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Bookmarks",
+              "type": "text",
+              "circle_ios_fallback_text": "Bookmarks"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you come across a post or comment that you’d like to save for later, you can bookmark it and it will show up in your list of bookmarks. ",
+              "type": "text",
+              "circle_ios_fallback_text": "If you come across a post or comment that you’d like to save for later, you can bookmark it and it will show up in your list of bookmarks. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To bookmark a post or comment, click or tap on the three dots on the right side of the post/comment and click “Bookmark post/comment.”",
+              "type": "text",
+              "circle_ios_fallback_text": "To bookmark a post or comment, click or tap on the three dots on the right side of the post/comment and click “Bookmark post/comment.”"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Search",
+              "type": "text",
+              "circle_ios_fallback_text": "Search"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you ever have a question or are looking for a topic, simply start typing a few keywords into the search bar at the top of the screen. ",
+              "type": "text",
+              "circle_ios_fallback_text": "If you ever have a question or are looking for a topic, simply start typing a few keywords into the search bar at the top of the screen. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The search result will show you where the topic you’re looking for has been mentioned in posts, comments, or lessons. ",
+              "type": "text",
+              "circle_ios_fallback_text": "The search result will show you where the topic you’re looking for has been mentioned in posts, comments, or lessons. "
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Notifications ",
+              "type": "text",
+              "circle_ios_fallback_text": "Notifications "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To avoid unwanted emails and notifications, we suggest that you take a minute to adjust the notifications in your preferences. ",
+              "type": "text",
+              "circle_ios_fallback_text": "To avoid unwanted emails and notifications, we suggest that you take a minute to adjust the notifications in your preferences. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Click or tap on your profile picture in the top right corner and choose “Notifications.” You can adjust which notifications you want to receive as emails, within the Circle app, and on the mobile app. Don’t forget to click “Save changes” once you’ve made your adjustments. ",
+              "type": "text",
+              "circle_ios_fallback_text": "Click or tap on your profile picture in the top right corner and choose “Notifications.” You can adjust which notifications you want to receive as emails, within the Circle app, and on the mobile app. Don’t forget to click “Save changes” once you’ve made your adjustments. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "You can also turn off all notifications by clicking the red “Turn off all notifications” button in the lower left corner. ",
+              "type": "text",
+              "circle_ios_fallback_text": "You can also turn off all notifications by clicking the red “Turn off all notifications” button in the lower left corner. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Please check this ",
+              "type": "text",
+              "circle_ios_fallback_text": "Please check this "
+            },
+            {
+              "text": "Circle FAQ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://help.circle.so/c/notifications/how-do-i-access-my-community-notifications",
+                    "class": null,
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "circle_ios_fallback_text": "Circle FAQ"
+            },
+            {
+              "text": " for more information on how to customize your Circle notifications to your preferences. ",
+              "type": "text",
+              "circle_ios_fallback_text": " for more information on how to customize your Circle notifications to your preferences. "
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "The EMPOWER Labs cohort lives inside our EMPOWER Labs community on Circle. If this is your first time using Circle, we strongly recommend that you review our walkthroughs below to get familiar with the platform. It will help you make the most of the beta cohort. General structureIn your left sidebar, you’ll see the following spaces: In the upper right corner, you’ll find your notifications, direct messages, chat threads, and bookmarks (more on these later). Click on your profile picture to view and edit your profile, adjust your notifications, or change your password.  Mobile & Desktop appWe suggest that you download the free Circle mobile app. You’ll be able to access EMPOWER Labs easily on your mobile device or on your desktop and stay up to date on all activities inside the community. BookmarksIf you come across a post or comment that you’d like to save for later, you can bookmark it and it will show up in your list of bookmarks. To bookmark a post or comment, click or tap on the three dots on the right side of the post/comment and click “Bookmark post/comment.”SearchIf you ever have a question or are looking for a topic, simply start typing a few keywords into the search bar at the top of the screen. The search result will show you where the topic you’re looking for has been mentioned in posts, comments, or lessons. Notifications To avoid unwanted emails and notifications, we suggest that you take a minute to adjust the notifications in your preferences. Click or tap on your profile picture in the top right corner and choose “Notifications.” You can adjust which notifications you want to receive as emails, within the Circle app, and on the mobile app. Don’t forget to click “Save changes” once you’ve made your adjustments. You can also turn off all notifications by clicking the red “Turn off all notifications” button in the lower left corner. Please check this Circle FAQ for more information on how to customize your Circle notifications to your preferences. ",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTM2P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--9f4240295c2a9e2265ef11096b9ed22eef8f0975": {
+        "id": 2414936,
+        "name": "Announcements",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTM2P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--9f4240295c2a9e2265ef11096b9ed22eef8f0975",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Announcements",
+        "url": "https://community.empowerlabs.ai/c/announcements-4101a0",
+        "slug": "announcements-4101a0"
+      },
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQzP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--d85439759b0d7a5e6f92043c61ea5cc968e072ff": {
+        "id": 2414943,
+        "name": " Curriculum",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQzP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--d85439759b0d7a5e6f92043c61ea5cc968e072ff",
+        "type": "Space",
+        "circle_ios_fallback_text": "# Curriculum",
+        "url": "https://community.empowerlabs.ai/c/curriculum-f7e760",
+        "slug": "curriculum-f7e760"
+      },
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa": {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      },
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTc5P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--aa77a037afeacdd707891b832cc2100fd01ad415": {
+        "id": 2414979,
+        "name": "Calendar",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTc5P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--aa77a037afeacdd707891b832cc2100fd01ad415",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Calendar",
+        "url": "https://community.empowerlabs.ai/c/calendar-83e687",
+        "slug": "calendar-83e687"
+      }
+    },
+    "format": "post",
+    "community_members": [],
+    "entities": [
+      {
+        "id": 2414936,
+        "name": "Announcements",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTM2P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--9f4240295c2a9e2265ef11096b9ed22eef8f0975",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Announcements",
+        "url": "https://community.empowerlabs.ai/c/announcements-4101a0",
+        "slug": "announcements-4101a0"
+      },
+      {
+        "id": 2414943,
+        "name": " Curriculum",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQzP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--d85439759b0d7a5e6f92043c61ea5cc968e072ff",
+        "type": "Space",
+        "circle_ios_fallback_text": "# Curriculum",
+        "url": "https://community.empowerlabs.ai/c/curriculum-f7e760",
+        "slug": "curriculum-f7e760"
+      },
+      {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      },
+      {
+        "id": 2414979,
+        "name": "Calendar",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTc5P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--aa77a037afeacdd707891b832cc2100fd01ad415",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Calendar",
+        "url": "https://community.empowerlabs.ai/c/calendar-83e687",
+        "slug": "calendar-83e687"
+      }
+    ],
+    "group_mentions": [],
+    "polls": []
+  },
+  "rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The EMPOWER Labs cohort lives inside our EMPOWER Labs community on Circle. ",
+              "type": "text",
+              "circle_ios_fallback_text": "The EMPOWER Labs cohort lives inside our EMPOWER Labs community on Circle. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If this is your first time using Circle, we strongly recommend that you ",
+              "type": "text",
+              "circle_ios_fallback_text": "If this is your first time using Circle, we strongly recommend that you "
+            },
+            {
+              "text": "review our walkthroughs below",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "review our walkthroughs below"
+            },
+            {
+              "text": " to get familiar with the platform. It will help you make the most of the beta cohort. ",
+              "type": "text",
+              "circle_ios_fallback_text": " to get familiar with the platform. It will help you make the most of the beta cohort. "
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "General structure",
+              "type": "text",
+              "circle_ios_fallback_text": "General structure"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In your left sidebar, you’ll see the following spaces: ",
+              "type": "text",
+              "circle_ios_fallback_text": "In your left sidebar, you’ll see the following spaces: "
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "entity",
+                      "attrs": {
+                        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTM2P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--9f4240295c2a9e2265ef11096b9ed22eef8f0975"
+                      }
+                    },
+                    {
+                      "text": " : This is where we share time-sensitive information about the cohort.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "entity",
+                      "attrs": {
+                        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQzP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--d85439759b0d7a5e6f92043c61ea5cc968e072ff"
+                      }
+                    },
+                    {
+                      "text": " : This is where you are right now. In this space, you’ll find the pre-work and FAQs. We’ll also post the recordings of the live sessions here as soon as they become available. ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "entity",
+                      "attrs": {
+                        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa"
+                      }
+                    },
+                    {
+                      "text": " ",
+                      "type": "text"
+                    },
+                    {
+                      "text": ": ",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "This is where you can share your questions, wins, reflections & takeaways, as well as your own tips, tricks, and tools. ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "entity",
+                      "attrs": {
+                        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTc5P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--aa77a037afeacdd707891b832cc2100fd01ad415"
+                      }
+                    },
+                    {
+                      "text": " : This space is showing all live sessions and office hours. Please RSVP and add them to your personal calendar. ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In the upper right corner, you’ll find your notifications, direct messages, chat threads, and bookmarks (more on these later). Click on your profile picture to view and edit your profile, adjust your notifications, or change your password.  ",
+              "type": "text",
+              "circle_ios_fallback_text": "In the upper right corner, you’ll find your notifications, direct messages, chat threads, and bookmarks (more on these later). Click on your profile picture to view and edit your profile, adjust your notifications, or change your password.  "
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Mobile & Desktop app",
+              "type": "text",
+              "circle_ios_fallback_text": "Mobile & Desktop app"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "We suggest that you download the free Circle mobile app. You’ll be able to access EMPOWER Labs easily on your mobile device or on your desktop and stay up to date on all activities inside the community. ",
+              "type": "text",
+              "circle_ios_fallback_text": "We suggest that you download the free Circle mobile app. You’ll be able to access EMPOWER Labs easily on your mobile device or on your desktop and stay up to date on all activities inside the community. "
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Download on iOS",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://apps.apple.com/us/app/circle-communities/id1509651625",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Download on Android",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://play.google.com/store/apps/details?id=so.circle.circle&utm_source=community_nav",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Download for desktop",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://circle.so/desktop-app",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Bookmarks",
+              "type": "text",
+              "circle_ios_fallback_text": "Bookmarks"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you come across a post or comment that you’d like to save for later, you can bookmark it and it will show up in your list of bookmarks. ",
+              "type": "text",
+              "circle_ios_fallback_text": "If you come across a post or comment that you’d like to save for later, you can bookmark it and it will show up in your list of bookmarks. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To bookmark a post or comment, click or tap on the three dots on the right side of the post/comment and click “Bookmark post/comment.”",
+              "type": "text",
+              "circle_ios_fallback_text": "To bookmark a post or comment, click or tap on the three dots on the right side of the post/comment and click “Bookmark post/comment.”"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Search",
+              "type": "text",
+              "circle_ios_fallback_text": "Search"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you ever have a question or are looking for a topic, simply start typing a few keywords into the search bar at the top of the screen. ",
+              "type": "text",
+              "circle_ios_fallback_text": "If you ever have a question or are looking for a topic, simply start typing a few keywords into the search bar at the top of the screen. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The search result will show you where the topic you’re looking for has been mentioned in posts, comments, or lessons. ",
+              "type": "text",
+              "circle_ios_fallback_text": "The search result will show you where the topic you’re looking for has been mentioned in posts, comments, or lessons. "
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Notifications ",
+              "type": "text",
+              "circle_ios_fallback_text": "Notifications "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To avoid unwanted emails and notifications, we suggest that you take a minute to adjust the notifications in your preferences. ",
+              "type": "text",
+              "circle_ios_fallback_text": "To avoid unwanted emails and notifications, we suggest that you take a minute to adjust the notifications in your preferences. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Click or tap on your profile picture in the top right corner and choose “Notifications.” You can adjust which notifications you want to receive as emails, within the Circle app, and on the mobile app. Don’t forget to click “Save changes” once you’ve made your adjustments. ",
+              "type": "text",
+              "circle_ios_fallback_text": "Click or tap on your profile picture in the top right corner and choose “Notifications.” You can adjust which notifications you want to receive as emails, within the Circle app, and on the mobile app. Don’t forget to click “Save changes” once you’ve made your adjustments. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "You can also turn off all notifications by clicking the red “Turn off all notifications” button in the lower left corner. ",
+              "type": "text",
+              "circle_ios_fallback_text": "You can also turn off all notifications by clicking the red “Turn off all notifications” button in the lower left corner. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Please check this ",
+              "type": "text",
+              "circle_ios_fallback_text": "Please check this "
+            },
+            {
+              "text": "Circle FAQ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://help.circle.so/c/notifications/how-do-i-access-my-community-notifications",
+                    "class": null,
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "circle_ios_fallback_text": "Circle FAQ"
+            },
+            {
+              "text": " for more information on how to customize your Circle notifications to your preferences. ",
+              "type": "text",
+              "circle_ios_fallback_text": " for more information on how to customize your Circle notifications to your preferences. "
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "The EMPOWER Labs cohort lives inside our EMPOWER Labs community on Circle. If this is your first time using Circle, we strongly recommend that you review our walkthroughs below to get familiar with the platform. It will help you make the most of the beta cohort. General structureIn your left sidebar, you’ll see the following spaces: In the upper right corner, you’ll find your notifications, direct messages, chat threads, and bookmarks (more on these later). Click on your profile picture to view and edit your profile, adjust your notifications, or change your password.  Mobile & Desktop appWe suggest that you download the free Circle mobile app. You’ll be able to access EMPOWER Labs easily on your mobile device or on your desktop and stay up to date on all activities inside the community. BookmarksIf you come across a post or comment that you’d like to save for later, you can bookmark it and it will show up in your list of bookmarks. To bookmark a post or comment, click or tap on the three dots on the right side of the post/comment and click “Bookmark post/comment.”SearchIf you ever have a question or are looking for a topic, simply start typing a few keywords into the search bar at the top of the screen. The search result will show you where the topic you’re looking for has been mentioned in posts, comments, or lessons. Notifications To avoid unwanted emails and notifications, we suggest that you take a minute to adjust the notifications in your preferences. Click or tap on your profile picture in the top right corner and choose “Notifications.” You can adjust which notifications you want to receive as emails, within the Circle app, and on the mobile app. Don’t forget to click “Save changes” once you’ve made your adjustments. You can also turn off all notifications by clicking the red “Turn off all notifications” button in the lower left corner. Please check this Circle FAQ for more information on how to customize your Circle notifications to your preferences. ",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTM2P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--9f4240295c2a9e2265ef11096b9ed22eef8f0975": {
+        "id": 2414936,
+        "name": "Announcements",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTM2P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--9f4240295c2a9e2265ef11096b9ed22eef8f0975",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Announcements",
+        "url": "https://community.empowerlabs.ai/c/announcements-4101a0",
+        "slug": "announcements-4101a0"
+      },
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQzP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--d85439759b0d7a5e6f92043c61ea5cc968e072ff": {
+        "id": 2414943,
+        "name": " Curriculum",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQzP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--d85439759b0d7a5e6f92043c61ea5cc968e072ff",
+        "type": "Space",
+        "circle_ios_fallback_text": "# Curriculum",
+        "url": "https://community.empowerlabs.ai/c/curriculum-f7e760",
+        "slug": "curriculum-f7e760"
+      },
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa": {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      },
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTc5P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--aa77a037afeacdd707891b832cc2100fd01ad415": {
+        "id": 2414979,
+        "name": "Calendar",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTc5P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--aa77a037afeacdd707891b832cc2100fd01ad415",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Calendar",
+        "url": "https://community.empowerlabs.ai/c/calendar-83e687",
+        "slug": "calendar-83e687"
+      }
+    },
+    "format": "post",
+    "community_members": [],
+    "entities": [
+      {
+        "id": 2414936,
+        "name": "Announcements",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTM2P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--9f4240295c2a9e2265ef11096b9ed22eef8f0975",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Announcements",
+        "url": "https://community.empowerlabs.ai/c/announcements-4101a0",
+        "slug": "announcements-4101a0"
+      },
+      {
+        "id": 2414943,
+        "name": " Curriculum",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQzP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--d85439759b0d7a5e6f92043c61ea5cc968e072ff",
+        "type": "Space",
+        "circle_ios_fallback_text": "# Curriculum",
+        "url": "https://community.empowerlabs.ai/c/curriculum-f7e760",
+        "slug": "curriculum-f7e760"
+      },
+      {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      },
+      {
+        "id": 2414979,
+        "name": "Calendar",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTc5P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--aa77a037afeacdd707891b832cc2100fd01ad415",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Calendar",
+        "url": "https://community.empowerlabs.ai/c/calendar-83e687",
+        "slug": "calendar-83e687"
+      }
+    ],
+    "group_mentions": [],
+    "polls": []
+  },
+  "chat_room_uuid": "344b00ae-5826-4a9d-8e22-fcd0ce4da18f"
+}

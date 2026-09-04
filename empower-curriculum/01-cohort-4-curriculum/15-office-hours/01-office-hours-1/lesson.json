@@ -1,0 +1,518 @@
+{
+  "id": 3405759,
+  "name": "Office Hours 1",
+  "status": "published",
+  "featured_media_enabled": true,
+  "download_featured_media": false,
+  "created_at": "2026-02-04T22:15:44.609Z",
+  "updated_at": "2026-02-05T00:13:05.598Z",
+  "comments_enabled": true,
+  "default_tab": "curriculum",
+  "enforce_featured_media_completion": false,
+  "autocomplete_on_featured_media_completion": true,
+  "dripped_at": null,
+  "is_dripped": true,
+  "needs_to_complete_previous_lesson": false,
+  "completed": false,
+  "notify_students_enabled": false,
+  "bookmark_id": null,
+  "featured_media_embed": {
+    "id": 1641160,
+    "content": "https://vimeo.com/1161989723/52b7f6734d?share=copy&fl=sv&fe=ci",
+    "title": "Cohort 4 Office Hours 1",
+    "html": "<div style=\"left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;\"><iframe src=\"https://player.vimeo.com/video/1161989723?h=52b7f6734d&app_id=122963\" width=\"360\" height=\"202\" style=\"top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;\" allowfullscreen scrolling=\"no\" allow=\"encrypted-media *;\"></iframe></div>"
+  },
+  "serialized_rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Summary ",
+              "type": "text",
+              "circle_ios_fallback_text": "Summary "
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Resolving Project Diagram Discrepancies",
+              "type": "text",
+              "circle_ios_fallback_text": "Resolving Project Diagram Discrepancies"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden and Nancy discussed the process of adding sale-to-delivery and delivery-to-success elements to Stage 3, with Hayden planning to provide specific instructions in the next session. Beni raised a question about discrepancies in visual diagrams between different project chats, which Hayden helped resolve by explaining how to properly copy and reference artifacts in the project. Hayden advised Beni to use Opus for queries when reaching the limit on Sonnet, and suggested asking the AI to display a visual diagram for the customer journey of the consulting product.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden and Nancy discussed the process of adding sale-to-delivery and delivery-to-success elements to Stage 3, with Hayden planning to provide specific instructions in the next session. Beni raised a question about discrepancies in visual diagrams between different project chats, which Hayden helped resolve by explaining how to properly copy and reference artifacts in the project. Hayden advised Beni to use Opus for queries when reaching the limit on Sonnet, and suggested asking the AI to display a visual diagram for the customer journey of the consulting product."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Stage 3 and Claude Integration",
+              "type": "text",
+              "circle_ios_fallback_text": "Stage 3 and Claude Integration"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden explained Stage 3, a tool for managing master prompts and processes after the cohort, including version control and batch operations. Don expressed gratitude for the progress made since joining the first cohort and mentioned using Claude to replace FileMaker, which significantly reduced costs. Kristina inquired about using Claude Code for their real estate operating system, which manages lease contracts and financials, and Hayden suggested exploring custom ERP solutions using Airtable with Claude after completing the delivery to success.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden explained Stage 3, a tool for managing master prompts and processes after the cohort, including version control and batch operations. Don expressed gratitude for the progress made since joining the first cohort and mentioned using Claude to replace FileMaker, which significantly reduced costs. Kristina inquired about using Claude Code for their real estate operating system, which manages lease contracts and financials, and Hayden suggested exploring custom ERP solutions using Airtable with Claude after completing the delivery to success."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Custom CRM with Airtable Savings",
+              "type": "text",
+              "circle_ios_fallback_text": "Custom CRM with Airtable Savings"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden shared his experience building a custom CRM system using Airtable, which saved his company $30,000 annually by replacing Salesforce. He recommended using industry-standard software like QuickBooks for finance, while building the ERP portion with Airtable due to its flexibility and API integrations. Jonas expressed interest in this approach, noting that while it was previously seen as overkill, it is now a viable option. Nancy discussed her experience organizing prompts and documents, using a master prompt with context from previous work to efficiently manage her artifacts.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden shared his experience building a custom CRM system using Airtable, which saved his company $30,000 annually by replacing Salesforce. He recommended using industry-standard software like QuickBooks for finance, while building the ERP portion with Airtable due to its flexibility and API integrations. Jonas expressed interest in this approach, noting that while it was previously seen as overkill, it is now a viable option. Nancy discussed her experience organizing prompts and documents, using a master prompt with context from previous work to efficiently manage her artifacts."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Workflow Automation and Process Planning",
+              "type": "text",
+              "circle_ios_fallback_text": "Workflow Automation and Process Planning"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden explained the plan for the next five sessions, emphasizing the importance of creating visual diagrams and core processes for each workflow. He suggested focusing on one specific process to implement during the cohort while building out blueprints in Stage 3 or Claude later. Hayden also described a workflow using Zapier and a note-taking tool, which automates tasks like call scoring, CRM updates, and follow-ups, significantly improving feedback loops and efficiency. Don inquired about accessing the related videos, and Hayden directed him to the Alumni Circle forum and Forte Labs' YouTube channel.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden explained the plan for the next five sessions, emphasizing the importance of creating visual diagrams and core processes for each workflow. He suggested focusing on one specific process to implement during the cohort while building out blueprints in Stage 3 or Claude later. Hayden also described a workflow using Zapier and a note-taking tool, which automates tasks like call scoring, CRM updates, and follow-ups, significantly improving feedback loops and efficiency. Don inquired about accessing the related videos, and Hayden directed him to the Alumni Circle forum and Forte Labs' YouTube channel."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Mermaid Diagrams and Troubleshooting",
+              "type": "text",
+              "circle_ios_fallback_text": "Mermaid Diagrams and Troubleshooting"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden demonstrated how to create and use Mermaid diagrams for visualizing workflows, explaining that Claude can now generate them and recommending ExcalaDraw as a tool for editing. Beni encountered issues with a previous chat session where the HTML file wasn't recognized, and Hayden helped troubleshoot by suggesting Beni open the file in a text editor to inspect the content. When they discovered the file was missing the \"contracting\" section, Hayden advised creating a new chat with the same prompt to try again.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden demonstrated how to create and use Mermaid diagrams for visualizing workflows, explaining that Claude can now generate them and recommending ExcalaDraw as a tool for editing. Beni encountered issues with a previous chat session where the HTML file wasn't recognized, and Hayden helped troubleshoot by suggesting Beni open the file in a text editor to inspect the content. When they discovered the file was missing the \"contracting\" section, Hayden advised creating a new chat with the same prompt to try again."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Chat Artifacts and Process Evolution",
+              "type": "text",
+              "circle_ios_fallback_text": "Chat Artifacts and Process Evolution"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden and Beni discussed technical issues with chat artifacts and how to transfer chat content between different platforms or LLMs. Hayden provided guidance on copying artifacts and creating new chat sessions, offering to investigate further issues if needed. Jonas raised concerns about working with assumptions in business processes and sought advice on validating his work with the team. Hayden advised creating initial process versions for team review, emphasizing that current processes are not final and future versions will likely incorporate more technology. They discussed how roles and responsibilities may evolve as processes are automated, with Hayden noting that AI will likely transform many traditional roles in the coming years.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden and Beni discussed technical issues with chat artifacts and how to transfer chat content between different platforms or LLMs. Hayden provided guidance on copying artifacts and creating new chat sessions, offering to investigate further issues if needed. Jonas raised concerns about working with assumptions in business processes and sought advice on validating his work with the team. Hayden advised creating initial process versions for team review, emphasizing that current processes are not final and future versions will likely incorporate more technology. They discussed how roles and responsibilities may evolve as processes are automated, with Hayden noting that AI will likely transform many traditional roles in the coming years."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Improving Assessment Prompt Tailoring",
+              "type": "text",
+              "circle_ios_fallback_text": "Improving Assessment Prompt Tailoring"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The group discussed issues with assessment prompts and their impact on the quality of results, particularly for Beni who found the second assessment less comprehensive than the first. Hayden suggested adding a specific instruction to tailor questions to Beni's med tech industry and recommended creating separate chats for different services to avoid confusion and improve results. They also addressed technical issues with a chat session that had caused problems, with Hayden advising Beni to try uploading artifacts to a different chat if similar issues arise in the future.",
+              "type": "text",
+              "circle_ios_fallback_text": "The group discussed issues with assessment prompts and their impact on the quality of results, particularly for Beni who found the second assessment less comprehensive than the first. Hayden suggested adding a specific instruction to tailor questions to Beni's med tech industry and recommended creating separate chats for different services to avoid confusion and improve results. They also addressed technical issues with a chat session that had caused problems, with Hayden advising Beni to try uploading artifacts to a different chat if similar issues arise in the future."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "Transcript & Chat",
+              "type": "text",
+              "circle_ios_fallback_text": "Transcript & Chat"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCR1RWWWdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--44fe10d6aa106f26a3feb942da1cee49cdfcc836"
+          }
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRUhWWWdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--cd8bbf6f8164e5005278e67c231997a1f7ad2579"
+          }
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "Summary Resolving Project Diagram DiscrepanciesHayden and Nancy discussed the process of adding sale-to-delivery and delivery-to-success elements to Stage 3, with Hayden planning to provide specific instructions in the next session. Beni raised a question about discrepancies in visual diagrams between different project chats, which Hayden helped resolve by explaining how to properly copy and reference artifacts in the project. Hayden advised Beni to use Opus for queries when reaching the limit on Sonnet, and suggested asking the AI to display a visual diagram for the customer journey of the consulting product.Stage 3 and Claude IntegrationHayden explained Stage 3, a tool for managing master prompts and processes after the cohort, including version control and batch operations. Don expressed gratitude for the progress made since joining the first cohort and mentioned using Claude to replace FileMaker, which significantly reduced costs. Kristina inquired about using Claude Code for their real estate operating system, which manages lease contracts and financials, and Hayden suggested exploring custom ERP solutions using Airtable with Claude after completing the delivery to success.Custom CRM with Airtable SavingsHayden shared his experience building a custom CRM system using Airtable, which saved his company $30,000 annually by replacing Salesforce. He recommended using industry-standard software like QuickBooks for finance, while building the ERP portion with Airtable due to its flexibility and API integrations. Jonas expressed interest in this approach, noting that while it was previously seen as overkill, it is now a viable option. Nancy discussed her experience organizing prompts and documents, using a master prompt with context from previous work to efficiently manage her artifacts.Workflow Automation and Process PlanningHayden explained the plan for the next five sessions, emphasizing the importance of creating visual diagrams and core processes for each workflow. He suggested focusing on one specific process to implement during the cohort while building out blueprints in Stage 3 or Claude later. Hayden also described a workflow using Zapier and a note-taking tool, which automates tasks like call scoring, CRM updates, and follow-ups, significantly improving feedback loops and efficiency. Don inquired about accessing the related videos, and Hayden directed him to the Alumni Circle forum and Forte Labs' YouTube channel.Mermaid Diagrams and TroubleshootingHayden demonstrated how to create and use Mermaid diagrams for visualizing workflows, explaining that Claude can now generate them and recommending ExcalaDraw as a tool for editing. Beni encountered issues with a previous chat session where the HTML file wasn't recognized, and Hayden helped troubleshoot by suggesting Beni open the file in a text editor to inspect the content. When they discovered the file was missing the \"contracting\" section, Hayden advised creating a new chat with the same prompt to try again.Chat Artifacts and Process EvolutionHayden and Beni discussed technical issues with chat artifacts and how to transfer chat content between different platforms or LLMs. Hayden provided guidance on copying artifacts and creating new chat sessions, offering to investigate further issues if needed. Jonas raised concerns about working with assumptions in business processes and sought advice on validating his work with the team. Hayden advised creating initial process versions for team review, emphasizing that current processes are not final and future versions will likely incorporate more technology. They discussed how roles and responsibilities may evolve as processes are automated, with Hayden noting that AI will likely transform many traditional roles in the coming years.Improving Assessment Prompt TailoringThe group discussed issues with assessment prompts and their impact on the quality of results, particularly for Beni who found the second assessment less comprehensive than the first. Hayden suggested adding a specific instruction to tailor questions to Beni's med tech industry and recommended creating separate chats for different services to avoid confusion and improve results. They also addressed technical issues with a chat session that had caused problems, with Hayden advising Beni to try uploading artifacts to a different chat if similar issues arise in the future.\nTranscript & Chat",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "Cohort 4 Office Hours 1 Transcript.vtt",
+        "content_type": "text/vtt",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 160201,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRUhWWWdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--cd8bbf6f8164e5005278e67c231997a1f7ad2579",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/15780kfcfth49a0nqfkq1spag2lf",
+        "is_downloadable": true
+      },
+      {
+        "filename": "Cohort 4 Office Hours 1- Chat.txt",
+        "content_type": "text/plain",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 71,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCR1RWWWdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--44fe10d6aa106f26a3feb942da1cee49cdfcc836",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/4plezevhqer610d0788m7y3t313q",
+        "is_downloadable": true
+      }
+    ],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Summary ",
+              "type": "text",
+              "circle_ios_fallback_text": "Summary "
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Resolving Project Diagram Discrepancies",
+              "type": "text",
+              "circle_ios_fallback_text": "Resolving Project Diagram Discrepancies"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden and Nancy discussed the process of adding sale-to-delivery and delivery-to-success elements to Stage 3, with Hayden planning to provide specific instructions in the next session. Beni raised a question about discrepancies in visual diagrams between different project chats, which Hayden helped resolve by explaining how to properly copy and reference artifacts in the project. Hayden advised Beni to use Opus for queries when reaching the limit on Sonnet, and suggested asking the AI to display a visual diagram for the customer journey of the consulting product.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden and Nancy discussed the process of adding sale-to-delivery and delivery-to-success elements to Stage 3, with Hayden planning to provide specific instructions in the next session. Beni raised a question about discrepancies in visual diagrams between different project chats, which Hayden helped resolve by explaining how to properly copy and reference artifacts in the project. Hayden advised Beni to use Opus for queries when reaching the limit on Sonnet, and suggested asking the AI to display a visual diagram for the customer journey of the consulting product."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Stage 3 and Claude Integration",
+              "type": "text",
+              "circle_ios_fallback_text": "Stage 3 and Claude Integration"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden explained Stage 3, a tool for managing master prompts and processes after the cohort, including version control and batch operations. Don expressed gratitude for the progress made since joining the first cohort and mentioned using Claude to replace FileMaker, which significantly reduced costs. Kristina inquired about using Claude Code for their real estate operating system, which manages lease contracts and financials, and Hayden suggested exploring custom ERP solutions using Airtable with Claude after completing the delivery to success.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden explained Stage 3, a tool for managing master prompts and processes after the cohort, including version control and batch operations. Don expressed gratitude for the progress made since joining the first cohort and mentioned using Claude to replace FileMaker, which significantly reduced costs. Kristina inquired about using Claude Code for their real estate operating system, which manages lease contracts and financials, and Hayden suggested exploring custom ERP solutions using Airtable with Claude after completing the delivery to success."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Custom CRM with Airtable Savings",
+              "type": "text",
+              "circle_ios_fallback_text": "Custom CRM with Airtable Savings"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden shared his experience building a custom CRM system using Airtable, which saved his company $30,000 annually by replacing Salesforce. He recommended using industry-standard software like QuickBooks for finance, while building the ERP portion with Airtable due to its flexibility and API integrations. Jonas expressed interest in this approach, noting that while it was previously seen as overkill, it is now a viable option. Nancy discussed her experience organizing prompts and documents, using a master prompt with context from previous work to efficiently manage her artifacts.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden shared his experience building a custom CRM system using Airtable, which saved his company $30,000 annually by replacing Salesforce. He recommended using industry-standard software like QuickBooks for finance, while building the ERP portion with Airtable due to its flexibility and API integrations. Jonas expressed interest in this approach, noting that while it was previously seen as overkill, it is now a viable option. Nancy discussed her experience organizing prompts and documents, using a master prompt with context from previous work to efficiently manage her artifacts."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Workflow Automation and Process Planning",
+              "type": "text",
+              "circle_ios_fallback_text": "Workflow Automation and Process Planning"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden explained the plan for the next five sessions, emphasizing the importance of creating visual diagrams and core processes for each workflow. He suggested focusing on one specific process to implement during the cohort while building out blueprints in Stage 3 or Claude later. Hayden also described a workflow using Zapier and a note-taking tool, which automates tasks like call scoring, CRM updates, and follow-ups, significantly improving feedback loops and efficiency. Don inquired about accessing the related videos, and Hayden directed him to the Alumni Circle forum and Forte Labs' YouTube channel.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden explained the plan for the next five sessions, emphasizing the importance of creating visual diagrams and core processes for each workflow. He suggested focusing on one specific process to implement during the cohort while building out blueprints in Stage 3 or Claude later. Hayden also described a workflow using Zapier and a note-taking tool, which automates tasks like call scoring, CRM updates, and follow-ups, significantly improving feedback loops and efficiency. Don inquired about accessing the related videos, and Hayden directed him to the Alumni Circle forum and Forte Labs' YouTube channel."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Mermaid Diagrams and Troubleshooting",
+              "type": "text",
+              "circle_ios_fallback_text": "Mermaid Diagrams and Troubleshooting"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden demonstrated how to create and use Mermaid diagrams for visualizing workflows, explaining that Claude can now generate them and recommending ExcalaDraw as a tool for editing. Beni encountered issues with a previous chat session where the HTML file wasn't recognized, and Hayden helped troubleshoot by suggesting Beni open the file in a text editor to inspect the content. When they discovered the file was missing the \"contracting\" section, Hayden advised creating a new chat with the same prompt to try again.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden demonstrated how to create and use Mermaid diagrams for visualizing workflows, explaining that Claude can now generate them and recommending ExcalaDraw as a tool for editing. Beni encountered issues with a previous chat session where the HTML file wasn't recognized, and Hayden helped troubleshoot by suggesting Beni open the file in a text editor to inspect the content. When they discovered the file was missing the \"contracting\" section, Hayden advised creating a new chat with the same prompt to try again."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Chat Artifacts and Process Evolution",
+              "type": "text",
+              "circle_ios_fallback_text": "Chat Artifacts and Process Evolution"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden and Beni discussed technical issues with chat artifacts and how to transfer chat content between different platforms or LLMs. Hayden provided guidance on copying artifacts and creating new chat sessions, offering to investigate further issues if needed. Jonas raised concerns about working with assumptions in business processes and sought advice on validating his work with the team. Hayden advised creating initial process versions for team review, emphasizing that current processes are not final and future versions will likely incorporate more technology. They discussed how roles and responsibilities may evolve as processes are automated, with Hayden noting that AI will likely transform many traditional roles in the coming years.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden and Beni discussed technical issues with chat artifacts and how to transfer chat content between different platforms or LLMs. Hayden provided guidance on copying artifacts and creating new chat sessions, offering to investigate further issues if needed. Jonas raised concerns about working with assumptions in business processes and sought advice on validating his work with the team. Hayden advised creating initial process versions for team review, emphasizing that current processes are not final and future versions will likely incorporate more technology. They discussed how roles and responsibilities may evolve as processes are automated, with Hayden noting that AI will likely transform many traditional roles in the coming years."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Improving Assessment Prompt Tailoring",
+              "type": "text",
+              "circle_ios_fallback_text": "Improving Assessment Prompt Tailoring"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The group discussed issues with assessment prompts and their impact on the quality of results, particularly for Beni who found the second assessment less comprehensive than the first. Hayden suggested adding a specific instruction to tailor questions to Beni's med tech industry and recommended creating separate chats for different services to avoid confusion and improve results. They also addressed technical issues with a chat session that had caused problems, with Hayden advising Beni to try uploading artifacts to a different chat if similar issues arise in the future.",
+              "type": "text",
+              "circle_ios_fallback_text": "The group discussed issues with assessment prompts and their impact on the quality of results, particularly for Beni who found the second assessment less comprehensive than the first. Hayden suggested adding a specific instruction to tailor questions to Beni's med tech industry and recommended creating separate chats for different services to avoid confusion and improve results. They also addressed technical issues with a chat session that had caused problems, with Hayden advising Beni to try uploading artifacts to a different chat if similar issues arise in the future."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "Transcript & Chat",
+              "type": "text",
+              "circle_ios_fallback_text": "Transcript & Chat"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCR1RWWWdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--44fe10d6aa106f26a3feb942da1cee49cdfcc836"
+          }
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRUhWWWdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--cd8bbf6f8164e5005278e67c231997a1f7ad2579"
+          }
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "Summary Resolving Project Diagram DiscrepanciesHayden and Nancy discussed the process of adding sale-to-delivery and delivery-to-success elements to Stage 3, with Hayden planning to provide specific instructions in the next session. Beni raised a question about discrepancies in visual diagrams between different project chats, which Hayden helped resolve by explaining how to properly copy and reference artifacts in the project. Hayden advised Beni to use Opus for queries when reaching the limit on Sonnet, and suggested asking the AI to display a visual diagram for the customer journey of the consulting product.Stage 3 and Claude IntegrationHayden explained Stage 3, a tool for managing master prompts and processes after the cohort, including version control and batch operations. Don expressed gratitude for the progress made since joining the first cohort and mentioned using Claude to replace FileMaker, which significantly reduced costs. Kristina inquired about using Claude Code for their real estate operating system, which manages lease contracts and financials, and Hayden suggested exploring custom ERP solutions using Airtable with Claude after completing the delivery to success.Custom CRM with Airtable SavingsHayden shared his experience building a custom CRM system using Airtable, which saved his company $30,000 annually by replacing Salesforce. He recommended using industry-standard software like QuickBooks for finance, while building the ERP portion with Airtable due to its flexibility and API integrations. Jonas expressed interest in this approach, noting that while it was previously seen as overkill, it is now a viable option. Nancy discussed her experience organizing prompts and documents, using a master prompt with context from previous work to efficiently manage her artifacts.Workflow Automation and Process PlanningHayden explained the plan for the next five sessions, emphasizing the importance of creating visual diagrams and core processes for each workflow. He suggested focusing on one specific process to implement during the cohort while building out blueprints in Stage 3 or Claude later. Hayden also described a workflow using Zapier and a note-taking tool, which automates tasks like call scoring, CRM updates, and follow-ups, significantly improving feedback loops and efficiency. Don inquired about accessing the related videos, and Hayden directed him to the Alumni Circle forum and Forte Labs' YouTube channel.Mermaid Diagrams and TroubleshootingHayden demonstrated how to create and use Mermaid diagrams for visualizing workflows, explaining that Claude can now generate them and recommending ExcalaDraw as a tool for editing. Beni encountered issues with a previous chat session where the HTML file wasn't recognized, and Hayden helped troubleshoot by suggesting Beni open the file in a text editor to inspect the content. When they discovered the file was missing the \"contracting\" section, Hayden advised creating a new chat with the same prompt to try again.Chat Artifacts and Process EvolutionHayden and Beni discussed technical issues with chat artifacts and how to transfer chat content between different platforms or LLMs. Hayden provided guidance on copying artifacts and creating new chat sessions, offering to investigate further issues if needed. Jonas raised concerns about working with assumptions in business processes and sought advice on validating his work with the team. Hayden advised creating initial process versions for team review, emphasizing that current processes are not final and future versions will likely incorporate more technology. They discussed how roles and responsibilities may evolve as processes are automated, with Hayden noting that AI will likely transform many traditional roles in the coming years.Improving Assessment Prompt TailoringThe group discussed issues with assessment prompts and their impact on the quality of results, particularly for Beni who found the second assessment less comprehensive than the first. Hayden suggested adding a specific instruction to tailor questions to Beni's med tech industry and recommended creating separate chats for different services to avoid confusion and improve results. They also addressed technical issues with a chat session that had caused problems, with Hayden advising Beni to try uploading artifacts to a different chat if similar issues arise in the future.\nTranscript & Chat",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "Cohort 4 Office Hours 1 Transcript.vtt",
+        "content_type": "text/vtt",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 160201,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRUhWWWdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--cd8bbf6f8164e5005278e67c231997a1f7ad2579",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/15780kfcfth49a0nqfkq1spag2lf",
+        "is_downloadable": true
+      },
+      {
+        "filename": "Cohort 4 Office Hours 1- Chat.txt",
+        "content_type": "text/plain",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 71,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCR1RWWWdnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--44fe10d6aa106f26a3feb942da1cee49cdfcc836",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/4plezevhqer610d0788m7y3t313q",
+        "is_downloadable": true
+      }
+    ],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "chat_room_uuid": "e4838be2-9336-40bc-ab1a-52dc685f97ad"
+}

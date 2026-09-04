@@ -1,0 +1,213 @@
+{
+  "id": 29053361,
+  "name": null,
+  "slug": "hey-everyone-quick-update-regarding-session-1",
+  "type": "Posts::Basic",
+  "status": "published",
+  "user_id": 30774298,
+  "published_at": "2026-01-27T14:32:08.421Z",
+  "updated_at": "2026-01-28T13:19:54.727Z",
+  "created_at": "2026-01-27T14:32:08.421Z",
+  "hide_meta_info": false,
+  "community_member_id": 51521280,
+  "is_truncation_disabled": null,
+  "hide_from_featured_areas": false,
+  "flagged_for_approval_at": null,
+  "pinned_at": null,
+  "internal_custom_html": null,
+  "is_comments_enabled": true,
+  "is_liking_enabled": true,
+  "share_post_enabled": null,
+  "share_uid": null,
+  "minimal_layout": false,
+  "show_post_teaser": false,
+  "editor": "tiptap",
+  "is_comments_closed": false,
+  "is_comments_disabled": false,
+  "is_liking_disabled": false,
+  "display_title": "Hey everyone — quick update regarding Session 1.\n\nWe just heard back from Zoom support and unfortunately there was a recording error with the first session, which means we won’t be able to upload the recording into the curriculum.  \n\nWe know this isn’t ideal and sincerely apologize for the inconvenience.\n\nTo make sure you have what you need, we’ll be posting:\n• A full meeting summary\n• + the slides we covered during the session\n\nFor all the people who couldn’t attend, if you need any additional clarity on the session overview or next steps, please reach out here, and we’ll make sure you’re taken care of.\n\nThank you for your understanding and patience.",
+  "cover_image": null,
+  "cover_image_url": null,
+  "cover_image_variants": {},
+  "cardview_thumbnail": null,
+  "cardview_thumbnail_url": null,
+  "cardview_image_url": null,
+  "space_name": "Discussion",
+  "space_slug": "discussion-b92449",
+  "community_slug": "empower-labs",
+  "space_id": 2414947,
+  "pin_to_top": false,
+  "pinned_at_top_of_space": false,
+  "bookmark_id": null,
+  "topics": [
+    336023
+  ],
+  "community_member": {
+    "id": 51521280,
+    "user_id": 30774298,
+    "public_uid": "0cb8998d",
+    "first_name": "Josh",
+    "last_name": "Cordes",
+    "name": "Josh Cordes",
+    "admin": true,
+    "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzMwNzc0Mjk4P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--02e79904909f662e09046f35108f48e28a901978",
+    "type": "CommunityMember",
+    "headline": "Customer Acquisition Leader",
+    "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTE1MjEyODA_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--48e1ccf99069c61215c8c923551e00b75da7659b",
+    "avatar_url": "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSTFsY3dZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--7bc1b33cca113c20a49c2d97402b17ac6fb5183a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lKYW5CbFp3WTZCa1ZVT2hSeVpYTnBlbVZmZEc5ZmJHbHRhWFJiQjJrQ0xBRnBBaXdCT2dwellYWmxjbnNHT2dwemRISnBjRlE9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--ef295ed08e817a599d692fd6d8761673d3ed547f/Headshot.jpeg"
+  },
+  "conversation_summary_overview": "",
+  "body_trix_content": "",
+  "body_for_editor": null,
+  "truncated_content": "Hey everyone — quick update regarding Session 1.\n\nWe just heard back from Zoom support and unfortunately there was a recording error with the first session, which means we won’t be able to upload the recording into the curriculum.  \n\nWe know this isn’t...",
+  "show_more": true,
+  "tiptap_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hey everyone — quick update regarding ",
+              "type": "text",
+              "circle_ios_fallback_text": "Hey everyone — quick update regarding "
+            },
+            {
+              "text": "Session 1",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Session 1"
+            },
+            {
+              "text": ".",
+              "type": "text",
+              "circle_ios_fallback_text": "."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "We just heard back from Zoom support and unfortunately there was a recording error with the first session, which means we ",
+              "type": "text",
+              "circle_ios_fallback_text": "We just heard back from Zoom support and unfortunately there was a recording error with the first session, which means we "
+            },
+            {
+              "text": "won’t be able to upload the recording into the curriculum",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "won’t be able to upload the recording into the curriculum"
+            },
+            {
+              "text": ".  ",
+              "type": "text",
+              "circle_ios_fallback_text": ".  "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "We know this isn’t ideal and sincerely apologize for the inconvenience.",
+              "type": "text",
+              "circle_ios_fallback_text": "We know this isn’t ideal and sincerely apologize for the inconvenience."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To make sure you have what you need, we’ll be posting:",
+              "type": "text",
+              "circle_ios_fallback_text": "To make sure you have what you need, we’ll be posting:"
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "• A full ",
+              "type": "text",
+              "circle_ios_fallback_text": "• A full "
+            },
+            {
+              "text": "meeting summary",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "meeting summary"
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "• + the ",
+              "type": "text",
+              "circle_ios_fallback_text": "• + the "
+            },
+            {
+              "text": "slides",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "slides"
+            },
+            {
+              "text": " we covered during the session",
+              "type": "text",
+              "circle_ios_fallback_text": " we covered during the session"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For all the people who couldn’t attend, if you need any additional clarity on the session overview or next steps, please reach out here, and we’ll make sure you’re taken care of.",
+              "type": "text",
+              "circle_ios_fallback_text": "For all the people who couldn’t attend, if you need any additional clarity on the session overview or next steps, please reach out here, and we’ll make sure you’re taken care of."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Thank you for your understanding and patience.",
+              "type": "text",
+              "circle_ios_fallback_text": "Thank you for your understanding and patience."
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "Hey everyone — quick update regarding Session 1.We just heard back from Zoom support and unfortunately there was a recording error with the first session, which means we won’t be able to upload the recording into the curriculum.  We know this isn’t ideal and sincerely apologize for the inconvenience.To make sure you have what you need, we’ll be posting:\n• A full meeting summary\n• + the slides we covered during the sessionFor all the people who couldn’t attend, if you need any additional clarity on the session overview or next steps, please reach out here, and we’ll make sure you’re taken care of.Thank you for your understanding and patience.",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  }
+}

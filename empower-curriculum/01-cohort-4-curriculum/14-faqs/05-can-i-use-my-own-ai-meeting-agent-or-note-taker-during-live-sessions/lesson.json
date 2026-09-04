@@ -1,0 +1,182 @@
+{
+  "id": 3305047,
+  "name": "Can I use my own AI meeting agent or note-taker during live sessions?",
+  "status": "published",
+  "featured_media_enabled": false,
+  "download_featured_media": false,
+  "created_at": "2026-01-14T20:29:16.752Z",
+  "updated_at": "2026-01-14T20:30:28.510Z",
+  "comments_enabled": false,
+  "default_tab": "curriculum",
+  "enforce_featured_media_completion": false,
+  "autocomplete_on_featured_media_completion": true,
+  "dripped_at": null,
+  "is_dripped": true,
+  "needs_to_complete_previous_lesson": false,
+  "completed": false,
+  "notify_students_enabled": false,
+  "bookmark_id": null,
+  "serialized_rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To protect participant privacy and foster open dialogue, we do ",
+              "type": "text",
+              "circle_ios_fallback_text": "To protect participant privacy and foster open dialogue, we do "
+            },
+            {
+              "text": "not",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "circle_ios_fallback_text": "not"
+            },
+            {
+              "text": " allow any external AI meeting agents, transcription tools, or note takers (like Otter, Fathom, Fireflies, etc.) to join our live sessions.",
+              "type": "text",
+              "circle_ios_fallback_text": " allow any external AI meeting agents, transcription tools, or note takers (like Otter, Fathom, Fireflies, etc.) to join our live sessions."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "We will record all sessions ourselves and have a dedicated note-taker present. After each session, we’ll share the official recording and session notes with all participants.",
+              "type": "text",
+              "circle_ios_fallback_text": "We will record all sessions ourselves and have a dedicated note-taker present. After each session, we’ll share the official recording and session notes with all participants."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This policy helps us ensure that anything shared during the sessions—especially sensitive details about your business—remains confidential and protected. We want everyone to feel safe discussing real challenges and insights without concern that their information will be distributed or stored by third-party AI tools.",
+              "type": "text",
+              "circle_ios_fallback_text": "This policy helps us ensure that anything shared during the sessions—especially sensitive details about your business—remains confidential and protected. We want everyone to feel safe discussing real challenges and insights without concern that their information will be distributed or stored by third-party AI tools."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If we detect any unauthorized AI note takers or bots in a session, we’ll remove them immediately.",
+              "type": "text",
+              "circle_ios_fallback_text": "If we detect any unauthorized AI note takers or bots in a session, we’ll remove them immediately."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Thank you for helping us maintain a secure and respectful learning environment.",
+              "type": "text",
+              "circle_ios_fallback_text": "Thank you for helping us maintain a secure and respectful learning environment."
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "To protect participant privacy and foster open dialogue, we do not allow any external AI meeting agents, transcription tools, or note takers (like Otter, Fathom, Fireflies, etc.) to join our live sessions.We will record all sessions ourselves and have a dedicated note-taker present. After each session, we’ll share the official recording and session notes with all participants.This policy helps us ensure that anything shared during the sessions—especially sensitive details about your business—remains confidential and protected. We want everyone to feel safe discussing real challenges and insights without concern that their information will be distributed or stored by third-party AI tools.If we detect any unauthorized AI note takers or bots in a session, we’ll remove them immediately.Thank you for helping us maintain a secure and respectful learning environment.",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To protect participant privacy and foster open dialogue, we do ",
+              "type": "text",
+              "circle_ios_fallback_text": "To protect participant privacy and foster open dialogue, we do "
+            },
+            {
+              "text": "not",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "circle_ios_fallback_text": "not"
+            },
+            {
+              "text": " allow any external AI meeting agents, transcription tools, or note takers (like Otter, Fathom, Fireflies, etc.) to join our live sessions.",
+              "type": "text",
+              "circle_ios_fallback_text": " allow any external AI meeting agents, transcription tools, or note takers (like Otter, Fathom, Fireflies, etc.) to join our live sessions."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "We will record all sessions ourselves and have a dedicated note-taker present. After each session, we’ll share the official recording and session notes with all participants.",
+              "type": "text",
+              "circle_ios_fallback_text": "We will record all sessions ourselves and have a dedicated note-taker present. After each session, we’ll share the official recording and session notes with all participants."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This policy helps us ensure that anything shared during the sessions—especially sensitive details about your business—remains confidential and protected. We want everyone to feel safe discussing real challenges and insights without concern that their information will be distributed or stored by third-party AI tools.",
+              "type": "text",
+              "circle_ios_fallback_text": "This policy helps us ensure that anything shared during the sessions—especially sensitive details about your business—remains confidential and protected. We want everyone to feel safe discussing real challenges and insights without concern that their information will be distributed or stored by third-party AI tools."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If we detect any unauthorized AI note takers or bots in a session, we’ll remove them immediately.",
+              "type": "text",
+              "circle_ios_fallback_text": "If we detect any unauthorized AI note takers or bots in a session, we’ll remove them immediately."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Thank you for helping us maintain a secure and respectful learning environment.",
+              "type": "text",
+              "circle_ios_fallback_text": "Thank you for helping us maintain a secure and respectful learning environment."
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "To protect participant privacy and foster open dialogue, we do not allow any external AI meeting agents, transcription tools, or note takers (like Otter, Fathom, Fireflies, etc.) to join our live sessions.We will record all sessions ourselves and have a dedicated note-taker present. After each session, we’ll share the official recording and session notes with all participants.This policy helps us ensure that anything shared during the sessions—especially sensitive details about your business—remains confidential and protected. We want everyone to feel safe discussing real challenges and insights without concern that their information will be distributed or stored by third-party AI tools.If we detect any unauthorized AI note takers or bots in a session, we’ll remove them immediately.Thank you for helping us maintain a secure and respectful learning environment.",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "chat_room_uuid": "95f779d2-11ef-4c8e-b898-b2b14913242e"
+}

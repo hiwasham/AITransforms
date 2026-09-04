@@ -1,0 +1,167 @@
+{
+  "id": 3381276,
+  "name": "Quiz 3.2: Test Your Understanding of the 4-Level Documentation Framework",
+  "status": "published",
+  "featured_media_enabled": true,
+  "download_featured_media": false,
+  "created_at": "2026-01-30T14:15:48.780Z",
+  "updated_at": "2026-01-30T19:40:09.857Z",
+  "comments_enabled": false,
+  "default_tab": "curriculum",
+  "enforce_featured_media_completion": false,
+  "autocomplete_on_featured_media_completion": true,
+  "dripped_at": null,
+  "is_dripped": true,
+  "needs_to_complete_previous_lesson": false,
+  "completed": false,
+  "notify_students_enabled": false,
+  "bookmark_id": null,
+  "serialized_rich_text_body": null,
+  "rich_text_body": {},
+  "chat_room_uuid": "d5fe1a4e-9258-486d-864f-69185169776e",
+  "latest_quiz_attempt_id": null,
+  "quiz": {
+    "id": 104256,
+    "passing_grade": 80,
+    "enforce_passing_grade": false,
+    "hide_answers": false,
+    "description": null,
+    "questions": [
+      {
+        "id": 503364,
+        "question_type": "single_choice",
+        "statement": "1. What is the main problem that most businesses face with process documentation?",
+        "options": [
+          {
+            "id": 1795831,
+            "value": "They don't have enough software tools"
+          },
+          {
+            "id": 1795832,
+            "value": "They create scattered micro-processes or overwhelming mega-documents"
+          },
+          {
+            "id": 1795833,
+            "value": " They hire the wrong people"
+          },
+          {
+            "id": 1795834,
+            "value": " They focus too much on customer service"
+          },
+          {
+            "id": 1795835,
+            "value": " They don't invest enough in marketing"
+          }
+        ]
+      },
+      {
+        "id": 503365,
+        "question_type": "single_choice",
+        "statement": "2. Who is the primary owner of a Level 1 Core Process?",
+        "options": [
+          {
+            "id": 1795836,
+            "value": " Individual Contributor"
+          },
+          {
+            "id": 1795837,
+            "value": " Manager"
+          },
+          {
+            "id": 1795838,
+            "value": " Director or Executive"
+          },
+          {
+            "id": 1795839,
+            "value": " Team Lead"
+          },
+          {
+            "id": 1795840,
+            "value": " Customer Success Manager"
+          }
+        ]
+      },
+      {
+        "id": 503366,
+        "question_type": "multiple_choice",
+        "statement": "3. Which level provides step-by-step instructions for individual contributors doing the actual work? (2 answers are correct)",
+        "options": [
+          {
+            "id": 1795841,
+            "value": " Level 1: Core Process"
+          },
+          {
+            "id": 1795842,
+            "value": " Level 2: Blueprint"
+          },
+          {
+            "id": 1795843,
+            "value": " Level 3: Guide"
+          },
+          {
+            "id": 1795844,
+            "value": " Level 4: Forms & Templates"
+          },
+          {
+            "id": 1795845,
+            "value": " All levels provide step-by-step instructions"
+          }
+        ]
+      },
+      {
+        "id": 503367,
+        "question_type": "single_choice",
+        "statement": "4. According to the article, what should you start with when implementing this system in your business?",
+        "options": [
+          {
+            "id": 1795846,
+            "value": " Build all the templates first"
+          },
+          {
+            "id": 1795847,
+            "value": " Hire more managers"
+          },
+          {
+            "id": 1795848,
+            "value": " Identify your most critical customer-facing processes"
+          },
+          {
+            "id": 1795849,
+            "value": " Train all employees on the system"
+          },
+          {
+            "id": 1795850,
+            "value": " Purchase new software tools"
+          }
+        ]
+      },
+      {
+        "id": 503368,
+        "question_type": "single_choice",
+        "statement": "5. Which of the following is an example of a Level 4 artifact?",
+        "options": [
+          {
+            "id": 1795851,
+            "value": " \"Sale to Delivery - Accelerator Program\""
+          },
+          {
+            "id": 1795852,
+            "value": " \"Payment Confirmation & Platform Setup\""
+          },
+          {
+            "id": 1795853,
+            "value": " \"Platform Account Creation\""
+          },
+          {
+            "id": 1795854,
+            "value": " \"Weekly Progress Reviews\""
+          },
+          {
+            "id": 1795855,
+            "value": " \"Accelerator Onboarding Welcome Email Template\""
+          }
+        ]
+      }
+    ]
+  }
+}

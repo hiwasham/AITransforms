@@ -1,0 +1,140 @@
+{
+  "id": 28974296,
+  "name": "Introduction and Happy to be back!",
+  "slug": "introduction-and-happy-to-be-back",
+  "type": "Posts::Basic",
+  "status": "published",
+  "user_id": 31043807,
+  "published_at": "2026-01-25T03:37:34.785Z",
+  "updated_at": "2026-01-25T23:41:29.536Z",
+  "created_at": "2026-01-25T03:37:34.785Z",
+  "hide_meta_info": false,
+  "community_member_id": 52281051,
+  "is_truncation_disabled": null,
+  "hide_from_featured_areas": false,
+  "flagged_for_approval_at": null,
+  "pinned_at": null,
+  "internal_custom_html": null,
+  "is_comments_enabled": true,
+  "is_liking_enabled": true,
+  "share_post_enabled": null,
+  "share_uid": null,
+  "minimal_layout": false,
+  "show_post_teaser": false,
+  "editor": "tiptap",
+  "is_comments_closed": false,
+  "is_comments_disabled": false,
+  "is_liking_disabled": false,
+  "display_title": "Introduction and Happy to be back!",
+  "cover_image": null,
+  "cover_image_url": null,
+  "cover_image_variants": {},
+  "cardview_thumbnail": null,
+  "cardview_thumbnail_url": null,
+  "cardview_image_url": null,
+  "space_name": "Discussion",
+  "space_slug": "discussion-b92449",
+  "community_slug": "empower-labs",
+  "space_id": 2414947,
+  "pin_to_top": false,
+  "pinned_at_top_of_space": false,
+  "bookmark_id": null,
+  "topics": [
+    336018
+  ],
+  "community_member": {
+    "id": 52281051,
+    "user_id": 31043807,
+    "public_uid": "ab6468c9",
+    "first_name": "lee@refreshcollective.org",
+    "last_name": null,
+    "name": "lee@refreshcollective.org",
+    "admin": false,
+    "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzMxMDQzODA3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--b1b98ffbf8200a189ff37f5fd5e85a271243fe74",
+    "type": "CommunityMember",
+    "headline": "Integrator",
+    "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTIyODEwNTE_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--6bca5c85446edefc9599b7ecb72b1f8b4d86a0ef",
+    "avatar_url": "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTmN3YWdZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b9d497839d6eb86147c695ee00d9f0ecf2ce7dc6/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lKYW5CbFp3WTZCa1ZVT2hSeVpYTnBlbVZmZEc5ZmJHbHRhWFJiQjJrQ0xBRnBBaXdCT2dwellYWmxjbnNHT2dwemRISnBjRlE9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--ef295ed08e817a599d692fd6d8761673d3ed547f/IMG_2681.jpeg"
+  },
+  "conversation_summary_overview": "",
+  "body_trix_content": "",
+  "body_for_editor": null,
+  "truncated_content": "AI integrator in Cincinnati, Ohio.\n\nGreetings Cohort! I am the Director of Operations at Refresh Collective. My day-to-day is a mix of grant writing, managing organizational systems, onboarding teaching artists, building AI automation for our workflows...",
+  "show_more": true,
+  "tiptap_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "AI integrator in Cincinnati, Ohio.",
+              "type": "text",
+              "circle_ios_fallback_text": "AI integrator in Cincinnati, Ohio."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Greetings Cohort! I am the Director of Operations at Refresh Collective. My day-to-day is a mix of grant writing, managing organizational systems, onboarding teaching artists, building AI automation for our workflows, and strategic planning for expansion. I also do market research to identify new partnership opportunities across Ohio.",
+              "type": "text",
+              "circle_ios_fallback_text": "Greetings Cohort! I am the Director of Operations at Refresh Collective. My day-to-day is a mix of grant writing, managing organizational systems, onboarding teaching artists, building AI automation for our workflows, and strategic planning for expansion. I also do market research to identify new partnership opportunities across Ohio."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Refresh Collective is a nonprofit that runs trauma-informed hip-hop education programs. We operate recording studio classrooms in schools, hospitals, youth detention centers, and treatment facilities across Cleveland and Cincinnati. We serve 685+ students annually using what we call “cypher-style pedagogy.” Circular learning, trust based spaces.",
+              "type": "text",
+              "circle_ios_fallback_text": "Refresh Collective is a nonprofit that runs trauma-informed hip-hop education programs. We operate recording studio classrooms in schools, hospitals, youth detention centers, and treatment facilities across Cleveland and Cincinnati. We serve 685+ students annually using what we call “cypher-style pedagogy.” Circular learning, trust based spaces."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I am excited to continue beta testing AI-powered market-to-lead and customer relationship cultivation systems, scale our data collection and automate lead generation, build more sophisticated AI tools for grant research and reporting, and develop frameworks that help us expand efficiently without losing program quality or mission focus.",
+              "type": "text",
+              "circle_ios_fallback_text": "I am excited to continue beta testing AI-powered market-to-lead and customer relationship cultivation systems, scale our data collection and automate lead generation, build more sophisticated AI tools for grant research and reporting, and develop frameworks that help us expand efficiently without losing program quality or mission focus."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "As a returning cohort participant, I can tell you the first time through this absolutely revolutionized how I work—I’ve seen it 10x my time multiple times over. I’ve been building automated systems for CRM management, lead qualification, market research, and grant processes. ",
+              "type": "text",
+              "circle_ios_fallback_text": "As a returning cohort participant, I can tell you the first time through this absolutely revolutionized how I work—I’ve seen it 10x my time multiple times over. I’ve been building automated systems for CRM management, lead qualification, market research, and grant processes. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I’m back because I want to go deeper, refine what I’ve built, and push into more strategic AI integration that can multiply our organizational impact even further.​​​​​​​​​​​​​​​​",
+              "type": "text",
+              "circle_ios_fallback_text": "I’m back because I want to go deeper, refine what I’ve built, and push into more strategic AI integration that can multiply our organizational impact even further.​​​​​​​​​​​​​​​​"
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "AI integrator in Cincinnati, Ohio.Greetings Cohort! I am the Director of Operations at Refresh Collective. My day-to-day is a mix of grant writing, managing organizational systems, onboarding teaching artists, building AI automation for our workflows, and strategic planning for expansion. I also do market research to identify new partnership opportunities across Ohio.Refresh Collective is a nonprofit that runs trauma-informed hip-hop education programs. We operate recording studio classrooms in schools, hospitals, youth detention centers, and treatment facilities across Cleveland and Cincinnati. We serve 685+ students annually using what we call “cypher-style pedagogy.” Circular learning, trust based spaces.I am excited to continue beta testing AI-powered market-to-lead and customer relationship cultivation systems, scale our data collection and automate lead generation, build more sophisticated AI tools for grant research and reporting, and develop frameworks that help us expand efficiently without losing program quality or mission focus.As a returning cohort participant, I can tell you the first time through this absolutely revolutionized how I work—I’ve seen it 10x my time multiple times over. I’ve been building automated systems for CRM management, lead qualification, market research, and grant processes. I’m back because I want to go deeper, refine what I’ve built, and push into more strategic AI integration that can multiply our organizational impact even further.​​​​​​​​​​​​​​​​",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  }
+}

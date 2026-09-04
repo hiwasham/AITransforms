@@ -1,0 +1,741 @@
+{
+  "id": 3421025,
+  "name": "Live Session 6: Replay",
+  "status": "published",
+  "featured_media_enabled": true,
+  "download_featured_media": false,
+  "created_at": "2026-02-09T01:02:48.841Z",
+  "updated_at": "2026-02-09T23:37:38.645Z",
+  "comments_enabled": false,
+  "default_tab": "curriculum",
+  "enforce_featured_media_completion": false,
+  "autocomplete_on_featured_media_completion": true,
+  "dripped_at": null,
+  "is_dripped": true,
+  "needs_to_complete_previous_lesson": false,
+  "completed": false,
+  "notify_students_enabled": false,
+  "bookmark_id": null,
+  "featured_media": {
+    "playback_url": "https://cdn-media.circle.so/bcdn_token=gwMezEZfipxujqt_JBs-3IWHsVn5CWxpnELhPFLC8xI&token_path=%2F58ffeb21-0cba-45a7-b752-6b4e507bc005%2F&expires=1787964972/58ffeb21-0cba-45a7-b752-6b4e507bc005/hls/playlist.m3u8",
+    "current_storage": "in_house",
+    "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTWtIZFFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b52c8043b051be01eed82875ae7389ce8938a1e2",
+    "filename": "empower_labs_cohort_4_2026-02-09_17_28_44_v1 (1080p) (1).mp4",
+    "content_type": "video/mp4",
+    "duration": "01:27:24",
+    "is_downloadable": false,
+    "url": "https://assets-v2.circle.so/yi9w1bdsqa1hkc5r1ousqjvnmcqi",
+    "thumbnail_image_url": "https://cdn-media.circle.so/bcdn_token=gwMezEZfipxujqt_JBs-3IWHsVn5CWxpnELhPFLC8xI&token_path=%2F58ffeb21-0cba-45a7-b752-6b4e507bc005%2F&expires=1787964972/58ffeb21-0cba-45a7-b752-6b4e507bc005/thumbnail.jpg",
+    "media_transcript_id": 3657310,
+    "media_transcoding": {
+      "status": "succeeded"
+    },
+    "chapters_url": null,
+    "preview_thumbnails_url": "https://cdn-media.circle.so/bcdn_token=gwMezEZfipxujqt_JBs-3IWHsVn5CWxpnELhPFLC8xI&token_path=%2F58ffeb21-0cba-45a7-b752-6b4e507bc005%2F&expires=1787964972/58ffeb21-0cba-45a7-b752-6b4e507bc005/mosaic.vtt",
+    "video_variants": {
+      "original": "https://assets-v2.circle.so/yi9w1bdsqa1hkc5r1ousqjvnmcqi",
+      "hls": "https://cdn-media.circle.so/bcdn_token=gwMezEZfipxujqt_JBs-3IWHsVn5CWxpnELhPFLC8xI&token_path=%2F58ffeb21-0cba-45a7-b752-6b4e507bc005%2F&expires=1787964972/58ffeb21-0cba-45a7-b752-6b4e507bc005/hls/playlist.m3u8"
+    }
+  },
+  "serialized_rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Slides",
+              "type": "text",
+              "circle_ios_fallback_text": "Slides"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSVhPZEFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--31ad39bba410c63484f87935f1c4106f7fc97d0e"
+          }
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Summary",
+              "type": "text",
+              "circle_ios_fallback_text": "Summary"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Financial Management Transition Strategies",
+              "type": "text",
+              "circle_ios_fallback_text": "Financial Management Transition Strategies"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The meeting focused on transitioning to the financial aspects of business management, with an emphasis on making the content accessible to participants who may find finance intimidating. Midori and Hayden discussed strategies for navigating the dense financial content, including encouraging questions in the chat and pausing regularly to clarify concepts, especially from slide 23 onwards. Midori highlighted the importance of understanding financial performance management as a foundational process layer, which is crucial for making informed decisions and pursuing investment opportunities. Participants were reminded of their progress in completing certain exercises, with some still in progress.",
+              "type": "text",
+              "circle_ios_fallback_text": "The meeting focused on transitioning to the financial aspects of business management, with an emphasis on making the content accessible to participants who may find finance intimidating. Midori and Hayden discussed strategies for navigating the dense financial content, including encouraging questions in the chat and pausing regularly to clarify concepts, especially from slide 23 onwards. Midori highlighted the importance of understanding financial performance management as a foundational process layer, which is crucial for making informed decisions and pursuing investment opportunities. Participants were reminded of their progress in completing certain exercises, with some still in progress."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Financial Levers for Small Businesses",
+              "type": "text",
+              "circle_ios_fallback_text": "Financial Levers for Small Businesses"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden presented on financial performance management, focusing on the seven key financial levers for small businesses. He emphasized the importance of price increases as the first lever to pull when acquiring a business, explaining that regular price reviews and value-based pricing can lead to increased profitability. Hayden shared that he typically increases prices at least twice a year and provided examples of how specializing in a specific market segment can significantly boost gross margins. He also discussed the importance of understanding which prices are shoppable versus non-shoppable, particularly in service-based industries. The session concluded with Hayden encouraging participants to consider their current pricing levels and potential paths toward becoming a category of one.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden presented on financial performance management, focusing on the seven key financial levers for small businesses. He emphasized the importance of price increases as the first lever to pull when acquiring a business, explaining that regular price reviews and value-based pricing can lead to increased profitability. Hayden shared that he typically increases prices at least twice a year and provided examples of how specializing in a specific market segment can significantly boost gross margins. He also discussed the importance of understanding which prices are shoppable versus non-shoppable, particularly in service-based industries. The session concluded with Hayden encouraging participants to consider their current pricing levels and potential paths toward becoming a category of one."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI-Driven Revenue Optimization Strategies",
+              "type": "text",
+              "circle_ios_fallback_text": "AI-Driven Revenue Optimization Strategies"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed various levers for increasing revenue and reducing costs, emphasizing the importance of clear differentiation and optimizing the sales funnel before increasing lead generation. He suggested using AI tools like Claude and ChatGPT for benchmarking and reducing costs, and highlighted the benefits of in-house software solutions developed with AI. Hayden also covered strategies for reducing operating expenses, improving accounts receivable and payable processes, and leveraging payment terms to enhance cash flow.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed various levers for increasing revenue and reducing costs, emphasizing the importance of clear differentiation and optimizing the sales funnel before increasing lead generation. He suggested using AI tools like Claude and ChatGPT for benchmarking and reducing costs, and highlighted the benefits of in-house software solutions developed with AI. Hayden also covered strategies for reducing operating expenses, improving accounts receivable and payable processes, and leveraging payment terms to enhance cash flow."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI CRM Development Strategies",
+              "type": "text",
+              "circle_ios_fallback_text": "AI CRM Development Strategies"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden advised Don on building an in-house CRM, suggesting he start with a project specification in Claude and then use AI Studio for a first prototype. Hayden shared his experience with using Airtable for their CRM, which was created in a weekend by a non-developer. They discussed the potential impact of AI-first CRMs on traditional enterprise solutions like Salesforce, with Hayden noting that smaller companies might be less likely to sign up for expensive CRM systems. Hayden also recommended recording tools like Krisp for call recording and shared a workflow using Bubbles, suggesting that the cheapest option with additional functionality would be ideal.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden advised Don on building an in-house CRM, suggesting he start with a project specification in Claude and then use AI Studio for a first prototype. Hayden shared his experience with using Airtable for their CRM, which was created in a weekend by a non-developer. They discussed the potential impact of AI-first CRMs on traditional enterprise solutions like Salesforce, with Hayden noting that smaller companies might be less likely to sign up for expensive CRM systems. Hayden also recommended recording tools like Krisp for call recording and shared a workflow using Bubbles, suggesting that the cheapest option with additional functionality would be ideal."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI in Financial Performance Management",
+              "type": "text",
+              "circle_ios_fallback_text": "AI in Financial Performance Management"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed financial performance management and introduced the concept of using AI and automation in companies, particularly for tasks like cash flow projection and monthly business reviews (MBR). He emphasized the importance of having an MBR structure and suggested that participants who don't currently have one should consider implementing it. Hayden also mentioned that AI can significantly speed up these processes, which used to take controllers several days to complete.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed financial performance management and introduced the concept of using AI and automation in companies, particularly for tasks like cash flow projection and monthly business reviews (MBR). He emphasized the importance of having an MBR structure and suggested that participants who don't currently have one should consider implementing it. Hayden also mentioned that AI can significantly speed up these processes, which used to take controllers several days to complete."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Business Financial Metrics and Tracking",
+              "type": "text",
+              "circle_ios_fallback_text": "Business Financial Metrics and Tracking"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed financial metrics and tracking for businesses, emphasizing the importance of cash flow statements, budget variance tracking, and understanding key financial ratios like EBITDA, gross profit margin, and contribution margin. He recommended reviewing unit economics, efficiency metrics, and growth rates regularly and using tools like Claude to benchmark against industry standards. Hayden also highlighted the need to track revenue concentration risk and break-even points, suggesting that businesses focus on optimizing revenue per employee in the age of AI.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed financial metrics and tracking for businesses, emphasizing the importance of cash flow statements, budget variance tracking, and understanding key financial ratios like EBITDA, gross profit margin, and contribution margin. He recommended reviewing unit economics, efficiency metrics, and growth rates regularly and using tools like Claude to benchmark against industry standards. Hayden also highlighted the need to track revenue concentration risk and break-even points, suggesting that businesses focus on optimizing revenue per employee in the age of AI."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Tools for Revenue Management",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Tools for Revenue Management"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed strategies for managing revenue concentration risk, emphasizing the importance of attracting new customers while maintaining high prices for existing loyal ones. He suggested using AI tools like Claude and ChatGPT to analyze pricing impacts and make investment decisions, noting that these tools can be more effective than hiring a CFO. Hayden also recommended exploring financial YouTube channels and using AI to build spreadsheets, while Christian inquired about the use of Gemini alongside other AI tools.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed strategies for managing revenue concentration risk, emphasizing the importance of attracting new customers while maintaining high prices for existing loyal ones. He suggested using AI tools like Claude and ChatGPT to analyze pricing impacts and make investment decisions, noting that these tools can be more effective than hiring a CFO. Hayden also recommended exploring financial YouTube channels and using AI to build spreadsheets, while Christian inquired about the use of Gemini alongside other AI tools."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Data Protection and Metrics",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Data Protection and Metrics"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed data protection concerns with AI models like ChatGPT and Claude, emphasizing that users should avoid thumbs-up/thumbs-down interactions to prevent data sharing. He explained that enterprise solutions provide better data protection, while API calls are generally safer than direct model interactions. Hayden also covered business metrics including break-even points, efficiency metrics, and burn runway, noting that most businesses should aim for 3-12 months of operating runway depending on individual risk tolerance.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed data protection concerns with AI models like ChatGPT and Claude, emphasizing that users should avoid thumbs-up/thumbs-down interactions to prevent data sharing. He explained that enterprise solutions provide better data protection, while API calls are generally safer than direct model interactions. Hayden also covered business metrics including break-even points, efficiency metrics, and burn runway, noting that most businesses should aim for 3-12 months of operating runway depending on individual risk tolerance."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Financial Strategy and AI Integration",
+              "type": "text",
+              "circle_ios_fallback_text": "Financial Strategy and AI Integration"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed financial management strategies, emphasizing the importance of gross profit over EBITDA for operational tracking, and advised maintaining a minimum 3-month cash runway with up to 6 months for volatile businesses. He explained their use of AI and Slack for maintaining an up-to-date master prompt, which integrates weekly updates from various departments, including finance, HR, and customer acquisition. Hayden also mentioned an upcoming session on cohort analysis and highlighted the potential of AI to streamline various business processes.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed financial management strategies, emphasizing the importance of gross profit over EBITDA for operational tracking, and advised maintaining a minimum 3-month cash runway with up to 6 months for volatile businesses. He explained their use of AI and Slack for maintaining an up-to-date master prompt, which integrates weekly updates from various departments, including finance, HR, and customer acquisition. Hayden also mentioned an upcoming session on cohort analysis and highlighted the potential of AI to streamline various business processes."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Business Intelligence Team Training Overview",
+              "type": "text",
+              "circle_ios_fallback_text": "Business Intelligence Team Training Overview"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden explained his approach to building business intelligence through team training and the creation of role-specific prompts, emphasizing the importance of bottom-up ownership of processes. He discussed Stage 3 as middleware to keep master prompts and processes up to date, noting it would be free for the cohort initially. Midori outlined the week's work, which included optional exercises like using a fractional CFO prompt and creating interactive artifacts, and announced upcoming sessions and office hours. The group was reminded there would be no session on Friday.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden explained his approach to building business intelligence through team training and the creation of role-specific prompts, emphasizing the importance of bottom-up ownership of processes. He discussed Stage 3 as middleware to keep master prompts and processes up to date, noting it would be free for the cohort initially. Midori outlined the week's work, which included optional exercises like using a fractional CFO prompt and creating interactive artifacts, and announced upcoming sessions and office hours. The group was reminded there would be no session on Friday."
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Transcript & Chat",
+              "type": "text",
+              "circle_ios_fallback_text": "Transcript & Chat"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCR1hTZEFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--3f91de5b03bfee940ec16a7829d4b9aeadbe9a26"
+          }
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSkxTZEFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--a7b78d672ea8b6330cb1ac7607984a527aa5f014"
+          }
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "SlidesSummaryFinancial Management Transition StrategiesThe meeting focused on transitioning to the financial aspects of business management, with an emphasis on making the content accessible to participants who may find finance intimidating. Midori and Hayden discussed strategies for navigating the dense financial content, including encouraging questions in the chat and pausing regularly to clarify concepts, especially from slide 23 onwards. Midori highlighted the importance of understanding financial performance management as a foundational process layer, which is crucial for making informed decisions and pursuing investment opportunities. Participants were reminded of their progress in completing certain exercises, with some still in progress.Financial Levers for Small BusinessesHayden presented on financial performance management, focusing on the seven key financial levers for small businesses. He emphasized the importance of price increases as the first lever to pull when acquiring a business, explaining that regular price reviews and value-based pricing can lead to increased profitability. Hayden shared that he typically increases prices at least twice a year and provided examples of how specializing in a specific market segment can significantly boost gross margins. He also discussed the importance of understanding which prices are shoppable versus non-shoppable, particularly in service-based industries. The session concluded with Hayden encouraging participants to consider their current pricing levels and potential paths toward becoming a category of one.AI-Driven Revenue Optimization StrategiesHayden discussed various levers for increasing revenue and reducing costs, emphasizing the importance of clear differentiation and optimizing the sales funnel before increasing lead generation. He suggested using AI tools like Claude and ChatGPT for benchmarking and reducing costs, and highlighted the benefits of in-house software solutions developed with AI. Hayden also covered strategies for reducing operating expenses, improving accounts receivable and payable processes, and leveraging payment terms to enhance cash flow.AI CRM Development StrategiesHayden advised Don on building an in-house CRM, suggesting he start with a project specification in Claude and then use AI Studio for a first prototype. Hayden shared his experience with using Airtable for their CRM, which was created in a weekend by a non-developer. They discussed the potential impact of AI-first CRMs on traditional enterprise solutions like Salesforce, with Hayden noting that smaller companies might be less likely to sign up for expensive CRM systems. Hayden also recommended recording tools like Krisp for call recording and shared a workflow using Bubbles, suggesting that the cheapest option with additional functionality would be ideal.AI in Financial Performance ManagementHayden discussed financial performance management and introduced the concept of using AI and automation in companies, particularly for tasks like cash flow projection and monthly business reviews (MBR). He emphasized the importance of having an MBR structure and suggested that participants who don't currently have one should consider implementing it. Hayden also mentioned that AI can significantly speed up these processes, which used to take controllers several days to complete.Business Financial Metrics and TrackingHayden discussed financial metrics and tracking for businesses, emphasizing the importance of cash flow statements, budget variance tracking, and understanding key financial ratios like EBITDA, gross profit margin, and contribution margin. He recommended reviewing unit economics, efficiency metrics, and growth rates regularly and using tools like Claude to benchmark against industry standards. Hayden also highlighted the need to track revenue concentration risk and break-even points, suggesting that businesses focus on optimizing revenue per employee in the age of AI.AI Tools for Revenue ManagementHayden discussed strategies for managing revenue concentration risk, emphasizing the importance of attracting new customers while maintaining high prices for existing loyal ones. He suggested using AI tools like Claude and ChatGPT to analyze pricing impacts and make investment decisions, noting that these tools can be more effective than hiring a CFO. Hayden also recommended exploring financial YouTube channels and using AI to build spreadsheets, while Christian inquired about the use of Gemini alongside other AI tools.AI Data Protection and MetricsHayden discussed data protection concerns with AI models like ChatGPT and Claude, emphasizing that users should avoid thumbs-up/thumbs-down interactions to prevent data sharing. He explained that enterprise solutions provide better data protection, while API calls are generally safer than direct model interactions. Hayden also covered business metrics including break-even points, efficiency metrics, and burn runway, noting that most businesses should aim for 3-12 months of operating runway depending on individual risk tolerance.Financial Strategy and AI IntegrationHayden discussed financial management strategies, emphasizing the importance of gross profit over EBITDA for operational tracking, and advised maintaining a minimum 3-month cash runway with up to 6 months for volatile businesses. He explained their use of AI and Slack for maintaining an up-to-date master prompt, which integrates weekly updates from various departments, including finance, HR, and customer acquisition. Hayden also mentioned an upcoming session on cohort analysis and highlighted the potential of AI to streamline various business processes.Business Intelligence Team Training OverviewHayden explained his approach to building business intelligence through team training and the creation of role-specific prompts, emphasizing the importance of bottom-up ownership of processes. He discussed Stage 3 as middleware to keep master prompts and processes up to date, noting it would be free for the cohort initially. Midori outlined the week's work, which included optional exercises like using a fractional CFO prompt and creating interactive artifacts, and announced upcoming sessions and office hours. The group was reminded there would be no session on Friday.\nTranscript & Chat",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "Session-6-Profitability-Metrics.pdf",
+        "content_type": "application/pdf",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 2989039,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSVhPZEFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--31ad39bba410c63484f87935f1c4106f7fc97d0e",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/gyi60puqptnyv5up1ervah1jl70a",
+        "is_downloadable": true,
+        "image_variants": {
+          "thumbnail": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSVhPZEFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--31ad39bba410c63484f87935f1c4106f7fc97d0e/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VY21WemFYcGxYM1J2WDJ4cGJXbDBXd2RwQWlBRGFRSkFCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--07a046a624ee42d116e6b9403cb3c1dc2823e2af/Session-6-Profitability-Metrics.pdf"
+        }
+      },
+      {
+        "filename": "Cohort 4 Live session 6 -Transcript .vtt",
+        "content_type": "text/vtt",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 152601,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCR1hTZEFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--3f91de5b03bfee940ec16a7829d4b9aeadbe9a26",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/9ygixex9hhxjvhtdzz2ulnupsn65",
+        "is_downloadable": true
+      },
+      {
+        "filename": "Cohort 4 Live session 6 -Chat.txt",
+        "content_type": "text/plain",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 3642,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSkxTZEFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--a7b78d672ea8b6330cb1ac7607984a527aa5f014",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/7ik2opbq6ntfnln3ogwaxujb7h4z",
+        "is_downloadable": true
+      }
+    ],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Slides",
+              "type": "text",
+              "circle_ios_fallback_text": "Slides"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSVhPZEFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--31ad39bba410c63484f87935f1c4106f7fc97d0e"
+          }
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Summary",
+              "type": "text",
+              "circle_ios_fallback_text": "Summary"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Financial Management Transition Strategies",
+              "type": "text",
+              "circle_ios_fallback_text": "Financial Management Transition Strategies"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The meeting focused on transitioning to the financial aspects of business management, with an emphasis on making the content accessible to participants who may find finance intimidating. Midori and Hayden discussed strategies for navigating the dense financial content, including encouraging questions in the chat and pausing regularly to clarify concepts, especially from slide 23 onwards. Midori highlighted the importance of understanding financial performance management as a foundational process layer, which is crucial for making informed decisions and pursuing investment opportunities. Participants were reminded of their progress in completing certain exercises, with some still in progress.",
+              "type": "text",
+              "circle_ios_fallback_text": "The meeting focused on transitioning to the financial aspects of business management, with an emphasis on making the content accessible to participants who may find finance intimidating. Midori and Hayden discussed strategies for navigating the dense financial content, including encouraging questions in the chat and pausing regularly to clarify concepts, especially from slide 23 onwards. Midori highlighted the importance of understanding financial performance management as a foundational process layer, which is crucial for making informed decisions and pursuing investment opportunities. Participants were reminded of their progress in completing certain exercises, with some still in progress."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Financial Levers for Small Businesses",
+              "type": "text",
+              "circle_ios_fallback_text": "Financial Levers for Small Businesses"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden presented on financial performance management, focusing on the seven key financial levers for small businesses. He emphasized the importance of price increases as the first lever to pull when acquiring a business, explaining that regular price reviews and value-based pricing can lead to increased profitability. Hayden shared that he typically increases prices at least twice a year and provided examples of how specializing in a specific market segment can significantly boost gross margins. He also discussed the importance of understanding which prices are shoppable versus non-shoppable, particularly in service-based industries. The session concluded with Hayden encouraging participants to consider their current pricing levels and potential paths toward becoming a category of one.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden presented on financial performance management, focusing on the seven key financial levers for small businesses. He emphasized the importance of price increases as the first lever to pull when acquiring a business, explaining that regular price reviews and value-based pricing can lead to increased profitability. Hayden shared that he typically increases prices at least twice a year and provided examples of how specializing in a specific market segment can significantly boost gross margins. He also discussed the importance of understanding which prices are shoppable versus non-shoppable, particularly in service-based industries. The session concluded with Hayden encouraging participants to consider their current pricing levels and potential paths toward becoming a category of one."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI-Driven Revenue Optimization Strategies",
+              "type": "text",
+              "circle_ios_fallback_text": "AI-Driven Revenue Optimization Strategies"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed various levers for increasing revenue and reducing costs, emphasizing the importance of clear differentiation and optimizing the sales funnel before increasing lead generation. He suggested using AI tools like Claude and ChatGPT for benchmarking and reducing costs, and highlighted the benefits of in-house software solutions developed with AI. Hayden also covered strategies for reducing operating expenses, improving accounts receivable and payable processes, and leveraging payment terms to enhance cash flow.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed various levers for increasing revenue and reducing costs, emphasizing the importance of clear differentiation and optimizing the sales funnel before increasing lead generation. He suggested using AI tools like Claude and ChatGPT for benchmarking and reducing costs, and highlighted the benefits of in-house software solutions developed with AI. Hayden also covered strategies for reducing operating expenses, improving accounts receivable and payable processes, and leveraging payment terms to enhance cash flow."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI CRM Development Strategies",
+              "type": "text",
+              "circle_ios_fallback_text": "AI CRM Development Strategies"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden advised Don on building an in-house CRM, suggesting he start with a project specification in Claude and then use AI Studio for a first prototype. Hayden shared his experience with using Airtable for their CRM, which was created in a weekend by a non-developer. They discussed the potential impact of AI-first CRMs on traditional enterprise solutions like Salesforce, with Hayden noting that smaller companies might be less likely to sign up for expensive CRM systems. Hayden also recommended recording tools like Krisp for call recording and shared a workflow using Bubbles, suggesting that the cheapest option with additional functionality would be ideal.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden advised Don on building an in-house CRM, suggesting he start with a project specification in Claude and then use AI Studio for a first prototype. Hayden shared his experience with using Airtable for their CRM, which was created in a weekend by a non-developer. They discussed the potential impact of AI-first CRMs on traditional enterprise solutions like Salesforce, with Hayden noting that smaller companies might be less likely to sign up for expensive CRM systems. Hayden also recommended recording tools like Krisp for call recording and shared a workflow using Bubbles, suggesting that the cheapest option with additional functionality would be ideal."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI in Financial Performance Management",
+              "type": "text",
+              "circle_ios_fallback_text": "AI in Financial Performance Management"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed financial performance management and introduced the concept of using AI and automation in companies, particularly for tasks like cash flow projection and monthly business reviews (MBR). He emphasized the importance of having an MBR structure and suggested that participants who don't currently have one should consider implementing it. Hayden also mentioned that AI can significantly speed up these processes, which used to take controllers several days to complete.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed financial performance management and introduced the concept of using AI and automation in companies, particularly for tasks like cash flow projection and monthly business reviews (MBR). He emphasized the importance of having an MBR structure and suggested that participants who don't currently have one should consider implementing it. Hayden also mentioned that AI can significantly speed up these processes, which used to take controllers several days to complete."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Business Financial Metrics and Tracking",
+              "type": "text",
+              "circle_ios_fallback_text": "Business Financial Metrics and Tracking"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed financial metrics and tracking for businesses, emphasizing the importance of cash flow statements, budget variance tracking, and understanding key financial ratios like EBITDA, gross profit margin, and contribution margin. He recommended reviewing unit economics, efficiency metrics, and growth rates regularly and using tools like Claude to benchmark against industry standards. Hayden also highlighted the need to track revenue concentration risk and break-even points, suggesting that businesses focus on optimizing revenue per employee in the age of AI.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed financial metrics and tracking for businesses, emphasizing the importance of cash flow statements, budget variance tracking, and understanding key financial ratios like EBITDA, gross profit margin, and contribution margin. He recommended reviewing unit economics, efficiency metrics, and growth rates regularly and using tools like Claude to benchmark against industry standards. Hayden also highlighted the need to track revenue concentration risk and break-even points, suggesting that businesses focus on optimizing revenue per employee in the age of AI."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Tools for Revenue Management",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Tools for Revenue Management"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed strategies for managing revenue concentration risk, emphasizing the importance of attracting new customers while maintaining high prices for existing loyal ones. He suggested using AI tools like Claude and ChatGPT to analyze pricing impacts and make investment decisions, noting that these tools can be more effective than hiring a CFO. Hayden also recommended exploring financial YouTube channels and using AI to build spreadsheets, while Christian inquired about the use of Gemini alongside other AI tools.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed strategies for managing revenue concentration risk, emphasizing the importance of attracting new customers while maintaining high prices for existing loyal ones. He suggested using AI tools like Claude and ChatGPT to analyze pricing impacts and make investment decisions, noting that these tools can be more effective than hiring a CFO. Hayden also recommended exploring financial YouTube channels and using AI to build spreadsheets, while Christian inquired about the use of Gemini alongside other AI tools."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Data Protection and Metrics",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Data Protection and Metrics"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed data protection concerns with AI models like ChatGPT and Claude, emphasizing that users should avoid thumbs-up/thumbs-down interactions to prevent data sharing. He explained that enterprise solutions provide better data protection, while API calls are generally safer than direct model interactions. Hayden also covered business metrics including break-even points, efficiency metrics, and burn runway, noting that most businesses should aim for 3-12 months of operating runway depending on individual risk tolerance.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed data protection concerns with AI models like ChatGPT and Claude, emphasizing that users should avoid thumbs-up/thumbs-down interactions to prevent data sharing. He explained that enterprise solutions provide better data protection, while API calls are generally safer than direct model interactions. Hayden also covered business metrics including break-even points, efficiency metrics, and burn runway, noting that most businesses should aim for 3-12 months of operating runway depending on individual risk tolerance."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Financial Strategy and AI Integration",
+              "type": "text",
+              "circle_ios_fallback_text": "Financial Strategy and AI Integration"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed financial management strategies, emphasizing the importance of gross profit over EBITDA for operational tracking, and advised maintaining a minimum 3-month cash runway with up to 6 months for volatile businesses. He explained their use of AI and Slack for maintaining an up-to-date master prompt, which integrates weekly updates from various departments, including finance, HR, and customer acquisition. Hayden also mentioned an upcoming session on cohort analysis and highlighted the potential of AI to streamline various business processes.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed financial management strategies, emphasizing the importance of gross profit over EBITDA for operational tracking, and advised maintaining a minimum 3-month cash runway with up to 6 months for volatile businesses. He explained their use of AI and Slack for maintaining an up-to-date master prompt, which integrates weekly updates from various departments, including finance, HR, and customer acquisition. Hayden also mentioned an upcoming session on cohort analysis and highlighted the potential of AI to streamline various business processes."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Business Intelligence Team Training Overview",
+              "type": "text",
+              "circle_ios_fallback_text": "Business Intelligence Team Training Overview"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden explained his approach to building business intelligence through team training and the creation of role-specific prompts, emphasizing the importance of bottom-up ownership of processes. He discussed Stage 3 as middleware to keep master prompts and processes up to date, noting it would be free for the cohort initially. Midori outlined the week's work, which included optional exercises like using a fractional CFO prompt and creating interactive artifacts, and announced upcoming sessions and office hours. The group was reminded there would be no session on Friday.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden explained his approach to building business intelligence through team training and the creation of role-specific prompts, emphasizing the importance of bottom-up ownership of processes. He discussed Stage 3 as middleware to keep master prompts and processes up to date, noting it would be free for the cohort initially. Midori outlined the week's work, which included optional exercises like using a fractional CFO prompt and creating interactive artifacts, and announced upcoming sessions and office hours. The group was reminded there would be no session on Friday."
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Transcript & Chat",
+              "type": "text",
+              "circle_ios_fallback_text": "Transcript & Chat"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCR1hTZEFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--3f91de5b03bfee940ec16a7829d4b9aeadbe9a26"
+          }
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSkxTZEFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--a7b78d672ea8b6330cb1ac7607984a527aa5f014"
+          }
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "SlidesSummaryFinancial Management Transition StrategiesThe meeting focused on transitioning to the financial aspects of business management, with an emphasis on making the content accessible to participants who may find finance intimidating. Midori and Hayden discussed strategies for navigating the dense financial content, including encouraging questions in the chat and pausing regularly to clarify concepts, especially from slide 23 onwards. Midori highlighted the importance of understanding financial performance management as a foundational process layer, which is crucial for making informed decisions and pursuing investment opportunities. Participants were reminded of their progress in completing certain exercises, with some still in progress.Financial Levers for Small BusinessesHayden presented on financial performance management, focusing on the seven key financial levers for small businesses. He emphasized the importance of price increases as the first lever to pull when acquiring a business, explaining that regular price reviews and value-based pricing can lead to increased profitability. Hayden shared that he typically increases prices at least twice a year and provided examples of how specializing in a specific market segment can significantly boost gross margins. He also discussed the importance of understanding which prices are shoppable versus non-shoppable, particularly in service-based industries. The session concluded with Hayden encouraging participants to consider their current pricing levels and potential paths toward becoming a category of one.AI-Driven Revenue Optimization StrategiesHayden discussed various levers for increasing revenue and reducing costs, emphasizing the importance of clear differentiation and optimizing the sales funnel before increasing lead generation. He suggested using AI tools like Claude and ChatGPT for benchmarking and reducing costs, and highlighted the benefits of in-house software solutions developed with AI. Hayden also covered strategies for reducing operating expenses, improving accounts receivable and payable processes, and leveraging payment terms to enhance cash flow.AI CRM Development StrategiesHayden advised Don on building an in-house CRM, suggesting he start with a project specification in Claude and then use AI Studio for a first prototype. Hayden shared his experience with using Airtable for their CRM, which was created in a weekend by a non-developer. They discussed the potential impact of AI-first CRMs on traditional enterprise solutions like Salesforce, with Hayden noting that smaller companies might be less likely to sign up for expensive CRM systems. Hayden also recommended recording tools like Krisp for call recording and shared a workflow using Bubbles, suggesting that the cheapest option with additional functionality would be ideal.AI in Financial Performance ManagementHayden discussed financial performance management and introduced the concept of using AI and automation in companies, particularly for tasks like cash flow projection and monthly business reviews (MBR). He emphasized the importance of having an MBR structure and suggested that participants who don't currently have one should consider implementing it. Hayden also mentioned that AI can significantly speed up these processes, which used to take controllers several days to complete.Business Financial Metrics and TrackingHayden discussed financial metrics and tracking for businesses, emphasizing the importance of cash flow statements, budget variance tracking, and understanding key financial ratios like EBITDA, gross profit margin, and contribution margin. He recommended reviewing unit economics, efficiency metrics, and growth rates regularly and using tools like Claude to benchmark against industry standards. Hayden also highlighted the need to track revenue concentration risk and break-even points, suggesting that businesses focus on optimizing revenue per employee in the age of AI.AI Tools for Revenue ManagementHayden discussed strategies for managing revenue concentration risk, emphasizing the importance of attracting new customers while maintaining high prices for existing loyal ones. He suggested using AI tools like Claude and ChatGPT to analyze pricing impacts and make investment decisions, noting that these tools can be more effective than hiring a CFO. Hayden also recommended exploring financial YouTube channels and using AI to build spreadsheets, while Christian inquired about the use of Gemini alongside other AI tools.AI Data Protection and MetricsHayden discussed data protection concerns with AI models like ChatGPT and Claude, emphasizing that users should avoid thumbs-up/thumbs-down interactions to prevent data sharing. He explained that enterprise solutions provide better data protection, while API calls are generally safer than direct model interactions. Hayden also covered business metrics including break-even points, efficiency metrics, and burn runway, noting that most businesses should aim for 3-12 months of operating runway depending on individual risk tolerance.Financial Strategy and AI IntegrationHayden discussed financial management strategies, emphasizing the importance of gross profit over EBITDA for operational tracking, and advised maintaining a minimum 3-month cash runway with up to 6 months for volatile businesses. He explained their use of AI and Slack for maintaining an up-to-date master prompt, which integrates weekly updates from various departments, including finance, HR, and customer acquisition. Hayden also mentioned an upcoming session on cohort analysis and highlighted the potential of AI to streamline various business processes.Business Intelligence Team Training OverviewHayden explained his approach to building business intelligence through team training and the creation of role-specific prompts, emphasizing the importance of bottom-up ownership of processes. He discussed Stage 3 as middleware to keep master prompts and processes up to date, noting it would be free for the cohort initially. Midori outlined the week's work, which included optional exercises like using a fractional CFO prompt and creating interactive artifacts, and announced upcoming sessions and office hours. The group was reminded there would be no session on Friday.\nTranscript & Chat",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "Session-6-Profitability-Metrics.pdf",
+        "content_type": "application/pdf",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 2989039,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSVhPZEFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--31ad39bba410c63484f87935f1c4106f7fc97d0e",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/gyi60puqptnyv5up1ervah1jl70a",
+        "is_downloadable": true,
+        "image_variants": {
+          "thumbnail": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSVhPZEFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--31ad39bba410c63484f87935f1c4106f7fc97d0e/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VY21WemFYcGxYM1J2WDJ4cGJXbDBXd2RwQWlBRGFRSkFCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--07a046a624ee42d116e6b9403cb3c1dc2823e2af/Session-6-Profitability-Metrics.pdf"
+        }
+      },
+      {
+        "filename": "Cohort 4 Live session 6 -Transcript .vtt",
+        "content_type": "text/vtt",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 152601,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCR1hTZEFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--3f91de5b03bfee940ec16a7829d4b9aeadbe9a26",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/9ygixex9hhxjvhtdzz2ulnupsn65",
+        "is_downloadable": true
+      },
+      {
+        "filename": "Cohort 4 Live session 6 -Chat.txt",
+        "content_type": "text/plain",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 3642,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSkxTZEFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--a7b78d672ea8b6330cb1ac7607984a527aa5f014",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/7ik2opbq6ntfnln3ogwaxujb7h4z",
+        "is_downloadable": true
+      }
+    ],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "chat_room_uuid": "9d737b45-1691-4765-8565-f60d36970184"
+}

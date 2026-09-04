@@ -1,0 +1,3008 @@
+{
+  "id": 2837867,
+  "name": "Lesson 6: Effective Prompting",
+  "status": "published",
+  "featured_media_enabled": false,
+  "download_featured_media": false,
+  "created_at": "2025-09-30T19:34:39.419Z",
+  "updated_at": "2025-09-30T19:35:47.655Z",
+  "comments_enabled": false,
+  "default_tab": "curriculum",
+  "enforce_featured_media_completion": false,
+  "autocomplete_on_featured_media_completion": true,
+  "dripped_at": null,
+  "is_dripped": true,
+  "needs_to_complete_previous_lesson": false,
+  "completed": false,
+  "notify_students_enabled": false,
+  "bookmark_id": null,
+  "serialized_rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "1. Be clear and specific",
+              "type": "text",
+              "circle_ios_fallback_text": "1. Be clear and specific"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Clearly state your task or question at the beginning of your message. Provide context and details to help Claude understand your needs. Break complex tasks into smaller, manageable steps.",
+              "type": "text",
+              "circle_ios_fallback_text": "Clearly state your task or question at the beginning of your message. Provide context and details to help Claude understand your needs. Break complex tasks into smaller, manageable steps."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bad prompt",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Bad prompt"
+            },
+            {
+              "text": ": \"Help me with a presentation.\"",
+              "type": "text",
+              "circle_ios_fallback_text": ": \"Help me with a presentation.\""
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Good prompt: ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Good prompt: "
+            },
+            {
+              "text": "\"I need help creating a 10-slide presentation for our quarterly sales meeting. The presentation should cover our Q2 sales performance, top-selling products, and sales targets for Q3. Please provide an outline with key points for each slide.\"",
+              "type": "text",
+              "circle_ios_fallback_text": "\"I need help creating a 10-slide presentation for our quarterly sales meeting. The presentation should cover our Q2 sales performance, top-selling products, and sales targets for Q3. Please provide an outline with key points for each slide.\""
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Why it's better: ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Why it's better: "
+            },
+            {
+              "text": "The good prompt provides specific details about the task, including the number of slides, the purpose of the presentation, and the key topics to be covered.",
+              "type": "text",
+              "circle_ios_fallback_text": "The good prompt provides specific details about the task, including the number of slides, the purpose of the presentation, and the key topics to be covered."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "2. Use examples",
+              "type": "text",
+              "circle_ios_fallback_text": "2. Use examples"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Provide examples of the kind of output you're looking for. If you want a specific format or style, show Claude an example.",
+              "type": "text",
+              "circle_ios_fallback_text": "Provide examples of the kind of output you're looking for. If you want a specific format or style, show Claude an example."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bad prompt:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Bad prompt:"
+            },
+            {
+              "text": " \"Write a professional email.\"",
+              "type": "text",
+              "circle_ios_fallback_text": " \"Write a professional email.\""
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Good prompt: ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Good prompt: "
+            },
+            {
+              "text": "\"I need to write a professional email to a client about a project delay. Here's a similar email I've sent before:",
+              "type": "text",
+              "circle_ios_fallback_text": "\"I need to write a professional email to a client about a project delay. Here's a similar email I've sent before:"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "'Dear [Client], I hope this email finds you well. I wanted to update you on the progress of [Project Name]. Unfortunately, we've encountered an unexpected issue that will delay our completion date by approximately two weeks. We're working diligently to resolve this and will keep you updated on our progress. Please let me know if you have any questions or concerns. Best regards, [Your Name]'",
+              "type": "text",
+              "circle_ios_fallback_text": "'Dear [Client], I hope this email finds you well. I wanted to update you on the progress of [Project Name]. Unfortunately, we've encountered an unexpected issue that will delay our completion date by approximately two weeks. We're working diligently to resolve this and will keep you updated on our progress. Please let me know if you have any questions or concerns. Best regards, [Your Name]'"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Help me draft a new email following a similar tone and structure, but for our current situation where we're delayed by a month due to supply chain issues.\"",
+              "type": "text",
+              "circle_ios_fallback_text": "Help me draft a new email following a similar tone and structure, but for our current situation where we're delayed by a month due to supply chain issues.\""
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Why it's better:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Why it's better:"
+            },
+            {
+              "text": " The good prompt provides a concrete example of the desired style and tone, giving Claude a clear reference point for the new email.",
+              "type": "text",
+              "circle_ios_fallback_text": " The good prompt provides a concrete example of the desired style and tone, giving Claude a clear reference point for the new email."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "3. Encourage thinking",
+              "type": "text",
+              "circle_ios_fallback_text": "3. Encourage thinking"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For complex tasks, ask Claude to \"think step-by-step\" or \"explain your reasoning.\" This can lead to more accurate and detailed responses.",
+              "type": "text",
+              "circle_ios_fallback_text": "For complex tasks, ask Claude to \"think step-by-step\" or \"explain your reasoning.\" This can lead to more accurate and detailed responses."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bad prompt: ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Bad prompt: "
+            },
+            {
+              "text": "\"How can I improve team productivity?\" ",
+              "type": "text",
+              "circle_ios_fallback_text": "\"How can I improve team productivity?\" "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Good prompt: ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Good prompt: "
+            },
+            {
+              "text": "\"I'm looking to improve my team's productivity. Think through this step-by-step, considering the following factors:",
+              "type": "text",
+              "circle_ios_fallback_text": "\"I'm looking to improve my team's productivity. Think through this step-by-step, considering the following factors:"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Current productivity blockers (e.g., too many meetings, unclear priorities)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Potential solutions (e.g., time management techniques, project management tools)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Implementation challenges",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Methods to measure improvement",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For each step, please provide a brief explanation of your reasoning. Then summarize your ideas at the end.\"",
+              "type": "text",
+              "circle_ios_fallback_text": "For each step, please provide a brief explanation of your reasoning. Then summarize your ideas at the end.\""
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Why it's better: ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Why it's better: "
+            },
+            {
+              "text": "The good prompt asks Claude to think through the problem systematically, providing a guided structure for the response and asking for explanations of the reasoning process. It also prompts Claude to create a summary at the end for easier reading.",
+              "type": "text",
+              "circle_ios_fallback_text": "The good prompt asks Claude to think through the problem systematically, providing a guided structure for the response and asking for explanations of the reasoning process. It also prompts Claude to create a summary at the end for easier reading."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "4. Iterative refinement",
+              "type": "text",
+              "circle_ios_fallback_text": "4. Iterative refinement"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If Claude's first response isn't quite right, ask for clarifications or modifications. You can always say \"That's close, but can you adjust X to be more like Y?\"",
+              "type": "text",
+              "circle_ios_fallback_text": "If Claude's first response isn't quite right, ask for clarifications or modifications. You can always say \"That's close, but can you adjust X to be more like Y?\""
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bad prompt:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Bad prompt:"
+            },
+            {
+              "text": " \"Make it better.\"",
+              "type": "text",
+              "circle_ios_fallback_text": " \"Make it better.\""
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Good prompt:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Good prompt:"
+            },
+            {
+              "text": " \"That’s a good start, but please refine it further. Make the following adjustments:",
+              "type": "text",
+              "circle_ios_fallback_text": " \"That’s a good start, but please refine it further. Make the following adjustments:"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Make the tone more casual and friendly",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Add a specific example of how our product has helped a customer",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Shorten the second paragraph to focus more on the benefits rather than the features\" ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Why it's better: ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Why it's better: "
+            },
+            {
+              "text": "The good prompt provides specific feedback and clear instructions for improvements, allowing Claude to make targeted adjustments instead of just relying on Claude’s innate sense of what “better” might be — which is likely different from the user’s definition!",
+              "type": "text",
+              "circle_ios_fallback_text": "The good prompt provides specific feedback and clear instructions for improvements, allowing Claude to make targeted adjustments instead of just relying on Claude’s innate sense of what “better” might be — which is likely different from the user’s definition!"
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "5. Leverage Claude's knowledge",
+              "type": "text",
+              "circle_ios_fallback_text": "5. Leverage Claude's knowledge"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Claude has broad knowledge across many fields. Don't hesitate to ask for explanations or background information. Be sure to include relevant context and details so that Claude’s response is maximally targeted to be helpful. ",
+              "type": "text",
+              "circle_ios_fallback_text": "Claude has broad knowledge across many fields. Don't hesitate to ask for explanations or background information. Be sure to include relevant context and details so that Claude’s response is maximally targeted to be helpful. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bad prompt: ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Bad prompt: "
+            },
+            {
+              "text": "\"What is marketing? How do I do it?\" ",
+              "type": "text",
+              "circle_ios_fallback_text": "\"What is marketing? How do I do it?\" "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Good prompt:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Good prompt:"
+            },
+            {
+              "text": " \"I'm developing a marketing strategy for a new eco-friendly cleaning product line. Can you provide an overview of current trends in green marketing? Please include:",
+              "type": "text",
+              "circle_ios_fallback_text": " \"I'm developing a marketing strategy for a new eco-friendly cleaning product line. Can you provide an overview of current trends in green marketing? Please include:"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Key messaging strategies that resonate with environmentally conscious consumers",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Effective channels for reaching this audience",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Examples of successful green marketing campaigns from the past year",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Potential pitfalls to avoid (e.g., greenwashing accusations)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This information will help me shape our marketing approach.\" ",
+              "type": "text",
+              "circle_ios_fallback_text": "This information will help me shape our marketing approach.\" "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Why it's better: ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Why it's better: "
+            },
+            {
+              "text": "The good prompt asks for specific, contextually relevant information that leverages Claude's broad knowledge base. It provides context for how the information will be used, which helps Claude frame its answer in the most relevant way.",
+              "type": "text",
+              "circle_ios_fallback_text": "The good prompt asks for specific, contextually relevant information that leverages Claude's broad knowledge base. It provides context for how the information will be used, which helps Claude frame its answer in the most relevant way."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "6. Use role-playing",
+              "type": "text",
+              "circle_ios_fallback_text": "6. Use role-playing"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ask Claude to adopt a specific role or perspective when responding.",
+              "type": "text",
+              "circle_ios_fallback_text": "Ask Claude to adopt a specific role or perspective when responding."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bad prompt:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Bad prompt:"
+            },
+            {
+              "text": " \"Help me prepare for a negotiation.\" ",
+              "type": "text",
+              "circle_ios_fallback_text": " \"Help me prepare for a negotiation.\" "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Good prompt:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Good prompt:"
+            },
+            {
+              "text": " \"You are a fabric supplier for my backpack manufacturing company. I'm preparing for a negotiation with this supplier to reduce prices by 10%. As the supplier, please provide:",
+              "type": "text",
+              "circle_ios_fallback_text": " \"You are a fabric supplier for my backpack manufacturing company. I'm preparing for a negotiation with this supplier to reduce prices by 10%. As the supplier, please provide:"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Three potential objections to our request for a price reduction",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "For each objection, suggest a counterargument from my perspective",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Two alternative proposals the supplier might offer instead of a straight price cut",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Then, switch roles and provide advice on how I, as the buyer, can best approach this negotiation to achieve our goal.\"",
+              "type": "text",
+              "circle_ios_fallback_text": "Then, switch roles and provide advice on how I, as the buyer, can best approach this negotiation to achieve our goal.\""
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Why it's better:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Why it's better:"
+            },
+            {
+              "text": " This prompt uses role-playing to explore multiple perspectives of the negotiation, providing a more comprehensive preparation. Role-playing also encourages Claude to more readily adopt the nuances of specific perspectives, increasing the intelligence and performance of Claude’s response.",
+              "type": "text",
+              "circle_ios_fallback_text": " This prompt uses role-playing to explore multiple perspectives of the negotiation, providing a more comprehensive preparation. Role-playing also encourages Claude to more readily adopt the nuances of specific perspectives, increasing the intelligence and performance of Claude’s response."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "7. Specify your audience",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "7. Specify your audience"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Tell Claude who the content it’s creating is for.",
+              "type": "text",
+              "circle_ios_fallback_text": "Tell Claude who the content it’s creating is for."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bad prompt:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Bad prompt:"
+            },
+            {
+              "text": " \"Write something about cybersecurity.\" ",
+              "type": "text",
+              "circle_ios_fallback_text": " \"Write something about cybersecurity.\" "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Good prompt:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Good prompt:"
+            },
+            {
+              "text": " \"I need to write a blog post about cybersecurity best practices for small business owners. The audience is not very tech-savvy, so the content should be:",
+              "type": "text",
+              "circle_ios_fallback_text": " \"I need to write a blog post about cybersecurity best practices for small business owners. The audience is not very tech-savvy, so the content should be:"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Easy to understand, avoiding technical jargon where possible",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Practical, with actionable tips they can implement quickly",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Engaging and slightly humorous to keep their interest",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Please provide an outline for a 1000-word blog post that covers the top 5 cybersecurity practices these business owners should adopt.\"",
+              "type": "text",
+              "circle_ios_fallback_text": "Please provide an outline for a 1000-word blog post that covers the top 5 cybersecurity practices these business owners should adopt.\""
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Why it's better: ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Why it's better: "
+            },
+            {
+              "text": "The good prompt specifies the audience, desired tone, and key characteristics of the content, giving Claude clear guidelines for creating appropriate and effective output.",
+              "type": "text",
+              "circle_ios_fallback_text": "The good prompt specifies the audience, desired tone, and key characteristics of the content, giving Claude clear guidelines for creating appropriate and effective output."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "8. Define the tone and style",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "8. Define the tone and style"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you haven’t added a specific tone and style guide to your Master Prompt, share some guidance for Claude in your prompt. ",
+              "type": "text",
+              "circle_ios_fallback_text": "If you haven’t added a specific tone and style guide to your Master Prompt, share some guidance for Claude in your prompt. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bad prompt:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Bad prompt:"
+            },
+            {
+              "text": " \"Write a product description.\"",
+              "type": "text",
+              "circle_ios_fallback_text": " \"Write a product description.\""
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Good prompt:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Good prompt:"
+            },
+            {
+              "text": " \"Please help me write a product description for our new ergonomic office chair. Use a professional but engaging tone. Our brand voice is friendly, innovative, and health-conscious. The description should:",
+              "type": "text",
+              "circle_ios_fallback_text": " \"Please help me write a product description for our new ergonomic office chair. Use a professional but engaging tone. Our brand voice is friendly, innovative, and health-conscious. The description should:"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Highlight the chair's key ergonomic features",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Explain how these features benefit the user's health and productivity",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Include a brief mention of the sustainable materials used",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "End with a call-to-action encouraging readers to try the chair",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Aim for about 200 words.\" ",
+              "type": "text",
+              "circle_ios_fallback_text": "Aim for about 200 words.\" "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Why it's better: ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Why it's better: "
+            },
+            {
+              "text": "This prompt provides clear guidance on the tone, style, and specific elements to include in the product description.",
+              "type": "text",
+              "circle_ios_fallback_text": "This prompt provides clear guidance on the tone, style, and specific elements to include in the product description."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "9. Define output structure",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "9. Define output structure"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Provide a basic outline or list of points you want covered.",
+              "type": "text",
+              "circle_ios_fallback_text": "Provide a basic outline or list of points you want covered."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bad prompt: \"",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Bad prompt: \""
+            },
+            {
+              "text": "Create a presentation on our company results.\"",
+              "type": "text",
+              "circle_ios_fallback_text": "Create a presentation on our company results.\""
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Good prompt:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Good prompt:"
+            },
+            {
+              "text": " \"I need to create a presentation on our Q2 results. Structure this with the following sections:",
+              "type": "text",
+              "circle_ios_fallback_text": " \"I need to create a presentation on our Q2 results. Structure this with the following sections:"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Overview",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Sales Performance",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Customer Acquisition",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Challenges",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Q3 Outlook",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For each section, suggest 3-4 key points to cover, based on typical business presentations. Also, recommend one type of data visualization (e.g., graph, chart) that would be effective for each section.\" ",
+              "type": "text",
+              "circle_ios_fallback_text": "For each section, suggest 3-4 key points to cover, based on typical business presentations. Also, recommend one type of data visualization (e.g., graph, chart) that would be effective for each section.\" "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Why it's better:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Why it's better:"
+            },
+            {
+              "text": " This prompt provides a clear structure and asks for specific elements (key points and data visualizations) for each section.",
+              "type": "text",
+              "circle_ios_fallback_text": " This prompt provides a clear structure and asks for specific elements (key points and data visualizations) for each section."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Troubleshooting, minimizing hallucinations, and maximizing performance",
+              "type": "text",
+              "circle_ios_fallback_text": "Troubleshooting, minimizing hallucinations, and maximizing performance"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Allow Claude to acknowledge uncertainty",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "bulletList",
+                  "content": [
+                    {
+                      "type": "listItem",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "text": "Tell Claude that it should say it doesn’t know if it doesn’t know. ",
+                              "type": "text"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "text": "Ex. “If you're unsure about something, it's okay to admit it. Just say you don’t know.”",
+                              "type": "text"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Break down complex tasks",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "bulletList",
+                  "content": [
+                    {
+                      "type": "listItem",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "text": "If a task seems too large and Claude is missing steps or not performing certain steps well, break it into smaller steps and work through them with Claude one message at a time.",
+                              "type": "text"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Include all contextual information for new requests",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "bulletList",
+                  "content": [
+                    {
+                      "type": "listItem",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "text": "Claude doesn't retain information from previous conversations, so include all necessary context in each new conversation. ",
+                              "type": "text"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "text": "Or start a chat in a project which contains all relevant context. ",
+                              "type": "text"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Based on Anthropic’s official prompting guide for Claude. ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "circle_ios_fallback_text": "Based on Anthropic’s official prompting guide for Claude. "
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "1. Be clear and specificClearly state your task or question at the beginning of your message. Provide context and details to help Claude understand your needs. Break complex tasks into smaller, manageable steps.Bad prompt: \"Help me with a presentation.\"Good prompt: \"I need help creating a 10-slide presentation for our quarterly sales meeting. The presentation should cover our Q2 sales performance, top-selling products, and sales targets for Q3. Please provide an outline with key points for each slide.\"Why it's better: The good prompt provides specific details about the task, including the number of slides, the purpose of the presentation, and the key topics to be covered.2. Use examplesProvide examples of the kind of output you're looking for. If you want a specific format or style, show Claude an example.Bad prompt: \"Write a professional email.\"Good prompt: \"I need to write a professional email to a client about a project delay. Here's a similar email I've sent before:'Dear [Client], I hope this email finds you well. I wanted to update you on the progress of [Project Name]. Unfortunately, we've encountered an unexpected issue that will delay our completion date by approximately two weeks. We're working diligently to resolve this and will keep you updated on our progress. Please let me know if you have any questions or concerns. Best regards, [Your Name]'Help me draft a new email following a similar tone and structure, but for our current situation where we're delayed by a month due to supply chain issues.\"Why it's better: The good prompt provides a concrete example of the desired style and tone, giving Claude a clear reference point for the new email.3. Encourage thinkingFor complex tasks, ask Claude to \"think step-by-step\" or \"explain your reasoning.\" This can lead to more accurate and detailed responses.Bad prompt: \"How can I improve team productivity?\" Good prompt: \"I'm looking to improve my team's productivity. Think through this step-by-step, considering the following factors:For each step, please provide a brief explanation of your reasoning. Then summarize your ideas at the end.\"Why it's better: The good prompt asks Claude to think through the problem systematically, providing a guided structure for the response and asking for explanations of the reasoning process. It also prompts Claude to create a summary at the end for easier reading.4. Iterative refinementIf Claude's first response isn't quite right, ask for clarifications or modifications. You can always say \"That's close, but can you adjust X to be more like Y?\"Bad prompt: \"Make it better.\"Good prompt: \"That’s a good start, but please refine it further. Make the following adjustments:Why it's better: The good prompt provides specific feedback and clear instructions for improvements, allowing Claude to make targeted adjustments instead of just relying on Claude’s innate sense of what “better” might be — which is likely different from the user’s definition!5. Leverage Claude's knowledgeClaude has broad knowledge across many fields. Don't hesitate to ask for explanations or background information. Be sure to include relevant context and details so that Claude’s response is maximally targeted to be helpful. Bad prompt: \"What is marketing? How do I do it?\" Good prompt: \"I'm developing a marketing strategy for a new eco-friendly cleaning product line. Can you provide an overview of current trends in green marketing? Please include:This information will help me shape our marketing approach.\" Why it's better: The good prompt asks for specific, contextually relevant information that leverages Claude's broad knowledge base. It provides context for how the information will be used, which helps Claude frame its answer in the most relevant way.6. Use role-playingAsk Claude to adopt a specific role or perspective when responding.Bad prompt: \"Help me prepare for a negotiation.\" Good prompt: \"You are a fabric supplier for my backpack manufacturing company. I'm preparing for a negotiation with this supplier to reduce prices by 10%. As the supplier, please provide:Then, switch roles and provide advice on how I, as the buyer, can best approach this negotiation to achieve our goal.\"Why it's better: This prompt uses role-playing to explore multiple perspectives of the negotiation, providing a more comprehensive preparation. Role-playing also encourages Claude to more readily adopt the nuances of specific perspectives, increasing the intelligence and performance of Claude’s response.7. Specify your audienceTell Claude who the content it’s creating is for.Bad prompt: \"Write something about cybersecurity.\" Good prompt: \"I need to write a blog post about cybersecurity best practices for small business owners. The audience is not very tech-savvy, so the content should be:Please provide an outline for a 1000-word blog post that covers the top 5 cybersecurity practices these business owners should adopt.\"Why it's better: The good prompt specifies the audience, desired tone, and key characteristics of the content, giving Claude clear guidelines for creating appropriate and effective output.8. Define the tone and styleIf you haven’t added a specific tone and style guide to your Master Prompt, share some guidance for Claude in your prompt. Bad prompt: \"Write a product description.\"Good prompt: \"Please help me write a product description for our new ergonomic office chair. Use a professional but engaging tone. Our brand voice is friendly, innovative, and health-conscious. The description should:Aim for about 200 words.\" Why it's better: This prompt provides clear guidance on the tone, style, and specific elements to include in the product description.9. Define output structureProvide a basic outline or list of points you want covered.Bad prompt: \"Create a presentation on our company results.\"Good prompt: \"I need to create a presentation on our Q2 results. Structure this with the following sections:For each section, suggest 3-4 key points to cover, based on typical business presentations. Also, recommend one type of data visualization (e.g., graph, chart) that would be effective for each section.\" Why it's better: This prompt provides a clear structure and asks for specific elements (key points and data visualizations) for each section.Troubleshooting, minimizing hallucinations, and maximizing performanceBased on Anthropic’s official prompting guide for Claude. ",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "1. Be clear and specific",
+              "type": "text",
+              "circle_ios_fallback_text": "1. Be clear and specific"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Clearly state your task or question at the beginning of your message. Provide context and details to help Claude understand your needs. Break complex tasks into smaller, manageable steps.",
+              "type": "text",
+              "circle_ios_fallback_text": "Clearly state your task or question at the beginning of your message. Provide context and details to help Claude understand your needs. Break complex tasks into smaller, manageable steps."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bad prompt",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Bad prompt"
+            },
+            {
+              "text": ": \"Help me with a presentation.\"",
+              "type": "text",
+              "circle_ios_fallback_text": ": \"Help me with a presentation.\""
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Good prompt: ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Good prompt: "
+            },
+            {
+              "text": "\"I need help creating a 10-slide presentation for our quarterly sales meeting. The presentation should cover our Q2 sales performance, top-selling products, and sales targets for Q3. Please provide an outline with key points for each slide.\"",
+              "type": "text",
+              "circle_ios_fallback_text": "\"I need help creating a 10-slide presentation for our quarterly sales meeting. The presentation should cover our Q2 sales performance, top-selling products, and sales targets for Q3. Please provide an outline with key points for each slide.\""
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Why it's better: ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Why it's better: "
+            },
+            {
+              "text": "The good prompt provides specific details about the task, including the number of slides, the purpose of the presentation, and the key topics to be covered.",
+              "type": "text",
+              "circle_ios_fallback_text": "The good prompt provides specific details about the task, including the number of slides, the purpose of the presentation, and the key topics to be covered."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "2. Use examples",
+              "type": "text",
+              "circle_ios_fallback_text": "2. Use examples"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Provide examples of the kind of output you're looking for. If you want a specific format or style, show Claude an example.",
+              "type": "text",
+              "circle_ios_fallback_text": "Provide examples of the kind of output you're looking for. If you want a specific format or style, show Claude an example."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bad prompt:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Bad prompt:"
+            },
+            {
+              "text": " \"Write a professional email.\"",
+              "type": "text",
+              "circle_ios_fallback_text": " \"Write a professional email.\""
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Good prompt: ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Good prompt: "
+            },
+            {
+              "text": "\"I need to write a professional email to a client about a project delay. Here's a similar email I've sent before:",
+              "type": "text",
+              "circle_ios_fallback_text": "\"I need to write a professional email to a client about a project delay. Here's a similar email I've sent before:"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "'Dear [Client], I hope this email finds you well. I wanted to update you on the progress of [Project Name]. Unfortunately, we've encountered an unexpected issue that will delay our completion date by approximately two weeks. We're working diligently to resolve this and will keep you updated on our progress. Please let me know if you have any questions or concerns. Best regards, [Your Name]'",
+              "type": "text",
+              "circle_ios_fallback_text": "'Dear [Client], I hope this email finds you well. I wanted to update you on the progress of [Project Name]. Unfortunately, we've encountered an unexpected issue that will delay our completion date by approximately two weeks. We're working diligently to resolve this and will keep you updated on our progress. Please let me know if you have any questions or concerns. Best regards, [Your Name]'"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Help me draft a new email following a similar tone and structure, but for our current situation where we're delayed by a month due to supply chain issues.\"",
+              "type": "text",
+              "circle_ios_fallback_text": "Help me draft a new email following a similar tone and structure, but for our current situation where we're delayed by a month due to supply chain issues.\""
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Why it's better:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Why it's better:"
+            },
+            {
+              "text": " The good prompt provides a concrete example of the desired style and tone, giving Claude a clear reference point for the new email.",
+              "type": "text",
+              "circle_ios_fallback_text": " The good prompt provides a concrete example of the desired style and tone, giving Claude a clear reference point for the new email."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "3. Encourage thinking",
+              "type": "text",
+              "circle_ios_fallback_text": "3. Encourage thinking"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For complex tasks, ask Claude to \"think step-by-step\" or \"explain your reasoning.\" This can lead to more accurate and detailed responses.",
+              "type": "text",
+              "circle_ios_fallback_text": "For complex tasks, ask Claude to \"think step-by-step\" or \"explain your reasoning.\" This can lead to more accurate and detailed responses."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bad prompt: ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Bad prompt: "
+            },
+            {
+              "text": "\"How can I improve team productivity?\" ",
+              "type": "text",
+              "circle_ios_fallback_text": "\"How can I improve team productivity?\" "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Good prompt: ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Good prompt: "
+            },
+            {
+              "text": "\"I'm looking to improve my team's productivity. Think through this step-by-step, considering the following factors:",
+              "type": "text",
+              "circle_ios_fallback_text": "\"I'm looking to improve my team's productivity. Think through this step-by-step, considering the following factors:"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Current productivity blockers (e.g., too many meetings, unclear priorities)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Potential solutions (e.g., time management techniques, project management tools)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Implementation challenges",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Methods to measure improvement",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For each step, please provide a brief explanation of your reasoning. Then summarize your ideas at the end.\"",
+              "type": "text",
+              "circle_ios_fallback_text": "For each step, please provide a brief explanation of your reasoning. Then summarize your ideas at the end.\""
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Why it's better: ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Why it's better: "
+            },
+            {
+              "text": "The good prompt asks Claude to think through the problem systematically, providing a guided structure for the response and asking for explanations of the reasoning process. It also prompts Claude to create a summary at the end for easier reading.",
+              "type": "text",
+              "circle_ios_fallback_text": "The good prompt asks Claude to think through the problem systematically, providing a guided structure for the response and asking for explanations of the reasoning process. It also prompts Claude to create a summary at the end for easier reading."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "4. Iterative refinement",
+              "type": "text",
+              "circle_ios_fallback_text": "4. Iterative refinement"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If Claude's first response isn't quite right, ask for clarifications or modifications. You can always say \"That's close, but can you adjust X to be more like Y?\"",
+              "type": "text",
+              "circle_ios_fallback_text": "If Claude's first response isn't quite right, ask for clarifications or modifications. You can always say \"That's close, but can you adjust X to be more like Y?\""
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bad prompt:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Bad prompt:"
+            },
+            {
+              "text": " \"Make it better.\"",
+              "type": "text",
+              "circle_ios_fallback_text": " \"Make it better.\""
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Good prompt:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Good prompt:"
+            },
+            {
+              "text": " \"That’s a good start, but please refine it further. Make the following adjustments:",
+              "type": "text",
+              "circle_ios_fallback_text": " \"That’s a good start, but please refine it further. Make the following adjustments:"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Make the tone more casual and friendly",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Add a specific example of how our product has helped a customer",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Shorten the second paragraph to focus more on the benefits rather than the features\" ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Why it's better: ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Why it's better: "
+            },
+            {
+              "text": "The good prompt provides specific feedback and clear instructions for improvements, allowing Claude to make targeted adjustments instead of just relying on Claude’s innate sense of what “better” might be — which is likely different from the user’s definition!",
+              "type": "text",
+              "circle_ios_fallback_text": "The good prompt provides specific feedback and clear instructions for improvements, allowing Claude to make targeted adjustments instead of just relying on Claude’s innate sense of what “better” might be — which is likely different from the user’s definition!"
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "5. Leverage Claude's knowledge",
+              "type": "text",
+              "circle_ios_fallback_text": "5. Leverage Claude's knowledge"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Claude has broad knowledge across many fields. Don't hesitate to ask for explanations or background information. Be sure to include relevant context and details so that Claude’s response is maximally targeted to be helpful. ",
+              "type": "text",
+              "circle_ios_fallback_text": "Claude has broad knowledge across many fields. Don't hesitate to ask for explanations or background information. Be sure to include relevant context and details so that Claude’s response is maximally targeted to be helpful. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bad prompt: ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Bad prompt: "
+            },
+            {
+              "text": "\"What is marketing? How do I do it?\" ",
+              "type": "text",
+              "circle_ios_fallback_text": "\"What is marketing? How do I do it?\" "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Good prompt:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Good prompt:"
+            },
+            {
+              "text": " \"I'm developing a marketing strategy for a new eco-friendly cleaning product line. Can you provide an overview of current trends in green marketing? Please include:",
+              "type": "text",
+              "circle_ios_fallback_text": " \"I'm developing a marketing strategy for a new eco-friendly cleaning product line. Can you provide an overview of current trends in green marketing? Please include:"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Key messaging strategies that resonate with environmentally conscious consumers",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Effective channels for reaching this audience",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Examples of successful green marketing campaigns from the past year",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Potential pitfalls to avoid (e.g., greenwashing accusations)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This information will help me shape our marketing approach.\" ",
+              "type": "text",
+              "circle_ios_fallback_text": "This information will help me shape our marketing approach.\" "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Why it's better: ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Why it's better: "
+            },
+            {
+              "text": "The good prompt asks for specific, contextually relevant information that leverages Claude's broad knowledge base. It provides context for how the information will be used, which helps Claude frame its answer in the most relevant way.",
+              "type": "text",
+              "circle_ios_fallback_text": "The good prompt asks for specific, contextually relevant information that leverages Claude's broad knowledge base. It provides context for how the information will be used, which helps Claude frame its answer in the most relevant way."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "6. Use role-playing",
+              "type": "text",
+              "circle_ios_fallback_text": "6. Use role-playing"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ask Claude to adopt a specific role or perspective when responding.",
+              "type": "text",
+              "circle_ios_fallback_text": "Ask Claude to adopt a specific role or perspective when responding."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bad prompt:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Bad prompt:"
+            },
+            {
+              "text": " \"Help me prepare for a negotiation.\" ",
+              "type": "text",
+              "circle_ios_fallback_text": " \"Help me prepare for a negotiation.\" "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Good prompt:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Good prompt:"
+            },
+            {
+              "text": " \"You are a fabric supplier for my backpack manufacturing company. I'm preparing for a negotiation with this supplier to reduce prices by 10%. As the supplier, please provide:",
+              "type": "text",
+              "circle_ios_fallback_text": " \"You are a fabric supplier for my backpack manufacturing company. I'm preparing for a negotiation with this supplier to reduce prices by 10%. As the supplier, please provide:"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Three potential objections to our request for a price reduction",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "For each objection, suggest a counterargument from my perspective",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Two alternative proposals the supplier might offer instead of a straight price cut",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Then, switch roles and provide advice on how I, as the buyer, can best approach this negotiation to achieve our goal.\"",
+              "type": "text",
+              "circle_ios_fallback_text": "Then, switch roles and provide advice on how I, as the buyer, can best approach this negotiation to achieve our goal.\""
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Why it's better:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Why it's better:"
+            },
+            {
+              "text": " This prompt uses role-playing to explore multiple perspectives of the negotiation, providing a more comprehensive preparation. Role-playing also encourages Claude to more readily adopt the nuances of specific perspectives, increasing the intelligence and performance of Claude’s response.",
+              "type": "text",
+              "circle_ios_fallback_text": " This prompt uses role-playing to explore multiple perspectives of the negotiation, providing a more comprehensive preparation. Role-playing also encourages Claude to more readily adopt the nuances of specific perspectives, increasing the intelligence and performance of Claude’s response."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "7. Specify your audience",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "7. Specify your audience"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Tell Claude who the content it’s creating is for.",
+              "type": "text",
+              "circle_ios_fallback_text": "Tell Claude who the content it’s creating is for."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bad prompt:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Bad prompt:"
+            },
+            {
+              "text": " \"Write something about cybersecurity.\" ",
+              "type": "text",
+              "circle_ios_fallback_text": " \"Write something about cybersecurity.\" "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Good prompt:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Good prompt:"
+            },
+            {
+              "text": " \"I need to write a blog post about cybersecurity best practices for small business owners. The audience is not very tech-savvy, so the content should be:",
+              "type": "text",
+              "circle_ios_fallback_text": " \"I need to write a blog post about cybersecurity best practices for small business owners. The audience is not very tech-savvy, so the content should be:"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Easy to understand, avoiding technical jargon where possible",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Practical, with actionable tips they can implement quickly",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Engaging and slightly humorous to keep their interest",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Please provide an outline for a 1000-word blog post that covers the top 5 cybersecurity practices these business owners should adopt.\"",
+              "type": "text",
+              "circle_ios_fallback_text": "Please provide an outline for a 1000-word blog post that covers the top 5 cybersecurity practices these business owners should adopt.\""
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Why it's better: ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Why it's better: "
+            },
+            {
+              "text": "The good prompt specifies the audience, desired tone, and key characteristics of the content, giving Claude clear guidelines for creating appropriate and effective output.",
+              "type": "text",
+              "circle_ios_fallback_text": "The good prompt specifies the audience, desired tone, and key characteristics of the content, giving Claude clear guidelines for creating appropriate and effective output."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "8. Define the tone and style",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "8. Define the tone and style"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you haven’t added a specific tone and style guide to your Master Prompt, share some guidance for Claude in your prompt. ",
+              "type": "text",
+              "circle_ios_fallback_text": "If you haven’t added a specific tone and style guide to your Master Prompt, share some guidance for Claude in your prompt. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bad prompt:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Bad prompt:"
+            },
+            {
+              "text": " \"Write a product description.\"",
+              "type": "text",
+              "circle_ios_fallback_text": " \"Write a product description.\""
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Good prompt:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Good prompt:"
+            },
+            {
+              "text": " \"Please help me write a product description for our new ergonomic office chair. Use a professional but engaging tone. Our brand voice is friendly, innovative, and health-conscious. The description should:",
+              "type": "text",
+              "circle_ios_fallback_text": " \"Please help me write a product description for our new ergonomic office chair. Use a professional but engaging tone. Our brand voice is friendly, innovative, and health-conscious. The description should:"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Highlight the chair's key ergonomic features",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Explain how these features benefit the user's health and productivity",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Include a brief mention of the sustainable materials used",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "End with a call-to-action encouraging readers to try the chair",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Aim for about 200 words.\" ",
+              "type": "text",
+              "circle_ios_fallback_text": "Aim for about 200 words.\" "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Why it's better: ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Why it's better: "
+            },
+            {
+              "text": "This prompt provides clear guidance on the tone, style, and specific elements to include in the product description.",
+              "type": "text",
+              "circle_ios_fallback_text": "This prompt provides clear guidance on the tone, style, and specific elements to include in the product description."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "9. Define output structure",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "9. Define output structure"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Provide a basic outline or list of points you want covered.",
+              "type": "text",
+              "circle_ios_fallback_text": "Provide a basic outline or list of points you want covered."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bad prompt: \"",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Bad prompt: \""
+            },
+            {
+              "text": "Create a presentation on our company results.\"",
+              "type": "text",
+              "circle_ios_fallback_text": "Create a presentation on our company results.\""
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Good prompt:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Good prompt:"
+            },
+            {
+              "text": " \"I need to create a presentation on our Q2 results. Structure this with the following sections:",
+              "type": "text",
+              "circle_ios_fallback_text": " \"I need to create a presentation on our Q2 results. Structure this with the following sections:"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Overview",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Sales Performance",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Customer Acquisition",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Challenges",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Q3 Outlook",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For each section, suggest 3-4 key points to cover, based on typical business presentations. Also, recommend one type of data visualization (e.g., graph, chart) that would be effective for each section.\" ",
+              "type": "text",
+              "circle_ios_fallback_text": "For each section, suggest 3-4 key points to cover, based on typical business presentations. Also, recommend one type of data visualization (e.g., graph, chart) that would be effective for each section.\" "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Why it's better:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Why it's better:"
+            },
+            {
+              "text": " This prompt provides a clear structure and asks for specific elements (key points and data visualizations) for each section.",
+              "type": "text",
+              "circle_ios_fallback_text": " This prompt provides a clear structure and asks for specific elements (key points and data visualizations) for each section."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Troubleshooting, minimizing hallucinations, and maximizing performance",
+              "type": "text",
+              "circle_ios_fallback_text": "Troubleshooting, minimizing hallucinations, and maximizing performance"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Allow Claude to acknowledge uncertainty",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "bulletList",
+                  "content": [
+                    {
+                      "type": "listItem",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "text": "Tell Claude that it should say it doesn’t know if it doesn’t know. ",
+                              "type": "text"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "text": "Ex. “If you're unsure about something, it's okay to admit it. Just say you don’t know.”",
+                              "type": "text"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Break down complex tasks",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "bulletList",
+                  "content": [
+                    {
+                      "type": "listItem",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "text": "If a task seems too large and Claude is missing steps or not performing certain steps well, break it into smaller steps and work through them with Claude one message at a time.",
+                              "type": "text"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Include all contextual information for new requests",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "bulletList",
+                  "content": [
+                    {
+                      "type": "listItem",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "text": "Claude doesn't retain information from previous conversations, so include all necessary context in each new conversation. ",
+                              "type": "text"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "text": "Or start a chat in a project which contains all relevant context. ",
+                              "type": "text"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Based on Anthropic’s official prompting guide for Claude. ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "circle_ios_fallback_text": "Based on Anthropic’s official prompting guide for Claude. "
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "1. Be clear and specificClearly state your task or question at the beginning of your message. Provide context and details to help Claude understand your needs. Break complex tasks into smaller, manageable steps.Bad prompt: \"Help me with a presentation.\"Good prompt: \"I need help creating a 10-slide presentation for our quarterly sales meeting. The presentation should cover our Q2 sales performance, top-selling products, and sales targets for Q3. Please provide an outline with key points for each slide.\"Why it's better: The good prompt provides specific details about the task, including the number of slides, the purpose of the presentation, and the key topics to be covered.2. Use examplesProvide examples of the kind of output you're looking for. If you want a specific format or style, show Claude an example.Bad prompt: \"Write a professional email.\"Good prompt: \"I need to write a professional email to a client about a project delay. Here's a similar email I've sent before:'Dear [Client], I hope this email finds you well. I wanted to update you on the progress of [Project Name]. Unfortunately, we've encountered an unexpected issue that will delay our completion date by approximately two weeks. We're working diligently to resolve this and will keep you updated on our progress. Please let me know if you have any questions or concerns. Best regards, [Your Name]'Help me draft a new email following a similar tone and structure, but for our current situation where we're delayed by a month due to supply chain issues.\"Why it's better: The good prompt provides a concrete example of the desired style and tone, giving Claude a clear reference point for the new email.3. Encourage thinkingFor complex tasks, ask Claude to \"think step-by-step\" or \"explain your reasoning.\" This can lead to more accurate and detailed responses.Bad prompt: \"How can I improve team productivity?\" Good prompt: \"I'm looking to improve my team's productivity. Think through this step-by-step, considering the following factors:For each step, please provide a brief explanation of your reasoning. Then summarize your ideas at the end.\"Why it's better: The good prompt asks Claude to think through the problem systematically, providing a guided structure for the response and asking for explanations of the reasoning process. It also prompts Claude to create a summary at the end for easier reading.4. Iterative refinementIf Claude's first response isn't quite right, ask for clarifications or modifications. You can always say \"That's close, but can you adjust X to be more like Y?\"Bad prompt: \"Make it better.\"Good prompt: \"That’s a good start, but please refine it further. Make the following adjustments:Why it's better: The good prompt provides specific feedback and clear instructions for improvements, allowing Claude to make targeted adjustments instead of just relying on Claude’s innate sense of what “better” might be — which is likely different from the user’s definition!5. Leverage Claude's knowledgeClaude has broad knowledge across many fields. Don't hesitate to ask for explanations or background information. Be sure to include relevant context and details so that Claude’s response is maximally targeted to be helpful. Bad prompt: \"What is marketing? How do I do it?\" Good prompt: \"I'm developing a marketing strategy for a new eco-friendly cleaning product line. Can you provide an overview of current trends in green marketing? Please include:This information will help me shape our marketing approach.\" Why it's better: The good prompt asks for specific, contextually relevant information that leverages Claude's broad knowledge base. It provides context for how the information will be used, which helps Claude frame its answer in the most relevant way.6. Use role-playingAsk Claude to adopt a specific role or perspective when responding.Bad prompt: \"Help me prepare for a negotiation.\" Good prompt: \"You are a fabric supplier for my backpack manufacturing company. I'm preparing for a negotiation with this supplier to reduce prices by 10%. As the supplier, please provide:Then, switch roles and provide advice on how I, as the buyer, can best approach this negotiation to achieve our goal.\"Why it's better: This prompt uses role-playing to explore multiple perspectives of the negotiation, providing a more comprehensive preparation. Role-playing also encourages Claude to more readily adopt the nuances of specific perspectives, increasing the intelligence and performance of Claude’s response.7. Specify your audienceTell Claude who the content it’s creating is for.Bad prompt: \"Write something about cybersecurity.\" Good prompt: \"I need to write a blog post about cybersecurity best practices for small business owners. The audience is not very tech-savvy, so the content should be:Please provide an outline for a 1000-word blog post that covers the top 5 cybersecurity practices these business owners should adopt.\"Why it's better: The good prompt specifies the audience, desired tone, and key characteristics of the content, giving Claude clear guidelines for creating appropriate and effective output.8. Define the tone and styleIf you haven’t added a specific tone and style guide to your Master Prompt, share some guidance for Claude in your prompt. Bad prompt: \"Write a product description.\"Good prompt: \"Please help me write a product description for our new ergonomic office chair. Use a professional but engaging tone. Our brand voice is friendly, innovative, and health-conscious. The description should:Aim for about 200 words.\" Why it's better: This prompt provides clear guidance on the tone, style, and specific elements to include in the product description.9. Define output structureProvide a basic outline or list of points you want covered.Bad prompt: \"Create a presentation on our company results.\"Good prompt: \"I need to create a presentation on our Q2 results. Structure this with the following sections:For each section, suggest 3-4 key points to cover, based on typical business presentations. Also, recommend one type of data visualization (e.g., graph, chart) that would be effective for each section.\" Why it's better: This prompt provides a clear structure and asks for specific elements (key points and data visualizations) for each section.Troubleshooting, minimizing hallucinations, and maximizing performanceBased on Anthropic’s official prompting guide for Claude. ",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "chat_room_uuid": "c054b972-3400-46e2-8e52-a127207774e6"
+}

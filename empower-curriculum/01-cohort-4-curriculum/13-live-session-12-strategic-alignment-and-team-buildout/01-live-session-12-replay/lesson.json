@@ -1,0 +1,755 @@
+{
+  "id": 3591133,
+  "name": "Live Session 12: Replay",
+  "status": "published",
+  "featured_media_enabled": true,
+  "download_featured_media": false,
+  "created_at": "2026-03-13T17:11:41.495Z",
+  "updated_at": "2026-03-13T21:59:29.239Z",
+  "comments_enabled": false,
+  "default_tab": "curriculum",
+  "enforce_featured_media_completion": false,
+  "autocomplete_on_featured_media_completion": true,
+  "dripped_at": null,
+  "is_dripped": true,
+  "needs_to_complete_previous_lesson": false,
+  "completed": false,
+  "notify_students_enabled": false,
+  "bookmark_id": null,
+  "featured_media": {
+    "playback_url": "https://cdn-media.circle.so/bcdn_token=bJBKHJIr2f4yvv2QfCWNrRAW-owvlKqja1x90NsD-g8&token_path=%2F06f68b22-cbc2-4709-a1e2-d642c02d2b58%2F&expires=1787965063/06f68b22-cbc2-4709-a1e2-d642c02d2b58/hls/playlist.m3u8",
+    "current_storage": "in_house",
+    "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTFptRHdrPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--044ae30f8bfaff5e56abefdcd34873a9cf016f55",
+    "filename": "Cohort 4 final Session.mp4",
+    "content_type": "video/mp4",
+    "duration": "01:41:22",
+    "is_downloadable": false,
+    "url": "https://assets-v2.circle.so/v4djug8ashr65sg8ml82p7v3nbd6",
+    "thumbnail_image_url": "https://cdn-media.circle.so/bcdn_token=bJBKHJIr2f4yvv2QfCWNrRAW-owvlKqja1x90NsD-g8&token_path=%2F06f68b22-cbc2-4709-a1e2-d642c02d2b58%2F&expires=1787965063/06f68b22-cbc2-4709-a1e2-d642c02d2b58/thumbnail.jpg",
+    "media_transcript_id": 3751733,
+    "media_transcoding": {
+      "status": "succeeded"
+    },
+    "chapters_url": null,
+    "preview_thumbnails_url": "https://cdn-media.circle.so/bcdn_token=bJBKHJIr2f4yvv2QfCWNrRAW-owvlKqja1x90NsD-g8&token_path=%2F06f68b22-cbc2-4709-a1e2-d642c02d2b58%2F&expires=1787965063/06f68b22-cbc2-4709-a1e2-d642c02d2b58/mosaic.vtt",
+    "video_variants": {
+      "original": "https://assets-v2.circle.so/v4djug8ashr65sg8ml82p7v3nbd6",
+      "hls": "https://cdn-media.circle.so/bcdn_token=bJBKHJIr2f4yvv2QfCWNrRAW-owvlKqja1x90NsD-g8&token_path=%2F06f68b22-cbc2-4709-a1e2-d642c02d2b58%2F&expires=1787965063/06f68b22-cbc2-4709-a1e2-d642c02d2b58/hls/playlist.m3u8"
+    }
+  },
+  "serialized_rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Summary",
+              "type": "text",
+              "circle_ios_fallback_text": "Summary"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "EMPOWER Labs Cohort 4 Final Session",
+              "type": "text",
+              "circle_ios_fallback_text": "EMPOWER Labs Cohort 4 Final Session"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The group met for Session 12, the final session of EMPOWER Labs Cohort 4, where they discussed implementing AI as an operating system for businesses. Midori and Hayden reviewed the progress of participants, noting particularly engaged members like Nancy, Don, FM, Benny, Jonas, Christina, Pavlo, and Tim. The session focused on turning individual AI knowledge into team execution systems, including team readiness checks, strategic alignment, and the TEAMS program, with plans to discuss next steps and post-cohort activities in an open forum.",
+              "type": "text",
+              "circle_ios_fallback_text": "The group met for Session 12, the final session of EMPOWER Labs Cohort 4, where they discussed implementing AI as an operating system for businesses. Midori and Hayden reviewed the progress of participants, noting particularly engaged members like Nancy, Don, FM, Benny, Jonas, Christina, Pavlo, and Tim. The session focused on turning individual AI knowledge into team execution systems, including team readiness checks, strategic alignment, and the TEAMS program, with plans to discuss next steps and post-cohort activities in an open forum."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Organizational Process and Role Clarity",
+              "type": "text",
+              "circle_ios_fallback_text": "Organizational Process and Role Clarity"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The team discussed bottlenecks in their organization, with participants identifying process clarity, execution follow-through, and role clarity as key challenges. Mike and Nancy shared that while their operations team has good process knowledge, they still experience issues with execution consistency and role clarity, particularly in delegation and responsibility alignment. Pavlo described his experience implementing lean practices and using AI as a tool to improve information flow and process efficiency, emphasizing the importance of getting input directly from the source rather than making assumptions. The discussion highlighted the value of using tools like clarity boards and role-specific avatars to better define expectations and improve team alignment.",
+              "type": "text",
+              "circle_ios_fallback_text": "The team discussed bottlenecks in their organization, with participants identifying process clarity, execution follow-through, and role clarity as key challenges. Mike and Nancy shared that while their operations team has good process knowledge, they still experience issues with execution consistency and role clarity, particularly in delegation and responsibility alignment. Pavlo described his experience implementing lean practices and using AI as a tool to improve information flow and process efficiency, emphasizing the importance of getting input directly from the source rather than making assumptions. The discussion highlighted the value of using tools like clarity boards and role-specific avatars to better define expectations and improve team alignment."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Role Master Prompts Implementation Process",
+              "type": "text",
+              "circle_ios_fallback_text": "Role Master Prompts Implementation Process"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden explained the process of creating role master prompts, which involve team members building knowledge documents specific to their roles, combining with company master prompts to enhance AI understanding. The process includes using these prompts to create clarity boards, which identify opportunities for AI implementation, aiming to save approximately 10 hours per week through automations. The program follows a 30-day cycle, focusing on bottom-up OKR creation and implementation, with the goal of making iterative loops faster and increasing employee engagement and effectiveness.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden explained the process of creating role master prompts, which involve team members building knowledge documents specific to their roles, combining with company master prompts to enhance AI understanding. The process includes using these prompts to create clarity boards, which identify opportunities for AI implementation, aiming to save approximately 10 hours per week through automations. The program follows a 30-day cycle, focusing on bottom-up OKR creation and implementation, with the goal of making iterative loops faster and increasing employee engagement and effectiveness."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Implementation Program Overview",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Implementation Program Overview"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed an AI implementation program that involves a three-phase approach over approximately 9 weeks. The program includes building role master prompts and processes, converting outputs into Clarity boards with manager approval, and identifying opportunities beyond time-saving. Hayden provided a specific example of how AI reduced video creation costs from $3,000 to $200 per video, enabling the potential to create 135,000 in additional revenue by scaling to 15 videos monthly. The program aims to create a bottom-up innovation process using AI to surface opportunities and track progress, which can potentially reduce OKR cycles from quarterly to weekly.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed an AI implementation program that involves a three-phase approach over approximately 9 weeks. The program includes building role master prompts and processes, converting outputs into Clarity boards with manager approval, and identifying opportunities beyond time-saving. Hayden provided a specific example of how AI reduced video creation costs from $3,000 to $200 per video, enabling the potential to create 135,000 in additional revenue by scaling to 15 videos monthly. The program aims to create a bottom-up innovation process using AI to surface opportunities and track progress, which can potentially reduce OKR cycles from quarterly to weekly."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Strategy and Implementation Planning",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Strategy and Implementation Planning"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed examples of urgent top-down interventions, including losing key customers, facing cash flow risks, or dealing with regulatory changes, and explained how AI can help define problems and create focused team OKRs through daily stand-ups. He outlined the upcoming introduction of the Inner Circle, which will include 16 new team-focused sessions, growth systems, and AI tools for demand generation and workflow automation. Hayden also described the evolution of AI operating systems, predicting that AI employees with explicit role domains will become more prevalent in the next 6 months, while emphasizing the current importance of human involvement in innovation, documentation, and execution.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed examples of urgent top-down interventions, including losing key customers, facing cash flow risks, or dealing with regulatory changes, and explained how AI can help define problems and create focused team OKRs through daily stand-ups. He outlined the upcoming introduction of the Inner Circle, which will include 16 new team-focused sessions, growth systems, and AI tools for demand generation and workflow automation. Hayden also described the evolution of AI operating systems, predicting that AI employees with explicit role domains will become more prevalent in the next 6 months, while emphasizing the current importance of human involvement in innovation, documentation, and execution."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "New Product Design Process Demo",
+              "type": "text",
+              "circle_ios_fallback_text": "New Product Design Process Demo"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden demonstrated a new product design process using Codex, explaining how it can create complete sales systems including contracts and enablement materials. He provided an example of a market-to-lead system for video content creation that can be installed as a \"kung fu kit\" in Cloud Code. Don shared his need to systematize his market-to-lead processes, particularly around Google Ads and organic growth, as he currently manages everything ad hoc without proper structure or reporting. Hayden advised Don to set new AI-powered standards for automation and quality to ensure full adoption across the team.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden demonstrated a new product design process using Codex, explaining how it can create complete sales systems including contracts and enablement materials. He provided an example of a market-to-lead system for video content creation that can be installed as a \"kung fu kit\" in Cloud Code. Don shared his need to systematize his market-to-lead processes, particularly around Google Ads and organic growth, as he currently manages everything ad hoc without proper structure or reporting. Hayden advised Don to set new AI-powered standards for automation and quality to ensure full adoption across the team."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Implementation and Feedback Measurement",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Implementation and Feedback Measurement"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Don discussed the need to systematically measure and understand feedback data, particularly conversion rates and platform performance, to drive better decisions. Hayden suggested using conversion rate optimization (CRO) tools and AI for gathering authoritative knowledge on topics like CRO. Nancy highlighted three main bottlenecks: automating financial processes, redistributing AI implementation tasks, and finding ways to augment student learning in in-person classes. FM expressed feeling overwhelmed by the rapid pace of AI developments and the abundance of opportunities, while Hayden advised focusing on one task at a time to manage anxiety and make progress.",
+              "type": "text",
+              "circle_ios_fallback_text": "Don discussed the need to systematically measure and understand feedback data, particularly conversion rates and platform performance, to drive better decisions. Hayden suggested using conversion rate optimization (CRO) tools and AI for gathering authoritative knowledge on topics like CRO. Nancy highlighted three main bottlenecks: automating financial processes, redistributing AI implementation tasks, and finding ways to augment student learning in in-person classes. FM expressed feeling overwhelmed by the rapid pace of AI developments and the abundance of opportunities, while Hayden advised focusing on one task at a time to manage anxiety and make progress."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Implementation Strategy Discussion",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Implementation Strategy Discussion"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Mike discussed the importance of implementing a \"bottoms-up\" approach for their AI initiatives, acknowledging challenges with limited in-office staff and the need to delegate responsibilities. Hayden shared insights about the evolution of their AI curriculum and cohort experiences, noting that participants' starting AI familiarity has improved over time due to more advanced models. The discussion also covered CRM system transitions, with Hayden describing how a team member successfully migrated from HubSpot to Airtable using AI assistance, and Don suggesting the potential development of an AI prioritizer app.",
+              "type": "text",
+              "circle_ios_fallback_text": "Mike discussed the importance of implementing a \"bottoms-up\" approach for their AI initiatives, acknowledging challenges with limited in-office staff and the need to delegate responsibilities. Hayden shared insights about the evolution of their AI curriculum and cohort experiences, noting that participants' starting AI familiarity has improved over time due to more advanced models. The discussion also covered CRM system transitions, with Hayden describing how a team member successfully migrated from HubSpot to Airtable using AI assistance, and Don suggesting the potential development of an AI prioritizer app."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Internal Software and AI Solutions",
+              "type": "text",
+              "circle_ios_fallback_text": "Internal Software and AI Solutions"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The group discussed internal software solutions and AI tools for business operations. Hayden advised considering cheaper internal software alternatives over expensive external tools like HubSpot, predicting that niche solutions would emerge at lower costs within 12 months. Jonas shared his experience building an ERP system using Airtable for 400 customers, spending only $50 while replacing a $40,000 annual system. Pavlo demonstrated how AI helped him redesign his team's meeting system and create OKRs, presenting detailed implementation plans to his team with AI-generated checklists and presentations.",
+              "type": "text",
+              "circle_ios_fallback_text": "The group discussed internal software solutions and AI tools for business operations. Hayden advised considering cheaper internal software alternatives over expensive external tools like HubSpot, predicting that niche solutions would emerge at lower costs within 12 months. Jonas shared his experience building an ERP system using Airtable for 400 customers, spending only $50 while replacing a $40,000 annual system. Pavlo demonstrated how AI helped him redesign his team's meeting system and create OKRs, presenting detailed implementation plans to his team with AI-generated checklists and presentations."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "IT Support Program Implementation Options",
+              "type": "text",
+              "circle_ios_fallback_text": "IT Support Program Implementation Options"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Don discussed the potential benefits of providing IT support and tools to help team members become more efficient and effective in prioritizing tasks. Hayden presented three options for implementing the program with teams: joining the Inner Circle (a self-study curriculum with 16 sessions), participating in custom cohorts (limited to two per month), or pursuing a DIY approach. Hayden emphasized that while the DIY option is available, the other paths offer more support and engagement, particularly for teams with limited time or resources. He also noted that custom cohorts can accommodate more participants without additional costs and encouraged including team members who have 3-5 hours weekly to commit to the program.",
+              "type": "text",
+              "circle_ios_fallback_text": "Don discussed the potential benefits of providing IT support and tools to help team members become more efficient and effective in prioritizing tasks. Hayden presented three options for implementing the program with teams: joining the Inner Circle (a self-study curriculum with 16 sessions), participating in custom cohorts (limited to two per month), or pursuing a DIY approach. Hayden emphasized that while the DIY option is available, the other paths offer more support and engagement, particularly for teams with limited time or resources. He also noted that custom cohorts can accommodate more participants without additional costs and encouraged including team members who have 3-5 hours weekly to commit to the program."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Inner Circle Membership Strategy Discussion",
+              "type": "text",
+              "circle_ios_fallback_text": "Inner Circle Membership Strategy Discussion"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The meeting focused on discussing Inner Circle membership limits and strategies for maintaining competitive advantage in an AI-first business environment. Hayden explained that Inner Circle currently limits team members to 5 and AI employees to 3, and outlined strategies for protecting competitive advantage, including training teams on AI implementation and focusing on brand building and ecosystem development over the next 2 years. FM raised questions about balancing AI adoption with human governance, to which Hayden responded by emphasizing the importance of combining domain expertise with AI capabilities, suggesting that companies should focus on their core competencies rather than attempting to rebuild everything at once. Aloke advised focusing on what businesses do better than competitors and leveraging AI to enhance those strengths rather than expanding into non-core areas.",
+              "type": "text",
+              "circle_ios_fallback_text": "The meeting focused on discussing Inner Circle membership limits and strategies for maintaining competitive advantage in an AI-first business environment. Hayden explained that Inner Circle currently limits team members to 5 and AI employees to 3, and outlined strategies for protecting competitive advantage, including training teams on AI implementation and focusing on brand building and ecosystem development over the next 2 years. FM raised questions about balancing AI adoption with human governance, to which Hayden responded by emphasizing the importance of combining domain expertise with AI capabilities, suggesting that companies should focus on their core competencies rather than attempting to rebuild everything at once. Aloke advised focusing on what businesses do better than competitors and leveraging AI to enhance those strengths rather than expanding into non-core areas."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Education Program Feedback Discussion",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Education Program Feedback Discussion"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The group discussed feedback and next steps for an AI education program. Aloke planned to connect with participants next week to review progress and gather feedback for program improvement. Hayden clarified that their program uniquely combines AI training with business operations experience, distinguishing it from other training options. The team discussed potential improvements including making the curriculum more accessible in plain language and potentially offering custom cohorts or add-on services like office hours and mastermind pairings. Midori mentioned reviewing videos from a previous session to remove specific business details while preserving the content's value.",
+              "type": "text",
+              "circle_ios_fallback_text": "The group discussed feedback and next steps for an AI education program. Aloke planned to connect with participants next week to review progress and gather feedback for program improvement. Hayden clarified that their program uniquely combines AI training with business operations experience, distinguishing it from other training options. The team discussed potential improvements including making the curriculum more accessible in plain language and potentially offering custom cohorts or add-on services like office hours and mastermind pairings. Midori mentioned reviewing videos from a previous session to remove specific business details while preserving the content's value."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Transcript & Chat",
+              "type": "text",
+              "circle_ios_fallback_text": "Transcript & Chat"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTU9JRHdrPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--d872c6dc9b2634aa364df726bbef24d16b3f035e"
+          }
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSmRuRHdrPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--2789fe864697e839014033fa2e8e377a6629015e"
+          }
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "SummaryEMPOWER Labs Cohort 4 Final SessionThe group met for Session 12, the final session of EMPOWER Labs Cohort 4, where they discussed implementing AI as an operating system for businesses. Midori and Hayden reviewed the progress of participants, noting particularly engaged members like Nancy, Don, FM, Benny, Jonas, Christina, Pavlo, and Tim. The session focused on turning individual AI knowledge into team execution systems, including team readiness checks, strategic alignment, and the TEAMS program, with plans to discuss next steps and post-cohort activities in an open forum.Organizational Process and Role ClarityThe team discussed bottlenecks in their organization, with participants identifying process clarity, execution follow-through, and role clarity as key challenges. Mike and Nancy shared that while their operations team has good process knowledge, they still experience issues with execution consistency and role clarity, particularly in delegation and responsibility alignment. Pavlo described his experience implementing lean practices and using AI as a tool to improve information flow and process efficiency, emphasizing the importance of getting input directly from the source rather than making assumptions. The discussion highlighted the value of using tools like clarity boards and role-specific avatars to better define expectations and improve team alignment.Role Master Prompts Implementation ProcessHayden explained the process of creating role master prompts, which involve team members building knowledge documents specific to their roles, combining with company master prompts to enhance AI understanding. The process includes using these prompts to create clarity boards, which identify opportunities for AI implementation, aiming to save approximately 10 hours per week through automations. The program follows a 30-day cycle, focusing on bottom-up OKR creation and implementation, with the goal of making iterative loops faster and increasing employee engagement and effectiveness.AI Implementation Program OverviewHayden discussed an AI implementation program that involves a three-phase approach over approximately 9 weeks. The program includes building role master prompts and processes, converting outputs into Clarity boards with manager approval, and identifying opportunities beyond time-saving. Hayden provided a specific example of how AI reduced video creation costs from $3,000 to $200 per video, enabling the potential to create 135,000 in additional revenue by scaling to 15 videos monthly. The program aims to create a bottom-up innovation process using AI to surface opportunities and track progress, which can potentially reduce OKR cycles from quarterly to weekly.AI Strategy and Implementation PlanningHayden discussed examples of urgent top-down interventions, including losing key customers, facing cash flow risks, or dealing with regulatory changes, and explained how AI can help define problems and create focused team OKRs through daily stand-ups. He outlined the upcoming introduction of the Inner Circle, which will include 16 new team-focused sessions, growth systems, and AI tools for demand generation and workflow automation. Hayden also described the evolution of AI operating systems, predicting that AI employees with explicit role domains will become more prevalent in the next 6 months, while emphasizing the current importance of human involvement in innovation, documentation, and execution.New Product Design Process DemoHayden demonstrated a new product design process using Codex, explaining how it can create complete sales systems including contracts and enablement materials. He provided an example of a market-to-lead system for video content creation that can be installed as a \"kung fu kit\" in Cloud Code. Don shared his need to systematize his market-to-lead processes, particularly around Google Ads and organic growth, as he currently manages everything ad hoc without proper structure or reporting. Hayden advised Don to set new AI-powered standards for automation and quality to ensure full adoption across the team.AI Implementation and Feedback MeasurementDon discussed the need to systematically measure and understand feedback data, particularly conversion rates and platform performance, to drive better decisions. Hayden suggested using conversion rate optimization (CRO) tools and AI for gathering authoritative knowledge on topics like CRO. Nancy highlighted three main bottlenecks: automating financial processes, redistributing AI implementation tasks, and finding ways to augment student learning in in-person classes. FM expressed feeling overwhelmed by the rapid pace of AI developments and the abundance of opportunities, while Hayden advised focusing on one task at a time to manage anxiety and make progress.AI Implementation Strategy DiscussionMike discussed the importance of implementing a \"bottoms-up\" approach for their AI initiatives, acknowledging challenges with limited in-office staff and the need to delegate responsibilities. Hayden shared insights about the evolution of their AI curriculum and cohort experiences, noting that participants' starting AI familiarity has improved over time due to more advanced models. The discussion also covered CRM system transitions, with Hayden describing how a team member successfully migrated from HubSpot to Airtable using AI assistance, and Don suggesting the potential development of an AI prioritizer app.Internal Software and AI SolutionsThe group discussed internal software solutions and AI tools for business operations. Hayden advised considering cheaper internal software alternatives over expensive external tools like HubSpot, predicting that niche solutions would emerge at lower costs within 12 months. Jonas shared his experience building an ERP system using Airtable for 400 customers, spending only $50 while replacing a $40,000 annual system. Pavlo demonstrated how AI helped him redesign his team's meeting system and create OKRs, presenting detailed implementation plans to his team with AI-generated checklists and presentations.IT Support Program Implementation OptionsDon discussed the potential benefits of providing IT support and tools to help team members become more efficient and effective in prioritizing tasks. Hayden presented three options for implementing the program with teams: joining the Inner Circle (a self-study curriculum with 16 sessions), participating in custom cohorts (limited to two per month), or pursuing a DIY approach. Hayden emphasized that while the DIY option is available, the other paths offer more support and engagement, particularly for teams with limited time or resources. He also noted that custom cohorts can accommodate more participants without additional costs and encouraged including team members who have 3-5 hours weekly to commit to the program.Inner Circle Membership Strategy DiscussionThe meeting focused on discussing Inner Circle membership limits and strategies for maintaining competitive advantage in an AI-first business environment. Hayden explained that Inner Circle currently limits team members to 5 and AI employees to 3, and outlined strategies for protecting competitive advantage, including training teams on AI implementation and focusing on brand building and ecosystem development over the next 2 years. FM raised questions about balancing AI adoption with human governance, to which Hayden responded by emphasizing the importance of combining domain expertise with AI capabilities, suggesting that companies should focus on their core competencies rather than attempting to rebuild everything at once. Aloke advised focusing on what businesses do better than competitors and leveraging AI to enhance those strengths rather than expanding into non-core areas.AI Education Program Feedback DiscussionThe group discussed feedback and next steps for an AI education program. Aloke planned to connect with participants next week to review progress and gather feedback for program improvement. Hayden clarified that their program uniquely combines AI training with business operations experience, distinguishing it from other training options. The team discussed potential improvements including making the curriculum more accessible in plain language and potentially offering custom cohorts or add-on services like office hours and mastermind pairings. Midori mentioned reviewing videos from a previous session to remove specific business details while preserving the content's value.Transcript & Chat",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "Cohort 4 Final Session - Chat.txt",
+        "content_type": "text/plain",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 3895,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSmRuRHdrPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--2789fe864697e839014033fa2e8e377a6629015e",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/svc9ib66m2uy81gfxyfwbo537fxl",
+        "is_downloadable": true
+      },
+      {
+        "filename": "Cohort 4 Session 12 -Transcript.md",
+        "content_type": "text/markdown",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 91887,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTU9JRHdrPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--d872c6dc9b2634aa364df726bbef24d16b3f035e",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/37s65vx372k5d1bb4jcax5ap5pai",
+        "is_downloadable": true
+      }
+    ],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Summary",
+              "type": "text",
+              "circle_ios_fallback_text": "Summary"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "EMPOWER Labs Cohort 4 Final Session",
+              "type": "text",
+              "circle_ios_fallback_text": "EMPOWER Labs Cohort 4 Final Session"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The group met for Session 12, the final session of EMPOWER Labs Cohort 4, where they discussed implementing AI as an operating system for businesses. Midori and Hayden reviewed the progress of participants, noting particularly engaged members like Nancy, Don, FM, Benny, Jonas, Christina, Pavlo, and Tim. The session focused on turning individual AI knowledge into team execution systems, including team readiness checks, strategic alignment, and the TEAMS program, with plans to discuss next steps and post-cohort activities in an open forum.",
+              "type": "text",
+              "circle_ios_fallback_text": "The group met for Session 12, the final session of EMPOWER Labs Cohort 4, where they discussed implementing AI as an operating system for businesses. Midori and Hayden reviewed the progress of participants, noting particularly engaged members like Nancy, Don, FM, Benny, Jonas, Christina, Pavlo, and Tim. The session focused on turning individual AI knowledge into team execution systems, including team readiness checks, strategic alignment, and the TEAMS program, with plans to discuss next steps and post-cohort activities in an open forum."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Organizational Process and Role Clarity",
+              "type": "text",
+              "circle_ios_fallback_text": "Organizational Process and Role Clarity"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The team discussed bottlenecks in their organization, with participants identifying process clarity, execution follow-through, and role clarity as key challenges. Mike and Nancy shared that while their operations team has good process knowledge, they still experience issues with execution consistency and role clarity, particularly in delegation and responsibility alignment. Pavlo described his experience implementing lean practices and using AI as a tool to improve information flow and process efficiency, emphasizing the importance of getting input directly from the source rather than making assumptions. The discussion highlighted the value of using tools like clarity boards and role-specific avatars to better define expectations and improve team alignment.",
+              "type": "text",
+              "circle_ios_fallback_text": "The team discussed bottlenecks in their organization, with participants identifying process clarity, execution follow-through, and role clarity as key challenges. Mike and Nancy shared that while their operations team has good process knowledge, they still experience issues with execution consistency and role clarity, particularly in delegation and responsibility alignment. Pavlo described his experience implementing lean practices and using AI as a tool to improve information flow and process efficiency, emphasizing the importance of getting input directly from the source rather than making assumptions. The discussion highlighted the value of using tools like clarity boards and role-specific avatars to better define expectations and improve team alignment."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Role Master Prompts Implementation Process",
+              "type": "text",
+              "circle_ios_fallback_text": "Role Master Prompts Implementation Process"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden explained the process of creating role master prompts, which involve team members building knowledge documents specific to their roles, combining with company master prompts to enhance AI understanding. The process includes using these prompts to create clarity boards, which identify opportunities for AI implementation, aiming to save approximately 10 hours per week through automations. The program follows a 30-day cycle, focusing on bottom-up OKR creation and implementation, with the goal of making iterative loops faster and increasing employee engagement and effectiveness.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden explained the process of creating role master prompts, which involve team members building knowledge documents specific to their roles, combining with company master prompts to enhance AI understanding. The process includes using these prompts to create clarity boards, which identify opportunities for AI implementation, aiming to save approximately 10 hours per week through automations. The program follows a 30-day cycle, focusing on bottom-up OKR creation and implementation, with the goal of making iterative loops faster and increasing employee engagement and effectiveness."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Implementation Program Overview",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Implementation Program Overview"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed an AI implementation program that involves a three-phase approach over approximately 9 weeks. The program includes building role master prompts and processes, converting outputs into Clarity boards with manager approval, and identifying opportunities beyond time-saving. Hayden provided a specific example of how AI reduced video creation costs from $3,000 to $200 per video, enabling the potential to create 135,000 in additional revenue by scaling to 15 videos monthly. The program aims to create a bottom-up innovation process using AI to surface opportunities and track progress, which can potentially reduce OKR cycles from quarterly to weekly.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed an AI implementation program that involves a three-phase approach over approximately 9 weeks. The program includes building role master prompts and processes, converting outputs into Clarity boards with manager approval, and identifying opportunities beyond time-saving. Hayden provided a specific example of how AI reduced video creation costs from $3,000 to $200 per video, enabling the potential to create 135,000 in additional revenue by scaling to 15 videos monthly. The program aims to create a bottom-up innovation process using AI to surface opportunities and track progress, which can potentially reduce OKR cycles from quarterly to weekly."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Strategy and Implementation Planning",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Strategy and Implementation Planning"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed examples of urgent top-down interventions, including losing key customers, facing cash flow risks, or dealing with regulatory changes, and explained how AI can help define problems and create focused team OKRs through daily stand-ups. He outlined the upcoming introduction of the Inner Circle, which will include 16 new team-focused sessions, growth systems, and AI tools for demand generation and workflow automation. Hayden also described the evolution of AI operating systems, predicting that AI employees with explicit role domains will become more prevalent in the next 6 months, while emphasizing the current importance of human involvement in innovation, documentation, and execution.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed examples of urgent top-down interventions, including losing key customers, facing cash flow risks, or dealing with regulatory changes, and explained how AI can help define problems and create focused team OKRs through daily stand-ups. He outlined the upcoming introduction of the Inner Circle, which will include 16 new team-focused sessions, growth systems, and AI tools for demand generation and workflow automation. Hayden also described the evolution of AI operating systems, predicting that AI employees with explicit role domains will become more prevalent in the next 6 months, while emphasizing the current importance of human involvement in innovation, documentation, and execution."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "New Product Design Process Demo",
+              "type": "text",
+              "circle_ios_fallback_text": "New Product Design Process Demo"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden demonstrated a new product design process using Codex, explaining how it can create complete sales systems including contracts and enablement materials. He provided an example of a market-to-lead system for video content creation that can be installed as a \"kung fu kit\" in Cloud Code. Don shared his need to systematize his market-to-lead processes, particularly around Google Ads and organic growth, as he currently manages everything ad hoc without proper structure or reporting. Hayden advised Don to set new AI-powered standards for automation and quality to ensure full adoption across the team.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden demonstrated a new product design process using Codex, explaining how it can create complete sales systems including contracts and enablement materials. He provided an example of a market-to-lead system for video content creation that can be installed as a \"kung fu kit\" in Cloud Code. Don shared his need to systematize his market-to-lead processes, particularly around Google Ads and organic growth, as he currently manages everything ad hoc without proper structure or reporting. Hayden advised Don to set new AI-powered standards for automation and quality to ensure full adoption across the team."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Implementation and Feedback Measurement",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Implementation and Feedback Measurement"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Don discussed the need to systematically measure and understand feedback data, particularly conversion rates and platform performance, to drive better decisions. Hayden suggested using conversion rate optimization (CRO) tools and AI for gathering authoritative knowledge on topics like CRO. Nancy highlighted three main bottlenecks: automating financial processes, redistributing AI implementation tasks, and finding ways to augment student learning in in-person classes. FM expressed feeling overwhelmed by the rapid pace of AI developments and the abundance of opportunities, while Hayden advised focusing on one task at a time to manage anxiety and make progress.",
+              "type": "text",
+              "circle_ios_fallback_text": "Don discussed the need to systematically measure and understand feedback data, particularly conversion rates and platform performance, to drive better decisions. Hayden suggested using conversion rate optimization (CRO) tools and AI for gathering authoritative knowledge on topics like CRO. Nancy highlighted three main bottlenecks: automating financial processes, redistributing AI implementation tasks, and finding ways to augment student learning in in-person classes. FM expressed feeling overwhelmed by the rapid pace of AI developments and the abundance of opportunities, while Hayden advised focusing on one task at a time to manage anxiety and make progress."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Implementation Strategy Discussion",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Implementation Strategy Discussion"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Mike discussed the importance of implementing a \"bottoms-up\" approach for their AI initiatives, acknowledging challenges with limited in-office staff and the need to delegate responsibilities. Hayden shared insights about the evolution of their AI curriculum and cohort experiences, noting that participants' starting AI familiarity has improved over time due to more advanced models. The discussion also covered CRM system transitions, with Hayden describing how a team member successfully migrated from HubSpot to Airtable using AI assistance, and Don suggesting the potential development of an AI prioritizer app.",
+              "type": "text",
+              "circle_ios_fallback_text": "Mike discussed the importance of implementing a \"bottoms-up\" approach for their AI initiatives, acknowledging challenges with limited in-office staff and the need to delegate responsibilities. Hayden shared insights about the evolution of their AI curriculum and cohort experiences, noting that participants' starting AI familiarity has improved over time due to more advanced models. The discussion also covered CRM system transitions, with Hayden describing how a team member successfully migrated from HubSpot to Airtable using AI assistance, and Don suggesting the potential development of an AI prioritizer app."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Internal Software and AI Solutions",
+              "type": "text",
+              "circle_ios_fallback_text": "Internal Software and AI Solutions"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The group discussed internal software solutions and AI tools for business operations. Hayden advised considering cheaper internal software alternatives over expensive external tools like HubSpot, predicting that niche solutions would emerge at lower costs within 12 months. Jonas shared his experience building an ERP system using Airtable for 400 customers, spending only $50 while replacing a $40,000 annual system. Pavlo demonstrated how AI helped him redesign his team's meeting system and create OKRs, presenting detailed implementation plans to his team with AI-generated checklists and presentations.",
+              "type": "text",
+              "circle_ios_fallback_text": "The group discussed internal software solutions and AI tools for business operations. Hayden advised considering cheaper internal software alternatives over expensive external tools like HubSpot, predicting that niche solutions would emerge at lower costs within 12 months. Jonas shared his experience building an ERP system using Airtable for 400 customers, spending only $50 while replacing a $40,000 annual system. Pavlo demonstrated how AI helped him redesign his team's meeting system and create OKRs, presenting detailed implementation plans to his team with AI-generated checklists and presentations."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "IT Support Program Implementation Options",
+              "type": "text",
+              "circle_ios_fallback_text": "IT Support Program Implementation Options"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Don discussed the potential benefits of providing IT support and tools to help team members become more efficient and effective in prioritizing tasks. Hayden presented three options for implementing the program with teams: joining the Inner Circle (a self-study curriculum with 16 sessions), participating in custom cohorts (limited to two per month), or pursuing a DIY approach. Hayden emphasized that while the DIY option is available, the other paths offer more support and engagement, particularly for teams with limited time or resources. He also noted that custom cohorts can accommodate more participants without additional costs and encouraged including team members who have 3-5 hours weekly to commit to the program.",
+              "type": "text",
+              "circle_ios_fallback_text": "Don discussed the potential benefits of providing IT support and tools to help team members become more efficient and effective in prioritizing tasks. Hayden presented three options for implementing the program with teams: joining the Inner Circle (a self-study curriculum with 16 sessions), participating in custom cohorts (limited to two per month), or pursuing a DIY approach. Hayden emphasized that while the DIY option is available, the other paths offer more support and engagement, particularly for teams with limited time or resources. He also noted that custom cohorts can accommodate more participants without additional costs and encouraged including team members who have 3-5 hours weekly to commit to the program."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Inner Circle Membership Strategy Discussion",
+              "type": "text",
+              "circle_ios_fallback_text": "Inner Circle Membership Strategy Discussion"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The meeting focused on discussing Inner Circle membership limits and strategies for maintaining competitive advantage in an AI-first business environment. Hayden explained that Inner Circle currently limits team members to 5 and AI employees to 3, and outlined strategies for protecting competitive advantage, including training teams on AI implementation and focusing on brand building and ecosystem development over the next 2 years. FM raised questions about balancing AI adoption with human governance, to which Hayden responded by emphasizing the importance of combining domain expertise with AI capabilities, suggesting that companies should focus on their core competencies rather than attempting to rebuild everything at once. Aloke advised focusing on what businesses do better than competitors and leveraging AI to enhance those strengths rather than expanding into non-core areas.",
+              "type": "text",
+              "circle_ios_fallback_text": "The meeting focused on discussing Inner Circle membership limits and strategies for maintaining competitive advantage in an AI-first business environment. Hayden explained that Inner Circle currently limits team members to 5 and AI employees to 3, and outlined strategies for protecting competitive advantage, including training teams on AI implementation and focusing on brand building and ecosystem development over the next 2 years. FM raised questions about balancing AI adoption with human governance, to which Hayden responded by emphasizing the importance of combining domain expertise with AI capabilities, suggesting that companies should focus on their core competencies rather than attempting to rebuild everything at once. Aloke advised focusing on what businesses do better than competitors and leveraging AI to enhance those strengths rather than expanding into non-core areas."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Education Program Feedback Discussion",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Education Program Feedback Discussion"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The group discussed feedback and next steps for an AI education program. Aloke planned to connect with participants next week to review progress and gather feedback for program improvement. Hayden clarified that their program uniquely combines AI training with business operations experience, distinguishing it from other training options. The team discussed potential improvements including making the curriculum more accessible in plain language and potentially offering custom cohorts or add-on services like office hours and mastermind pairings. Midori mentioned reviewing videos from a previous session to remove specific business details while preserving the content's value.",
+              "type": "text",
+              "circle_ios_fallback_text": "The group discussed feedback and next steps for an AI education program. Aloke planned to connect with participants next week to review progress and gather feedback for program improvement. Hayden clarified that their program uniquely combines AI training with business operations experience, distinguishing it from other training options. The team discussed potential improvements including making the curriculum more accessible in plain language and potentially offering custom cohorts or add-on services like office hours and mastermind pairings. Midori mentioned reviewing videos from a previous session to remove specific business details while preserving the content's value."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Transcript & Chat",
+              "type": "text",
+              "circle_ios_fallback_text": "Transcript & Chat"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTU9JRHdrPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--d872c6dc9b2634aa364df726bbef24d16b3f035e"
+          }
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSmRuRHdrPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--2789fe864697e839014033fa2e8e377a6629015e"
+          }
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "SummaryEMPOWER Labs Cohort 4 Final SessionThe group met for Session 12, the final session of EMPOWER Labs Cohort 4, where they discussed implementing AI as an operating system for businesses. Midori and Hayden reviewed the progress of participants, noting particularly engaged members like Nancy, Don, FM, Benny, Jonas, Christina, Pavlo, and Tim. The session focused on turning individual AI knowledge into team execution systems, including team readiness checks, strategic alignment, and the TEAMS program, with plans to discuss next steps and post-cohort activities in an open forum.Organizational Process and Role ClarityThe team discussed bottlenecks in their organization, with participants identifying process clarity, execution follow-through, and role clarity as key challenges. Mike and Nancy shared that while their operations team has good process knowledge, they still experience issues with execution consistency and role clarity, particularly in delegation and responsibility alignment. Pavlo described his experience implementing lean practices and using AI as a tool to improve information flow and process efficiency, emphasizing the importance of getting input directly from the source rather than making assumptions. The discussion highlighted the value of using tools like clarity boards and role-specific avatars to better define expectations and improve team alignment.Role Master Prompts Implementation ProcessHayden explained the process of creating role master prompts, which involve team members building knowledge documents specific to their roles, combining with company master prompts to enhance AI understanding. The process includes using these prompts to create clarity boards, which identify opportunities for AI implementation, aiming to save approximately 10 hours per week through automations. The program follows a 30-day cycle, focusing on bottom-up OKR creation and implementation, with the goal of making iterative loops faster and increasing employee engagement and effectiveness.AI Implementation Program OverviewHayden discussed an AI implementation program that involves a three-phase approach over approximately 9 weeks. The program includes building role master prompts and processes, converting outputs into Clarity boards with manager approval, and identifying opportunities beyond time-saving. Hayden provided a specific example of how AI reduced video creation costs from $3,000 to $200 per video, enabling the potential to create 135,000 in additional revenue by scaling to 15 videos monthly. The program aims to create a bottom-up innovation process using AI to surface opportunities and track progress, which can potentially reduce OKR cycles from quarterly to weekly.AI Strategy and Implementation PlanningHayden discussed examples of urgent top-down interventions, including losing key customers, facing cash flow risks, or dealing with regulatory changes, and explained how AI can help define problems and create focused team OKRs through daily stand-ups. He outlined the upcoming introduction of the Inner Circle, which will include 16 new team-focused sessions, growth systems, and AI tools for demand generation and workflow automation. Hayden also described the evolution of AI operating systems, predicting that AI employees with explicit role domains will become more prevalent in the next 6 months, while emphasizing the current importance of human involvement in innovation, documentation, and execution.New Product Design Process DemoHayden demonstrated a new product design process using Codex, explaining how it can create complete sales systems including contracts and enablement materials. He provided an example of a market-to-lead system for video content creation that can be installed as a \"kung fu kit\" in Cloud Code. Don shared his need to systematize his market-to-lead processes, particularly around Google Ads and organic growth, as he currently manages everything ad hoc without proper structure or reporting. Hayden advised Don to set new AI-powered standards for automation and quality to ensure full adoption across the team.AI Implementation and Feedback MeasurementDon discussed the need to systematically measure and understand feedback data, particularly conversion rates and platform performance, to drive better decisions. Hayden suggested using conversion rate optimization (CRO) tools and AI for gathering authoritative knowledge on topics like CRO. Nancy highlighted three main bottlenecks: automating financial processes, redistributing AI implementation tasks, and finding ways to augment student learning in in-person classes. FM expressed feeling overwhelmed by the rapid pace of AI developments and the abundance of opportunities, while Hayden advised focusing on one task at a time to manage anxiety and make progress.AI Implementation Strategy DiscussionMike discussed the importance of implementing a \"bottoms-up\" approach for their AI initiatives, acknowledging challenges with limited in-office staff and the need to delegate responsibilities. Hayden shared insights about the evolution of their AI curriculum and cohort experiences, noting that participants' starting AI familiarity has improved over time due to more advanced models. The discussion also covered CRM system transitions, with Hayden describing how a team member successfully migrated from HubSpot to Airtable using AI assistance, and Don suggesting the potential development of an AI prioritizer app.Internal Software and AI SolutionsThe group discussed internal software solutions and AI tools for business operations. Hayden advised considering cheaper internal software alternatives over expensive external tools like HubSpot, predicting that niche solutions would emerge at lower costs within 12 months. Jonas shared his experience building an ERP system using Airtable for 400 customers, spending only $50 while replacing a $40,000 annual system. Pavlo demonstrated how AI helped him redesign his team's meeting system and create OKRs, presenting detailed implementation plans to his team with AI-generated checklists and presentations.IT Support Program Implementation OptionsDon discussed the potential benefits of providing IT support and tools to help team members become more efficient and effective in prioritizing tasks. Hayden presented three options for implementing the program with teams: joining the Inner Circle (a self-study curriculum with 16 sessions), participating in custom cohorts (limited to two per month), or pursuing a DIY approach. Hayden emphasized that while the DIY option is available, the other paths offer more support and engagement, particularly for teams with limited time or resources. He also noted that custom cohorts can accommodate more participants without additional costs and encouraged including team members who have 3-5 hours weekly to commit to the program.Inner Circle Membership Strategy DiscussionThe meeting focused on discussing Inner Circle membership limits and strategies for maintaining competitive advantage in an AI-first business environment. Hayden explained that Inner Circle currently limits team members to 5 and AI employees to 3, and outlined strategies for protecting competitive advantage, including training teams on AI implementation and focusing on brand building and ecosystem development over the next 2 years. FM raised questions about balancing AI adoption with human governance, to which Hayden responded by emphasizing the importance of combining domain expertise with AI capabilities, suggesting that companies should focus on their core competencies rather than attempting to rebuild everything at once. Aloke advised focusing on what businesses do better than competitors and leveraging AI to enhance those strengths rather than expanding into non-core areas.AI Education Program Feedback DiscussionThe group discussed feedback and next steps for an AI education program. Aloke planned to connect with participants next week to review progress and gather feedback for program improvement. Hayden clarified that their program uniquely combines AI training with business operations experience, distinguishing it from other training options. The team discussed potential improvements including making the curriculum more accessible in plain language and potentially offering custom cohorts or add-on services like office hours and mastermind pairings. Midori mentioned reviewing videos from a previous session to remove specific business details while preserving the content's value.Transcript & Chat",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "Cohort 4 Final Session - Chat.txt",
+        "content_type": "text/plain",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 3895,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSmRuRHdrPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--2789fe864697e839014033fa2e8e377a6629015e",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/svc9ib66m2uy81gfxyfwbo537fxl",
+        "is_downloadable": true
+      },
+      {
+        "filename": "Cohort 4 Session 12 -Transcript.md",
+        "content_type": "text/markdown",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 91887,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTU9JRHdrPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--d872c6dc9b2634aa364df726bbef24d16b3f035e",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/37s65vx372k5d1bb4jcax5ap5pai",
+        "is_downloadable": true
+      }
+    ],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "chat_room_uuid": "fa96fbb8-b4a8-4422-8edc-a8b30c789a8f"
+}

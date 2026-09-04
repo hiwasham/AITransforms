@@ -1,0 +1,530 @@
+{
+  "id": 34677019,
+  "name": "Your Team Isn’t Resisting AI. They’re Resisting You.",
+  "slug": "your-team-isn-t-resisting-ai-they-re-resisting-you",
+  "type": "Posts::Basic",
+  "status": "published",
+  "user_id": 39364111,
+  "published_at": "2026-07-20T17:37:01.044Z",
+  "updated_at": "2026-07-20T17:37:01.064Z",
+  "created_at": "2026-07-20T17:37:01.044Z",
+  "hide_meta_info": false,
+  "community_member_id": 51527687,
+  "is_truncation_disabled": null,
+  "hide_from_featured_areas": false,
+  "flagged_for_approval_at": null,
+  "pinned_at": null,
+  "internal_custom_html": null,
+  "is_comments_enabled": true,
+  "is_liking_enabled": true,
+  "share_post_enabled": null,
+  "share_uid": null,
+  "minimal_layout": false,
+  "show_post_teaser": false,
+  "editor": "tiptap",
+  "is_comments_closed": false,
+  "is_comments_disabled": false,
+  "is_liking_disabled": false,
+  "display_title": "Your Team Isn’t Resisting AI. They’re Resisting You.",
+  "cover_image": null,
+  "cover_image_url": null,
+  "cover_image_variants": {},
+  "cardview_thumbnail": null,
+  "cardview_thumbnail_url": null,
+  "cardview_image_url": null,
+  "space_name": "Announcement",
+  "space_slug": "announcement",
+  "community_slug": "empower-labs",
+  "space_id": 2721841,
+  "pin_to_top": false,
+  "pinned_at_top_of_space": false,
+  "bookmark_id": null,
+  "topics": [],
+  "community_member": {
+    "id": 51527687,
+    "user_id": 39364111,
+    "public_uid": "b2be8b1e",
+    "first_name": "Ronnie",
+    "last_name": "Seguilla",
+    "name": "Ronnie Seguilla",
+    "admin": true,
+    "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzM5MzY0MTExP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--526c8da859ab73228e0fe33cfc7e422ab8b19331",
+    "type": "CommunityMember",
+    "headline": "Admin",
+    "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTE1Mjc2ODc_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--ff7e32066a01f1a91da71adf5a71bc9c75b95f13",
+    "avatar_url": null
+  },
+  "conversation_summary_overview": "",
+  "body_trix_content": "",
+  "body_for_editor": null,
+  "truncated_content": "Most AI rollouts don't fail during training—they fail two weeks later.\n\nThe team attends the training. They agree AI is valuable. Leadership invests in the tools. But a few weeks later, everyone is back to updating the CRM manually, writing emails from...",
+  "show_more": true,
+  "tiptap_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Most AI rollouts don't fail during training—they fail two weeks later.",
+              "type": "text",
+              "circle_ios_fallback_text": "Most AI rollouts don't fail during training—they fail two weeks later."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The team attends the training. They agree AI is valuable. Leadership invests in the tools. But a few weeks later, everyone is back to updating the CRM manually, writing emails from scratch, and following the same old workflows.",
+              "type": "text",
+              "circle_ios_fallback_text": "The team attends the training. They agree AI is valuable. Leadership invests in the tools. But a few weeks later, everyone is back to updating the CRM manually, writing emails from scratch, and following the same old workflows."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The problem isn't the AI.",
+              "type": "text",
+              "circle_ios_fallback_text": "The problem isn't the AI."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "It's the adoption system.",
+              "type": "text",
+              "circle_ios_fallback_text": "It's the adoption system."
+            }
+          ]
+        },
+        {
+          "type": "embed",
+          "attrs": {
+            "sgid": "BAh7CEkiCGdpZAY6BkVUSSI6Z2lkOi8vanVtcHN0YXJ0LWFwcC9SaWNoVGV4dE9lbWJlZC8yNDc5MDU1P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--ce3dc3e7050867852de5089869b9b478c92f872e"
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In this video, Hayden breaks down why most AI rollouts quietly fail and what organizations need to do to make AI stick.",
+              "type": "text",
+              "circle_ios_fallback_text": "In this video, Hayden breaks down why most AI rollouts quietly fail and what organizations need to do to make AI stick."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "In this video, you'll learn:",
+              "type": "text",
+              "circle_ios_fallback_text": "In this video, you'll learn:"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "🤖 Why only about ",
+              "type": "text",
+              "circle_ios_fallback_text": "🤖 Why only about "
+            },
+            {
+              "text": "20%",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "20%"
+            },
+            {
+              "text": " of employees become consistent AI users after a typical rollout",
+              "type": "text",
+              "circle_ios_fallback_text": " of employees become consistent AI users after a typical rollout"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "👥 The ",
+              "type": "text",
+              "circle_ios_fallback_text": "👥 The "
+            },
+            {
+              "text": "four gaps",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "four gaps"
+            },
+            {
+              "text": " blocking AI adoption: leadership, time, early wins, and standards",
+              "type": "text",
+              "circle_ios_fallback_text": " blocking AI adoption: leadership, time, early wins, and standards"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "🚀 The four changes leaders must make to turn AI into part of their team's everyday workflow",
+              "type": "text",
+              "circle_ios_fallback_text": "🚀 The four changes leaders must make to turn AI into part of their team's everyday workflow"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "⚙️ How to build an AI adoption system that creates lasting behavior change—not just temporary excitement",
+              "type": "text",
+              "circle_ios_fallback_text": "⚙️ How to build an AI adoption system that creates lasting behavior change—not just temporary excitement"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "One of the biggest takeaways is that successful AI adoption isn't about having better AI tools. It's about building a better system where leaders model AI use, teams have protected time to learn, early wins are celebrated, and clear standards are established.",
+              "type": "text",
+              "circle_ios_fallback_text": "One of the biggest takeaways is that successful AI adoption isn't about having better AI tools. It's about building a better system where leaders model AI use, teams have protected time to learn, early wins are celebrated, and clear standards are established."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Ready to Build Your Own Master Prompt?",
+              "type": "text",
+              "circle_ios_fallback_text": "Ready to Build Your Own Master Prompt?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A Master Prompt gives AI the context it needs to understand your role, your company, your customers, and what great work looks like—turning it from a generic assistant into one that works specifically for you.",
+              "type": "text",
+              "circle_ios_fallback_text": "A Master Prompt gives AI the context it needs to understand your role, your company, your customers, and what great work looks like—turning it from a generic assistant into one that works specifically for you."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "👉 ",
+              "type": "text",
+              "circle_ios_fallback_text": "👉 "
+            },
+            {
+              "text": "Create Your Master Prompt:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Create Your Master Prompt:"
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "https://docs.google.com/document/d/1YP0h2uzXs4E0wIYtkLOmR3qqGSA_mhDPyZZ8NkSi_9Y/edit?usp=sharing",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://docs.google.com/document/d/1YP0h2uzXs4E0wIYtkLOmR3qqGSA_mhDPyZZ8NkSi_9Y/edit?usp=sharing",
+                    "class": null,
+                    "target": "_blank"
+                  }
+                },
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "https://docs.google.com/document/d/1YP0h2uzXs4E0wIYtkLOmR3qqGSA_mhDPyZZ8NkSi_9Y/edit?usp=sharing"
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "💬 Join the Discussion",
+              "type": "text",
+              "circle_ios_fallback_text": "💬 Join the Discussion"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "After watching the video, let us know in the comments:",
+              "type": "text",
+              "circle_ios_fallback_text": "After watching the video, let us know in the comments:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Which of the four adoption gaps do you see most often in your organization?",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "What's one recurring task your team still does manually that could become an early AI win?",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "What was your biggest takeaway from the video?",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "👋 New to the Community?",
+              "type": "text",
+              "circle_ios_fallback_text": "👋 New to the Community?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you haven't introduced yourself yet, we'd love to get to know you!",
+              "type": "text",
+              "circle_ios_fallback_text": "If you haven't introduced yourself yet, we'd love to get to know you!"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Head over to the ",
+              "type": "text",
+              "circle_ios_fallback_text": "Head over to the "
+            },
+            {
+              "type": "entity",
+              "attrs": {
+                "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNzAyNTA1P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--121f1bb2561ddf7189d9d92a0dc8f889ef904795"
+              },
+              "circle_ios_fallback_text": "#Discussion"
+            },
+            {
+              "text": " space and tell us:",
+              "type": "text",
+              "circle_ios_fallback_text": " space and tell us:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Who you are",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "What your role or business is",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Where you're joining us from",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "What you're hoping to accomplish with AI",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "We look forward to hearing your biggest takeaway from the video and learning more about your AI journey!",
+              "type": "text",
+              "circle_ios_fallback_text": "We look forward to hearing your biggest takeaway from the video and learning more about your AI journey!"
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "Most AI rollouts don't fail during training—they fail two weeks later.The team attends the training. They agree AI is valuable. Leadership invests in the tools. But a few weeks later, everyone is back to updating the CRM manually, writing emails from scratch, and following the same old workflows.The problem isn't the AI.It's the adoption system.In this video, Hayden breaks down why most AI rollouts quietly fail and what organizations need to do to make AI stick.In this video, you'll learn:🤖 Why only about 20% of employees become consistent AI users after a typical rollout👥 The four gaps blocking AI adoption: leadership, time, early wins, and standards🚀 The four changes leaders must make to turn AI into part of their team's everyday workflow⚙️ How to build an AI adoption system that creates lasting behavior change—not just temporary excitementOne of the biggest takeaways is that successful AI adoption isn't about having better AI tools. It's about building a better system where leaders model AI use, teams have protected time to learn, early wins are celebrated, and clear standards are established.Ready to Build Your Own Master Prompt?A Master Prompt gives AI the context it needs to understand your role, your company, your customers, and what great work looks like—turning it from a generic assistant into one that works specifically for you.👉 Create Your Master Prompt:\nhttps://docs.google.com/document/d/1YP0h2uzXs4E0wIYtkLOmR3qqGSA_mhDPyZZ8NkSi_9Y/edit?usp=sharing💬 Join the DiscussionAfter watching the video, let us know in the comments:👋 New to the Community?If you haven't introduced yourself yet, we'd love to get to know you!Head over to the #Discussion space and tell us:We look forward to hearing your biggest takeaway from the video and learning more about your AI journey!",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {
+      "BAh7CEkiCGdpZAY6BkVUSSI6Z2lkOi8vanVtcHN0YXJ0LWFwcC9SaWNoVGV4dE9lbWJlZC8yNDc5MDU1P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--ce3dc3e7050867852de5089869b9b478c92f872e": {
+        "id": 2479055,
+        "url": "https://youtu.be/to6u6etQFdM?si=qrYdgDXSav8V-IUp",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSI6Z2lkOi8vanVtcHN0YXJ0LWFwcC9SaWNoVGV4dE9lbWJlZC8yNDc5MDU1P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--ce3dc3e7050867852de5089869b9b478c92f872e",
+        "type": "embed",
+        "embed_type": "video",
+        "embed_provider": "iframely",
+        "circle_embed_url": "https://community.empowerlabs.ai/rich_text_oembeds/BAh7CEkiCGdpZAY6BkVUSSI6Z2lkOi8vanVtcHN0YXJ0LWFwcC9SaWNoVGV4dE9lbWJlZC8yNDc5MDU1P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--ce3dc3e7050867852de5089869b9b478c92f872e",
+        "html": "<div style=\"left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;\"><iframe src=\"https://www.youtube.com/embed/to6u6etQFdM?rel=0\" width=\"360\" height=\"202\" style=\"top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;\" allowfullscreen scrolling=\"no\" allow=\"accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;\" referrerpolicy=\"strict-origin\"></iframe></div>",
+        "title": "Your Team Isn’t Resisting AI. They’re Resisting You.",
+        "width": 360,
+        "height": 202,
+        "version": "1.0",
+        "author_url": "https://www.youtube.com/channel/UCDMYoClgeu5QJpEfDaJLnHA",
+        "author_name": null,
+        "description": "Check out the free 3-day Master Prompt course here: https://luma.com/ympyjhav\n\nMost AI rollouts don’t fail in the training room. They fail a few weeks later, when the team quietly goes back to the old workflow.\n\nIn this video, Hayden Miyamoto breaks down what quiet AI resistance actually looks like, why most AI adoption efforts stall even when leadership says all the right things, and the four conditions that have to change for AI to actually stick inside a company.\n\nIf you’re a founder, operator, CEO, or team lead trying to make AI part of how your company really works, this will help you see why adoption breaks down and what to do differently.\n\nYou’ll learn:\n- what “quiet resistance” actually looks like\n- why most AI rollouts never become behavior change\n- the 4 gaps that stop adoption from sticking\n- what a real AI adoption system looks like\n- how to create early wins that build momentum\n\nChapters:\n0:00 Why AI rollouts quietly fail\n0:31 What quiet resistance actually looks like\n1:15 The 20% problem\n2:02 The 4 gaps blocking adoption\n2:51 What actually has to change\n4:25 The adoption system\n5:52 A real company example\n6:43 The first step to fix it\n7:00 FREE Master Prompt Course\n\n#AIAdoption #Leadership #BusinessAI",
+        "provider_url": null,
+        "provider_name": "YouTube",
+        "thumbnail_url": "https://i.ytimg.com/vi/to6u6etQFdM/maxresdefault.jpg",
+        "thumbnail_width": 1280,
+        "thumbnail_height": 720
+      },
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNzAyNTA1P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--121f1bb2561ddf7189d9d92a0dc8f889ef904795": {
+        "id": 2702505,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNzAyNTA1P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--121f1bb2561ddf7189d9d92a0dc8f889ef904795",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/welcome",
+        "slug": "welcome"
+      }
+    },
+    "format": "post",
+    "community_members": [],
+    "entities": [
+      {
+        "id": 2702505,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNzAyNTA1P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--121f1bb2561ddf7189d9d92a0dc8f889ef904795",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/welcome",
+        "slug": "welcome"
+      }
+    ],
+    "group_mentions": [],
+    "polls": []
+  }
+}

@@ -1,0 +1,401 @@
+{
+  "id": 29190174,
+  "name": "Watch Session 3 Replay + Exercises + Join Session 4",
+  "slug": "watch-session-3-replay-exercises-join-session-4",
+  "type": "Posts::Basic",
+  "status": "published",
+  "user_id": 39364111,
+  "published_at": "2026-01-30T22:56:03.493Z",
+  "updated_at": "2026-01-30T23:00:38.544Z",
+  "created_at": "2026-01-30T22:56:03.493Z",
+  "hide_meta_info": false,
+  "community_member_id": 51527687,
+  "is_truncation_disabled": null,
+  "hide_from_featured_areas": false,
+  "flagged_for_approval_at": null,
+  "pinned_at": null,
+  "internal_custom_html": null,
+  "is_comments_enabled": true,
+  "is_liking_enabled": true,
+  "share_post_enabled": null,
+  "share_uid": null,
+  "minimal_layout": false,
+  "show_post_teaser": false,
+  "editor": "tiptap",
+  "is_comments_closed": false,
+  "is_comments_disabled": false,
+  "is_liking_disabled": false,
+  "display_title": "Watch Session 3 Replay + Exercises + Join Session 4",
+  "cover_image": null,
+  "cover_image_url": null,
+  "cover_image_variants": {},
+  "cardview_thumbnail": null,
+  "cardview_thumbnail_url": null,
+  "cardview_image_url": null,
+  "space_name": "Announcements",
+  "space_slug": "announcements-4101a0",
+  "community_slug": "empower-labs",
+  "space_id": 2414936,
+  "pin_to_top": false,
+  "pinned_at_top_of_space": false,
+  "bookmark_id": null,
+  "topics": [],
+  "community_member": {
+    "id": 51527687,
+    "user_id": 39364111,
+    "public_uid": "b2be8b1e",
+    "first_name": "Ronnie",
+    "last_name": "Seguilla",
+    "name": "Ronnie Seguilla",
+    "admin": true,
+    "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzM5MzY0MTExP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--526c8da859ab73228e0fe33cfc7e422ab8b19331",
+    "type": "CommunityMember",
+    "headline": "Admin",
+    "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTE1Mjc2ODc_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--ff7e32066a01f1a91da71adf5a71bc9c75b95f13",
+    "avatar_url": null
+  },
+  "conversation_summary_overview": "",
+  "body_trix_content": "",
+  "body_for_editor": null,
+  "truncated_content": "And that’s a wrap on Week 1! You’ve laid the foundation for your EMPOWER OS and explored how to bring AI into your business systems. Replay and exercises below.\n\n1. Watch the Replay of Session 3: The EMPOWER Operating System\n\nIf you couldn’t attend or ...",
+  "show_more": true,
+  "tiptap_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "And that’s a wrap on Week 1! You’ve laid the foundation for your EMPOWER OS and explored how to bring AI into your business systems. Replay and exercises below.",
+              "type": "text",
+              "circle_ios_fallback_text": "And that’s a wrap on Week 1! You’ve laid the foundation for your EMPOWER OS and explored how to bring AI into your business systems. Replay and exercises below."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "1. Watch the Replay of Session 3: The EMPOWER Operating System",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "1. Watch the Replay of Session 3: The EMPOWER Operating System"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you couldn’t attend or would like to revisit any part of the session, the recording is now ready for you to watch.",
+              "type": "text",
+              "circle_ios_fallback_text": "If you couldn’t attend or would like to revisit any part of the session, the recording is now ready for you to watch."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In addition to the video replay, you’ll also find a downloadable version of the slides, access to the chat and transcript, and a summary of the main points for reference.",
+              "type": "text",
+              "circle_ios_fallback_text": "In addition to the video replay, you’ll also find a downloadable version of the slides, access to the chat and transcript, and a summary of the main points for reference."
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/892608/lessons/3381088",
+            "color": "#2B2E33",
+            "label": "Watch the Replay",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "2. Start the Exercises",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "2. Start the Exercises"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Please ",
+              "type": "text",
+              "circle_ios_fallback_text": "Please "
+            },
+            {
+              "text": "work on the following exercises ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "work on the following exercises "
+            },
+            {
+              "text": "before our next live session:",
+              "type": "text",
+              "circle_ios_fallback_text": "before our next live session:"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 3.1: Run the Assessment (Sale to Delivery)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 3.2: Discover the 4-Level Documentation Framework",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 3.3: Add the 4-Level Documentation Framework to Your Master Prompt",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 3.4: Explore AI-First Process Creation",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 3.5: Create the Level 1 & 2 SOP (Sale to Delivery)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Exercise 3.5: Register Your Organization",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/edit-lesson/sections/892608/lessons/3381151",
+            "color": "#2B2E33",
+            "label": "Start the Exercises",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "3. Join Live Session 4 on Monday",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "3. Join Live Session 4 on Monday"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "We're meeting on ",
+              "type": "text",
+              "circle_ios_fallback_text": "We're meeting on "
+            },
+            {
+              "text": "Monday, Feb 2, 1:00 PM – 2:30 PM EST",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Monday, Feb 2, 1:00 PM – 2:30 PM EST"
+            },
+            {
+              "text": " to dive into the first E of the EMPOWER OS: ",
+              "type": "text",
+              "circle_ios_fallback_text": " to dive into the first E of the EMPOWER OS: "
+            },
+            {
+              "text": "Expansion Capability ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Expansion Capability "
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://community.empowerlabs.ai/c/calendar-83e687/live-session-4-expansion-capability",
+            "color": "#2B2E33",
+            "label": "Join Live Session 4",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "If you have questions, ideas, or feedback...",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "If you have questions, ideas, or feedback..."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Don’t hesitate to post in the Discussion space.",
+              "type": "text",
+              "circle_ios_fallback_text": "Don’t hesitate to post in the Discussion space."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Our team is checking in there every day, and we’re here to support you throughout the program.",
+              "type": "text",
+              "circle_ios_fallback_text": "Our team is checking in there every day, and we’re here to support you throughout the program."
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "And that’s a wrap on Week 1! You’ve laid the foundation for your EMPOWER OS and explored how to bring AI into your business systems. Replay and exercises below.1. Watch the Replay of Session 3: The EMPOWER Operating SystemIf you couldn’t attend or would like to revisit any part of the session, the recording is now ready for you to watch.In addition to the video replay, you’ll also find a downloadable version of the slides, access to the chat and transcript, and a summary of the main points for reference.2. Start the ExercisesPlease work on the following exercises before our next live session:3. Join Live Session 4 on MondayWe're meeting on Monday, Feb 2, 1:00 PM – 2:30 PM EST to dive into the first E of the EMPOWER OS: Expansion Capability If you have questions, ideas, or feedback...Don’t hesitate to post in the Discussion space.Our team is checking in there every day, and we’re here to support you throughout the program.",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  }
+}
