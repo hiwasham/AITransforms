@@ -1,0 +1,419 @@
+---
+title: "AI Marketing Club Live Class - Eben 12_2_25 - transcript"
+date: "2025-12-03"
+source: "/api/meetings"
+---
+
+# AI Marketing Club Live Class - Eben 12_2_25 - transcript
+
+Well, isn't this a beautiful Tuesday? It's great to see you, everyone. Thank you for having your cameras on. I really appreciate it. It's really nice to see you.
+
+James, you were just holding up a book there. What were you doing there? What are you showing me? Show me. What do you got?
+
+Here. I can ask you to unmute. So I bought this when I was leaving America to live in Valencia, Spain. And I paid a bunch of money to get it, but I never heard the part where it said reminder, I can have this great benefit. So I've been without the benefits.
+
+So I just sent you an email saying, would it be nice to let me have whatever I was supposed to get? Because I didn't pay attention to a good set up. So, but it's a very good book. And I I don't know but I loved the, and I don't remember what it cost to get it to Spain, but it took you don't wanna mail anything to Spain. Trust me.
+
+Just wait. James, wait. Here. Do do this. Hey, Kim.
+
+James, send us over an email to, hello at virtual coach and said, hey. It's James. I'm the one that bought the opportunity book. Yeah. And, Kim, send him over the, opportunity challenge.
+
+Okay? And if you yeah. There we go. I'm gonna put my ad on my That's an even better bonus than the one that was in the book. Okay?
+
+Well, see, that's why I waited. There was a part of my brain that just Beautiful. Just wait. Thank you, James. I really appreciate it.
+
+You. Having fun in Spain. Alright. Welcome. Oh, thank you.
+
+I see everybody else holding up your opportunity. Ian, thank you very much. Well, welcome to the AI marketing club. Welcome to the first official class. Who was on one of the classes with me last week on Wednesday or Friday or yesterday?
+
+Who was on one of those classes? Alright. Awesome. Those were so much fun. I had such a great time.
+
+Well, we're gonna do that We're gonna do that again here today. And what we're working on now is we're working this month on creating your coaching package. Alright? And so today, we're going to do some work on actually structuring the coaching package. And then in our next AI marketing club in two weeks, it's gonna probably even be a more powerful class because we're going to turn your coaching package into a presentation, and we're gonna use some really cool, tools to do that, in a couple of weeks.
+
+So let's dive in today. Alright. So the first thing that I want to encourage you to do if you're creating a a coaching package or if you're creating a consulting package or you're creating an offer in general is to get really clear. Sometimes I like to say that clients don't buy coaching. They buy results.
+
+K? So maybe you've heard me say this before. Right? But no client ever woke up in bed one morning and was staring at the ceiling and said, you know, today I think I need to buy some coaching. It just it even sounds weird to say it, doesn't it?
+
+It's like, that's just weird. Right? No. That's not what they're thinking about. Right?
+
+They wake up in bed, and they're worried because they just lost their job. You know? Or they're thinking, I'm lonely. I need to go on a date. You know?
+
+Or they step on the scale and they weigh a lot more than they wanna weight, and they're like they want they're like, I I need to lose some weight. Okay? So my my old a friend I had many years ago named Steve, he used to always say, right, when you go to the hardware store to buy a quarter inch drill bit, you're not there to buy a quarter inch drill bit. Right? You want a quarter inch hole.
+
+You don't want the drill bit. You want what the drill bit does. And so this creates one of our first big insights in coaching, and that is we're not selling coaching. We're selling results. We're selling outcome.
+
+K? And what, what a lot of coaches do is they make the mistake of thinking that they're selling coaching. K? Coaching, consulting, when actually what the client is buying is results or an outcome. K?
+
+So what's the difference between coaching and results? K. So the coaching is a process. K? The results, right, are what happens after the process.
+
+K? This is the system. K? This is the benefit of that thing. My friend John Asraff says I love this saying.
+
+He says, sell the transformation, not the transportation. Alright? If you've got an if you've got an airline and you're you take people on vacation to Hawaii, don't sell them airline flights. Sell them being in Hawaii. K?
+
+So when you're creating your coaching package, and particularly when you're creating your coaching package, the offer that you're making to your clients, what you don't wanna do is sit down and say, I have really great coaching. K? We're gonna meet every week. We're gonna do lots of coaching. I'm gonna coach you.
+
+Here's how the coaching works. Coaching. Coaching. Coaching. Now you may need to explain a little bit about it.
+
+You know, you might say to them, we're going to meet once a week. Right? I'm going to hold you accountable. You may but that's not what we're selling. No one wants to buy meeting once a week, right, and being held accountable.
+
+I mean, some do. Right? Why not? Right? Why why doesn't here, in the meeting chat, let's just kinda get everybody's, input on this.
+
+Why doesn't anyone want to buy coaching? And why don't people want to buy coaching? In the chat, let's just have a little brainstorm. It takes time. It's not sexy.
+
+People want instant results. They want the outcome, not the comp it doesn't sound like fun. They're already overwhelmed. Okay? Who wants to change?
+
+They can't see the value. They don't know what they're getting. The process is the work. Excellent, James. Excellent.
+
+It's boring. They don't wanna be told what to do. They already have enough going on. It's too vague. It sounds painful.
+
+It's generic. Guys, this is great. Does anybody want you guys should teach this class for I mean, this is really good here. It's abstract. It makes me feel needy and costly.
+
+The pain isn't in the, you know, the work, the cost, the outcome. It's too unspecific. They want the transformation. It's a hassle. It implies something's wrong with them.
+
+These are great, everyone. Right? It's confusing. What is it? Okay.
+
+Good. So if you're buy if you're investing in coaching, okay, it takes time. You know, if someone buys, let's say, a three month coaching package with you, and they're gonna meet up with you a dozen times for an hour each. I mean, an hour is a long time in twenty twenty five. Right?
+
+Twelve of them. Oh my god. I gotta put that in my calendar? I gotta schedule a round that's gonna be in this spot. Okay.
+
+I gotta find a time. You know, there's no convenient time where I can meet every week. So wait a minute. I'm gonna give you money, and you're gonna take my time to do this? Don't we live in the world of instant results where I can just can I go to a clinic and they give me a pill, and then I just wake up and, like, everything's fixed?
+
+Makes sense, everyone? Coaching, not what your clients want. So if we're going to create a coaching package, it's we don't really even wanna call it a coaching package, which I'll explain in a moment. Right? We don't wanna create a coaching package.
+
+What we want to do, k, is instead of creating a coaching package, we wanna create a results package. K? So instead of basically sitting down with our client and saying, here's all the great coaching you're going to get over this next ninety days, We wanna say, here are all the great results you're going to get over the next ninety days. And then we wanna list out those results one after another. Okay?
+
+One after another. And we don't just want to list out the results that they're going to get. We want to list out the benefits of those results. Okay. So if, let's say that we're helping someone, to, to launch their business online.
+
+Let's say that you do business launch coaching. Okay? Instead of saying, you know, hire me for twelve weeks or hire me for ninety days of business coaching, k, we wanna say, invest in my launch your business package. So the launch your business package sounds way more interesting and valuable to the average client than business coaching. Got it?
+
+This is the means, and this is the end. Alright. And then we wanna talk about all the benefits of having your own business launched. We wanna talk about the benefits of the way that we're going to launch your business. We'll get to that in just a moment here.
+
+But there are other so does everybody get it? We're not designing a coaching package. We're designing a results package from the perspective of the client. This is how you make offers that people invest thousands to tens of thousands or even hundreds of thousands of dollars for. Gotta be about the result that they want.
+
+They don't they don't want coaching. They want results. Okay. Some other terms. K?
+
+So some other terms here for for for the ends. Okay. So results, outcome. K? Outcomes, relief.
+
+K. Reward, benefit. So when you're offering a coaching package to someone else or a consulting package or a course or a group program, right, or any of the kinds of things that we do in this industry, we're not offering them coaching, we're not offering them workshops, we're not offering them courses, we're offering them results, outcomes, relief, reward, benefit. K? So it's the payoff of the thing, and in an ideal world, we would want to name the coaching package or, again, the course or the workshop.
+
+We would wanna name it the result so that there, in fact, becomes no difference in the identity of it. K? So let's say that I was creating a workshop, and in the workshop, I was going to teach you how to launch your business. What could I call the workshop so that everything is lined up? Anyone?
+
+What could I call the workshop itself? Put it in the chat. K? So let's say I have a workshop, right, and it's all about how to launch a business. What could I call it?
+
+Good. I could call it launch your business. This may seem obvious, everyone, but I'm serious. Right? If you call the workshop launch your business, and sure, you could call it the launch your business workshop.
+
+Fine. Right? Or launch your business in ninety days or whatever. But if we just start with calling it launch your business, we've made huge progress relative to almost every other coach and teacher out there. Okay.
+
+We got it? Who's got what I'm saying here? Okay. Excellent. From now on, I don't want you to sell a coaching package.
+
+I want you to sell a results package. Sell a benefit package. Sell an outcome package. K? That's what we're doing.
+
+Next, I mentioned this word benefit. It's it's in this list over here. And this has a it has a big reputation in the marketing world, and it's a word that we really, really wanna get into here. Okay? So Who offers a coaching package here?
+
+And, you've you've done your coaching package for, oh, at least a couple of dozen paying clients. Just raise your hand. Wave your hand to me here. Okay. Keep your hands up.
+
+Keep your hands up, folks, who who have done that. Yeah? Alright. Let's see. Anna, would you talk to me for a moment?
+
+I'm just gonna ask you to unmute. Good morning. Hey. Can you hear me okay? I can.
+
+Okay. So Anna, just give me a sense of what are some of the things that your clients want when they come to you for coaching. What are some of the results that they want? Give me two or three. They're already existing businesses, but they want to grow them.
+
+They wanna know how to grow and scale. K. So grow slash scale. Okay. Give me another thing that they want from you.
+
+What it's a result or an outcome from working with you. They want to build wealth for themselves. Okay. So wealth. Give me one more.
+
+They want to get out of the weeds and do the strategic stuff. Yeah. Get out of the weeds. Okay. Cool.
+
+So these are three, what we'll call, results. Now what we wanna identify is the benefit. K? So in other words, if they can grow in scale, that leads to other positive things that they will get or relief from other negative things. K?
+
+So if they grow and scale their business, what's a benefit to them that your clients typically enjoy, they really like having when they have a grown and scaled business. Well, on the fear side, they're not worried about losing a client because they're bigger. K. So you stop worrying Stop worrying. About lose client.
+
+Great. It's the worst writing I've ever done in public. Okay. So they grow in the scale. They'll stop say again?
+
+It looks like custard at the end. It it I I don't even know what it says. So they'll grow and they scale, and the benefit to growing and scaling is they'll stop worrying about losing clients. Yeah. Pretty cool.
+
+So if they develop wealth, what's a benefit of having wealth that your clients report that they enjoy? For themselves and their families. K. Security for self and family. K.
+
+Wonderful. Obviously, these are business owners. Say again? These are business owners. Excellent.
+
+And getting out of the weeds, what's a benefit of getting out of the weeds? Getting away from the same old same old sort of getting dragged into every issue, every problem, every everything. Just having some freedom from Freedom from problems? From problems. Yeah.
+
+Freedom from problems. Cool. Freedom from problems. Because now that they've grown a scale and they've got some wealth, they can hire some more people who can do the stuff that they've been doing. Excellent.
+
+So growing scale has the benefit of they stop worrying about losing stop that worry about losing a client because now they have scale. They have wealth, so now they have more security for themselves and their families. And they get out of the weeds, and they have freedom from the problems. Yeah. I should have under under put under growth in scale since we're in this this particular session, is that they're they're doing marketing well.
+
+Hold on a minute. We're gonna get there. Excellent, though. You're you're way ahead of me. Okay.
+
+So is everybody clear here about the distinction? So first of all, we're not selling coaching. We're selling results. So I'm like, okay. Great.
+
+What are the results that they want? Well, the results are grow in scale, wealth, get out of the weeds. So if she's going to create a coaching package just to start off with, I would say, well, can we call it the growing grow and scale package? Or could we call it the build wealth package? Or could we call it the get out of the weeds package?
+
+They're all good, you know, just depending on where her clients are at. Right? And does everybody see that if I'm helping businesses grow and scale for something, I say, okay. So based on what you told me, the grow and scale package is going to be the best for you, you know, or I recommend my wealth building package. It already sounds more valuable.
+
+Who's got what I'm talking about here? You see this? Okay. So that's where now the frame is I'm selling results. I'm no longer selling, you know, coaching and consulting.
+
+Next, the next level of this is benefits. So based on what you told me, right, next step is for you to sign up for my grow and scale package, and we're gonna grow and scale your business so you no longer have to worry about losing clients. That's the benefit. Sounds really sounds pretty pro already, doesn't it? Already sounds more valuable.
+
+Based on what you told me, next step is for you to sign up for my wealth building package, and what we're going to do is we're gonna build security for you and for your family with your business. So does everybody hear how the benefit k? So in other words, what they're gonna get from that thing really stacks the perceived value. Now it really starts sounding more valuable, and at the same time, it sounds more, there's more substance. It sounds more professional.
+
+It sounds more organized because we're, like, hitting those buttons right on the head. K? Based on what you told me, next step is for you to sign up for my, get out of the weeds package, and what we're gonna do over the next ninety days is we're gonna get you free of all these problems. Yeah. Right?
+
+Okay. So got it, everyone? That's that's the fundamental piece of the coaching packages. We're not selling coaching, we're selling results, and then the next level is we want to put benefits so that as we're making our offer, all these benefits are here. Alright.
+
+So then we're gonna come back over here to you, Anna. Okay. So let's say that I grow my grow and scale my business. I can stop worrying about losing clients. What's the benefit of stopping worrying about losing clients?
+
+I was gonna say the benefit is a good pipeline of clients you actually want. Pipeline? Pipeline you want. Pipeline you want. Okay.
+
+Now we take everything to start with, and then we have to unlearn that. Excellent. Within wealth, okay, they're gonna get security for themselves and their family. What's the benefit within the benefit of security of self and family? What what benefit does that give them?
+
+Kids can go to college. Right. Kids to a good college. Maybe they're like Alex from the other day who is pushing them into, yeah, one of those top colleges. Exactly.
+
+Famous footballers one day. It's great. Your kids can go to a top college. Alright. Good.
+
+Who we work for. Right? It's our kids, if we've got any. Preach it. Okay.
+
+So getting out of the weeds, right, freedom from the problems, what's the benefit of being free of problems? I would say less stress is one of them because somebody else is taking care of it. I've got a client just like this actually. And then the other piece of it is they what they're doing is they elevate their job so they become a strategist, not a tactician. I have to be able to take that on, of course, but that's what the coaching package would be about.
+
+If anyone can read this, will you please tell me what I wrote here? So she said freedom from problems, then the benefit is less stress, plus they get elevated to the strategy level. Yeah. Alright. You gotta get up there and stay there.
+
+Yeah. Excellent. Alright. So what I'm trying to show here, everyone, is that it's not just about shifting from the coaching, right, to the process, to the result. It's then not just going to the results result, but going, what's the benefit of the result?
+
+In other words, if you get that result, then what's within that? And then what's the benefit in the benefit? Because it's this stuff here on this list, that's what the client actually will pay money for. This is all the stuff where when you start talking about coaching packages that are thousands, tens of thousands, hundreds of thousands of dollars, they go, oh, wait. So we can grow and scale my business.
+
+I can stop worrying about losing clients. I can build a big pipeline of clients that I love. That just sounds like the kind of thing you'd spend a lot of money on. Right? It's like, of course, I would invest a lot for that.
+
+Oh, we're gonna build wealth, and I'm gonna have security for my family, and we're gonna be I'm gonna be able to send my kids to the good college I want. Yeah. That sounds like the kind of thing that I would invest a lot in. It's within the benefits. We're gonna get out of the weeds.
+
+Oh, gonna help me become free of the problems. I'm gonna have less stress. Oh, and I'm gonna be able to elevate so I can work on that fun strategy stuff. Good. I'm gonna just pause for a minute here, Anna.
+
+I'm gonna put you back on mute. I'm gonna come back to you in a minute, though. Okay? So just kinda hang tight. Okay.
+
+So let's just recap for a moment here. K? So when we're creating a coaching package, we have to stop thinking about it from our perspective, and we have to start thinking about it from who? From what perspective? In the chat here.
+
+Good. From the client's perspective. And from the client's perspective, do they want to buy coaching? Do they want to invest a bunch of time in something or I'm sorry, invest a bunch of money in something that takes a lot of time and that involves a lot of work? Is that the thing is that what we wanna try to sell them?
+
+No. It's also not empathic. It's not considerate to do that because it's not client like, it's not understanding them. So what we wanna do is instead of creating a package of coaching, we wanna create a package of results. And the way to create the package of results is to ask, what is the outcome that my client wants?
+
+K? So what is the outcome that my client wants? What is the specific outcome they want? And then name our coaching package with that name. K?
+
+So we could call it, in this case, a grow and scale package, a build wealth package, or a get out of the weeds package. These are already better than most, coaching packages, that I've heard because this is the stuff, that has value. Clear? We got it? Okay.
+
+In the chat here, what is what is a package that you would offer a client based on what you just learned here? K? And the last word should be package. K? What is a result package you could offer your client based on what you've heard here?
+
+You can just type it into the chat. Alright. Rescue your IT project package, the wealth package, the get the clients you want package, the get out of pain package, the resilience package, the break free package, the pipeline you want package, find your ideal client package, create your dream home package. Good one, Laurie. Energy for life package, put your bro broken relationship behind you package.
+
+Let's see. There okay. We can we'll maybe talk. So so, Marco, when it says, and we need to include the hours of package if they ask, of course. Of course.
+
+And you might even say to them, the way that we launch your business or the way that we heal your broken relationship is we meet once a week on Zoom just like this, and we go through a series of twelve steps to help you get this outcome. Of course. I'm just saying we wanna shift the focus to the outcome that they want because we're speaking client language. The spiritual growth package, the relationship rescue package, the practice enhancement, the ace age with peace package, find your hero package, the okay. Great.
+
+Find your okay. Good. Good. Good. Wealth building package.
+
+Wonderful. Okay. Wonderful. Alright. So now what we're gonna do is let's go and use AI to take what we've done here, and let's develop it a little bit.
+
+K? Let's have some fun. K? Let's get let's see if AI can help us. And by the way, we've done this in a way this is the way I like to do things.
+
+You wanna work your own mind, work your brain, go as far as you can yourself. Right? Work your own muscles, then go to the AI and have it help you extend, after that. Okay? So, Anna, I'm gonna ask you to unmute again.
+
+I'm back. Now we've done more work than I usually do here. So, everyone, if you wanna open up ChatGPT, I'm this will I'll be kind of typing a little bit more than usual, so it'll give you time if you wanna follow along. So take the package that you just created, you know, or the outline or any of the notes that you have, and then I'll have you, also putting these into, to ChatGPT. So, Anna, you use ChatGPT?
+
+You use generative AI? Yep. Yeah? Okay. So you know what we're doing here.
+
+Alright. So I'm gonna share my screen. Plain old, regular old chat GPT, and I'm going to say so how would you describe yourself? Do you describe yourself as a coach, a consultant? Like, what's kind of the high level?
+
+And I'm not asking for me. I'm asking so that I can communicate to ChatGPT a little bit about who you are and get get into the ballpark. So I am a coach and a consultant. And yeah, those are the two main things I do. Great.
+
+I'm a coach and a consultant. And just tell me a little bit about your ideal client. So my ideal client is ambitious for growth. So they're a business? They're a business.
+
+Yes. It's a business. Business It's a business. Who is ambitious for growth. K.
+
+What kind of business? What size business? They're typically under ten million when I take them. Yeah. K.
+
+Under ten million. Yes? Maybe twenty to fifty employees. Okay. Great.
+
+So I'm a coaching consultant. My ideal client is a business who is ambitious for growth, typically under ten million with twenty to fifty employees. K? So I'm just gonna put in here, and I'm gonna kinda speak plain English here. I'm gonna take some of this stuff that we wrote here, and everyone just kinda, you know, prompt with me here.
+
+Again, there's a little bit more than maybe I would normally do. But I'm gonna say, I would like help, to create a high value coaching package offer, for these clients. K? So I would like help to create a high value coaching package offer for these clients because that's what we're trying to do. Right?
+
+High value coaching package offer. So because you've already told me these things and we wrote them on the board, normally, in these demos, I just kinda type them straight in. But because I was trying to teach the concept of result and then benefit and then benefit within the benefit, I'm going to just kinda type these. So I'm going to say, the results my clients want are, one, growth and scale, the benefit of growing and scaling is that they will stop worrying about, whoops, worrying about losing clients and build the pipeline of clients they want. Does that sound pretty good?
+
+Yep. K? So the results my clients want are, one, growth and scale. The benefit of growing and scaling is that they'll stop worrying about losing clients and build the pipeline of clients they want. Okay.
+
+Two. So we're gonna do benefit two is, build wealth, and the benefit of this is security for themselves and their family, which would allow their kids to go to a good college. That sound good? Yep. And then three, get out of the weeds.
+
+K? And, the benefit of this is, freedom from problems, which leads to elevating themselves to the strategy level. Does that sound pretty good? Yep. Okay.
+
+Cool. So everybody, if you've been in the startup club or in my classes, again, you'd have seen me do this kinda more real, but I'm just kinda taking all this and put it in here. Alright. Now here's so I just told it. I just gave it the ballpark.
+
+Okay? You can definitely tell it more. And if you tell it more and you give it more specifics about you and about your clients and about your niche, it will give you better results. But we've tuned these. These are these are pretty solid.
+
+Now the way I like to think about generative AI, like, just as a kind of mental model here so now that we've got this all written down okay. Anyone here ever done a, like, a crossword puzzle or Sudoku? You know what I'm talking about there? Right? So you've got the crossword and or the Sudoku, and there's a big grid.
+
+And there are in a lot of cases, there's not much filled in. There might be a couple of numbers here and there, or in the crossword puzzle, maybe they, you know, filled in one little thing to start or give you a simple an answer that's an easy one to answer, or maybe they're all hard for that matter. But the point is that as you start filling them in, the more you fill in, the easier the whole puzzle gets because you have more of the information, so you can quickly kind of decide, does this word fit in here, or do these numbers, add up? Does this make sense, everybody? You get what I'm talking about, the metaphor here?
+
+Okay. So generative AI, the way I think of generative AI is because it's so good at connecting large datasets and finding patterns in large datasets, to me, it's like help filling out the crossword puzzle. It's like help solving the sudoku. So what she has told me here is she said, here are the benefit here are the results. Here are three big results that I think that they want, and here are the benefits that I think that they would get out of this.
+
+What I wanna know is what are all the ones that I'm not thinking of that might actually be bigger, more valuable results and bigger, more valuable benefits. Got it? Yeah. So that I can then create marketing around those, I can design my coaching package around those. Okay?
+
+So I'm gonna just be asking now in kind of plain English. Alright? So, Anna, I'm gonna go over here. I'm gonna share my screen again. Okay.
+
+Right? So I'm a coaching consultant. My ideal client's business, ambitious for growth, typically under ten million, twenty to fifty employees. K. Wanna help, create a high value coaching package for these clients.
+
+The results my clients want are growth scale. Benefits are this. Build wealth. Benefits are this. Get out of the weeds.
+
+Okay. So I'm gonna say, let's start by listing specific results and benefits of those results that I might not have thought of that could be even more valuable than these. K? So I'm starting up at a little bit higher level, and I just wanted to tell me what they are. And so then I'll even tell it here.
+
+I'll give it a little bit of my plan. After, we review these, then we'll take next steps to create the coaching package offer. K? So let's just prompt now, and let's see what we come up with. K?
+
+Let's just that that's, you know, it's a pretty big prompt that we created right there. Although, you know, I've created much, much, bigger ones. Chat GPT is thinking. It really is, isn't it? Oh, the suspense into the answer.
+
+It's a it's like a it's like going like this. Yes. Yes. Yes. Keeping us, keeping us in suspense.
+
+And I'll I'll explain some of this prompt here a little bit. So when I say let's start by listing results and benefits that can be more valuable than these and then that I might not have thought of. This is one of my favorite things to prompt. Things that I might not have thought of or things that may not be obvious to me or things that might be counterintuitive, right, things that might be, you know, hidden that could be even more valuable than these. And then after we review these, we'll take the next steps to create the coaching package offer.
+
+Don't know what's going on here. We might have to just start over. Alright. So I'm gonna copy this. Let's press stop.
+
+Oh, that isn't working either. ChatGPT might be having problems. Fascinating. Alright. Let's let's just start over here.
+
+It's probably because everybody here is all prompting. We've shut it down. Yeah. Everybody's trying, and and a lot of them are having problems here. I see in the chat.
+
+Hang on a sec here. Okay. So I'm going to I'm gonna try it in another window. Let's see what happens. Okay.
+
+So I put the prompt, same prompt back in the ChatGPT. Let's see. Are you working? No. Alright.
+
+Well, sometimes you gotta do it. We're gonna go check out Claude. Yeah. ChatGPT seems stuck. So we're gonna go over to Claude.
+
+Claude is, another generative AI, and in fact, I tend to use Claude a lot for writing and so forth. So same prompt, different generative AI. Let's see what happens here. Alright. So it's thinking.
+
+This is cool because generative AI now, right, it it thinks, it searches, it researches. There we go. Great foundation. Let me some suggest some additional high value results and benefits. By the way, normally, I do is I paste a link to the prompt and the whole sequence, but that's in ChatGPT.
+
+And so here's the prompt that I used, everyone. K? That's the prompt that I used for Anna. So you could use that as a, you know, a starting point. Alright.
+
+Additional results and benefits to consider. Business sellability and options. Result, build a business that's sellable even if you're not planning to sell. Benefit, ultimate freedom of choice, ability to exit on your terms, pass to family, bring in partners, or just sleep better knowing you could walk away with significant value. That's a pretty good one, isn't it?
+
+Yeah. Nice. Predictable profit and cash flow. Result, consistent forecasted profitability, not just revenue growth. Benefit, end the feast or famine cycle in the three AM anxiety about making payroll.
+
+Actually take distributions consistently. Good language there. Build a leadership team. Result. Develop leaders who can run major functions without you.
+
+Benefit. You stop be being the bottleneck for every decisions vacation with your phone. These are really solid. Reclaim time for what matters. Result, forty to fifty focused hours instead of seventy scattered ones.
+
+Benefit, being present for your kids' games and events. Restore your marriage. Prioritize your health before it becomes a crisis. This is I whenever I use generative AI, it just blows my mind how how valuable this stuff is. Become the market leader.
+
+Result, premium positioning where clients seek you out. Benefit, stop competing on price. Attract better clients. Charge what you're worth. Be the obvious choice, create generational wealth, build assets beyond a salary, decision confidence and clarity, clear strategic framework for making tough calls.
+
+Which of these do you hear and say, you know what? That's actually really good. Might be better than one of mine or might be up there. I think for the size of clients I work with, the predictable profit and cash flow, it's probably the next big thing That one? To pay attention to.
+
+Okay. Great. Right. Because they do worry about making payroll. My clients do want predictable profit and cash flow because they do worry about making payroll.
+
+Great. Any others that are here where you're saying, you know what? That's a really good one. So I think the one about it's just under that. The one about developing leaders, build a leadership team.
+
+Okay. That's that's really part of the almost the last item that I came up with. It's like, you know if you've got profit then you can invest in a great team and the team can take over what you're doing and you can do what you should be doing which is thinking about the strategy. Oh sorry, I'm watching what's happening. Okay?
+
+And, everyone, I'm doing it the old human way of typing with my fingers. You could always just be talking into your device Right. You know, or using any of the AIs that do that as well. Okay. So my clients do want predictable profit and cash flow because they do worry about making payroll.
+
+They also wanna build a leadership team so the team can take over what they are doing. So they can be doing what they should be doing, which is thinking about the strategy. Yes? Yep. Okay.
+
+Great. So I'm gonna say, let's add these two to, my list of results and benefits. K? So now we're gonna take those two, and we're gonna tell it these are the two what we want. And now what I'm gonna ask it to do is please brainstorm, five ideas for coaching packages and presentations that include my original, outcomes and benefits plus these new ones.
+
+Alright? And I'll take this prompt here, everyone, and I'll stick it into the chat as well so you can just kinda prompt along with me. K? Normally, I would share it, everyone, but I'm not using ChatGPT. I'm using Claude, and it's not as simple and easy.
+
+Alright. So I'm gonna prompt. Here we go. Okay. Excellent.
+
+Here are five coaching package concepts that weave together all these outcomes. One, the scale ready CEO program. Two, the payroll to wealth blueprint. Three, the ten x leadership multiplier. Four, the freedom and fortune framework.
+
+Five, the CEO elevation experience. K? So these are five kind of diverse ideas, and I'll just thumbnail sketch them here. Right? So the scale ready CEO program, transform from operator to CEO while building a business that runs without you.
+
+Core premise, build your leadership team, predictable profit systems, and strategic growth engines, so your leading vision while your team executes brilliantly. Okay. So does everybody see how what this did is it took all of the benefit all the results and benefits, and it said, okay. How can I synthesize them into one, the scale ready CEO program? Right?
+
+And it's transforming the operator to CEO while building a business runs without you, and it's got all the benefits woven in there in a creative and interesting way. Two, the payroll to wealth blueprint positioning. Stop worrying about making payroll. Stop start building generational wealth. Core premise, from feast or famine stress to predictable profitability and wealth accumulation while freeing yourself from day to day firefighting.
+
+Alright? So all this stuff and, you know, you see their structure in here as well. This is all excellent. This is gonna be speaking right to her ideal client. Like, to all of us here, we're listening to it and going, oh, it's interesting how it integrated that.
+
+But I'm telling you, if you're her ideal client, she starts saying one of these, you're gonna be saying, wow. That is talking right to me. Right? Okay. The ten x leadership multiplier.
+
+Positioning. Build the team that ten x's your capacity and your profits. Core premise. Develop leaders who drive growth, profit, and strategy execution, giving you back thirty plus hours per week to focus on what only you can do. Four, the freedom and fortune framework, positioning the complete system for ambitious owners who want both financial security and their life back.
+
+Core promise, build predictable seven figure profits, a self managing leadership team, and a growth engine that doesn't drain you, creating both wealth and freedom. These are pretty strong. Right, Anna? Yeah. They are.
+
+They're really good. By the way, everyone, notice see, it knows that I'm I'm a coach slash consultant, and it knows that these are coaching and consulting packages, but there's no there's nothing about coaching and consulting here. It gets they want outcomes. K? The CEO elevation experience.
+
+Positioning the definitive program for new owner operators ready to become strategic CEOs. Core promise. Exit the weeds permanently. Build the leadership team, profit systems, and growth strategy that let you work on your business while securing your family's financial future. Excellent.
+
+What do you think when you, when you see this stuff? Well, I think between, you know, the five of them, you've created something where you can start with one package, you know, maybe a foundational package, and that then leads to the others. So it's like what's next? And there's always a what's next. So there's an opportune or they can choose, right, depending on where they are.
+
+Excellent. I really Let's play with that here. Okay? So let's then say to it, I like these. I would like to combine and integrate these results and benefits into three packages.
+
+One for beginners, then one for intermediates to graduate to, then one for advanced. So I have three years worth of packages. Okay? So please redesign and create these three offers. K?
+
+And I'll put this prompt also into the chat for everyone. Alright. And then I'm just gonna prompt. So notice what I did here, folks. This is kind of advanced stuff, but I'm basically telling it to keep slicing and dicing and keep reorganizing this to make the thing that she's after.
+
+Now am I making final complete coaching packages here? No. But you know what? I'm doing the most of what would have taken weeks or months before of sitting and thinking and researching and talking to people. I'm getting it all the way down, right, to the five yard line or something.
+
+The profit and freedom foundation. Year one. Who it's for. Owners doing too much themselves, worried about cash flow revenue. The core premise.
+
+Get out of daily firefighting, create predictable profit, build your first layer of leadership so you can finally breathe. Key outcomes, predictable cash flow, get out of the weeds, foundation team structure, consistent revenue, work life reset. Then what's included? And, of course, you can have that be whatever you want. Package two, the leadership multiplier system.
+
+For owners ready to build a real leadership team, who it's for? Three to seven million basic systems in place ready to scale through people. Core promise, build a leadership team that drives growth and profit without your constant involvement, multiplying your impact while freeing your time for strategy. Key outcomes, be build your leadership team, ten extra capacity, predictable profit growth. What's included?
+
+Package three, the CEO wealth and scale accelerator. So you see how I took all these ideas, and and now I put them into three packages. These good for you? Yeah. Great.
+
+Awesome. Yeah. Okay. Anna, I'm gonna keep this Claude's just more of a pain. I'll figure out how to get this.
+
+I'll send it out, Email over to Kim. I'll, I'll send it I'll figure out how to send it to you. And everybody else, if I can figure out how to easily make this something that, I can share with you, I'll send it out via email with, with the replay. K? So I'll put that inside of your, members area.
+
+But, I put all the prompts in here. Right? Let me let me just put them in again just so that everybody has them. Okay? So everybody stop typing in the chat for a minute.
+
+Just stop typing in the chat for a minute. K? So there's the first prompt, and you can take these, and you can go put them in yourself and go put them into ChatGPT. You know, use them, make any variation you want, and you'll see that they'll give you a different set of results, but it'll be at least in the kind of zone, you know, of there we go. Perfect.
+
+For advanced users or those that really love playing around with this stuff, you can say, hey. I was just on a class, and we were doing some prompting to create a coaching package. Here are the prompts that we used for someone who wanted to get business growth clients. My business is this. Okay?
+
+So help me do this same thing for my clients. Ask me some questions about the results and benefits, and it'll ask you some questions about the results and benefits. Does that all make sense, everybody? We get it? Okay.
+
+Thank you very much. Appreciate your working with me. Thanks. Thanks for the guidance. It's been great.
+
+Yeah. Yeah. Absolutely. Thanks, Sam. I love the Oops.
+
+Sorry. I muted you right in the middle of it. Unmute yourself. Finish that statement. I was just gonna say I love the way you pivoted from these five options into let's make it three.
+
+Exactly. You gotta Perfectly. Yeah. Well, that's because, you know, I just knew what you said. Right?
+
+So that's what that you wanna we wanna have it create what you want. Thank you, Anna. Really appreciate it. Thanks. Okay.
+
+Who learned something today? All right. Great. If you were on the classes last week, what I said to everyone is, if you come to your first class, I'm going to give you an extra special bonus. Who remembers that?
+
+Yeah. Yeah. Yeah. Okay. Well, I didn't forget, by the way.
+
+I just wanted to make sure that everybody was here and everybody got to see that we do really cool stuff here in the AI Marketing Club. Who's coming back to our next class in two weeks? Because, by the way, I'm gonna show you an another piece of software that most people haven't seen, and we're gonna turn it into a beautiful presentation, and, it's it's it's like magic. So I'll see you in two weeks for that one, and then, of course, we're just gonna keep going. So just keep back for all these classes.
+
+And for everyone here, I'm going to put this into the chat. Alright. Stick in this link in the chat. K? So you have to be logged in.
+
+I see everybody's asking questions. Hold on. I'm gonna put it in again. K? You have to be logged into your members area.
+
+K? Once you're logged in, you can click on this link, marketing club dot a I forward slash nexus. Then enter your name and email that you used to sign up, and you should get in. Okay? And it's gonna put it into your member's area.
+
+K? So take this. Put it in the chat. Put in your first name, and then the email you used to sign up. Here's a link with the, h t p p s thing on that one.
+
+Try that one if you're getting an error. Sometimes different browsers are different. Okay. Everybody getting in? Yeah?
+
+Okay. Good. I'll put the link in again. K? If you're having trouble, copy and paste that into the browser.
+
+K? So that h t t p s, copy and paste that or right click on it, and it that says copy link, and then go put it in the browser where you're logged in to your members area. That's the key. Log in to your members area. Make sure you're logged in to the AI marketing club.
+
+Then copy the link and put it in the same browser, and you should be able to get in. K. And, again, if, it looks like it's working for who's it working for? Wave your hand to me if you're getting in there. Okay.
+
+So that's most people. If you're still having a problem, try a different browser. K? And because we're wrapping up here, you can always send us an email if you're having a challenge. But because it's working for almost everyone here, it's you.
+
+Sorry. Just kidding. Just kinda kidding. So what I want you to do is I want you to try another browser. Okay?
+
+So if you're using Chrome on a Mac, go log in to Safari. If you're using, what's what's Microsoft's browser, go try Chrome. Try a different web browser, log in to your members area, and then once you're logged in, okay, then go put this link into your browser. Okay? And the answer to how you log in is go back to the email we sent you when you signed up.
+
+Okay? Go back to the email that we sent you, and in there it will say here's, here's your link and your username and your password. Okay. If you, still are in StartUp Club, just stay tuned. We'll we'll keep giving you access to we'll give you access to the new AI marketing club.
+
+Okay? So if you're in Startup Club and you haven't gotten access, just hang tight, everybody, and we'll we'll send you that link this week. If you're in normal Startup Club, just stay just hang where you're at. We're migrating everyone over to the new one, okay? All right.
+
+Cool. NexSys is a bonus program that I offered everyone who signed up. It's a course on how to build an affluent client network, and it's real, real good. And I think you'll like it a lot, so dive in. And happy holidays.
+
+I'll see you guys week after next. Come for the class in two weeks, really. We're gonna do something that is just so ridiculous. It's just gonna be amazing. And get out there and prompt.
+
+Okay? Build a results package for your clients, you know, and do some work on it so that when we get back together in two weeks and we start actually working on the design, you're ready to roll. Alright. Love you guys. Thanks for coming.
+
+Really appreciate it. Thanks for making this an awesome class. Alright. See you week after next.

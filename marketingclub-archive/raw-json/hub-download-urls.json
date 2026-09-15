@@ -1,0 +1,1689 @@
+{
+ "double-your-coaching-fees/a67b666a-8844-4600-9d82-8a57134303e6": {
+  "product": "double-your-coaching-fees",
+  "lesson": "your-client-invitation",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "double-your-coaching-fees/7a89dd25-8f5e-43e6-8ff5-8ffed9087cd4": {
+  "product": "double-your-coaching-fees",
+  "lesson": "your-client-delivery",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "double-your-coaching-fees/3a35f014-9035-4f0b-a4d1-45e9194803b8": {
+  "product": "double-your-coaching-fees",
+  "lesson": "your-client-conversation-story",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "double-your-coaching-fees/2e4d7525-621f-4644-8e7b-dcd848a9a05a": {
+  "product": "double-your-coaching-fees",
+  "lesson": "your-client-coaching-package",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "get-your-first-coaching-client-challenge/1774b8e3-f542-45ab-a476-7ad1d9afb689": {
+  "product": "get-your-first-coaching-client-challenge",
+  "lesson": "your-client-invitation",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "get-your-first-coaching-client-challenge/e1cf4af0-ce34-4487-94f9-f11c5eee527a": {
+  "product": "get-your-first-coaching-client-challenge",
+  "lesson": "your-client-invitation",
+  "itemType": "document",
+  "title": "Get Your First Coaching Client Challenge — Your Client Invitation (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 95759,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-07T17-33-29-567Z-ir2fxr-day-1---how-to-create-your-client-invitation.pdf"
+ },
+ "get-your-first-coaching-client-challenge/72163eb8-90e9-438e-84c2-65270f6985fb": {
+  "product": "get-your-first-coaching-client-challenge",
+  "lesson": "your-client-invitation",
+  "itemType": "document",
+  "title": "Get Your First Coaching Client Challenge — Your Client Invitation (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 2403030,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-07T17-33-32-768Z-p8n4c4-getaheadchallenge-day1-coachlou-top10clientgettingmethodsslides.pdf"
+ },
+ "get-your-first-coaching-client-challenge/c2dae163-bf35-4c05-b014-dc16202bcf8a": {
+  "product": "get-your-first-coaching-client-challenge",
+  "lesson": "your-client-delivery",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "get-your-first-coaching-client-challenge/680c5841-1acd-4050-9f18-3b1e81b33c4d": {
+  "product": "get-your-first-coaching-client-challenge",
+  "lesson": "your-client-delivery",
+  "itemType": "document",
+  "title": "Get Your First Coaching Client Challenge — Your Client Delivery (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 97279,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-07T17-33-35-767Z-5yq5w7-day-2---your-client-delivery-time-management-plan.pdf"
+ },
+ "get-your-first-coaching-client-challenge/806dbad3-2e8b-4f8b-8a75-92e52f380331": {
+  "product": "get-your-first-coaching-client-challenge",
+  "lesson": "your-client-delivery",
+  "itemType": "document",
+  "title": "Get Your First Coaching Client Challenge — Your Client Delivery (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 2477542,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-07T17-33-39-868Z-gw6bu2-getaheadchallenge-day2-coachlou-brandingplatforms.pdf"
+ },
+ "get-your-first-coaching-client-challenge/b87bf44e-ebe3-44be-ba7e-3160739dca49": {
+  "product": "get-your-first-coaching-client-challenge",
+  "lesson": "your-client-conversation-story",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "get-your-first-coaching-client-challenge/82a688fb-acb0-43af-858e-4469d85d1741": {
+  "product": "get-your-first-coaching-client-challenge",
+  "lesson": "your-client-conversation-story",
+  "itemType": "document",
+  "title": "Get Your First Coaching Client Challenge — Your Client Conversation Story (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 126860,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-07T17-33-42-760Z-zvi80g-day-3---your-client-conversation-story.pdf"
+ },
+ "get-your-first-coaching-client-challenge/4f81fe65-35f0-4900-9f3d-0e2ad554c4ab": {
+  "product": "get-your-first-coaching-client-challenge",
+  "lesson": "your-client-coaching-package",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "get-your-first-coaching-client-challenge/dfaf002a-0700-49cd-9fd8-25976c31ddc7": {
+  "product": "get-your-first-coaching-client-challenge",
+  "lesson": "your-client-coaching-package",
+  "itemType": "document",
+  "title": "Get Your First Coaching Client Challenge — Your Client Coaching Package (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 113660,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-07T17-33-43-667Z-pcmw2d-day-4---creating-your-result-based-coaching-package.pdf"
+ },
+ "get-your-first-coaching-client-challenge/ebb085e4-1feb-4f9d-ac34-810d7d35275a": {
+  "product": "get-your-first-coaching-client-challenge",
+  "lesson": "virtual-coach",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-masterclass/f70bfc06-0cf6-4dff-9f9a-05b8e5b6199e": {
+  "product": "marketing-masterclass",
+  "lesson": "marketingmasterclass1",
+  "itemType": "video",
+  "title": "virtual-bootcamp-marketing-mindset-session-1",
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-masterclass/5e116177-4634-42ea-89ed-be1494e82dba": {
+  "product": "marketing-masterclass",
+  "lesson": "first-impressions",
+  "itemType": "video",
+  "title": "virtual-bootcamp-marketing-mindset-session-2",
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-masterclass/5aad7310-48a7-45b9-a7fd-ed050c37000e": {
+  "product": "marketing-masterclass",
+  "lesson": "session-3-find-the-hidden-motivator",
+  "itemType": "video",
+  "title": "virtual-bootcamp-marketing-mindset-session-3",
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-masterclass/df3b2563-126d-449b-85c0-845c40d2360b": {
+  "product": "marketing-masterclass",
+  "lesson": "session-4-create-your-category",
+  "itemType": "video",
+  "title": "virtual-bootcamp-marketing-mindset-session-4",
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-masterclass/2715fc69-c403-46dd-8e53-dd6f11285894": {
+  "product": "marketing-masterclass",
+  "lesson": "session-5-name-and-brand-with-intention",
+  "itemType": "video",
+  "title": "virtual-bootcamp-marketing-mindset-session-5",
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-masterclass/12f10c9d-c8ee-4038-a728-2d0d03d736bb": {
+  "product": "marketing-masterclass",
+  "lesson": "session-6-an-irresistible-offer",
+  "itemType": "video",
+  "title": "virtual-bootcamp-marketing-mindset-session-6",
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-masterclass/daa1bb24-c69d-467c-8171-30bdd32c6492": {
+  "product": "marketing-masterclass",
+  "lesson": "session-7-headlines-that-grab-attention",
+  "itemType": "video",
+  "title": "virtual-bootcamp-marketing-mindset-session-7",
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-masterclass/a97c6749-2dba-4282-a322-ee698d30c2e9": {
+  "product": "marketing-masterclass",
+  "lesson": "session-8-write-copy-that-motivates",
+  "itemType": "video",
+  "title": "virtual-bootcamp-marketing-mindset-session-8",
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-masterclass/08b95e55-59d8-4b05-be90-14ecd70a4fb9": {
+  "product": "marketing-masterclass",
+  "lesson": "session-9-translate-the-value",
+  "itemType": "video",
+  "title": "virtual-bootcamp-marketing-mindset-session-9",
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-masterclass/df493a18-175d-4044-afb7-5071daa40c24": {
+  "product": "marketing-masterclass",
+  "lesson": "session-10-design-for-understanding",
+  "itemType": "video",
+  "title": "virtual-bootcamp-marketing-mindset-session-10",
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-masterclass/2dd5721e-bbe8-436d-a787-7c2519ac5e3c": {
+  "product": "marketing-masterclass",
+  "lesson": "session-11-an-opt-in-page-that-works",
+  "itemType": "video",
+  "title": "virtual-bootcamp-marketing-mindset-session-11",
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-step-by-step/19589e87-b704-4a05-b997-e7bd6d2323a0": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-1",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-step-by-step/74800c5f-c880-40ff-af3b-0e930c1c2bac": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-1",
+  "itemType": "audio",
+  "title": "Marketing Step by Step — Session 1: Introduction To Marketing (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 22527200,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T18-07-16-411Z-kjx1vq-msbs-session-1.mp3"
+ },
+ "marketing-step-by-step/8c73386b-2042-4dbb-8c43-3cb2601bf419": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-1",
+  "itemType": "document",
+  "title": "Marketing Step by Step — Session 1: Introduction To Marketing (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 68920,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T18-07-20-706Z-f4vmvp-msbs-session01-summary.pdf"
+ },
+ "marketing-step-by-step/32b01bfe-058a-4d7f-9a24-c2f848dbae77": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-1",
+  "itemType": "document",
+  "title": "Marketing Step by Step — Session 1: Introduction To Marketing (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 254141,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T18-07-21-512Z-1zprf7-01-commit-to-becoming-a-marketer.pdf"
+ },
+ "marketing-step-by-step/4fea406a-67a1-4c38-80c9-70a12663c92b": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-2",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-step-by-step/6d17722f-45fe-49f4-a3be-482f404da072": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-2",
+  "itemType": "audio",
+  "title": "Digital Product Blueprint 2022 — Session 2: 12 Key Marketing Mindsets (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 22943360,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-52-28-633Z-lffyc4-msbs-session-2.mp3"
+ },
+ "marketing-step-by-step/58dd055f-4483-4ad6-835a-a8654abc511a": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-2",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 2: 12 Key Marketing Mindsets (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 72548,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-52-31-211Z-pripbu-msbs-session02-summary.pdf"
+ },
+ "marketing-step-by-step/59be5e5f-5816-4a10-b9d8-3657ed5fe817": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-2",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 2: 12 Key Marketing Mindsets (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 233141,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-52-34-425Z-c1h0wy-02-shifting-your-marketing-mindset.pdf"
+ },
+ "marketing-step-by-step/1dd409e9-f18e-44ab-a78a-6f8e31ac6251": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-3",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-step-by-step/7a8bf0eb-a701-42ee-a003-b62bbad81444": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-3",
+  "itemType": "audio",
+  "title": "Digital Product Blueprint 2022 — Session 3: Why We Think, Feel, & Behave the Way We Do (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 21118304,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-52-39-360Z-e46gbp-msbs-session-3.mp3"
+ },
+ "marketing-step-by-step/4623a694-87e5-48bc-85ac-3379f2026773": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-3",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 3: Why We Think, Feel, & Behave the Way We Do (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 78134,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-52-40-731Z-3d1ird-msbs-session03-summary.pdf"
+ },
+ "marketing-step-by-step/cb01ffbb-812b-4b97-a6c7-d1c9434cd445": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-3",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 3: Why We Think, Feel, & Behave the Way We Do (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 234587,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-52-42-512Z-r0vwu3-03-appealing-to-the-irrational-human.pdf"
+ },
+ "marketing-step-by-step/a2d1ad79-c885-4b52-b0b6-50ed5b253733": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-4",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-step-by-step/348fc44c-ec2c-4a4c-8bb0-62334233e2ee": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-4",
+  "itemType": "audio",
+  "title": "Digital Product Blueprint 2022 — Session 4: What Are Your Customers Really Buying – and Why? (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 17464160,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-52-50-013Z-x87s6t-msbs-session-4.mp3"
+ },
+ "marketing-step-by-step/495b3b01-0d41-44f9-ab4b-3e3cd67591f0": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-4",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 4: What Are Your Customers Really Buying – and Why? (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 101696,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-53-23-711Z-bzvdz2-msbs-session04-summary.pdf"
+ },
+ "marketing-step-by-step/26220302-3c48-4123-9f10-2f61857dffb4": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-4",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 4: What Are Your Customers Really Buying – and Why? (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 266266,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-53-25-411Z-w6lz8w-04-look-for-customers.pdf"
+ },
+ "marketing-step-by-step/76de40d5-6d7a-4c48-8bd3-be3e6be353fe": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-5",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-step-by-step/a2e88c6a-2bea-4da1-9c90-01b4fad19a48": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-5",
+  "itemType": "audio",
+  "title": "Digital Product Blueprint 2022 — Session 5: Discovering Customer Needs (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 16677344,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-53-49-489Z-hoqbac-msbs-session-5.mp3"
+ },
+ "marketing-step-by-step/0084d48c-fb10-4d57-a5e9-769aaeb95baa": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-5",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 5: Discovering Customer Needs (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 69358,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-53-52-213Z-zzsjdl-msbs-session05-summary.pdf"
+ },
+ "marketing-step-by-step/8d65a04c-e31c-4061-9c27-3e3ea4bcf669": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-5",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 5: Discovering Customer Needs (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 182131,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-53-55-412Z-pq7kwq-05-identify-emotional-hot-buttons.pdf"
+ },
+ "marketing-step-by-step/1eb3bcd1-2d97-4ba7-8205-7522916d0d27": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-6",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-step-by-step/a63e997d-9876-4d12-a3ea-00396523f71f": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-6",
+  "itemType": "audio",
+  "title": "Digital Product Blueprint 2022 — Session 6: Creating Your Customer Avatar (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 15251168,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-54-05-511Z-pvf5he-msbs-session-6.mp3"
+ },
+ "marketing-step-by-step/41354957-935c-4cbe-8f82-1df9165b123a": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-6",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 6: Creating Your Customer Avatar (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 68602,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-54-08-643Z-bi6ha5-msbs-session06-summary.pdf"
+ },
+ "marketing-step-by-step/54554250-52d0-404e-8dc2-0480cea9d792": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-6",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 6: Creating Your Customer Avatar (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 275764,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-54-09-611Z-61tjr6-06-creating-your-customer-avatar.pdf"
+ },
+ "marketing-step-by-step/f545f5c7-1f7e-4d0c-862e-982e57ce6be7": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-7",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-step-by-step/91c17522-2075-4965-99a3-916a57c3c58e": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-7",
+  "itemType": "audio",
+  "title": "Digital Product Blueprint 2022 — Session 7: Branding vs. Response Marketing (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 13858400,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-54-18-313Z-xep0bx-msbs-session-7.mp3"
+ },
+ "marketing-step-by-step/d8d1fa73-4cf2-442a-87bb-c4860aa1c366": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-7",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 7: Branding vs. Response Marketing (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 71811,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-54-34-411Z-27xhsk-msbs-session07-summary.pdf"
+ },
+ "marketing-step-by-step/e746c3bc-23e5-4f18-a665-a2b1a50fc5b4": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-7",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 7: Branding vs. Response Marketing (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 261487,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-54-37-011Z-cn76xa-07-becoming-a-direct-response-marketer.pdf"
+ },
+ "marketing-step-by-step/5d8c5e08-055c-47db-92df-33dbd23f9877": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-8",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-step-by-step/e17a493c-42f7-4b89-93d3-fe9d93cdf06d": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-8",
+  "itemType": "audio",
+  "title": "Digital Product Blueprint 2022 — Session 8: Marketing as Education (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 14459744,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-54-51-514Z-9ymmtx-msbs-session-8.mp3"
+ },
+ "marketing-step-by-step/e6d6b568-2dad-4364-a625-0afdc07d0da7": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-8",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 8: Marketing as Education (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 68722,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-54-52-649Z-gal5il-msbs-session08-summary.pdf"
+ },
+ "marketing-step-by-step/b267a903-a5b6-4a81-a6de-0589fa894773": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-8",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 8: Marketing as Education (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 276403,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-54-54-311Z-wycgaf-08-becoming-an-education-marketer.pdf"
+ },
+ "marketing-step-by-step/f00d8334-bc78-4e9d-a6d3-b293d838d2f3": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-9",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-step-by-step/a4baecf7-6a25-459a-b193-62fd110d646d": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-9",
+  "itemType": "audio",
+  "title": "Digital Product Blueprint 2022 — Session 9: Naming Your Product or Service (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 12509696,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-55-01-411Z-r4n7nq-msbs-session-9.mp3"
+ },
+ "marketing-step-by-step/d275d238-9fec-49e1-a785-94312c790dad": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-9",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 9: Naming Your Product or Service (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 69763,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-55-06-611Z-8m5dde-msbs-session09-summary.pdf"
+ },
+ "marketing-step-by-step/419dff26-672d-4ff4-8ae1-d63d84d8e839": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-9",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 9: Naming Your Product or Service (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 240813,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-55-09-111Z-72oo1j-09-designing-a-powerful-name.pdf"
+ },
+ "marketing-step-by-step/6279c343-67fa-4aa6-b11a-9fe900dbcb71": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-10",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-step-by-step/58c7c807-8826-4edd-926b-0fd00fb2239c": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-10",
+  "itemType": "audio",
+  "title": "Digital Product Blueprint 2022 — Session 10: Positioning – Owning Your Mental Niche (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 44756160,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-55-17-911Z-rcik96-msbs-session-10.mp3"
+ },
+ "marketing-step-by-step/d184f72c-5ec9-4a1b-8dbe-b954446e8a11": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-10",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 10: Positioning – Owning Your Mental Niche (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 73000,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-55-21-411Z-73u9is-msbs-session10-summary.pdf"
+ },
+ "marketing-step-by-step/67ca0dbf-63d2-4e90-94bb-8a2efc13295f": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-10",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 10: Positioning – Owning Your Mental Niche (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 253604,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-55-23-911Z-idg4y3-10-creating-a-category-that-you-can-own-inside-the-mind.pdf"
+ },
+ "marketing-step-by-step/80b15dea-3797-4df6-863d-faded4d49a62": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-11",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-step-by-step/6e43b150-a5b3-42a4-a310-ab8cf66583f0": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-11",
+  "itemType": "audio",
+  "title": "Digital Product Blueprint 2022 — Session 11: Stair Step Marketing (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 13139469,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-55-30-911Z-gxaldn-msbs-session-11.mp3"
+ },
+ "marketing-step-by-step/1c19b6d5-55e9-47a3-b34d-e54300ee79a1": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-11",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 11: Stair Step Marketing (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 71248,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-55-35-482Z-1n9p82-msbs-session11-summary.pdf"
+ },
+ "marketing-step-by-step/b94814a1-d0e1-4a0d-849c-cc40fee01149": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-11",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 11: Stair Step Marketing (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 243360,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-55-36-638Z-vbfs56-11-creating-your-stair-step-marketing-product-sequence.pdf"
+ },
+ "marketing-step-by-step/ba95c975-1d35-4507-a70c-b773ff8783ab": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-12",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-step-by-step/4e81b985-db85-4796-92ff-1a1a50446d4a": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-12",
+  "itemType": "audio",
+  "title": "Digital Product Blueprint 2022 — Session 12: Move the Free Line (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 46585920,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-56-01-651Z-pbc808-msbs-session-12.mp3"
+ },
+ "marketing-step-by-step/fade1183-d27e-45a3-bb5e-bf551538e611": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-12",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 12: Move the Free Line (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 55127,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-56-20-708Z-s2f9p8-msbs-session12-summary.pdf"
+ },
+ "marketing-step-by-step/fea07882-3d74-4e8d-afa0-668b77070a50": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-12",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 12: Move the Free Line (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 212873,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-56-21-053Z-iopviw-12-move-the-free-line-.pdf"
+ },
+ "marketing-step-by-step/61e50a1b-42e2-44df-bc1b-b87dbe31bec8": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-13",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-step-by-step/6b08a860-e9ba-4c57-8311-a3805debf7ba": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-13",
+  "itemType": "audio",
+  "title": "Digital Product Blueprint 2022 — Session 13: The Headline Formula (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 15332589,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-56-31-812Z-pe35x9-msbs-session-13.mp3"
+ },
+ "marketing-step-by-step/3db2b5f7-ba0b-4bb1-a62d-cb31dd0f22ae": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-13",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 13: The Headline Formula (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 70826,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-56-40-911Z-8txlc3-msbs-session13-summary.pdf"
+ },
+ "marketing-step-by-step/a9f0c55f-7912-4525-bfcc-202d228d5a33": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-13",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 13: The Headline Formula (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 337109,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-56-45-993Z-5vfidr-13-power-headline-formulas.pdf"
+ },
+ "marketing-step-by-step/9ced7df2-2c17-4c24-bc6f-da3d6302b539": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-14",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-step-by-step/6bee0ff7-f0b5-472e-91a8-8b3067099034": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-14",
+  "itemType": "audio",
+  "title": "Digital Product Blueprint 2022 — Session 14: Your Conversion Story (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 41610240,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-56-53-311Z-c3vrsj-msbs-session-14.mp3"
+ },
+ "marketing-step-by-step/7c8e15fd-e7e9-4de9-8b73-7e5b2ef13235": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-14",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 14: Your Conversion Story (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 67711,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-56-55-811Z-jrbyyq-msbs-session14-summary.pdf"
+ },
+ "marketing-step-by-step/cd4389ea-168d-49b9-9940-2b87c9998bff": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-14",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 14: Your Conversion Story (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 313443,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-56-58-611Z-6j77l9-14-your-credibility-conversion-story.pdf"
+ },
+ "marketing-step-by-step/2468fd46-4c07-472a-b26a-503e1f1fb52d": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-15",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-step-by-step/5fe615b0-5c96-434c-8a01-b728c8c10ab3": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-15",
+  "itemType": "audio",
+  "title": "Digital Product Blueprint 2022 — Session 15: Marketing Copy That Sells (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 15541389,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-57-03-396Z-peg2ou-msbs-session-15.mp3"
+ },
+ "marketing-step-by-step/a7756d92-15a4-4ce1-a69b-1acc344e4cfe": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-15",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 15: Marketing Copy That Sells (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 70750,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-57-04-823Z-jysjp4-msbs-session15-summary.pdf"
+ },
+ "marketing-step-by-step/a7190ed5-20e2-45ec-a30d-4cf9efa7e251": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-15",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 15: Marketing Copy That Sells (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 233337,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-57-05-611Z-pjku31-15-writing-copy-that-sells.pdf"
+ },
+ "marketing-step-by-step/08918a6e-1b36-4b6f-b43b-f11b54b91cbf": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-16",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-step-by-step/7c1da550-60e6-4abd-9cfb-a6ef5c74bb60": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-16",
+  "itemType": "audio",
+  "title": "Digital Product Blueprint 2022 — Session 16: How to Ask for Action (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 14741325,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-57-17-194Z-7xg8nh-msbs-session-16.mp3"
+ },
+ "marketing-step-by-step/3cb93591-dd0b-4941-825e-5225c509b741": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-16",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 16: How to Ask for Action (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 71757,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-57-21-272Z-14xkqj-msbs-session16-summary.pdf"
+ },
+ "marketing-step-by-step/a754c799-2ca8-4491-abf6-2ae635c6ddcd": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-16",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 16: How to Ask for Action (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 202038,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-57-22-113Z-2o5os7-16-marketing-message-formula.pdf"
+ },
+ "marketing-step-by-step/ff42dffd-543d-4a3d-ac53-325ed0cc4896": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-17",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-step-by-step/f5567759-f528-47f0-a9fd-9d5b875b590c": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-17",
+  "itemType": "audio",
+  "title": "Digital Product Blueprint 2022 — Session 17: The Marketing Design Workshop (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 21101805,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-57-29-384Z-2nadhp-msbs-session-17.mp3"
+ },
+ "marketing-step-by-step/ad6d098c-2b90-4fee-85b0-15f83a4c4b3e": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-17",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 17: The Marketing Design Workshop (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 67732,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-57-40-623Z-2upo5k-msbs-session17-summary.pdf"
+ },
+ "marketing-step-by-step/56cd8d17-7e85-4600-8044-85fa755015e1": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-17",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 17: The Marketing Design Workshop (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 287114,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-57-42-611Z-db7hjg-17-designing-simple-ads-and-marketing-that-get-response.pdf"
+ },
+ "marketing-step-by-step/10c245a1-eed2-4cb1-b1dd-d1de484fa4f1": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-18",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-step-by-step/a6501092-f695-442a-b328-70b6bc21772f": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-18",
+  "itemType": "audio",
+  "title": "Digital Product Blueprint 2022 — Session 18: Partnering with Others to Sell Your Products (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 12444525,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-57-47-398Z-8i9x6n-msbs-session-18.mp3"
+ },
+ "marketing-step-by-step/9bab0b76-63fb-4c6e-9f59-525e25587e23": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-18",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 18: Partnering with Others to Sell Your Products (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 69297,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-57-48-775Z-ra42b5-msbs-session18-summary.pdf"
+ },
+ "marketing-step-by-step/d0c5b44e-7f3c-46d9-b019-06b9133d7c3d": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-18",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 18: Partnering with Others to Sell Your Products (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 216134,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-57-50-311Z-q6gtvy-18-partnering-with-others-to-sell-your-products-services.pdf"
+ },
+ "marketing-step-by-step/5893fd7a-f4cc-47cd-9695-822373d14389": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-19",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "marketing-step-by-step/ca5512ab-c874-40b2-999b-9dce0ce7a49d": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-19",
+  "itemType": "audio",
+  "title": "Digital Product Blueprint 2022 — Session 19: How to Generate Referrals (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 33957260,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-06-22T22-05-22-693Z-iv0mkw-bryan_franklin_bonus.mp3"
+ },
+ "marketing-step-by-step/fc38c556-6594-4350-9b2a-d55700820a23": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-19",
+  "itemType": "audio",
+  "title": "Digital Product Blueprint 2022 — Session 19: How to Generate Referrals (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 14437773,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-58-31-503Z-og0x4i-msbs-session-19.mp3"
+ },
+ "marketing-step-by-step/463af2c1-5d4b-44c5-bac3-31cf776dd03a": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-19",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 19: How to Generate Referrals (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 68600,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-58-32-723Z-2i5eza-msbs-session19-summary.pdf"
+ },
+ "marketing-step-by-step/4efb564d-b035-49e7-9699-211087c052ee": {
+  "product": "marketing-step-by-step",
+  "lesson": "session-19",
+  "itemType": "document",
+  "title": "Digital Product Blueprint 2022 — Session 19: How to Generate Referrals (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 247653,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-58-33-811Z-h3bqe6-19-the-referral-formula.pdf"
+ },
+ "nexus/925294e5-475f-4d98-bb3d-51fce7d0a592": {
+  "product": "nexus",
+  "lesson": "session-1",
+  "itemType": "video",
+  "title": "Nexus - Session 1 - Cut 1",
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "nexus/9bfb20bc-964b-436f-af59-d36c84a8d284": {
+  "product": "nexus",
+  "lesson": "session-2",
+  "itemType": "video",
+  "title": "Nexus - Session 2 - Cut 1",
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "nexus/57e449e0-f91d-4a68-95e2-3eff64d26e37": {
+  "product": "nexus",
+  "lesson": "session-3",
+  "itemType": "video",
+  "title": "Nexus - Session 3 - Cut 1",
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "nexus/79cd2f42-2314-4cf6-a587-035a040c94e3": {
+  "product": "nexus",
+  "lesson": "session-4",
+  "itemType": "video",
+  "title": "Nexus - Session 4 - Cut 1",
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "nexus/d3bb1d18-37de-43d3-82b1-996e452a2a44": {
+  "product": "nexus",
+  "lesson": "session-5",
+  "itemType": "video",
+  "title": "Nexus - Session 5 - Cut 1",
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "nexus/792af43b-73fa-44c5-922f-6e0c00bce01c": {
+  "product": "nexus",
+  "lesson": "session-6",
+  "itemType": "video",
+  "title": "Nexus - Session 6 - Cut 1",
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "niche-breakthrough/d558b2f8-bf8c-4ba8-8b32-b68f62b8b11d": {
+  "product": "niche-breakthrough",
+  "lesson": "session-1",
+  "itemType": "video",
+  "title": "January 31 - Niche Breakthrough Workshop - Session 1",
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "niche-breakthrough/014d51f8-8730-46fd-a555-c156ee2fdf64": {
+  "product": "niche-breakthrough",
+  "lesson": "session-2",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "niche-breakthrough/87b6798a-f195-4f13-9301-95952ecc93ee": {
+  "product": "niche-breakthrough",
+  "lesson": "session-3",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "niche-breakthrough/bdc503fe-8fc3-49a7-b599-1bf7b4ce9170": {
+  "product": "niche-breakthrough",
+  "lesson": "session-4",
+  "itemType": "video",
+  "title": null,
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "online-relationship-marketing/8e57a179-5f28-44d6-83ab-c11a923bf8b1": {
+  "product": "online-relationship-marketing",
+  "lesson": "session-1-modern-methods-of-customer-relationship-building",
+  "itemType": "audio",
+  "title": "Online Relationship Marketing — Session #1: Modern Methods Of Customer Relationship Building (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 26506347,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-06-22T23-24-42-395Z-eln9go-onlinerelationshipmarketing_session01.mp3"
+ },
+ "online-relationship-marketing/7693dc0c-13bf-4630-9c1b-e7e719ffe79f": {
+  "product": "online-relationship-marketing",
+  "lesson": "session-1-modern-methods-of-customer-relationship-building",
+  "itemType": "document",
+  "title": "Online Relationship Marketing — Session #1: Modern Methods Of Customer Relationship Building (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 593250,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-42-08-211Z-wz1zj3-onlinerelationshipmarketing_session01_exercise.pdf"
+ },
+ "online-relationship-marketing/d6293833-d353-4725-8efb-35305f40abb0": {
+  "product": "online-relationship-marketing",
+  "lesson": "session-1-modern-methods-of-customer-relationship-building",
+  "itemType": "document",
+  "title": "Online Relationship Marketing — Session #1: Modern Methods Of Customer Relationship Building (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 620571,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-42-10-612Z-1uy17l-onlinerelationshipmarketing_session01_summary.pdf"
+ },
+ "online-relationship-marketing/edde861c-76ae-4ccc-a915-f2ee730fc000": {
+  "product": "online-relationship-marketing",
+  "lesson": "session-2-your-customer-avatar",
+  "itemType": "audio",
+  "title": "Online Relationship Marketing — Session #2: Your Customer Avatar (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 25020589,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-06-22T23-25-26-263Z-sidw6k-onlinerelationshipmarketing_session02.mp3"
+ },
+ "online-relationship-marketing/7f713963-4101-4a71-a2c2-7d06999850b2": {
+  "product": "online-relationship-marketing",
+  "lesson": "session-2-your-customer-avatar",
+  "itemType": "document",
+  "title": "Online Relationship Marketing — Session #2: Your Customer Avatar (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 592800,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-42-18-677Z-zlwhew-onlinerelationshipmarketing_session02_exercise1.pdf"
+ },
+ "online-relationship-marketing/976ff8e7-8dc6-40cc-a095-623266dc1b6b": {
+  "product": "online-relationship-marketing",
+  "lesson": "session-2-your-customer-avatar",
+  "itemType": "document",
+  "title": "Online Relationship Marketing — Session #2: Your Customer Avatar (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 591214,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-42-19-202Z-29tfqd-onlinerelationshipmarketing_session02_exercise2.pdf"
+ },
+ "online-relationship-marketing/b4b2276d-edc8-4126-ad19-84cf1427d266": {
+  "product": "online-relationship-marketing",
+  "lesson": "session-2-your-customer-avatar",
+  "itemType": "document",
+  "title": "Online Relationship Marketing — Session #2: Your Customer Avatar (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 629087,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-42-19-573Z-vvsihw-onlinerelationshipmarketing_session02_summary.pdf"
+ },
+ "online-relationship-marketing/0de074b9-325b-41b0-926d-9f606afd908c": {
+  "product": "online-relationship-marketing",
+  "lesson": "session-3-the-world-of-relationship-based-marketing",
+  "itemType": "audio",
+  "title": "Online Relationship Marketing — Session #3: The World Of Relationship Based Marketing (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 18154294,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-06-22T23-25-53-979Z-2li1zw-onlinerelationshipmarketing_session03.mp3"
+ },
+ "online-relationship-marketing/91a1ec55-a206-4dbf-ac93-ab6a3b0d2b4f": {
+  "product": "online-relationship-marketing",
+  "lesson": "session-3-the-world-of-relationship-based-marketing",
+  "itemType": "document",
+  "title": "Online Relationship Marketing — Session #3: The World Of Relationship Based Marketing (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 594872,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-42-21-011Z-nvymav-onlinerelationshipmarketing_session03_exercise1.pdf"
+ },
+ "online-relationship-marketing/2d18624f-f7a8-4eba-9880-9b165d0a923d": {
+  "product": "online-relationship-marketing",
+  "lesson": "session-3-the-world-of-relationship-based-marketing",
+  "itemType": "document",
+  "title": "Online Relationship Marketing — Session #3: The World Of Relationship Based Marketing (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 591855,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-42-23-211Z-7frzbf-onlinerelationshipmarketing_session03_exercise2.pdf"
+ },
+ "online-relationship-marketing/d00e24fb-ab6f-454e-8c12-e43866fc3af9": {
+  "product": "online-relationship-marketing",
+  "lesson": "session-3-the-world-of-relationship-based-marketing",
+  "itemType": "document",
+  "title": "Online Relationship Marketing — Session #3: The World Of Relationship Based Marketing (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 633777,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-42-25-330Z-ly72nj-onlinerelationshipmarketing_session03_summary.pdf"
+ },
+ "online-relationship-marketing/a615d0e0-6903-4f90-9b7a-0127e1172c19": {
+  "product": "online-relationship-marketing",
+  "lesson": "session-4-move-the-free-line",
+  "itemType": "audio",
+  "title": "Online Relationship Marketing — Session #4: Move the Free Line (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 21096138,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-06-22T23-26-39-080Z-lsa0h8-onlinerelationshipmarketing_session04.mp3"
+ },
+ "online-relationship-marketing/6fde926d-48fc-4bb3-94e2-6b12271097d4": {
+  "product": "online-relationship-marketing",
+  "lesson": "session-4-move-the-free-line",
+  "itemType": "document",
+  "title": "Online Relationship Marketing — Session #4: Move the Free Line (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 589659,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-42-28-388Z-z939xi-onlinerelationshipmarketing_session04_exercise.pdf"
+ },
+ "online-relationship-marketing/89819533-ab74-4e64-9b07-82c992a4e483": {
+  "product": "online-relationship-marketing",
+  "lesson": "session-4-move-the-free-line",
+  "itemType": "document",
+  "title": "Online Relationship Marketing — Session #4: Move the Free Line (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 627521,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-42-29-011Z-7tb0uu-onlinerelationshipmarketing_session04_summary.pdf"
+ },
+ "online-relationship-marketing/b1dbaf37-d184-45e0-b4ad-936e333479f2": {
+  "product": "online-relationship-marketing",
+  "lesson": "session-5-content-marketing",
+  "itemType": "audio",
+  "title": "Online Relationship Marketing — Session #5: Content Marketing (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 17642753,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-06-22T23-27-25-780Z-74yy3k-onlinerelationshipmarketing_session05.mp3"
+ },
+ "online-relationship-marketing/aa5c7140-09d2-4879-a57d-91d84e6a22a9": {
+  "product": "online-relationship-marketing",
+  "lesson": "session-5-content-marketing",
+  "itemType": "document",
+  "title": "Online Relationship Marketing — Session #5: Content Marketing (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 597693,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-42-39-719Z-qwp225-onlinerelationshipmarketing_session05_exercise.pdf"
+ },
+ "online-relationship-marketing/fd1aa0a7-8dbf-4a17-ab33-1fd5b9a16881": {
+  "product": "online-relationship-marketing",
+  "lesson": "session-5-content-marketing",
+  "itemType": "document",
+  "title": "Online Relationship Marketing — Session #5: Content Marketing (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 628369,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-42-41-912Z-h3mzhg-onlinerelationshipmarketing_session05_summary.pdf"
+ },
+ "online-relationship-marketing/12067c26-888e-4954-9776-5b4d4d2a634b": {
+  "product": "online-relationship-marketing",
+  "lesson": "session-6-key-marketing-elements-to-include-in-any-marketing-piece",
+  "itemType": "audio",
+  "title": "Online Relationship Marketing — Session #6: Key Marketing Elements To Include In Any Marketing Piece (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 18221900,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-06-22T23-28-12-880Z-ijz8t6-onlinerelationshipmarketing_session06.mp3"
+ },
+ "online-relationship-marketing/7b9b9345-b8c5-4171-bc59-ac4a32dab514": {
+  "product": "online-relationship-marketing",
+  "lesson": "session-6-key-marketing-elements-to-include-in-any-marketing-piece",
+  "itemType": "document",
+  "title": "Online Relationship Marketing — Session #6: Key Marketing Elements To Include In Any Marketing Piece (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 594584,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-42-52-411Z-q82fv9-onlinerelationshipmarketing_session06_exercise.pdf"
+ },
+ "online-relationship-marketing/c8bdc6dd-29df-401d-9c87-5fe4836f65e1": {
+  "product": "online-relationship-marketing",
+  "lesson": "session-6-key-marketing-elements-to-include-in-any-marketing-piece",
+  "itemType": "document",
+  "title": "Online Relationship Marketing — Session #6: Key Marketing Elements To Include In Any Marketing Piece (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 622408,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-42-55-111Z-u69vgd-onlinerelationshipmarketing_session06_summary.pdf"
+ },
+ "online-relationship-marketing/dd14ef42-1f4e-49f7-bdd7-15c3cb1237e2": {
+  "product": "online-relationship-marketing",
+  "lesson": "session-7-planning-the-prospects-experience",
+  "itemType": "audio",
+  "title": "Online Relationship Marketing — Session #7: Planning The Prospect’s Experience (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 16883117,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-06-22T23-29-06-357Z-sgh7df-onlinerelationshipmarketing_session07.mp3"
+ },
+ "online-relationship-marketing/295974af-497c-4749-82cb-c7fb1dac1d2d": {
+  "product": "online-relationship-marketing",
+  "lesson": "session-7-planning-the-prospects-experience",
+  "itemType": "document",
+  "title": "Online Relationship Marketing — Session #7: Planning The Prospect’s Experience (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 596796,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-43-03-611Z-imafyp-onlinerelationshipmarketing_session07_summary.pdf"
+ },
+ "30-day-challenge/8bd8a842-b6af-4044-bab5-f7406622ef93": {
+  "product": "30-day-challenge",
+  "lesson": "day-1",
+  "itemType": "video",
+  "title": "180509-opportunity-30-day-call-1",
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "30-day-challenge/49f83e96-1784-4a48-8c7f-a33363354540": {
+  "product": "30-day-challenge",
+  "lesson": "session-2",
+  "itemType": "video",
+  "title": "180509-opportunity-30-day-call-2",
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "30-day-challenge/fc1648da-d47e-4b3c-96d4-3c6012d40159": {
+  "product": "30-day-challenge",
+  "lesson": "session-3",
+  "itemType": "video",
+  "title": "180510-opportunity-30-day-call-3",
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "30-day-challenge/f09124f3-66c6-48a7-bd2e-d04566b2acc3": {
+  "product": "30-day-challenge",
+  "lesson": "session-4",
+  "itemType": "video",
+  "title": "180515-opportunity-30-day-call-4",
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "30-day-challenge/7442f1b5-ea37-4b4a-b7c2-f628a9a9a4c7": {
+  "product": "30-day-challenge",
+  "lesson": "session-5",
+  "itemType": "video",
+  "title": "180517-opportunity-30-day-call-5",
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "30-day-challenge/8dff2cd4-3ff3-4f4f-9870-b1bc0f634e4c": {
+  "product": "30-day-challenge",
+  "lesson": "session-6",
+  "itemType": "video",
+  "title": "180522-opportunity-30-day-call-6",
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "30-day-challenge/368e9c4a-a186-460f-af6e-a014f3e83285": {
+  "product": "30-day-challenge",
+  "lesson": "session-7",
+  "itemType": "video",
+  "title": "180524-opportunity-30-day-call-7",
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "30-day-challenge/e0c0b375-c335-4872-a192-3a277b215dda": {
+  "product": "30-day-challenge",
+  "lesson": "session-8",
+  "itemType": "video",
+  "title": "180529-opportunity-30-day-call-8",
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "30-day-challenge/35fb2009-54ab-457f-9c79-ec49d777a6af": {
+  "product": "30-day-challenge",
+  "lesson": "session-9",
+  "itemType": "video",
+  "title": "180531-opportunity-30-day-call-9",
+  "mimeType": null,
+  "sizeBytes": null,
+  "url": null,
+  "error": "HTTP 502"
+ },
+ "opportunity-audiobook/b400fe33-2ba3-42e2-a720-66eee14c0dd9": {
+  "product": "opportunity-audiobook",
+  "lesson": "opportunity",
+  "itemType": "audio",
+  "title": "Chapter 1.mp3",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": null,
+  "url": "https://s3.amazonaws.com/streaming_alt/opportunity/Chapter%201.mp3"
+ },
+ "opportunity-audiobook/ba249b00-8785-4491-b2cb-c32601077ebc": {
+  "product": "opportunity-audiobook",
+  "lesson": "chapter-2",
+  "itemType": "audio",
+  "title": "Chapter 2.mp3",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": null,
+  "url": "https://s3.amazonaws.com/streaming_alt/opportunity/Chapter%202.mp3"
+ },
+ "opportunity-audiobook/f38d7167-37fa-424e-aec4-39527029e2e0": {
+  "product": "opportunity-audiobook",
+  "lesson": "chapter-3",
+  "itemType": "audio",
+  "title": "Chapter 3.mp3",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": null,
+  "url": "https://s3.amazonaws.com/streaming_alt/opportunity/Chapter%203.mp3"
+ },
+ "opportunity-audiobook/3121baf5-b2d5-4aac-a7f5-7a36eece15e0": {
+  "product": "opportunity-audiobook",
+  "lesson": "chapter-4",
+  "itemType": "audio",
+  "title": "Chapter 4.mp3",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": null,
+  "url": "https://s3.amazonaws.com/streaming_alt/opportunity/Chapter%204.mp3"
+ },
+ "opportunity-audiobook/51f85467-d331-4f66-abc1-5e29940f296c": {
+  "product": "opportunity-audiobook",
+  "lesson": "chapter-5",
+  "itemType": "audio",
+  "title": "Chapter 5.mp3",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": null,
+  "url": "https://s3.amazonaws.com/streaming_alt/opportunity/Chapter%205.mp3"
+ },
+ "opportunity-audiobook/08c162d6-8fb5-4e69-8f4e-ad50be34527f": {
+  "product": "opportunity-audiobook",
+  "lesson": "chapter-6",
+  "itemType": "audio",
+  "title": "Chapter 6.mp3",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": null,
+  "url": "https://s3.amazonaws.com/streaming_alt/opportunity/Chapter%206.mp3"
+ },
+ "opportunity-audiobook/5fdd927b-603f-4fbc-b89d-9ee87645e91b": {
+  "product": "opportunity-audiobook",
+  "lesson": "chapter-7",
+  "itemType": "audio",
+  "title": "Chapter 7.mp3",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": null,
+  "url": "https://s3.amazonaws.com/streaming_alt/opportunity/Chapter%207.mp3"
+ },
+ "opportunity-audiobook/6c55fca3-39a2-4465-8fcb-257823dbfe91": {
+  "product": "opportunity-audiobook",
+  "lesson": "chapter-8",
+  "itemType": "audio",
+  "title": "Chapter 8.mp3",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": null,
+  "url": "https://s3.amazonaws.com/streaming_alt/opportunity/Chapter%208.mp3"
+ },
+ "opportunity-audiobook/15a96e18-ba02-44aa-befe-de399717af7b": {
+  "product": "opportunity-audiobook",
+  "lesson": "chapter-9",
+  "itemType": "audio",
+  "title": "Chapter 9.mp3",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": null,
+  "url": "https://s3.amazonaws.com/streaming_alt/opportunity/Chapter%209.mp3"
+ },
+ "opportunity-audiobook/ad7333d1-d4fb-4664-a3bc-ac3ed7ea94ef": {
+  "product": "opportunity-audiobook",
+  "lesson": "chapter-10",
+  "itemType": "audio",
+  "title": "Chapter 10.mp3",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": null,
+  "url": "https://s3.amazonaws.com/streaming_alt/opportunity/Chapter%2010.mp3"
+ },
+ "opportunity-audiobook/d085ce96-6ab0-49ec-bdbc-6e0991efc983": {
+  "product": "opportunity-audiobook",
+  "lesson": "chapter-11",
+  "itemType": "audio",
+  "title": "Chapter 11.mp3",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": null,
+  "url": "https://s3.amazonaws.com/streaming_alt/opportunity/Chapter%2011.mp3"
+ },
+ "opportunity-audiobook/0da67c2a-0a31-4413-b7cd-99197e42a797": {
+  "product": "opportunity-audiobook",
+  "lesson": "chapter-12",
+  "itemType": "audio",
+  "title": "Chapter 12.mp3",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": null,
+  "url": "https://s3.amazonaws.com/streaming_alt/opportunity/Chapter%2012.mp3"
+ },
+ "opportunity-audiobook/5b98ad72-884e-47f7-9090-17bc97ccdb7c": {
+  "product": "opportunity-audiobook",
+  "lesson": "chapter-13",
+  "itemType": "audio",
+  "title": "Chapter 13.mp3",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": null,
+  "url": "https://s3.amazonaws.com/streaming_alt/opportunity/Chapter%2013.mp3"
+ },
+ "opportunity-audiobook/7ea3a970-83ab-4912-8218-e406cc4bc51f": {
+  "product": "opportunity-audiobook",
+  "lesson": "chapter-14",
+  "itemType": "audio",
+  "title": "Chapter 14.mp3",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": null,
+  "url": "https://s3.amazonaws.com/streaming_alt/opportunity/Chapter%2014.mp3"
+ },
+ "opportunity-audiobook/599b0256-22fb-4f45-81ae-6c6c1329b519": {
+  "product": "opportunity-audiobook",
+  "lesson": "chapter-15",
+  "itemType": "audio",
+  "title": "Chapter 15.mp3",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": null,
+  "url": "https://s3.amazonaws.com/streaming_alt/opportunity/Chapter%2015.mp3"
+ },
+ "opportunity-audiobook/e2f2cbb5-d6bd-4c9a-987a-08f9c5dae43f": {
+  "product": "opportunity-audiobook",
+  "lesson": "chapter-16",
+  "itemType": "audio",
+  "title": "Chapter 16.mp3",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": null,
+  "url": "https://s3.amazonaws.com/streaming_alt/opportunity/Chapter%2016.mp3"
+ },
+ "opportunity-audiobook/0d05a8b2-8daa-441f-8f2d-21ce2196c9d6": {
+  "product": "opportunity-audiobook",
+  "lesson": "chapter-17",
+  "itemType": "audio",
+  "title": "Chapter 17.mp3",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": null,
+  "url": "https://s3.amazonaws.com/streaming_alt/opportunity/Chapter%2017.mp3"
+ },
+ "opportunity-audiobook/a8bf6a35-4654-412f-bff2-2daee35b6634": {
+  "product": "opportunity-audiobook",
+  "lesson": "chapter-18",
+  "itemType": "audio",
+  "title": "Chapter 18.mp3",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": null,
+  "url": "https://s3.amazonaws.com/streaming_alt/opportunity/Chapter%2018.mp3"
+ },
+ "opportunity-audiobook/8329c553-eda8-4c52-8957-d65ef65e7001": {
+  "product": "opportunity-audiobook",
+  "lesson": "chapter-19",
+  "itemType": "audio",
+  "title": "Chapter 19.mp3",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": null,
+  "url": "https://s3.amazonaws.com/streaming_alt/opportunity/Chapter%2019.mp3"
+ },
+ "turning-your-talent-into-income/41edabf0-e6b6-4969-a910-c8aafb4e79df": {
+  "product": "turning-your-talent-into-income",
+  "lesson": "session-1",
+  "itemType": "audio",
+  "title": "Turning Your Talent Into Income — Session # 1: Turning Your Talent Into Income (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 22679555,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-06-23T14-46-22-087Z-r796qe-turning-your-talent-into-income-01-identify-your-talents.mp3"
+ },
+ "turning-your-talent-into-income/b98d6839-e939-4438-ac51-f32bc98cc24a": {
+  "product": "turning-your-talent-into-income",
+  "lesson": "session-1",
+  "itemType": "document",
+  "title": "Turning Your Talent Into Income — Session # 1: Turning Your Talent Into Income (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 470407,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-39-22-911Z-fkqcl0-session-1---turning-your-talents-into-income.pdf"
+ },
+ "turning-your-talent-into-income/d238f42d-b887-46c4-bc0d-ce646b16bffd": {
+  "product": "turning-your-talent-into-income",
+  "lesson": "session-2",
+  "itemType": "audio",
+  "title": "Turning Your Talent Into Income — Session # 2: Mindsets and Strategies for Success in Turning Your Talent into Income (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 20188414,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-06-23T14-46-57-770Z-nga9jc-turning-your-talent-into-income-02-mindsets-and-strategies.mp3"
+ },
+ "turning-your-talent-into-income/ecce616e-61e6-4984-af91-e7bc7dbd17f1": {
+  "product": "turning-your-talent-into-income",
+  "lesson": "session-2",
+  "itemType": "document",
+  "title": "Turning Your Talent Into Income — Session # 2: Mindsets and Strategies for Success in Turning Your Talent into Income (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 484240,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-39-28-512Z-bzab7k-session-2---mindsets-and-strategies-for-success-in-turning-your-talent-into-income.pdf"
+ },
+ "turning-your-talent-into-income/dd7e36ed-792d-4e01-ab03-7046998d0c5e": {
+  "product": "turning-your-talent-into-income",
+  "lesson": "session-3",
+  "itemType": "audio",
+  "title": "Turning Your Talent Into Income — Session # 3: The Gift of Personality Type (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 32067649,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-06-23T14-47-46-249Z-jg312k-turning-your-talent-into-income-03-gift-of-personality-type.mp3"
+ },
+ "turning-your-talent-into-income/67789771-aaa0-47d7-95f7-cf37f82f635b": {
+  "product": "turning-your-talent-into-income",
+  "lesson": "session-3",
+  "itemType": "document",
+  "title": "Turning Your Talent Into Income — Session # 3: The Gift of Personality Type (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 470289,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-39-41-790Z-el6ac1-session-3---the-gift-of-personality-type.pdf"
+ },
+ "turning-your-talent-into-income/059f02f2-772b-40d3-8500-b2ef38562528": {
+  "product": "turning-your-talent-into-income",
+  "lesson": "session-4",
+  "itemType": "audio",
+  "title": "Turning Your Talent Into Income — Session # 4: Identifying Opportunities and Trends (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 19639529,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-06-23T14-48-08-089Z-qi19rt-turning-your-talent-into-income-04-identify-opportunities-and-trends.mp3"
+ },
+ "turning-your-talent-into-income/882db96a-e840-4a03-b05d-04c6a7666412": {
+  "product": "turning-your-talent-into-income",
+  "lesson": "session-4",
+  "itemType": "document",
+  "title": "Turning Your Talent Into Income — Session # 4: Identifying Opportunities and Trends (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 1604494,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-39-52-105Z-8whk2r-session-4---identifying-opportunities-trends.pdf"
+ },
+ "turning-your-talent-into-income/0371168b-091b-48ae-ab89-34814d53f676": {
+  "product": "turning-your-talent-into-income",
+  "lesson": "session-5",
+  "itemType": "audio",
+  "title": "Turning Your Talent Into Income — Session # 5: People Opportunities (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 27845217,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-06-23T14-48-16-603Z-iiefb2-turning-your-talent-into-income-05-people-opportunities.mp3"
+ },
+ "turning-your-talent-into-income/f92eb7b9-73a6-411f-b075-eb6ad447f0c8": {
+  "product": "turning-your-talent-into-income",
+  "lesson": "session-5",
+  "itemType": "document",
+  "title": "Turning Your Talent Into Income — Session # 5: People Opportunities (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 470680,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-40-10-111Z-6p19f5-session-5---people-opportunities.pdf"
+ },
+ "turning-your-talent-into-income/0b3c9afe-365e-4fbf-bf53-558ee290b910": {
+  "product": "turning-your-talent-into-income",
+  "lesson": "session-6",
+  "itemType": "audio",
+  "title": "Turning Your Talent Into Income — Session # 6: Connecting Talents and Opportunities (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 20573040,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-06-23T14-48-24-826Z-hmfqo0-turning-your-talent-into-income-06-connecting-talents-and-opportunities.mp3"
+ },
+ "turning-your-talent-into-income/010b8dd7-49f2-43fc-8828-a15331e2e211": {
+  "product": "turning-your-talent-into-income",
+  "lesson": "session-6",
+  "itemType": "document",
+  "title": "Turning Your Talent Into Income — Session # 6: Connecting Talents and Opportunities (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 471752,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-40-18-847Z-ibh5hn-session-6---connecting-talents-opportunities.pdf"
+ },
+ "turning-your-talent-into-income/7c35219a-4d30-45db-8c22-6fd1064c28e6": {
+  "product": "turning-your-talent-into-income",
+  "lesson": "session-7",
+  "itemType": "audio",
+  "title": "Turning Your Talent Into Income — Session # 7: Developing Talents into Strengths (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 19366497,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-06-23T14-48-30-198Z-0ksus9-turning-your-talent-into-income-07-developing-talents-into-strengths.mp3"
+ },
+ "turning-your-talent-into-income/c65ad7da-4b23-4812-87c6-fde86eebc42e": {
+  "product": "turning-your-talent-into-income",
+  "lesson": "session-7",
+  "itemType": "document",
+  "title": "Turning Your Talent Into Income — Session # 7: Developing Talents into Strengths (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 471468,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-40-26-111Z-hux4qm-session-7---developing-talents-into-strengths.pdf"
+ },
+ "turning-your-talent-into-income/8582c585-2707-4975-80d4-a3d396400943": {
+  "product": "turning-your-talent-into-income",
+  "lesson": "session-8",
+  "itemType": "audio",
+  "title": "Turning Your Talent Into Income — Session # 8: Creating More and More Value (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 25750928,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-06-23T14-49-05-621Z-43xcum-turning-your-talent-into-income-08-creating-more-value.mp3"
+ },
+ "turning-your-talent-into-income/637ce05b-3ae1-4c1c-9108-2bdd2c9b8141": {
+  "product": "turning-your-talent-into-income",
+  "lesson": "session-8",
+  "itemType": "document",
+  "title": "Turning Your Talent Into Income — Session # 8: Creating More and More Value (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 468410,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-40-40-211Z-54vcll-session-8---creating-more-more-value.pdf"
+ },
+ "turning-your-talent-into-income/9b6d4f7c-0b0e-4657-a75a-8578b4fa50e7": {
+  "product": "turning-your-talent-into-income",
+  "lesson": "session-9",
+  "itemType": "audio",
+  "title": "Turning Your Talent Into Income — Session # 9: Becoming a Value Creation Laser Beam (extra)",
+  "mimeType": "audio/mpeg",
+  "sizeBytes": 15746866,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-06-23T14-49-20-575Z-xi6n9r-turning-your-talent-into-income-09-becoming-a-value-creation-laser-beam.mp3"
+ },
+ "turning-your-talent-into-income/09ed6790-f65c-4e33-9e00-2f4e4f0aa88c": {
+  "product": "turning-your-talent-into-income",
+  "lesson": "session-9",
+  "itemType": "document",
+  "title": "Turning Your Talent Into Income — Session # 9: Becoming a Value Creation Laser Beam (extra)",
+  "mimeType": "application/pdf",
+  "sizeBytes": 472371,
+  "url": "https://s3.us-east-1.amazonaws.com/streaming_alt/documents/2026-07-02T17-40-43-605Z-0dlcje-session-9---becoming-a-value-creation-laser-beam.pdf"
+ }
+}
