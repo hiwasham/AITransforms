@@ -1,0 +1,40 @@
+[
+ {
+  "id": "27666007",
+  "unique": "gvt54wj7tt1q_1788520045813",
+  "title": "AI Marketing Club Live Class",
+  "location": "",
+  "dateLabel": "Tuesday, September  1 ‧ 11:00am – 12:00pm (PDT)",
+  "year": 2026,
+  "month": 9,
+  "day": 1,
+  "startTime": "11am",
+  "endTime": "12pm",
+  "startEndTime": "11:00am - 12:00pm",
+  "allDay": false,
+  "rrule": "FREQ=MONTHLY;BYDAY=1TU",
+  "rruleCopy": true,
+  "rruleExp": "Monthly on the first Tuesday of the month, starting from Feb 3, 2026, forever",
+  "description": "Our AI Marketing live classes are on the 1st and 3rd Tuesday of each month . A fresh Zoom link is sent out before each class; typically, the day before and again 1 hour before we go live. 👉 If you have an active subscription but don’t see the link, please check your Spam or Promotions folder. Still need help? Email us anytime at hello@virtualcoach.com",
+  "addToCalendarUrl": "https://www.addevent.com/event/gvt54wj7tt1q/"
+ },
+ {
+  "id": "27896453",
+  "unique": "rngz7k5rs4j9_1788520045815",
+  "title": "AI Marketing Club Live Class",
+  "location": "",
+  "dateLabel": "Tuesday, September 15 ‧ 11:00am – 12:00pm (PDT)",
+  "year": 2026,
+  "month": 9,
+  "day": 15,
+  "startTime": "11am",
+  "endTime": "12pm",
+  "startEndTime": "11:00am - 12:00pm",
+  "allDay": false,
+  "rrule": "FREQ=MONTHLY;BYDAY=3TU",
+  "rruleCopy": true,
+  "rruleExp": "Monthly on the third Tuesday of the month, starting from Mar 17, 2026, forever",
+  "description": "Our AI Marketing live classes are on the 1st and 3rd Tuesday of each month . A fresh Zoom link is sent out before each class; typically, the day before and again 1 hour before we go live. 👉 If you have an active subscription but don’t see the link, please check your Spam or Promotions folder. Still need help? Email us anytime at hello@virtualcoach.com",
+  "addToCalendarUrl": "https://www.addevent.com/event/rngz7k5rs4j9/"
+ }
+]
