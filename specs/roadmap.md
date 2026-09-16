@@ -109,3 +109,15 @@ no branch for `empower-community/`, and `empower-community/README.md` does not
 exist. The top-level `empower-curriculum/README.md` has not been regenerated
 since that tree was added, and the archive-wide link sweep (last clean run:
 536 links, 0 broken) predates it too.
+#   Next steps:
+
+    cd masterpromptv1
+
+  Run your crew:
+    crewai run
+
+  Customize your crew:
+    agents/*.jsonc    Define agent roles, goals, and LLMs
+    crew.jsonc        Configure tasks and optional input defaults
+    tools/            Add custom tools (Python)
+# https://chat.deepseek.com/a/chat/s/fca3026d-14d3-4e81-ac1e-7b1fb2d0358d
