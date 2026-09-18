@@ -1,0 +1,73 @@
+[
+  {
+    "id": 109995557,
+    "parent_comment_id": null,
+    "post_id": 28468269,
+    "user_id": 4552195,
+    "editor": "tiptap",
+    "flagged_for_approval_at": null,
+    "created_at": "2026-07-23T15:39:11.656Z",
+    "updated_at": "2026-07-23T15:39:11.673Z",
+    "is_replying_enabled": true,
+    "is_liking_enabled": true,
+    "bookmark_id": null,
+    "is_liked": false,
+    "likes_count": 0,
+    "unresolved_flagged_reports_count": 0,
+    "show_url": "https://community.empowerlabs.ai/c/case-studies/ai-enabled-operations-how-andi-automated-call-tracking#comment_wrapper_109995557",
+    "author_type": "CommunityMember",
+    "community_member": {
+      "id": 85023613,
+      "user_id": 4552195,
+      "public_uid": "eefbc7da",
+      "first_name": "Scott",
+      "last_name": "Newkirk",
+      "name": "Scott Newkirk",
+      "admin": false,
+      "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIwZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzQ1NTIxOTU_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiD2F0dGFjaGFibGUGOwBUSSIPZXhwaXJlc19hdAY7AFQw--63558bb37d611b8b0688d0a850af2db79f4aa31f",
+      "type": "CommunityMember",
+      "headline": "Owner",
+      "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvODUwMjM2MTM_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--0045cfc8413c2fadbcc67ab9477bb36d566a7e1a",
+      "avatar_url": "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRzhPOVFvPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--73e92e9d0d2db5e70f03060b12b30d7d6adc6020/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lKYW5CbFp3WTZCa1ZVT2hSeVpYTnBlbVZmZEc5ZmJHbHRhWFJiQjJrQ0xBRnBBaXdCT2dwellYWmxjbnNHT2dwemRISnBjRlE9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--ef295ed08e817a599d692fd6d8761673d3ed547f/Photo_LinkedIn.jpeg"
+    },
+    "member_tags_html": "\n",
+    "member_tags": [],
+    "body_trix_content": null,
+    "body_for_editor": null,
+    "tiptap_body": {
+      "body": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Amazing! Just re-watched the video Hayden did covering this. Great stuff!!",
+                "type": "text",
+                "circle_ios_fallback_text": "Amazing! Just re-watched the video Hayden did covering this. Great stuff!!"
+              }
+            ]
+          }
+        ]
+      },
+      "circle_ios_fallback_text": "Amazing! Just re-watched the video Hayden did covering this. Great stuff!!",
+      "attachments": [],
+      "inline_attachments": [],
+      "sgids_to_object_map": {},
+      "format": "post",
+      "community_members": [],
+      "entities": [],
+      "group_mentions": [],
+      "polls": []
+    },
+    "policies": {
+      "can_report": true,
+      "can_manage": false,
+      "can_edit": false,
+      "can_destroy": false,
+      "can_bookmark": true
+    },
+    "replies_count": 0,
+    "replies": []
+  }
+]

@@ -1,0 +1,3344 @@
+{
+  "id": 3381155,
+  "name": "Exercise 3.2: Discover the 4-Level Documentation Framework",
+  "status": "published",
+  "featured_media_enabled": false,
+  "download_featured_media": false,
+  "created_at": "2026-01-30T13:55:02.404Z",
+  "updated_at": "2026-01-30T19:40:08.319Z",
+  "comments_enabled": false,
+  "default_tab": "curriculum",
+  "enforce_featured_media_completion": false,
+  "autocomplete_on_featured_media_completion": true,
+  "dripped_at": null,
+  "is_dripped": true,
+  "needs_to_complete_previous_lesson": false,
+  "completed": false,
+  "notify_students_enabled": false,
+  "bookmark_id": null,
+  "serialized_rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The Documentation Problem Most Businesses Face",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "The Documentation Problem Most Businesses Face"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Most companies either create hundreds of scattered micro-processes that fragment the big picture or build massive 50-page documents that overwhelm people trying to get work done. Both approaches fail because they don't match how people actually think and work.",
+              "type": "text",
+              "circle_ios_fallback_text": "Most companies either create hundreds of scattered micro-processes that fragment the big picture or build massive 50-page documents that overwhelm people trying to get work done. Both approaches fail because they don't match how people actually think and work."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The solution is a systematic hierarchy that separates ",
+              "type": "text",
+              "circle_ios_fallback_text": "The solution is a systematic hierarchy that separates "
+            },
+            {
+              "text": "strategic thinking",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "circle_ios_fallback_text": "strategic thinking"
+            },
+            {
+              "text": " from ",
+              "type": "text",
+              "circle_ios_fallback_text": " from "
+            },
+            {
+              "text": "tactical execution",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "circle_ios_fallback_text": "tactical execution"
+            },
+            {
+              "text": ", allowing you to scale operations without losing quality or clarity.",
+              "type": "text",
+              "circle_ios_fallback_text": ", allowing you to scale operations without losing quality or clarity."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The 4-Level Hierarchy: From Strategy to Execution",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "The 4-Level Hierarchy: From Strategy to Execution"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "attrs": {
+            "url": "https://learn.buildingasecondbrain.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTNtV2dVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b0937c743b9331496aa1d68384789d35b920a054/Screenshot%202025-06-03%20at%2012.22.28%E2%80%AFPM.png",
+            "href": null,
+            "width": null,
+            "alignment": "center",
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTNtV2dVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b0937c743b9331496aa1d68384789d35b920a054",
+            "width_ratio": 1,
+            "content_type": "image/png",
+            "use_intrinsic_size": false
+          }
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Level 1: Core Process (i.e. Strategic Overview)",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Level 1: Core Process (i.e. Strategic Overview)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Owner:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Owner:"
+            },
+            {
+              "text": " Directors or Executives (Accountable for the entire function)",
+              "type": "text",
+              "circle_ios_fallback_text": " Directors or Executives (Accountable for the entire function)"
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "Audience:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Audience:"
+            },
+            {
+              "text": " Leadership team, cross-functional stakeholders, process integrators",
+              "type": "text",
+              "circle_ios_fallback_text": " Leadership team, cross-functional stakeholders, process integrators"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Core Processes are the highest-level view of how major business functions operate. They show the complete flow of a critical business process from start to finish, including all stakeholders and strategic considerations.",
+              "type": "text",
+              "circle_ios_fallback_text": "Core Processes are the highest-level view of how major business functions operate. They show the complete flow of a critical business process from start to finish, including all stakeholders and strategic considerations."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What Core Processes Include:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "What Core Processes Include:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Complete end-to-end process flow with visual diagram",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Strategic objectives and success criteria",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Cross-functional dependencies and handoff points",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Key performance indicators and business impact metrics",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Integration with other core business processes",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "RACI matrix showing all stakeholders involved",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Examples:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Examples:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "\"Sale to Delivery - Product 1\"",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "\"Market to Lead - Product 1\"",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "\"Delivery to Success - Product 1\"",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In other words:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "In other words:"
+            },
+            {
+              "text": " Level 1 is all about strategic planning, process optimization, onboarding senior team members, and understanding how one person’s work fits into the bigger business picture.",
+              "type": "text",
+              "circle_ios_fallback_text": " Level 1 is all about strategic planning, process optimization, onboarding senior team members, and understanding how one person’s work fits into the bigger business picture."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Level 2: Blueprint (i.e. Functional Breakdown)",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Level 2: Blueprint (i.e. Functional Breakdown)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Owner:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Owner:"
+            },
+            {
+              "text": " Managers or Directors (Accountable for specific functional area)",
+              "type": "text",
+              "circle_ios_fallback_text": " Managers or Directors (Accountable for specific functional area)"
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "Audience:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Audience:"
+            },
+            {
+              "text": " Department managers, team leads, project coordinators",
+              "type": "text",
+              "circle_ios_fallback_text": " Department managers, team leads, project coordinators"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Blueprints break down Core Processes into manageable functional chunks. They show how a specific area of responsibility works within the larger process, focusing on coordination and quality standards.",
+              "type": "text",
+              "circle_ios_fallback_text": "Blueprints break down Core Processes into manageable functional chunks. They show how a specific area of responsibility works within the larger process, focusing on coordination and quality standards."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What Blueprints Include:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "What Blueprints Include:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Detailed workflow for one functional area",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Quality gates and success checkpoints",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Resource requirements and capacity planning",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Handoff procedures to other functions",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Timeline and service level agreements",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Common issues and escalation procedures",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Examples:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Examples:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "\"Payment Confirmation & Platform Setup\" (within Sale to Delivery)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "\"Inbound Marketing Blueprint\" (within Market to Lead)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "\"Weekly Progress Reviews\" (within Delivery to Success)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In other words:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "In other words:"
+            },
+            {
+              "text": " Level 2 is about managing team capacity, coordinating with other departments, training managers, and ensuring consistent quality across similar activities.",
+              "type": "text",
+              "circle_ios_fallback_text": " Level 2 is about managing team capacity, coordinating with other departments, training managers, and ensuring consistent quality across similar activities."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Level 3: Guide (i.e. Step-by-Step Execution)",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Level 3: Guide (i.e. Step-by-Step Execution)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Owner:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Owner:"
+            },
+            {
+              "text": " Managers or Senior Individual Contributors (Person who most often executes this activity)",
+              "type": "text",
+              "circle_ios_fallback_text": " Managers or Senior Individual Contributors (Person who most often executes this activity)"
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "Audience:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Audience:"
+            },
+            {
+              "text": " Individual contributors, team members doing the actual work",
+              "type": "text",
+              "circle_ios_fallback_text": " Individual contributors, team members doing the actual work"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Guides provide detailed, step-by-step instructions for specific activities within a Blueprint. They're designed for the person actually doing the work, with everything they need to execute consistently and efficiently.",
+              "type": "text",
+              "circle_ios_fallback_text": "Guides provide detailed, step-by-step instructions for specific activities within a Blueprint. They're designed for the person actually doing the work, with everything they need to execute consistently and efficiently."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What Guides Include:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "What Guides Include:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "When and how to start the activity",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Step-by-step instructions with time estimates",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Required tools, access, and resources",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Quality checkpoints and verification steps",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Common problems and how to solve them",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "What to do when finished (documentation, handoffs)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Examples:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Examples:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "\"Platform Account Creation\" (within Payment Confirmation & Platform Setup)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "\"Blog Content Creation Guide\" (within Inbound Marketing Blueprint)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "\"Student Progress Assessment\" (within Weekly Progress Reviews)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In other words:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "In other words:"
+            },
+            {
+              "text": " Level 3 is about daily task execution, training new team members, ensuring consistency across team members, and maintaining quality standards at the frontline.",
+              "type": "text",
+              "circle_ios_fallback_text": " Level 3 is about daily task execution, training new team members, ensuring consistency across team members, and maintaining quality standards at the frontline."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Level 4: Forms & Templates (i.e. Execution Tools)",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Level 4: Forms & Templates (i.e. Execution Tools)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Owner:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Owner:"
+            },
+            {
+              "text": " Individual Contributor (Person who most often uses this tool)",
+              "type": "text",
+              "circle_ios_fallback_text": " Individual Contributor (Person who most often uses this tool)"
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "Audience:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Audience:"
+            },
+            {
+              "text": " Anyone executing the specific task",
+              "type": "text",
+              "circle_ios_fallback_text": " Anyone executing the specific task"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Forms and Templates are the actual tools, scripts, calculators, email templates, and documents used to complete the work. These are what people open, fill out, customize, and send.",
+              "type": "text",
+              "circle_ios_fallback_text": "Forms and Templates are the actual tools, scripts, calculators, email templates, and documents used to complete the work. These are what people open, fill out, customize, and send."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What Forms & Templates Include:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "What Forms & Templates Include:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Ready-to-use templates with placeholders",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Pre-written scripts or email copy",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Calculators or assessment tools",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Checklists and verification forms",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Standard documents and agreements",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Examples:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Examples:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "\"Accelerator Onboarding Welcome Email Template\"",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "\"SEO Blog Post Checklist\"",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "\"Student Progress Assessment Form\"",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "\"Payment Confirmation Email Script\"",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In other words:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "In other words:"
+            },
+            {
+              "text": " Level 4 includes executing specific tasks, ensuring consistent communication, maintaining brand standards, and reducing time spent creating documents from scratch.",
+              "type": "text",
+              "circle_ios_fallback_text": " Level 4 includes executing specific tasks, ensuring consistent communication, maintaining brand standards, and reducing time spent creating documents from scratch."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How the Levels Work Together",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "How the Levels Work Together"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Strategic Context Flows Down:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Leadership uses Core Processes to understand business impact. Managers use Blueprints to coordinate their teams. Individual contributors use Guides to execute consistently.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Quality Flows Up:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Templates ensure consistent output. Guides ensure consistent process. Blueprints ensure consistent coordination. Core Processes ensure consistent business results.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Efficiency Through Focus:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Each level serves its specific audience without overwhelming them with unnecessary detail or leaving them without sufficient context.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Implementation in Your Business",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Implementation in Your Business"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Step #1: Start with What Matters Most",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Step #1: Start with What Matters Most"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Begin by identifying your most critical customer-facing processes. These typically include:",
+              "type": "text",
+              "circle_ios_fallback_text": "Begin by identifying your most critical customer-facing processes. These typically include:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "How leads become customers (Lead to Sale)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "How customers get onboarded (Sale to Delivery)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "How you deliver your core service (Delivery to Success)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Step #2: Build from Level 1 Down",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Step #2: Build from Level 1 Down"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Map the Core Process:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Understand the complete flow and all stakeholders",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Identify Key Blueprints:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Break down into manageable functional areas",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Create Essential Guides:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Document the most critical execution steps",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Build Supporting Templates:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Create tools that ensure quality and efficiency",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Step #3: Use AI to Accelerate Development",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Step #3: Use AI to Accelerate Development"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "With your Master Prompt and business context, AI can help you:",
+              "type": "text",
+              "circle_ios_fallback_text": "With your Master Prompt and business context, AI can help you:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Generate complete process flows from high-level descriptions",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Create detailed guides from blueprint overviews",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Build templates and forms based on guide requirements",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Identify gaps and improvement opportunities across all levels",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Why This System Creates Competitive Advantage",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Why This System Creates Competitive Advantage"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For Remote Teams:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "For Remote Teams:"
+            },
+            {
+              "text": " Everyone has both context (why this matters) and clarity (exactly how to do it), eliminating the confusion that kills remote productivity.",
+              "type": "text",
+              "circle_ios_fallback_text": " Everyone has both context (why this matters) and clarity (exactly how to do it), eliminating the confusion that kills remote productivity."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For Scaling Operations:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "For Scaling Operations:"
+            },
+            {
+              "text": " You can train new team members faster and maintain quality as you grow, without requiring constant management oversight.",
+              "type": "text",
+              "circle_ios_fallback_text": " You can train new team members faster and maintain quality as you grow, without requiring constant management oversight."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For Customer Experience:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "For Customer Experience:"
+            },
+            {
+              "text": " Consistent processes across all levels ensure every customer receives the same high-quality experience regardless of who serves them.",
+              "type": "text",
+              "circle_ios_fallback_text": " Consistent processes across all levels ensure every customer receives the same high-quality experience regardless of who serves them."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For Strategic Agility:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "For Strategic Agility:"
+            },
+            {
+              "text": " When you need to change how something works, you can see the full impact across all levels and make coordinated updates rather than hoping nothing breaks.",
+              "type": "text",
+              "circle_ios_fallback_text": " When you need to change how something works, you can see the full impact across all levels and make coordinated updates rather than hoping nothing breaks."
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "The Documentation Problem Most Businesses FaceMost companies either create hundreds of scattered micro-processes that fragment the big picture or build massive 50-page documents that overwhelm people trying to get work done. Both approaches fail because they don't match how people actually think and work.The solution is a systematic hierarchy that separates strategic thinking from tactical execution, allowing you to scale operations without losing quality or clarity.The 4-Level Hierarchy: From Strategy to ExecutionLevel 1: Core Process (i.e. Strategic Overview)Owner: Directors or Executives (Accountable for the entire function)\nAudience: Leadership team, cross-functional stakeholders, process integratorsCore Processes are the highest-level view of how major business functions operate. They show the complete flow of a critical business process from start to finish, including all stakeholders and strategic considerations.What Core Processes Include:Examples:In other words: Level 1 is all about strategic planning, process optimization, onboarding senior team members, and understanding how one person’s work fits into the bigger business picture.Level 2: Blueprint (i.e. Functional Breakdown)Owner: Managers or Directors (Accountable for specific functional area)\nAudience: Department managers, team leads, project coordinatorsBlueprints break down Core Processes into manageable functional chunks. They show how a specific area of responsibility works within the larger process, focusing on coordination and quality standards.What Blueprints Include:Examples:In other words: Level 2 is about managing team capacity, coordinating with other departments, training managers, and ensuring consistent quality across similar activities.Level 3: Guide (i.e. Step-by-Step Execution)Owner: Managers or Senior Individual Contributors (Person who most often executes this activity)\nAudience: Individual contributors, team members doing the actual workGuides provide detailed, step-by-step instructions for specific activities within a Blueprint. They're designed for the person actually doing the work, with everything they need to execute consistently and efficiently.What Guides Include:Examples:In other words: Level 3 is about daily task execution, training new team members, ensuring consistency across team members, and maintaining quality standards at the frontline.Level 4: Forms & Templates (i.e. Execution Tools)Owner: Individual Contributor (Person who most often uses this tool)\nAudience: Anyone executing the specific taskForms and Templates are the actual tools, scripts, calculators, email templates, and documents used to complete the work. These are what people open, fill out, customize, and send.What Forms & Templates Include:Examples:In other words: Level 4 includes executing specific tasks, ensuring consistent communication, maintaining brand standards, and reducing time spent creating documents from scratch.How the Levels Work TogetherImplementation in Your BusinessStep #1: Start with What Matters MostBegin by identifying your most critical customer-facing processes. These typically include:Step #2: Build from Level 1 DownStep #3: Use AI to Accelerate DevelopmentWith your Master Prompt and business context, AI can help you:Why This System Creates Competitive AdvantageFor Remote Teams: Everyone has both context (why this matters) and clarity (exactly how to do it), eliminating the confusion that kills remote productivity.For Scaling Operations: You can train new team members faster and maintain quality as you grow, without requiring constant management oversight.For Customer Experience: Consistent processes across all levels ensure every customer receives the same high-quality experience regardless of who serves them.For Strategic Agility: When you need to change how something works, you can see the full impact across all levels and make coordinated updates rather than hoping nothing breaks.",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "Screenshot 2025-06-03 at 12.22.28 PM.png",
+        "content_type": "image/png",
+        "metadata": {
+          "identified": true,
+          "width": 1302,
+          "height": 1286,
+          "analyzed": true
+        },
+        "byte_size": 587481,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTNtV2dVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b0937c743b9331496aa1d68384789d35b920a054",
+        "type": "file",
+        "url": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTNtV2dVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b0937c743b9331496aa1d68384789d35b920a054/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c94871ba5479e24de62982019557cdcc73e92248/Screenshot%202025-06-03%20at%2012.22.28%E2%80%AFPM.png",
+        "is_downloadable": true,
+        "image_variants": {
+          "original": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTNtV2dVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b0937c743b9331496aa1d68384789d35b920a054/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c94871ba5479e24de62982019557cdcc73e92248/Screenshot%202025-06-03%20at%2012.22.28%E2%80%AFPM.png",
+          "thumbnail": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTNtV2dVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b0937c743b9331496aa1d68384789d35b920a054/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVdrd09ncHpZWFpsY25zR09ncHpkSEpwY0ZRPSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8e3873984cecb63ce8922890e6bae284f3645258/Screenshot%202025-06-03%20at%2012.22.28%E2%80%AFPM.png",
+          "small": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTNtV2dVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b0937c743b9331496aa1d68384789d35b920a054/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFKb0FUQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--174cceaf9a31f17164863935309188a5606afc21/Screenshot%202025-06-03%20at%2012.22.28%E2%80%AFPM.png",
+          "medium": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTNtV2dVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b0937c743b9331496aa1d68384789d35b920a054/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFMUUFqQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--9795b686cfa287dd8535c2801217d42f4915df97/Screenshot%202025-06-03%20at%2012.22.28%E2%80%AFPM.png",
+          "large": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTNtV2dVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b0937c743b9331496aa1d68384789d35b920a054/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJNEJEQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--7535ef66ff04b52d1ea165e904a77a64f9cc7389/Screenshot%202025-06-03%20at%2012.22.28%E2%80%AFPM.png"
+        }
+      }
+    ],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The Documentation Problem Most Businesses Face",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "The Documentation Problem Most Businesses Face"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Most companies either create hundreds of scattered micro-processes that fragment the big picture or build massive 50-page documents that overwhelm people trying to get work done. Both approaches fail because they don't match how people actually think and work.",
+              "type": "text",
+              "circle_ios_fallback_text": "Most companies either create hundreds of scattered micro-processes that fragment the big picture or build massive 50-page documents that overwhelm people trying to get work done. Both approaches fail because they don't match how people actually think and work."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The solution is a systematic hierarchy that separates ",
+              "type": "text",
+              "circle_ios_fallback_text": "The solution is a systematic hierarchy that separates "
+            },
+            {
+              "text": "strategic thinking",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "circle_ios_fallback_text": "strategic thinking"
+            },
+            {
+              "text": " from ",
+              "type": "text",
+              "circle_ios_fallback_text": " from "
+            },
+            {
+              "text": "tactical execution",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "circle_ios_fallback_text": "tactical execution"
+            },
+            {
+              "text": ", allowing you to scale operations without losing quality or clarity.",
+              "type": "text",
+              "circle_ios_fallback_text": ", allowing you to scale operations without losing quality or clarity."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "The 4-Level Hierarchy: From Strategy to Execution",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "The 4-Level Hierarchy: From Strategy to Execution"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "attrs": {
+            "url": "https://learn.buildingasecondbrain.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTNtV2dVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b0937c743b9331496aa1d68384789d35b920a054/Screenshot%202025-06-03%20at%2012.22.28%E2%80%AFPM.png",
+            "href": null,
+            "width": null,
+            "alignment": "center",
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTNtV2dVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b0937c743b9331496aa1d68384789d35b920a054",
+            "width_ratio": 1,
+            "content_type": "image/png",
+            "use_intrinsic_size": false
+          }
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Level 1: Core Process (i.e. Strategic Overview)",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Level 1: Core Process (i.e. Strategic Overview)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Owner:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Owner:"
+            },
+            {
+              "text": " Directors or Executives (Accountable for the entire function)",
+              "type": "text",
+              "circle_ios_fallback_text": " Directors or Executives (Accountable for the entire function)"
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "Audience:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Audience:"
+            },
+            {
+              "text": " Leadership team, cross-functional stakeholders, process integrators",
+              "type": "text",
+              "circle_ios_fallback_text": " Leadership team, cross-functional stakeholders, process integrators"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Core Processes are the highest-level view of how major business functions operate. They show the complete flow of a critical business process from start to finish, including all stakeholders and strategic considerations.",
+              "type": "text",
+              "circle_ios_fallback_text": "Core Processes are the highest-level view of how major business functions operate. They show the complete flow of a critical business process from start to finish, including all stakeholders and strategic considerations."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What Core Processes Include:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "What Core Processes Include:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Complete end-to-end process flow with visual diagram",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Strategic objectives and success criteria",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Cross-functional dependencies and handoff points",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Key performance indicators and business impact metrics",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Integration with other core business processes",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "RACI matrix showing all stakeholders involved",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Examples:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Examples:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "\"Sale to Delivery - Product 1\"",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "\"Market to Lead - Product 1\"",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "\"Delivery to Success - Product 1\"",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In other words:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "In other words:"
+            },
+            {
+              "text": " Level 1 is all about strategic planning, process optimization, onboarding senior team members, and understanding how one person’s work fits into the bigger business picture.",
+              "type": "text",
+              "circle_ios_fallback_text": " Level 1 is all about strategic planning, process optimization, onboarding senior team members, and understanding how one person’s work fits into the bigger business picture."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Level 2: Blueprint (i.e. Functional Breakdown)",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Level 2: Blueprint (i.e. Functional Breakdown)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Owner:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Owner:"
+            },
+            {
+              "text": " Managers or Directors (Accountable for specific functional area)",
+              "type": "text",
+              "circle_ios_fallback_text": " Managers or Directors (Accountable for specific functional area)"
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "Audience:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Audience:"
+            },
+            {
+              "text": " Department managers, team leads, project coordinators",
+              "type": "text",
+              "circle_ios_fallback_text": " Department managers, team leads, project coordinators"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Blueprints break down Core Processes into manageable functional chunks. They show how a specific area of responsibility works within the larger process, focusing on coordination and quality standards.",
+              "type": "text",
+              "circle_ios_fallback_text": "Blueprints break down Core Processes into manageable functional chunks. They show how a specific area of responsibility works within the larger process, focusing on coordination and quality standards."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What Blueprints Include:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "What Blueprints Include:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Detailed workflow for one functional area",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Quality gates and success checkpoints",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Resource requirements and capacity planning",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Handoff procedures to other functions",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Timeline and service level agreements",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Common issues and escalation procedures",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Examples:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Examples:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "\"Payment Confirmation & Platform Setup\" (within Sale to Delivery)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "\"Inbound Marketing Blueprint\" (within Market to Lead)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "\"Weekly Progress Reviews\" (within Delivery to Success)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In other words:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "In other words:"
+            },
+            {
+              "text": " Level 2 is about managing team capacity, coordinating with other departments, training managers, and ensuring consistent quality across similar activities.",
+              "type": "text",
+              "circle_ios_fallback_text": " Level 2 is about managing team capacity, coordinating with other departments, training managers, and ensuring consistent quality across similar activities."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Level 3: Guide (i.e. Step-by-Step Execution)",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Level 3: Guide (i.e. Step-by-Step Execution)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Owner:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Owner:"
+            },
+            {
+              "text": " Managers or Senior Individual Contributors (Person who most often executes this activity)",
+              "type": "text",
+              "circle_ios_fallback_text": " Managers or Senior Individual Contributors (Person who most often executes this activity)"
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "Audience:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Audience:"
+            },
+            {
+              "text": " Individual contributors, team members doing the actual work",
+              "type": "text",
+              "circle_ios_fallback_text": " Individual contributors, team members doing the actual work"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Guides provide detailed, step-by-step instructions for specific activities within a Blueprint. They're designed for the person actually doing the work, with everything they need to execute consistently and efficiently.",
+              "type": "text",
+              "circle_ios_fallback_text": "Guides provide detailed, step-by-step instructions for specific activities within a Blueprint. They're designed for the person actually doing the work, with everything they need to execute consistently and efficiently."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What Guides Include:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "What Guides Include:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "When and how to start the activity",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Step-by-step instructions with time estimates",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Required tools, access, and resources",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Quality checkpoints and verification steps",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Common problems and how to solve them",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "What to do when finished (documentation, handoffs)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Examples:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Examples:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "\"Platform Account Creation\" (within Payment Confirmation & Platform Setup)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "\"Blog Content Creation Guide\" (within Inbound Marketing Blueprint)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "\"Student Progress Assessment\" (within Weekly Progress Reviews)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In other words:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "In other words:"
+            },
+            {
+              "text": " Level 3 is about daily task execution, training new team members, ensuring consistency across team members, and maintaining quality standards at the frontline.",
+              "type": "text",
+              "circle_ios_fallback_text": " Level 3 is about daily task execution, training new team members, ensuring consistency across team members, and maintaining quality standards at the frontline."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Level 4: Forms & Templates (i.e. Execution Tools)",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Level 4: Forms & Templates (i.e. Execution Tools)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Owner:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Owner:"
+            },
+            {
+              "text": " Individual Contributor (Person who most often uses this tool)",
+              "type": "text",
+              "circle_ios_fallback_text": " Individual Contributor (Person who most often uses this tool)"
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "Audience:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Audience:"
+            },
+            {
+              "text": " Anyone executing the specific task",
+              "type": "text",
+              "circle_ios_fallback_text": " Anyone executing the specific task"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Forms and Templates are the actual tools, scripts, calculators, email templates, and documents used to complete the work. These are what people open, fill out, customize, and send.",
+              "type": "text",
+              "circle_ios_fallback_text": "Forms and Templates are the actual tools, scripts, calculators, email templates, and documents used to complete the work. These are what people open, fill out, customize, and send."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What Forms & Templates Include:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "What Forms & Templates Include:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Ready-to-use templates with placeholders",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Pre-written scripts or email copy",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Calculators or assessment tools",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Checklists and verification forms",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Standard documents and agreements",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Examples:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Examples:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "\"Accelerator Onboarding Welcome Email Template\"",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "\"SEO Blog Post Checklist\"",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "\"Student Progress Assessment Form\"",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "\"Payment Confirmation Email Script\"",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In other words:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "In other words:"
+            },
+            {
+              "text": " Level 4 includes executing specific tasks, ensuring consistent communication, maintaining brand standards, and reducing time spent creating documents from scratch.",
+              "type": "text",
+              "circle_ios_fallback_text": " Level 4 includes executing specific tasks, ensuring consistent communication, maintaining brand standards, and reducing time spent creating documents from scratch."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How the Levels Work Together",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "How the Levels Work Together"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Strategic Context Flows Down:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Leadership uses Core Processes to understand business impact. Managers use Blueprints to coordinate their teams. Individual contributors use Guides to execute consistently.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Quality Flows Up:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Templates ensure consistent output. Guides ensure consistent process. Blueprints ensure consistent coordination. Core Processes ensure consistent business results.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Efficiency Through Focus:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Each level serves its specific audience without overwhelming them with unnecessary detail or leaving them without sufficient context.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Implementation in Your Business",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Implementation in Your Business"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Step #1: Start with What Matters Most",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Step #1: Start with What Matters Most"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Begin by identifying your most critical customer-facing processes. These typically include:",
+              "type": "text",
+              "circle_ios_fallback_text": "Begin by identifying your most critical customer-facing processes. These typically include:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "How leads become customers (Lead to Sale)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "How customers get onboarded (Sale to Delivery)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "How you deliver your core service (Delivery to Success)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Step #2: Build from Level 1 Down",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Step #2: Build from Level 1 Down"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Map the Core Process:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Understand the complete flow and all stakeholders",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Identify Key Blueprints:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Break down into manageable functional areas",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Create Essential Guides:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Document the most critical execution steps",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Build Supporting Templates:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Create tools that ensure quality and efficiency",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Step #3: Use AI to Accelerate Development",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Step #3: Use AI to Accelerate Development"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "With your Master Prompt and business context, AI can help you:",
+              "type": "text",
+              "circle_ios_fallback_text": "With your Master Prompt and business context, AI can help you:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Generate complete process flows from high-level descriptions",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Create detailed guides from blueprint overviews",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Build templates and forms based on guide requirements",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Identify gaps and improvement opportunities across all levels",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Why This System Creates Competitive Advantage",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Why This System Creates Competitive Advantage"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For Remote Teams:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "For Remote Teams:"
+            },
+            {
+              "text": " Everyone has both context (why this matters) and clarity (exactly how to do it), eliminating the confusion that kills remote productivity.",
+              "type": "text",
+              "circle_ios_fallback_text": " Everyone has both context (why this matters) and clarity (exactly how to do it), eliminating the confusion that kills remote productivity."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For Scaling Operations:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "For Scaling Operations:"
+            },
+            {
+              "text": " You can train new team members faster and maintain quality as you grow, without requiring constant management oversight.",
+              "type": "text",
+              "circle_ios_fallback_text": " You can train new team members faster and maintain quality as you grow, without requiring constant management oversight."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For Customer Experience:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "For Customer Experience:"
+            },
+            {
+              "text": " Consistent processes across all levels ensure every customer receives the same high-quality experience regardless of who serves them.",
+              "type": "text",
+              "circle_ios_fallback_text": " Consistent processes across all levels ensure every customer receives the same high-quality experience regardless of who serves them."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "For Strategic Agility:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "For Strategic Agility:"
+            },
+            {
+              "text": " When you need to change how something works, you can see the full impact across all levels and make coordinated updates rather than hoping nothing breaks.",
+              "type": "text",
+              "circle_ios_fallback_text": " When you need to change how something works, you can see the full impact across all levels and make coordinated updates rather than hoping nothing breaks."
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "The Documentation Problem Most Businesses FaceMost companies either create hundreds of scattered micro-processes that fragment the big picture or build massive 50-page documents that overwhelm people trying to get work done. Both approaches fail because they don't match how people actually think and work.The solution is a systematic hierarchy that separates strategic thinking from tactical execution, allowing you to scale operations without losing quality or clarity.The 4-Level Hierarchy: From Strategy to ExecutionLevel 1: Core Process (i.e. Strategic Overview)Owner: Directors or Executives (Accountable for the entire function)\nAudience: Leadership team, cross-functional stakeholders, process integratorsCore Processes are the highest-level view of how major business functions operate. They show the complete flow of a critical business process from start to finish, including all stakeholders and strategic considerations.What Core Processes Include:Examples:In other words: Level 1 is all about strategic planning, process optimization, onboarding senior team members, and understanding how one person’s work fits into the bigger business picture.Level 2: Blueprint (i.e. Functional Breakdown)Owner: Managers or Directors (Accountable for specific functional area)\nAudience: Department managers, team leads, project coordinatorsBlueprints break down Core Processes into manageable functional chunks. They show how a specific area of responsibility works within the larger process, focusing on coordination and quality standards.What Blueprints Include:Examples:In other words: Level 2 is about managing team capacity, coordinating with other departments, training managers, and ensuring consistent quality across similar activities.Level 3: Guide (i.e. Step-by-Step Execution)Owner: Managers or Senior Individual Contributors (Person who most often executes this activity)\nAudience: Individual contributors, team members doing the actual workGuides provide detailed, step-by-step instructions for specific activities within a Blueprint. They're designed for the person actually doing the work, with everything they need to execute consistently and efficiently.What Guides Include:Examples:In other words: Level 3 is about daily task execution, training new team members, ensuring consistency across team members, and maintaining quality standards at the frontline.Level 4: Forms & Templates (i.e. Execution Tools)Owner: Individual Contributor (Person who most often uses this tool)\nAudience: Anyone executing the specific taskForms and Templates are the actual tools, scripts, calculators, email templates, and documents used to complete the work. These are what people open, fill out, customize, and send.What Forms & Templates Include:Examples:In other words: Level 4 includes executing specific tasks, ensuring consistent communication, maintaining brand standards, and reducing time spent creating documents from scratch.How the Levels Work TogetherImplementation in Your BusinessStep #1: Start with What Matters MostBegin by identifying your most critical customer-facing processes. These typically include:Step #2: Build from Level 1 DownStep #3: Use AI to Accelerate DevelopmentWith your Master Prompt and business context, AI can help you:Why This System Creates Competitive AdvantageFor Remote Teams: Everyone has both context (why this matters) and clarity (exactly how to do it), eliminating the confusion that kills remote productivity.For Scaling Operations: You can train new team members faster and maintain quality as you grow, without requiring constant management oversight.For Customer Experience: Consistent processes across all levels ensure every customer receives the same high-quality experience regardless of who serves them.For Strategic Agility: When you need to change how something works, you can see the full impact across all levels and make coordinated updates rather than hoping nothing breaks.",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "Screenshot 2025-06-03 at 12.22.28 PM.png",
+        "content_type": "image/png",
+        "metadata": {
+          "identified": true,
+          "width": 1302,
+          "height": 1286,
+          "analyzed": true
+        },
+        "byte_size": 587481,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTNtV2dVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b0937c743b9331496aa1d68384789d35b920a054",
+        "type": "file",
+        "url": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTNtV2dVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b0937c743b9331496aa1d68384789d35b920a054/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c94871ba5479e24de62982019557cdcc73e92248/Screenshot%202025-06-03%20at%2012.22.28%E2%80%AFPM.png",
+        "is_downloadable": true,
+        "image_variants": {
+          "original": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTNtV2dVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b0937c743b9331496aa1d68384789d35b920a054/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c94871ba5479e24de62982019557cdcc73e92248/Screenshot%202025-06-03%20at%2012.22.28%E2%80%AFPM.png",
+          "thumbnail": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTNtV2dVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b0937c743b9331496aa1d68384789d35b920a054/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVdrd09ncHpZWFpsY25zR09ncHpkSEpwY0ZRPSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8e3873984cecb63ce8922890e6bae284f3645258/Screenshot%202025-06-03%20at%2012.22.28%E2%80%AFPM.png",
+          "small": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTNtV2dVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b0937c743b9331496aa1d68384789d35b920a054/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFKb0FUQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--174cceaf9a31f17164863935309188a5606afc21/Screenshot%202025-06-03%20at%2012.22.28%E2%80%AFPM.png",
+          "medium": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTNtV2dVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b0937c743b9331496aa1d68384789d35b920a054/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFMUUFqQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--9795b686cfa287dd8535c2801217d42f4915df97/Screenshot%202025-06-03%20at%2012.22.28%E2%80%AFPM.png",
+          "large": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTNtV2dVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b0937c743b9331496aa1d68384789d35b920a054/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJNEJEQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--7535ef66ff04b52d1ea165e904a77a64f9cc7389/Screenshot%202025-06-03%20at%2012.22.28%E2%80%AFPM.png"
+        }
+      }
+    ],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "chat_room_uuid": "1402b2fc-62c9-4121-8d13-00460f6d9f2d"
+}

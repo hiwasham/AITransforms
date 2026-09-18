@@ -1,0 +1,90 @@
+{
+  "id": 28884907,
+  "name": "Introduction",
+  "slug": "introduction",
+  "type": "Posts::Basic",
+  "status": "published",
+  "user_id": 7455594,
+  "published_at": "2026-01-22T16:04:26.202Z",
+  "updated_at": "2026-01-22T16:04:26.217Z",
+  "created_at": "2026-01-22T16:04:26.202Z",
+  "hide_meta_info": false,
+  "community_member_id": 52281182,
+  "is_truncation_disabled": null,
+  "hide_from_featured_areas": false,
+  "flagged_for_approval_at": null,
+  "pinned_at": null,
+  "internal_custom_html": null,
+  "is_comments_enabled": true,
+  "is_liking_enabled": true,
+  "share_post_enabled": null,
+  "share_uid": null,
+  "minimal_layout": false,
+  "show_post_teaser": false,
+  "editor": "tiptap",
+  "is_comments_closed": false,
+  "is_comments_disabled": false,
+  "is_liking_disabled": false,
+  "display_title": "Introduction",
+  "cover_image": null,
+  "cover_image_url": null,
+  "cover_image_variants": {},
+  "cardview_thumbnail": null,
+  "cardview_thumbnail_url": null,
+  "cardview_image_url": null,
+  "space_name": "Discussion",
+  "space_slug": "discussion-b92449",
+  "community_slug": "empower-labs",
+  "space_id": 2414947,
+  "pin_to_top": false,
+  "pinned_at_top_of_space": false,
+  "bookmark_id": null,
+  "topics": [
+    336018
+  ],
+  "community_member": {
+    "id": 52281182,
+    "user_id": 7455594,
+    "public_uid": "cda398d5",
+    "first_name": "Jonathan",
+    "last_name": null,
+    "name": "Jonathan",
+    "admin": false,
+    "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIwZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzc0NTU1OTQ_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiD2F0dGFjaGFibGUGOwBUSSIPZXhwaXJlc19hdAY7AFQw--399be3512bd823b97001e9ab14f0253d508f1ae1",
+    "type": "CommunityMember",
+    "headline": "Exec. VP & COO",
+    "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTIyODExODI_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--965db5cfebd4519d1095158dbb97cc7ea9afc284",
+    "avatar_url": null
+  },
+  "conversation_summary_overview": "",
+  "body_trix_content": "",
+  "body_for_editor": null,
+  "truncated_content": "I’m based outside of Pittsburgh, PA and I’m an EVP with ArchKey Bruce & Merrilees and former owner of Bruce & Merrilees Electric up to 4 months ago when we became part of ArchKey Solutions to allow us to grow our electrical installation work across the...",
+  "show_more": true,
+  "tiptap_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I’m based outside of Pittsburgh, PA and I’m an EVP with ArchKey Bruce & Merrilees and former owner of Bruce & Merrilees Electric up to 4 months ago when we became part of ArchKey Solutions to allow us to grow our electrical installation work across the country. We participate in heavy industrial, utility, transportation and our biggest market is mission critical/ data centers currently. I was part of the beta cohort last June which really opened my eyes to using AI on a larger basis to help our team. I look forward to furthering my knowledge and learning from everyone.",
+              "type": "text",
+              "circle_ios_fallback_text": "I’m based outside of Pittsburgh, PA and I’m an EVP with ArchKey Bruce & Merrilees and former owner of Bruce & Merrilees Electric up to 4 months ago when we became part of ArchKey Solutions to allow us to grow our electrical installation work across the country. We participate in heavy industrial, utility, transportation and our biggest market is mission critical/ data centers currently. I was part of the beta cohort last June which really opened my eyes to using AI on a larger basis to help our team. I look forward to furthering my knowledge and learning from everyone."
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "I’m based outside of Pittsburgh, PA and I’m an EVP with ArchKey Bruce & Merrilees and former owner of Bruce & Merrilees Electric up to 4 months ago when we became part of ArchKey Solutions to allow us to grow our electrical installation work across the country. We participate in heavy industrial, utility, transportation and our biggest market is mission critical/ data centers currently. I was part of the beta cohort last June which really opened my eyes to using AI on a larger basis to help our team. I look forward to furthering my knowledge and learning from everyone.",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  }
+}

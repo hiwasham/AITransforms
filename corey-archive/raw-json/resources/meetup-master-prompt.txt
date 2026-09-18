@@ -1,0 +1,66 @@
+AI for Business Meetup Prompt
+-
+# PROMPT: Execute the "AI for Business" Meetup Q3 Rock
+You are my operator for a Q3 Rock: launch a monthly in-person event in Charlotte, NC called AI for Business. Your job is to produce every asset, plan, and system needed to make this Rock succeed — not advice, finished deliverables. Use web search wherever real-world data is needed (venues, Facebook groups, local channels, competing events). Do not hedge. One recommendation per decision, then alternatives only if materially different.
+## CONTEXT
+Who I am: Corey Ganim — AI educator and entrepreneur in Charlotte, NC. I run AI Operator Academy (a $999/yr Skool community for AI operators), the Build With AI podcast/YouTube channel, and an AI services business.
+The services business and its offers:
+- AI Concierge — ongoing retainer where I work hands-on with a business to audit, optimize, and automate their operations with AI ($5K/mo tier)
+- AI Assessments — paid diagnostic ($1K) that uncovers a business's highest-ROI AI opportunities. Important: the assessment is tailorable to whichever service the client is interested in. Example: if a client wants a knowledge base build, the assessment is geared toward uncovering the data sources that would need to flow into that knowledge base. The assessment is the front door to every other offer.
+- Knowledge Base builds — building structured knowledge bases that power a company's AI agents and workflows
+- Managed Agents — we build and manage AI agents that run inside the client's business
+Team (current):
+- Corey (me): owns sales and marketing for the services business. I host the event, speak, and work the room. I take all discovery calls. I do NOT handle logistics.
+- Nick (technical lead): owns technology and fulfillment for the services business. Delivers assessments, knowledge base builds, and managed agent work with me.
+- Ingrid (Chief of Staff): owns all event operations and logistics end to end.
+Why this event exists (the outcome): Position me as THE local AI expert in Charlotte and unlock opportunities across the company: leads for the services business, AI Concierge clients, speaking opportunities, partnerships, and local brand authority. Secondary benefit: content.
+Event ICP: Any entrepreneur or small business owner in Charlotte interested in learning about and implementing AI in their business — specifically NON-TECHNICAL people with no coding background. Every talk, demo, post, and email must be written for a smart operator who has never opened a terminal and never will. No dev jargon, ever.
+The model I'm copying: My friend Andrew Hewitt runs Triad Dev Connect in Winston-Salem — monthly, ~40 attendees after 7 months, guest speaker or short workshop format, $80K in attributed agency revenue. I'm adapting that model for a non-technical AI + business audience in Charlotte.
+Rock measurables (hard targets, unchanged):
+- 3 events held: July, August, September 2026
+- 25+ attendees by event #3 (do not expect 40 at event #1)
+- Attribution tracked from event #1 (every attendee tagged by source and intent)
+- 1 closed AI Concierge or services client sourced from the event by Sept 30
+Brand: Colors — #F06000 primary orange, #FF7A1A secondary, #8090A0 slate, black background, white headings, #F0E0D0 body. Fonts: Montserrat Extra Bold headings, Inter body. Voice: direct, tactical, zero fluff, results-first. No em dashes in any copy.
+Tools available: Luma (events), Kit (email), Calendly, Notion, Canva/Gamma for design, my newsletter list, 45K+ X followers, LinkedIn, YouTube.
+Today's date: June 9, 2026. Event #1 must land mid-July, so there are ~5 weeks of runway.
+## DELIVERABLES — produce ALL of the following, in order
+### Phase 1: Venue research and pitch
+- Web-search Charlotte coworking spaces and event-friendly venues. Start with Tabris coworking in South End — it has hosted AI-focused meetups before and is my leading candidate. Verify its capacity, A/V, availability, and event-hosting terms first. Then build a ranked shortlist of 5 total (e.g., Hygge, Advent Coworking, Industrious, hex coworking, Camp North End spaces, breweries with private rooms as backup) with: capacity (need 30–50), A/V availability, parking, neighborhood, typical cost or free-host potential, and contact info.
+- Recommend ONE primary venue and one backup, with reasoning. If Tabris checks out, say so and move on — do not manufacture a debate.
+- Write the venue pitch email: the angle is a win-win — they host for free, we fill their space monthly with 25–50 local business owners (their exact prospect base for memberships). For Tabris specifically, reference their history hosting AI events and position this as the recurring non-technical counterpart. Include a follow-up bump email for 4 days later.
+### Phase 2: Event design
+- Lock the format, modeled on Triad Dev Connect: 90 minutes total. Recommend the exact run-of-show (doors/networking → my 20-min live AI demo → guest speaker or workshop → structured networking → CTA close). Include the 60-second CTA script I deliver at the end that routes people to (a) a paid AI Assessment as the entry point to everything we do and (b) AI Operator Academy for those who want to learn it themselves, without sounding like a pitch-fest.
+- Recommend the recurring slot (day of week + time) based on what works for small business owner attendance, and the July/Aug/Sep dates.
+- Event #1 topic and title: recommend one. It must be a live screen-share demo showing a non-technical owner how AI saves time or makes money in their business — think "watch me do this in front of you," not a lecture. It should naturally showcase what an assessment, knowledge base, or managed agent could do for them.
+- A 6-month speaker pipeline plan: how to source guest speakers locally (and why sponsors/speakers should come from complementary, non-competing services). Every speaker must pass the non-technical test: if a slide has code on it, they don't speak.
+### Phase 3: Marketing engine
+- Full channel plan to get 15–20 in the room at event #1 and 25+ by event #3: Luma event page, my email list, X, LinkedIn, Charlotte Facebook groups (see #9), Meetup.com cross-listing, local Slack/Discord communities, chamber of commerce, and personal invites. Web-search what's actually active in Charlotte right now.
+- Facebook group strategy (priority channel): Web-search and list the active Charlotte small business, entrepreneurship, and AI-focused Facebook groups (e.g., Charlotte small business owner groups, Charlotte entrepreneur networks, NC AI enthusiast groups). Then write the actual posts for these groups. Requirements:
+- 3 distinct post variations so I'm not pasting identical copy across groups
+- Lead with value and local relevance, not promotion: the post should read like a local business owner sharing a free resource, not an ad
+- One version framed as a question/discussion starter ("what's the one thing you wish AI could handle in your business?") that soft-introduces the event in the comments or final line
+- Include a short "new member intro" version for groups where I'm joining fresh, so the first post builds credibility instead of dropping a link
+- Flag which post types risk violating typical group no-promo rules and give the workaround (e.g., value post + link in comments, or DM-me-for-details)
+- Write the rest of the copy: Luma event page (title, description, agenda), 3 LinkedIn posts (announce, 1-week-out, day-before), 5 X posts, one newsletter section for my list, and a personal-invite DM template I can send 1:1 to Charlotte contacts.
+- A simple poster/slide spec for Gamma or Canva using my brand palette.
+### Phase 4: Attribution and lead capture
+- Registration form questions (Luma): name, email, company, role, "What do you do?", "What's your #1 thing you want AI to fix?", "How did you hear about this?" Keep it under 60 seconds to complete.
+- Day-of check-in process and a lead-scoring rubric: HOT (fits services ICP, named a specific pain that maps to an assessment, knowledge base build, managed agent, or Concierge retainer, asked about working together) / WARM (AOA fit — wants to learn and do it themselves) / NURTURE (everyone else). Define exactly what Ingrid logs in Notion within 24 hours of each event, including which service each HOT lead maps to.
+### Phase 5: Follow-up sequences (write every email in full, in my voice, Kit-ready plain text, zero markdown, zero em dashes)
+- HOT track (services leads): same-day personal email from me referencing the specific pain they named, with my Calendly link to book a discovery call for a tailored AI Assessment. The email should position the assessment as the natural first step regardless of which service they ultimately need (Concierge, knowledge base, managed agents). 3 touches over 7 days. Nick joins from the fulfillment side after the discovery call — he does not appear in the emails.
+- WARM track (AOA fits): 3-email sequence over 10 days bridging from the event topic to AI Operator Academy with a clear join CTA.
+- NURTURE track (everyone): next-day "thanks + recap + slides/resources" email, plus an automatic invite when the next month's event goes live.
+- No-show track: 1 email with the recap resource and next month's date.
+### Phase 6: Ops SOP for Ingrid
+- A complete T-minus checklist from T-5 weeks to T+2 days covering venue confirmation, Luma setup, promo schedule (including the Facebook group posting calendar), food/drink order (budget it), signage, A/V test, check-in, photos/content capture, and post-event data entry. Written so Ingrid can run event #2 and #3 with zero input from me.
+- Per-event budget estimate and quarterly total.
+### Phase 7: Andrew Hewitt playbook call
+- A tight question list for a 30-minute call with Andrew: venue economics, what flopped early, attendance growth curve, speaker sourcing, sponsor handling, attribution method, and the 2–3 things he'd do differently. Order by importance.
+### Phase 8: Scoreboard
+- The Rock scoreboard: weekly leading metrics (registrations, confirmations, personal invites sent, Facebook group posts published) and monthly lagging metrics (attendees, HOT leads by service type, discovery calls booked, assessments sold, AOA joins attributed, client closed Y/N), with July/Aug/Sep milestone targets that ladder to the Rock measurables above. Include a "positioning" metric row: inbound speaking invitations and local press/podcast asks generated, since local AI authority is a core outcome of this Rock.
+## OUTPUT REQUIREMENTS
+- Deliver each phase as its own clearly labeled section or file. Email copy, Facebook posts, and SOPs must be final, usable text — not outlines.
+- Where you used web search (venues, Facebook groups, local channels), cite what you found and flag anything that needs a phone call or a group-join to confirm.
+- Anything ambiguous: make the call, state the assumption in one line, keep moving. Do not stop to ask questions until all 21 deliverables are complete.
+- End with a one-page summary: the 5 decisions I need to approve (venue, date/slot, event #1 topic, budget, CTA offer) and nothing else.

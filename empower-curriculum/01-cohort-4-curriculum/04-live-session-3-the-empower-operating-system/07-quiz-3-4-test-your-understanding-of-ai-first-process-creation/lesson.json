@@ -1,0 +1,167 @@
+{
+  "id": 3381300,
+  "name": "Quiz 3.4: Test Your Understanding of AI-First Process Creation",
+  "status": "published",
+  "featured_media_enabled": true,
+  "download_featured_media": false,
+  "created_at": "2026-01-30T14:21:59.197Z",
+  "updated_at": "2026-01-30T19:40:14.437Z",
+  "comments_enabled": false,
+  "default_tab": "curriculum",
+  "enforce_featured_media_completion": false,
+  "autocomplete_on_featured_media_completion": true,
+  "dripped_at": null,
+  "is_dripped": true,
+  "needs_to_complete_previous_lesson": false,
+  "completed": false,
+  "notify_students_enabled": false,
+  "bookmark_id": null,
+  "serialized_rich_text_body": null,
+  "rich_text_body": {},
+  "chat_room_uuid": "85e026bf-3689-4b6f-9f91-8f4441643b1c",
+  "latest_quiz_attempt_id": null,
+  "quiz": {
+    "id": 104261,
+    "passing_grade": 80,
+    "enforce_passing_grade": false,
+    "hide_answers": false,
+    "description": null,
+    "questions": [
+      {
+        "id": 503372,
+        "question_type": "single_choice",
+        "statement": "1. What is the primary reason most small businesses never complete traditional BPM (Business Process Management) projects?",
+        "options": [
+          {
+            "id": 1795868,
+            "value": " They don't understand the importance of documented processes"
+          },
+          {
+            "id": 1795869,
+            "value": " Traditional BPM takes 6-12 months and requires massive resources"
+          },
+          {
+            "id": 1795870,
+            "value": " Their teams resist any form of process documentation"
+          },
+          {
+            "id": 1795871,
+            "value": " They prefer to stay in Stage 1 (Heroic Effort) operations"
+          },
+          {
+            "id": 1795872,
+            "value": " Traditional BPM methods are too technical for small business owners"
+          }
+        ]
+      },
+      {
+        "id": 503373,
+        "question_type": "single_choice",
+        "statement": "2. What is the fundamental challenge with AI-generated processes?",
+        "options": [
+          {
+            "id": 1795873,
+            "value": " AI cannot understand complex business operations"
+          },
+          {
+            "id": 1795874,
+            "value": " AI-generated processes are always too simple for real business needs"
+          },
+          {
+            "id": 1795875,
+            "value": " AI creates \"should work\" processes while reality creates \"actually works\" processes"
+          },
+          {
+            "id": 1795876,
+            "value": " AI processes are too expensive to implement"
+          },
+          {
+            "id": 1795877,
+            "value": " AI cannot write processes that follow industry best practices"
+          }
+        ]
+      },
+      {
+        "id": 503374,
+        "question_type": "single_choice",
+        "statement": "3. What is the key competitive advantage of AI-first process creation over traditional BPM?\n\n",
+        "options": [
+          {
+            "id": 1795878,
+            "value": " AI processes never need to be updated or changed"
+          },
+          {
+            "id": 1795879,
+            "value": " AI eliminates the need for team training on new processes"
+          },
+          {
+            "id": 1795880,
+            "value": "AI processes are automatically better than human-created processes"
+          },
+          {
+            "id": 1795881,
+            "value": " AI-first approaches enable 10-50x faster improvement cycles through rapid feedback loops"
+          },
+          {
+            "id": 1795882,
+            "value": " AI processes cost significantly less to implement"
+          }
+        ]
+      },
+      {
+        "id": 503375,
+        "question_type": "single_choice",
+        "statement": "4. According to the rapid validation framework, what should you do immediately after AI generates a process?",
+        "options": [
+          {
+            "id": 1795883,
+            "value": " Train your entire team on the new process before testing it"
+          },
+          {
+            "id": 1795884,
+            "value": " Execute the process with real work and mark gaps in real-time"
+          },
+          {
+            "id": 1795885,
+            "value": " Send the process to external consultants for review"
+          },
+          {
+            "id": 1795886,
+            "value": "Wait 30 days before implementing to ensure it's complete"
+          },
+          {
+            "id": 1795887,
+            "value": " Compare it with competitor processes before implementation"
+          }
+        ]
+      },
+      {
+        "id": 503376,
+        "question_type": "single_choice",
+        "statement": "5. What is the most critical element that AI-generated processes often lack?",
+        "options": [
+          {
+            "id": 1795888,
+            "value": " Proper formatting and professional appearance"
+          },
+          {
+            "id": 1795889,
+            "value": " Integration with existing software systems"
+          },
+          {
+            "id": 1795890,
+            "value": " Compliance with industry regulations"
+          },
+          {
+            "id": 1795891,
+            "value": " Detailed step-by-step instructions"
+          },
+          {
+            "id": 1795892,
+            "value": " Ownership assignment and contextual knowledge of how work actually happens"
+          }
+        ]
+      }
+    ]
+  }
+}

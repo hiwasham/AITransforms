@@ -1,0 +1,329 @@
+{
+  "id": 30473345,
+  "name": "Watch Session 11 Replay + Exercises + Join the Final Session ",
+  "slug": "watch-session-11-replay-exercises-join-the-final-session",
+  "type": "Posts::Basic",
+  "status": "published",
+  "user_id": 39364111,
+  "published_at": "2026-03-09T23:08:35.400Z",
+  "updated_at": "2026-03-09T23:12:57.658Z",
+  "created_at": "2026-03-09T23:08:35.400Z",
+  "hide_meta_info": false,
+  "community_member_id": 51527687,
+  "is_truncation_disabled": null,
+  "hide_from_featured_areas": false,
+  "flagged_for_approval_at": null,
+  "pinned_at": null,
+  "internal_custom_html": null,
+  "is_comments_enabled": true,
+  "is_liking_enabled": true,
+  "share_post_enabled": null,
+  "share_uid": null,
+  "minimal_layout": false,
+  "show_post_teaser": false,
+  "editor": "tiptap",
+  "is_comments_closed": false,
+  "is_comments_disabled": false,
+  "is_liking_disabled": false,
+  "display_title": "Watch Session 11 Replay + Exercises + Join the Final Session ",
+  "cover_image": null,
+  "cover_image_url": null,
+  "cover_image_variants": {},
+  "cardview_thumbnail": null,
+  "cardview_thumbnail_url": null,
+  "cardview_image_url": null,
+  "space_name": "Announcements",
+  "space_slug": "announcements-4101a0",
+  "community_slug": "empower-labs",
+  "space_id": 2414936,
+  "pin_to_top": false,
+  "pinned_at_top_of_space": false,
+  "bookmark_id": null,
+  "topics": [],
+  "community_member": {
+    "id": 51527687,
+    "user_id": 39364111,
+    "public_uid": "b2be8b1e",
+    "first_name": "Ronnie",
+    "last_name": "Seguilla",
+    "name": "Ronnie Seguilla",
+    "admin": true,
+    "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzM5MzY0MTExP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--526c8da859ab73228e0fe33cfc7e422ab8b19331",
+    "type": "CommunityMember",
+    "headline": "Admin",
+    "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTE1Mjc2ODc_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--ff7e32066a01f1a91da71adf5a71bc9c75b95f13",
+    "avatar_url": null
+  },
+  "conversation_summary_overview": "",
+  "body_trix_content": "",
+  "body_for_editor": null,
+  "truncated_content": "This session propels us from the final stretch into real-world AI implementation—we're almost there, let’s keep going!\n\n1. Watch the Replay of Session 11: Sustainable AI Integration\n\nIf you couldn’t attend or would like to revisit any part of the sessi...",
+  "show_more": true,
+  "tiptap_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This session propels us from the final stretch into real-world AI implementation—we're almost there, let’s keep going!",
+              "type": "text",
+              "circle_ios_fallback_text": "This session propels us from the final stretch into real-world AI implementation—we're almost there, let’s keep going!"
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "1. Watch the Replay of Session 11: Sustainable AI Integration",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "1. Watch the Replay of Session 11: Sustainable AI Integration"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you couldn’t attend or would like to revisit any part of the session, the recording is now ready for you to watch.",
+              "type": "text",
+              "circle_ios_fallback_text": "If you couldn’t attend or would like to revisit any part of the session, the recording is now ready for you to watch."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In addition to the video replay, you’ll also find a downloadable version of the slides, access to the chat and transcript, and a summary of the main points for reference.",
+              "type": "text",
+              "circle_ios_fallback_text": "In addition to the video replay, you’ll also find a downloadable version of the slides, access to the chat and transcript, and a summary of the main points for reference."
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/941015/lessons/3567655",
+            "color": "#2B2E33",
+            "label": "Watch the Replay",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "2. Complete the Exercise: Export Your Master Prompt",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "2. Complete the Exercise: Export Your Master Prompt"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "It’s time to move your Master Prompt out of a single Claude project so it can become a living document that not only you, but also your team, benefits from. ",
+              "type": "text",
+              "circle_ios_fallback_text": "It’s time to move your Master Prompt out of a single Claude project so it can become a living document that not only you, but also your team, benefits from. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The goal of this exercise is to export the artifacts from your Master Prompt project and consolidate them into one document that you can share with your team and attach to different projects. ",
+              "type": "text",
+              "circle_ios_fallback_text": "The goal of this exercise is to export the artifacts from your Master Prompt project and consolidate them into one document that you can share with your team and attach to different projects. "
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/sections/941015/lessons/3567656",
+            "color": "#2B2E33",
+            "label": "Complete the Exercise",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "3. Join Live Session 12: Strategic Alignment and Team Buildout",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "3. Join Live Session 12: Strategic Alignment and Team Buildout"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "We're meeting on, ",
+              "type": "text",
+              "circle_ios_fallback_text": "We're meeting on, "
+            },
+            {
+              "text": "Friday, March 13, 1:00 PM – 2:30 PM EDT,",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Friday, March 13, 1:00 PM – 2:30 PM EDT,"
+            },
+            {
+              "text": " to dive into ",
+              "type": "text",
+              "circle_ios_fallback_text": " to dive into "
+            },
+            {
+              "text": "Strategic Alignment and Team Buildout",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Strategic Alignment and Team Buildout"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Even if you weren’t able to participate in previous sessions or are feeling a bit behind, please do join us for the final one. We’ll be discussing next steps and support after the cohort ends.  ",
+              "type": "text",
+              "circle_ios_fallback_text": "Even if you weren’t able to participate in previous sessions or are feeling a bit behind, please do join us for the final one. We’ll be discussing next steps and support after the cohort ends.  "
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://community.empowerlabs.ai/c/calendar-83e687/live-session-12-strategic-alignment-and-team-buildout",
+            "color": "#2B2E33",
+            "label": "Join Live Session 12",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "If you have questions, ideas, or feedback...",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "If you have questions, ideas, or feedback..."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Don’t hesitate to post in the ",
+              "type": "text",
+              "circle_ios_fallback_text": "Don’t hesitate to post in the "
+            },
+            {
+              "type": "entity",
+              "attrs": {
+                "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa"
+              },
+              "circle_ios_fallback_text": "#Discussion"
+            },
+            {
+              "text": " space. Our team is checking in there every day, and we’re here to support you throughout the program",
+              "type": "text",
+              "circle_ios_fallback_text": " space. Our team is checking in there every day, and we’re here to support you throughout the program"
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "This session propels us from the final stretch into real-world AI implementation—we're almost there, let’s keep going!1. Watch the Replay of Session 11: Sustainable AI IntegrationIf you couldn’t attend or would like to revisit any part of the session, the recording is now ready for you to watch.In addition to the video replay, you’ll also find a downloadable version of the slides, access to the chat and transcript, and a summary of the main points for reference.2. Complete the Exercise: Export Your Master PromptIt’s time to move your Master Prompt out of a single Claude project so it can become a living document that not only you, but also your team, benefits from. The goal of this exercise is to export the artifacts from your Master Prompt project and consolidate them into one document that you can share with your team and attach to different projects. 3. Join Live Session 12: Strategic Alignment and Team BuildoutWe're meeting on, Friday, March 13, 1:00 PM – 2:30 PM EDT, to dive into Strategic Alignment and Team BuildoutEven if you weren’t able to participate in previous sessions or are feeling a bit behind, please do join us for the final one. We’ll be discussing next steps and support after the cohort ends.  If you have questions, ideas, or feedback...Don’t hesitate to post in the #Discussion space. Our team is checking in there every day, and we’re here to support you throughout the program",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa": {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    },
+    "format": "post",
+    "community_members": [],
+    "entities": [
+      {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    ],
+    "group_mentions": [],
+    "polls": []
+  }
+}

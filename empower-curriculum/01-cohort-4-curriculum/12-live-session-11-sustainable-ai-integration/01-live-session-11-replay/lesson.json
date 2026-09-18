@@ -1,0 +1,659 @@
+{
+  "id": 3567655,
+  "name": "Live Session 11: Replay",
+  "status": "published",
+  "featured_media_enabled": true,
+  "download_featured_media": false,
+  "created_at": "2026-03-09T13:15:14.433Z",
+  "updated_at": "2026-03-09T22:43:58.641Z",
+  "comments_enabled": false,
+  "default_tab": "curriculum",
+  "enforce_featured_media_completion": false,
+  "autocomplete_on_featured_media_completion": true,
+  "dripped_at": null,
+  "is_dripped": true,
+  "needs_to_complete_previous_lesson": false,
+  "completed": false,
+  "notify_students_enabled": false,
+  "bookmark_id": null,
+  "featured_media": {
+    "playback_url": "https://cdn-media.circle.so/bcdn_token=oUJEM13GZMTQ_0pligZN1-k7jtOqyOxhdFkyOszPitE&token_path=%2Fc9818dbe-9461-45b3-8d70-426c1e908370%2F&expires=1787965057/c9818dbe-9461-45b3-8d70-426c1e908370/hls/playlist.m3u8",
+    "current_storage": "in_house",
+    "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRVlRL2dnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--71379ae4977820aec88010101b996c3b43920602",
+    "filename": "empower_labs_cohort_live_session_11_v3 (1080p).mp4",
+    "content_type": "video/mp4",
+    "duration": "01:05:09",
+    "is_downloadable": false,
+    "url": "https://assets-v2.circle.so/jqpv3ni8mj0ps2es2w80wjuw2v7b",
+    "thumbnail_image_url": "https://cdn-media.circle.so/bcdn_token=oUJEM13GZMTQ_0pligZN1-k7jtOqyOxhdFkyOszPitE&token_path=%2Fc9818dbe-9461-45b3-8d70-426c1e908370%2F&expires=1787965057/c9818dbe-9461-45b3-8d70-426c1e908370/thumbnail.jpg",
+    "media_transcript_id": 3738715,
+    "media_transcoding": {
+      "status": "succeeded"
+    },
+    "chapters_url": null,
+    "preview_thumbnails_url": "https://cdn-media.circle.so/bcdn_token=oUJEM13GZMTQ_0pligZN1-k7jtOqyOxhdFkyOszPitE&token_path=%2Fc9818dbe-9461-45b3-8d70-426c1e908370%2F&expires=1787965057/c9818dbe-9461-45b3-8d70-426c1e908370/mosaic.vtt",
+    "video_variants": {
+      "original": "https://assets-v2.circle.so/jqpv3ni8mj0ps2es2w80wjuw2v7b",
+      "hls": "https://cdn-media.circle.so/bcdn_token=oUJEM13GZMTQ_0pligZN1-k7jtOqyOxhdFkyOszPitE&token_path=%2Fc9818dbe-9461-45b3-8d70-426c1e908370%2F&expires=1787965057/c9818dbe-9461-45b3-8d70-426c1e908370/hls/playlist.m3u8"
+    }
+  },
+  "serialized_rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Summary",
+              "type": "text",
+              "circle_ios_fallback_text": "Summary"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Implementation and Transition Session",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Implementation and Transition Session"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The EMPOWER Labs program reached its second-to-last session, with participants focusing on practical AI implementation and next steps post-cohort. Midori introduced the session, emphasizing the importance of the final week's exercises and the transition from cohort participant to AI implementer. Hayden was set to lead the session, guiding participants through the application of their learned frameworks, prompts, and exercises, including the integration of their business context into AI using the EMPOWER framework. Participants were encouraged to work at their own pace, as they would continue to have access to the curriculum and exercises over the coming months.",
+              "type": "text",
+              "circle_ios_fallback_text": "The EMPOWER Labs program reached its second-to-last session, with participants focusing on practical AI implementation and next steps post-cohort. Midori introduced the session, emphasizing the importance of the final week's exercises and the transition from cohort participant to AI implementer. Hayden was set to lead the session, guiding participants through the application of their learned frameworks, prompts, and exercises, including the integration of their business context into AI using the EMPOWER framework. Participants were encouraged to work at their own pace, as they would continue to have access to the curriculum and exercises over the coming months."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Optimizing Claude Master Prompts",
+              "type": "text",
+              "circle_ios_fallback_text": "Optimizing Claude Master Prompts"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed three options for managing master prompts in Claude, ranging from keeping them in cloud projects to using Google Docs or Stage 3 for better team collaboration and version control. He emphasized the importance of cleaning up master prompts by removing frequently accessed content like SOPs and processes to improve efficiency and reduce token usage. Hayden also introduced the concept of Claude skills, explaining how they can be created to store and organize specific prompts, potentially replacing the need for certain master prompt content. Don inquired about the relationship between skills and existing master prompts, and Hayden clarified that skills would coexist with and potentially replace parts of the master prompt to conserve resources.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed three options for managing master prompts in Claude, ranging from keeping them in cloud projects to using Google Docs or Stage 3 for better team collaboration and version control. He emphasized the importance of cleaning up master prompts by removing frequently accessed content like SOPs and processes to improve efficiency and reduce token usage. Hayden also introduced the concept of Claude skills, explaining how they can be created to store and organize specific prompts, potentially replacing the need for certain master prompt content. Don inquired about the relationship between skills and existing master prompts, and Hayden clarified that skills would coexist with and potentially replace parts of the master prompt to conserve resources."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Claude Skills and Team Collaboration",
+              "type": "text",
+              "circle_ios_fallback_text": "Claude Skills and Team Collaboration"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden explained how to create and use skills in Claude, emphasizing that a skill is a .md file that can contain HTML and other content. He advised creating a handoff file when chat windows are compressed to preserve context. Hayden also discussed the limitations of Claude for Teams, suggesting that Stage 3 offers a more comprehensive solution for managing master prompts and team collaboration. Nancy expressed confusion about the benefits of Claude for Teams, and Hayden recommended using a Claude Max account for more efficient and cost-effective usage. FM shared challenges with version control and sharing prompts with team leads, and Hayden suggested using Stage 3 as a more efficient alternative to Claude for Teams.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden explained how to create and use skills in Claude, emphasizing that a skill is a .md file that can contain HTML and other content. He advised creating a handoff file when chat windows are compressed to preserve context. Hayden also discussed the limitations of Claude for Teams, suggesting that Stage 3 offers a more comprehensive solution for managing master prompts and team collaboration. Nancy expressed confusion about the benefits of Claude for Teams, and Hayden recommended using a Claude Max account for more efficient and cost-effective usage. FM shared challenges with version control and sharing prompts with team leads, and Hayden suggested using Stage 3 as a more efficient alternative to Claude for Teams."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Skills Management Tools Discussion",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Skills Management Tools Discussion"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden and FM discussed using Google Docs with version control or GitHub for managing and sharing AI skills, with Hayden suggesting GitHub as a more complex but powerful option. Hayden also explained the use of Cloud Code for team collaboration and mentioned the potential for sharing skills within a team, though he wasn't entirely sure about this feature. Midori inquired about storing skills in Stage 3, to which Hayden clarified that while Stage 3 uses Gemini, skills are stored as knowledge documents that can be enabled or referenced. Hayden also demonstrated how to use Stage 3 to manage master prompts, version control, and team roles, emphasizing its utility for documenting processes and installing new capabilities.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden and FM discussed using Google Docs with version control or GitHub for managing and sharing AI skills, with Hayden suggesting GitHub as a more complex but powerful option. Hayden also explained the use of Cloud Code for team collaboration and mentioned the potential for sharing skills within a team, though he wasn't entirely sure about this feature. Midori inquired about storing skills in Stage 3, to which Hayden clarified that while Stage 3 uses Gemini, skills are stored as knowledge documents that can be enabled or referenced. Hayden also demonstrated how to use Stage 3 to manage master prompts, version control, and team roles, emphasizing its utility for documenting processes and installing new capabilities."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Stage 3 Process Management Overview",
+              "type": "text",
+              "circle_ios_fallback_text": "Stage 3 Process Management Overview"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden demonstrated Stage 3, a tool for building and managing processes, and discussed its cost structure, which is relatively low per user. He explained that Stage 3 offers both free and paid tiers, with the goal of making the product accessible to most users for around $1,000 per month. Hayden also outlined a team onboarding process that involves training team members to create their own role master prompts and using the Clarity Board to identify time-saving opportunities, which typically results in about 10 hours of weekly time savings.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden demonstrated Stage 3, a tool for building and managing processes, and discussed its cost structure, which is relatively low per user. He explained that Stage 3 offers both free and paid tiers, with the goal of making the product accessible to most users for around $1,000 per month. Hayden also outlined a team onboarding process that involves training team members to create their own role master prompts and using the Clarity Board to identify time-saving opportunities, which typically results in about 10 hours of weekly time savings."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Training and Culture Initiatives",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Training and Culture Initiatives"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed the cost and approach for implementing AI training programs, emphasizing a culture of learning and experimentation. He suggested starting with volunteers and offering training sessions to build confidence and encourage participation. Hayden also highlighted the importance of sharing AI wins and failures to foster a supportive environment and recommended investing in AI education to enhance team skills. He concluded by advocating for profit-sharing to retain employees and encourage entrepreneurship, noting the potential for increased productivity and innovation.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed the cost and approach for implementing AI training programs, emphasizing a culture of learning and experimentation. He suggested starting with volunteers and offering training sessions to build confidence and encourage participation. Hayden also highlighted the importance of sharing AI wins and failures to foster a supportive environment and recommended investing in AI education to enhance team skills. He concluded by advocating for profit-sharing to retain employees and encourage entrepreneurship, noting the potential for increased productivity and innovation."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Opportunities and Implementation Strategies",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Opportunities and Implementation Strategies"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed the opportunities and benefits of AI in business, including cost collapses, revenue growth, and operational efficiency. He explained how AI can help identify inefficiencies, automate processes, and reduce expenses, potentially leading to significant cost savings. Hayden also shared his experience with AI tools like HeyGen and SendPotion for creating professional videos and personalized outreach. The group discussed tracking success metrics for AI implementation, such as process enhancement, team adoption, and time savings. Hayden emphasized the importance of clear communication and accountability in AI initiatives, as well as the positive impact on employee engagement when teams work collaboratively on AI projects.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed the opportunities and benefits of AI in business, including cost collapses, revenue growth, and operational efficiency. He explained how AI can help identify inefficiencies, automate processes, and reduce expenses, potentially leading to significant cost savings. Hayden also shared his experience with AI tools like HeyGen and SendPotion for creating professional videos and personalized outreach. The group discussed tracking success metrics for AI implementation, such as process enhancement, team adoption, and time savings. Hayden emphasized the importance of clear communication and accountability in AI initiatives, as well as the positive impact on employee engagement when teams work collaboratively on AI projects."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Adoption Strategies and Trends",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Adoption Strategies and Trends"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed the evolution of AI adoption phases in business, emphasizing the current innovation phase and predicting future trends. He highlighted the importance of staying ahead in AI adoption and provided recommendations for continuous learning and implementation. Hayden also addressed potential pitfalls such as implementation fatigue and suggested strategies to overcome them. He encouraged attendees to allocate time for AI learning and experimentation, with a minimum recommendation of an hour a day, to maintain a competitive edge in the rapidly evolving AI landscape.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed the evolution of AI adoption phases in business, emphasizing the current innovation phase and predicting future trends. He highlighted the importance of staying ahead in AI adoption and provided recommendations for continuous learning and implementation. Hayden also addressed potential pitfalls such as implementation fatigue and suggested strategies to overcome them. He encouraged attendees to allocate time for AI learning and experimentation, with a minimum recommendation of an hour a day, to maintain a competitive edge in the rapidly evolving AI landscape."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Implementation and Strategy Review",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Implementation and Strategy Review"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed the importance of executing AI implementations quickly to maintain a competitive edge, noting that first-mover advantages begin to diminish as AI tools become more commoditized. He emphasized the value of human oversight in AI-driven processes and shared insights from a company that developed multiple AI products in a short time. The group reviewed tools used for implementing new processes, including ",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed the importance of executing AI implementations quickly to maintain a competitive edge, noting that first-mover advantages begin to diminish as AI tools become more commoditized. He emphasized the value of human oversight in AI-driven processes and shared insights from a company that developed multiple AI products in a short time. The group reviewed tools used for implementing new processes, including "
+            },
+            {
+              "text": "Fireflies.ai",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "http://fireflies.ai/",
+                    "class": null,
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "circle_ios_fallback_text": "Fireflies.ai"
+            },
+            {
+              "text": ", Zapier, Gmail, and Zoom. Midori announced the final cohort meeting on Friday, which will focus on strategic alignment and team building, followed by an open forum for addressing outstanding questions. Participants discussed challenges in balancing AI innovation with existing workloads and the need for clear communication about AI's role in future frameworks.",
+              "type": "text",
+              "circle_ios_fallback_text": ", Zapier, Gmail, and Zoom. Midori announced the final cohort meeting on Friday, which will focus on strategic alignment and team building, followed by an open forum for addressing outstanding questions. Participants discussed challenges in balancing AI innovation with existing workloads and the need for clear communication about AI's role in future frameworks."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Transcript & Chat",
+              "type": "text",
+              "circle_ios_fallback_text": "Transcript & Chat"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCT0VTL2dnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--3482edc40ecabf1b2d2715cb18a9ff6ecfb9c063"
+          }
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQ0FUL2dnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f8f408724f288408bb04c669e10c0ba578f473c2"
+          }
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "SummaryAI Implementation and Transition SessionThe EMPOWER Labs program reached its second-to-last session, with participants focusing on practical AI implementation and next steps post-cohort. Midori introduced the session, emphasizing the importance of the final week's exercises and the transition from cohort participant to AI implementer. Hayden was set to lead the session, guiding participants through the application of their learned frameworks, prompts, and exercises, including the integration of their business context into AI using the EMPOWER framework. Participants were encouraged to work at their own pace, as they would continue to have access to the curriculum and exercises over the coming months.Optimizing Claude Master PromptsHayden discussed three options for managing master prompts in Claude, ranging from keeping them in cloud projects to using Google Docs or Stage 3 for better team collaboration and version control. He emphasized the importance of cleaning up master prompts by removing frequently accessed content like SOPs and processes to improve efficiency and reduce token usage. Hayden also introduced the concept of Claude skills, explaining how they can be created to store and organize specific prompts, potentially replacing the need for certain master prompt content. Don inquired about the relationship between skills and existing master prompts, and Hayden clarified that skills would coexist with and potentially replace parts of the master prompt to conserve resources.Claude Skills and Team CollaborationHayden explained how to create and use skills in Claude, emphasizing that a skill is a .md file that can contain HTML and other content. He advised creating a handoff file when chat windows are compressed to preserve context. Hayden also discussed the limitations of Claude for Teams, suggesting that Stage 3 offers a more comprehensive solution for managing master prompts and team collaboration. Nancy expressed confusion about the benefits of Claude for Teams, and Hayden recommended using a Claude Max account for more efficient and cost-effective usage. FM shared challenges with version control and sharing prompts with team leads, and Hayden suggested using Stage 3 as a more efficient alternative to Claude for Teams.AI Skills Management Tools DiscussionHayden and FM discussed using Google Docs with version control or GitHub for managing and sharing AI skills, with Hayden suggesting GitHub as a more complex but powerful option. Hayden also explained the use of Cloud Code for team collaboration and mentioned the potential for sharing skills within a team, though he wasn't entirely sure about this feature. Midori inquired about storing skills in Stage 3, to which Hayden clarified that while Stage 3 uses Gemini, skills are stored as knowledge documents that can be enabled or referenced. Hayden also demonstrated how to use Stage 3 to manage master prompts, version control, and team roles, emphasizing its utility for documenting processes and installing new capabilities.Stage 3 Process Management OverviewHayden demonstrated Stage 3, a tool for building and managing processes, and discussed its cost structure, which is relatively low per user. He explained that Stage 3 offers both free and paid tiers, with the goal of making the product accessible to most users for around $1,000 per month. Hayden also outlined a team onboarding process that involves training team members to create their own role master prompts and using the Clarity Board to identify time-saving opportunities, which typically results in about 10 hours of weekly time savings.AI Training and Culture InitiativesHayden discussed the cost and approach for implementing AI training programs, emphasizing a culture of learning and experimentation. He suggested starting with volunteers and offering training sessions to build confidence and encourage participation. Hayden also highlighted the importance of sharing AI wins and failures to foster a supportive environment and recommended investing in AI education to enhance team skills. He concluded by advocating for profit-sharing to retain employees and encourage entrepreneurship, noting the potential for increased productivity and innovation.AI Opportunities and Implementation StrategiesHayden discussed the opportunities and benefits of AI in business, including cost collapses, revenue growth, and operational efficiency. He explained how AI can help identify inefficiencies, automate processes, and reduce expenses, potentially leading to significant cost savings. Hayden also shared his experience with AI tools like HeyGen and SendPotion for creating professional videos and personalized outreach. The group discussed tracking success metrics for AI implementation, such as process enhancement, team adoption, and time savings. Hayden emphasized the importance of clear communication and accountability in AI initiatives, as well as the positive impact on employee engagement when teams work collaboratively on AI projects.AI Adoption Strategies and TrendsHayden discussed the evolution of AI adoption phases in business, emphasizing the current innovation phase and predicting future trends. He highlighted the importance of staying ahead in AI adoption and provided recommendations for continuous learning and implementation. Hayden also addressed potential pitfalls such as implementation fatigue and suggested strategies to overcome them. He encouraged attendees to allocate time for AI learning and experimentation, with a minimum recommendation of an hour a day, to maintain a competitive edge in the rapidly evolving AI landscape.AI Implementation and Strategy ReviewHayden discussed the importance of executing AI implementations quickly to maintain a competitive edge, noting that first-mover advantages begin to diminish as AI tools become more commoditized. He emphasized the value of human oversight in AI-driven processes and shared insights from a company that developed multiple AI products in a short time. The group reviewed tools used for implementing new processes, including Fireflies.ai, Zapier, Gmail, and Zoom. Midori announced the final cohort meeting on Friday, which will focus on strategic alignment and team building, followed by an open forum for addressing outstanding questions. Participants discussed challenges in balancing AI innovation with existing workloads and the need for clear communication about AI's role in future frameworks.Transcript & Chat",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "Cohort 4 LIve Session 11-Transcript.vtt",
+        "content_type": "text/vtt",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 142645,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCT0VTL2dnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--3482edc40ecabf1b2d2715cb18a9ff6ecfb9c063",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/3oadn93psz4jf8lku3obwuy4dz2w",
+        "is_downloadable": true
+      },
+      {
+        "filename": "Cohort 4 LIve Session 11-Chat.txt",
+        "content_type": "text/plain",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 1690,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQ0FUL2dnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f8f408724f288408bb04c669e10c0ba578f473c2",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/ay9ayjh4wluu6zhmm6ui7my1jwk4",
+        "is_downloadable": true
+      }
+    ],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Summary",
+              "type": "text",
+              "circle_ios_fallback_text": "Summary"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Implementation and Transition Session",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Implementation and Transition Session"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The EMPOWER Labs program reached its second-to-last session, with participants focusing on practical AI implementation and next steps post-cohort. Midori introduced the session, emphasizing the importance of the final week's exercises and the transition from cohort participant to AI implementer. Hayden was set to lead the session, guiding participants through the application of their learned frameworks, prompts, and exercises, including the integration of their business context into AI using the EMPOWER framework. Participants were encouraged to work at their own pace, as they would continue to have access to the curriculum and exercises over the coming months.",
+              "type": "text",
+              "circle_ios_fallback_text": "The EMPOWER Labs program reached its second-to-last session, with participants focusing on practical AI implementation and next steps post-cohort. Midori introduced the session, emphasizing the importance of the final week's exercises and the transition from cohort participant to AI implementer. Hayden was set to lead the session, guiding participants through the application of their learned frameworks, prompts, and exercises, including the integration of their business context into AI using the EMPOWER framework. Participants were encouraged to work at their own pace, as they would continue to have access to the curriculum and exercises over the coming months."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Optimizing Claude Master Prompts",
+              "type": "text",
+              "circle_ios_fallback_text": "Optimizing Claude Master Prompts"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed three options for managing master prompts in Claude, ranging from keeping them in cloud projects to using Google Docs or Stage 3 for better team collaboration and version control. He emphasized the importance of cleaning up master prompts by removing frequently accessed content like SOPs and processes to improve efficiency and reduce token usage. Hayden also introduced the concept of Claude skills, explaining how they can be created to store and organize specific prompts, potentially replacing the need for certain master prompt content. Don inquired about the relationship between skills and existing master prompts, and Hayden clarified that skills would coexist with and potentially replace parts of the master prompt to conserve resources.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed three options for managing master prompts in Claude, ranging from keeping them in cloud projects to using Google Docs or Stage 3 for better team collaboration and version control. He emphasized the importance of cleaning up master prompts by removing frequently accessed content like SOPs and processes to improve efficiency and reduce token usage. Hayden also introduced the concept of Claude skills, explaining how they can be created to store and organize specific prompts, potentially replacing the need for certain master prompt content. Don inquired about the relationship between skills and existing master prompts, and Hayden clarified that skills would coexist with and potentially replace parts of the master prompt to conserve resources."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Claude Skills and Team Collaboration",
+              "type": "text",
+              "circle_ios_fallback_text": "Claude Skills and Team Collaboration"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden explained how to create and use skills in Claude, emphasizing that a skill is a .md file that can contain HTML and other content. He advised creating a handoff file when chat windows are compressed to preserve context. Hayden also discussed the limitations of Claude for Teams, suggesting that Stage 3 offers a more comprehensive solution for managing master prompts and team collaboration. Nancy expressed confusion about the benefits of Claude for Teams, and Hayden recommended using a Claude Max account for more efficient and cost-effective usage. FM shared challenges with version control and sharing prompts with team leads, and Hayden suggested using Stage 3 as a more efficient alternative to Claude for Teams.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden explained how to create and use skills in Claude, emphasizing that a skill is a .md file that can contain HTML and other content. He advised creating a handoff file when chat windows are compressed to preserve context. Hayden also discussed the limitations of Claude for Teams, suggesting that Stage 3 offers a more comprehensive solution for managing master prompts and team collaboration. Nancy expressed confusion about the benefits of Claude for Teams, and Hayden recommended using a Claude Max account for more efficient and cost-effective usage. FM shared challenges with version control and sharing prompts with team leads, and Hayden suggested using Stage 3 as a more efficient alternative to Claude for Teams."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Skills Management Tools Discussion",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Skills Management Tools Discussion"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden and FM discussed using Google Docs with version control or GitHub for managing and sharing AI skills, with Hayden suggesting GitHub as a more complex but powerful option. Hayden also explained the use of Cloud Code for team collaboration and mentioned the potential for sharing skills within a team, though he wasn't entirely sure about this feature. Midori inquired about storing skills in Stage 3, to which Hayden clarified that while Stage 3 uses Gemini, skills are stored as knowledge documents that can be enabled or referenced. Hayden also demonstrated how to use Stage 3 to manage master prompts, version control, and team roles, emphasizing its utility for documenting processes and installing new capabilities.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden and FM discussed using Google Docs with version control or GitHub for managing and sharing AI skills, with Hayden suggesting GitHub as a more complex but powerful option. Hayden also explained the use of Cloud Code for team collaboration and mentioned the potential for sharing skills within a team, though he wasn't entirely sure about this feature. Midori inquired about storing skills in Stage 3, to which Hayden clarified that while Stage 3 uses Gemini, skills are stored as knowledge documents that can be enabled or referenced. Hayden also demonstrated how to use Stage 3 to manage master prompts, version control, and team roles, emphasizing its utility for documenting processes and installing new capabilities."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Stage 3 Process Management Overview",
+              "type": "text",
+              "circle_ios_fallback_text": "Stage 3 Process Management Overview"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden demonstrated Stage 3, a tool for building and managing processes, and discussed its cost structure, which is relatively low per user. He explained that Stage 3 offers both free and paid tiers, with the goal of making the product accessible to most users for around $1,000 per month. Hayden also outlined a team onboarding process that involves training team members to create their own role master prompts and using the Clarity Board to identify time-saving opportunities, which typically results in about 10 hours of weekly time savings.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden demonstrated Stage 3, a tool for building and managing processes, and discussed its cost structure, which is relatively low per user. He explained that Stage 3 offers both free and paid tiers, with the goal of making the product accessible to most users for around $1,000 per month. Hayden also outlined a team onboarding process that involves training team members to create their own role master prompts and using the Clarity Board to identify time-saving opportunities, which typically results in about 10 hours of weekly time savings."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Training and Culture Initiatives",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Training and Culture Initiatives"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed the cost and approach for implementing AI training programs, emphasizing a culture of learning and experimentation. He suggested starting with volunteers and offering training sessions to build confidence and encourage participation. Hayden also highlighted the importance of sharing AI wins and failures to foster a supportive environment and recommended investing in AI education to enhance team skills. He concluded by advocating for profit-sharing to retain employees and encourage entrepreneurship, noting the potential for increased productivity and innovation.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed the cost and approach for implementing AI training programs, emphasizing a culture of learning and experimentation. He suggested starting with volunteers and offering training sessions to build confidence and encourage participation. Hayden also highlighted the importance of sharing AI wins and failures to foster a supportive environment and recommended investing in AI education to enhance team skills. He concluded by advocating for profit-sharing to retain employees and encourage entrepreneurship, noting the potential for increased productivity and innovation."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Opportunities and Implementation Strategies",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Opportunities and Implementation Strategies"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed the opportunities and benefits of AI in business, including cost collapses, revenue growth, and operational efficiency. He explained how AI can help identify inefficiencies, automate processes, and reduce expenses, potentially leading to significant cost savings. Hayden also shared his experience with AI tools like HeyGen and SendPotion for creating professional videos and personalized outreach. The group discussed tracking success metrics for AI implementation, such as process enhancement, team adoption, and time savings. Hayden emphasized the importance of clear communication and accountability in AI initiatives, as well as the positive impact on employee engagement when teams work collaboratively on AI projects.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed the opportunities and benefits of AI in business, including cost collapses, revenue growth, and operational efficiency. He explained how AI can help identify inefficiencies, automate processes, and reduce expenses, potentially leading to significant cost savings. Hayden also shared his experience with AI tools like HeyGen and SendPotion for creating professional videos and personalized outreach. The group discussed tracking success metrics for AI implementation, such as process enhancement, team adoption, and time savings. Hayden emphasized the importance of clear communication and accountability in AI initiatives, as well as the positive impact on employee engagement when teams work collaboratively on AI projects."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Adoption Strategies and Trends",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Adoption Strategies and Trends"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed the evolution of AI adoption phases in business, emphasizing the current innovation phase and predicting future trends. He highlighted the importance of staying ahead in AI adoption and provided recommendations for continuous learning and implementation. Hayden also addressed potential pitfalls such as implementation fatigue and suggested strategies to overcome them. He encouraged attendees to allocate time for AI learning and experimentation, with a minimum recommendation of an hour a day, to maintain a competitive edge in the rapidly evolving AI landscape.",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed the evolution of AI adoption phases in business, emphasizing the current innovation phase and predicting future trends. He highlighted the importance of staying ahead in AI adoption and provided recommendations for continuous learning and implementation. Hayden also addressed potential pitfalls such as implementation fatigue and suggested strategies to overcome them. He encouraged attendees to allocate time for AI learning and experimentation, with a minimum recommendation of an hour a day, to maintain a competitive edge in the rapidly evolving AI landscape."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Implementation and Strategy Review",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Implementation and Strategy Review"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hayden discussed the importance of executing AI implementations quickly to maintain a competitive edge, noting that first-mover advantages begin to diminish as AI tools become more commoditized. He emphasized the value of human oversight in AI-driven processes and shared insights from a company that developed multiple AI products in a short time. The group reviewed tools used for implementing new processes, including ",
+              "type": "text",
+              "circle_ios_fallback_text": "Hayden discussed the importance of executing AI implementations quickly to maintain a competitive edge, noting that first-mover advantages begin to diminish as AI tools become more commoditized. He emphasized the value of human oversight in AI-driven processes and shared insights from a company that developed multiple AI products in a short time. The group reviewed tools used for implementing new processes, including "
+            },
+            {
+              "text": "Fireflies.ai",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "http://fireflies.ai/",
+                    "class": null,
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "circle_ios_fallback_text": "Fireflies.ai"
+            },
+            {
+              "text": ", Zapier, Gmail, and Zoom. Midori announced the final cohort meeting on Friday, which will focus on strategic alignment and team building, followed by an open forum for addressing outstanding questions. Participants discussed challenges in balancing AI innovation with existing workloads and the need for clear communication about AI's role in future frameworks.",
+              "type": "text",
+              "circle_ios_fallback_text": ", Zapier, Gmail, and Zoom. Midori announced the final cohort meeting on Friday, which will focus on strategic alignment and team building, followed by an open forum for addressing outstanding questions. Participants discussed challenges in balancing AI innovation with existing workloads and the need for clear communication about AI's role in future frameworks."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Transcript & Chat",
+              "type": "text",
+              "circle_ios_fallback_text": "Transcript & Chat"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCT0VTL2dnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--3482edc40ecabf1b2d2715cb18a9ff6ecfb9c063"
+          }
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQ0FUL2dnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f8f408724f288408bb04c669e10c0ba578f473c2"
+          }
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "SummaryAI Implementation and Transition SessionThe EMPOWER Labs program reached its second-to-last session, with participants focusing on practical AI implementation and next steps post-cohort. Midori introduced the session, emphasizing the importance of the final week's exercises and the transition from cohort participant to AI implementer. Hayden was set to lead the session, guiding participants through the application of their learned frameworks, prompts, and exercises, including the integration of their business context into AI using the EMPOWER framework. Participants were encouraged to work at their own pace, as they would continue to have access to the curriculum and exercises over the coming months.Optimizing Claude Master PromptsHayden discussed three options for managing master prompts in Claude, ranging from keeping them in cloud projects to using Google Docs or Stage 3 for better team collaboration and version control. He emphasized the importance of cleaning up master prompts by removing frequently accessed content like SOPs and processes to improve efficiency and reduce token usage. Hayden also introduced the concept of Claude skills, explaining how they can be created to store and organize specific prompts, potentially replacing the need for certain master prompt content. Don inquired about the relationship between skills and existing master prompts, and Hayden clarified that skills would coexist with and potentially replace parts of the master prompt to conserve resources.Claude Skills and Team CollaborationHayden explained how to create and use skills in Claude, emphasizing that a skill is a .md file that can contain HTML and other content. He advised creating a handoff file when chat windows are compressed to preserve context. Hayden also discussed the limitations of Claude for Teams, suggesting that Stage 3 offers a more comprehensive solution for managing master prompts and team collaboration. Nancy expressed confusion about the benefits of Claude for Teams, and Hayden recommended using a Claude Max account for more efficient and cost-effective usage. FM shared challenges with version control and sharing prompts with team leads, and Hayden suggested using Stage 3 as a more efficient alternative to Claude for Teams.AI Skills Management Tools DiscussionHayden and FM discussed using Google Docs with version control or GitHub for managing and sharing AI skills, with Hayden suggesting GitHub as a more complex but powerful option. Hayden also explained the use of Cloud Code for team collaboration and mentioned the potential for sharing skills within a team, though he wasn't entirely sure about this feature. Midori inquired about storing skills in Stage 3, to which Hayden clarified that while Stage 3 uses Gemini, skills are stored as knowledge documents that can be enabled or referenced. Hayden also demonstrated how to use Stage 3 to manage master prompts, version control, and team roles, emphasizing its utility for documenting processes and installing new capabilities.Stage 3 Process Management OverviewHayden demonstrated Stage 3, a tool for building and managing processes, and discussed its cost structure, which is relatively low per user. He explained that Stage 3 offers both free and paid tiers, with the goal of making the product accessible to most users for around $1,000 per month. Hayden also outlined a team onboarding process that involves training team members to create their own role master prompts and using the Clarity Board to identify time-saving opportunities, which typically results in about 10 hours of weekly time savings.AI Training and Culture InitiativesHayden discussed the cost and approach for implementing AI training programs, emphasizing a culture of learning and experimentation. He suggested starting with volunteers and offering training sessions to build confidence and encourage participation. Hayden also highlighted the importance of sharing AI wins and failures to foster a supportive environment and recommended investing in AI education to enhance team skills. He concluded by advocating for profit-sharing to retain employees and encourage entrepreneurship, noting the potential for increased productivity and innovation.AI Opportunities and Implementation StrategiesHayden discussed the opportunities and benefits of AI in business, including cost collapses, revenue growth, and operational efficiency. He explained how AI can help identify inefficiencies, automate processes, and reduce expenses, potentially leading to significant cost savings. Hayden also shared his experience with AI tools like HeyGen and SendPotion for creating professional videos and personalized outreach. The group discussed tracking success metrics for AI implementation, such as process enhancement, team adoption, and time savings. Hayden emphasized the importance of clear communication and accountability in AI initiatives, as well as the positive impact on employee engagement when teams work collaboratively on AI projects.AI Adoption Strategies and TrendsHayden discussed the evolution of AI adoption phases in business, emphasizing the current innovation phase and predicting future trends. He highlighted the importance of staying ahead in AI adoption and provided recommendations for continuous learning and implementation. Hayden also addressed potential pitfalls such as implementation fatigue and suggested strategies to overcome them. He encouraged attendees to allocate time for AI learning and experimentation, with a minimum recommendation of an hour a day, to maintain a competitive edge in the rapidly evolving AI landscape.AI Implementation and Strategy ReviewHayden discussed the importance of executing AI implementations quickly to maintain a competitive edge, noting that first-mover advantages begin to diminish as AI tools become more commoditized. He emphasized the value of human oversight in AI-driven processes and shared insights from a company that developed multiple AI products in a short time. The group reviewed tools used for implementing new processes, including Fireflies.ai, Zapier, Gmail, and Zoom. Midori announced the final cohort meeting on Friday, which will focus on strategic alignment and team building, followed by an open forum for addressing outstanding questions. Participants discussed challenges in balancing AI innovation with existing workloads and the need for clear communication about AI's role in future frameworks.Transcript & Chat",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "Cohort 4 LIve Session 11-Transcript.vtt",
+        "content_type": "text/vtt",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 142645,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCT0VTL2dnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--3482edc40ecabf1b2d2715cb18a9ff6ecfb9c063",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/3oadn93psz4jf8lku3obwuy4dz2w",
+        "is_downloadable": true
+      },
+      {
+        "filename": "Cohort 4 LIve Session 11-Chat.txt",
+        "content_type": "text/plain",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 1690,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQ0FUL2dnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f8f408724f288408bb04c669e10c0ba578f473c2",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/ay9ayjh4wluu6zhmm6ui7my1jwk4",
+        "is_downloadable": true
+      }
+    ],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "chat_room_uuid": "144f6168-0ec9-4fef-94dd-764ee6217bcd"
+}
