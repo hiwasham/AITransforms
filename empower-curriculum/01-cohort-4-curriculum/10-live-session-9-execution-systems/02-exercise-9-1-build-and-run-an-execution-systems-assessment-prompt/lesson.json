@@ -1,0 +1,762 @@
+{
+  "id": 3530702,
+  "name": "Exercise 9.1: Build and run an Execution Systems Assessment Prompt",
+  "status": "published",
+  "featured_media_enabled": false,
+  "download_featured_media": false,
+  "created_at": "2026-03-02T11:34:10.586Z",
+  "updated_at": "2026-03-02T19:26:18.104Z",
+  "comments_enabled": false,
+  "default_tab": "curriculum",
+  "enforce_featured_media_completion": false,
+  "autocomplete_on_featured_media_completion": true,
+  "dripped_at": null,
+  "is_dripped": true,
+  "needs_to_complete_previous_lesson": false,
+  "completed": false,
+  "notify_students_enabled": false,
+  "bookmark_id": null,
+  "serialized_rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Purpose",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Purpose"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To build a custom prompt that will assess your organization's execution systems (data, priorities, and communication rhythms), identify strengths and gaps, and generate actionable recommendations tailored to your specific business operating system.",
+              "type": "text",
+              "circle_ios_fallback_text": "To build a custom prompt that will assess your organization's execution systems (data, priorities, and communication rhythms), identify strengths and gaps, and generate actionable recommendations tailored to your specific business operating system."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Instructions",
+              "type": "text",
+              "circle_ios_fallback_text": "Instructions"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Open a new chat",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " labeled \"Execution Systems Assessment Prompt Builder\" in your Master Prompt project. Ask Claude to help you create a comprehensive assessment prompt by describing your organization's execution framework (EOS, Scaling Up, 4DX, custom system, etc.) and the three key areas: (a) data/metrics, (b) priorities/planning, and (c) communication rhythms. ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Suggestion:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Consider telling Claude how many questions to include on the assessment, or how long you want the assessment to take someone to complete.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Define your assessment criteria",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " by telling Claude what \"good\" looks like in each area. Consider requesting a specific scoring rubric (1-5 scale, maturity levels, traffic light system) and what dimensions matter most (consistency, clarity, accountability, adoption, results). ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Suggestion:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Consider asking Claude to review other chats in the project, or project files for examples of scoring rubrics. Also, if you aren't sure what \"good\" looks like, consider first asking Claude for examples of what \"good\" could look like.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Specify your desired output format",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " - do you want a detailed report, a visual scorecard, an executive summary with action items, or a prioritized improvement roadmap? Also mention any terminology specific to your business (your names for meetings, metrics, roles, or processes). ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Suggestion:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Consider uploading examples of meeting agendas you use or other specific examples.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Run the prompt",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " and make adjustments based on whether the questions dig deep enough and whether the output gives you usable insights. Once finalized, copy the prompt into a comment on the announcement post ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "here",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/announcements/",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "text": " to share it with the cohort. ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Suggestion:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Consider versioning your prompt to assess the attributes of what an execution system needs to look like in an AI-first organization",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "If participating with other team members",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ", compare your prompts and assessment outputs/results to a) decide which prompt best meets your needs, and b) identify alignment gaps and prioritize which execution system components need attention first.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://docs.google.com/document/d/130JlqKzDo6eQLeXve0yE9v54CSILlt1ahdnf4GSJp28/edit?tab=t.vig3n9aihfzl",
+            "color": "#2B2E33",
+            "label": "Access the Prompt",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "Time to complete:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Time to complete:"
+            },
+            {
+              "text": " 15-20 minutes to build the prompt, 10-15 minutes per person to complete the assessment",
+              "type": "text",
+              "circle_ios_fallback_text": " 15-20 minutes to build the prompt, 10-15 minutes per person to complete the assessment"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Consider:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Consider:"
+            },
+            {
+              "text": " If you use a recognized framework (EOS Level 10 meetings, Scaling Up Rockefeller Habits, OKRs), mention it explicitly so Claude can incorporate relevant best practices. If your system is custom, describe the specific cadences and tools you use (weekly scorecards, quarterly rocks, daily huddles) so the assessment speaks your language.",
+              "type": "text",
+              "circle_ios_fallback_text": " If you use a recognized framework (EOS Level 10 meetings, Scaling Up Rockefeller Habits, OKRs), mention it explicitly so Claude can incorporate relevant best practices. If your system is custom, describe the specific cadences and tools you use (weekly scorecards, quarterly rocks, daily huddles) so the assessment speaks your language."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Questions?",
+              "type": "text",
+              "circle_ios_fallback_text": "Questions?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the ",
+              "type": "text",
+              "circle_ios_fallback_text": "If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the "
+            },
+            {
+              "type": "entity",
+              "attrs": {
+                "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa"
+              },
+              "circle_ios_fallback_text": "#Discussion"
+            },
+            {
+              "text": " space. ",
+              "type": "text",
+              "circle_ios_fallback_text": " space. "
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "PurposeTo build a custom prompt that will assess your organization's execution systems (data, priorities, and communication rhythms), identify strengths and gaps, and generate actionable recommendations tailored to your specific business operating system.Instructions\nTime to complete: 15-20 minutes to build the prompt, 10-15 minutes per person to complete the assessmentConsider: If you use a recognized framework (EOS Level 10 meetings, Scaling Up Rockefeller Habits, OKRs), mention it explicitly so Claude can incorporate relevant best practices. If your system is custom, describe the specific cadences and tools you use (weekly scorecards, quarterly rocks, daily huddles) so the assessment speaks your language.Questions?If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the #Discussion space. ",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa": {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    },
+    "format": "post",
+    "community_members": [],
+    "entities": [
+      {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    ],
+    "group_mentions": [],
+    "polls": []
+  },
+  "rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Purpose",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Purpose"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "To build a custom prompt that will assess your organization's execution systems (data, priorities, and communication rhythms), identify strengths and gaps, and generate actionable recommendations tailored to your specific business operating system.",
+              "type": "text",
+              "circle_ios_fallback_text": "To build a custom prompt that will assess your organization's execution systems (data, priorities, and communication rhythms), identify strengths and gaps, and generate actionable recommendations tailored to your specific business operating system."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Instructions",
+              "type": "text",
+              "circle_ios_fallback_text": "Instructions"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Open a new chat",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " labeled \"Execution Systems Assessment Prompt Builder\" in your Master Prompt project. Ask Claude to help you create a comprehensive assessment prompt by describing your organization's execution framework (EOS, Scaling Up, 4DX, custom system, etc.) and the three key areas: (a) data/metrics, (b) priorities/planning, and (c) communication rhythms. ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Suggestion:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Consider telling Claude how many questions to include on the assessment, or how long you want the assessment to take someone to complete.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Define your assessment criteria",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " by telling Claude what \"good\" looks like in each area. Consider requesting a specific scoring rubric (1-5 scale, maturity levels, traffic light system) and what dimensions matter most (consistency, clarity, accountability, adoption, results). ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Suggestion:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Consider asking Claude to review other chats in the project, or project files for examples of scoring rubrics. Also, if you aren't sure what \"good\" looks like, consider first asking Claude for examples of what \"good\" could look like.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Specify your desired output format",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " - do you want a detailed report, a visual scorecard, an executive summary with action items, or a prioritized improvement roadmap? Also mention any terminology specific to your business (your names for meetings, metrics, roles, or processes). ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Suggestion:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Consider uploading examples of meeting agendas you use or other specific examples.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Run the prompt",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " and make adjustments based on whether the questions dig deep enough and whether the output gives you usable insights. Once finalized, copy the prompt into a comment on the announcement post ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "here",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://community.empowerlabs.ai/c/announcements/",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "text": " to share it with the cohort. ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Suggestion:",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " Consider versioning your prompt to assess the attributes of what an execution system needs to look like in an AI-first organization",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "If participating with other team members",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ", compare your prompts and assessment outputs/results to a) decide which prompt best meets your needs, and b) identify alignment gaps and prioritize which execution system components need attention first.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://docs.google.com/document/d/130JlqKzDo6eQLeXve0yE9v54CSILlt1ahdnf4GSJp28/edit?tab=t.vig3n9aihfzl",
+            "color": "#2B2E33",
+            "label": "Access the Prompt",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "Time to complete:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Time to complete:"
+            },
+            {
+              "text": " 15-20 minutes to build the prompt, 10-15 minutes per person to complete the assessment",
+              "type": "text",
+              "circle_ios_fallback_text": " 15-20 minutes to build the prompt, 10-15 minutes per person to complete the assessment"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Consider:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Consider:"
+            },
+            {
+              "text": " If you use a recognized framework (EOS Level 10 meetings, Scaling Up Rockefeller Habits, OKRs), mention it explicitly so Claude can incorporate relevant best practices. If your system is custom, describe the specific cadences and tools you use (weekly scorecards, quarterly rocks, daily huddles) so the assessment speaks your language.",
+              "type": "text",
+              "circle_ios_fallback_text": " If you use a recognized framework (EOS Level 10 meetings, Scaling Up Rockefeller Habits, OKRs), mention it explicitly so Claude can incorporate relevant best practices. If your system is custom, describe the specific cadences and tools you use (weekly scorecards, quarterly rocks, daily huddles) so the assessment speaks your language."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Questions?",
+              "type": "text",
+              "circle_ios_fallback_text": "Questions?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the ",
+              "type": "text",
+              "circle_ios_fallback_text": "If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the "
+            },
+            {
+              "type": "entity",
+              "attrs": {
+                "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa"
+              },
+              "circle_ios_fallback_text": "#Discussion"
+            },
+            {
+              "text": " space. ",
+              "type": "text",
+              "circle_ios_fallback_text": " space. "
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "PurposeTo build a custom prompt that will assess your organization's execution systems (data, priorities, and communication rhythms), identify strengths and gaps, and generate actionable recommendations tailored to your specific business operating system.Instructions\nTime to complete: 15-20 minutes to build the prompt, 10-15 minutes per person to complete the assessmentConsider: If you use a recognized framework (EOS Level 10 meetings, Scaling Up Rockefeller Habits, OKRs), mention it explicitly so Claude can incorporate relevant best practices. If your system is custom, describe the specific cadences and tools you use (weekly scorecards, quarterly rocks, daily huddles) so the assessment speaks your language.Questions?If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the #Discussion space. ",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa": {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    },
+    "format": "post",
+    "community_members": [],
+    "entities": [
+      {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    ],
+    "group_mentions": [],
+    "polls": []
+  },
+  "chat_room_uuid": "010cc9c5-66da-4076-b46f-0f3c0a5f29ad"
+}

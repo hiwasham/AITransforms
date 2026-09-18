@@ -1,0 +1,2725 @@
+{
+  "id": 2837854,
+  "name": "Lesson 3: Mastering Chats",
+  "status": "published",
+  "featured_media_enabled": true,
+  "download_featured_media": false,
+  "created_at": "2025-09-30T19:31:51.391Z",
+  "updated_at": "2025-09-30T19:35:43.481Z",
+  "comments_enabled": false,
+  "default_tab": "curriculum",
+  "enforce_featured_media_completion": false,
+  "autocomplete_on_featured_media_completion": false,
+  "dripped_at": null,
+  "is_dripped": true,
+  "needs_to_complete_previous_lesson": false,
+  "completed": false,
+  "notify_students_enabled": false,
+  "bookmark_id": null,
+  "featured_media": {
+    "playback_url": "https://cdn-media.circle.so/bcdn_token=fitgcAV_nWKi8EQ-pHphISmvjgOFdUZRIK38p3XFBQs&token_path=%2Fed308870-cc28-423f-8372-15c9584a1b2a%2F&expires=1787964829/ed308870-cc28-423f-8372-15c9584a1b2a/hls/playlist.m3u8",
+    "current_storage": "in_house",
+    "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTnFJWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--9f2ccbb71e31ac44ff8219e5b4deda53c108a93a",
+    "filename": "How to Use Claude_Lesson 3_ Mastering Chats_default.mp4",
+    "content_type": "video/mp4",
+    "duration": "08:49",
+    "is_downloadable": false,
+    "url": "https://assets-v2.circle.so/e6xpgaaphnpdk1izxuslsheuwjsh",
+    "thumbnail_image_url": "https://cdn-media.circle.so/bcdn_token=fitgcAV_nWKi8EQ-pHphISmvjgOFdUZRIK38p3XFBQs&token_path=%2Fed308870-cc28-423f-8372-15c9584a1b2a%2F&expires=1787964829/ed308870-cc28-423f-8372-15c9584a1b2a/thumbnail.jpg",
+    "media_transcript_id": 2911449,
+    "media_transcoding": {
+      "status": "succeeded"
+    },
+    "chapters_url": null,
+    "preview_thumbnails_url": "https://cdn-media.circle.so/bcdn_token=fitgcAV_nWKi8EQ-pHphISmvjgOFdUZRIK38p3XFBQs&token_path=%2Fed308870-cc28-423f-8372-15c9584a1b2a%2F&expires=1787964829/ed308870-cc28-423f-8372-15c9584a1b2a/mosaic.vtt",
+    "video_variants": {
+      "original": "https://assets-v2.circle.so/e6xpgaaphnpdk1izxuslsheuwjsh",
+      "hls": "https://cdn-media.circle.so/bcdn_token=fitgcAV_nWKi8EQ-pHphISmvjgOFdUZRIK38p3XFBQs&token_path=%2Fed308870-cc28-423f-8372-15c9584a1b2a%2F&expires=1787964829/ed308870-cc28-423f-8372-15c9584a1b2a/hls/playlist.m3u8"
+    }
+  },
+  "serialized_rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Chat Window Interface",
+              "type": "text",
+              "circle_ios_fallback_text": "Chat Window Interface"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "When you start a new chat or open an existing conversation, you'll see several options at the bottom of the chat window that help you enhance your interaction with Claude:",
+              "type": "text",
+              "circle_ios_fallback_text": "When you start a new chat or open an existing conversation, you'll see several options at the bottom of the chat window that help you enhance your interaction with Claude:"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "attrs": {
+            "url": "https://community.empowerlabs.ai/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUFNDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bc1285c66bd0fb106419d7aa3eb1039a6da61fe1/Screenshot%202025-09-30%20at%2015.23.44.png",
+            "href": null,
+            "width": null,
+            "alignment": "center",
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUFNDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bc1285c66bd0fb106419d7aa3eb1039a6da61fe1",
+            "width_ratio": 1,
+            "content_type": "image/png",
+            "use_intrinsic_size": false
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "File Upload",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "File Upload"
+            },
+            {
+              "text": ": Click the + sign in the chat interface to upload files from your computer, add documents from Google Drive (if you have the integration enabled), or access other connected integrations and connectors. Claude ",
+              "type": "text",
+              "circle_ios_fallback_text": ": Click the + sign in the chat interface to upload files from your computer, add documents from Google Drive (if you have the integration enabled), or access other connected integrations and connectors. Claude "
+            },
+            {
+              "text": "supports various document types",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://support.anthropic.com/en/articles/8241126-what-kinds-of-documents-can-i-upload-to-claude-ai",
+                    "class": null,
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "circle_ios_fallback_text": "supports various document types"
+            },
+            {
+              "text": ", including PDFs, Word documents, Excel files, and images. Each file can be a maximum of 30MB. You can upload up to 20 files per chat.",
+              "type": "text",
+              "circle_ios_fallback_text": ", including PDFs, Word documents, Excel files, and images. Each file can be a maximum of 30MB. You can upload up to 20 files per chat."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Tools",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Tools"
+            },
+            {
+              "text": ": This section contains various connectors and features to enhance Claude's capabilities:",
+              "type": "text",
+              "circle_ios_fallback_text": ": This section contains various connectors and features to enhance Claude's capabilities:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Connectors/Integrations",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ": Available to paid plan users, these allow Claude to connect directly to your work tools and data. Available connectors include Notion (project management), Gmail and Google Calendar (email and scheduling), Google Drive (file storage), Zapier (workflow automation), Asana (project management), Intercom (customer support), Canva (design), Stripe (payments), and many others. You can browse and connect to these tools at ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "claude.ai/directory",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://claude.ai/directory",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "text": " or through Settings > Connectors.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Web Search",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ": This allows Claude to search the internet for current information to supplement its responses.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Extended Thinking",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ": This feature allows Claude to work through complex problems step-by-step with deeper reasoning. ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Styles",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ": Customize how Claude communicates with you by choosing from preset options (Normal, Concise, Explanatory, Formal) or creating custom styles based on your own writing samples or specific instructions.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Research Button",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Research Button"
+            },
+            {
+              "text": ": Available to users with paid Claude plans, Research transforms how Claude finds and analyzes information. When enabled, Claude operates agentically, conducting multiple searches that build on each other while determining exactly what to investigate next, delivering comprehensive answers with citations",
+              "type": "text",
+              "circle_ios_fallback_text": ": Available to users with paid Claude plans, Research transforms how Claude finds and analyzes information. When enabled, Claude operates agentically, conducting multiple searches that build on each other while determining exactly what to investigate next, delivering comprehensive answers with citations"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Model Selection",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Model Selection"
+            },
+            {
+              "text": ": Click on the model name to choose which version of Claude you'd like to chat with (see below for a model selection guide)",
+              "type": "text",
+              "circle_ios_fallback_text": ": Click on the model name to choose which version of Claude you'd like to chat with (see below for a model selection guide)"
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Context Window",
+              "type": "text",
+              "circle_ios_fallback_text": "Context Window"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Claude’s ",
+              "type": "text",
+              "circle_ios_fallback_text": "Claude’s "
+            },
+            {
+              "text": "context window size is 200K",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "context window size is 200K"
+            },
+            {
+              "text": ", meaning it can ingest 200K+ tokens (about 500 pages of text or more) when using a paid Claude plan. Once you reach ~200k tokens, the chat will end, and you will need to start a new chat. ",
+              "type": "text",
+              "circle_ios_fallback_text": ", meaning it can ingest 200K+ tokens (about 500 pages of text or more) when using a paid Claude plan. Once you reach ~200k tokens, the chat will end, and you will need to start a new chat. "
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "attrs": {
+            "url": "https://learn.buildingasecondbrain.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSCtzRUFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f52cc72d9c0bf8fe3ecc2c50b06e9c87cb7f0c2a/Screenshot%202025-08-06%20at%2014.01.06.png",
+            "href": null,
+            "width": null,
+            "alignment": "center",
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSCtzRUFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f52cc72d9c0bf8fe3ecc2c50b06e9c87cb7f0c2a",
+            "width_ratio": 1,
+            "content_type": "image/png",
+            "use_intrinsic_size": false
+          }
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How Claude Remembers Context",
+              "type": "text",
+              "circle_ios_fallback_text": "How Claude Remembers Context"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Understanding how Claude's memory works is crucial for getting the best results:",
+              "type": "text",
+              "circle_ios_fallback_text": "Understanding how Claude's memory works is crucial for getting the best results:"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Within a Single Conversation:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Within a Single Conversation:"
+            },
+            {
+              "text": " Claude can see your entire conversation from the very first message to your current one. This includes all text exchanges, uploaded files, created artifacts, and any analysis performed. Think of it like Claude reading a complete transcript each time before responding.",
+              "type": "text",
+              "circle_ios_fallback_text": " Claude can see your entire conversation from the very first message to your current one. This includes all text exchanges, uploaded files, created artifacts, and any analysis performed. Think of it like Claude reading a complete transcript each time before responding."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Between Conversations:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Between Conversations:"
+            },
+            {
+              "text": " As of Aug. 13, Claude can search through your previous conversations inside AND outside of projects to find and reference relevant information in new chats. Outside of projects, you’ll have to proactively ask Claude to find what you discussed before, and it will pull together the appropriate context. ",
+              "type": "text",
+              "circle_ios_fallback_text": " As of Aug. 13, Claude can search through your previous conversations inside AND outside of projects to find and reference relevant information in new chats. Outside of projects, you’ll have to proactively ask Claude to find what you discussed before, and it will pull together the appropriate context. "
+            },
+            {
+              "text": "Read more about searching past chats here.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://support.anthropic.com/en/articles/10185728-understanding-claude-s-personalization-features",
+                    "class": null,
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "circle_ios_fallback_text": "Read more about searching past chats here."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Where to Start a New Chat (Inside or Outside of a Project)",
+              "type": "text",
+              "circle_ios_fallback_text": "Where to Start a New Chat (Inside or Outside of a Project)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "🚨 Important",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "🚨 Important"
+            },
+            {
+              "text": ": Once you start a chat outside of a project, it cannot be moved into a project later.",
+              "type": "text",
+              "circle_ios_fallback_text": ": Once you start a chat outside of a project, it cannot be moved into a project later."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Start a New Chat INSIDE Your Project When:",
+              "type": "text",
+              "circle_ios_fallback_text": "Start a New Chat INSIDE Your Project When:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You’re working on something related to the project topic",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Your team needs access to the conversation",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You need Claude to access the project knowledge",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Creating shared resources (templates, processes, SOPs)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Start a New Chat OUTSIDE Your Project When:",
+              "type": "text",
+              "circle_ios_fallback_text": "Start a New Chat OUTSIDE Your Project When:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Asking quick one-off questions unrelated to your project",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Testing Claude's capabilities or experimenting",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Working on personal tasks",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "The conversation won't need project context",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "When to Start a New Chat vs. Continue an Existing One",
+              "type": "text",
+              "circle_ios_fallback_text": "When to Start a New Chat vs. Continue an Existing One"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Continue in the same conversation when:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Continue in the same conversation when:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You're iterating on the same piece of work (refining a proposal, improving an analysis)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You want to build on Claude's previous responses",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You're working through a multi-step process",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You need Claude to remember specific details from earlier in your session",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Start a new conversation when:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Start a new conversation when:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You're switching to a completely different topic or project",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You want a \"fresh start\" without any previous context influencing the response",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You’ve exceeded the context window of 200k tokens for a chat. ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Model Selection Guide",
+              "type": "text",
+              "circle_ios_fallback_text": "Model Selection Guide"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Anthropic offers different Claude models, each optimized for different needs. Understanding their strengths helps you select the best option for your specific tasks.",
+              "type": "text",
+              "circle_ios_fallback_text": "Anthropic offers different Claude models, each optimized for different needs. Understanding their strengths helps you select the best option for your specific tasks."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "attrs": {
+            "url": "https://community.empowerlabs.ai/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTZDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--dd4e1d0c372b94fd92b6c96378e2830310d2c99f/Screenshot%202025-09-30%20at%2015.22.46.png",
+            "href": null,
+            "width": null,
+            "alignment": "left",
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTZDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--dd4e1d0c372b94fd92b6c96378e2830310d2c99f",
+            "width_ratio": 0.5,
+            "content_type": "image/png",
+            "use_intrinsic_size": false
+          }
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Quick Decision Flow",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Quick Decision Flow"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Is the task coding-heavy, complex, or multi-step? ",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "→ Choose ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Opus 4.1",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ", ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "if",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "italic"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " it’s available and within your weekly limit.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Is this daily business writing, light analysis, or summarization? ",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "→ Use ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Sonnet 4.5",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ", as it offers more time allocation and faster turnaround.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "If uncertain",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ": Start in ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Sonnet 4.5",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ". If the output depth or reasoning scope feels too narrow—and Opus quota allows—switch to ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Opus 4.1",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ".",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Chat Usage Limits",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Chat Usage Limits"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Even on Pro or Team plans, usage isn’t unlimited. Anthropic uses ",
+              "type": "text",
+              "circle_ios_fallback_text": "Even on Pro or Team plans, usage isn’t unlimited. Anthropic uses "
+            },
+            {
+              "text": "session-based",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "session-based"
+            },
+            {
+              "text": " and ",
+              "type": "text",
+              "circle_ios_fallback_text": " and "
+            },
+            {
+              "text": "weekly quotas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "weekly quotas"
+            },
+            {
+              "text": ", including model-specific limits:",
+              "type": "text",
+              "circle_ios_fallback_text": ", including model-specific limits:"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "attrs": {
+            "url": "https://learn.buildingasecondbrain.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSXdUNHdVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1eed3e0e7ca67b1235b9d677f3ccf4e362a81795/Screenshot%202025-08-06%20at%2013.26.21.png",
+            "href": null,
+            "width": null,
+            "alignment": "center",
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSXdUNHdVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1eed3e0e7ca67b1235b9d677f3ccf4e362a81795",
+            "width_ratio": 1,
+            "content_type": "image/png",
+            "use_intrinsic_size": false
+          }
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Session limits",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " reset every 5 hours. Most users get about ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "45 messages per session",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " with Sonnet 4.5 under normal conditions. ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Weekly rate limits",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://techcrunch.com/2025/07/28/anthropic-unveils-new-rate-limits-to-curb-claude-code-power-users/?utm_source=chatgpt.com",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        },
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " take effect August 28, 2025:",
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "type": "bulletList",
+                  "content": [
+                    {
+                      "type": "listItem",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "text": "Pro Plan",
+                              "type": "text",
+                              "marks": [
+                                {
+                                  "type": "bold"
+                                }
+                              ]
+                            },
+                            {
+                              "text": " users typically have access to ",
+                              "type": "text"
+                            },
+                            {
+                              "text": "40–80 hours of Sonnet 4.5",
+                              "type": "text",
+                              "marks": [
+                                {
+                                  "type": "bold"
+                                }
+                              ]
+                            },
+                            {
+                              "text": " per week. ",
+                              "type": "text"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "bulletList",
+                  "content": [
+                    {
+                      "type": "listItem",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "text": "Max Plan or Team Plan (5× usage tier)",
+                              "type": "text",
+                              "marks": [
+                                {
+                                  "type": "bold"
+                                }
+                              ]
+                            },
+                            {
+                              "text": " offers ",
+                              "type": "text"
+                            },
+                            {
+                              "text": "140–280 hours of Sonnet 4.5",
+                              "type": "text",
+                              "marks": [
+                                {
+                                  "type": "bold"
+                                }
+                              ]
+                            },
+                            {
+                              "text": " per week, and ",
+                              "type": "text"
+                            },
+                            {
+                              "text": "15–35 hours of Opus 4.1",
+                              "type": "text",
+                              "marks": [
+                                {
+                                  "type": "bold"
+                                }
+                              ]
+                            },
+                            {
+                              "text": ". ",
+                              "type": "text"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "text": "Max 20× plans (~$200/month)",
+                              "type": "text",
+                              "marks": [
+                                {
+                                  "type": "bold"
+                                }
+                              ]
+                            },
+                            {
+                              "text": " extend that to roughly ",
+                              "type": "text"
+                            },
+                            {
+                              "text": "240–480 hours Sonnet 4.5",
+                              "type": "text",
+                              "marks": [
+                                {
+                                  "type": "bold"
+                                }
+                              ]
+                            },
+                            {
+                              "text": " and ",
+                              "type": "text"
+                            },
+                            {
+                              "text": "24–40 hours Opus 4.1",
+                              "type": "text",
+                              "marks": [
+                                {
+                                  "type": "bold"
+                                }
+                              ]
+                            },
+                            {
+                              "text": " weekly. ",
+                              "type": "text"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In practice, users on Pro often hit Opus 4.1 limits quickly (sometimes after just a few queries), and Opus draws from only ~20% of overall allocation. ",
+              "type": "text",
+              "circle_ios_fallback_text": "In practice, users on Pro often hit Opus 4.1 limits quickly (sometimes after just a few queries), and Opus draws from only ~20% of overall allocation. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Support docs confirm usage caps remain dynamic and depend on message length, attached files, conversation length, and model used.  ",
+              "type": "text",
+              "circle_ios_fallback_text": "Support docs confirm usage caps remain dynamic and depend on message length, attached files, conversation length, and model used.  "
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "Chat Window InterfaceWhen you start a new chat or open an existing conversation, you'll see several options at the bottom of the chat window that help you enhance your interaction with Claude:File Upload: Click the + sign in the chat interface to upload files from your computer, add documents from Google Drive (if you have the integration enabled), or access other connected integrations and connectors. Claude supports various document types, including PDFs, Word documents, Excel files, and images. Each file can be a maximum of 30MB. You can upload up to 20 files per chat.Tools: This section contains various connectors and features to enhance Claude's capabilities:Research Button: Available to users with paid Claude plans, Research transforms how Claude finds and analyzes information. When enabled, Claude operates agentically, conducting multiple searches that build on each other while determining exactly what to investigate next, delivering comprehensive answers with citationsModel Selection: Click on the model name to choose which version of Claude you'd like to chat with (see below for a model selection guide)Context WindowClaude’s context window size is 200K, meaning it can ingest 200K+ tokens (about 500 pages of text or more) when using a paid Claude plan. Once you reach ~200k tokens, the chat will end, and you will need to start a new chat. How Claude Remembers ContextUnderstanding how Claude's memory works is crucial for getting the best results:Within a Single Conversation: Claude can see your entire conversation from the very first message to your current one. This includes all text exchanges, uploaded files, created artifacts, and any analysis performed. Think of it like Claude reading a complete transcript each time before responding.Between Conversations: As of Aug. 13, Claude can search through your previous conversations inside AND outside of projects to find and reference relevant information in new chats. Outside of projects, you’ll have to proactively ask Claude to find what you discussed before, and it will pull together the appropriate context. Read more about searching past chats here.Where to Start a New Chat (Inside or Outside of a Project)🚨 Important: Once you start a chat outside of a project, it cannot be moved into a project later.Start a New Chat INSIDE Your Project When:Start a New Chat OUTSIDE Your Project When:When to Start a New Chat vs. Continue an Existing OneContinue in the same conversation when:Start a new conversation when:Model Selection GuideAnthropic offers different Claude models, each optimized for different needs. Understanding their strengths helps you select the best option for your specific tasks.Quick Decision FlowChat Usage LimitsEven on Pro or Team plans, usage isn’t unlimited. Anthropic uses session-based and weekly quotas, including model-specific limits:In practice, users on Pro often hit Opus 4.1 limits quickly (sometimes after just a few queries), and Opus draws from only ~20% of overall allocation. Support docs confirm usage caps remain dynamic and depend on message length, attached files, conversation length, and model used.  ",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "Screenshot 2025-08-06 at 13.26.21.png",
+        "content_type": "image/png",
+        "metadata": {
+          "identified": true,
+          "width": 1492,
+          "height": 208,
+          "analyzed": true
+        },
+        "byte_size": 32859,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSXdUNHdVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1eed3e0e7ca67b1235b9d677f3ccf4e362a81795",
+        "type": "file",
+        "url": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSXdUNHdVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1eed3e0e7ca67b1235b9d677f3ccf4e362a81795/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c94871ba5479e24de62982019557cdcc73e92248/Screenshot%202025-08-06%20at%2013.26.21.png",
+        "is_downloadable": true,
+        "image_variants": {
+          "original": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSXdUNHdVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1eed3e0e7ca67b1235b9d677f3ccf4e362a81795/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c94871ba5479e24de62982019557cdcc73e92248/Screenshot%202025-08-06%20at%2013.26.21.png",
+          "thumbnail": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSXdUNHdVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1eed3e0e7ca67b1235b9d677f3ccf4e362a81795/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVdrd09ncHpZWFpsY25zR09ncHpkSEpwY0ZRPSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8e3873984cecb63ce8922890e6bae284f3645258/Screenshot%202025-08-06%20at%2013.26.21.png",
+          "small": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSXdUNHdVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1eed3e0e7ca67b1235b9d677f3ccf4e362a81795/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFKb0FUQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--174cceaf9a31f17164863935309188a5606afc21/Screenshot%202025-08-06%20at%2013.26.21.png",
+          "medium": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSXdUNHdVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1eed3e0e7ca67b1235b9d677f3ccf4e362a81795/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFMUUFqQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--9795b686cfa287dd8535c2801217d42f4915df97/Screenshot%202025-08-06%20at%2013.26.21.png",
+          "large": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSXdUNHdVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1eed3e0e7ca67b1235b9d677f3ccf4e362a81795/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJNEJEQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--7535ef66ff04b52d1ea165e904a77a64f9cc7389/Screenshot%202025-08-06%20at%2013.26.21.png"
+        }
+      },
+      {
+        "filename": "Screenshot 2025-08-06 at 14.01.06.png",
+        "content_type": "image/png",
+        "metadata": {
+          "identified": true,
+          "width": 1016,
+          "height": 140,
+          "analyzed": true
+        },
+        "byte_size": 31608,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSCtzRUFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f52cc72d9c0bf8fe3ecc2c50b06e9c87cb7f0c2a",
+        "type": "file",
+        "url": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSCtzRUFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f52cc72d9c0bf8fe3ecc2c50b06e9c87cb7f0c2a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c94871ba5479e24de62982019557cdcc73e92248/Screenshot%202025-08-06%20at%2014.01.06.png",
+        "is_downloadable": true,
+        "image_variants": {
+          "original": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSCtzRUFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f52cc72d9c0bf8fe3ecc2c50b06e9c87cb7f0c2a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c94871ba5479e24de62982019557cdcc73e92248/Screenshot%202025-08-06%20at%2014.01.06.png",
+          "thumbnail": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSCtzRUFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f52cc72d9c0bf8fe3ecc2c50b06e9c87cb7f0c2a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVdrd09ncHpZWFpsY25zR09ncHpkSEpwY0ZRPSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8e3873984cecb63ce8922890e6bae284f3645258/Screenshot%202025-08-06%20at%2014.01.06.png",
+          "small": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSCtzRUFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f52cc72d9c0bf8fe3ecc2c50b06e9c87cb7f0c2a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFKb0FUQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--174cceaf9a31f17164863935309188a5606afc21/Screenshot%202025-08-06%20at%2014.01.06.png",
+          "medium": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSCtzRUFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f52cc72d9c0bf8fe3ecc2c50b06e9c87cb7f0c2a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFMUUFqQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--9795b686cfa287dd8535c2801217d42f4915df97/Screenshot%202025-08-06%20at%2014.01.06.png",
+          "large": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSCtzRUFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f52cc72d9c0bf8fe3ecc2c50b06e9c87cb7f0c2a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJNEJEQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--7535ef66ff04b52d1ea165e904a77a64f9cc7389/Screenshot%202025-08-06%20at%2014.01.06.png"
+        }
+      },
+      {
+        "filename": "Screenshot 2025-09-30 at 15.22.46.png",
+        "content_type": "image/png",
+        "metadata": {
+          "identified": true,
+          "width": 614,
+          "height": 298,
+          "analyzed": true
+        },
+        "byte_size": 36530,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTZDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--dd4e1d0c372b94fd92b6c96378e2830310d2c99f",
+        "type": "file",
+        "url": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTZDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--dd4e1d0c372b94fd92b6c96378e2830310d2c99f/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c94871ba5479e24de62982019557cdcc73e92248/Screenshot%202025-09-30%20at%2015.22.46.png",
+        "is_downloadable": true,
+        "image_variants": {
+          "original": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTZDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--dd4e1d0c372b94fd92b6c96378e2830310d2c99f/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c94871ba5479e24de62982019557cdcc73e92248/Screenshot%202025-09-30%20at%2015.22.46.png",
+          "thumbnail": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTZDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--dd4e1d0c372b94fd92b6c96378e2830310d2c99f/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVdrd09ncHpZWFpsY25zR09ncHpkSEpwY0ZRPSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8e3873984cecb63ce8922890e6bae284f3645258/Screenshot%202025-09-30%20at%2015.22.46.png",
+          "small": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTZDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--dd4e1d0c372b94fd92b6c96378e2830310d2c99f/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFKb0FUQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--174cceaf9a31f17164863935309188a5606afc21/Screenshot%202025-09-30%20at%2015.22.46.png",
+          "medium": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTZDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--dd4e1d0c372b94fd92b6c96378e2830310d2c99f/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFMUUFqQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--9795b686cfa287dd8535c2801217d42f4915df97/Screenshot%202025-09-30%20at%2015.22.46.png",
+          "large": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTZDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--dd4e1d0c372b94fd92b6c96378e2830310d2c99f/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJNEJEQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--7535ef66ff04b52d1ea165e904a77a64f9cc7389/Screenshot%202025-09-30%20at%2015.22.46.png"
+        }
+      },
+      {
+        "filename": "Screenshot 2025-09-30 at 15.23.44.png",
+        "content_type": "image/png",
+        "metadata": {
+          "identified": true,
+          "width": 1396,
+          "height": 294,
+          "analyzed": true
+        },
+        "byte_size": 37968,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUFNDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bc1285c66bd0fb106419d7aa3eb1039a6da61fe1",
+        "type": "file",
+        "url": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUFNDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bc1285c66bd0fb106419d7aa3eb1039a6da61fe1/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c94871ba5479e24de62982019557cdcc73e92248/Screenshot%202025-09-30%20at%2015.23.44.png",
+        "is_downloadable": true,
+        "image_variants": {
+          "original": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUFNDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bc1285c66bd0fb106419d7aa3eb1039a6da61fe1/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c94871ba5479e24de62982019557cdcc73e92248/Screenshot%202025-09-30%20at%2015.23.44.png",
+          "thumbnail": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUFNDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bc1285c66bd0fb106419d7aa3eb1039a6da61fe1/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVdrd09ncHpZWFpsY25zR09ncHpkSEpwY0ZRPSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8e3873984cecb63ce8922890e6bae284f3645258/Screenshot%202025-09-30%20at%2015.23.44.png",
+          "small": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUFNDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bc1285c66bd0fb106419d7aa3eb1039a6da61fe1/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFKb0FUQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--174cceaf9a31f17164863935309188a5606afc21/Screenshot%202025-09-30%20at%2015.23.44.png",
+          "medium": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUFNDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bc1285c66bd0fb106419d7aa3eb1039a6da61fe1/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFMUUFqQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--9795b686cfa287dd8535c2801217d42f4915df97/Screenshot%202025-09-30%20at%2015.23.44.png",
+          "large": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUFNDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bc1285c66bd0fb106419d7aa3eb1039a6da61fe1/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJNEJEQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--7535ef66ff04b52d1ea165e904a77a64f9cc7389/Screenshot%202025-09-30%20at%2015.23.44.png"
+        }
+      }
+    ],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Chat Window Interface",
+              "type": "text",
+              "circle_ios_fallback_text": "Chat Window Interface"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "When you start a new chat or open an existing conversation, you'll see several options at the bottom of the chat window that help you enhance your interaction with Claude:",
+              "type": "text",
+              "circle_ios_fallback_text": "When you start a new chat or open an existing conversation, you'll see several options at the bottom of the chat window that help you enhance your interaction with Claude:"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "attrs": {
+            "url": "https://community.empowerlabs.ai/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUFNDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bc1285c66bd0fb106419d7aa3eb1039a6da61fe1/Screenshot%202025-09-30%20at%2015.23.44.png",
+            "href": null,
+            "width": null,
+            "alignment": "center",
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUFNDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bc1285c66bd0fb106419d7aa3eb1039a6da61fe1",
+            "width_ratio": 1,
+            "content_type": "image/png",
+            "use_intrinsic_size": false
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "File Upload",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "File Upload"
+            },
+            {
+              "text": ": Click the + sign in the chat interface to upload files from your computer, add documents from Google Drive (if you have the integration enabled), or access other connected integrations and connectors. Claude ",
+              "type": "text",
+              "circle_ios_fallback_text": ": Click the + sign in the chat interface to upload files from your computer, add documents from Google Drive (if you have the integration enabled), or access other connected integrations and connectors. Claude "
+            },
+            {
+              "text": "supports various document types",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://support.anthropic.com/en/articles/8241126-what-kinds-of-documents-can-i-upload-to-claude-ai",
+                    "class": null,
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "circle_ios_fallback_text": "supports various document types"
+            },
+            {
+              "text": ", including PDFs, Word documents, Excel files, and images. Each file can be a maximum of 30MB. You can upload up to 20 files per chat.",
+              "type": "text",
+              "circle_ios_fallback_text": ", including PDFs, Word documents, Excel files, and images. Each file can be a maximum of 30MB. You can upload up to 20 files per chat."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Tools",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Tools"
+            },
+            {
+              "text": ": This section contains various connectors and features to enhance Claude's capabilities:",
+              "type": "text",
+              "circle_ios_fallback_text": ": This section contains various connectors and features to enhance Claude's capabilities:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Connectors/Integrations",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ": Available to paid plan users, these allow Claude to connect directly to your work tools and data. Available connectors include Notion (project management), Gmail and Google Calendar (email and scheduling), Google Drive (file storage), Zapier (workflow automation), Asana (project management), Intercom (customer support), Canva (design), Stripe (payments), and many others. You can browse and connect to these tools at ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "claude.ai/directory",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://claude.ai/directory",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "text": " or through Settings > Connectors.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Web Search",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ": This allows Claude to search the internet for current information to supplement its responses.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Extended Thinking",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ": This feature allows Claude to work through complex problems step-by-step with deeper reasoning. ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Styles",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ": Customize how Claude communicates with you by choosing from preset options (Normal, Concise, Explanatory, Formal) or creating custom styles based on your own writing samples or specific instructions.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Research Button",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Research Button"
+            },
+            {
+              "text": ": Available to users with paid Claude plans, Research transforms how Claude finds and analyzes information. When enabled, Claude operates agentically, conducting multiple searches that build on each other while determining exactly what to investigate next, delivering comprehensive answers with citations",
+              "type": "text",
+              "circle_ios_fallback_text": ": Available to users with paid Claude plans, Research transforms how Claude finds and analyzes information. When enabled, Claude operates agentically, conducting multiple searches that build on each other while determining exactly what to investigate next, delivering comprehensive answers with citations"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Model Selection",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Model Selection"
+            },
+            {
+              "text": ": Click on the model name to choose which version of Claude you'd like to chat with (see below for a model selection guide)",
+              "type": "text",
+              "circle_ios_fallback_text": ": Click on the model name to choose which version of Claude you'd like to chat with (see below for a model selection guide)"
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Context Window",
+              "type": "text",
+              "circle_ios_fallback_text": "Context Window"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Claude’s ",
+              "type": "text",
+              "circle_ios_fallback_text": "Claude’s "
+            },
+            {
+              "text": "context window size is 200K",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "context window size is 200K"
+            },
+            {
+              "text": ", meaning it can ingest 200K+ tokens (about 500 pages of text or more) when using a paid Claude plan. Once you reach ~200k tokens, the chat will end, and you will need to start a new chat. ",
+              "type": "text",
+              "circle_ios_fallback_text": ", meaning it can ingest 200K+ tokens (about 500 pages of text or more) when using a paid Claude plan. Once you reach ~200k tokens, the chat will end, and you will need to start a new chat. "
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "attrs": {
+            "url": "https://learn.buildingasecondbrain.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSCtzRUFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f52cc72d9c0bf8fe3ecc2c50b06e9c87cb7f0c2a/Screenshot%202025-08-06%20at%2014.01.06.png",
+            "href": null,
+            "width": null,
+            "alignment": "center",
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSCtzRUFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f52cc72d9c0bf8fe3ecc2c50b06e9c87cb7f0c2a",
+            "width_ratio": 1,
+            "content_type": "image/png",
+            "use_intrinsic_size": false
+          }
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "How Claude Remembers Context",
+              "type": "text",
+              "circle_ios_fallback_text": "How Claude Remembers Context"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Understanding how Claude's memory works is crucial for getting the best results:",
+              "type": "text",
+              "circle_ios_fallback_text": "Understanding how Claude's memory works is crucial for getting the best results:"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Within a Single Conversation:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Within a Single Conversation:"
+            },
+            {
+              "text": " Claude can see your entire conversation from the very first message to your current one. This includes all text exchanges, uploaded files, created artifacts, and any analysis performed. Think of it like Claude reading a complete transcript each time before responding.",
+              "type": "text",
+              "circle_ios_fallback_text": " Claude can see your entire conversation from the very first message to your current one. This includes all text exchanges, uploaded files, created artifacts, and any analysis performed. Think of it like Claude reading a complete transcript each time before responding."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Between Conversations:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Between Conversations:"
+            },
+            {
+              "text": " As of Aug. 13, Claude can search through your previous conversations inside AND outside of projects to find and reference relevant information in new chats. Outside of projects, you’ll have to proactively ask Claude to find what you discussed before, and it will pull together the appropriate context. ",
+              "type": "text",
+              "circle_ios_fallback_text": " As of Aug. 13, Claude can search through your previous conversations inside AND outside of projects to find and reference relevant information in new chats. Outside of projects, you’ll have to proactively ask Claude to find what you discussed before, and it will pull together the appropriate context. "
+            },
+            {
+              "text": "Read more about searching past chats here.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://support.anthropic.com/en/articles/10185728-understanding-claude-s-personalization-features",
+                    "class": null,
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "circle_ios_fallback_text": "Read more about searching past chats here."
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Where to Start a New Chat (Inside or Outside of a Project)",
+              "type": "text",
+              "circle_ios_fallback_text": "Where to Start a New Chat (Inside or Outside of a Project)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "🚨 Important",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "🚨 Important"
+            },
+            {
+              "text": ": Once you start a chat outside of a project, it cannot be moved into a project later.",
+              "type": "text",
+              "circle_ios_fallback_text": ": Once you start a chat outside of a project, it cannot be moved into a project later."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Start a New Chat INSIDE Your Project When:",
+              "type": "text",
+              "circle_ios_fallback_text": "Start a New Chat INSIDE Your Project When:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You’re working on something related to the project topic",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Your team needs access to the conversation",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You need Claude to access the project knowledge",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Creating shared resources (templates, processes, SOPs)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Start a New Chat OUTSIDE Your Project When:",
+              "type": "text",
+              "circle_ios_fallback_text": "Start a New Chat OUTSIDE Your Project When:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Asking quick one-off questions unrelated to your project",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Testing Claude's capabilities or experimenting",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Working on personal tasks",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "The conversation won't need project context",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "When to Start a New Chat vs. Continue an Existing One",
+              "type": "text",
+              "circle_ios_fallback_text": "When to Start a New Chat vs. Continue an Existing One"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Continue in the same conversation when:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Continue in the same conversation when:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You're iterating on the same piece of work (refining a proposal, improving an analysis)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You want to build on Claude's previous responses",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You're working through a multi-step process",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You need Claude to remember specific details from earlier in your session",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Start a new conversation when:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Start a new conversation when:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You're switching to a completely different topic or project",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You want a \"fresh start\" without any previous context influencing the response",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "You’ve exceeded the context window of 200k tokens for a chat. ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Model Selection Guide",
+              "type": "text",
+              "circle_ios_fallback_text": "Model Selection Guide"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Anthropic offers different Claude models, each optimized for different needs. Understanding their strengths helps you select the best option for your specific tasks.",
+              "type": "text",
+              "circle_ios_fallback_text": "Anthropic offers different Claude models, each optimized for different needs. Understanding their strengths helps you select the best option for your specific tasks."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "attrs": {
+            "url": "https://community.empowerlabs.ai/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTZDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--dd4e1d0c372b94fd92b6c96378e2830310d2c99f/Screenshot%202025-09-30%20at%2015.22.46.png",
+            "href": null,
+            "width": null,
+            "alignment": "left",
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTZDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--dd4e1d0c372b94fd92b6c96378e2830310d2c99f",
+            "width_ratio": 0.5,
+            "content_type": "image/png",
+            "use_intrinsic_size": false
+          }
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Quick Decision Flow",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Quick Decision Flow"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Is the task coding-heavy, complex, or multi-step? ",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "→ Choose ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Opus 4.1",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ", ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "if",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "italic"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " it’s available and within your weekly limit.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Is this daily business writing, light analysis, or summarization? ",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "→ Use ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Sonnet 4.5",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ", as it offers more time allocation and faster turnaround.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "If uncertain",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ": Start in ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Sonnet 4.5",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ". If the output depth or reasoning scope feels too narrow—and Opus quota allows—switch to ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Opus 4.1",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ".",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Chat Usage Limits",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Chat Usage Limits"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Even on Pro or Team plans, usage isn’t unlimited. Anthropic uses ",
+              "type": "text",
+              "circle_ios_fallback_text": "Even on Pro or Team plans, usage isn’t unlimited. Anthropic uses "
+            },
+            {
+              "text": "session-based",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "session-based"
+            },
+            {
+              "text": " and ",
+              "type": "text",
+              "circle_ios_fallback_text": " and "
+            },
+            {
+              "text": "weekly quotas",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "weekly quotas"
+            },
+            {
+              "text": ", including model-specific limits:",
+              "type": "text",
+              "circle_ios_fallback_text": ", including model-specific limits:"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "attrs": {
+            "url": "https://learn.buildingasecondbrain.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSXdUNHdVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1eed3e0e7ca67b1235b9d677f3ccf4e362a81795/Screenshot%202025-08-06%20at%2013.26.21.png",
+            "href": null,
+            "width": null,
+            "alignment": "center",
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSXdUNHdVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1eed3e0e7ca67b1235b9d677f3ccf4e362a81795",
+            "width_ratio": 1,
+            "content_type": "image/png",
+            "use_intrinsic_size": false
+          }
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Session limits",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " reset every 5 hours. Most users get about ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "45 messages per session",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " with Sonnet 4.5 under normal conditions. ",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Weekly rate limits",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "rel": "noopener noreferrer nofollow",
+                            "href": "https://techcrunch.com/2025/07/28/anthropic-unveils-new-rate-limits-to-curb-claude-code-power-users/?utm_source=chatgpt.com",
+                            "class": null,
+                            "target": "_blank"
+                          }
+                        },
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " take effect August 28, 2025:",
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "type": "bulletList",
+                  "content": [
+                    {
+                      "type": "listItem",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "text": "Pro Plan",
+                              "type": "text",
+                              "marks": [
+                                {
+                                  "type": "bold"
+                                }
+                              ]
+                            },
+                            {
+                              "text": " users typically have access to ",
+                              "type": "text"
+                            },
+                            {
+                              "text": "40–80 hours of Sonnet 4.5",
+                              "type": "text",
+                              "marks": [
+                                {
+                                  "type": "bold"
+                                }
+                              ]
+                            },
+                            {
+                              "text": " per week. ",
+                              "type": "text"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "bulletList",
+                  "content": [
+                    {
+                      "type": "listItem",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "text": "Max Plan or Team Plan (5× usage tier)",
+                              "type": "text",
+                              "marks": [
+                                {
+                                  "type": "bold"
+                                }
+                              ]
+                            },
+                            {
+                              "text": " offers ",
+                              "type": "text"
+                            },
+                            {
+                              "text": "140–280 hours of Sonnet 4.5",
+                              "type": "text",
+                              "marks": [
+                                {
+                                  "type": "bold"
+                                }
+                              ]
+                            },
+                            {
+                              "text": " per week, and ",
+                              "type": "text"
+                            },
+                            {
+                              "text": "15–35 hours of Opus 4.1",
+                              "type": "text",
+                              "marks": [
+                                {
+                                  "type": "bold"
+                                }
+                              ]
+                            },
+                            {
+                              "text": ". ",
+                              "type": "text"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "text": "Max 20× plans (~$200/month)",
+                              "type": "text",
+                              "marks": [
+                                {
+                                  "type": "bold"
+                                }
+                              ]
+                            },
+                            {
+                              "text": " extend that to roughly ",
+                              "type": "text"
+                            },
+                            {
+                              "text": "240–480 hours Sonnet 4.5",
+                              "type": "text",
+                              "marks": [
+                                {
+                                  "type": "bold"
+                                }
+                              ]
+                            },
+                            {
+                              "text": " and ",
+                              "type": "text"
+                            },
+                            {
+                              "text": "24–40 hours Opus 4.1",
+                              "type": "text",
+                              "marks": [
+                                {
+                                  "type": "bold"
+                                }
+                              ]
+                            },
+                            {
+                              "text": " weekly. ",
+                              "type": "text"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In practice, users on Pro often hit Opus 4.1 limits quickly (sometimes after just a few queries), and Opus draws from only ~20% of overall allocation. ",
+              "type": "text",
+              "circle_ios_fallback_text": "In practice, users on Pro often hit Opus 4.1 limits quickly (sometimes after just a few queries), and Opus draws from only ~20% of overall allocation. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Support docs confirm usage caps remain dynamic and depend on message length, attached files, conversation length, and model used.  ",
+              "type": "text",
+              "circle_ios_fallback_text": "Support docs confirm usage caps remain dynamic and depend on message length, attached files, conversation length, and model used.  "
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "Chat Window InterfaceWhen you start a new chat or open an existing conversation, you'll see several options at the bottom of the chat window that help you enhance your interaction with Claude:File Upload: Click the + sign in the chat interface to upload files from your computer, add documents from Google Drive (if you have the integration enabled), or access other connected integrations and connectors. Claude supports various document types, including PDFs, Word documents, Excel files, and images. Each file can be a maximum of 30MB. You can upload up to 20 files per chat.Tools: This section contains various connectors and features to enhance Claude's capabilities:Research Button: Available to users with paid Claude plans, Research transforms how Claude finds and analyzes information. When enabled, Claude operates agentically, conducting multiple searches that build on each other while determining exactly what to investigate next, delivering comprehensive answers with citationsModel Selection: Click on the model name to choose which version of Claude you'd like to chat with (see below for a model selection guide)Context WindowClaude’s context window size is 200K, meaning it can ingest 200K+ tokens (about 500 pages of text or more) when using a paid Claude plan. Once you reach ~200k tokens, the chat will end, and you will need to start a new chat. How Claude Remembers ContextUnderstanding how Claude's memory works is crucial for getting the best results:Within a Single Conversation: Claude can see your entire conversation from the very first message to your current one. This includes all text exchanges, uploaded files, created artifacts, and any analysis performed. Think of it like Claude reading a complete transcript each time before responding.Between Conversations: As of Aug. 13, Claude can search through your previous conversations inside AND outside of projects to find and reference relevant information in new chats. Outside of projects, you’ll have to proactively ask Claude to find what you discussed before, and it will pull together the appropriate context. Read more about searching past chats here.Where to Start a New Chat (Inside or Outside of a Project)🚨 Important: Once you start a chat outside of a project, it cannot be moved into a project later.Start a New Chat INSIDE Your Project When:Start a New Chat OUTSIDE Your Project When:When to Start a New Chat vs. Continue an Existing OneContinue in the same conversation when:Start a new conversation when:Model Selection GuideAnthropic offers different Claude models, each optimized for different needs. Understanding their strengths helps you select the best option for your specific tasks.Quick Decision FlowChat Usage LimitsEven on Pro or Team plans, usage isn’t unlimited. Anthropic uses session-based and weekly quotas, including model-specific limits:In practice, users on Pro often hit Opus 4.1 limits quickly (sometimes after just a few queries), and Opus draws from only ~20% of overall allocation. Support docs confirm usage caps remain dynamic and depend on message length, attached files, conversation length, and model used.  ",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "Screenshot 2025-08-06 at 13.26.21.png",
+        "content_type": "image/png",
+        "metadata": {
+          "identified": true,
+          "width": 1492,
+          "height": 208,
+          "analyzed": true
+        },
+        "byte_size": 32859,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSXdUNHdVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1eed3e0e7ca67b1235b9d677f3ccf4e362a81795",
+        "type": "file",
+        "url": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSXdUNHdVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1eed3e0e7ca67b1235b9d677f3ccf4e362a81795/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c94871ba5479e24de62982019557cdcc73e92248/Screenshot%202025-08-06%20at%2013.26.21.png",
+        "is_downloadable": true,
+        "image_variants": {
+          "original": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSXdUNHdVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1eed3e0e7ca67b1235b9d677f3ccf4e362a81795/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c94871ba5479e24de62982019557cdcc73e92248/Screenshot%202025-08-06%20at%2013.26.21.png",
+          "thumbnail": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSXdUNHdVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1eed3e0e7ca67b1235b9d677f3ccf4e362a81795/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVdrd09ncHpZWFpsY25zR09ncHpkSEpwY0ZRPSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8e3873984cecb63ce8922890e6bae284f3645258/Screenshot%202025-08-06%20at%2013.26.21.png",
+          "small": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSXdUNHdVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1eed3e0e7ca67b1235b9d677f3ccf4e362a81795/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFKb0FUQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--174cceaf9a31f17164863935309188a5606afc21/Screenshot%202025-08-06%20at%2013.26.21.png",
+          "medium": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSXdUNHdVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1eed3e0e7ca67b1235b9d677f3ccf4e362a81795/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFMUUFqQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--9795b686cfa287dd8535c2801217d42f4915df97/Screenshot%202025-08-06%20at%2013.26.21.png",
+          "large": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSXdUNHdVPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1eed3e0e7ca67b1235b9d677f3ccf4e362a81795/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJNEJEQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--7535ef66ff04b52d1ea165e904a77a64f9cc7389/Screenshot%202025-08-06%20at%2013.26.21.png"
+        }
+      },
+      {
+        "filename": "Screenshot 2025-08-06 at 14.01.06.png",
+        "content_type": "image/png",
+        "metadata": {
+          "identified": true,
+          "width": 1016,
+          "height": 140,
+          "analyzed": true
+        },
+        "byte_size": 31608,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSCtzRUFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f52cc72d9c0bf8fe3ecc2c50b06e9c87cb7f0c2a",
+        "type": "file",
+        "url": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSCtzRUFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f52cc72d9c0bf8fe3ecc2c50b06e9c87cb7f0c2a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c94871ba5479e24de62982019557cdcc73e92248/Screenshot%202025-08-06%20at%2014.01.06.png",
+        "is_downloadable": true,
+        "image_variants": {
+          "original": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSCtzRUFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f52cc72d9c0bf8fe3ecc2c50b06e9c87cb7f0c2a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c94871ba5479e24de62982019557cdcc73e92248/Screenshot%202025-08-06%20at%2014.01.06.png",
+          "thumbnail": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSCtzRUFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f52cc72d9c0bf8fe3ecc2c50b06e9c87cb7f0c2a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVdrd09ncHpZWFpsY25zR09ncHpkSEpwY0ZRPSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8e3873984cecb63ce8922890e6bae284f3645258/Screenshot%202025-08-06%20at%2014.01.06.png",
+          "small": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSCtzRUFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f52cc72d9c0bf8fe3ecc2c50b06e9c87cb7f0c2a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFKb0FUQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--174cceaf9a31f17164863935309188a5606afc21/Screenshot%202025-08-06%20at%2014.01.06.png",
+          "medium": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSCtzRUFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f52cc72d9c0bf8fe3ecc2c50b06e9c87cb7f0c2a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFMUUFqQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--9795b686cfa287dd8535c2801217d42f4915df97/Screenshot%202025-08-06%20at%2014.01.06.png",
+          "large": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSCtzRUFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f52cc72d9c0bf8fe3ecc2c50b06e9c87cb7f0c2a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJNEJEQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--7535ef66ff04b52d1ea165e904a77a64f9cc7389/Screenshot%202025-08-06%20at%2014.01.06.png"
+        }
+      },
+      {
+        "filename": "Screenshot 2025-09-30 at 15.22.46.png",
+        "content_type": "image/png",
+        "metadata": {
+          "identified": true,
+          "width": 614,
+          "height": 298,
+          "analyzed": true
+        },
+        "byte_size": 36530,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTZDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--dd4e1d0c372b94fd92b6c96378e2830310d2c99f",
+        "type": "file",
+        "url": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTZDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--dd4e1d0c372b94fd92b6c96378e2830310d2c99f/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c94871ba5479e24de62982019557cdcc73e92248/Screenshot%202025-09-30%20at%2015.22.46.png",
+        "is_downloadable": true,
+        "image_variants": {
+          "original": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTZDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--dd4e1d0c372b94fd92b6c96378e2830310d2c99f/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c94871ba5479e24de62982019557cdcc73e92248/Screenshot%202025-09-30%20at%2015.22.46.png",
+          "thumbnail": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTZDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--dd4e1d0c372b94fd92b6c96378e2830310d2c99f/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVdrd09ncHpZWFpsY25zR09ncHpkSEpwY0ZRPSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8e3873984cecb63ce8922890e6bae284f3645258/Screenshot%202025-09-30%20at%2015.22.46.png",
+          "small": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTZDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--dd4e1d0c372b94fd92b6c96378e2830310d2c99f/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFKb0FUQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--174cceaf9a31f17164863935309188a5606afc21/Screenshot%202025-09-30%20at%2015.22.46.png",
+          "medium": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTZDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--dd4e1d0c372b94fd92b6c96378e2830310d2c99f/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFMUUFqQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--9795b686cfa287dd8535c2801217d42f4915df97/Screenshot%202025-09-30%20at%2015.22.46.png",
+          "large": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQTZDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--dd4e1d0c372b94fd92b6c96378e2830310d2c99f/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJNEJEQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--7535ef66ff04b52d1ea165e904a77a64f9cc7389/Screenshot%202025-09-30%20at%2015.22.46.png"
+        }
+      },
+      {
+        "filename": "Screenshot 2025-09-30 at 15.23.44.png",
+        "content_type": "image/png",
+        "metadata": {
+          "identified": true,
+          "width": 1396,
+          "height": 294,
+          "analyzed": true
+        },
+        "byte_size": 37968,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUFNDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bc1285c66bd0fb106419d7aa3eb1039a6da61fe1",
+        "type": "file",
+        "url": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUFNDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bc1285c66bd0fb106419d7aa3eb1039a6da61fe1/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c94871ba5479e24de62982019557cdcc73e92248/Screenshot%202025-09-30%20at%2015.23.44.png",
+        "is_downloadable": true,
+        "image_variants": {
+          "original": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUFNDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bc1285c66bd0fb106419d7aa3eb1039a6da61fe1/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c94871ba5479e24de62982019557cdcc73e92248/Screenshot%202025-09-30%20at%2015.23.44.png",
+          "thumbnail": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUFNDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bc1285c66bd0fb106419d7aa3eb1039a6da61fe1/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVdrd09ncHpZWFpsY25zR09ncHpkSEpwY0ZRPSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8e3873984cecb63ce8922890e6bae284f3645258/Screenshot%202025-09-30%20at%2015.23.44.png",
+          "small": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUFNDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bc1285c66bd0fb106419d7aa3eb1039a6da61fe1/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFKb0FUQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--174cceaf9a31f17164863935309188a5606afc21/Screenshot%202025-09-30%20at%2015.23.44.png",
+          "medium": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUFNDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bc1285c66bd0fb106419d7aa3eb1039a6da61fe1/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFMUUFqQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--9795b686cfa287dd8535c2801217d42f4915df97/Screenshot%202025-09-30%20at%2015.23.44.png",
+          "large": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUFNDWlFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bc1285c66bd0fb106419d7aa3eb1039a6da61fe1/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJNEJEQTZDbk5oZG1WeWV3WTZDbk4wY21sd1ZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--7535ef66ff04b52d1ea165e904a77a64f9cc7389/Screenshot%202025-09-30%20at%2015.23.44.png"
+        }
+      }
+    ],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "chat_room_uuid": "d1fa6d44-7ed9-4fcf-ae14-da82d6fe753d"
+}

@@ -1,0 +1,727 @@
+{
+  "id": 35594885,
+  "name": "Your Team Hit Every Priority. Your Company Got Less Profitable.",
+  "slug": "your-team-hit-every-priority-your-company-got-less-profitable",
+  "type": "Posts::Basic",
+  "status": "published",
+  "user_id": 59573912,
+  "published_at": "2026-08-18T14:01:22.217Z",
+  "updated_at": "2026-08-18T14:01:22.239Z",
+  "created_at": "2026-08-18T14:01:22.217Z",
+  "hide_meta_info": false,
+  "community_member_id": 85538714,
+  "is_truncation_disabled": null,
+  "hide_from_featured_areas": false,
+  "flagged_for_approval_at": null,
+  "pinned_at": null,
+  "internal_custom_html": null,
+  "is_comments_enabled": true,
+  "is_liking_enabled": true,
+  "share_post_enabled": null,
+  "share_uid": null,
+  "minimal_layout": false,
+  "show_post_teaser": false,
+  "editor": "tiptap",
+  "is_comments_closed": false,
+  "is_comments_disabled": false,
+  "is_liking_disabled": false,
+  "display_title": "Your Team Hit Every Priority. Your Company Got Less Profitable.",
+  "cover_image": null,
+  "cover_image_url": null,
+  "cover_image_variants": {},
+  "cardview_thumbnail": null,
+  "cardview_thumbnail_url": null,
+  "cardview_image_url": null,
+  "space_name": "Announcement",
+  "space_slug": "announcement",
+  "community_slug": "empower-labs",
+  "space_id": 2721841,
+  "pin_to_top": false,
+  "pinned_at_top_of_space": false,
+  "bookmark_id": null,
+  "topics": [],
+  "community_member": {
+    "id": 85538714,
+    "user_id": 59573912,
+    "public_uid": "89ea2fdb",
+    "first_name": "Ronnie",
+    "last_name": null,
+    "name": "Ronnie",
+    "admin": true,
+    "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzU5NTczOTEyP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--86d5ff77eb6b7c8282e1582d1728433aa9fb5e08",
+    "type": "CommunityMember",
+    "headline": "Admin",
+    "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvODU1Mzg3MTQ_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--4d28570696f744a549b25d82dbe6681db284cad0",
+    "avatar_url": null
+  },
+  "conversation_summary_overview": "",
+  "body_trix_content": "",
+  "body_for_editor": null,
+  "truncated_content": "Most teams think finishing every quarterly priority means they're making progress.\n\nIt doesn't.\n\nA company can finish every quarterly priority and still become less profitable.\n\nThe problem isn't that your team isn't working hard.\n\nIt's that they may b...",
+  "show_more": true,
+  "tiptap_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Most teams think finishing every quarterly priority means they're making progress.",
+              "type": "text",
+              "circle_ios_fallback_text": "Most teams think finishing every quarterly priority means they're making progress."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "It doesn't.",
+              "type": "text",
+              "circle_ios_fallback_text": "It doesn't."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A company can finish every quarterly priority and still become less profitable.",
+              "type": "text",
+              "circle_ios_fallback_text": "A company can finish every quarterly priority and still become less profitable."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The problem isn't that your team isn't working hard.",
+              "type": "text",
+              "circle_ios_fallback_text": "The problem isn't that your team isn't working hard."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "It's that they may be working on the wrong things.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "It's that they may be working on the wrong things."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In this video, Hayden explains why that happens and how to fix it using Objectives and Key Results (OKRs) starting with the P&L, translating the company's most important problem into measurable Key Results, and using AI to keep results visible and flag problems early.",
+              "type": "text",
+              "circle_ios_fallback_text": "In this video, Hayden explains why that happens and how to fix it using Objectives and Key Results (OKRs) starting with the P&L, translating the company's most important problem into measurable Key Results, and using AI to keep results visible and flag problems early."
+            }
+          ]
+        },
+        {
+          "type": "embed",
+          "attrs": {
+            "sgid": "BAh7CEkiCGdpZAY6BkVUSSI6Z2lkOi8vanVtcHN0YXJ0LWFwcC9SaWNoVGV4dE9lbWJlZC8yNTU5MjM4P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--983076ef77feee15f8aeda846e34269adbe105f0"
+          }
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "In this video, you'll learn:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "In this video, you'll learn:"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "📊 How to work backward from the P&L to identify the operating cause behind a profitability problem",
+              "type": "text",
+              "circle_ios_fallback_text": "📊 How to work backward from the P&L to identify the operating cause behind a profitability problem"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "🎯 How to turn a company Objective into measurable Key Results with a baseline, target, owner, and date",
+              "type": "text",
+              "circle_ios_fallback_text": "🎯 How to turn a company Objective into measurable Key Results with a baseline, target, owner, and date"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "⚙️ The difference between an Objective, Key Result, Project, and Task—and why most companies start with the work and attach it to strategy afterward",
+              "type": "text",
+              "circle_ios_fallback_text": "⚙️ The difference between an Objective, Key Result, Project, and Task—and why most companies start with the work and attach it to strategy afterward"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "👥 How leadership and teams can create aligned OKRs while giving the team a role in choosing the road",
+              "type": "text",
+              "circle_ios_fallback_text": "👥 How leadership and teams can create aligned OKRs while giving the team a role in choosing the road"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "🚦 How to use ",
+              "type": "text",
+              "circle_ios_fallback_text": "🚦 How to use "
+            },
+            {
+              "text": "Now, Later, and Parked",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Now, Later, and Parked"
+            },
+            {
+              "text": " so everything isn't treated as a priority",
+              "type": "text",
+              "circle_ios_fallback_text": " so everything isn't treated as a priority"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "🤖 How AI can pressure-test your strategy by identifying missing baselines, targets, owners, dates, and dependencies",
+              "type": "text",
+              "circle_ios_fallback_text": "🤖 How AI can pressure-test your strategy by identifying missing baselines, targets, owners, dates, and dependencies"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "One of the biggest takeaways is that ",
+              "type": "text",
+              "circle_ios_fallback_text": "One of the biggest takeaways is that "
+            },
+            {
+              "text": "AI doesn't choose the strategy. It exposes gaps in the strategy.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "AI doesn't choose the strategy. It exposes gaps in the strategy."
+            },
+            {
+              "text": " AI can keep the system visible, but leadership still decides what matters.",
+              "type": "text",
+              "circle_ios_fallback_text": " AI can keep the system visible, but leadership still decides what matters."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Ready to Audit Your Team's Priorities?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Ready to Audit Your Team's Priorities?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Use the ",
+              "type": "text",
+              "circle_ios_fallback_text": "Use the "
+            },
+            {
+              "text": "OKR Alignment Audit Prompt",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "OKR Alignment Audit Prompt"
+            },
+            {
+              "text": " to run the same test Hayden used with the leadership team.",
+              "type": "text",
+              "circle_ios_fallback_text": " to run the same test Hayden used with the leadership team."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Give it ",
+              "type": "text",
+              "circle_ios_fallback_text": "Give it "
+            },
+            {
+              "text": "one important P&L trend and your current priorities",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "one important P&L trend and your current priorities"
+            },
+            {
+              "text": ".",
+              "type": "text",
+              "circle_ios_fallback_text": "."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "It will help you identify:",
+              "type": "text",
+              "circle_ios_fallback_text": "It will help you identify:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Which priorities address the real problem",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Which are outcomes and which are just projects or tasks",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "What belongs in ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Now, Later, or Parked",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "You'll get the alignment audit first. Then, if you choose, it will help you build the company OKRs, align one team at a time, and create the weekly review register.",
+              "type": "text",
+              "circle_ios_fallback_text": "You'll get the alignment audit first. Then, if you choose, it will help you build the company OKRs, align one team at a time, and create the weekly review register."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "It won't invent the strategy, targets, or owners.",
+              "type": "text",
+              "circle_ios_fallback_text": "It won't invent the strategy, targets, or owners."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Let AI find the gaps. You decide what matters.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Let AI find the gaps. You decide what matters."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "👉 ",
+              "type": "text",
+              "circle_ios_fallback_text": "👉 "
+            },
+            {
+              "text": "Get the OKR Alignment Audit Prompt:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Get the OKR Alignment Audit Prompt:"
+            },
+            {
+              "text": " ",
+              "type": "text",
+              "circle_ios_fallback_text": " "
+            },
+            {
+              "text": "https://docs.google.com/document/d/1LLww0nnVAVDtIhyjqvYk4zOh0ZC5TXNjOfuegWRUU7k/edit?pli=1&tab=t.0#heading=h.ixgtmlx2o3f3",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://docs.google.com/document/d/1LLww0nnVAVDtIhyjqvYk4zOh0ZC5TXNjOfuegWRUU7k/edit?pli=1&tab=t.0#heading=h.ixgtmlx2o3f3",
+                    "class": null,
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "circle_ios_fallback_text": "https://docs.google.com/document/d/1LLww0nnVAVDtIhyjqvYk4zOh0ZC5TXNjOfuegWRUU7k/edit?pli=1&tab=t.0#heading=h.ixgtmlx2o3f3"
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "💬 Join the Discussion",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "💬 Join the Discussion"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "After watching the video, let us know in the comments:",
+              "type": "text",
+              "circle_ios_fallback_text": "After watching the video, let us know in the comments:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "How confident are you that your team's current priorities are connected to the most important result your company needs?",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Which of your current priorities are outcomes—and which are projects or tasks?",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "What could move to ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Now, Later, or Parked",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "?",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "What was your biggest takeaway from the video?",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "👋 New to the Community?",
+              "type": "text",
+              "circle_ios_fallback_text": "👋 New to the Community?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you haven't introduced yourself yet, we'd love to get to know you!",
+              "type": "text",
+              "circle_ios_fallback_text": "If you haven't introduced yourself yet, we'd love to get to know you!"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Head over to the ",
+              "type": "text",
+              "circle_ios_fallback_text": "Head over to the "
+            },
+            {
+              "text": "Community space",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Community space"
+            },
+            {
+              "text": " and tell us:",
+              "type": "text",
+              "circle_ios_fallback_text": " and tell us:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Who you are",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "What your role or business is",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Where you're joining us from",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "What you're hoping to accomplish with AI",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "We look forward to hearing your biggest takeaway from the video and learning more about your AI journey!",
+              "type": "text",
+              "circle_ios_fallback_text": "We look forward to hearing your biggest takeaway from the video and learning more about your AI journey!"
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "Most teams think finishing every quarterly priority means they're making progress.It doesn't.A company can finish every quarterly priority and still become less profitable.The problem isn't that your team isn't working hard.It's that they may be working on the wrong things.In this video, Hayden explains why that happens and how to fix it using Objectives and Key Results (OKRs) starting with the P&L, translating the company's most important problem into measurable Key Results, and using AI to keep results visible and flag problems early.In this video, you'll learn:📊 How to work backward from the P&L to identify the operating cause behind a profitability problem🎯 How to turn a company Objective into measurable Key Results with a baseline, target, owner, and date⚙️ The difference between an Objective, Key Result, Project, and Task—and why most companies start with the work and attach it to strategy afterward👥 How leadership and teams can create aligned OKRs while giving the team a role in choosing the road🚦 How to use Now, Later, and Parked so everything isn't treated as a priority🤖 How AI can pressure-test your strategy by identifying missing baselines, targets, owners, dates, and dependenciesOne of the biggest takeaways is that AI doesn't choose the strategy. It exposes gaps in the strategy. AI can keep the system visible, but leadership still decides what matters.Ready to Audit Your Team's Priorities?Use the OKR Alignment Audit Prompt to run the same test Hayden used with the leadership team.Give it one important P&L trend and your current priorities.It will help you identify:You'll get the alignment audit first. Then, if you choose, it will help you build the company OKRs, align one team at a time, and create the weekly review register.It won't invent the strategy, targets, or owners.Let AI find the gaps. You decide what matters.👉 Get the OKR Alignment Audit Prompt: https://docs.google.com/document/d/1LLww0nnVAVDtIhyjqvYk4zOh0ZC5TXNjOfuegWRUU7k/edit?pli=1&tab=t.0#heading=h.ixgtmlx2o3f3💬 Join the DiscussionAfter watching the video, let us know in the comments:👋 New to the Community?If you haven't introduced yourself yet, we'd love to get to know you!Head over to the Community space and tell us:We look forward to hearing your biggest takeaway from the video and learning more about your AI journey!",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {
+      "BAh7CEkiCGdpZAY6BkVUSSI6Z2lkOi8vanVtcHN0YXJ0LWFwcC9SaWNoVGV4dE9lbWJlZC8yNTU5MjM4P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--983076ef77feee15f8aeda846e34269adbe105f0": {
+        "id": 2559238,
+        "url": "https://youtu.be/xIAjsCQbQB8?si=-4lW3MQCAmJnULNY",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSI6Z2lkOi8vanVtcHN0YXJ0LWFwcC9SaWNoVGV4dE9lbWJlZC8yNTU5MjM4P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--983076ef77feee15f8aeda846e34269adbe105f0",
+        "type": "embed",
+        "embed_type": "video",
+        "embed_provider": "iframely",
+        "circle_embed_url": "https://community.empowerlabs.ai/rich_text_oembeds/BAh7CEkiCGdpZAY6BkVUSSI6Z2lkOi8vanVtcHN0YXJ0LWFwcC9SaWNoVGV4dE9lbWJlZC8yNTU5MjM4P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--983076ef77feee15f8aeda846e34269adbe105f0",
+        "html": "<div style=\"left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;\"><iframe src=\"https://www.youtube.com/embed/xIAjsCQbQB8?rel=0\" width=\"360\" height=\"202\" style=\"top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;\" allowfullscreen scrolling=\"no\" allow=\"accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;\" referrerpolicy=\"strict-origin\"></iframe></div>",
+        "title": "Your Team Hit Every Priority. Your Company Got Less Profitable.",
+        "width": 360,
+        "height": 202,
+        "version": "1.0",
+        "author_url": "https://www.youtube.com/channel/UCDMYoClgeu5QJpEfDaJLnHA",
+        "author_name": null,
+        "description": "What if your team completed every quarterly priority, but the business still got weaker?\n\nIn this video, Hayden Miyamoto explains why completed work is not always real progress, and how to use OKRs to connect company priorities back to the financial result that actually matters.\n\nYou’ll see how to work backward from the P&L, turn a company objective into measurable Key Results, separate projects from tasks, and use AI to keep progress visible before problems show up too late.\n\nUse this if your team is busy, your priorities look organized, but profit is still moving in the wrong direction.\n\n*JOIN OUR CIRCLE COMMUNITY FOR FREE*\nhttps://community.empowerlabs.ai/join?invitation_token=f618616a09ca533f4c5457fb0f922e7935adc13e-93fdb8d8-0742-437f-a65e-c24b9174bb85\n\n*GET THE OKR ALIGNMENT AUDIT PROMPT HERE:*\nhttps://community.empowerlabs.ai/c/announcement/\n\n*Chapters:*\n0:00 Why completed priorities can still hurt profit\n0:46 Start with the P&L\n1:10 Quick ask\n1:21 The leadership team story\n2:36 Objective, Key Result, Project, Task\n3:30 How OKRs cascade through a company\n4:12 Top-down direction, bottom-up alignment\n4:32 Use AI to pressure-test the strategy\n4:53 Weekly OKR visibility with AI\n5:47 OKR Alignment Audit prompt\n\n#OKRs #AIforBusiness #BusinessStrategy",
+        "provider_url": null,
+        "provider_name": "YouTube",
+        "thumbnail_url": "https://i.ytimg.com/vi/xIAjsCQbQB8/maxresdefault.jpg",
+        "thumbnail_width": 1280,
+        "thumbnail_height": 720
+      }
+    },
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  }
+}

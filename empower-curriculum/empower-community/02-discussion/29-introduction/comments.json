@@ -1,0 +1,106 @@
+[
+  {
+    "id": 94730022,
+    "parent_comment_id": null,
+    "post_id": 29397546,
+    "user_id": 30774298,
+    "editor": "tiptap",
+    "flagged_for_approval_at": null,
+    "created_at": "2026-02-06T00:31:01.991Z",
+    "updated_at": "2026-02-06T00:31:02.004Z",
+    "is_replying_enabled": true,
+    "is_liking_enabled": true,
+    "bookmark_id": null,
+    "is_liked": false,
+    "likes_count": 1,
+    "unresolved_flagged_reports_count": 0,
+    "show_url": "https://community.empowerlabs.ai/c/discussion-b92449/introduction-89f86a#comment_wrapper_94730022",
+    "author_type": "CommunityMember",
+    "community_member": {
+      "id": 51521280,
+      "user_id": 30774298,
+      "public_uid": "0cb8998d",
+      "first_name": "Josh",
+      "last_name": "Cordes",
+      "name": "Josh Cordes",
+      "admin": true,
+      "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzMwNzc0Mjk4P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--02e79904909f662e09046f35108f48e28a901978",
+      "type": "CommunityMember",
+      "headline": "Customer Acquisition Leader",
+      "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTE1MjEyODA_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--48e1ccf99069c61215c8c923551e00b75da7659b",
+      "avatar_url": "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSTFsY3dZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--7bc1b33cca113c20a49c2d97402b17ac6fb5183a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lKYW5CbFp3WTZCa1ZVT2hSeVpYTnBlbVZmZEc5ZmJHbHRhWFJiQjJrQ0xBRnBBaXdCT2dwellYWmxjbnNHT2dwemRISnBjRlE9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--ef295ed08e817a599d692fd6d8761673d3ed547f/Headshot.jpeg"
+    },
+    "member_tags_html": "  <span class=\"author__is-admin\">\n    admin\n  </span>\n\n",
+    "member_tags": [
+      {
+        "id": 115121971,
+        "name": "Acquira",
+        "emoji": "",
+        "color": "#ffffff",
+        "is_public": false,
+        "is_background_enabled": false,
+        "display_format": "label",
+        "display_locations": {
+          "post_bio": true,
+          "profile_page": true,
+          "member_directory": true
+        },
+        "custom_emoji_url": null,
+        "custom_emoji_dark_url": null
+      },
+      {
+        "id": 116216603,
+        "name": "Ads Lead",
+        "emoji": "",
+        "color": "#ffffff",
+        "is_public": false,
+        "is_background_enabled": false,
+        "display_format": "label",
+        "display_locations": {
+          "post_bio": true,
+          "profile_page": true,
+          "member_directory": true
+        },
+        "custom_emoji_url": null,
+        "custom_emoji_dark_url": null
+      }
+    ],
+    "body_trix_content": null,
+    "body_for_editor": null,
+    "tiptap_body": {
+      "body": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Welcome Pavlo. Happy to have you join the community.  As you start to go through the curriculum,  you can ask questions here as they come up for you.  This cohort will be perfect to help you with your current goals & beyond.  ",
+                "type": "text",
+                "circle_ios_fallback_text": "Welcome Pavlo. Happy to have you join the community.  As you start to go through the curriculum,  you can ask questions here as they come up for you.  This cohort will be perfect to help you with your current goals & beyond.  "
+              }
+            ]
+          }
+        ]
+      },
+      "circle_ios_fallback_text": "Welcome Pavlo. Happy to have you join the community.  As you start to go through the curriculum,  you can ask questions here as they come up for you.  This cohort will be perfect to help you with your current goals & beyond.  ",
+      "attachments": [],
+      "inline_attachments": [],
+      "sgids_to_object_map": {},
+      "format": "post",
+      "community_members": [],
+      "entities": [],
+      "group_mentions": [],
+      "polls": []
+    },
+    "policies": {
+      "can_report": false,
+      "can_manage": false,
+      "can_edit": false,
+      "can_destroy": false,
+      "can_bookmark": true
+    },
+    "replies_count": 0,
+    "replies": []
+  }
+]

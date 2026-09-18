@@ -1,0 +1,552 @@
+{
+  "id": 34802943,
+  "name": "Can Your Business Survive Without You?",
+  "slug": "can-your-business-survive-without-you",
+  "type": "Posts::Basic",
+  "status": "published",
+  "user_id": 39364111,
+  "published_at": "2026-07-24T13:24:44.131Z",
+  "updated_at": "2026-08-14T18:13:36.106Z",
+  "created_at": "2026-07-24T13:24:44.131Z",
+  "hide_meta_info": false,
+  "community_member_id": 51527687,
+  "is_truncation_disabled": null,
+  "hide_from_featured_areas": false,
+  "flagged_for_approval_at": null,
+  "pinned_at": null,
+  "internal_custom_html": null,
+  "is_comments_enabled": true,
+  "is_liking_enabled": true,
+  "share_post_enabled": null,
+  "share_uid": null,
+  "minimal_layout": false,
+  "show_post_teaser": false,
+  "editor": "tiptap",
+  "is_comments_closed": false,
+  "is_comments_disabled": false,
+  "is_liking_disabled": false,
+  "display_title": "Can Your Business Survive Without You?",
+  "cover_image": null,
+  "cover_image_url": null,
+  "cover_image_variants": {},
+  "cardview_thumbnail": null,
+  "cardview_thumbnail_url": null,
+  "cardview_image_url": null,
+  "space_name": "Announcement",
+  "space_slug": "announcement",
+  "community_slug": "empower-labs",
+  "space_id": 2721841,
+  "pin_to_top": false,
+  "pinned_at_top_of_space": false,
+  "bookmark_id": null,
+  "topics": [],
+  "community_member": {
+    "id": 51527687,
+    "user_id": 39364111,
+    "public_uid": "b2be8b1e",
+    "first_name": "Ronnie",
+    "last_name": "Seguilla",
+    "name": "Ronnie Seguilla",
+    "admin": true,
+    "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzM5MzY0MTExP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--526c8da859ab73228e0fe33cfc7e422ab8b19331",
+    "type": "CommunityMember",
+    "headline": "Admin",
+    "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTE1Mjc2ODc_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--ff7e32066a01f1a91da71adf5a71bc9c75b95f13",
+    "avatar_url": null
+  },
+  "conversation_summary_overview": "",
+  "body_trix_content": "",
+  "body_for_editor": null,
+  "truncated_content": "One of the biggest risks in any business isn't declining revenue or losing customers—it's when critical knowledge exists only in one person's head.\n\nMany business owners believe they're building a valuable company, but when it's time to delegate, scale...",
+  "show_more": true,
+  "tiptap_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "One of the biggest risks in any business isn't declining revenue or losing customers—it's when critical knowledge exists only in one person's head.",
+              "type": "text",
+              "circle_ios_fallback_text": "One of the biggest risks in any business isn't declining revenue or losing customers—it's when critical knowledge exists only in one person's head."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Many business owners believe they're building a valuable company, but when it's time to delegate, scale, or sell, they discover the business depends too heavily on them or a few key employees.",
+              "type": "text",
+              "circle_ios_fallback_text": "Many business owners believe they're building a valuable company, but when it's time to delegate, scale, or sell, they discover the business depends too heavily on them or a few key employees."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The problem isn't a lack of hard work.",
+              "type": "text",
+              "circle_ios_fallback_text": "The problem isn't a lack of hard work."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "It's key person risk.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "It's key person risk."
+            }
+          ]
+        },
+        {
+          "type": "embed",
+          "attrs": {
+            "sgid": "BAh7CEkiCGdpZAY6BkVUSSI6Z2lkOi8vanVtcHN0YXJ0LWFwcC9SaWNoVGV4dE9lbWJlZC8yNDkxMzM0P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--282cf9dd03f0ab377af22da1de8e95bb2fb7a321"
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In this video, Hayden explains why reducing key person risk is one of the most important steps toward building a transferable, scalable, and more valuable business.",
+              "type": "text",
+              "circle_ios_fallback_text": "In this video, Hayden explains why reducing key person risk is one of the most important steps toward building a transferable, scalable, and more valuable business."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "In this video, you'll learn:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "In this video, you'll learn:"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "📌 What key person risk is and why buyers pay close attention to it during due diligence",
+              "type": "text",
+              "circle_ios_fallback_text": "📌 What key person risk is and why buyers pay close attention to it during due diligence"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "🧠 How tribal knowledge creates hidden risks that make businesses harder to delegate, scale, and sell",
+              "type": "text",
+              "circle_ios_fallback_text": "🧠 How tribal knowledge creates hidden risks that make businesses harder to delegate, scale, and sell"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "📋 Why documenting your highest-risk processes builds buyer confidence and reduces operational risk",
+              "type": "text",
+              "circle_ios_fallback_text": "📋 Why documenting your highest-risk processes builds buyer confidence and reduces operational risk"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "🤝 What buyers look for when evaluating whether a business can operate without the owner",
+              "type": "text",
+              "circle_ios_fallback_text": "🤝 What buyers look for when evaluating whether a business can operate without the owner"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "🤖 How AI can dramatically speed up process documentation by helping capture knowledge and create first-draft SOPs",
+              "type": "text",
+              "circle_ios_fallback_text": "🤖 How AI can dramatically speed up process documentation by helping capture knowledge and create first-draft SOPs"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "One of the biggest takeaways is that documentation isn't just about creating SOPs—it's about transferring knowledge from individuals into systems. The more your business can operate without relying on one person, the more resilient, transferable, and valuable it becomes.",
+              "type": "text",
+              "circle_ios_fallback_text": "One of the biggest takeaways is that documentation isn't just about creating SOPs—it's about transferring knowledge from individuals into systems. The more your business can operate without relying on one person, the more resilient, transferable, and valuable it becomes."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Ready to Assess Your Key Person Risk?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Ready to Assess Your Key Person Risk?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Use the ",
+              "type": "text",
+              "circle_ios_fallback_text": "Use the "
+            },
+            {
+              "text": "Free Key Person Risk Assessment",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Free Key Person Risk Assessment"
+            },
+            {
+              "text": " to identify the roles and processes that create the greatest dependency in your business and prioritize where to start documenting first.",
+              "type": "text",
+              "circle_ios_fallback_text": " to identify the roles and processes that create the greatest dependency in your business and prioritize where to start documenting first."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "👉 ",
+              "type": "text",
+              "circle_ios_fallback_text": "👉 "
+            },
+            {
+              "text": "Take the Key Person Risk Assessment: ",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Take the Key Person Risk Assessment: "
+            },
+            {
+              "text": "https://el-key-person-risk-assessment.vercel.app/assessment?utm_source=circle&utm_medium=community&utm_campaign=key-person-risk-post-2026-08-13",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://el-key-person-risk-assessment.vercel.app/assessment?utm_source=circle&utm_medium=community&utm_campaign=key-person-risk-post-2026-08-13",
+                    "class": null,
+                    "target": "_blank"
+                  }
+                },
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "https://el-key-person-risk-assessment.vercel.app/assessment?utm_source=circle&utm_medium=community&utm_campaign=key-person-risk-post-2026-08-13"
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "💬 Join the Discussion",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "💬 Join the Discussion"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "After watching the video, let us know in the comments:",
+              "type": "text",
+              "circle_ios_fallback_text": "After watching the video, let us know in the comments:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Which role in your business would be the hardest to replace today?",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "If one person were unavailable for the next 30 days, what process would be most affected?",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "What's one process you plan to document first after watching this video?",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "What was your biggest takeaway?",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "👋 New to the Community?",
+              "type": "text",
+              "circle_ios_fallback_text": "👋 New to the Community?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you haven't introduced yourself yet, we'd love to get to know you!",
+              "type": "text",
+              "circle_ios_fallback_text": "If you haven't introduced yourself yet, we'd love to get to know you!"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Head over to the ",
+              "type": "text",
+              "circle_ios_fallback_text": "Head over to the "
+            },
+            {
+              "type": "entity",
+              "attrs": {
+                "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNzAyNTA1P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--121f1bb2561ddf7189d9d92a0dc8f889ef904795"
+              },
+              "circle_ios_fallback_text": "#Discussion"
+            },
+            {
+              "text": " space and tell us:",
+              "type": "text",
+              "circle_ios_fallback_text": " space and tell us:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Who you are",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "What your role or business is",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Where you're joining us from",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "What you're hoping to accomplish with AI",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "We look forward to hearing your biggest takeaway from the video and learning more about your AI journey!",
+              "type": "text",
+              "circle_ios_fallback_text": "We look forward to hearing your biggest takeaway from the video and learning more about your AI journey!"
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "One of the biggest risks in any business isn't declining revenue or losing customers—it's when critical knowledge exists only in one person's head.Many business owners believe they're building a valuable company, but when it's time to delegate, scale, or sell, they discover the business depends too heavily on them or a few key employees.The problem isn't a lack of hard work.It's key person risk.In this video, Hayden explains why reducing key person risk is one of the most important steps toward building a transferable, scalable, and more valuable business.In this video, you'll learn:📌 What key person risk is and why buyers pay close attention to it during due diligence🧠 How tribal knowledge creates hidden risks that make businesses harder to delegate, scale, and sell📋 Why documenting your highest-risk processes builds buyer confidence and reduces operational risk🤝 What buyers look for when evaluating whether a business can operate without the owner🤖 How AI can dramatically speed up process documentation by helping capture knowledge and create first-draft SOPsOne of the biggest takeaways is that documentation isn't just about creating SOPs—it's about transferring knowledge from individuals into systems. The more your business can operate without relying on one person, the more resilient, transferable, and valuable it becomes.Ready to Assess Your Key Person Risk?Use the Free Key Person Risk Assessment to identify the roles and processes that create the greatest dependency in your business and prioritize where to start documenting first.👉 Take the Key Person Risk Assessment: https://el-key-person-risk-assessment.vercel.app/assessment?utm_source=circle&utm_medium=community&utm_campaign=key-person-risk-post-2026-08-13💬 Join the DiscussionAfter watching the video, let us know in the comments:👋 New to the Community?If you haven't introduced yourself yet, we'd love to get to know you!Head over to the #Discussion space and tell us:We look forward to hearing your biggest takeaway from the video and learning more about your AI journey!",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {
+      "BAh7CEkiCGdpZAY6BkVUSSI6Z2lkOi8vanVtcHN0YXJ0LWFwcC9SaWNoVGV4dE9lbWJlZC8yNDkxMzM0P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--282cf9dd03f0ab377af22da1de8e95bb2fb7a321": {
+        "id": 2491334,
+        "url": "https://youtu.be/V1YA_NLZJg8",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSI6Z2lkOi8vanVtcHN0YXJ0LWFwcC9SaWNoVGV4dE9lbWJlZC8yNDkxMzM0P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--282cf9dd03f0ab377af22da1de8e95bb2fb7a321",
+        "type": "embed",
+        "embed_type": "video",
+        "embed_provider": "iframely",
+        "circle_embed_url": "https://community.empowerlabs.ai/rich_text_oembeds/BAh7CEkiCGdpZAY6BkVUSSI6Z2lkOi8vanVtcHN0YXJ0LWFwcC9SaWNoVGV4dE9lbWJlZC8yNDkxMzM0P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--282cf9dd03f0ab377af22da1de8e95bb2fb7a321",
+        "html": "<div style=\"left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;\"><iframe src=\"https://www.youtube.com/embed/V1YA_NLZJg8?rel=0\" width=\"360\" height=\"202\" style=\"top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;\" allowfullscreen scrolling=\"no\" allow=\"accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;\" referrerpolicy=\"strict-origin\"></iframe></div>",
+        "title": "Can Your Business Survive Without You?",
+        "width": 360,
+        "height": 202,
+        "version": "1.0",
+        "author_url": "https://www.youtube.com/channel/UCDMYoClgeu5QJpEfDaJLnHA",
+        "author_name": null,
+        "description": "If your business depends too much on you, or one key person, buyers see risk.\n\nIn this video, Hayden explains how process documentation reduces key person risk, makes a business easier to delegate, and gives buyers more confidence that the company can keep working after the owner steps away.\n\nYou’ll learn why documentation is not just an SOP exercise, how buyers look for hidden owner dependency during diligence, and how AI can help turn tribal knowledge into usable systems faster.\n\n*Run the Key Person Risk Assessment here:*\nhttps://el-key-person-risk-assessment.vercel.app/assessment\n\nThe goal is simple: identify what would break if one person left, then document the highest-risk work first.\n\n*Chapters:*\n0:00 Can your business survive without you?\n0:29 The buyer’s lens\n0:47 Key person risk and tribal knowledge\n1:52 Buyers buy confidence\n2:34 What buyers look for in diligence\n3:30 Document the riskiest process first\n4:01 Why this affects enterprise value\n4:38 How AI speeds up the brain download\n5:11 Your next step\n\n#BusinessSystems #AIForBusiness #KeyPersonRisk",
+        "provider_url": null,
+        "provider_name": "YouTube",
+        "thumbnail_url": "https://i.ytimg.com/vi/V1YA_NLZJg8/maxresdefault.jpg",
+        "thumbnail_width": 1280,
+        "thumbnail_height": 720
+      },
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNzAyNTA1P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--121f1bb2561ddf7189d9d92a0dc8f889ef904795": {
+        "id": 2702505,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNzAyNTA1P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--121f1bb2561ddf7189d9d92a0dc8f889ef904795",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/welcome",
+        "slug": "welcome"
+      }
+    },
+    "format": "post",
+    "community_members": [],
+    "entities": [
+      {
+        "id": 2702505,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNzAyNTA1P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--121f1bb2561ddf7189d9d92a0dc8f889ef904795",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/welcome",
+        "slug": "welcome"
+      }
+    ],
+    "group_mentions": [],
+    "polls": []
+  }
+}

@@ -1,0 +1,503 @@
+{
+  "id": 3391927,
+  "name": "Live Session 4: Replay",
+  "status": "published",
+  "featured_media_enabled": true,
+  "download_featured_media": false,
+  "created_at": "2026-02-02T15:30:07.236Z",
+  "updated_at": "2026-03-18T14:35:59.352Z",
+  "comments_enabled": false,
+  "default_tab": "curriculum",
+  "enforce_featured_media_completion": false,
+  "autocomplete_on_featured_media_completion": false,
+  "dripped_at": null,
+  "is_dripped": true,
+  "needs_to_complete_previous_lesson": false,
+  "completed": false,
+  "notify_students_enabled": false,
+  "bookmark_id": null,
+  "featured_media": {
+    "playback_url": "https://cdn-media.circle.so/bcdn_token=0wGfwJF_HRlHs4i3XxC3mZZYhjup6rBGooUo1xDY8zQ&token_path=%2F63f222e4-bd12-4c85-bdbd-1219011a5888%2F&expires=1787964917/63f222e4-bd12-4c85-bdbd-1219011a5888/hls/playlist.m3u8",
+    "current_storage": "in_house",
+    "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQ0p6V1FnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--64fe9d7cabccc376041c3325e0916736be7d3811",
+    "filename": "empower_labs_cohort_4_2026-02-02_17_09_13_v1 (1080p) (1).mp4",
+    "content_type": "video/mp4",
+    "duration": "01:23:50",
+    "is_downloadable": false,
+    "url": "https://assets-v2.circle.so/n6f0gn7hjr5ogn0zdkekvb01pll1",
+    "thumbnail_image_url": "https://cdn-media.circle.so/bcdn_token=0wGfwJF_HRlHs4i3XxC3mZZYhjup6rBGooUo1xDY8zQ&token_path=%2F63f222e4-bd12-4c85-bdbd-1219011a5888%2F&expires=1787964917/63f222e4-bd12-4c85-bdbd-1219011a5888/thumbnail.jpg",
+    "media_transcript_id": 3613140,
+    "media_transcoding": {
+      "status": "succeeded"
+    },
+    "chapters_url": null,
+    "preview_thumbnails_url": "https://cdn-media.circle.so/bcdn_token=0wGfwJF_HRlHs4i3XxC3mZZYhjup6rBGooUo1xDY8zQ&token_path=%2F63f222e4-bd12-4c85-bdbd-1219011a5888%2F&expires=1787964917/63f222e4-bd12-4c85-bdbd-1219011a5888/mosaic.vtt",
+    "video_variants": {
+      "original": "https://assets-v2.circle.so/n6f0gn7hjr5ogn0zdkekvb01pll1",
+      "hls": "https://cdn-media.circle.so/bcdn_token=0wGfwJF_HRlHs4i3XxC3mZZYhjup6rBGooUo1xDY8zQ&token_path=%2F63f222e4-bd12-4c85-bdbd-1219011a5888%2F&expires=1787964917/63f222e4-bd12-4c85-bdbd-1219011a5888/hls/playlist.m3u8"
+    }
+  },
+  "serialized_rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Slides",
+              "type": "text",
+              "circle_ios_fallback_text": "Slides"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQ0pVV1FnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--8d94f01e5a37d442671c9589686657eb771f47dc"
+          }
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Summary",
+              "type": "text",
+              "circle_ios_fallback_text": "Summary"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Tools for Business Growth",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Tools for Business Growth"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The meeting focused on the progress and insights gained from using AI tools like Claude for business processes, with participants sharing their experiences and challenges. Don expressed delight with Claude's output, highlighting its potential to enhance influence and company growth. Midori and Josh discussed the importance of a shared foundation and the structured use of AI to improve business operations. The session concluded with an overview of the five R's of customer excellence, presented by Josh, which included results, retention, reviews, referrals, and resale, emphasizing the need for customer success to drive business growth.",
+              "type": "text",
+              "circle_ios_fallback_text": "The meeting focused on the progress and insights gained from using AI tools like Claude for business processes, with participants sharing their experiences and challenges. Don expressed delight with Claude's output, highlighting its potential to enhance influence and company growth. Midori and Josh discussed the importance of a shared foundation and the structured use of AI to improve business operations. The session concluded with an overview of the five R's of customer excellence, presented by Josh, which included results, retention, reviews, referrals, and resale, emphasizing the need for customer success to drive business growth."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Five R's Discussion and Breakouts",
+              "type": "text",
+              "circle_ios_fallback_text": "Five R's Discussion and Breakouts"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Midori introduced the concept of the five R's and encouraged participants to discuss their strengths and weaknesses in these areas, even if the language used varies by industry. She set up breakout rooms for a 15-minute discussion, and Josh decided to observe rather than participate actively in the breakout sessions. Nancy experienced internet issues but was able to join a group after being added by Midori.",
+              "type": "text",
+              "circle_ios_fallback_text": "Midori introduced the concept of the five R's and encouraged participants to discuss their strengths and weaknesses in these areas, even if the language used varies by industry. She set up breakout rooms for a 15-minute discussion, and Josh decided to observe rather than participate actively in the breakout sessions. Nancy experienced internet issues but was able to join a group after being added by Midori."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Customer Journey Mapping Strategy",
+              "type": "text",
+              "circle_ios_fallback_text": "Customer Journey Mapping Strategy"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The group discussed mapping customer journeys and improving business processes, with Beni explaining their focus on expanding consulting services due to political changes in Switzerland that could affect their standard service offerings. Tim shared insights about the strongest and weakest aspects of their business, noting that retention is challenging for consulting services but might improve with future education products. Josh outlined a three-part approach to mapping customer journeys, including identifying key touchpoints and ascension points, creating SOPs, and developing a priority implementation matrix to focus on high-impact actions.",
+              "type": "text",
+              "circle_ios_fallback_text": "The group discussed mapping customer journeys and improving business processes, with Beni explaining their focus on expanding consulting services due to political changes in Switzerland that could affect their standard service offerings. Tim shared insights about the strongest and weakest aspects of their business, noting that retention is challenging for consulting services but might improve with future education products. Josh outlined a three-part approach to mapping customer journeys, including identifying key touchpoints and ascension points, creating SOPs, and developing a priority implementation matrix to focus on high-impact actions."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Claude's Customer Excellence Upgrade Plan",
+              "type": "text",
+              "circle_ios_fallback_text": "Claude's Customer Excellence Upgrade Plan"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Josh explained the process of upgrading Claude from a general assistant to a customer excellence-aware partner by adding the 5Rs framework and conducting a delivery to success assessment. He emphasized the importance of focusing on one product or service to create a clear customer journey map and SOPs. Josh also discussed the creation of a priority implementation matrix to decide which improvements to tackle first based on impact and complexity. The session concluded with a discussion on organizing SOPs, with Josh recommending tools like Notion or Google Drive for small teams, and mentioning that Empower Labs uses their own Stage 3 software.",
+              "type": "text",
+              "circle_ios_fallback_text": "Josh explained the process of upgrading Claude from a general assistant to a customer excellence-aware partner by adding the 5Rs framework and conducting a delivery to success assessment. He emphasized the importance of focusing on one product or service to create a clear customer journey map and SOPs. Josh also discussed the creation of a priority implementation matrix to decide which improvements to tackle first based on impact and complexity. The session concluded with a discussion on organizing SOPs, with Josh recommending tools like Notion or Google Drive for small teams, and mentioning that Empower Labs uses their own Stage 3 software."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "SOP Revision and Implementation Strategy",
+              "type": "text",
+              "circle_ios_fallback_text": "SOP Revision and Implementation Strategy"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The team discussed modifying Standard Operating Procedures (SOPs) and the best practices for revising existing artifacts in Claude. Josh explained that if changes are needed, it's best to go back to the original chat where the artifact was created, as it already contains context and can be easily revised. He also mentioned that while Claude integrates with Google Drive, relying on automatic updates isn't recommended due to potential issues with integrations. Montgomery raised a question about whether Claude considers context from other chats, to which Josh responded that while the chat context is used, it doesn't necessarily pull from all previous chats to avoid running out of the context window. The session concluded with Midori outlining the next steps, which include adding the 5 R's to the master prompt, running a delivery to success assessment, mapping the customer journey, creating SOP levels, and organizing SOPs. Office hours were scheduled for Wednesday at 10 a.m. Pacific time, and the next live session will focus on marketing and brand equity on Friday.",
+              "type": "text",
+              "circle_ios_fallback_text": "The team discussed modifying Standard Operating Procedures (SOPs) and the best practices for revising existing artifacts in Claude. Josh explained that if changes are needed, it's best to go back to the original chat where the artifact was created, as it already contains context and can be easily revised. He also mentioned that while Claude integrates with Google Drive, relying on automatic updates isn't recommended due to potential issues with integrations. Montgomery raised a question about whether Claude considers context from other chats, to which Josh responded that while the chat context is used, it doesn't necessarily pull from all previous chats to avoid running out of the context window. The session concluded with Midori outlining the next steps, which include adding the 5 R's to the master prompt, running a delivery to success assessment, mapping the customer journey, creating SOP levels, and organizing SOPs. Office hours were scheduled for Wednesday at 10 a.m. Pacific time, and the next live session will focus on marketing and brand equity on Friday."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Transcript & chat",
+              "type": "text",
+              "circle_ios_fallback_text": "Transcript & chat"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSFpHV1FnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--38e278e656d7713ba5165b7ce6ec71cf2467f394"
+          }
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRXRHV1FnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1bafd41d8e9666cca5bd44e47047f49eeca7fc71"
+          }
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "SlidesSummaryAI Tools for Business GrowthThe meeting focused on the progress and insights gained from using AI tools like Claude for business processes, with participants sharing their experiences and challenges. Don expressed delight with Claude's output, highlighting its potential to enhance influence and company growth. Midori and Josh discussed the importance of a shared foundation and the structured use of AI to improve business operations. The session concluded with an overview of the five R's of customer excellence, presented by Josh, which included results, retention, reviews, referrals, and resale, emphasizing the need for customer success to drive business growth.Five R's Discussion and BreakoutsMidori introduced the concept of the five R's and encouraged participants to discuss their strengths and weaknesses in these areas, even if the language used varies by industry. She set up breakout rooms for a 15-minute discussion, and Josh decided to observe rather than participate actively in the breakout sessions. Nancy experienced internet issues but was able to join a group after being added by Midori.Customer Journey Mapping StrategyThe group discussed mapping customer journeys and improving business processes, with Beni explaining their focus on expanding consulting services due to political changes in Switzerland that could affect their standard service offerings. Tim shared insights about the strongest and weakest aspects of their business, noting that retention is challenging for consulting services but might improve with future education products. Josh outlined a three-part approach to mapping customer journeys, including identifying key touchpoints and ascension points, creating SOPs, and developing a priority implementation matrix to focus on high-impact actions.Claude's Customer Excellence Upgrade PlanJosh explained the process of upgrading Claude from a general assistant to a customer excellence-aware partner by adding the 5Rs framework and conducting a delivery to success assessment. He emphasized the importance of focusing on one product or service to create a clear customer journey map and SOPs. Josh also discussed the creation of a priority implementation matrix to decide which improvements to tackle first based on impact and complexity. The session concluded with a discussion on organizing SOPs, with Josh recommending tools like Notion or Google Drive for small teams, and mentioning that Empower Labs uses their own Stage 3 software.SOP Revision and Implementation StrategyThe team discussed modifying Standard Operating Procedures (SOPs) and the best practices for revising existing artifacts in Claude. Josh explained that if changes are needed, it's best to go back to the original chat where the artifact was created, as it already contains context and can be easily revised. He also mentioned that while Claude integrates with Google Drive, relying on automatic updates isn't recommended due to potential issues with integrations. Montgomery raised a question about whether Claude considers context from other chats, to which Josh responded that while the chat context is used, it doesn't necessarily pull from all previous chats to avoid running out of the context window. The session concluded with Midori outlining the next steps, which include adding the 5 R's to the master prompt, running a delivery to success assessment, mapping the customer journey, creating SOP levels, and organizing SOPs. Office hours were scheduled for Wednesday at 10 a.m. Pacific time, and the next live session will focus on marketing and brand equity on Friday.Transcript & chat",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "EMPOWER Labs Cohort 4 Live Session 4- Chat.txt",
+        "content_type": "text/plain",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 2352,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRXRHV1FnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1bafd41d8e9666cca5bd44e47047f49eeca7fc71",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/fzeoq2fqpkangcc7fdufy0n52k4v",
+        "is_downloadable": true
+      },
+      {
+        "filename": "EMPOWER Labs Cohort 4 Live Session 4 - Transcript.txt",
+        "content_type": "text/plain",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 70770,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSFpHV1FnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--38e278e656d7713ba5165b7ce6ec71cf2467f394",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/b2drp0rml1o5bciinsdgmvktimof",
+        "is_downloadable": true
+      },
+      {
+        "filename": "Session-4-Expansion-Capability.pdf",
+        "content_type": "application/pdf",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 3799322,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQ0pVV1FnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--8d94f01e5a37d442671c9589686657eb771f47dc",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/rxk7xl9l1z21pu82ll9m53xq42ly",
+        "is_downloadable": true,
+        "image_variants": {
+          "thumbnail": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQ0pVV1FnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--8d94f01e5a37d442671c9589686657eb771f47dc/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VY21WemFYcGxYM1J2WDJ4cGJXbDBXd2RwQWlBRGFRSkFCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--07a046a624ee42d116e6b9403cb3c1dc2823e2af/Session-4-Expansion-Capability.pdf"
+        }
+      }
+    ],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "rich_text_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Slides",
+              "type": "text",
+              "circle_ios_fallback_text": "Slides"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQ0pVV1FnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--8d94f01e5a37d442671c9589686657eb771f47dc"
+          }
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "Summary",
+              "type": "text",
+              "circle_ios_fallback_text": "Summary"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "AI Tools for Business Growth",
+              "type": "text",
+              "circle_ios_fallback_text": "AI Tools for Business Growth"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The meeting focused on the progress and insights gained from using AI tools like Claude for business processes, with participants sharing their experiences and challenges. Don expressed delight with Claude's output, highlighting its potential to enhance influence and company growth. Midori and Josh discussed the importance of a shared foundation and the structured use of AI to improve business operations. The session concluded with an overview of the five R's of customer excellence, presented by Josh, which included results, retention, reviews, referrals, and resale, emphasizing the need for customer success to drive business growth.",
+              "type": "text",
+              "circle_ios_fallback_text": "The meeting focused on the progress and insights gained from using AI tools like Claude for business processes, with participants sharing their experiences and challenges. Don expressed delight with Claude's output, highlighting its potential to enhance influence and company growth. Midori and Josh discussed the importance of a shared foundation and the structured use of AI to improve business operations. The session concluded with an overview of the five R's of customer excellence, presented by Josh, which included results, retention, reviews, referrals, and resale, emphasizing the need for customer success to drive business growth."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Five R's Discussion and Breakouts",
+              "type": "text",
+              "circle_ios_fallback_text": "Five R's Discussion and Breakouts"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Midori introduced the concept of the five R's and encouraged participants to discuss their strengths and weaknesses in these areas, even if the language used varies by industry. She set up breakout rooms for a 15-minute discussion, and Josh decided to observe rather than participate actively in the breakout sessions. Nancy experienced internet issues but was able to join a group after being added by Midori.",
+              "type": "text",
+              "circle_ios_fallback_text": "Midori introduced the concept of the five R's and encouraged participants to discuss their strengths and weaknesses in these areas, even if the language used varies by industry. She set up breakout rooms for a 15-minute discussion, and Josh decided to observe rather than participate actively in the breakout sessions. Nancy experienced internet issues but was able to join a group after being added by Midori."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Customer Journey Mapping Strategy",
+              "type": "text",
+              "circle_ios_fallback_text": "Customer Journey Mapping Strategy"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The group discussed mapping customer journeys and improving business processes, with Beni explaining their focus on expanding consulting services due to political changes in Switzerland that could affect their standard service offerings. Tim shared insights about the strongest and weakest aspects of their business, noting that retention is challenging for consulting services but might improve with future education products. Josh outlined a three-part approach to mapping customer journeys, including identifying key touchpoints and ascension points, creating SOPs, and developing a priority implementation matrix to focus on high-impact actions.",
+              "type": "text",
+              "circle_ios_fallback_text": "The group discussed mapping customer journeys and improving business processes, with Beni explaining their focus on expanding consulting services due to political changes in Switzerland that could affect their standard service offerings. Tim shared insights about the strongest and weakest aspects of their business, noting that retention is challenging for consulting services but might improve with future education products. Josh outlined a three-part approach to mapping customer journeys, including identifying key touchpoints and ascension points, creating SOPs, and developing a priority implementation matrix to focus on high-impact actions."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Claude's Customer Excellence Upgrade Plan",
+              "type": "text",
+              "circle_ios_fallback_text": "Claude's Customer Excellence Upgrade Plan"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Josh explained the process of upgrading Claude from a general assistant to a customer excellence-aware partner by adding the 5Rs framework and conducting a delivery to success assessment. He emphasized the importance of focusing on one product or service to create a clear customer journey map and SOPs. Josh also discussed the creation of a priority implementation matrix to decide which improvements to tackle first based on impact and complexity. The session concluded with a discussion on organizing SOPs, with Josh recommending tools like Notion or Google Drive for small teams, and mentioning that Empower Labs uses their own Stage 3 software.",
+              "type": "text",
+              "circle_ios_fallback_text": "Josh explained the process of upgrading Claude from a general assistant to a customer excellence-aware partner by adding the 5Rs framework and conducting a delivery to success assessment. He emphasized the importance of focusing on one product or service to create a clear customer journey map and SOPs. Josh also discussed the creation of a priority implementation matrix to decide which improvements to tackle first based on impact and complexity. The session concluded with a discussion on organizing SOPs, with Josh recommending tools like Notion or Google Drive for small teams, and mentioning that Empower Labs uses their own Stage 3 software."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "SOP Revision and Implementation Strategy",
+              "type": "text",
+              "circle_ios_fallback_text": "SOP Revision and Implementation Strategy"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The team discussed modifying Standard Operating Procedures (SOPs) and the best practices for revising existing artifacts in Claude. Josh explained that if changes are needed, it's best to go back to the original chat where the artifact was created, as it already contains context and can be easily revised. He also mentioned that while Claude integrates with Google Drive, relying on automatic updates isn't recommended due to potential issues with integrations. Montgomery raised a question about whether Claude considers context from other chats, to which Josh responded that while the chat context is used, it doesn't necessarily pull from all previous chats to avoid running out of the context window. The session concluded with Midori outlining the next steps, which include adding the 5 R's to the master prompt, running a delivery to success assessment, mapping the customer journey, creating SOP levels, and organizing SOPs. Office hours were scheduled for Wednesday at 10 a.m. Pacific time, and the next live session will focus on marketing and brand equity on Friday.",
+              "type": "text",
+              "circle_ios_fallback_text": "The team discussed modifying Standard Operating Procedures (SOPs) and the best practices for revising existing artifacts in Claude. Josh explained that if changes are needed, it's best to go back to the original chat where the artifact was created, as it already contains context and can be easily revised. He also mentioned that while Claude integrates with Google Drive, relying on automatic updates isn't recommended due to potential issues with integrations. Montgomery raised a question about whether Claude considers context from other chats, to which Josh responded that while the chat context is used, it doesn't necessarily pull from all previous chats to avoid running out of the context window. The session concluded with Midori outlining the next steps, which include adding the 5 R's to the master prompt, running a delivery to success assessment, mapping the customer journey, creating SOP levels, and organizing SOPs. Office hours were scheduled for Wednesday at 10 a.m. Pacific time, and the next live session will focus on marketing and brand equity on Friday."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "Transcript & chat",
+              "type": "text",
+              "circle_ios_fallback_text": "Transcript & chat"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSFpHV1FnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--38e278e656d7713ba5165b7ce6ec71cf2467f394"
+          }
+        },
+        {
+          "type": "file",
+          "attrs": {
+            "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRXRHV1FnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1bafd41d8e9666cca5bd44e47047f49eeca7fc71"
+          }
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "SlidesSummaryAI Tools for Business GrowthThe meeting focused on the progress and insights gained from using AI tools like Claude for business processes, with participants sharing their experiences and challenges. Don expressed delight with Claude's output, highlighting its potential to enhance influence and company growth. Midori and Josh discussed the importance of a shared foundation and the structured use of AI to improve business operations. The session concluded with an overview of the five R's of customer excellence, presented by Josh, which included results, retention, reviews, referrals, and resale, emphasizing the need for customer success to drive business growth.Five R's Discussion and BreakoutsMidori introduced the concept of the five R's and encouraged participants to discuss their strengths and weaknesses in these areas, even if the language used varies by industry. She set up breakout rooms for a 15-minute discussion, and Josh decided to observe rather than participate actively in the breakout sessions. Nancy experienced internet issues but was able to join a group after being added by Midori.Customer Journey Mapping StrategyThe group discussed mapping customer journeys and improving business processes, with Beni explaining their focus on expanding consulting services due to political changes in Switzerland that could affect their standard service offerings. Tim shared insights about the strongest and weakest aspects of their business, noting that retention is challenging for consulting services but might improve with future education products. Josh outlined a three-part approach to mapping customer journeys, including identifying key touchpoints and ascension points, creating SOPs, and developing a priority implementation matrix to focus on high-impact actions.Claude's Customer Excellence Upgrade PlanJosh explained the process of upgrading Claude from a general assistant to a customer excellence-aware partner by adding the 5Rs framework and conducting a delivery to success assessment. He emphasized the importance of focusing on one product or service to create a clear customer journey map and SOPs. Josh also discussed the creation of a priority implementation matrix to decide which improvements to tackle first based on impact and complexity. The session concluded with a discussion on organizing SOPs, with Josh recommending tools like Notion or Google Drive for small teams, and mentioning that Empower Labs uses their own Stage 3 software.SOP Revision and Implementation StrategyThe team discussed modifying Standard Operating Procedures (SOPs) and the best practices for revising existing artifacts in Claude. Josh explained that if changes are needed, it's best to go back to the original chat where the artifact was created, as it already contains context and can be easily revised. He also mentioned that while Claude integrates with Google Drive, relying on automatic updates isn't recommended due to potential issues with integrations. Montgomery raised a question about whether Claude considers context from other chats, to which Josh responded that while the chat context is used, it doesn't necessarily pull from all previous chats to avoid running out of the context window. The session concluded with Midori outlining the next steps, which include adding the 5 R's to the master prompt, running a delivery to success assessment, mapping the customer journey, creating SOP levels, and organizing SOPs. Office hours were scheduled for Wednesday at 10 a.m. Pacific time, and the next live session will focus on marketing and brand equity on Friday.Transcript & chat",
+    "attachments": [],
+    "inline_attachments": [
+      {
+        "filename": "EMPOWER Labs Cohort 4 Live Session 4- Chat.txt",
+        "content_type": "text/plain",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 2352,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRXRHV1FnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1bafd41d8e9666cca5bd44e47047f49eeca7fc71",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/fzeoq2fqpkangcc7fdufy0n52k4v",
+        "is_downloadable": true
+      },
+      {
+        "filename": "EMPOWER Labs Cohort 4 Live Session 4 - Transcript.txt",
+        "content_type": "text/plain",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 70770,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSFpHV1FnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--38e278e656d7713ba5165b7ce6ec71cf2467f394",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/b2drp0rml1o5bciinsdgmvktimof",
+        "is_downloadable": true
+      },
+      {
+        "filename": "Session-4-Expansion-Capability.pdf",
+        "content_type": "application/pdf",
+        "metadata": {
+          "identified": true,
+          "analyzed": true
+        },
+        "byte_size": 3799322,
+        "signed_id": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQ0pVV1FnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--8d94f01e5a37d442671c9589686657eb771f47dc",
+        "type": "file",
+        "url": "https://assets-v2.circle.so/rxk7xl9l1z21pu82ll9m53xq42ly",
+        "is_downloadable": true,
+        "image_variants": {
+          "thumbnail": "https://app.circle.so/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCQ0pVV1FnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--8d94f01e5a37d442671c9589686657eb771f47dc/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VY21WemFYcGxYM1J2WDJ4cGJXbDBXd2RwQWlBRGFRSkFCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--07a046a624ee42d116e6b9403cb3c1dc2823e2af/Session-4-Expansion-Capability.pdf"
+        }
+      }
+    ],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  },
+  "chat_room_uuid": "1a0fa542-0d33-4bc9-9519-947a5119b129"
+}

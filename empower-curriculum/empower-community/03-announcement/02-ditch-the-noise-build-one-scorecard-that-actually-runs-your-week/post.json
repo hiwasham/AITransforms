@@ -1,0 +1,351 @@
+{
+  "id": 34369858,
+  "name": "Ditch the noise. Build one scorecard that actually runs your week. ",
+  "slug": "ditch-the-noise-build-one-scorecard-that-actually-runs-your-week",
+  "type": "Posts::Basic",
+  "status": "published",
+  "user_id": 39364111,
+  "published_at": "2026-07-09T15:18:09.573Z",
+  "updated_at": "2026-07-10T15:03:36.002Z",
+  "created_at": "2026-07-09T15:18:09.573Z",
+  "hide_meta_info": false,
+  "community_member_id": 51527687,
+  "is_truncation_disabled": null,
+  "hide_from_featured_areas": false,
+  "flagged_for_approval_at": null,
+  "pinned_at": null,
+  "internal_custom_html": null,
+  "is_comments_enabled": true,
+  "is_liking_enabled": true,
+  "share_post_enabled": true,
+  "share_uid": "ditch-the-noise-build-one-scorecard-that-actually-runs-your-week-25300c49-e697-4291-8cc2-a6d44ffa8ef8",
+  "minimal_layout": true,
+  "show_post_teaser": true,
+  "editor": "tiptap",
+  "is_comments_closed": false,
+  "is_comments_disabled": false,
+  "is_liking_disabled": false,
+  "display_title": "Ditch the noise. Build one scorecard that actually runs your week. ",
+  "cover_image": null,
+  "cover_image_url": null,
+  "cover_image_variants": {},
+  "cardview_thumbnail": null,
+  "cardview_thumbnail_url": null,
+  "cardview_image_url": null,
+  "space_name": "Announcement",
+  "space_slug": "announcement",
+  "community_slug": "empower-labs",
+  "space_id": 2721841,
+  "pin_to_top": false,
+  "pinned_at_top_of_space": false,
+  "bookmark_id": null,
+  "topics": [],
+  "community_member": {
+    "id": 51527687,
+    "user_id": 39364111,
+    "public_uid": "b2be8b1e",
+    "first_name": "Ronnie",
+    "last_name": "Seguilla",
+    "name": "Ronnie Seguilla",
+    "admin": true,
+    "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzM5MzY0MTExP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--526c8da859ab73228e0fe33cfc7e422ab8b19331",
+    "type": "CommunityMember",
+    "headline": "Admin",
+    "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTE1Mjc2ODc_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--ff7e32066a01f1a91da71adf5a71bc9c75b95f13",
+    "avatar_url": null
+  },
+  "conversation_summary_overview": "",
+  "body_trix_content": "",
+  "body_for_editor": null,
+  "truncated_content": "if you've ever felt like your dashboards are just noise, rather than clarity? You're not alone.\n\nIn this video, Hayden shares a practical framework for building one simple weekly scorecard that helps your team stay aligned, identify what's off track, a...",
+  "show_more": true,
+  "tiptap_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "if you've ever felt like your dashboards are just noise, rather than clarity? You're not alone.",
+              "type": "text",
+              "circle_ios_fallback_text": "if you've ever felt like your dashboards are just noise, rather than clarity? You're not alone."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In this video, Hayden shares a practical framework for building ",
+              "type": "text",
+              "circle_ios_fallback_text": "In this video, Hayden shares a practical framework for building "
+            },
+            {
+              "text": "one simple weekly scorecard",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "one simple weekly scorecard"
+            },
+            {
+              "text": " that helps your team stay aligned, identify what's off track, and focus on what matters most. You'll learn how to:",
+              "type": "text",
+              "circle_ios_fallback_text": " that helps your team stay aligned, identify what's off track, and focus on what matters most. You'll learn how to:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Organize metrics around the ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "customer lifecycle",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Track the ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "core business economics",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " that drive performance",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Use a simple ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "red-yellow-green",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " system to prioritize action",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Leverage AI to build your first scorecard faster",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The goal isn't to track more data—it's to track the ",
+              "type": "text",
+              "circle_ios_fallback_text": "The goal isn't to track more data—it's to track the "
+            },
+            {
+              "text": "right metrics",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "right metrics"
+            },
+            {
+              "text": " so your weekly meetings lead to better decisions, clear ownership, and real accountability.",
+              "type": "text",
+              "circle_ios_fallback_text": " so your weekly meetings lead to better decisions, clear ownership, and real accountability."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "🎥 ",
+              "type": "text",
+              "circle_ios_fallback_text": "🎥 "
+            },
+            {
+              "text": "Watch the video below to learn how to build a weekly scorecard that keeps your team focused on what matters most.",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Watch the video below to learn how to build a weekly scorecard that keeps your team focused on what matters most."
+            }
+          ]
+        },
+        {
+          "type": "embed",
+          "attrs": {
+            "sgid": "BAh7CEkiCGdpZAY6BkVUSSI6Z2lkOi8vanVtcHN0YXJ0LWFwcC9SaWNoVGV4dE9lbWJlZC8yNDUwNzYwP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--86c28774e21383088c9a393a780f14fdd441d738"
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "📝 ",
+              "type": "text",
+              "circle_ios_fallback_text": "📝 "
+            },
+            {
+              "text": "Want to build your own?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Want to build your own?"
+            },
+            {
+              "text": " Grab the AI prompt here: ",
+              "type": "text",
+              "circle_ios_fallback_text": " Grab the AI prompt here: "
+            },
+            {
+              "text": "AI Stoplight Dashboard Prompt",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://docs.google.com/document/d/1d4YToRd_4zYTvfWh-t-ZR5WK7Pxz3g2k-bcpCTOOBcU/edit?tab=t.0",
+                    "class": null,
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "circle_ios_fallback_text": "AI Stoplight Dashboard Prompt"
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "💬 ",
+              "type": "text",
+              "circle_ios_fallback_text": "💬 "
+            },
+            {
+              "text": "After watching, come back and share your biggest takeaway, one insight you'll implement, or any questions you have. We'd love to hear from you!",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "After watching, come back and share your biggest takeaway, one insight you'll implement, or any questions you have. We'd love to hear from you!"
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "if you've ever felt like your dashboards are just noise, rather than clarity? You're not alone.In this video, Hayden shares a practical framework for building one simple weekly scorecard that helps your team stay aligned, identify what's off track, and focus on what matters most. You'll learn how to:The goal isn't to track more data—it's to track the right metrics so your weekly meetings lead to better decisions, clear ownership, and real accountability.🎥 Watch the video below to learn how to build a weekly scorecard that keeps your team focused on what matters most.\n📝 Want to build your own? Grab the AI prompt here: AI Stoplight Dashboard Prompt\n\n💬 After watching, come back and share your biggest takeaway, one insight you'll implement, or any questions you have. We'd love to hear from you!",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {
+      "BAh7CEkiCGdpZAY6BkVUSSI6Z2lkOi8vanVtcHN0YXJ0LWFwcC9SaWNoVGV4dE9lbWJlZC8yNDUwNzYwP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--86c28774e21383088c9a393a780f14fdd441d738": {
+        "id": 2450760,
+        "url": "https://www.youtube.com/watch?v=U1LL4i0YIiY",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSI6Z2lkOi8vanVtcHN0YXJ0LWFwcC9SaWNoVGV4dE9lbWJlZC8yNDUwNzYwP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--86c28774e21383088c9a393a780f14fdd441d738",
+        "type": "embed",
+        "embed_type": "video",
+        "embed_provider": "iframely",
+        "circle_embed_url": "https://community.empowerlabs.ai/rich_text_oembeds/BAh7CEkiCGdpZAY6BkVUSSI6Z2lkOi8vanVtcHN0YXJ0LWFwcC9SaWNoVGV4dE9lbWJlZC8yNDUwNzYwP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--86c28774e21383088c9a393a780f14fdd441d738",
+        "html": "<div style=\"left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;\"><iframe src=\"https://www.youtube.com/embed/U1LL4i0YIiY?rel=0\" width=\"360\" height=\"202\" style=\"top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;\" allowfullscreen scrolling=\"no\" allow=\"accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;\" referrerpolicy=\"strict-origin\"></iframe></div>",
+        "title": "Business Dashboards Are Broken. This AI Scorecard Fixes It.",
+        "width": 360,
+        "height": 202,
+        "version": "1.0",
+        "author_url": "https://www.youtube.com/channel/UCDMYoClgeu5QJpEfDaJLnHA",
+        "author_name": null,
+        "description": "Most business dashboards create more reporting, not better decisions.\n\nIn this video, Hayden Miyamoto shows how to replace dashboard overload with one clear, AI-built scorecard that tells your leadership team what is off track, what needs attention, and what gets fixed next.\n\n*You’ll learn:*\n• Which metrics belong on a small-business scorecard\n• How to organize metrics around the customer lifecycle\n• How the green, yellow, and red stoplight system works\n• How to build the first version using AI\n• How to run a focused weekly scorecard review\n\n*GET THE AI SCORECARD PROMPTS:*\nhttps://community.empowerlabs.ai/join?invitation_token=f618616a09ca533f4c5457fb0f922e7935adc13e-93fdb8d8-0742-437f-a65e-c24b9174bb85\n\n*CHAPTERS:*\n0:00 Why business dashboards fail\n0:40 Trackers vs. real scorecards\n1:15 The one-scorecard rule\n1:28 Track the customer lifecycle\n2:16 The stoplight model\n2:38 Build your scorecard with AI\n3:46 Put it into action\n\n#AIForBusiness #BusinessDashboard #SmallBusiness",
+        "provider_url": null,
+        "provider_name": "YouTube",
+        "thumbnail_url": "https://i.ytimg.com/vi/U1LL4i0YIiY/maxresdefault.jpg",
+        "thumbnail_width": 1280,
+        "thumbnail_height": 720
+      }
+    },
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  }
+}

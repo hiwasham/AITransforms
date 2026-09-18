@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vipul Patel - Head of Finance Clarityboard | EMPOWER Labs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #f8f9fa;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header-meta {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            opacity: 0.95;
+        }
+        
+        .tabs {
+            background: white;
+            display: flex;
+            gap: 0;
+            padding: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            overflow-x: auto;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .tab {
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            border: none;
+            background: white;
+            color: #666;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            border-bottom: 3px solid transparent;
+            white-space: nowrap;
+        }
+        
+        .tab:hover {
+            background: #f8f9fa;
+            color: #667eea;
+        }
+        
+        .tab.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+            background: #f8f9fa;
+        }
+        
+        .content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .card {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .card h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 0.5rem;
+        }
+        
+        .card h3 {
+            color: #764ba2;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+        
+        .stat-card h3 {
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 500;
+            opacity: 0.9;
+            margin: 0 0 0.5rem 0;
+        }
+        
+        .stat-card .value {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.25rem;
+        }
+        
+        .stat-card .subtext {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #667eea;
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        th:hover {
+            background: #f0f0f0;
+        }
+        
+        tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .badge-automate { background: #d4edda; color: #155724; }
+        .badge-ai-assist { background: #d1ecf1; color: #0c5460; }
+        .badge-delegate { background: #e2d9f3; color: #5a2d82; }
+        .badge-eliminate { background: #f8d7da; color: #721c24; }
+        .badge-accountable { background: #667eea; color: white; }
+        .badge-responsible { background: #764ba2; color: white; }
+        .badge-consulted { background: #ffc107; color: #000; }
+        .badge-informed { background: #e0e0e0; color: #666; }
+        .badge-high { background: #28a745; color: white; }
+        .badge-medium { background: #ffc107; color: #000; }
+        .badge-low { background: #6c757d; color: white; }
+        
+        .time-bar {
+            height: 24px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 4px;
+            margin: 0.25rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .time-bar span {
+            position: absolute;
+            left: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        ul {
+            margin: 0.5rem 0 0.5rem 1.5rem;
+        }
+        
+        li {
+            margin: 0.5rem 0;
+        }
+        
+        .outcomes-list {
+            list-style: none;
+            margin-left: 0;
+            counter-reset: outcome-counter;
+        }
+        
+        .outcomes-list li {
+            counter-increment: outcome-counter;
+            position: relative;
+            padding-left: 3rem;
+            margin: 1.5rem 0;
+        }
+        
+        .outcomes-list li::before {
+            content: counter(outcome-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .outcomes-list li strong {
+            color: #667eea;
+            font-size: 1.1rem;
+        }
+        
+        .alert {
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-left: 4px solid;
+        }
+        
+        .alert-warning {
+            background: #fff3cd;
+            border-color: #ffc107;
+            color: #856404;
+        }
+        
+        .alert-info {
+            background: #d1ecf1;
+            border-color: #0c5460;
+            color: #0c5460;
+        }
+        
+        .alert-success {
+            background: #d4edda;
+            border-color: #28a745;
+            color: #155724;
+        }
+        
+        .foundation-label {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .leverage-label {
+            display: inline-block;
+            background: #e2d9f3;
+            color: #5a2d82;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        @media print {
+            .tabs { display: none; }
+            .tab-content { display: block !important; page-break-after: always; }
+            .card { box-shadow: none; border: 1px solid #ddd; }
+        }
+        
+        @media (max-width: 768px) {
+            .stats-grid { grid-template-columns: 1fr; }
+            .header-meta { flex-direction: column; gap: 0.5rem; }
+            table { font-size: 0.85rem; }
+            th, td { padding: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎯 Vipul Patel - Head of Finance</h1>
+        <div class="header-meta">
+            <div><strong>Company:</strong> EMPOWER Labs</div>
+            <div><strong>Reports to:</strong> Hayden Miyamoto, Founder & CEO</div>
+            <div><strong>Department:</strong> Finance</div>
+            <div><strong>Last Updated:</strong> February 2026</div>
+        </div>
+    </div>
+
+    <div class="tabs">
+        <button class="tab active" onclick="openTab(event, 'overview')">Overview</button>
+        <button class="tab" onclick="openTab(event, 'kpis')">KPI Scorecard</button>
+        <button class="tab" onclick="openTab(event, 'meetings')">Meetings</button>
+        <button class="tab" onclick="openTab(event, 'operations')">Operations</button>
+        <button class="tab" onclick="openTab(event, 'reference')">Reference</button>
+        <button class="tab" onclick="openTab(event, 'actions')">Actions</button>
+        <button class="tab" onclick="openTab(event, 'printable')">Printable</button>
+    </div>
+
+    <div class="content">
+        <!-- OVERVIEW TAB -->
+        <div id="overview" class="tab-content active">
+            <div class="card">
+                <h2>Role Purpose</h2>
+                <p style="font-size: 1.1rem; color: #666; margin-bottom: 1.5rem;">
+                    Ensure the company has financial clarity, discipline, and decision-making rigor as it scales. Translate strategy into numbers—owning forecasting, unit economics, and capital allocation—so leadership can grow confidently without losing control of cash, margins, or risk.
+                </p>
+                
+                <div class="alert alert-info">
+                    <strong>Critical Mental Model:</strong> This role is <strong>financial decision infrastructure</strong> for a volatile growth company, not finance reporting. The job is managing uncertainty, not managing spreadsheets.
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Key Outcomes & Success Criteria</h2>
+                <p style="margin-bottom: 1rem;">Outcomes are hierarchical—each enables the next in the causal chain:</p>
+                <ul class="outcomes-list">
+                    <li>
+                        <strong>Forecast Integrity (Foundation)</strong><br>
+                        Maintain decision-grade financial visibility with monthly revenue and cash forecast accuracy within ±5-10%, real-time visibility into runway, burn, and contribution margin. Everything depends on this.
+                    </li>
+                    <li>
+                        <strong>Runway Protection</strong><br>
+                        Maintain ≥12-18 months runway. Ensure all major spend, hiring, and GTM investments meet defined CAC, payback, and margin thresholds. Driven by forecast accuracy.
+                    </li>
+                    <li>
+                        <strong>Pipeline Data Reliability</strong><br>
+                        Ensure pipeline, acquisition, and conversion data are decision-grade (Airtable quality ≥8/10), enabling consistent weekly forecasting without manual rebuilds. Enables forecast integrity.
+                    </li>
+                    <li>
+                        <strong>Unit Economics Discipline</strong><br>
+                        Maintain LTV:CAC ≥3x and payback ≤6-9 months. Prevent margin-destructive pricing, discounting, or acquisition channels. Protects runway.
+                    </li>
+                    <li>
+                        <strong>Decision Framing</strong><br>
+                        Provide decision-grade financial analysis for all major growth bets. Model and quantify ROI, cash impact, and downside risk before capital is committed. Translates all above into action.
+                    </li>
+                </ul>
+                
+                <h3>Success Looks Like</h3>
+                <p>Leadership consistently making high-confidence decisions because the numbers are clear, trusted, and timely. Cash is never a surprise, growth investments are grounded in strong unit economics, and the company can scale without financial chaos or last-minute fire drills.</p>
+            </div>
+
+            <div class="card">
+                <h2>Quick Stats Dashboard</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Processes</h3>
+                        <div class="value">14</div>
+                        <div class="subtext">6 Customer Lifecycle + 8 Enabling</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Weekly Meetings</h3>
+                        <div class="value">10</div>
+                        <div class="subtext">Recurring cadences tracked</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Current Capacity</h3>
+                        <div class="value">105-110%</div>
+                        <div class="subtext">Core sustainable; improvement under-resourced</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Potential Time Recapture</h3>
+                        <div class="value">6.73 hrs/wk</div>
+                        <div class="subtext">16% workload reduction via top 5 opportunities</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Annual Value Creation</h3>
+                        <div class="value">$33,507</div>
+                        <div class="subtext">From top 5 automation/delegation opportunities</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Payback Period</h3>
+                        <div class="value">4.8 months</div>
+                        <div class="subtext">Weighted average across portfolio</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Current Workload Reality</h2>
+                <div class="alert alert-warning">
+                    <strong>Capacity Status:</strong> Core responsibilities fit within 100% sustainable capacity (40 hrs/week). Current 105-110% allocation due to under-resourced system improvement work. Core reporting, runway protection, and forecast integrity do not slip—improvement work does.
+                </div>
+                
+                <h3>What Currently Slips at Capacity</h3>
+                <ul>
+                    <li>Long-term systems improvements (automation, documentation upgrades)</li>
+                    <li>Chart of Accounts redesign</li>
+                    <li>Formalizing month-end close playbook</li>
+                    <li>Strategic deep-dive analysis (instead of reactive modeling)</li>
+                    <li>Proactive margin optimization work</li>
+                </ul>
+                
+                <p style="margin-top: 1rem; font-style: italic; color: #666;">
+                    Note: Percentages across processes reflect responsibility coverage with overlap, not additive weekly time. Total 112% reflects overlapping accountabilities across customer lifecycle (52%) and enabling processes (48% core finance work).
+                </p>
+            </div>
+        </div>
+
+        <!-- KPI SCORECARD TAB -->
+        <div id="kpis" class="tab-content">
+            <div class="card">
+                <h2>Primary KPIs (5 Total)</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable(0, 'kpi-primary')">KPI</th>
+                            <th onclick="sortTable(1, 'kpi-primary')">Measurement</th>
+                            <th onclick="sortTable(2, 'kpi-primary')">Target</th>
+                            <th onclick="sortTable(3, 'kpi-primary')">Current</th>
+                            <th onclick="sortTable(4, 'kpi-primary')">Review Cadence</th>
+                            <th onclick="sortTable(5, 'kpi-primary')">Control</th>
+                        </tr>
+                    </thead>
+                    <tbody id="kpi-primary">
+                        <tr>
+                            <td><strong>Cash Runway & Burn Multiple</strong></td>
+                            <td>Runway = Cash ÷ 3-mo avg burn<br>Burn Multiple = Burn ÷ Net new revenue</td>
+                            <td>≥12-18 months runway<br>≤1.5x burn multiple</td>
+                            <td>Within target range<br>Burn multiple near target</td>
+                            <td>Weekly + Monthly</td>
+                            <td><span class="badge badge-medium">Influence</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Forecast Accuracy</strong></td>
+                            <td>1 - (|Actual - Forecast| ÷ Forecast)<br>For revenue and cash</td>
+                            <td>±5-10% variance</td>
+                            <td>Typically ±10%<br>Volatility occasional</td>
+                            <td>Monthly at close<br>Weekly pacing</td>
+                            <td><span class="badge badge-high">Direct</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gross/Contribution Margin</strong></td>
+                            <td>Gross = (Rev - Direct Delivery) ÷ Rev<br>Contribution = (Rev - Direct - Variable GTM) ÷ Rev</td>
+                            <td>≥70% gross margin<br>Support ≤6-9mo payback</td>
+                            <td>Within target<br>Sensitive to discounting</td>
+                            <td>Monthly</td>
+                            <td><span class="badge badge-medium">Influence</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Unit Economics (LTV:CAC & Payback)</strong></td>
+                            <td>CAC = Total acq spend ÷ New customers<br>LTV:CAC = LTV ÷ CAC<br>Payback = CAC ÷ Monthly gross profit</td>
+                            <td>LTV:CAC ≥3x<br>Payback ≤6-9 months</td>
+                            <td>Within target on stable cohorts<br>Volatility when efficiency weakens</td>
+                            <td>Monthly<br>Pressure-tested at launches</td>
+                            <td><span class="badge badge-medium">Influence</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Reporting Timeliness</strong></td>
+                            <td>Days from month-end to finalized package<br>On-time rate %</td>
+                            <td>Close within 5-7 days<br>100% on-time, no restatements</td>
+                            <td>Within target window<br>Occasional slippage on GTM delays</td>
+                            <td>Monthly</td>
+                            <td><span class="badge badge-high">Direct</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <h2>Secondary KPIs (12 Total)</h2>
+                <p style="margin-bottom: 1rem; color: #666;">These metrics feed and support the primary KPIs above.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable(0, 'kpi-secondary')">Metric</th>
+                            <th onclick="sortTable(1, 'kpi-secondary')">Supports Primary KPI</th>
+                            <th onclick="sortTable(2, 'kpi-secondary')">Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody id="kpi-secondary">
+                        <tr>
+                            <td><strong>Pipeline Data Quality Score</strong></td>
+                            <td>Forecast Accuracy</td>
+                            <td>Airtable 1-10 + ✅⚠️🔴 status ensures forecast reliability</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Lead → Booked Call Conversion</strong></td>
+                            <td>Unit Economics</td>
+                            <td>Early signal for CAC efficiency and acquisition quality</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Show Rate (Booked → Attended)</strong></td>
+                            <td>Forecast Accuracy</td>
+                            <td>Direct impact on revenue pacing and forecast reliability</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Close Rate by Offer/Cohort</strong></td>
+                            <td>Forecast Accuracy</td>
+                            <td>Supports revenue forecast and pricing effectiveness</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Revenue per Booked Call</strong></td>
+                            <td>Unit Economics</td>
+                            <td>Simplifies revenue pacing modeling and validates unit economics</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sales Cycle Length</strong></td>
+                            <td>Cash Runway</td>
+                            <td>Impacts cash timing and runway modeling</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Discount Rate by Deal</strong></td>
+                            <td>Gross Margin</td>
+                            <td>Protects gross margin and contribution margin discipline</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CAC by Channel/Test</strong></td>
+                            <td>Unit Economics</td>
+                            <td>Supports LTV:CAC and payback analysis</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cohort Gross Margin</strong></td>
+                            <td>Gross Margin</td>
+                            <td>Validates delivery economics and pricing guardrails</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Churn/Completion/Renewal Rate</strong></td>
+                            <td>Unit Economics</td>
+                            <td>Feeds LTV assumptions and long-term unit economics</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Referral % of Pipeline</strong></td>
+                            <td>Unit Economics</td>
+                            <td>Supports CAC compression and forecast durability</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cash Collection Lag</strong></td>
+                            <td>Cash Runway</td>
+                            <td>Directly affects runway and cash forecast accuracy</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- MEETINGS TAB -->
+        <div id="meetings" class="tab-content">
+            <div class="card">
+                <h2>Weekly Meetings (3 Total)</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Meeting</th>
+                            <th>Your Role</th>
+                            <th>KPIs Reviewed</th>
+                            <th>Prep Time</th>
+                            <th>Opportunities Tracked</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Executive Leadership Sync</strong></td>
+                            <td>Co-Lead (financial segment)</td>
+                            <td>Cash/burn, revenue pacing, pipeline quality ✅⚠️🔴, conversion rates, CAC signals, runway updates</td>
+                            <td>60-90 min</td>
+                            <td>Finance Data Spine implementation</td>
+                        </tr>
+                        <tr>
+                            <td><strong>GTM/Sales Pipeline Review</strong><br><em>(When active selling)</em></td>
+                            <td>Co-Lead (data quality owner)</td>
+                            <td>Pipeline quality status, conversion metrics, discount rates, forecast inclusion, revenue pacing</td>
+                            <td>45-75 min</td>
+                            <td>Pipeline validation automation, stale deal alerts</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Weekly Personal Planning/Forecast Review</strong><br><em>(Solo)</em></td>
+                            <td>Strategic reset & forecast integrity</td>
+                            <td>All primary KPIs, conversion trends, upcoming risks</td>
+                            <td>60-90 min</td>
+                            <td>All 5 opportunities progress</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <h2>Monthly/Biweekly Meetings (4 Total)</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Meeting</th>
+                            <th>Your Role</th>
+                            <th>KPIs Reviewed</th>
+                            <th>Prep Time</th>
+                            <th>Opportunities Tracked</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Finance & Bookkeeper Review</strong><br><em>(Monthly)</em></td>
+                            <td>Lead</td>
+                            <td>Revenue, margins, burn, cash, runway, variances, revenue recognition, collection lag</td>
+                            <td>60-120 min</td>
+                            <td>Variance AI Draft, automated reconciliation</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Monthly Business Review + Forecast</strong><br><em>(Monthly)</em></td>
+                            <td>Lead (financial owner)</td>
+                            <td>All primary KPIs + most secondary KPIs</td>
+                            <td>2-4 hours</td>
+                            <td>Variance AI Draft, Slide Delegation effectiveness</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Delivery/Capacity Check-in</strong><br><em>(Biweekly/Monthly)</em></td>
+                            <td>Contribute (financial translator)</td>
+                            <td>Cohort gross margin, delivery cost, capacity utilization, retention/completion</td>
+                            <td>30-45 min</td>
+                            <td>Cohort margin dashboard automation</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Vendor/Systems Check-in</strong><br><em>(Ad-hoc during implementations)</em></td>
+                            <td>Lead/Co-Lead</td>
+                            <td>Spend vs budget, ROI vs expected, time saved, data accuracy improvements</td>
+                            <td>30-60 min</td>
+                            <td>Post-implementation ROI tracking</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <h2>Quarterly & Annual Meetings (3 Total)</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Meeting</th>
+                            <th>Your Role</th>
+                            <th>KPIs Reviewed</th>
+                            <th>Prep Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Board/Investor Update</strong><br><em>(Quarterly, when applicable)</em></td>
+                            <td>Co-Author & Financial Lead</td>
+                            <td>All primary KPIs + selective secondary KPIs + strategic bets</td>
+                            <td>4-6 hours</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ad-hoc Decision Reviews</strong><br><em>(As needed)</em></td>
+                            <td>Lead (financial framing owner)</td>
+                            <td>Decision-specific: runway, margins, unit economics, capacity constraints</td>
+                            <td>30 min - 3 hours</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Annual Tax & Compliance Review</strong><br><em>(Annual)</em></td>
+                            <td>Lead coordination</td>
+                            <td>Annual revenue/margin, net income, burn, payroll totals, tax liability</td>
+                            <td>3-5 hours</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- OPERATIONS TAB -->
+        <div id="operations" class="tab-content">
+            <div class="card">
+                <h2>Process Involvement & RACI</h2>
+                
+                <h3>Customer Lifecycle Processes (52% Total)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable(0, 'proc-customer')">Process</th>
+                            <th onclick="sortTable(1, 'proc-customer')">RACI</th>
+                            <th onclick="sortTable(2, 'proc-customer')">Time %</th>
+                            <th onclick="sortTable(3, 'proc-customer')">Key Activities</th>
+                            <th onclick="sortTable(4, 'proc-customer')">Documentation</th>
+                        </tr>
+                    </thead>
+                    <tbody id="proc-customer">
+                        <tr>
+                            <td><strong>Market to Lead</strong></td>
+                            <td><span class="badge badge-accountable">Accountable</span></td>
+                            <td>18%</td>
+                            <td>Instrument CRM funnel, build acquisition scorecard, connect spend to outcomes, run pacing checks, identify working channels</td>
+                            <td>Level 2-3</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Lead to Sale</strong></td>
+                            <td><span class="badge badge-accountable">Accountable</span></td>
+                            <td>20%</td>
+                            <td>Define funnel stages, build sales conversion scorecard, tie pipeline to cash/runway, analyze pricing/offer effectiveness, pressure-test assumptions</td>
+                            <td>Level 2-3</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sale to Delivery</strong></td>
+                            <td><span class="badge badge-accountable">Accountable</span></td>
+                            <td>4%</td>
+                            <td>Review contract terms, confirm payment terms met, monitor lag between close→payment→delivery, ensure revenue recognition alignment</td>
+                            <td>Level 1-2</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Delivery to Success</strong></td>
+                            <td><span class="badge badge-accountable">Accountable</span></td>
+                            <td>5%</td>
+                            <td>Track delivery economics/margins, monitor retention signals, conduct capacity analysis, close loop to acquisition assumptions</td>
+                            <td>Level 1-2</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Success to Market</strong></td>
+                            <td><span class="badge badge-accountable">Accountable</span></td>
+                            <td>3%</td>
+                            <td>Track expansion/referral economics, quantify leverage vs acquisition, validate scalability assumptions</td>
+                            <td>Level 1</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Success to Lead</strong></td>
+                            <td><span class="badge badge-accountable">Accountable</span></td>
+                            <td>2%</td>
+                            <td>Ensure referrals tracked as distinct source, analyze conversion quality, quantify financial impact</td>
+                            <td>Level 1</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 style="margin-top: 2rem;">Enabling Processes (48% Core Finance Work)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable(0, 'proc-enabling')">Process</th>
+                            <th onclick="sortTable(1, 'proc-enabling')">RACI</th>
+                            <th onclick="sortTable(2, 'proc-enabling')">Time %</th>
+                            <th onclick="sortTable(3, 'proc-enabling')">Key Activities</th>
+                            <th onclick="sortTable(4, 'proc-enabling')">Documentation</th>
+                        </tr>
+                    </thead>
+                    <tbody id="proc-enabling">
+                        <tr>
+                            <td><strong>Plan to Report</strong></td>
+                            <td><span class="badge badge-accountable">Accountable</span></td>
+                            <td>15%</td>
+                            <td>Build/maintain forecasts, run hiring vs runway scenarios, model pricing/ROI decisions, produce monthly KPI package, lead MBR financials, prepare board materials</td>
+                            <td>Level 2</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Record to Report</strong></td>
+                            <td><span class="badge badge-accountable">Accountable</span></td>
+                            <td>12%</td>
+                            <td>Review/approve monthly close, validate revenue recognition, reconcile Stripe→QuickBooks, variance analysis, coordinate with bookkeeper/CPA</td>
+                            <td>Level 1-2</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Procure to Pay</strong></td>
+                            <td><span class="badge badge-accountable">Accountable</span></td>
+                            <td>6%</td>
+                            <td>Review/approve spend (≤$2,500 authority), evaluate ROI of new vendors, monitor SaaS spend, ensure spend aligns with runway</td>
+                            <td>Level 1</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hire to Retire</strong></td>
+                            <td><span class="badge badge-accountable">Accountable</span></td>
+                            <td>7%</td>
+                            <td>Model hiring vs runway, quantify fully loaded cost/payback, review contractor agreements, coordinate payroll, manage benefits cost implications</td>
+                            <td>Level 1-2</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Govern to Comply</strong></td>
+                            <td><span class="badge badge-accountable">Accountable</span></td>
+                            <td>5%</td>
+                            <td>Coordinate tax filings with CPA, review entity structure implications, review contracts for financial risk, maintain entity documentation</td>
+                            <td>Level 1</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Idea to Launch</strong></td>
+                            <td><span class="badge badge-accountable">Accountable</span></td>
+                            <td>6%</td>
+                            <td>Model pricing scenarios, validate LTV:CAC pre-launch, quantify cash impact/break-even, evaluate GTM investment required, pressure-test revenue targets</td>
+                            <td>Level 2</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Issue to Resolution</strong></td>
+                            <td><span class="badge badge-accountable">Accountable</span></td>
+                            <td>4%</td>
+                            <td>Resolve payment disputes, troubleshoot revenue recognition issues, reconcile system mismatches, address cash shortfall risks, quantify financial impact of breakdowns</td>
+                            <td>Not documented</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Other (IT/Systems)</strong></td>
+                            <td><span class="badge badge-accountable">Accountable</span></td>
+                            <td>5%</td>
+                            <td>Manage 1Password access, provision financial tool access, review/rationalize SaaS, coordinate contract storage, maintain model version control</td>
+                            <td>Level 1</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="alert alert-info" style="margin-top: 1rem;">
+                    <strong>Note:</strong> Percentages reflect responsibility coverage with overlap, not additive weekly time. Total 112% reflects overlapping accountabilities across customer lifecycle (52%) and enabling processes (48% core finance work).
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Top 5 Improvement Opportunities</h2>
+                
+                <div class="alert alert-success">
+                    <strong>Total Portfolio Impact:</strong> 6.73 hrs/week recapture (16% workload) • $33,507/year value • 4.8 month weighted payback
+                </div>
+                
+                <h3>🏗️ Foundation Initiative</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Opportunity</th>
+                            <th>Category</th>
+                            <th>Time Savings</th>
+                            <th>Payback</th>
+                            <th>KPI Impact</th>
+                            <th>Feasibility</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #f0f4ff;">
+                            <td>
+                                <div class="foundation-label">FOUNDATION</div>
+                                <strong>Finance Data Spine Automation</strong><br>
+                                <small>Airtable → Forecast + Pipeline Validation + Runway Live Update (unified architecture)</small>
+                            </td>
+                            <td><span class="badge badge-automate">Automate</span></td>
+                            <td>4.5 hrs/wk<br>$23,400/yr</td>
+                            <td>3.4 months</td>
+                            <td><span class="badge badge-high">High</span><br>Forecast Accuracy, Runway, Unit Economics, Reporting</td>
+                            <td>Medium<br>35-40 hrs</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="alert alert-warning">
+                    <strong>Critical:</strong> All other opportunities depend on this foundation. Must be completed before deferred opportunities (#6-10) become viable.
+                </div>
+                
+                <h3 style="margin-top: 2rem;">⚡ Leverage Layer Opportunities</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Opportunity</th>
+                            <th>Category</th>
+                            <th>Time Savings</th>
+                            <th>Payback</th>
+                            <th>KPI Impact</th>
+                            <th>Feasibility</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="leverage-label">LEVERAGE</div>
+                                <strong>#2: KPI Slide Formatting Delegation</strong><br>
+                                <small>Offshore VA handles deck assembly, you provide numbers + approval</small>
+                            </td>
+                            <td><span class="badge badge-delegate">Delegate</span></td>
+                            <td>1.25 hrs/wk<br>$3,300/yr</td>
+                            <td>7.3 months</td>
+                            <td><span class="badge badge-medium">Medium</span><br>Reporting (indirect)</td>
+                            <td>Easy<br>8-10 hrs</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="leverage-label">LEVERAGE</div>
+                                <strong>#3: Monthly Variance AI First Draft</strong><br>
+                                <small>Claude drafts variance commentary + exec summaries for refinement</small>
+                            </td>
+                            <td><span class="badge badge-ai-assist">AI-Assist</span></td>
+                            <td>0.23 hrs/wk<br>$1,320/yr</td>
+                            <td>9.1 months</td>
+                            <td><span class="badge badge-high">High</span><br>Reporting, Decision Quality</td>
+                            <td>Easy<br>4-6 hrs</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="leverage-label">LEVERAGE</div>
+                                <strong>#4: Hiring Impact Calculator</strong><br>
+                                <small>Self-service template auto-links to runway, enables CEO scenario planning</small>
+                            </td>
+                            <td><span class="badge badge-automate">Automate</span></td>
+                            <td>0.5-1.0 hrs/wk<br>$3,120-6,240/yr</td>
+                            <td>3-6 months</td>
+                            <td><span class="badge badge-high">High</span><br>Runway Protection</td>
+                            <td>Easy<br>6-8 hrs</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="leverage-label">LEVERAGE</div>
+                                <strong>#5: Forecast Delta Analysis Automation</strong><br>
+                                <small>Weekly version comparison, change detection, assumption drift tracking</small>
+                            </td>
+                            <td><span class="badge badge-ai-assist">AI-Assist</span></td>
+                            <td>0.42 hrs/wk<br>$2,167/yr</td>
+                            <td>11.1 months</td>
+                            <td><span class="badge badge-high">High</span><br>Forecast Accuracy</td>
+                            <td>Medium<br>12-15 hrs</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <h2>Implementation Roadmap</h2>
+                
+                <h3>Phase 1: Quick Wins (Weeks 1-3)</h3>
+                <ul>
+                    <li><strong>Week 1-2:</strong> Implement #2 (Slide Delegation) + #3 (Variance AI) → 1.48 hrs/wk immediate recapture</li>
+                    <li><strong>Week 3:</strong> Implement #4 (Hiring Calculator) → 0.75 hrs/wk additional recapture</li>
+                    <li><strong>Result:</strong> 2.23 hrs/wk recaptured in 3 weeks</li>
+                </ul>
+                
+                <h3>Phase 2: Master Build Planning (Week 4)</h3>
+                <ul>
+                    <li>Design Finance Data Spine architecture</li>
+                    <li>Map data flows: Airtable → Forecast → Runway → Scorecard</li>
+                    <li>Document integration points, validation rules, alert thresholds</li>
+                    <li>Get CEO buy-in on quality gates and forcing functions</li>
+                </ul>
+                
+                <h3>Phase 3: Master Build Execution (Weeks 5-10)</h3>
+                <ul>
+                    <li><strong>Weeks 5-7:</strong> Build Phase A (Forecast automation), Phase B (Pipeline validation), Phase C (Runway live update)</li>
+                    <li><strong>Weeks 8-10:</strong> Parallel testing + #5 (Forecast Delta automation built on same infrastructure)</li>
+                    <li><strong>Result:</strong> 4.5 hrs/wk additional recapture (6.73 hrs/wk total)</li>
+                </ul>
+                
+                <h3>Phase 4: Deferred Opportunities (6+ Months)</h3>
+                <ul>
+                    <li>Lead Source → CAC Attribution (wait until Pipeline Data Spine stable)</li>
+                    <li>Contractor Payment Summary (implement during next tax season)</li>
+                    <li>SaaS Spend Dashboard (implement if creep becomes material)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- REFERENCE TAB -->
+        <div id="reference" class="tab-content">
+            <div class="card">
+                <h2>Tools & Systems</h2>
+                
+                <h3>Critical Data Sources (Non-Negotiable)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tool</th>
+                            <th>Purpose</th>
+                            <th>Access Level</th>
+                            <th>Priority</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Airtable CRM</strong></td>
+                            <td>Pipeline truth - forecast cannot be trusted without this</td>
+                            <td>Full edit + formula visibility</td>
+                            <td><span class="badge" style="background: #dc3545; color: white;">Day 1 Critical</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Google Drive</strong></td>
+                            <td>Finance models, forecast model, runway model, board decks</td>
+                            <td>Full edit to finance folders</td>
+                            <td><span class="badge" style="background: #dc3545; color: white;">Day 1 Critical</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Stripe</strong></td>
+                            <td>Revenue ground truth - payment timestamps and refund logic</td>
+                            <td>Read + export access</td>
+                            <td><span class="badge" style="background: #dc3545; color: white;">Day 1 Critical</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Venn Banking</strong></td>
+                            <td>Real-time cash balances, runway cannot be calculated without this</td>
+                            <td>Read-only transactions + balance</td>
+                            <td><span class="badge" style="background: #dc3545; color: white;">Day 1 Critical</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Slack</strong></td>
+                            <td>Escalation workflows, GTM coordination</td>
+                            <td>Full workspace + finance/GTM channels</td>
+                            <td><span class="badge" style="background: #dc3545; color: white;">Day 1 Critical</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Important Access (Needed Within First Week)</h3>
+                <ul>
+                    <li><strong>QuickBooks Online:</strong> Accountant-level access for chart of accounts, revenue recognition, close validation</li>
+                    <li><strong>Payroll System (Gusto):</strong> Read access for burn modeling and contractor vs employee mapping</li>
+                    <li><strong>Email + Calendar:</strong> Standard access + shared calendar visibility for leadership meetings</li>
+                    <li><strong>Prior Board Decks:</strong> Review last 3-6 months to understand decision expectations and tone</li>
+                </ul>
+                
+                <h3>Supporting Tools</h3>
+                <ul>
+                    <li><strong>PandaDoc:</strong> Contracts, SOWs, pricing agreements, approvals</li>
+                    <li><strong>Circle:</strong> Community management, cohort enrollment, engagement insights</li>
+                    <li><strong>1Password:</strong> Credential management for financial systems</li>
+                    <li><strong>ChatGPT/Claude:</strong> Analysis, scenario modeling, documentation, decision support</li>
+                </ul>
+                
+                <div class="alert alert-warning">
+                    <strong>Critical Setup Note:</strong> Confirm permissions include EXPORT RIGHTS from all systems. View-only access without export blocks variance analysis, forecasting, and reconciliation. If you don't have Airtable + Stripe + Bank + Forecast model by end of Day 1, you literally cannot perform the job.
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Key Stakeholders</h2>
+                
+                <h3>Week 1 Critical Meetings (Must Meet in First 48 Hours)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Person</th>
+                            <th>Why This Relationship Matters</th>
+                            <th>What to Establish in First Meeting</th>
+                            <th>Ongoing Cadence</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>CEO / Founder</strong><br>Hayden Miyamoto</td>
+                            <td>Ultimate decision-maker; defines risk tolerance, hiring pace, spend priorities. This role exists primarily to support CEO decisions.</td>
+                            <td>
+                                • How CEO wants financial information framed<br>
+                                • What signals trigger immediate escalation<br>
+                                • Preferred scenario framing (base/upside/downside)<br>
+                                • What decisions historically surprised them financially<br>
+                                • Current top 3 business risks from CEO perspective
+                            </td>
+                            <td>Weekly 1:1 + leadership sync</td>
+                        </tr>
+                        <tr>
+                            <td><strong>GTM / Sales Lead</strong></td>
+                            <td>Controls pipeline inputs that drive the entire forecast. Without alignment here, forecasts become fiction.</td>
+                            <td>
+                                • Exact stage definitions and enforcement expectations<br>
+                                • How deals actually move vs CRM rules<br>
+                                • Typical deal cycle realities vs theoretical timelines<br>
+                                • What signals indicate deal is truly "committed"<br>
+                                • Current biggest pipeline bottleneck
+                            </td>
+                            <td>Weekly pipeline review</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bookkeeper / Finance Ops</strong></td>
+                            <td>Owns execution layer of accounting accuracy. Determines how fast and clean the monthly close happens.</td>
+                            <td>
+                                • Close timeline and responsibilities<br>
+                                • Revenue categorization logic<br>
+                                • Expense tagging consistency rules<br>
+                                • Known reconciliation pain points<br>
+                                • How questions/adjustments are communicated
+                            </td>
+                            <td>Monthly close review + ad-hoc</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Additional Key Relationships</h3>
+                <ul>
+                    <li><strong>Operations / Program Delivery Lead:</strong> Controls delivery cost structure, cohort sizing, facilitator utilization - direct drivers of gross margin</li>
+                    <li><strong>Payroll / HR Admin:</strong> Manages largest predictable burn components (payroll and contractor payments)</li>
+                    <li><strong>Marketing / Growth Owner:</strong> Controls acquisition spend and campaign experiments affecting CAC and pipeline volume</li>
+                </ul>
+                
+                <div class="alert alert-info">
+                    <strong>Critical Insight:</strong> Week 1 meetings are about mapping failure points, not introductions. Each person controls where bad data can enter the financial system: CEO (strategic assumptions), GTM (pipeline truth), Bookkeeper (accounting truth), Delivery (margin truth), Payroll (burn truth), Marketing (CAC truth).
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>30-Day Onboarding Checklist</h2>
+                
+                <h3>Week 1: Foundation</h3>
+                <ul>
+                    <li>✅ Understand revenue model + offers + cohort structure</li>
+                    <li>✅ Map Airtable pipeline fields and stage logic</li>
+                    <li>✅ Review last 3 months forecast vs actual</li>
+                    <li>✅ Meet CEO, GTM Lead, Bookkeeper (critical relationships)</li>
+                </ul>
+                
+                <h3>Week 2: Hands-On Learning</h3>
+                <ul>
+                    <li>✅ Rebuild runway model themselves once (full process)</li>
+                    <li>✅ Walk through pipeline validation process</li>
+                    <li>✅ Review pricing + discount discipline rules</li>
+                    <li>✅ Shadow weekly leadership sync and GTM pipeline review</li>
+                </ul>
+                
+                <h3>Week 3: Independent Execution</h3>
+                <ul>
+                    <li>✅ Run a full monthly forecast refresh independently</li>
+                    <li>✅ Sit in GTM pipeline review and challenge stage assumptions</li>
+                    <li>✅ Produce variance analysis vs. prior month</li>
+                    <li>✅ Meet with delivery/ops to understand margin drivers</li>
+                </ul>
+                
+                <h3>Week 4: Strategic Contribution</h3>
+                <ul>
+                    <li>✅ Produce one executive-ready financial summary</li>
+                    <li>✅ Run one hiring impact scenario independently</li>
+                    <li>✅ Identify one major risk leadership isn't seeing</li>
+                    <li>✅ Present findings/recommendations to CEO</li>
+                </ul>
+                
+                <div class="alert alert-warning">
+                    <strong>Readiness Check:</strong> If the new person cannot complete Week 4 deliverables by Day 30, they are not yet operational. This role requires the ability to independently produce decision-ready analysis within the first month.
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Common Pitfalls to Avoid</h2>
+                
+                <h3>🔴 Critical Mistakes (Will Cause Role Failure)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 30%;">Don't Do This</th>
+                            <th style="width: 35%;">Do This Instead</th>
+                            <th>Why It Matters</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Assume Airtable pipeline data is reliable</td>
+                            <td>Run pipeline hygiene validation before trusting any forecast input</td>
+                            <td>Forecast errors almost always start with dirty pipeline stages, not math mistakes</td>
+                        </tr>
+                        <tr>
+                            <td>Optimize accounting detail before forecast reliability</td>
+                            <td>First ensure pipeline → revenue timing → runway logic is stable</td>
+                            <td>Perfect books with wrong forecast still leads to bad decisions</td>
+                        </tr>
+                        <tr>
+                            <td>Report numbers without decision implications</td>
+                            <td>Frame: "If pacing continues, runway shortens by ~1.5 months unless conversion recovers within 30 days"</td>
+                            <td>Leadership doesn't need numbers—they need implications</td>
+                        </tr>
+                        <tr>
+                            <td>Accept revenue timing optimism from GTM</td>
+                            <td>Use historical cycle time + payment lag as default. Override only with hard evidence.</td>
+                            <td>Timing optimism destroys runway accuracy faster than anything else</td>
+                        </tr>
+                        <tr>
+                            <td>Become the company's "model builder"</td>
+                            <td>Push toward standardized decision templates and self-service calculators</td>
+                            <td>If you build models from scratch repeatedly, the role becomes a bottleneck</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>⚠️ Time Management Mistakes</h3>
+                <ul>
+                    <li><strong>Don't:</strong> Over-attend GTM discussions to "stay close" → <strong>Do:</strong> Attend only pipeline review, pricing decisions, spend approvals</li>
+                    <li><strong>Don't:</strong> Treat forecast as static monthly exercise → <strong>Do:</strong> Treat forecast as live operational system updated weekly</li>
+                    <li><strong>Don't:</strong> Wait for perfect data before acting → <strong>Do:</strong> Operate with explicit confidence levels (high/medium/directional)</li>
+                    <li><strong>Don't:</strong> Optimize today's report → <strong>Do:</strong> Reduce tomorrow's decision friction</li>
+                </ul>
+                
+                <h3>⚙️ Technical Traps</h3>
+                <ul>
+                    <li><strong>Spreadsheet fragility:</strong> Keep modular, auditable structures vs. complex cross-sheet links</li>
+                    <li><strong>Category drift:</strong> Lock QuickBooks expense mapping rules early</li>
+                    <li><strong>Silent Stripe issues:</strong> Reconcile payment status regularly (refunds/failures don't always surface)</li>
+                    <li><strong>Cash timing errors:</strong> Don't assume closed deals = cash received</li>
+                </ul>
+                
+                <div class="alert alert-warning">
+                    <strong>The Single Most Dangerous Failure Mode:</strong> If pipeline timing assumptions are wrong, everything else becomes irrelevant. Not accounting detail, not slide formatting, not minor expense tracking. The entire company runs on revenue timing realism.
+                </div>
+            </div>
+        </div>
+
+        <!-- ACTIONS TAB -->
+        <div id="actions" class="tab-content">
+            <div class="card">
+                <h2>Discussion Topics for Manager 1:1</h2>
+                
+                <h3>1. Capacity & Priority Alignment</h3>
+                <p><strong>Current State:</strong> Operating at 105-110% capacity. Core responsibilities (reporting, runway protection, forecast integrity) are sustainable at 100%. System improvement work pushes beyond capacity.</p>
+                <p><strong>Discussion Points:</strong></p>
+                <ul>
+                    <li>Should system improvement work (automation, documentation, COA redesign) be de-prioritized temporarily?</li>
+                    <li>Or should we protect 8-10 hrs/week for 10 weeks to implement Top 5 opportunities (6.73 hrs/week recapture)?</li>
+                    <li>What's the company's appetite for short-term investment in long-term efficiency?</li>
+                </ul>
+                
+                <h3>2. Finance Data Spine Authority</h3>
+                <p><strong>Current Challenge:</strong> Pipeline data quality directly determines forecast reliability. When Airtable quality is ⚠️ or 🔴, strategic decisions should be deferred until data is decision-grade.</p>
+                <p><strong>Discussion Points:</strong></p>
+                <ul>
+                    <li>Do I have authority to defer strategic decisions when pipeline quality falls below threshold?</li>
+                    <li>Should "pipeline quality gates block strategic decisions" be formalized?</li>
+                    <li>How do we balance GTM velocity with data discipline?</li>
+                </ul>
+                
+                <h3>3. Implementation Timeline for Top 5 Opportunities</h3>
+                <p><strong>Proposed Roadmap:</strong> 10-week implementation (Weeks 1-3: Quick wins, Week 4: Planning, Weeks 5-10: Master build)</p>
+                <p><strong>Discussion Points:</strong></p>
+                <ul>
+                    <li>Is 10-week timeline acceptable given other priorities?</li>
+                    <li>Should we accelerate Quick Wins (#2, #3, #4) to demonstrate ROI before committing to Master Build?</li>
+                    <li>Any concerns about offshore VA for slide delegation or AI for variance drafting?</li>
+                </ul>
+                
+                <h3>4. Role Boundaries & Admin Drag</h3>
+                <p><strong>Current Reality:</strong> 5% of time spent on IT/systems admin (1Password, access provisioning, SaaS review) outside core finance scope.</p>
+                <p><strong>Discussion Points:</strong></p>
+                <ul>
+                    <li>Should IT/systems admin be transitioned to operations or dedicated IT role?</li>
+                    <li>What's the plan for scaling finance operations as company grows?</li>
+                    <li>At what growth stage should we add dedicated FP&A or finance ops support?</li>
+                </ul>
+                
+                <h3>5. Strategic Direction Volatility</h3>
+                <p><strong>Current Challenge:</strong> "Frequent changes in strategic direction creates rework in forecasts, priorities, and systems; limits ability to compound progress."</p>
+                <p><strong>Discussion Points:</strong></p>
+                <ul>
+                    <li>How can we reduce forecast churn from strategic pivots?</li>
+                    <li>Should major strategic changes trigger explicit "forecast reset" acknowledgment?</li>
+                    <li>What guardrails exist around strategic experimentation vs. committed plans?</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Success Metrics for Next 90 Days</h2>
+                
+                <h3>Primary Goals (Must Achieve)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Goal</th>
+                            <th>Target</th>
+                            <th>Measurement</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Forecast Accuracy</strong></td>
+                            <td>±5-10% variance monthly</td>
+                            <td>3 consecutive months within target</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Runway Visibility</strong></td>
+                            <td>≥12-18 months maintained</td>
+                            <td>No runway surprises; weekly tracking discipline</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pipeline Data Quality</strong></td>
+                            <td>Airtable ≥8/10 quality</td>
+                            <td>4 consecutive weeks ✅ Clean status</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Reporting Timeliness</strong></td>
+                            <td>100% on-time close</td>
+                            <td>3 consecutive months within 5-7 days</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Stretch Goals (High Impact if Achieved)</h3>
+                <ul>
+                    <li><strong>Implement Quick Win Opportunities:</strong> #2 (Slide Delegation), #3 (Variance AI), #4 (Hiring Calculator) operational within 3 weeks → 2.23 hrs/week recaptured</li>
+                    <li><strong>Document Pipeline Data Refresh:</strong> Level 3 Guide operationalized with weekly non-optional loop (already documented, needs enforcement)</li>
+                    <li><strong>Establish Behavioral Authority:</strong> At least 1 strategic decision explicitly deferred due to pipeline ⚠️/🔴 status (proving forcing function works)</li>
+                    <li><strong>Unit Economics Dashboard:</strong> Automated LTV:CAC + payback tracking by cohort/channel (enables faster optimization decisions)</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Resources & Support Needed</h2>
+                
+                <h3>Immediate Needs (Next 30 Days)</h3>
+                <ul>
+                    <li><strong>CEO Alignment:</strong> 1-hour planning session to align on Top 5 implementation timeline and authority to enforce pipeline quality gates</li>
+                    <li><strong>GTM Collaboration:</strong> Weekly pipeline review cadence locked in with clear stage definition enforcement expectations</li>
+                    <li><strong>Budget Approval:</strong> ~$800-1,000/month for automation tools (Zapier/Make ~$50, offshore VA ~$700, Claude API ~$50)</li>
+                </ul>
+                
+                <h3>Medium-Term Needs (Next 90 Days)</h3>
+                <ul>
+                    <li><strong>Protected Implementation Time:</strong> 8-10 hrs/week for 10 weeks to build Finance Data Spine (blocks other strategic work temporarily)</li>
+                    <li><strong>Bookkeeper Collaboration:</strong> Monthly close process documentation and quality gate formalization</li>
+                    <li><strong>External Support (if needed):</strong> CPA for tax planning ($0 incremental if using existing), automation consultant for complex integrations ($2,000-3,000 one-time if needed)</li>
+                </ul>
+                
+                <h3>What Would Accelerate Success</h3>
+                <ul>
+                    <li>CEO commitment to "no strategic decisions when pipeline is ⚠️/🔴" forcing function</li>
+                    <li>GTM lead ownership of Airtable hygiene with weekly accountability</li>
+                    <li>Reduced strategic direction volatility (fewer forecast rebuilds from pivots)</li>
+                    <li>Clear 12-month finance roadmap (when to add FP&A support, when to upgrade systems)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PRINTABLE TAB -->
+        <div id="printable" class="tab-content">
+            <div class="card">
+                <h2>Complete Clarityboard - Printable Version</h2>
+                <p style="color: #666; margin-bottom: 2rem;">This tab contains all information from previous tabs in a single printable format. Use your browser's print function (Ctrl/Cmd + P) to generate a PDF.</p>
+                
+                <div style="page-break-after: always;">
+                    <h3 style="color: #667eea; border-bottom: 2px solid #667eea; padding-bottom: 0.5rem;">Role Foundation</h3>
+                    <p><strong>Name:</strong> Vipul Patel</p>
+                    <p><strong>Title:</strong> Head of Finance (Contractor)</p>
+                    <p><strong>Reports to:</strong> Hayden Miyamoto, Founder & CEO</p>
+                    <p><strong>Direct Reports:</strong> None</p>
+                    <p><strong>Department:</strong> Finance</p>
+                    
+                    <h4>Key Outcomes (Hierarchical)</h4>
+                    <ol>
+                        <li><strong>Forecast Integrity:</strong> Maintain decision-grade financial visibility (±5-10% forecast accuracy, real-time runway/burn/margin)</li>
+                        <li><strong>Runway Protection:</strong> Maintain ≥12-18 months runway; all spend meets thresholds</li>
+                        <li><strong>Pipeline Data Reliability:</strong> Airtable ≥8/10 quality, weekly forecasting without rebuilds</li>
+                        <li><strong>Unit Economics Discipline:</strong> LTV:CAC ≥3x, payback ≤6-9 months</li>
+                        <li><strong>Decision Framing:</strong> Provide decision-grade analysis for all major growth bets</li>
+                    </ol>
+                </div>
+                
+                <div style="page-break-after: always;">
+                    <h3 style="color: #667eea; border-bottom: 2px solid #667eea; padding-bottom: 0.5rem;">Process Involvement Summary</h3>
+                    <p><strong>Customer Lifecycle (52% total):</strong></p>
+                    <ul>
+                        <li>Market to Lead: 18% - Accountable for acquisition economics</li>
+                        <li>Lead to Sale: 20% - Accountable for conversion efficiency</li>
+                        <li>Sale to Delivery: 4% - Accountable for contract terms</li>
+                        <li>Delivery to Success: 5% - Accountable for delivery economics</li>
+                        <li>Success to Market: 3% - Accountable for expansion economics</li>
+                        <li>Success to Lead: 2% - Accountable for referral economics</li>
+                    </ul>
+                    
+                    <p><strong>Enabling Processes (48% core finance):</strong></p>
+                    <ul>
+                        <li>Plan to Report: 15% - Accountable for forecast accuracy</li>
+                        <li>Record to Report: 12% - Accountable for financial statement integrity</li>
+                        <li>Hire to Retire: 7% - Accountable for hiring financial impact</li>
+                        <li>Procure to Pay: 6% - Accountable for spend discipline</li>
+                        <li>Idea to Launch: 6% - Accountable for pricing viability</li>
+                        <li>Govern to Comply: 5% - Accountable for financial compliance</li>
+                        <li>Other/IT: 5% - Accountable for financial systems</li>
+                        <li>Issue to Resolution: 4% - Accountable for financial impact assessment</li>
+                    </ul>
+                    
+                    <p><em>Note: Total 112% reflects responsibility coverage with overlap, not additive time.</em></p>
+                </div>
+                
+                <div style="page-break-after: always;">
+                    <h3 style="color: #667eea; border-bottom: 2px solid #667eea; padding-bottom: 0.5rem;">Primary KPIs</h3>
+                    <ol>
+                        <li><strong>Cash Runway & Burn Multiple:</strong> Target ≥12-18mo runway, ≤1.5x burn | Review: Weekly+Monthly</li>
+                        <li><strong>Forecast Accuracy:</strong> Target ±5-10% variance | Review: Monthly</li>
+                        <li><strong>Gross/Contribution Margin:</strong> Target ≥70% gross margin | Review: Monthly</li>
+                        <li><strong>Unit Economics:</strong> Target LTV:CAC ≥3x, Payback ≤6-9mo | Review: Monthly</li>
+                        <li><strong>Reporting Timeliness:</strong> Target close within 5-7 days, 100% on-time | Review: Monthly</li>
+                    </ol>
+                    
+                    <h4>Secondary KPIs (Supporting Metrics)</h4>
+                    <p>Pipeline Quality Score, Lead→Call Conversion, Show Rate, Close Rate, Revenue/Call, Sales Cycle Length, Discount Rate, CAC by Channel, Cohort Gross Margin, Churn/Retention, Referral %, Cash Collection Lag</p>
+                </div>
+                
+                <div style="page-break-after: always;">
+                    <h3 style="color: #667eea; border-bottom: 2px solid #667eea; padding-bottom: 0.5rem;">Top 5 Opportunities</h3>
+                    <h4>Foundation Initiative</h4>
+                    <p><strong>#1: Finance Data Spine Automation</strong> (Automate)<br>
+                    4.5 hrs/wk savings • $23,400/yr value • 3.4mo payback • High KPI impact<br>
+                    <em>Unified: Airtable → Forecast + Pipeline Validation + Runway Live Update</em></p>
+                    
+                    <h4>Leverage Layer</h4>
+                    <p><strong>#2: KPI Slide Formatting Delegation</strong> (Delegate)<br>
+                    1.25 hrs/wk savings • $3,300/yr value • 7.3mo payback • Medium KPI impact</p>
+                    
+                    <p><strong>#3: Monthly Variance AI First Draft</strong> (AI-Assist)<br>
+                    0.23 hrs/wk savings • $1,320/yr value • 9.1mo payback • High KPI impact</p>
+                    
+                    <p><strong>#4: Hiring Impact Calculator</strong> (Automate)<br>
+                    0.75 hrs/wk savings • $4,680/yr value • 4.5mo payback • High KPI impact</p>
+                    
+                    <p><strong>#5: Forecast Delta Analysis Automation</strong> (AI-Assist)<br>
+                    0.42 hrs/wk savings • $2,167/yr value • 11.1mo payback • High KPI impact</p>
+                    
+                    <p><strong>Total Portfolio:</strong> 6.73 hrs/wk (16% workload) • $33,507/yr value • 4.8mo weighted payback</p>
+                </div>
+                
+                <div style="page-break-after: always;">
+                    <h3 style="color: #667eea; border-bottom: 2px solid #667eea; padding-bottom: 0.5rem;">Critical Tools & Access</h3>
+                    <h4>Day 1 Critical Access</h4>
+                    <ul>
+                        <li><strong>Airtable CRM:</strong> Full edit + formula visibility (pipeline truth)</li>
+                        <li><strong>Google Drive:</strong> Full edit to finance folders (forecast/runway models)</li>
+                        <li><strong>Stripe:</strong> Read + export access (revenue ground truth)</li>
+                        <li><strong>Venn Banking:</strong> Read-only transactions + balance (runway calculation)</li>
+                        <li><strong>Slack:</strong> Full workspace + finance/GTM channels (escalation workflows)</li>
+                    </ul>
+                    
+                    <h4>Week 1 Access</h4>
+                    <ul>
+                        <li>QuickBooks Online (accountant-level)</li>
+                        <li>Payroll System (read access)</li>
+                        <li>Prior Board Decks (last 3-6 months)</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 style="color: #667eea; border-bottom: 2px solid #667eea; padding-bottom: 0.5rem;">30-Day Onboarding</h3>
+                    <p><strong>Week 1:</strong> Understand revenue model, map Airtable logic, review forecast accuracy, meet CEO/GTM/Bookkeeper</p>
+                    <p><strong>Week 2:</strong> Rebuild runway model independently, walk pipeline validation, review pricing rules</p>
+                    <p><strong>Week 3:</strong> Run forecast refresh independently, challenge GTM assumptions, produce variance analysis</p>
+                    <p><strong>Week 4:</strong> Produce executive-ready summary, run hiring scenario, identify hidden risk, present to CEO</p>
+                    
+                    <h4>Critical Mental Model</h4>
+                    <p style="font-style: italic;">"This role is financial decision infrastructure for a volatile growth company, not finance reporting. The job is managing uncertainty, not managing spreadsheets."</p>
+                    
+                    <h4>Top Pitfalls to Avoid</h4>
+                    <ul>
+                        <li>Treating CRM data as reliable without validation</li>
+                        <li>Optimizing accounting detail before forecast reliability</li>
+                        <li>Reporting numbers without decision implications</li>
+                        <li>Accepting revenue timing optimism from GTM</li>
+                        <li>Becoming the bottleneck "model builder" instead of enabling self-service</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        function sortTable(n, tableId) {
+            var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+            table = document.getElementById(tableId);
+            switching = true;
+            dir = "asc";
+            while (switching) {
+                switching = false;
+                rows = table.rows;
+                for (i = 0; i < (rows.length - 1); i++) {
+                    shouldSwitch = false;
+                    x = rows[i].getElementsByTagName("TD")[n];
+                    y = rows[i + 1].getElementsByTagName("TD")[n];
+                    if (dir == "asc") {
+                        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    } else if (dir == "desc") {
+                        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    }
+                }
+                if (shouldSwitch) {
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                    switchcount++;
+                } else {
+                    if (switchcount == 0 && dir == "asc") {
+                        dir = "desc";
+                        switching = true;
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

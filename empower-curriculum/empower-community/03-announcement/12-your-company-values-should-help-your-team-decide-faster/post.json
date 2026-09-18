@@ -1,0 +1,597 @@
+{
+  "id": 35876158,
+  "name": "Your Company Values Should Help Your Team Decide Faster",
+  "slug": "your-company-values-are-useless-until-they-help-your-team-decide",
+  "type": "Posts::Basic",
+  "status": "published",
+  "user_id": 59573912,
+  "published_at": "2026-08-27T13:12:29.801Z",
+  "updated_at": "2026-08-27T13:16:20.716Z",
+  "created_at": "2026-08-27T13:12:29.801Z",
+  "hide_meta_info": false,
+  "community_member_id": 85538714,
+  "is_truncation_disabled": null,
+  "hide_from_featured_areas": false,
+  "flagged_for_approval_at": null,
+  "pinned_at": null,
+  "internal_custom_html": null,
+  "is_comments_enabled": true,
+  "is_liking_enabled": true,
+  "share_post_enabled": null,
+  "share_uid": null,
+  "minimal_layout": false,
+  "show_post_teaser": false,
+  "editor": "tiptap",
+  "is_comments_closed": false,
+  "is_comments_disabled": false,
+  "is_liking_disabled": false,
+  "display_title": "Your Company Values Should Help Your Team Decide Faster",
+  "cover_image": null,
+  "cover_image_url": null,
+  "cover_image_variants": {},
+  "cardview_thumbnail": null,
+  "cardview_thumbnail_url": null,
+  "cardview_image_url": null,
+  "space_name": "Announcement",
+  "space_slug": "announcement",
+  "community_slug": "empower-labs",
+  "space_id": 2721841,
+  "pin_to_top": false,
+  "pinned_at_top_of_space": false,
+  "bookmark_id": null,
+  "topics": [],
+  "community_member": {
+    "id": 85538714,
+    "user_id": 59573912,
+    "public_uid": "89ea2fdb",
+    "first_name": "Ronnie",
+    "last_name": null,
+    "name": "Ronnie",
+    "admin": true,
+    "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzU5NTczOTEyP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--86d5ff77eb6b7c8282e1582d1728433aa9fb5e08",
+    "type": "CommunityMember",
+    "headline": "Admin",
+    "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvODU1Mzg3MTQ_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--4d28570696f744a549b25d82dbe6681db284cad0",
+    "avatar_url": null
+  },
+  "conversation_summary_overview": "",
+  "body_trix_content": "",
+  "body_for_editor": null,
+  "truncated_content": "If two managers read the same company value and make two different decisions, the value isn’t helping. It’s just a word on the wall.\n\nThe problem isn’t necessarily that your company has the wrong values. Often, the words are there but the rule behind t...",
+  "show_more": true,
+  "tiptap_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If two managers read the same company value and make two different decisions, the value isn’t helping. It’s just a word on the wall.",
+              "type": "text",
+              "circle_ios_fallback_text": "If two managers read the same company value and make two different decisions, the value isn’t helping. It’s just a word on the wall."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The problem isn’t necessarily that your company has the wrong values. Often, the words are there but the rule behind them is missing.",
+              "type": "text",
+              "circle_ios_fallback_text": "The problem isn’t necessarily that your company has the wrong values. Often, the words are there but the rule behind them is missing."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A value becomes useful when your team can use it to decide what to do next, without waiting for the owner.",
+              "type": "text",
+              "circle_ios_fallback_text": "A value becomes useful when your team can use it to decide what to do next, without waiting for the owner."
+            }
+          ]
+        },
+        {
+          "type": "embed",
+          "attrs": {
+            "sgid": "BAh7CEkiCGdpZAY6BkVUSSI6Z2lkOi8vanVtcHN0YXJ0LWFwcC9SaWNoVGV4dE9lbWJlZC8yNTg4NjI3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--507a6ca95b3cb48d50327b15f2e1db914b2298cb"
+          }
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "🎥 What you'll learn",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "🎥 What you'll learn"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In this video, Hayden breaks down how to turn a vague company value into a clear, observable behavior that your team can actually use.",
+              "type": "text",
+              "circle_ios_fallback_text": "In this video, Hayden breaks down how to turn a vague company value into a clear, observable behavior that your team can actually use."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "text": "In this video, you'll learn:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "In this video, you'll learn:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "🧠 Why values like “Ownership” and “Excellence” can fail when they’re too open to interpretation",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "⚙️ How to turn one-word values into simple behavioral rules using real situations",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "👥 How to define what “good” and “missing” values-based behavior look like in practice",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "📋 How to use a simple Values Practice Guide: ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "Missed It, Practiced It, and Modeled It",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "🤖 How AI can organize examples and support coaching while keeping judgment with people",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "💡 Key Takeaway",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "💡 Key Takeaway"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A poster doesn’t change behavior. The real value of a company value is whether it helps your team make better decisions in real situations. Choose one value, connect it to a recent decision, and define what good behavior should look like next time.",
+              "type": "text",
+              "circle_ios_fallback_text": "A poster doesn’t change behavior. The real value of a company value is whether it helps your team make better decisions in real situations. Choose one value, connect it to a recent decision, and define what good behavior should look like next time."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "🚀 Ready to define your values?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "🚀 Ready to define your values?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you haven’t clearly defined your company values yet, Robert Glazer’s ",
+              "type": "text",
+              "circle_ios_fallback_text": "If you haven’t clearly defined your company values yet, Robert Glazer’s "
+            },
+            {
+              "text": "AI Core Values Coach",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "AI Core Values Coach"
+            },
+            {
+              "text": " can help with that process.",
+              "type": "text",
+              "circle_ios_fallback_text": " can help with that process."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "👉 ",
+              "type": "text",
+              "circle_ios_fallback_text": "👉 "
+            },
+            {
+              "text": "AI Core Values Coach:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "AI Core Values Coach:"
+            },
+            {
+              "type": "hardBreak",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "https://chatgpt.com/g/g-67f14ba6983c819183847f224da7527c-the-official-compass-within-core-values-coach",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://chatgpt.com/g/g-67f14ba6983c819183847f224da7527c-the-official-compass-within-core-values-coach",
+                    "class": null,
+                    "target": "_blank"
+                  }
+                },
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "https://chatgpt.com/g/g-67f14ba6983c819183847f224da7527c-the-official-compass-within-core-values-coach"
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "💬 Join the Discussion",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "💬 Join the Discussion"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Which company value does your team still struggle to define clearly?",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Can you think of a recent decision where the same value could have led two people to different actions?",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "What would “good” behavior look like for one of your company’s values in a real situation?",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "What was your biggest takeaway from the idea that ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "AI organizes, but people decide",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "?",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "text": "👋 New to the Community?",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "👋 New to the Community?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "If you haven't introduced yourself yet, we'd love to get to know you!",
+              "type": "text",
+              "circle_ios_fallback_text": "If you haven't introduced yourself yet, we'd love to get to know you!"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Tell us:",
+              "type": "text",
+              "circle_ios_fallback_text": "Tell us:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Who you are",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "What your role or business is",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Where you're joining us from",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "What you're hoping to accomplish with AI",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The clearer your values become, the easier it is for your team to turn them into everyday decisions. Welcome to the community!",
+              "type": "text",
+              "circle_ios_fallback_text": "The clearer your values become, the easier it is for your team to turn them into everyday decisions. Welcome to the community!"
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "If two managers read the same company value and make two different decisions, the value isn’t helping. It’s just a word on the wall.The problem isn’t necessarily that your company has the wrong values. Often, the words are there but the rule behind them is missing.A value becomes useful when your team can use it to decide what to do next, without waiting for the owner.🎥 What you'll learnIn this video, Hayden breaks down how to turn a vague company value into a clear, observable behavior that your team can actually use.In this video, you'll learn:💡 Key TakeawayA poster doesn’t change behavior. The real value of a company value is whether it helps your team make better decisions in real situations. Choose one value, connect it to a recent decision, and define what good behavior should look like next time.🚀 Ready to define your values?If you haven’t clearly defined your company values yet, Robert Glazer’s AI Core Values Coach can help with that process.👉 AI Core Values Coach:\nhttps://chatgpt.com/g/g-67f14ba6983c819183847f224da7527c-the-official-compass-within-core-values-coach💬 Join the Discussion👋 New to the Community?If you haven't introduced yourself yet, we'd love to get to know you!Tell us:The clearer your values become, the easier it is for your team to turn them into everyday decisions. Welcome to the community!",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {
+      "BAh7CEkiCGdpZAY6BkVUSSI6Z2lkOi8vanVtcHN0YXJ0LWFwcC9SaWNoVGV4dE9lbWJlZC8yNTg4NjI3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--507a6ca95b3cb48d50327b15f2e1db914b2298cb": {
+        "id": 2588627,
+        "url": "https://youtu.be/YgYRzMWZjf0?si=mN7rkOWc_zi79e0A",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSI6Z2lkOi8vanVtcHN0YXJ0LWFwcC9SaWNoVGV4dE9lbWJlZC8yNTg4NjI3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--507a6ca95b3cb48d50327b15f2e1db914b2298cb",
+        "type": "embed",
+        "embed_type": "video",
+        "embed_provider": "iframely",
+        "circle_embed_url": "https://community.empowerlabs.ai/rich_text_oembeds/BAh7CEkiCGdpZAY6BkVUSSI6Z2lkOi8vanVtcHN0YXJ0LWFwcC9SaWNoVGV4dE9lbWJlZC8yNTg4NjI3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--507a6ca95b3cb48d50327b15f2e1db914b2298cb",
+        "html": "<div style=\"left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;\"><iframe src=\"https://www.youtube.com/embed/YgYRzMWZjf0?rel=0\" width=\"360\" height=\"202\" style=\"top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;\" allowfullscreen scrolling=\"no\" allow=\"accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;\" referrerpolicy=\"strict-origin\"></iframe></div>",
+        "title": "Your Company Values Should Help Your Team Decide Faster",
+        "width": 360,
+        "height": 202,
+        "version": "1.0",
+        "author_url": "https://www.youtube.com/channel/UCDMYoClgeu5QJpEfDaJLnHA",
+        "author_name": null,
+        "description": "Company values are supposed to make decisions clearer. But in most businesses, they stay vague enough that every manager interprets them differently.\n\nIn this video, we turn one common value, Ownership, into a practical operating behavior your team can use when a deadline slips, a customer is unhappy, or nobody is sure who should act.\n\n*You’ll see how to:*\n- Turn a vague company value into a clear decision rule\n- Define what the value looks like in real work\n- Create a three-level Values Practice Guide\n- Use values in hiring, onboarding, debriefs, recognition, and team moments\n- Let AI organize examples and draft useful questions without letting it judge people\n\n*JOIN OUR CIRCLE COMMUNITY FOR FREE*\nhttps://community.empowerlabs.ai/join?invitation_token=f618616a09ca533f4c5457fb0f922e7935adc13e-93fdb8d8-0742-437f-a65e-c24b9174bb85\n\n*Robert Glazer’s AI Core Values Coach:* https://robertglazer.com/gpt\n\n*Chapters:*\n0:00 When values don’t help decisions\n0:33 Why values usually fail\n1:07 Turn a vague value into behavior\n2:15 Define ownership with a real example\n2:58 Build a three-level practice guide\n3:18 Use values in team moments\n3:59 Use AI to organize values examples\n4:41 One value to clarify this week\n\n#AIForBusiness #CompanyValues #OperatingSystems",
+        "provider_url": null,
+        "provider_name": "YouTube",
+        "thumbnail_url": "https://i.ytimg.com/vi/YgYRzMWZjf0/maxresdefault.jpg",
+        "thumbnail_width": 1280,
+        "thumbnail_height": 720
+      }
+    },
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  }
+}

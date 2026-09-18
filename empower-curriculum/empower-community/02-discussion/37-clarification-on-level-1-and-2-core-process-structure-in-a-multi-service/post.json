@@ -1,0 +1,483 @@
+{
+  "id": 29960655,
+  "name": "Clarification on Level 1 & 2 Core Process Structure in a Multi-Service Agency",
+  "slug": "clarification-on-level-1-2-core-process-structure-in-a-multi-service-agency",
+  "type": "Posts::Basic",
+  "status": "published",
+  "user_id": 50990824,
+  "published_at": "2026-02-23T13:20:55.351Z",
+  "updated_at": "2026-02-24T15:50:05.651Z",
+  "created_at": "2026-02-23T13:20:55.351Z",
+  "hide_meta_info": false,
+  "community_member_id": 75349707,
+  "is_truncation_disabled": null,
+  "hide_from_featured_areas": false,
+  "flagged_for_approval_at": null,
+  "pinned_at": null,
+  "internal_custom_html": null,
+  "is_comments_enabled": true,
+  "is_liking_enabled": true,
+  "share_post_enabled": null,
+  "share_uid": null,
+  "minimal_layout": false,
+  "show_post_teaser": false,
+  "editor": "tiptap",
+  "is_comments_closed": false,
+  "is_comments_disabled": false,
+  "is_liking_disabled": false,
+  "display_title": "Clarification on Level 1 & 2 Core Process Structure in a Multi-Service Agency",
+  "cover_image": null,
+  "cover_image_url": null,
+  "cover_image_variants": {},
+  "cardview_thumbnail": null,
+  "cardview_thumbnail_url": null,
+  "cardview_image_url": null,
+  "space_name": "Discussion",
+  "space_slug": "discussion-b92449",
+  "community_slug": "empower-labs",
+  "space_id": 2414947,
+  "pin_to_top": false,
+  "pinned_at_top_of_space": false,
+  "bookmark_id": null,
+  "topics": [
+    336022
+  ],
+  "community_member": {
+    "id": 75349707,
+    "user_id": 50990824,
+    "public_uid": "c78ae33d",
+    "first_name": "Yujin",
+    "last_name": "Lee",
+    "name": "Yujin Lee",
+    "admin": false,
+    "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzUwOTkwODI0P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--c60793b2bd26911b84bad74ff14c51b6961c30c2",
+    "type": "CommunityMember",
+    "headline": "Yujin Lee",
+    "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNzUzNDk3MDc_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--f50aa46255391afdc7b0c54f282646fcee243174",
+    "avatar_url": "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTkpTRVFnPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--4aca53528712361cf1089a14e5a3cdbca97b0be2/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJc0FXa0NMQUU2Q25OaGRtVnlld1k2Q25OMGNtbHdWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--67365f61f655fbc86c65a51f2e9992ab818c41cd/IMG_4892.jpg"
+  },
+  "conversation_summary_overview": "",
+  "body_trix_content": "",
+  "body_for_editor": null,
+  "truncated_content": "Core Process:\nSale to Delivery\n\nChallenge:\nI’m unsure how to properly structure my Level 1 and Level 2 SOPs because my agency offers multiple services (both one-off and retainer-based), and clients often engage us for a mix of them depending on the goa...",
+  "show_more": true,
+  "tiptap_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Core Process:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Core Process:"
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "Sale to Delivery",
+              "type": "text",
+              "circle_ios_fallback_text": "Sale to Delivery"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Challenge:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Challenge:"
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "I’m unsure how to properly structure my Level 1 and Level 2 SOPs because my agency offers multiple services (both one-off and retainer-based), and clients often engage us for a mix of them depending on the goals.",
+              "type": "text",
+              "circle_ios_fallback_text": "I’m unsure how to properly structure my Level 1 and Level 2 SOPs because my agency offers multiple services (both one-off and retainer-based), and clients often engage us for a mix of them depending on the goals."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Our services include:",
+              "type": "text",
+              "circle_ios_fallback_text": "Our services include:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Branding (one-off)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Website Creation (one-off)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "SEO (retainer)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "SEM (retainer)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Social Media Marketing (retainer)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Strategy Workshop (one-off)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Influencer Marketing (retainer)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I’m unclear whether I should:",
+              "type": "text",
+              "circle_ios_fallback_text": "I’m unclear whether I should:"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Create ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "one overarching Level 1 “Sale to Delivery” core process",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " that applies to the entire agency, and then develop Level 2 blueprints for each service,",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "or",
+              "type": "text",
+              "circle_ios_fallback_text": "or"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "type": null,
+            "start": 2
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Create ",
+                      "type": "text"
+                    },
+                    {
+                      "text": "separate Level 1 & 2 SOPs for each service",
+                      "type": "text",
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ]
+                    },
+                    {
+                      "text": " individually.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I’m also uncertain about Exercise 3.6 (Register Your Organization), which states to name the process:",
+              "type": "text",
+              "circle_ios_fallback_text": "I’m also uncertain about Exercise 3.6 (Register Your Organization), which states to name the process:"
+            }
+          ]
+        },
+        {
+          "type": "blockquote",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Sale to Delivery – Company Name – Product/Service Name",
+                  "type": "text",
+                  "circle_ios_fallback_text": "Sale to Delivery – Company Name – Product/Service Name"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Does this imply we are expected to create and upload a separate core process into Stage 3 for each individual service?",
+              "type": "text",
+              "circle_ios_fallback_text": "Does this imply we are expected to create and upload a separate core process into Stage 3 for each individual service?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What I’ve tried:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "What I’ve tried:"
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "I’ve mapped the high-level Sale to Delivery flow for the company as a whole, but I can see how each service has its own unique delivery mechanics. That’s where I’m struggling to determine the correct structural level.",
+              "type": "text",
+              "circle_ios_fallback_text": "I’ve mapped the high-level Sale to Delivery flow for the company as a whole, but I can see how each service has its own unique delivery mechanics. That’s where I’m struggling to determine the correct structural level."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What kind of input I’m looking for:",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "What kind of input I’m looking for:"
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "I’d love guidance on the ",
+              "type": "text",
+              "circle_ios_fallback_text": "I’d love guidance on the "
+            },
+            {
+              "text": "correct structural approach",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "circle_ios_fallback_text": "correct structural approach"
+            },
+            {
+              "text": " within the EMPOWER framework.",
+              "type": "text",
+              "circle_ios_fallback_text": " within the EMPOWER framework."
+            },
+            {
+              "type": "hardBreak",
+              "circle_ios_fallback_text": "\n"
+            },
+            {
+              "text": "Specifically:",
+              "type": "text",
+              "circle_ios_fallback_text": "Specifically:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Is Level 1 typically company-wide or service-specific?",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "How granular should we go when registering core processes in Stage 3?",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Appreciate any clarity from those further along in the implementation. Thank you!",
+              "type": "text",
+              "circle_ios_fallback_text": "Appreciate any clarity from those further along in the implementation. Thank you!"
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "Core Process:\nSale to DeliveryChallenge:\nI’m unsure how to properly structure my Level 1 and Level 2 SOPs because my agency offers multiple services (both one-off and retainer-based), and clients often engage us for a mix of them depending on the goals.Our services include:I’m unclear whether I should:orI’m also uncertain about Exercise 3.6 (Register Your Organization), which states to name the process:Sale to Delivery – Company Name – Product/Service NameDoes this imply we are expected to create and upload a separate core process into Stage 3 for each individual service?What I’ve tried:\nI’ve mapped the high-level Sale to Delivery flow for the company as a whole, but I can see how each service has its own unique delivery mechanics. That’s where I’m struggling to determine the correct structural level.What kind of input I’m looking for:\nI’d love guidance on the correct structural approach within the EMPOWER framework.\nSpecifically:Appreciate any clarity from those further along in the implementation. Thank you!",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  }
+}

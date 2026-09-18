@@ -1,0 +1,7860 @@
+1
+00:00:00,000 --> 00:00:00,220
+Hey, 
+
+2
+00:00:00,220 --> 00:00:00,820
+Hello, hello. 
+
+3
+00:00:00,820 --> 00:00:02,420
+Hello, everyone. 
+
+4
+00:00:02,420 --> 00:00:04,620
+Nice to see everyone here today. 
+
+5
+00:00:04,620 --> 00:00:05,120
+Hi. 
+
+6
+00:00:05,260 --> 00:00:08,240
+Danny, good to see you. 
+
+7
+00:00:08,240 --> 00:00:10,740
+Nancy, Don, Pablo, Mike. 
+
+8
+00:00:10,740 --> 00:00:12,660
+Thanks for joining, Mike. 
+
+9
+00:00:12,660 --> 00:00:13,960
+be here. 
+
+10
+00:00:14,240 --> 00:00:17,800
+Um, okay, cool. 
+
+11
+00:00:17,800 --> 00:00:19,800
+So we can kind of dot, maybe some, some 
+
+12
+00:00:19,800 --> 00:00:22,740
+people will join here obviously midori will 
+
+13
+00:00:22,740 --> 00:00:25,500
+keep it open but we have a, we have an 
+
+14
+00:00:25,500 --> 00:00:28,680
+intimate setting here, so we can kind of, 
+
+15
+00:00:28,680 --> 00:00:31,500
+um, of course take personal questions, 
+
+16
+00:00:31,500 --> 00:00:33,320
+kind of unpack things a little bit with 
+
+17
+00:00:33,320 --> 00:00:35,060
+whatever's going on in your situation. 
+
+18
+00:00:35,060 --> 00:00:35,620
+Of course. 
+
+19
+00:00:35,620 --> 00:00:38,760
+Um, I did want to take a quick minute, um, 
+
+20
+00:00:38,760 --> 00:00:39,440
+to 
+
+21
+00:00:39,988 --> 00:00:42,428
+just sort of remind you all one quick thing 
+
+22
+00:00:42,428 --> 00:00:44,328
+that we kind of unpacked on the last 
+
+23
+00:00:44,328 --> 00:00:46,188
+session, just to sort of bring everything 
+
+24
+00:00:46,188 --> 00:00:46,928
+back. 
+
+25
+00:00:46,928 --> 00:00:51,248
+So we say this throughout the program a 
+
+26
+00:00:51,248 --> 00:00:51,648
+lot. 
+
+27
+00:00:51,648 --> 00:00:53,468
+We emphasize it a lot at the beginning. 
+
+28
+00:00:53,468 --> 00:00:55,728
+And as we go through, we certainly tell 
+
+29
+00:00:55,728 --> 00:00:57,028
+you to focus on one thing, right? 
+
+30
+00:00:57,028 --> 00:00:59,208
+You're going to do these assessments, 
+
+31
+00:00:59,208 --> 00:01:00,968
+understand what good looks like in your 
+
+32
+00:01:00,968 --> 00:01:03,068
+business, but in working with Claude, it's 
+
+33
+00:01:03,068 --> 00:01:06,048
+also going to point your highest leverage 
+
+34
+00:01:06,048 --> 00:01:08,488
+opportunity that's going to be tied to your 
+
+35
+00:01:08,488 --> 00:01:09,608
+strategic initiatives, right? 
+
+36
+00:01:10,260 --> 00:01:14,140
+And in the last session, I believe it was 
+
+37
+00:01:14,140 --> 00:01:16,020
+Montgomery, he talked about, hey, I'm 
+
+38
+00:01:16,020 --> 00:01:17,720
+starting to get a little bit overwhelmed. 
+
+39
+00:01:17,720 --> 00:01:21,980
+And typically what we have seen to be 
+
+40
+00:01:21,980 --> 00:01:24,720
+true is that happens because as you do go 
+
+41
+00:01:24,720 --> 00:01:26,820
+through these things, our brains are just 
+
+42
+00:01:26,820 --> 00:01:28,440
+sort of wired to start seeing what's 
+
+43
+00:01:28,440 --> 00:01:29,000
+possible. 
+
+44
+00:01:29,000 --> 00:01:32,800
+And then, so, for example, it might play 
+
+45
+00:01:32,800 --> 00:01:35,060
+out, like I do an assessment and I did it for 
+
+46
+00:01:35,060 --> 00:01:36,720
+marketing and now I see what good looks 
+
+47
+00:01:36,720 --> 00:01:36,980
+like. 
+
+48
+00:01:36,980 --> 00:01:38,400
+And now I want to start implementing for 
+
+49
+00:01:38,400 --> 00:01:38,740
+marketing. 
+
+50
+00:01:39,380 --> 00:01:40,640
+And then I do that with operations. 
+
+51
+00:01:40,640 --> 00:01:42,740
+And then I do that with sales. 
+
+52
+00:01:42,740 --> 00:01:43,980
+And then I kind of rinse and repeat. 
+
+53
+00:01:43,980 --> 00:01:46,679
+And so I just want to pull everyone back to 
+
+54
+00:01:46,679 --> 00:01:50,040
+remind you is that is not the best practice 
+
+55
+00:01:50,040 --> 00:01:52,139
+and not actually what you want to do 
+
+56
+00:01:52,139 --> 00:01:53,179
+during the cohort. 
+
+57
+00:01:53,179 --> 00:01:57,060
+Because if you do that, you're pretty much 
+
+58
+00:01:57,060 --> 00:01:59,800
+guaranteed to get very overwhelmed very, 
+
+59
+00:01:59,800 --> 00:02:00,420
+very quickly. 
+
+60
+00:02:00,420 --> 00:02:03,740
+And then also your quality of output on all 
+
+61
+00:02:03,740 --> 00:02:05,240
+of the things that you try to start 
+
+62
+00:02:05,240 --> 00:02:07,659
+implementing will not be at the level that 
+
+63
+00:02:07,659 --> 00:02:08,320
+they could or should. 
+
+64
+00:02:08,980 --> 00:02:11,880
+So again, we don't want to scale chaos. 
+
+65
+00:02:11,880 --> 00:02:13,619
+We want to make sure that we're doing 
+
+66
+00:02:13,619 --> 00:02:14,460
+the assessments. 
+
+67
+00:02:14,460 --> 00:02:16,700
+We're seeing what good looks like, you 
+
+68
+00:02:16,700 --> 00:02:18,500
+know, four levels deep in everybody's 
+
+69
+00:02:18,500 --> 00:02:19,040
+business. 
+
+70
+00:02:19,040 --> 00:02:21,139
+And then when we get to implementation, 
+
+71
+00:02:21,139 --> 00:02:23,780
+you know, relative to the size of your 
+
+72
+00:02:23,780 --> 00:02:26,420
+team, we'll focus on that more towards 
+
+73
+00:02:26,420 --> 00:02:28,300
+the latter of the cohort, which is really 
+
+74
+00:02:28,300 --> 00:02:30,000
+what the last few sessions are about. 
+
+75
+00:02:30,000 --> 00:02:32,440
+So, hey, all of you have a one thing or 
+
+76
+00:02:32,440 --> 00:02:34,820
+perhaps you're a mature organization and 
+
+77
+00:02:34,820 --> 00:02:36,500
+you have a team and we're going to talk 
+
+78
+00:02:36,500 --> 00:02:37,240
+all about 
+
+79
+00:02:37,396 --> 00:02:38,956
+what that's going to look like when we get 
+
+80
+00:02:38,956 --> 00:02:40,256
+to that point. 
+
+81
+00:02:40,256 --> 00:02:45,496
+So with that said, we did talk, you know, 
+
+82
+00:02:45,496 --> 00:02:47,856
+sales and offer excellence on Monday's 
+
+83
+00:02:47,856 --> 00:02:48,316
+session. 
+
+84
+00:02:48,316 --> 00:02:50,276
+And so perhaps it's good. 
+
+85
+00:02:50,276 --> 00:02:52,516
+I know we had kind of two points of how 
+
+86
+00:02:52,516 --> 00:02:55,256
+we were looking at that for solopreneurs 
+
+87
+00:02:55,256 --> 00:02:57,676
+and smaller teams, or maybe people who 
+
+88
+00:02:57,676 --> 00:02:58,856
+don't have sales teams. 
+
+89
+00:02:58,856 --> 00:03:02,656
+I've put both things you all requested 
+
+90
+00:03:02,656 --> 00:03:03,576
+inside circle. 
+
+91
+00:03:04,212 --> 00:03:06,772
+So I took a Loom video showing you 
+
+92
+00:03:06,772 --> 00:03:09,112
+essentially things that I've done from a 
+
+93
+00:03:09,112 --> 00:03:10,772
+fractional sales management standpoint 
+
+94
+00:03:10,772 --> 00:03:12,332
+for managing multiple teams. 
+
+95
+00:03:12,332 --> 00:03:15,232
+And essentially that was using Cloud for 
+
+96
+00:03:15,232 --> 00:03:17,812
+speed, efficiency, quality of output, and 
+
+97
+00:03:17,812 --> 00:03:19,872
+just a multiplier of my time. 
+
+98
+00:03:19,872 --> 00:03:21,812
+And I gave you some examples there. 
+
+99
+00:03:21,812 --> 00:03:24,132
+And then I also shared the example of an 
+
+100
+00:03:24,132 --> 00:03:26,992
+actual workflow that we have in another 
+
+101
+00:03:26,992 --> 00:03:29,652
+one of Hayden's businesses that is 
+
+102
+00:03:29,652 --> 00:03:30,652
+completely automated. 
+
+103
+00:03:30,652 --> 00:03:34,172
+So the key with those things 
+
+104
+00:03:34,324 --> 00:03:36,084
+just like all of the things in this course, 
+
+105
+00:03:36,084 --> 00:03:37,904
+because all of you run different types of 
+
+106
+00:03:37,904 --> 00:03:39,104
+businesses. 
+
+107
+00:03:39,104 --> 00:03:41,904
+But a big key is just to understand what's 
+
+108
+00:03:41,904 --> 00:03:43,824
+possible, right? 
+
+109
+00:03:43,824 --> 00:03:46,524
+Because for clarity, you know, a lot of that 
+
+110
+00:03:46,524 --> 00:03:49,184
+might have sounded a very high level and 
+
+111
+00:03:49,184 --> 00:03:51,304
+perhaps too technical for anybody on this 
+
+112
+00:03:51,304 --> 00:03:55,404
+call, but really the only starting point to 
+
+113
+00:03:55,404 --> 00:03:57,364
+do any of the workflows that we went 
+
+114
+00:03:57,364 --> 00:04:00,524
+over is going to be the transcription of a 
+
+115
+00:04:00,524 --> 00:04:00,564
+call. 
+
+116
+00:04:00,564 --> 00:04:03,164
+And everyone has the ability, whether 
+
+117
+00:04:03,164 --> 00:04:05,904
+you're on a phone call or you're on a Zoom 
+
+118
+00:04:05,904 --> 00:04:08,044
+or Google Meet or any type of video 
+
+119
+00:04:08,044 --> 00:04:10,604
+conferencing call to be able to transcribe a 
+
+120
+00:04:10,604 --> 00:04:11,004
+call. 
+
+121
+00:04:11,004 --> 00:04:14,764
+And that's the only action that causes the 
+
+122
+00:04:14,764 --> 00:04:15,884
+rest of that campaign. 
+
+123
+00:04:15,884 --> 00:04:18,344
+And it does not have to just be for sales. 
+
+124
+00:04:18,344 --> 00:04:20,884
+This could be for things like onboarding, 
+
+125
+00:04:20,884 --> 00:04:23,044
+your client success, things like account 
+
+126
+00:04:23,044 --> 00:04:23,864
+managers. 
+
+127
+00:04:23,864 --> 00:04:27,424
+It really, really could be spread across 
+
+128
+00:04:27,424 --> 00:04:29,044
+other areas of your business too. 
+
+129
+00:04:29,236 --> 00:04:32,156
+Wanted to quickly just go over those 
+
+130
+00:04:32,156 --> 00:04:34,396
+things on the overwhelm and then circle 
+
+131
+00:04:34,396 --> 00:04:34,796
+back. 
+
+132
+00:04:34,796 --> 00:04:38,956
+But if anybody has been doing the lead to 
+
+133
+00:04:38,956 --> 00:04:41,676
+sale assessment, trying to, you know, 
+
+134
+00:04:41,676 --> 00:04:44,256
+evaluate your sales process and 
+
+135
+00:04:44,256 --> 00:04:46,096
+optimization, any of those things, I mean, 
+
+136
+00:04:46,096 --> 00:04:47,476
+we can open it up there. 
+
+137
+00:04:47,476 --> 00:04:50,156
+Or of course, if you all have specific 
+
+138
+00:04:50,156 --> 00:04:51,636
+questions, we're happy to go over. 
+
+139
+00:04:51,636 --> 00:04:55,176
+I feel a bit with bad conscious when I come 
+
+140
+00:04:55,176 --> 00:04:58,176
+to the office hour because I'm quite 
+
+141
+00:04:58,176 --> 00:04:58,716
+behind. 
+
+142
+00:04:58,716 --> 00:05:04,436
+So I partially met the assessments in the 
+
+143
+00:05:04,436 --> 00:05:12,216
+past from UVP on and still I was very 
+
+144
+00:05:12,216 --> 00:05:15,656
+overwhelmed like you mentioned now 
+
+145
+00:05:15,656 --> 00:05:21,888
+how Montgomery said it and for me This is 
+
+146
+00:05:21,888 --> 00:05:23,468
+really key transcribing. 
+
+147
+00:05:23,468 --> 00:05:28,608
+And I told this colleague today and he is 
+
+148
+00:05:28,608 --> 00:05:29,328
+sales guy. 
+
+149
+00:05:29,328 --> 00:05:33,428
+So goes for physical goods to B2B 
+
+150
+00:05:33,428 --> 00:05:34,488
+customers. 
+
+151
+00:05:34,488 --> 00:05:36,128
+So dealer. 
+
+152
+00:05:36,128 --> 00:05:42,848
+And I told him and he said then, hey, but I 
+
+153
+00:05:42,848 --> 00:05:48,728
+need to have a consent if I record my 
+
+154
+00:05:48,728 --> 00:05:49,268
+talks. 
+
+155
+00:05:49,684 --> 00:05:53,304
+So if I go for lunch, for instance, and I 
+
+156
+00:05:53,304 --> 00:05:56,824
+place my iPhone to the table, I need 
+
+157
+00:05:56,824 --> 00:05:59,064
+confirmation that it is okay. 
+
+158
+00:05:59,064 --> 00:06:03,184
+It's not the same if you do it with virtual 
+
+159
+00:06:03,184 --> 00:06:06,684
+calls and then you see it with a red dot or 
+
+160
+00:06:06,684 --> 00:06:09,104
+something like that, that it is recorded. 
+
+161
+00:06:09,104 --> 00:06:15,124
+This is just the thinking after the session 
+
+162
+00:06:15,124 --> 00:06:16,924
+you gave input. 
+
+163
+00:06:16,924 --> 00:06:19,284
+But this... 
+
+164
+00:06:19,796 --> 00:06:25,236
+made me also a bit frustrated, let's say, so 
+
+165
+00:06:25,236 --> 00:06:33,936
+that I'm not sure I can really achieve this 
+
+166
+00:06:33,936 --> 00:06:34,696
+fundamental. 
+
+167
+00:06:34,696 --> 00:06:36,356
+Okay. 
+
+168
+00:06:36,356 --> 00:06:39,156
+Well, let me try to answer both things that 
+
+169
+00:06:39,156 --> 00:06:39,636
+you mentioned. 
+
+170
+00:06:39,636 --> 00:06:41,416
+So the first thing about being 
+
+171
+00:06:41,416 --> 00:06:45,596
+overwhelmed, just remove that pressure, 
+
+172
+00:06:45,596 --> 00:06:45,996
+Benny. 
+
+173
+00:06:45,996 --> 00:06:46,216
+Yes. 
+
+174
+00:06:46,216 --> 00:06:50,568
+You know, again, so If this is helpful, all of 
+
+175
+00:06:50,568 --> 00:06:51,408
+you are different, right? 
+
+176
+00:06:51,408 --> 00:06:53,308
+One thing that you all have in common is 
+
+177
+00:06:53,308 --> 00:06:54,868
+you're running a business while you're 
+
+178
+00:06:54,868 --> 00:06:55,928
+doing this cohort. 
+
+179
+00:06:55,928 --> 00:06:58,968
+And I will quickly, I think I've shared this, 
+
+180
+00:06:58,968 --> 00:07:02,808
+but we've tested different timelines of 
+
+181
+00:07:02,808 --> 00:07:03,368
+delivery. 
+
+182
+00:07:03,368 --> 00:07:06,248
+And so we've tried to find a balance, 
+
+183
+00:07:06,248 --> 00:07:07,848
+getting feedback from people like 
+
+184
+00:07:07,848 --> 00:07:09,468
+yourselves, of course, of saying like, hey, 
+
+185
+00:07:09,468 --> 00:07:11,568
+there's all types of courses people take, 
+
+186
+00:07:11,568 --> 00:07:13,448
+whether they're, you can do this, you have 
+
+187
+00:07:13,448 --> 00:07:15,548
+access to it for a year or six months or 
+
+188
+00:07:15,548 --> 00:07:17,108
+whatever that looks like. 
+
+189
+00:07:17,108 --> 00:07:19,208
+And also saying, What's the fastest 
+
+190
+00:07:19,208 --> 00:07:21,388
+amount of time that you could come into 
+
+191
+00:07:21,388 --> 00:07:24,248
+this cohort and actually have a, an 
+
+192
+00:07:24,248 --> 00:07:26,748
+operating system built that's going to 
+
+193
+00:07:26,748 --> 00:07:28,248
+provide transformation in just a few 
+
+194
+00:07:28,248 --> 00:07:28,648
+weeks. 
+
+195
+00:07:28,648 --> 00:07:30,888
+And so that's kind of where we are in like 
+
+196
+00:07:30,888 --> 00:07:32,468
+this six week timeline. 
+
+197
+00:07:32,468 --> 00:07:35,848
+So for you or anybody, uh, being 
+
+198
+00:07:35,848 --> 00:07:38,588
+overwhelmed with what I opened about, 
+
+199
+00:07:38,588 --> 00:07:40,868
+like you're not focused on executing 
+
+200
+00:07:40,868 --> 00:07:41,528
+anything. 
+
+201
+00:07:41,528 --> 00:07:44,488
+You're not focused on when you see a plan 
+
+202
+00:07:44,488 --> 00:07:46,968
+of implementation to tell a team member 
+
+203
+00:07:46,968 --> 00:07:47,868
+start building. 
+
+204
+00:07:48,292 --> 00:07:49,992
+start doing these things. 
+
+205
+00:07:49,992 --> 00:07:52,832
+So for you, I mean, of course, look at your 
+
+206
+00:07:52,832 --> 00:07:53,992
+time, right? 
+
+207
+00:07:53,992 --> 00:07:56,572
+You, you have been on all these sessions. 
+
+208
+00:07:56,572 --> 00:07:59,452
+Each of these sessions is about an hour. 
+
+209
+00:07:59,452 --> 00:08:00,972
+That's about an hour. 
+
+210
+00:08:00,972 --> 00:08:02,912
+Let's call it an hour and a half a week. 
+
+211
+00:08:02,912 --> 00:08:04,792
+And then everything that you're going to 
+
+212
+00:08:04,792 --> 00:08:06,452
+be doing with the assessments, right? 
+
+213
+00:08:06,452 --> 00:08:08,492
+You are providing deep thought. 
+
+214
+00:08:08,492 --> 00:08:10,472
+And if you're doing that appropriately, it 
+
+215
+00:08:10,472 --> 00:08:12,632
+does take a little bit of time. 
+
+216
+00:08:12,632 --> 00:08:14,992
+Um, with that said, most of the people 
+
+217
+00:08:14,992 --> 00:08:17,052
+that I've asked in doing it that way, 
+
+218
+00:08:17,860 --> 00:08:21,280
+can plan for anywhere between 7 to 10 
+
+219
+00:08:21,280 --> 00:08:23,460
+hours a week. 
+
+220
+00:08:23,460 --> 00:08:27,220
+And so for you, just think of that the best 
+
+221
+00:08:27,220 --> 00:08:28,020
+that you can. 
+
+222
+00:08:28,020 --> 00:08:31,360
+Of course, all of these are recorded, but 
+
+223
+00:08:31,360 --> 00:08:33,860
+we appreciate you showing up. 
+
+224
+00:08:33,860 --> 00:08:36,880
+In terms of the recording, I think we 
+
+225
+00:08:36,880 --> 00:08:38,760
+actually talked about this on the last 
+
+226
+00:08:38,760 --> 00:08:39,160
+session. 
+
+227
+00:08:39,160 --> 00:08:41,200
+So we do recordings. 
+
+228
+00:08:41,200 --> 00:08:43,480
+The easy part, to your point, on any video 
+
+229
+00:08:43,480 --> 00:08:45,620
+conferencing, when you all just joined, it 
+
+230
+00:08:45,620 --> 00:08:47,260
+says this is the very first thing. 
+
+231
+00:08:47,844 --> 00:08:49,104
+this session is being recorded. 
+
+232
+00:08:49,104 --> 00:08:52,344
+And that is for the exact legal issues of if 
+
+233
+00:08:52,344 --> 00:08:54,844
+you are recording a call, you do have to let 
+
+234
+00:08:54,844 --> 00:08:55,884
+people know. 
+
+235
+00:08:55,884 --> 00:08:59,064
+Now, I've done this on phone calls in a 
+
+236
+00:08:59,064 --> 00:09:00,664
+variety of different ways from outbound 
+
+237
+00:09:00,664 --> 00:09:03,624
+calls to people who immediately opt into 
+
+238
+00:09:03,624 --> 00:09:06,264
+an ad that a setter calls, or you have 
+
+239
+00:09:06,264 --> 00:09:08,344
+people that are on your list that you are 
+
+240
+00:09:08,344 --> 00:09:10,864
+calling, not cold because they're on your 
+
+241
+00:09:10,864 --> 00:09:12,364
+list, but cold in the sense they're out of 
+
+242
+00:09:12,364 --> 00:09:12,684
+the blue. 
+
+243
+00:09:12,684 --> 00:09:14,804
+Like, hey, it's just Josh giving you a call to 
+
+244
+00:09:14,804 --> 00:09:17,724
+talk about And in doing that after maybe 
+
+245
+00:09:17,724 --> 00:09:20,784
+you're open, if it's a cold outbound call, 
+
+246
+00:09:20,784 --> 00:09:23,964
+um, you just say you, you, I have them 
+
+247
+00:09:23,964 --> 00:09:25,044
+part of like a script. 
+
+248
+00:09:25,044 --> 00:09:27,904
+If, if you have like scripts, I have them say 
+
+249
+00:09:27,904 --> 00:09:30,504
+that just so you know, this call is being 
+
+250
+00:09:30,504 --> 00:09:32,344
+recorded for training purposes. 
+
+251
+00:09:32,344 --> 00:09:36,704
+So it's, you do have to do that, uh, for 
+
+252
+00:09:36,704 --> 00:09:39,704
+anybody who communicates to people 
+
+253
+00:09:39,704 --> 00:09:41,624
+and you're going to do something with 
+
+254
+00:09:41,624 --> 00:09:43,064
+that recording, you do have to 
+
+255
+00:09:43,064 --> 00:09:45,512
+communicate to the prospect and or 
+
+256
+00:09:45,512 --> 00:09:48,992
+customer that you're speaking to. 
+
+257
+00:09:48,992 --> 00:09:51,452
+I would, I would add improvement 
+
+258
+00:09:51,452 --> 00:09:52,672
+purposes. 
+
+259
+00:09:52,672 --> 00:09:53,852
+Yeah. 
+
+260
+00:09:53,852 --> 00:09:56,752
+And also it's literally what we're talking 
+
+261
+00:09:56,752 --> 00:09:57,092
+about, right? 
+
+262
+00:09:57,092 --> 00:09:58,752
+Cause you're, you're saying you, you sort 
+
+263
+00:09:58,752 --> 00:09:59,812
+of presented the workflow. 
+
+264
+00:09:59,812 --> 00:10:02,232
+So any, anytime you're going to take call 
+
+265
+00:10:02,232 --> 00:10:06,312
+notes, um, that's why the language I like is 
+
+266
+00:10:06,312 --> 00:10:08,892
+for training purposes, because it actually 
+
+267
+00:10:08,892 --> 00:10:10,212
+is for training purposes. 
+
+268
+00:10:10,212 --> 00:10:11,692
+We're going to take that information. 
+
+269
+00:10:12,244 --> 00:10:16,164
+In our workflow, there are no admin tasks 
+
+270
+00:10:16,164 --> 00:10:16,524
+anymore. 
+
+271
+00:10:16,524 --> 00:10:18,904
+There's no salesperson taking notes. 
+
+272
+00:10:18,904 --> 00:10:21,584
+That is immediately taken from bubbles in 
+
+273
+00:10:21,584 --> 00:10:24,444
+our case, but Otter or whatever software 
+
+274
+00:10:24,444 --> 00:10:27,324
+you all use to record your calls, there's 
+
+275
+00:10:27,324 --> 00:10:29,764
+probably a thousand of them out there 
+
+276
+00:10:29,764 --> 00:10:30,504
+right now. 
+
+277
+00:10:30,504 --> 00:10:33,264
+And so that is the start of a very, very 
+
+278
+00:10:33,264 --> 00:10:35,364
+simple workflow, even at a one-off level. 
+
+279
+00:10:35,364 --> 00:10:38,304
+If you just took your call notes and you 
+
+280
+00:10:38,304 --> 00:10:41,644
+automated that into your CRM, That alone 
+
+281
+00:10:41,644 --> 00:10:43,944
+would save, I can tell you as someone 
+
+282
+00:10:43,944 --> 00:10:46,424
+who's managed reps, that will save them a 
+
+283
+00:10:46,424 --> 00:10:49,744
+ton of time for them to focus more on 
+
+284
+00:10:49,744 --> 00:10:50,644
+selling. 
+
+285
+00:10:50,644 --> 00:10:55,164
+So, Nancy, I'll get to you second. 
+
+286
+00:10:55,164 --> 00:10:56,944
+I think Don has had his hand up. 
+
+287
+00:10:56,944 --> 00:10:58,624
+Just wanted to make a comment for 
+
+288
+00:10:58,624 --> 00:11:01,484
+Benny, because I also, everything you just 
+
+289
+00:11:01,484 --> 00:11:02,784
+said about starting with a transcription 
+
+290
+00:11:02,784 --> 00:11:04,984
+and I'm not satisfied with my system, but 
+
+291
+00:11:04,984 --> 00:11:06,284
+what I've been doing in individual 
+
+292
+00:11:06,284 --> 00:11:07,944
+one-on-one meetings with staff, 
+
+293
+00:11:08,372 --> 00:11:10,352
+is I just say, okay, I'm going to give 
+
+294
+00:11:10,352 --> 00:11:12,352
+ChatGBT the following prompt. 
+
+295
+00:11:12,352 --> 00:11:14,132
+I'm going to make a series of recordings. 
+
+296
+00:11:14,132 --> 00:11:15,852
+Don't do anything at the end until I tell 
+
+297
+00:11:15,852 --> 00:11:16,472
+you to summarize. 
+
+298
+00:11:16,472 --> 00:11:18,152
+And I tell the person I'm doing that. 
+
+299
+00:11:18,152 --> 00:11:20,132
+And then I pay attention because I have 
+
+300
+00:11:20,132 --> 00:11:21,352
+to, like you can do 10 minutes and just 
+
+301
+00:11:21,352 --> 00:11:22,212
+keep on recording. 
+
+302
+00:11:22,212 --> 00:11:24,032
+And then I share with them what the 
+
+303
+00:11:24,032 --> 00:11:25,852
+summary was of the meeting, which has 
+
+304
+00:11:25,852 --> 00:11:29,132
+been appreciated on both sides by, that's 
+
+305
+00:11:29,132 --> 00:11:31,092
+not the final solution, but maybe with the 
+
+306
+00:11:31,092 --> 00:11:32,512
+salespeople, you let them know and the 
+
+307
+00:11:32,512 --> 00:11:34,472
+other person can confirm it, you know, 
+
+308
+00:11:34,472 --> 00:11:35,772
+just confirm that this is everything that 
+
+309
+00:11:35,772 --> 00:11:36,152
+we did. 
+
+310
+00:11:36,152 --> 00:11:37,792
+That's worked. 
+
+311
+00:11:38,196 --> 00:11:39,616
+you know, I'm not, it's not the final 
+
+312
+00:11:39,616 --> 00:11:41,016
+solution, but it's worked quite well. 
+
+313
+00:11:41,016 --> 00:11:41,856
+People have responded. 
+
+314
+00:11:41,856 --> 00:11:44,176
+Those are internally, but appreciated 
+
+315
+00:11:44,176 --> 00:11:46,716
+getting the same thing that I'm looking at 
+
+316
+00:11:46,716 --> 00:11:47,636
+as our summary. 
+
+317
+00:11:47,636 --> 00:11:47,956
+Anyway. 
+
+318
+00:11:47,956 --> 00:11:49,296
+Yeah. 
+
+319
+00:11:49,296 --> 00:11:49,856
+Thanks. 
+
+320
+00:11:49,856 --> 00:11:51,096
+Yeah. 
+
+321
+00:11:51,096 --> 00:11:52,316
+Hopefully that's helpful, Benny. 
+
+322
+00:11:52,316 --> 00:11:55,556
+And by the way, Nancy, I, I, I sort of gave 
+
+323
+00:11:55,556 --> 00:11:57,616
+examples of how you could use cloud in 
+
+324
+00:11:57,616 --> 00:11:58,196
+projects. 
+
+325
+00:11:58,196 --> 00:12:00,716
+So I've done very similar things when I 
+
+326
+00:12:00,716 --> 00:12:03,236
+drop end of days or end of week reports. 
+
+327
+00:12:03,236 --> 00:12:06,856
+I will have, when I've managed like remote 
+
+328
+00:12:06,856 --> 00:12:08,136
+sales teams, I will do, 
+
+329
+00:12:08,660 --> 00:12:10,760
+you know, daily meetings, proper tracking 
+
+330
+00:12:10,760 --> 00:12:11,920
+and end of day reporting. 
+
+331
+00:12:11,920 --> 00:12:15,400
+And all of that feeds into real time 
+
+332
+00:12:15,400 --> 00:12:16,040
+coaching. 
+
+333
+00:12:16,040 --> 00:12:20,140
+And I, if you do it at the project level, AI is 
+
+334
+00:12:20,140 --> 00:12:21,760
+not replacing you by any means. 
+
+335
+00:12:21,760 --> 00:12:23,400
+It's just a multiplier for you. 
+
+336
+00:12:23,400 --> 00:12:25,920
+So you still use your judgment, but you're 
+
+337
+00:12:25,920 --> 00:12:27,600
+able to use it for all the time consuming 
+
+338
+00:12:27,600 --> 00:12:28,040
+things. 
+
+339
+00:12:28,040 --> 00:12:30,760
+And it's, it's literally endless relative to 
+
+340
+00:12:30,760 --> 00:12:33,060
+your sales process or again, your 
+
+341
+00:12:33,060 --> 00:12:33,640
+operations. 
+
+342
+00:12:33,640 --> 00:12:35,980
+I know before I get to you, Don, another 
+
+343
+00:12:35,980 --> 00:12:36,780
+quick example. 
+
+344
+00:12:37,268 --> 00:12:39,648
+is I ran a digital agency for years. 
+
+345
+00:12:39,648 --> 00:12:42,608
+And so what we determined on delivery to 
+
+346
+00:12:42,608 --> 00:12:45,228
+success was that the most important call 
+
+347
+00:12:45,228 --> 00:12:46,368
+was our onboarding call. 
+
+348
+00:12:46,368 --> 00:12:49,348
+If our onboarding call was a home run 
+
+349
+00:12:49,348 --> 00:12:52,248
+with a new client, the odds of that person 
+
+350
+00:12:52,248 --> 00:12:54,928
+staying with us and retaining was almost 
+
+351
+00:12:54,928 --> 00:12:55,868
+99%. 
+
+352
+00:12:55,868 --> 00:13:00,668
+And so we had to take a few iterations of 
+
+353
+00:13:00,668 --> 00:13:02,788
+what a great onboarding call looked like, 
+
+354
+00:13:02,788 --> 00:13:03,908
+but then we had that 
+
+355
+00:13:04,340 --> 00:13:06,440
+And then in this example, let's say if it 
+
+356
+00:13:06,440 --> 00:13:08,160
+were five things, you know, Benny, you're 
+
+357
+00:13:08,160 --> 00:13:10,220
+in medical device, so I'm sure there's a lot 
+
+358
+00:13:10,220 --> 00:13:12,560
+of specific things that you might need to 
+
+359
+00:13:12,560 --> 00:13:13,120
+cover. 
+
+360
+00:13:13,120 --> 00:13:15,980
+Well, then you have that as a framework, 
+
+361
+00:13:15,980 --> 00:13:19,560
+a script or sales process overview or 
+
+362
+00:13:19,560 --> 00:13:22,580
+onboarding really again, removing what it 
+
+363
+00:13:22,580 --> 00:13:22,840
+is. 
+
+364
+00:13:22,840 --> 00:13:23,860
+It's just a framework. 
+
+365
+00:13:23,860 --> 00:13:26,700
+And then with the notes, it would flag like, 
+
+366
+00:13:26,700 --> 00:13:29,680
+well, one of the main five things was not 
+
+367
+00:13:29,680 --> 00:13:30,580
+covered on this call. 
+
+368
+00:13:30,580 --> 00:13:33,300
+And so it starts to give a real time 
+
+369
+00:13:33,300 --> 00:13:34,140
+feedback loop. 
+
+370
+00:13:34,548 --> 00:13:37,628
+to alert you as the owner, manager, et 
+
+371
+00:13:37,628 --> 00:13:40,428
+cetera, to then go back to the rep. 
+
+372
+00:13:40,428 --> 00:13:42,668
+You're doing daily meetings, you're doing 
+
+373
+00:13:42,668 --> 00:13:44,128
+one-to-ones, and you're doing all the 
+
+374
+00:13:44,128 --> 00:13:46,008
+things that you need to do, whether it be 
+
+375
+00:13:46,008 --> 00:13:48,768
+for sales or delivery, if helpful. 
+
+376
+00:13:48,768 --> 00:13:50,108
+Don. 
+
+377
+00:13:50,608 --> 00:13:53,548
+Hello, everybody. 
+
+378
+00:13:53,548 --> 00:13:55,748
+Thanks for all this stuff. 
+
+379
+00:13:55,748 --> 00:13:58,568
+I think the most important thing I want to 
+
+380
+00:13:58,568 --> 00:14:03,348
+ask you about, Josh, is in the world of... 
+
+381
+00:14:04,244 --> 00:14:05,644
+the sales training, okay? 
+
+382
+00:14:05,644 --> 00:14:07,704
+So you have the recording of the call 
+
+383
+00:14:07,704 --> 00:14:11,744
+happening, the AI summary, the checklist, 
+
+384
+00:14:11,744 --> 00:14:12,864
+and so on. 
+
+385
+00:14:12,864 --> 00:14:15,904
+And then somewhere along the way, you 
+
+386
+00:14:15,904 --> 00:14:17,584
+really turn on my lights when it's like, 
+
+387
+00:14:17,584 --> 00:14:20,724
+yeah, and how about weighing that 
+
+388
+00:14:20,724 --> 00:14:24,064
+against a standard and pointing out to 
+
+389
+00:14:24,064 --> 00:14:27,264
+everybody how that call could be done 
+
+390
+00:14:27,264 --> 00:14:27,804
+better? 
+
+391
+00:14:27,804 --> 00:14:31,144
+Are they checking off the boxes, asking 
+
+392
+00:14:31,144 --> 00:14:33,264
+the questions, letting the customer talk? 
+
+393
+00:14:33,812 --> 00:14:35,312
+most of the time. 
+
+394
+00:14:35,312 --> 00:14:38,272
+And I was just wondering if you have any 
+
+395
+00:14:38,272 --> 00:14:41,192
+experience with that and if you want to 
+
+396
+00:14:41,192 --> 00:14:43,252
+comment on what you've learned from 
+
+397
+00:14:43,252 --> 00:14:45,192
+observing that happening, maybe. 
+
+398
+00:14:45,192 --> 00:14:49,792
+Yeah, and so my answer is it's no different 
+
+399
+00:14:49,792 --> 00:14:51,192
+than what you're doing with your master 
+
+400
+00:14:51,192 --> 00:14:51,592
+prompt. 
+
+401
+00:14:51,592 --> 00:14:54,132
+So even at the project level, Don, and 
+
+402
+00:14:54,132 --> 00:14:55,572
+again, like if you want to automate a 
+
+403
+00:14:55,572 --> 00:14:57,512
+workflow, that's a little bit different. 
+
+404
+00:14:57,512 --> 00:14:59,492
+But I'll just say if you wanted to build a 
+
+405
+00:14:59,492 --> 00:15:02,952
+project to deliver any type of outcome, 
+
+406
+00:15:03,124 --> 00:15:04,984
+to get feedback on whatever. 
+
+407
+00:15:04,984 --> 00:15:09,924
+You really want to give it context, right? 
+
+408
+00:15:09,924 --> 00:15:12,044
+Before you all doing this, if you went to 
+
+409
+00:15:12,044 --> 00:15:14,924
+ChatGPT or Claude or Gronk or Gemini, 
+
+410
+00:15:14,924 --> 00:15:18,364
+any LLM, and you said, give me a go-to 
+
+411
+00:15:18,364 --> 00:15:20,844
+market strategy for my company. 
+
+412
+00:15:20,844 --> 00:15:24,024
+It would give you an answer, but it would 
+
+413
+00:15:24,024 --> 00:15:25,564
+be kind of no different than like a Google 
+
+414
+00:15:25,564 --> 00:15:26,344
+search, right? 
+
+415
+00:15:26,344 --> 00:15:27,724
+Because it doesn't have context. 
+
+416
+00:15:27,724 --> 00:15:30,864
+And so when I'm building anything, so let's 
+
+417
+00:15:30,864 --> 00:15:33,608
+say a call review, And you can do that 
+
+418
+00:15:33,608 --> 00:15:35,648
+where you can automate all the calls to go 
+
+419
+00:15:35,648 --> 00:15:36,068
+in. 
+
+420
+00:15:36,068 --> 00:15:39,168
+I basically would build as many project 
+
+421
+00:15:39,168 --> 00:15:41,288
+files for context as possible. 
+
+422
+00:15:41,288 --> 00:15:43,808
+And so that could come in the form, just 
+
+423
+00:15:43,808 --> 00:15:47,188
+ideas of like a script, like, Hey, this is the 
+
+424
+00:15:47,188 --> 00:15:50,008
+script, especially if your call is meant to be 
+
+425
+00:15:50,008 --> 00:15:52,068
+done in the same type of way, the same 
+
+426
+00:15:52,068 --> 00:15:54,688
+type of flow every single time, of course, 
+
+427
+00:15:54,688 --> 00:15:56,848
+in a lot of calls, there's a lot of nuance to 
+
+428
+00:15:56,848 --> 00:16:00,128
+sales, but, um, there's, um, a script, uh, 
+
+429
+00:16:00,340 --> 00:16:02,360
+a list of how you handle specific 
+
+430
+00:16:02,360 --> 00:16:03,300
+objections. 
+
+431
+00:16:03,300 --> 00:16:06,240
+One thing that all of us will deal with, 
+
+432
+00:16:06,240 --> 00:16:09,720
+regardless of B2B, B2C, we all deal with 
+
+433
+00:16:09,720 --> 00:16:11,060
+the same objections in sales. 
+
+434
+00:16:11,060 --> 00:16:11,720
+All of us. 
+
+435
+00:16:11,720 --> 00:16:12,700
+It's the exact same ones. 
+
+436
+00:16:12,700 --> 00:16:14,280
+It doesn't matter what you do in business. 
+
+437
+00:16:14,280 --> 00:16:16,920
+And so listing how your company 
+
+438
+00:16:16,920 --> 00:16:19,320
+specifically handles those to make sure 
+
+439
+00:16:19,320 --> 00:16:22,160
+that the rep is doing that very well. 
+
+440
+00:16:22,836 --> 00:16:25,576
+And the easiest way, once you know what 
+
+441
+00:16:25,576 --> 00:16:28,336
+good looks like for calls specifically is to 
+
+442
+00:16:28,336 --> 00:16:30,636
+dump transcripts of at least 10. 
+
+443
+00:16:30,636 --> 00:16:32,856
+I mean, if you have, I mean, I've worked 
+
+444
+00:16:32,856 --> 00:16:35,676
+with companies that have 2000 sales calls. 
+
+445
+00:16:35,676 --> 00:16:38,476
+You can dump in as many, this is what a 
+
+446
+00:16:38,476 --> 00:16:41,076
+great call looks like transcripts and just 
+
+447
+00:16:41,076 --> 00:16:42,676
+doing something like that. 
+
+448
+00:16:42,676 --> 00:16:44,936
+In the example that I showed you in loom, 
+
+449
+00:16:44,936 --> 00:16:47,296
+if you just drop a transcript to say, grade 
+
+450
+00:16:47,296 --> 00:16:50,696
+this to my sales process overview, it will 
+
+451
+00:16:50,696 --> 00:16:52,156
+say they didn't cover. 
+
+452
+00:16:53,012 --> 00:16:53,872
+this in discovery. 
+
+453
+00:16:53,872 --> 00:16:56,792
+When the objection on money or partner 
+
+454
+00:16:56,792 --> 00:16:58,972
+spouse came up, they didn't handle it like 
+
+455
+00:16:58,972 --> 00:17:01,052
+you internally like to handle. 
+
+456
+00:17:01,052 --> 00:17:04,292
+And so it just makes, again, it's still your 
+
+457
+00:17:04,292 --> 00:17:06,052
+thought leadership, Don, but it's just 
+
+458
+00:17:06,052 --> 00:17:07,572
+saving you a lot of like the time 
+
+459
+00:17:07,572 --> 00:17:08,372
+consuming stuff. 
+
+460
+00:17:08,372 --> 00:17:11,412
+And so the answer is just to build context. 
+
+461
+00:17:12,032 --> 00:17:18,212
+So at another level, salespeople, human 
+
+462
+00:17:18,212 --> 00:17:22,312
+beings have bad habits, right? 
+
+463
+00:17:22,312 --> 00:17:25,572
+oh, you're over-talking. 
+
+464
+00:17:25,572 --> 00:17:29,732
+And so I have been experimenting with 
+
+465
+00:17:29,732 --> 00:17:35,332
+informing AI of high-quality sales training 
+
+466
+00:17:35,332 --> 00:17:38,172
+and then weighing that rather than 
+
+467
+00:17:38,172 --> 00:17:40,092
+working on the script approach. 
+
+468
+00:17:40,092 --> 00:17:43,692
+It's like, are you following the practices 
+
+469
+00:17:43,692 --> 00:17:45,172
+that work best? 
+
+470
+00:17:45,172 --> 00:17:49,432
+And like asking a question and then 
+
+471
+00:17:49,432 --> 00:17:50,772
+shutting up. 
+
+472
+00:17:50,772 --> 00:17:51,372
+Yeah. 
+
+473
+00:17:52,136 --> 00:17:52,616
+Absolutely. 
+
+474
+00:17:52,616 --> 00:17:56,796
+I used to, on this one offer, I used to, I 
+
+475
+00:17:56,796 --> 00:17:59,016
+learned that in sales, to Don's point, if 
+
+476
+00:17:59,016 --> 00:18:02,276
+you're not in the sales world, most people 
+
+477
+00:18:02,276 --> 00:18:05,656
+associate sales with like the gift of gab or 
+
+478
+00:18:05,656 --> 00:18:08,276
+I'm just a good talker, where in reality, the 
+
+479
+00:18:08,276 --> 00:18:10,456
+greatest salespeople, if you look at it like 
+
+480
+00:18:10,456 --> 00:18:13,476
+an audio file, where we see the audio 
+
+481
+00:18:13,476 --> 00:18:16,176
+waves, they ask a question and they talk 
+
+482
+00:18:16,176 --> 00:18:17,736
+about 10% of the time and the other 
+
+483
+00:18:17,736 --> 00:18:19,516
+person talks about 90% of the time. 
+
+484
+00:18:19,516 --> 00:18:21,256
+And so that was something 
+
+485
+00:18:21,512 --> 00:18:23,752
+where you could look at percentages in 
+
+486
+00:18:23,752 --> 00:18:26,252
+that specific case from how much they 
+
+487
+00:18:26,252 --> 00:18:29,032
+speak opposed to the prospect, which is 
+
+488
+00:18:29,032 --> 00:18:29,532
+interesting. 
+
+489
+00:18:29,532 --> 00:18:32,252
+But yeah, look, there's all types of things. 
+
+490
+00:18:32,252 --> 00:18:36,692
+I mean, one thing I solved for salespeople 
+
+491
+00:18:36,692 --> 00:18:38,932
+is a lot of times when salespeople take 
+
+492
+00:18:38,932 --> 00:18:42,152
+their own notes, there's a lot of issues 
+
+493
+00:18:42,152 --> 00:18:43,312
+that come with this. 
+
+494
+00:18:43,312 --> 00:18:45,912
+Some of them are that they won't put 
+
+495
+00:18:45,912 --> 00:18:46,992
+pertinent information. 
+
+496
+00:18:47,784 --> 00:18:47,984
+Right. 
+
+497
+00:18:47,984 --> 00:18:48,844
+They take the call. 
+
+498
+00:18:48,844 --> 00:18:50,204
+They're trying to be present while they're 
+
+499
+00:18:50,204 --> 00:18:53,204
+taking notes on a Google doc or perhaps in 
+
+500
+00:18:53,204 --> 00:18:53,724
+the CRM. 
+
+501
+00:18:53,724 --> 00:18:54,664
+I've done this. 
+
+502
+00:18:54,664 --> 00:18:56,304
+If you've taken sales calls, you've probably 
+
+503
+00:18:56,304 --> 00:18:57,484
+done this. 
+
+504
+00:18:57,484 --> 00:18:59,524
+And then there's a lot of information that 
+
+505
+00:18:59,524 --> 00:19:00,984
+don't make that. 
+
+506
+00:19:00,984 --> 00:19:03,984
+I'll tell you the biggest problem that I've 
+
+507
+00:19:03,984 --> 00:19:07,604
+noticed managing people is that a lot of 
+
+508
+00:19:07,604 --> 00:19:10,984
+salespeople will put in their notes things 
+
+509
+00:19:10,984 --> 00:19:13,204
+that aren't actually true from the call. 
+
+510
+00:19:13,204 --> 00:19:15,724
+If any of you can relate to this, they'll say 
+
+511
+00:19:15,724 --> 00:19:17,384
+something like this person wasn't a good 
+
+512
+00:19:17,384 --> 00:19:17,684
+fit. 
+
+513
+00:19:17,684 --> 00:19:19,764
+And there's a variety of reasons they do 
+
+514
+00:19:19,764 --> 00:19:20,204
+that. 
+
+515
+00:19:20,204 --> 00:19:23,044
+The most common is, is they might want 
+
+516
+00:19:23,044 --> 00:19:24,424
+to just protect their close rate. 
+
+517
+00:19:24,424 --> 00:19:26,304
+So they could say like, oh, this person 
+
+518
+00:19:26,304 --> 00:19:27,824
+wasn't a fit, so I didn't end up pitching 
+
+519
+00:19:27,824 --> 00:19:28,104
+them. 
+
+520
+00:19:28,104 --> 00:19:29,844
+And that would be in their end of day 
+
+521
+00:19:29,844 --> 00:19:30,304
+report. 
+
+522
+00:19:30,304 --> 00:19:32,184
+And then ultimately in the CRM and in the 
+
+523
+00:19:32,184 --> 00:19:35,484
+notes where if you're taking all of the 
+
+524
+00:19:35,484 --> 00:19:37,984
+transcription from the call in the 
+
+525
+00:19:37,984 --> 00:19:39,864
+workflow that we're discussing in any 
+
+526
+00:19:39,864 --> 00:19:43,464
+scenario, in this case sales, um, none of 
+
+527
+00:19:43,464 --> 00:19:45,024
+that can be cloudy. 
+
+528
+00:19:45,300 --> 00:19:47,160
+because everything that happened in that 
+
+529
+00:19:47,160 --> 00:19:49,860
+call is gonna be transcribed and added to 
+
+530
+00:19:49,860 --> 00:19:52,520
+your system as well as next steps. 
+
+531
+00:19:52,520 --> 00:19:54,280
+And then it's going to alert you on 
+
+532
+00:19:54,280 --> 00:19:56,440
+whatever you're measuring good, whether 
+
+533
+00:19:56,440 --> 00:19:59,000
+it's a script, Don, if they spoke too much, 
+
+534
+00:19:59,000 --> 00:20:01,420
+their discovery, if this person was a 
+
+535
+00:20:01,420 --> 00:20:02,240
+qualified lead. 
+
+536
+00:20:02,240 --> 00:20:04,120
+Again, it's about how deep do you wanna 
+
+537
+00:20:04,120 --> 00:20:04,660
+go. 
+
+538
+00:20:04,660 --> 00:20:07,720
+And as long as it has the context, you can 
+
+539
+00:20:07,720 --> 00:20:11,140
+really become unbelievably detailed. 
+
+540
+00:20:11,140 --> 00:20:13,080
+Okay. 
+
+541
+00:20:13,908 --> 00:20:17,288
+So out of respect to people's time, I'm 
+
+542
+00:20:17,288 --> 00:20:18,888
+going to just mention another topic, and 
+
+543
+00:20:18,888 --> 00:20:20,328
+you can decide what you want to do with 
+
+544
+00:20:20,328 --> 00:20:20,768
+it all. 
+
+545
+00:20:20,768 --> 00:20:25,368
+But we did a public works bid last week, 
+
+546
+00:20:25,368 --> 00:20:26,588
+which we didn't win. 
+
+547
+00:20:26,588 --> 00:20:28,368
+We have 10 bid results. 
+
+548
+00:20:28,368 --> 00:20:32,268
+And I took that over to Claude and said, 
+
+549
+00:20:32,268 --> 00:20:33,848
+hey, you know, what can we learn from 
+
+550
+00:20:33,848 --> 00:20:34,088
+this? 
+
+551
+00:20:34,088 --> 00:20:37,468
+And I did a competitor analysis, looked up 
+
+552
+00:20:37,468 --> 00:20:41,048
+each of the 10 bidders, did a total 
+
+553
+00:20:41,048 --> 00:20:42,868
+background on them, and it was really 
+
+554
+00:20:42,868 --> 00:20:43,348
+informative. 
+
+555
+00:20:44,244 --> 00:20:47,764
+So that's informative, right? 
+
+556
+00:20:47,764 --> 00:20:53,844
+Well, I took that over to co-work, Claude 
+
+557
+00:20:53,844 --> 00:20:57,164
+co-work that I just got rolling and said, 
+
+558
+00:20:57,164 --> 00:21:00,064
+hey, give me 10 high priority things I 
+
+559
+00:21:00,064 --> 00:21:01,204
+should do about this. 
+
+560
+00:21:01,204 --> 00:21:04,444
+And I did that. 
+
+561
+00:21:04,444 --> 00:21:11,404
+And the lucidity and the action worthiness 
+
+562
+00:21:11,404 --> 00:21:13,624
+of these 10 ideas that I came up with were 
+
+563
+00:21:14,068 --> 00:21:14,868
+Really exciting. 
+
+564
+00:21:14,868 --> 00:21:16,228
+So wow. 
+
+565
+00:21:16,228 --> 00:21:16,448
+Yeah. 
+
+566
+00:21:16,448 --> 00:21:18,388
+I mean, that's amazing. 
+
+567
+00:21:18,388 --> 00:21:21,548
+Um, if for all of you who don't know about 
+
+568
+00:21:21,548 --> 00:21:24,248
+Claude cowork, by the way, it can start, it 
+
+569
+00:21:24,248 --> 00:21:26,248
+connects on like your local computer. 
+
+570
+00:21:26,248 --> 00:21:28,868
+Uh, it's pretty amazing cause it'll actually, 
+
+571
+00:21:28,868 --> 00:21:30,948
+you know, it's essentially like an AI agent 
+
+572
+00:21:30,948 --> 00:21:31,928
+on your computer. 
+
+573
+00:21:31,928 --> 00:21:33,588
+It'll actually do tasks for you. 
+
+574
+00:21:33,588 --> 00:21:36,108
+So, um, I've used it in a variety of different 
+
+575
+00:21:36,108 --> 00:21:36,348
+ways. 
+
+576
+00:21:36,348 --> 00:21:38,268
+I would use Claude code at this point to 
+
+577
+00:21:38,268 --> 00:21:40,008
+kind of, to kind of do everything myself. 
+
+578
+00:21:40,008 --> 00:21:43,248
+Um, but it, um, you know, for example, if 
+
+579
+00:21:43,248 --> 00:21:45,128
+you have a, bunch of folders on your 
+
+580
+00:21:45,128 --> 00:21:45,508
+desktop. 
+
+581
+00:21:45,508 --> 00:21:46,928
+You're just like, organize my folders, 
+
+582
+00:21:46,928 --> 00:21:49,228
+organize my crazy desktop into three 
+
+583
+00:21:49,228 --> 00:21:49,768
+folders. 
+
+584
+00:21:49,768 --> 00:21:51,408
+It will literally do that. 
+
+585
+00:21:51,408 --> 00:21:52,988
+Uh, sometimes I will have it search 
+
+586
+00:21:52,988 --> 00:21:55,188
+through invoices and find me, pull the 
+
+587
+00:21:55,188 --> 00:21:58,128
+invoices from this folder, uh, over the last 
+
+588
+00:21:58,128 --> 00:22:00,208
+60 days and it will do things like that. 
+
+589
+00:22:00,208 --> 00:22:02,928
+So personal efficiency, it's really, really 
+
+590
+00:22:02,928 --> 00:22:03,288
+cool. 
+
+591
+00:22:03,288 --> 00:22:06,228
+And, um, and yeah, you know, I would, 
+
+592
+00:22:06,228 --> 00:22:08,068
+um, you know, one thing I would add, 
+
+593
+00:22:08,068 --> 00:22:09,968
+cause I'm sure you got a lot of cool stuff 
+
+594
+00:22:09,968 --> 00:22:12,708
+from doing that, Don is I would reach out 
+
+595
+00:22:12,708 --> 00:22:13,168
+to the client 
+
+596
+00:22:14,148 --> 00:22:16,608
+And I would ask them, Hey, I, I, I respect, 
+
+597
+00:22:16,608 --> 00:22:18,268
+you know, the process I just out of 
+
+598
+00:22:18,268 --> 00:22:18,948
+curiosity. 
+
+599
+00:22:18,948 --> 00:22:20,828
+So perhaps we could get better. 
+
+600
+00:22:20,828 --> 00:22:22,988
+What ultimately was the reason that you 
+
+601
+00:22:22,988 --> 00:22:25,248
+chose to go with competitor? 
+
+602
+00:22:25,248 --> 00:22:26,088
+Just so we know. 
+
+603
+00:22:26,088 --> 00:22:29,408
+And, um, that will do a lot for you. 
+
+604
+00:22:29,408 --> 00:22:32,308
+Um, but you know, perhaps it could be 
+
+605
+00:22:32,308 --> 00:22:34,568
+speed, which with proposals and 
+
+606
+00:22:34,568 --> 00:22:37,468
+especially in, in your line of work bidding a 
+
+607
+00:22:37,468 --> 00:22:39,728
+lot of the time, that is a huge, huge 
+
+608
+00:22:39,728 --> 00:22:41,708
+bottleneck, as I mentioned in a, in a real 
+
+609
+00:22:41,708 --> 00:22:43,048
+example on Monday's call. 
+
+610
+00:22:44,004 --> 00:22:44,324
+Yeah. 
+
+611
+00:22:44,324 --> 00:22:46,064
+Thank you. 
+
+612
+00:22:46,064 --> 00:22:46,444
+Yeah. 
+
+613
+00:22:46,444 --> 00:22:49,624
+Happy to help anybody else have any 
+
+614
+00:22:49,624 --> 00:22:53,624
+questions on the last session or anything 
+
+615
+00:22:53,624 --> 00:22:56,404
+else as you're, you're kind of, it's okay. 
+
+616
+00:22:56,404 --> 00:22:58,184
+Uh, whether it's Benny or anybody else 
+
+617
+00:22:58,184 --> 00:22:59,944
+that you're behind, remember it's, it's 
+
+618
+00:22:59,944 --> 00:23:00,724
+your pace. 
+
+619
+00:23:00,724 --> 00:23:02,944
+Um, it's your company, it's your schedule, 
+
+620
+00:23:02,944 --> 00:23:03,224
+right? 
+
+621
+00:23:03,224 --> 00:23:05,184
+So we're here to support you in every way 
+
+622
+00:23:05,184 --> 00:23:05,684
+that we can. 
+
+623
+00:23:05,684 --> 00:23:08,524
+So if it's, if it's sales, great, that's kind of 
+
+624
+00:23:08,524 --> 00:23:10,444
+where we are currently in the 
+
+625
+00:23:10,444 --> 00:23:12,624
+assessments, but wherever you are, if 
+
+626
+00:23:12,624 --> 00:23:13,724
+you're going through things, we're, 
+
+627
+00:23:13,892 --> 00:23:16,132
+happy to kind of unpack anything if 
+
+628
+00:23:16,132 --> 00:23:17,312
+helpful. 
+
+629
+00:23:17,312 --> 00:23:21,552
+I just had a question for Don or anybody 
+
+630
+00:23:21,552 --> 00:23:24,692
+else related to competitor information 
+
+631
+00:23:24,692 --> 00:23:25,512
+you're getting back. 
+
+632
+00:23:25,512 --> 00:23:29,392
+We have some competitors that are 
+
+633
+00:23:29,392 --> 00:23:31,192
+publicly traded, but most of our 
+
+634
+00:23:31,192 --> 00:23:33,812
+competitors are smaller, regional. 
+
+635
+00:23:33,812 --> 00:23:37,692
+And so the data that's available when I try 
+
+636
+00:23:37,692 --> 00:23:39,752
+to get competitor information has not 
+
+637
+00:23:39,752 --> 00:23:41,752
+been very helpful necessarily. 
+
+638
+00:23:41,752 --> 00:23:46,332
+I was wondering if Anybody have any tips 
+
+639
+00:23:46,332 --> 00:23:49,312
+related to that or in your situation, Don, 
+
+640
+00:23:49,312 --> 00:23:52,092
+since you felt it was pretty helpful if those 
+
+641
+00:23:52,092 --> 00:23:54,432
+were companies that had like financial 
+
+642
+00:23:54,432 --> 00:23:58,052
+information available publicly or pricing 
+
+643
+00:23:58,052 --> 00:23:59,832
+or anything like that? 
+
+644
+00:23:59,832 --> 00:24:02,652
+I'd like to speak to that if we have the 
+
+645
+00:24:02,652 --> 00:24:03,432
+space here. 
+
+646
+00:24:03,432 --> 00:24:04,332
+Yeah, go ahead. 
+
+647
+00:24:04,332 --> 00:24:09,052
+One of the things that it did was it 
+
+648
+00:24:09,052 --> 00:24:11,492
+provided the context of the companies 
+
+649
+00:24:11,492 --> 00:24:12,992
+that were on the bid list. 
+
+650
+00:24:12,992 --> 00:24:14,312
+And so 
+
+651
+00:24:14,596 --> 00:24:17,456
+One of them had been acquired by a 
+
+652
+00:24:17,456 --> 00:24:18,516
+national operation. 
+
+653
+00:24:18,516 --> 00:24:21,496
+One of them was 200 miles away from the 
+
+654
+00:24:21,496 --> 00:24:21,916
+job. 
+
+655
+00:24:21,916 --> 00:24:26,556
+And so they had a mobilization factor. 
+
+656
+00:24:26,556 --> 00:24:31,436
+And then it's really good at drilling down 
+
+657
+00:24:31,436 --> 00:24:33,436
+into what they're doing with their 
+
+658
+00:24:33,436 --> 00:24:34,936
+marketing. 
+
+659
+00:24:34,936 --> 00:24:37,976
+Because that's pretty visible for anybody 
+
+660
+00:24:37,976 --> 00:24:39,016
+that's doing any marketing. 
+
+661
+00:24:39,016 --> 00:24:40,856
+And they can distinguish whether they're 
+
+662
+00:24:40,856 --> 00:24:45,648
+doing any paid advertising or how heavy 
+
+663
+00:24:45,648 --> 00:24:48,428
+their website is, what their reviews are 
+
+664
+00:24:48,428 --> 00:24:48,848
+like. 
+
+665
+00:24:48,848 --> 00:24:51,548
+It'll do a terrific analysis of the reviews 
+
+666
+00:24:51,548 --> 00:24:53,948
+that it finds online, whether they're 
+
+667
+00:24:53,948 --> 00:24:55,948
+accredited by any kind of 
+
+668
+00:24:55,948 --> 00:24:58,648
+diamond-certified accreditation service, 
+
+669
+00:24:58,648 --> 00:25:01,588
+where they stand with the Better Business 
+
+670
+00:25:01,588 --> 00:25:02,028
+Bureau. 
+
+671
+00:25:02,028 --> 00:25:06,588
+It also pops up with, oh, they took out a 
+
+672
+00:25:06,588 --> 00:25:11,988
+SBA loan with COVID, and it shows how 
+
+673
+00:25:11,988 --> 00:25:13,308
+much they borrowed it. 
+
+674
+00:25:14,020 --> 00:25:16,060
+which is really weird. 
+
+675
+00:25:16,160 --> 00:25:21,140
+So you can get a lot of background out of 
+
+676
+00:25:21,140 --> 00:25:23,300
+it, and a lot of that stuff just comes 
+
+677
+00:25:23,300 --> 00:25:25,000
+without even asking for it. 
+
+678
+00:25:25,000 --> 00:25:27,260
+It was part of the analysis. 
+
+679
+00:25:27,360 --> 00:25:31,580
+So that's a factor. 
+
+680
+00:25:31,580 --> 00:25:36,700
+I would say that all their advertising is 
+
+681
+00:25:36,700 --> 00:25:37,440
+highly visible. 
+
+682
+00:25:38,360 --> 00:25:40,980
+All right, great. 
+
+683
+00:25:40,980 --> 00:25:41,680
+That was helpful. 
+
+684
+00:25:41,680 --> 00:25:43,780
+I think I ran into some glitches. 
+
+685
+00:25:44,580 --> 00:25:49,840
+I was using the chat when I was doing this 
+
+686
+00:25:49,840 --> 00:25:51,800
+and it didn't, it's having a problem doing 
+
+687
+00:25:51,800 --> 00:25:52,520
+some of the searching. 
+
+688
+00:25:52,520 --> 00:25:54,160
+So it wanted me to do some of the work, 
+
+689
+00:25:54,160 --> 00:25:56,860
+but I've moved to using cowork more 
+
+690
+00:25:56,860 --> 00:25:58,080
+when possible. 
+
+691
+00:25:58,080 --> 00:25:59,700
+Although then you've got to set up the link 
+
+692
+00:25:59,700 --> 00:26:04,420
+to do searches, but I'll just try some of 
+
+693
+00:26:04,420 --> 00:26:04,880
+that again. 
+
+694
+00:26:04,880 --> 00:26:07,120
+Sounds like you got a lot of pretty good 
+
+695
+00:26:07,120 --> 00:26:08,720
+information, even on companies that 
+
+696
+00:26:08,720 --> 00:26:09,560
+aren't public. 
+
+697
+00:26:09,560 --> 00:26:12,360
+Yeah, I fed CoWork the output of the 
+
+698
+00:26:12,360 --> 00:26:15,160
+analysis that Claude Chat gave me. 
+
+699
+00:26:15,160 --> 00:26:17,600
+And I said, what should I do with this? 
+
+700
+00:26:17,600 --> 00:26:19,860
+Give me 10 action items. 
+
+701
+00:26:19,860 --> 00:26:22,960
+And so I never would have come up with 
+
+702
+00:26:22,960 --> 00:26:23,220
+this stuff. 
+
+703
+00:26:23,220 --> 00:26:25,900
+Talk about being overwhelmed, you know. 
+
+704
+00:26:25,900 --> 00:26:30,000
+This completely wiped out the overwhelm 
+
+705
+00:26:30,000 --> 00:26:32,840
+and created this action path that I'm going 
+
+706
+00:26:32,840 --> 00:26:34,600
+to take back to the owner of the company. 
+
+707
+00:26:34,600 --> 00:26:36,460
+How much of this stuff do you want to 
+
+708
+00:26:36,460 --> 00:26:36,920
+execute? 
+
+709
+00:26:36,920 --> 00:26:39,400
+Here's my bill, you know. 
+
+710
+00:26:39,768 --> 00:26:43,328
+because there's a lot of good ideas here, 
+
+711
+00:26:43,328 --> 00:26:43,668
+you know. 
+
+712
+00:26:43,668 --> 00:26:48,088
+And so it also distinguished one of our 
+
+713
+00:26:48,088 --> 00:26:50,568
+strengths that we have on our webpage, 
+
+714
+00:26:50,568 --> 00:26:56,968
+which was that we have 188 FAQs around 
+
+715
+00:26:56,968 --> 00:26:58,588
+our space. 
+
+716
+00:26:58,588 --> 00:27:01,128
+And it says there's no competitor has any 
+
+717
+00:27:01,128 --> 00:27:02,108
+FAQ content. 
+
+718
+00:27:02,108 --> 00:27:04,368
+It's pure SEO territory. 
+
+719
+00:27:04,368 --> 00:27:07,348
+And it said generate some order. 
+
+720
+00:27:07,672 --> 00:27:09,552
+You know, and again, it gave me a list of 
+
+721
+00:27:09,552 --> 00:27:11,092
+things to generate FAQs around. 
+
+722
+00:27:11,092 --> 00:27:13,192
+So that's an example. 
+
+723
+00:27:13,192 --> 00:27:17,392
+It also pointed out some channels of 
+
+724
+00:27:17,392 --> 00:27:20,872
+visibility that we are completely blind to, 
+
+725
+00:27:20,872 --> 00:27:23,332
+you know, that some of our competitors 
+
+726
+00:27:23,332 --> 00:27:26,112
+are actively engaged with. 
+
+727
+00:27:26,112 --> 00:27:29,032
+And so we can go there and, you know, 
+
+728
+00:27:29,032 --> 00:27:30,892
+open up our visibility on those channels, 
+
+729
+00:27:30,892 --> 00:27:34,252
+and that might help, you know. 
+
+730
+00:27:34,252 --> 00:27:36,352
+Thank you for sharing. 
+
+731
+00:27:36,352 --> 00:27:37,212
+Mike, is that helpful? 
+
+732
+00:27:37,212 --> 00:27:37,932
+Yeah, definitely. 
+
+733
+00:27:37,932 --> 00:27:41,092
+One of the things I've realized is 
+
+734
+00:27:41,092 --> 00:27:43,052
+sometimes it's figuring out which tool to 
+
+735
+00:27:43,052 --> 00:27:46,572
+use, especially as you move beyond just 
+
+736
+00:27:46,572 --> 00:27:47,572
+the cloud chat. 
+
+737
+00:27:47,572 --> 00:27:50,632
+It might be interesting to some people, 
+
+738
+00:27:50,632 --> 00:27:52,292
+but I've started using cowork as I 
+
+739
+00:27:52,292 --> 00:27:52,652
+mentioned. 
+
+740
+00:27:52,652 --> 00:27:55,292
+And one of the things, we get a lot of 
+
+741
+00:27:55,292 --> 00:27:57,112
+paper receipts because we have people 
+
+742
+00:27:57,112 --> 00:27:59,472
+running around buying supplies for 
+
+743
+00:27:59,472 --> 00:28:01,492
+different things and we gather those as 
+
+744
+00:28:01,492 --> 00:28:02,012
+we can. 
+
+745
+00:28:02,012 --> 00:28:07,908
+But I set up a skill in cloud to OCR. 
+
+746
+00:28:07,908 --> 00:28:11,328
+So now I'm having my managers scan 
+
+747
+00:28:11,328 --> 00:28:12,388
+directly to Google Drive. 
+
+748
+00:28:12,388 --> 00:28:14,408
+So they all set up an app on their phone, 
+
+749
+00:28:14,408 --> 00:28:15,568
+goes to the same folder. 
+
+750
+00:28:15,568 --> 00:28:17,828
+So instead of scanning paper every week 
+
+751
+00:28:17,828 --> 00:28:20,788
+or two weeks, everything, including the 
+
+752
+00:28:20,788 --> 00:28:24,948
+digital receipts, go directly to the Google 
+
+753
+00:28:24,948 --> 00:28:28,028
+Drive folder, which is synced to desktop. 
+
+754
+00:28:28,028 --> 00:28:32,748
+And then the skill will actually go in there. 
+
+755
+00:28:32,748 --> 00:28:34,048
+We don't have to name the files. 
+
+756
+00:28:34,048 --> 00:28:35,648
+It will OCR everything. 
+
+757
+00:28:35,648 --> 00:28:36,048
+It will 
+
+758
+00:28:36,444 --> 00:28:40,864
+gave it a script to name the file, and then 
+
+759
+00:28:40,864 --> 00:28:44,224
+after all of them are named with date, 
+
+760
+00:28:44,224 --> 00:28:48,384
+accounting code, like put in instructions to 
+
+761
+00:28:48,384 --> 00:28:51,404
+code them, put a job site idea if we 
+
+762
+00:28:51,404 --> 00:28:54,044
+needed, it'll then create an Excel 
+
+763
+00:28:54,044 --> 00:28:56,004
+spreadsheet and put everything in there, 
+
+764
+00:28:56,004 --> 00:28:58,404
+which then is going to save money with 
+
+765
+00:28:58,404 --> 00:29:00,504
+the bookkeepers because everything's so 
+
+766
+00:29:00,504 --> 00:29:02,104
+clean and clear, they can just run through 
+
+767
+00:29:02,104 --> 00:29:02,884
+that really quickly. 
+
+768
+00:29:03,388 --> 00:29:04,908
+they won't even have to open the receipts 
+
+769
+00:29:04,908 --> 00:29:06,408
+and go, okay, what did this guy write? 
+
+770
+00:29:06,408 --> 00:29:10,948
+So I think in the long run that can save a 
+
+771
+00:29:10,948 --> 00:29:12,388
+ton of time. 
+
+772
+00:29:12,388 --> 00:29:13,108
+Yeah. 
+
+773
+00:29:13,108 --> 00:29:16,188
+I will also say, I mean, again, you know, I 
+
+774
+00:29:16,188 --> 00:29:17,308
+don't want, I don't want to go too far 
+
+775
+00:29:17,308 --> 00:29:19,028
+cause obviously you guys are using 
+
+776
+00:29:19,028 --> 00:29:19,568
+cowork. 
+
+777
+00:29:19,568 --> 00:29:24,068
+Um, you know, I, I happen to, it, it, it 
+
+778
+00:29:24,068 --> 00:29:25,528
+depends on what you're doing, but I'll 
+
+779
+00:29:25,528 --> 00:29:27,188
+share, like I use cloud code a lot. 
+
+780
+00:29:27,188 --> 00:29:30,328
+If you use cloud code, it's, um, you know, 
+
+781
+00:29:30,684 --> 00:29:32,704
+A lot of people think of it as vibe coding, 
+
+782
+00:29:32,704 --> 00:29:34,844
+which it's certainly great for that or 
+
+783
+00:29:34,844 --> 00:29:36,184
+creating apps and doing those things. 
+
+784
+00:29:36,184 --> 00:29:38,104
+I don't really do a lot of that work myself. 
+
+785
+00:29:38,104 --> 00:29:40,824
+Um, but to that point, Mike, I've actually 
+
+786
+00:29:40,824 --> 00:29:43,184
+taken things like our entire curriculum. 
+
+787
+00:29:43,184 --> 00:29:45,904
+If any of you, you do education and you 
+
+788
+00:29:45,904 --> 00:29:47,864
+want to repurpose things and do 
+
+789
+00:29:47,864 --> 00:29:50,164
+marketing or content or any and all of 
+
+790
+00:29:50,164 --> 00:29:50,764
+those things. 
+
+791
+00:29:50,764 --> 00:29:53,804
+Um, I'll take this company as an example 
+
+792
+00:29:53,804 --> 00:29:55,644
+in Claude code, I've taken this entire 
+
+793
+00:29:55,644 --> 00:29:58,504
+curriculum and Claude code, just like you 
+
+794
+00:29:58,504 --> 00:29:59,344
+could do in cowork. 
+
+795
+00:29:59,900 --> 00:30:02,860
+has created a file system of this 
+
+796
+00:30:02,860 --> 00:30:03,280
+curriculum. 
+
+797
+00:30:03,280 --> 00:30:05,460
+So it's all in PowerLabs, all our processes, 
+
+798
+00:30:05,460 --> 00:30:07,700
+all our resources, what we teach you all. 
+
+799
+00:30:07,700 --> 00:30:09,960
+And so I can literally go in there in a 
+
+800
+00:30:09,960 --> 00:30:12,440
+prompt and be like, create an ad on lead 
+
+801
+00:30:12,440 --> 00:30:15,060
+to sale, market to lead, all of these things, 
+
+802
+00:30:15,060 --> 00:30:17,160
+or repurpose content, make a blog post, 
+
+803
+00:30:17,160 --> 00:30:17,860
+make these things. 
+
+804
+00:30:17,860 --> 00:30:22,060
+And it's literally a sentence and it can pull 
+
+805
+00:30:22,060 --> 00:30:24,320
+any and everything that I sort of wanted 
+
+806
+00:30:24,320 --> 00:30:25,200
+to work up. 
+
+807
+00:30:25,200 --> 00:30:27,220
+So we do everything from webinars 
+
+808
+00:30:28,028 --> 00:30:30,268
+social content to certain things like that. 
+
+809
+00:30:30,268 --> 00:30:31,908
+And it's very simple. 
+
+810
+00:30:31,908 --> 00:30:33,668
+Um, just like I'm sure it is in cowork. 
+
+811
+00:30:33,668 --> 00:30:34,928
+I don't use cowork much. 
+
+812
+00:30:34,928 --> 00:30:36,268
+It's, it's part of cloud code. 
+
+813
+00:30:36,268 --> 00:30:37,008
+It's in there. 
+
+814
+00:30:37,008 --> 00:30:40,848
+Um, but yeah, if that's helpful as well. 
+
+815
+00:30:40,848 --> 00:30:41,108
+Yeah. 
+
+816
+00:30:41,108 --> 00:30:43,468
+If anybody hasn't used cowork, it's pretty 
+
+817
+00:30:43,468 --> 00:30:46,008
+new, but it's, I think the easiest way to 
+
+818
+00:30:46,008 --> 00:30:48,188
+think of it is like intermediate between 
+
+819
+00:30:48,188 --> 00:30:52,548
+cloud chat, cloud codes, kind of, if the chat 
+
+820
+00:30:52,548 --> 00:30:55,148
+is beginner, cloud codes, intermediate, uh, 
+
+821
+00:30:55,148 --> 00:30:57,128
+uh, cloud code is advanced and cowork. 
+
+822
+00:30:57,404 --> 00:30:58,444
+is kind of intermediate. 
+
+823
+00:30:58,444 --> 00:31:01,544
+But supposedly if you're not that great at 
+
+824
+00:31:01,544 --> 00:31:03,804
+things, it's also better for security because 
+
+825
+00:31:03,804 --> 00:31:06,844
+code doesn't really have the same 
+
+826
+00:31:06,844 --> 00:31:10,064
+protection security wise, which I think is 
+
+827
+00:31:10,064 --> 00:31:11,324
+one of the things I'm concerned about. 
+
+828
+00:31:11,324 --> 00:31:13,284
+And if there's any advice on how to 
+
+829
+00:31:13,284 --> 00:31:15,884
+manage that, when you start connecting, I 
+
+830
+00:31:15,884 --> 00:31:17,524
+have not connected my email, but I've 
+
+831
+00:31:17,524 --> 00:31:19,784
+connected some things to drive. 
+
+832
+00:31:19,784 --> 00:31:22,904
+But I'm a little concerned about the 
+
+833
+00:31:22,904 --> 00:31:26,484
+granularity and just like, I don't want, 
+
+834
+00:31:26,684 --> 00:31:28,564
+full access to everything, especially when 
+
+835
+00:31:28,564 --> 00:31:30,884
+you talk about agents where they can 
+
+836
+00:31:30,884 --> 00:31:32,624
+start acting, not just reading. 
+
+837
+00:31:32,624 --> 00:31:35,964
+And of course, probably everybody's 
+
+838
+00:31:35,964 --> 00:31:37,324
+familiar with some of the nefarious 
+
+839
+00:31:37,324 --> 00:31:39,944
+behavior of some of these AIs. 
+
+840
+00:31:39,944 --> 00:31:42,544
+So I don't know, do you have any 
+
+841
+00:31:42,544 --> 00:31:45,704
+suggestions related to using the different 
+
+842
+00:31:45,704 --> 00:31:47,464
+tools and especially when we move away 
+
+843
+00:31:47,464 --> 00:31:51,104
+from chat and granting access to our 
+
+844
+00:31:51,104 --> 00:31:53,024
+information, how to manage that safely? 
+
+845
+00:31:53,024 --> 00:31:56,256
+Yeah, I mean, so in terms of, co-work to 
+
+846
+00:31:56,256 --> 00:31:56,896
+your point. 
+
+847
+00:31:56,896 --> 00:31:57,056
+Yeah. 
+
+848
+00:31:57,056 --> 00:32:01,436
+If people aren't using it, it's basically, you 
+
+849
+00:32:01,436 --> 00:32:04,416
+know, beyond chat bots, it's on your 
+
+850
+00:32:04,416 --> 00:32:06,056
+computer and it's about like managing, 
+
+851
+00:32:06,056 --> 00:32:08,596
+organizing and creating files on your 
+
+852
+00:32:08,596 --> 00:32:09,176
+computer. 
+
+853
+00:32:09,176 --> 00:32:12,216
+In terms of security, it's a really good 
+
+854
+00:32:12,216 --> 00:32:13,196
+question. 
+
+855
+00:32:13,196 --> 00:32:17,936
+And it's kind of, the answer is kind of the 
+
+856
+00:32:17,936 --> 00:32:19,976
+spectrum that you get with how people 
+
+857
+00:32:19,976 --> 00:32:21,036
+think about AI. 
+
+858
+00:32:21,036 --> 00:32:23,556
+And what I mean by that is I happen to do 
+
+859
+00:32:23,556 --> 00:32:24,776
+cloud code to Mike's point. 
+
+860
+00:32:24,776 --> 00:32:27,216
+So that actually connects to everything in 
+
+861
+00:32:27,216 --> 00:32:28,176
+my computer. 
+
+862
+00:32:28,176 --> 00:32:30,936
+So that has access to every single thing. 
+
+863
+00:32:30,936 --> 00:32:35,596
+So some of you might hear that and get a 
+
+864
+00:32:35,596 --> 00:32:37,296
+little uptight about it. 
+
+865
+00:32:37,296 --> 00:32:39,896
+Others have a different view. 
+
+866
+00:32:39,896 --> 00:32:44,336
+So I come from the view with AI is I believe 
+
+867
+00:32:44,336 --> 00:32:46,436
+there's sort of two fundamental ways at 
+
+868
+00:32:46,436 --> 00:32:47,596
+its simplest form, Mike. 
+
+869
+00:32:47,596 --> 00:32:49,616
+There's two fundamental ways that we 
+
+870
+00:32:49,616 --> 00:32:50,416
+can look at AI. 
+
+871
+00:32:51,340 --> 00:32:54,080
+We can either say, I'm going to kind of use 
+
+872
+00:32:54,080 --> 00:32:57,380
+it and I'm going to do that for my business 
+
+873
+00:32:57,380 --> 00:32:57,940
+in this case. 
+
+874
+00:32:57,940 --> 00:33:00,220
+And I'm going to use it as best as possible 
+
+875
+00:33:00,220 --> 00:33:02,400
+while being worried about security. 
+
+876
+00:33:02,400 --> 00:33:06,260
+I have taken the approach and a lot of 
+
+877
+00:33:06,260 --> 00:33:09,000
+people have taken the approach of, I think 
+
+878
+00:33:09,000 --> 00:33:11,180
+this is a world that is absolutely 
+
+879
+00:33:11,180 --> 00:33:11,720
+inevitable. 
+
+880
+00:33:11,720 --> 00:33:16,220
+And so I'm not going to put any blockers in 
+
+881
+00:33:16,220 --> 00:33:16,780
+terms of 
+
+882
+00:33:17,196 --> 00:33:19,856
+me reaching its full capabilities which 
+
+883
+00:33:19,856 --> 00:33:22,176
+right now, which is access, right? 
+
+884
+00:33:22,176 --> 00:33:23,756
+Whether you think at what we're sort of 
+
+885
+00:33:23,756 --> 00:33:26,236
+teaching in the business world, or if you 
+
+886
+00:33:26,236 --> 00:33:28,796
+want to understand what's going to be 
+
+887
+00:33:28,796 --> 00:33:31,576
+possible in the personal efficiency world, 
+
+888
+00:33:31,576 --> 00:33:34,216
+there's people who believe that we're 
+
+889
+00:33:34,216 --> 00:33:35,796
+going to be cyborgs and our cell phones 
+
+890
+00:33:35,796 --> 00:33:36,816
+will be connected to us. 
+
+891
+00:33:36,816 --> 00:33:38,216
+And then there won't be bandwidth issues 
+
+892
+00:33:38,216 --> 00:33:39,136
+with our brains anymore. 
+
+893
+00:33:39,136 --> 00:33:41,256
+I mean, there's a lot of articles that you all 
+
+894
+00:33:41,256 --> 00:33:43,996
+can read, and i'm sure we all have, uh, 
+
+895
+00:33:43,996 --> 00:33:46,916
+thoughts on how sort of this plays out in. 
+
+896
+00:33:47,628 --> 00:33:50,228
+20, 50 plus years from now. 
+
+897
+00:33:50,228 --> 00:33:52,028
+But that's how I've looked at it. 
+
+898
+00:33:52,028 --> 00:33:56,028
+I believe there is nothing that is going to 
+
+899
+00:33:56,028 --> 00:33:57,288
+stop AI adoption. 
+
+900
+00:33:57,648 --> 00:34:01,388
+I actually don't think it's possible. 
+
+901
+00:34:01,388 --> 00:34:04,108
+And so I've chosen to sort of just embrace 
+
+902
+00:34:04,108 --> 00:34:04,908
+that. 
+
+903
+00:34:04,908 --> 00:34:06,728
+And the fact that there's nothing really on 
+
+904
+00:34:06,728 --> 00:34:09,468
+my computer, my personal computer to 
+
+905
+00:34:09,468 --> 00:34:12,528
+hide, if that helps anybody. 
+
+906
+00:34:12,528 --> 00:34:16,148
+I understand that perspective. 
+
+907
+00:34:16,876 --> 00:34:19,736
+pretty open to AI doing pretty much 
+
+908
+00:34:19,736 --> 00:34:20,276
+everything. 
+
+909
+00:34:20,276 --> 00:34:23,396
+But I've read a lot of experts that say you 
+
+910
+00:34:23,396 --> 00:34:24,316
+really need to be careful. 
+
+911
+00:34:24,316 --> 00:34:26,296
+I think something like Open Cloud or 
+
+912
+00:34:26,296 --> 00:34:28,056
+Cloudbot is a good example. 
+
+913
+00:34:28,056 --> 00:34:30,516
+Like Ethan Mollick just said, you should 
+
+914
+00:34:30,516 --> 00:34:31,936
+not be installing that. 
+
+915
+00:34:31,936 --> 00:34:34,256
+Basically because it has full access to 
+
+916
+00:34:34,256 --> 00:34:36,996
+everything and it's unpredictable the way 
+
+917
+00:34:36,996 --> 00:34:38,976
+it's going to behave or what it might do. 
+
+918
+00:34:39,340 --> 00:34:44,416
+So I worry about code the same way, not 
+
+919
+00:34:44,416 --> 00:34:47,816
+because just because I don't think security 
+
+920
+00:34:47,816 --> 00:34:50,776
+is something that we should bypass based 
+
+921
+00:34:50,776 --> 00:34:52,756
+on optimism about AI. 
+
+922
+00:34:52,756 --> 00:34:56,716
+So I definitely think there should be some 
+
+923
+00:34:56,716 --> 00:34:58,096
+structure around that. 
+
+924
+00:34:58,096 --> 00:35:01,316
+Yeah, and nobody's wrong, right? 
+
+925
+00:35:01,316 --> 00:35:03,136
+Like I said, there's really two ways to think 
+
+926
+00:35:03,136 --> 00:35:03,916
+of this. 
+
+927
+00:35:03,916 --> 00:35:08,476
+The set, if you all are not familiar with 
+
+928
+00:35:08,476 --> 00:35:11,676
+OpenClaw that was formerly ClawedBot, 
+
+929
+00:35:12,140 --> 00:35:12,820
+You're right. 
+
+930
+00:35:12,820 --> 00:35:14,740
+And it's the same thing sort of with a lot of 
+
+931
+00:35:14,740 --> 00:35:16,880
+the security settings if you're using 
+
+932
+00:35:16,880 --> 00:35:18,400
+something like Cloud Code in the sense 
+
+933
+00:35:18,400 --> 00:35:19,680
+that it's going to have access. 
+
+934
+00:35:19,680 --> 00:35:22,680
+Again, it's strictly perspective because the 
+
+935
+00:35:22,680 --> 00:35:26,220
+other side of the spectrum, OpenAI just 
+
+936
+00:35:26,220 --> 00:35:26,860
+bought them. 
+
+937
+00:35:26,860 --> 00:35:32,200
+And so, again, this is sort of like how you 
+
+938
+00:35:32,200 --> 00:35:32,819
+look at things. 
+
+939
+00:35:32,819 --> 00:35:34,939
+It's either sort of like, hey, I sort of put my 
+
+940
+00:35:34,939 --> 00:35:38,220
+guardrails up or I believe you can say, I 
+
+941
+00:35:38,220 --> 00:35:39,060
+think this is inevitable. 
+
+942
+00:35:39,060 --> 00:35:42,312
+I think this is where the future of business 
+
+943
+00:35:42,312 --> 00:35:45,551
+and the world in this case is going. 
+
+944
+00:35:45,551 --> 00:35:47,932
+And so it's, you know, there's no right 
+
+945
+00:35:47,932 --> 00:35:48,292
+answer. 
+
+946
+00:35:48,292 --> 00:35:50,272
+I use clog code. 
+
+947
+00:35:50,272 --> 00:35:52,591
+It certainly has access to everything I'm 
+
+948
+00:35:52,591 --> 00:35:53,971
+doing on my computer. 
+
+949
+00:35:53,971 --> 00:35:57,591
+But in no way do I not understand Mike's 
+
+950
+00:35:57,591 --> 00:35:59,192
+stance or anybody else's who would say, 
+
+951
+00:35:59,192 --> 00:35:59,671
+hey, you know what? 
+
+952
+00:35:59,671 --> 00:36:02,032
+I'm not really ready to do that for a variety 
+
+953
+00:36:02,032 --> 00:36:05,192
+of reasons of the what if type of dialogue 
+
+954
+00:36:05,192 --> 00:36:06,612
+that you could have. 
+
+955
+00:36:06,612 --> 00:36:07,171
+It's understandable. 
+
+956
+00:36:07,171 --> 00:36:07,751
+Yeah. 
+
+957
+00:36:07,751 --> 00:36:13,091
+The whole world of cyber reliability will 
+
+958
+00:36:13,091 --> 00:36:14,150
+make your hair curl. 
+
+959
+00:36:14,150 --> 00:36:16,230
+Yeah. 
+
+960
+00:36:16,230 --> 00:36:21,551
+And again, I'm a very optimistic guy in the 
+
+961
+00:36:21,551 --> 00:36:26,770
+sense that I truly believe that my stance 
+
+962
+00:36:26,770 --> 00:36:28,331
+on AI is this is great. 
+
+963
+00:36:28,331 --> 00:36:30,051
+I mean, this is great personally. 
+
+964
+00:36:30,051 --> 00:36:32,070
+It's great for business. 
+
+965
+00:36:32,070 --> 00:36:35,631
+I could go on this whole call of what I love 
+
+966
+00:36:35,631 --> 00:36:36,171
+about it. 
+
+967
+00:36:36,483 --> 00:36:39,799
+However, of any of the thoughts that all of 
+
+968
+00:36:39,799 --> 00:36:41,498
+you have had, just like myself, of like what 
+
+969
+00:36:41,498 --> 00:36:44,299
+could happen on the negative side, I think 
+
+970
+00:36:44,299 --> 00:36:46,378
+it's like anything else that's ever been 
+
+971
+00:36:46,378 --> 00:36:47,498
+around in human existence. 
+
+972
+00:36:47,498 --> 00:36:50,699
+It will take an individual person to be able 
+
+973
+00:36:50,699 --> 00:36:53,179
+to perhaps do some of those things. 
+
+974
+00:36:53,179 --> 00:36:56,019
+I don't know that AI will start. 
+
+975
+00:36:56,019 --> 00:36:58,299
+You know, all of the things that have been 
+
+976
+00:36:58,299 --> 00:36:59,899
+fairly negative that I've seen on Reddit 
+
+977
+00:36:59,899 --> 00:37:02,639
+and things like that, I think it's people 
+
+978
+00:37:02,639 --> 00:37:05,719
+really starting to engineer prompts in very 
+
+979
+00:37:05,719 --> 00:37:06,519
+specific ways. 
+
+980
+00:37:07,203 --> 00:37:10,343
+Um, so again, it's, I happen to, I'm 
+
+981
+00:37:10,343 --> 00:37:13,223
+embracing AI for its full capabilities, but 
+
+982
+00:37:13,223 --> 00:37:16,183
+Mike zero resistance out of me or 
+
+983
+00:37:16,183 --> 00:37:17,463
+probably anybody else here. 
+
+984
+00:37:17,463 --> 00:37:20,203
+If you want to really, really still keep a lot 
+
+985
+00:37:20,203 --> 00:37:22,343
+of security up for you personally. 
+
+986
+00:37:22,343 --> 00:37:25,203
+Um, makes sense. 
+
+987
+00:37:25,203 --> 00:37:26,423
+Easy question, Josh. 
+
+988
+00:37:26,423 --> 00:37:30,483
+I'm wondering how long are we promised 
+
+989
+00:37:30,483 --> 00:37:33,843
+access to the curriculum and what we're 
+
+990
+00:37:33,843 --> 00:37:35,583
+using online with you guys? 
+
+991
+00:37:35,583 --> 00:37:38,983
+So after it's done, it's two months. 
+
+992
+00:37:38,983 --> 00:37:41,343
+And so you'll have access to the 
+
+993
+00:37:41,343 --> 00:37:42,443
+community and the curriculum. 
+
+994
+00:37:42,443 --> 00:37:45,243
+And the reason for that is it changes. 
+
+995
+00:37:45,243 --> 00:37:46,863
+Like we constantly do cohorts. 
+
+996
+00:37:46,863 --> 00:37:50,603
+And so you'll be able to log in, make sure 
+
+997
+00:37:50,603 --> 00:37:51,363
+you're done. 
+
+998
+00:37:51,363 --> 00:37:53,323
+And again, at the end of the course, it's 
+
+999
+00:37:53,323 --> 00:37:55,295
+more about like, implementation, which I 
+
+1000
+00:37:55,295 --> 00:37:57,255
+know is why you're all here. 
+
+1001
+00:37:57,255 --> 00:37:59,255
+You don't want to just talk about doing 
+
+1002
+00:37:59,255 --> 00:38:01,875
+cool things to make your business more 
+
+1003
+00:38:01,875 --> 00:38:02,295
+efficient. 
+
+1004
+00:38:02,295 --> 00:38:04,775
+But we'll be there to make sure we 
+
+1005
+00:38:04,775 --> 00:38:06,275
+support you in any way that you need it. 
+
+1006
+00:38:06,275 --> 00:38:07,735
+Anybody else have any thoughts? 
+
+1007
+00:38:07,735 --> 00:38:10,115
+Um, you know, Pavlo, I know you're 
+
+1008
+00:38:10,115 --> 00:38:11,675
+possibly a little behind on curriculum and 
+
+1009
+00:38:11,675 --> 00:38:13,175
+things like that, but anything you're going 
+
+1010
+00:38:13,175 --> 00:38:16,055
+through right now, um, or anybody else, 
+
+1011
+00:38:16,055 --> 00:38:18,315
+um, wherever you're at in the curriculum 
+
+1012
+00:38:18,315 --> 00:38:21,395
+or assessments, whatever session, um, 
+
+1013
+00:38:21,395 --> 00:38:23,515
+you know, if you guys have any questions, 
+
+1014
+00:38:23,515 --> 00:38:25,075
+I'd be happy to help you out. 
+
+1015
+00:38:25,075 --> 00:38:26,735
+Hello to everyone. 
+
+1016
+00:38:26,735 --> 00:38:32,495
+I'll try to tell what I'm doing right now. 
+
+1017
+00:38:32,495 --> 00:38:35,575
+I'm literally behind because I'm starting 
+
+1018
+00:38:35,575 --> 00:38:36,515
+too late. 
+
+1019
+00:38:36,515 --> 00:38:41,275
+And I want to say I use a lot of transcribe 
+
+1020
+00:38:41,275 --> 00:38:45,315
+meetings internally. 
+
+1021
+00:38:45,315 --> 00:38:50,895
+We have 200 people in my factory and we 
+
+1022
+00:38:50,895 --> 00:38:54,695
+We make recordings of our meetings 
+
+1023
+00:38:54,695 --> 00:39:00,395
+one-to-one or meeting of our leaders. 
+
+1024
+00:39:00,395 --> 00:39:04,395
+For example, strategic session. 
+
+1025
+00:39:04,395 --> 00:39:11,435
+It can take maybe 10 days, all session. 
+
+1026
+00:39:11,435 --> 00:39:14,875
+And we use Notebook.LM. 
+
+1027
+00:39:14,875 --> 00:39:19,375
+We put together all transcribed notes. 
+
+1028
+00:39:20,271 --> 00:39:24,331
+And it's very helpful because we have our 
+
+1029
+00:39:24,331 --> 00:39:28,211
+knowledge and we can use all year. 
+
+1030
+00:39:28,211 --> 00:39:30,951
+If somebody forgets something, we always 
+
+1031
+00:39:30,951 --> 00:39:32,091
+use it. 
+
+1032
+00:39:32,091 --> 00:39:32,391
+Yeah. 
+
+1033
+00:39:32,391 --> 00:39:37,611
+So I want to use this master prompt, not 
+
+1034
+00:39:37,611 --> 00:39:43,111
+only for external calls and also with our 
+
+1035
+00:39:43,111 --> 00:39:47,151
+internal audio recordings, maybe some 
+
+1036
+00:39:47,151 --> 00:39:47,711
+meetings. 
+
+1037
+00:39:47,711 --> 00:39:50,931
+or one-to-one or retrospective between 
+
+1038
+00:39:50,931 --> 00:39:52,351
+our employees. 
+
+1039
+00:39:52,351 --> 00:39:54,591
+Yeah, that's great. 
+
+1040
+00:39:54,591 --> 00:39:58,671
+Yeah, we actually used Notion for a little 
+
+1041
+00:39:58,671 --> 00:40:01,491
+while, keeping our processes before stage 
+
+1042
+00:40:01,491 --> 00:40:05,631
+three for all our internal documentation, 
+
+1043
+00:40:05,631 --> 00:40:06,751
+knowledge and things like that. 
+
+1044
+00:40:06,751 --> 00:40:08,471
+But yeah, it sounds like your biggest 
+
+1045
+00:40:08,471 --> 00:40:11,331
+learning curve is the transcription part, 
+
+1046
+00:40:11,331 --> 00:40:11,631
+right? 
+
+1047
+00:40:11,631 --> 00:40:14,771
+Like the actual, you're taking our stuff and 
+
+1048
+00:40:14,771 --> 00:40:16,311
+having to translate it. 
+
+1049
+00:40:16,311 --> 00:40:18,851
+So hopefully that, I haven't had that 
+
+1050
+00:40:18,851 --> 00:40:20,691
+challenge, so hopefully that's sort of 
+
+1051
+00:40:20,691 --> 00:40:23,671
+coming out pretty legible for you and all of 
+
+1052
+00:40:23,671 --> 00:40:26,211
+your 200 people as you go through that. 
+
+1053
+00:40:26,211 --> 00:40:27,431
+It's kind of cool. 
+
+1054
+00:40:27,431 --> 00:40:31,371
+Also, I tried to play with SOP. 
+
+1055
+00:40:31,371 --> 00:40:33,291
+We are Lean factory. 
+
+1056
+00:40:33,291 --> 00:40:37,471
+We use Lean, I think, 10 years in high level. 
+
+1057
+00:40:37,471 --> 00:40:42,231
+And I love to make before and after 
+
+1058
+00:40:42,231 --> 00:40:48,611
+process So if we make SOP with master 
+
+1059
+00:40:48,611 --> 00:40:52,771
+prompt, we should before SOP make 
+
+1060
+00:40:52,771 --> 00:40:55,451
+improvement. 
+
+1061
+00:40:55,451 --> 00:41:00,831
+So we must clean waste from like lean 
+
+1062
+00:41:00,831 --> 00:41:03,451
+muda, eliminate waste. 
+
+1063
+00:41:03,451 --> 00:41:07,251
+So before SOP, we must change process 
+
+1064
+00:41:07,251 --> 00:41:09,251
+and make a new process clean. 
+
+1065
+00:41:09,251 --> 00:41:11,811
+And then we make SOP and I try with 
+
+1066
+00:41:11,811 --> 00:41:17,771
+cloud, make prompt for value stream 
+
+1067
+00:41:17,771 --> 00:41:20,991
+mapping, make improvements, and then I 
+
+1068
+00:41:20,991 --> 00:41:22,011
+make SOP. 
+
+1069
+00:41:22,011 --> 00:41:24,271
+It's very helpful. 
+
+1070
+00:41:24,271 --> 00:41:27,571
+And I think with master prompt, it will be 
+
+1071
+00:41:27,571 --> 00:41:28,591
+much more easy. 
+
+1072
+00:41:28,591 --> 00:41:30,011
+Yeah. 
+
+1073
+00:41:30,011 --> 00:41:31,351
+I'm glad to hear it. 
+
+1074
+00:41:31,351 --> 00:41:33,091
+And again, I know you're a little behind for 
+
+1075
+00:41:33,091 --> 00:41:33,451
+everybody. 
+
+1076
+00:41:33,451 --> 00:41:36,931
+He joined a bit after you all did, but yeah, I 
+
+1077
+00:41:36,931 --> 00:41:39,859
+mean, what you're doing, high level is 
+
+1078
+00:41:39,859 --> 00:41:42,439
+your, the sequence here is like you're, 
+
+1079
+00:41:42,439 --> 00:41:44,919
+you're documenting, you know, you, you 
+
+1080
+00:41:44,919 --> 00:41:47,259
+map and kind of capture your, your core 
+
+1081
+00:41:47,259 --> 00:41:49,119
+processes four levels deep. 
+
+1082
+00:41:49,119 --> 00:41:50,019
+Those are the SOPs. 
+
+1083
+00:41:50,019 --> 00:41:52,799
+Then you have, then you assess, right? 
+
+1084
+00:41:52,799 --> 00:41:55,599
+So you can kind of score against value 
+
+1085
+00:41:55,599 --> 00:41:57,899
+drivers or how owner dependent you are 
+
+1086
+00:41:57,899 --> 00:42:00,539
+in, in different areas and things like that. 
+
+1087
+00:42:00,539 --> 00:42:03,379
+Um, then you can sort of augment and 
+
+1088
+00:42:03,379 --> 00:42:04,739
+then systematize. 
+
+1089
+00:42:04,739 --> 00:42:07,899
+So the augments like AI can help you. 
+
+1090
+00:42:08,291 --> 00:42:10,551
+Cause it has context and then system 
+
+1091
+00:42:10,551 --> 00:42:13,231
+systematized would be just integrating it 
+
+1092
+00:42:13,231 --> 00:42:15,991
+with your current operating system or 
+
+1093
+00:42:15,991 --> 00:42:17,131
+some of the systems that you're already 
+
+1094
+00:42:17,131 --> 00:42:18,671
+using for your company. 
+
+1095
+00:42:18,671 --> 00:42:22,691
+Awesome. 
+
+1096
+00:42:22,691 --> 00:42:28,051
+Anybody else have anything that's come 
+
+1097
+00:42:28,051 --> 00:42:30,451
+up for them that they want to discuss? 
+
+1098
+00:42:30,451 --> 00:42:32,571
+Well, one thing I will say, if we don't have 
+
+1099
+00:42:32,571 --> 00:42:35,271
+any more questions is, um, you know, in, 
+
+1100
+00:42:35,271 --> 00:42:37,251
+in circle, you, you saw an example 
+
+1101
+00:42:37,251 --> 00:42:39,851
+yesterday of, of someone kind of going 
+
+1102
+00:42:39,851 --> 00:42:42,151
+through and saying, Hey, I was running 
+
+1103
+00:42:42,151 --> 00:42:43,891
+the assessment and sort of Claude 
+
+1104
+00:42:43,891 --> 00:42:47,631
+presented a scenario where he, he, I 
+
+1105
+00:42:47,631 --> 00:42:49,551
+believe he sort of had two different ways 
+
+1106
+00:42:49,551 --> 00:42:50,931
+that he could look at that. 
+
+1107
+00:42:50,931 --> 00:42:53,051
+And, you know, Midori had a, you know, a 
+
+1108
+00:42:53,051 --> 00:42:54,971
+good response to, to kind of answer that 
+
+1109
+00:42:54,971 --> 00:42:56,971
+with, and Midori, why don't you can, you 
+
+1110
+00:42:56,971 --> 00:42:58,571
+can tell them a little bit about that if you'd 
+
+1111
+00:42:58,571 --> 00:42:58,851
+like. 
+
+1112
+00:42:58,851 --> 00:42:59,711
+Thanks, Josh. 
+
+1113
+00:42:59,711 --> 00:43:03,751
+Yeah, so yesterday, I believe it was Matt, 
+
+1114
+00:43:03,751 --> 00:43:10,651
+had a issue pop up as he was working 
+
+1115
+00:43:10,651 --> 00:43:13,271
+through the delivery to success SOPs. 
+
+1116
+00:43:13,271 --> 00:43:18,171
+And that was that Claude sort of wanted 
+
+1117
+00:43:18,171 --> 00:43:19,891
+to ask some questions about whether a 
+
+1118
+00:43:19,891 --> 00:43:21,851
+boundary felt right about the assessment 
+
+1119
+00:43:21,851 --> 00:43:25,731
+that they just did and was proposing to 
+
+1120
+00:43:25,731 --> 00:43:28,503
+actually, instead of divide things up, keep 
+
+1121
+00:43:28,503 --> 00:43:32,543
+it all under one sort of solo practice 
+
+1122
+00:43:32,543 --> 00:43:34,523
+because of the nature of the business. 
+
+1123
+00:43:34,523 --> 00:43:37,923
+And so the question that was posed was, 
+
+1124
+00:43:37,923 --> 00:43:40,943
+does it make sense to do as Claude 
+
+1125
+00:43:40,943 --> 00:43:43,223
+suggests or does it make sense to do as 
+
+1126
+00:43:43,223 --> 00:43:45,483
+the original prompt suggests? 
+
+1127
+00:43:45,483 --> 00:43:48,403
+And at the end of the day, there's sort of 
+
+1128
+00:43:48,403 --> 00:43:51,163
+not, you know, a right answer. 
+
+1129
+00:43:51,163 --> 00:43:53,783
+One of the, you really have to sort of 
+
+1130
+00:43:53,783 --> 00:43:55,323
+decide what works for you. 
+
+1131
+00:43:55,683 --> 00:43:58,083
+in this case, Hayden and I were meeting 
+
+1132
+00:43:58,083 --> 00:43:59,623
+and so we were talking it through a little 
+
+1133
+00:43:59,623 --> 00:44:00,083
+bit. 
+
+1134
+00:44:00,083 --> 00:44:02,683
+And, you know, one of the benefits in this 
+
+1135
+00:44:02,683 --> 00:44:05,623
+particular case was that given the nature 
+
+1136
+00:44:05,623 --> 00:44:08,463
+of this person's business, it was actually 
+
+1137
+00:44:08,463 --> 00:44:10,743
+going to produce something that would be 
+
+1138
+00:44:10,743 --> 00:44:13,843
+highly specific to what they need and isn't 
+
+1139
+00:44:13,843 --> 00:44:14,603
+covered in the cohort. 
+
+1140
+00:44:14,603 --> 00:44:15,923
+And so that might actually be an 
+
+1141
+00:44:15,923 --> 00:44:18,083
+interesting exercise for Matt to go 
+
+1142
+00:44:18,083 --> 00:44:18,623
+through. 
+
+1143
+00:44:18,623 --> 00:44:23,011
+But to Matt's sort of conclusion to sort of 
+
+1144
+00:44:23,011 --> 00:44:25,071
+staying within the cohort so that we're all 
+
+1145
+00:44:25,071 --> 00:44:26,791
+sort of uniformly working through the 
+
+1146
+00:44:26,791 --> 00:44:28,151
+same material. 
+
+1147
+00:44:28,151 --> 00:44:30,271
+And, you know, we have the same kind of 
+
+1148
+00:44:30,271 --> 00:44:33,351
+what best looks like to continue to iterate 
+
+1149
+00:44:33,351 --> 00:44:35,791
+out once the cohort is done is also an 
+
+1150
+00:44:35,791 --> 00:44:36,671
+important piece. 
+
+1151
+00:44:36,671 --> 00:44:39,071
+Josh and I were also talking about it today 
+
+1152
+00:44:39,071 --> 00:44:41,751
+about how when this sort of scenario pops 
+
+1153
+00:44:41,751 --> 00:44:44,551
+up at this point, Claude has an awful lot of 
+
+1154
+00:44:44,551 --> 00:44:46,291
+information about your business. 
+
+1155
+00:44:46,291 --> 00:44:47,951
+And so it 
+
+1156
+00:44:48,067 --> 00:44:50,127
+it's a really good opportunity to actually 
+
+1157
+00:44:50,127 --> 00:44:53,207
+have a back and forth with Claude about, 
+
+1158
+00:44:53,207 --> 00:44:55,847
+you know, the pros and cons of going one 
+
+1159
+00:44:55,847 --> 00:44:57,207
+route versus the other. 
+
+1160
+00:44:57,207 --> 00:44:59,247
+So you can sort of sort out what would be 
+
+1161
+00:44:59,247 --> 00:45:01,067
+the best path for you. 
+
+1162
+00:45:01,067 --> 00:45:02,787
+I don't know if there's anything else you 
+
+1163
+00:45:02,787 --> 00:45:04,247
+want to add to that, Josh. 
+
+1164
+00:45:04,247 --> 00:45:06,927
+No, I mean, I guess just out of curiosity, 
+
+1165
+00:45:06,927 --> 00:45:08,507
+has anyone else experienced that where 
+
+1166
+00:45:08,507 --> 00:45:10,107
+potentially, because this has happened a 
+
+1167
+00:45:10,107 --> 00:45:14,367
+lot in the last cohort is Claude started to 
+
+1168
+00:45:14,367 --> 00:45:15,667
+make different suggestions. 
+
+1169
+00:45:16,547 --> 00:45:18,547
+Like, hey, I think this essentially like, hey, 
+
+1170
+00:45:18,547 --> 00:45:20,427
+this might be a good idea for you to 
+
+1171
+00:45:20,427 --> 00:45:21,967
+explore. 
+
+1172
+00:45:21,967 --> 00:45:23,987
+Doesn't seem like anybody maybe on the 
+
+1173
+00:45:23,987 --> 00:45:25,007
+call has dealt with that. 
+
+1174
+00:45:25,007 --> 00:45:28,007
+But to Midori's point, if you do, it is really 
+
+1175
+00:45:28,007 --> 00:45:29,987
+good with the context, like she said, to 
+
+1176
+00:45:29,987 --> 00:45:30,687
+unpack that. 
+
+1177
+00:45:30,687 --> 00:45:33,587
+Like, since you have all this context in 
+
+1178
+00:45:33,587 --> 00:45:35,847
+your master prompt project, you can say, 
+
+1179
+00:45:35,847 --> 00:45:40,287
+well, you know, tell me why that would 
+
+1180
+00:45:40,287 --> 00:45:42,467
+outweigh, let's say we're talking about a 
+
+1181
+00:45:42,467 --> 00:45:43,347
+go-to-market strategy. 
+
+1182
+00:45:43,347 --> 00:45:44,027
+It could be anything. 
+
+1183
+00:45:44,899 --> 00:45:46,919
+Tell me why that would be better than 
+
+1184
+00:45:46,919 --> 00:45:49,439
+what I was talking about for my go-to 
+
+1185
+00:45:49,439 --> 00:45:52,119
+market strategy and why you think this 
+
+1186
+00:45:52,119 --> 00:45:55,359
+give me like three pros and cons to this 
+
+1187
+00:45:55,359 --> 00:45:57,339
+and, and why it's better tied to my 
+
+1188
+00:45:57,339 --> 00:45:58,479
+strategic initiatives. 
+
+1189
+00:45:58,479 --> 00:46:00,599
+You know, having a back and forth 
+
+1190
+00:46:00,599 --> 00:46:02,579
+dialogue like that would be an example. 
+
+1191
+00:46:02,579 --> 00:46:06,319
+If Claude makes a suggestion, um, I do, uh, 
+
+1192
+00:46:06,319 --> 00:46:07,679
+this has happened to me for sure, 
+
+1193
+00:46:07,679 --> 00:46:10,879
+especially in, in go-to market strategies. 
+
+1194
+00:46:11,491 --> 00:46:13,971
+It's important to have the dialogue and 
+
+1195
+00:46:13,971 --> 00:46:17,231
+not just sort of like, oh, that's a really cool 
+
+1196
+00:46:17,231 --> 00:46:17,571
+plan. 
+
+1197
+00:46:17,571 --> 00:46:18,451
+I'll just go do that. 
+
+1198
+00:46:18,451 --> 00:46:19,951
+Especially if it's different than something 
+
+1199
+00:46:19,951 --> 00:46:21,291
+that you've done before. 
+
+1200
+00:46:21,291 --> 00:46:24,311
+It would be getting very, very clear on why 
+
+1201
+00:46:24,311 --> 00:46:26,611
+Claude would suggest that relative to 
+
+1202
+00:46:26,611 --> 00:46:28,171
+whatever you're already doing in your 
+
+1203
+00:46:28,171 --> 00:46:28,931
+operation. 
+
+1204
+00:46:28,931 --> 00:46:32,111
+Don, I see you have your hand raised. 
+
+1205
+00:46:32,731 --> 00:46:35,371
+Yeah, I have. 
+
+1206
+00:46:35,371 --> 00:46:37,931
+Very engaged in all this stuff. 
+
+1207
+00:46:38,595 --> 00:46:42,575
+You triggered a question here that I, a 
+
+1208
+00:46:42,575 --> 00:46:43,175
+little mystery. 
+
+1209
+00:46:43,175 --> 00:46:45,295
+I'm just checking on this co-work thing 
+
+1210
+00:46:45,295 --> 00:46:46,355
+that I worked with. 
+
+1211
+00:46:46,355 --> 00:46:49,555
+I was like suddenly wondering, how much 
+
+1212
+00:46:49,555 --> 00:46:51,795
+is co-work aware of all of our other 
+
+1213
+00:46:51,795 --> 00:46:53,715
+conversations that I did in the chat? 
+
+1214
+00:46:53,715 --> 00:46:58,055
+And it seems like it's somewhat tuned in. 
+
+1215
+00:46:58,055 --> 00:46:59,995
+What do you guys think? 
+
+1216
+00:46:59,995 --> 00:47:03,735
+I don't use co-work a whole lot myself. 
+
+1217
+00:47:03,735 --> 00:47:06,395
+I would suggest you just, like anything, 
+
+1218
+00:47:06,395 --> 00:47:09,655
+there's a bunch of stuff with AI these days. 
+
+1219
+00:47:09,655 --> 00:47:12,935
+I would just look at their privacy policy in 
+
+1220
+00:47:12,935 --> 00:47:15,175
+terms of service and understand their 
+
+1221
+00:47:15,175 --> 00:47:15,675
+security. 
+
+1222
+00:47:15,675 --> 00:47:18,655
+You know, you won't have the same 
+
+1223
+00:47:18,655 --> 00:47:20,355
+securities right now as you're going 
+
+1224
+00:47:20,355 --> 00:47:22,255
+through things, building your master 
+
+1225
+00:47:22,255 --> 00:47:24,675
+prompt, just using Claw in the project 
+
+1226
+00:47:24,675 --> 00:47:25,995
+form, like we talked about. 
+
+1227
+00:47:25,995 --> 00:47:27,775
+But however, if you're doing different 
+
+1228
+00:47:27,775 --> 00:47:29,415
+things, once you're 
+
+1229
+00:47:30,011 --> 00:47:32,211
+executing and everything like, you know, 
+
+1230
+00:47:32,211 --> 00:47:33,791
+for example, like I mentioned, I'm using 
+
+1231
+00:47:33,791 --> 00:47:37,031
+clog code for certain things that is, has 
+
+1232
+00:47:37,031 --> 00:47:38,931
+access to every single thing on my 
+
+1233
+00:47:38,931 --> 00:47:39,491
+computer. 
+
+1234
+00:47:39,491 --> 00:47:42,431
+Um, and it's, it's using the local storage on 
+
+1235
+00:47:42,431 --> 00:47:43,311
+my computer as well. 
+
+1236
+00:47:43,311 --> 00:47:44,471
+And there's a variety of different ways 
+
+1237
+00:47:44,471 --> 00:47:45,531
+that you can revise that. 
+
+1238
+00:47:45,531 --> 00:47:47,971
+So any and every tool that you use, I 
+
+1239
+00:47:47,971 --> 00:47:50,511
+would just encourage you to look up the 
+
+1240
+00:47:50,511 --> 00:47:52,091
+security settings. 
+
+1241
+00:47:52,091 --> 00:47:55,471
+But, uh, so cowork invites you to point it 
+
+1242
+00:47:55,471 --> 00:47:56,271
+at a folder. 
+
+1243
+00:47:56,271 --> 00:47:57,971
+So I made a folder, I dropped a few 
+
+1244
+00:47:57,971 --> 00:48:01,307
+documents in there and I wanted to 
+
+1245
+00:48:01,307 --> 00:48:03,627
+co-work to be aware of all of our 
+
+1246
+00:48:03,627 --> 00:48:07,067
+conversations on the chat side. 
+
+1247
+00:48:07,067 --> 00:48:11,827
+And so anyway, I don't know how hooked 
+
+1248
+00:48:11,827 --> 00:48:12,787
+up that is. 
+
+1249
+00:48:12,787 --> 00:48:17,027
+I did ask Claude not to do training on its, 
+
+1250
+00:48:17,027 --> 00:48:19,867
+you know, there was an option on there 
+
+1251
+00:48:19,867 --> 00:48:21,687
+you guys pointed out that where you said, 
+
+1252
+00:48:21,687 --> 00:48:23,727
+no, don't train the whole world on what 
+
+1253
+00:48:23,727 --> 00:48:24,407
+we're doing here. 
+
+1254
+00:48:24,407 --> 00:48:26,167
+Yeah. 
+
+1255
+00:48:26,427 --> 00:48:29,007
+I did just look up, by the way, so co-work 
+
+1256
+00:48:29,007 --> 00:48:32,827
+does not have unrestricted default access 
+
+1257
+00:48:32,827 --> 00:48:34,627
+to your entire computer. 
+
+1258
+00:48:34,627 --> 00:48:42,287
+It operates within a secure and sort of 
+
+1259
+00:48:42,287 --> 00:48:44,787
+virtualized sandbox environment. 
+
+1260
+00:48:44,787 --> 00:48:46,487
+But does it have access to all 
+
+1261
+00:48:46,487 --> 00:48:48,227
+conversations on the chat side? 
+
+1262
+00:48:48,227 --> 00:48:50,087
+That's what I'm wondering. 
+
+1263
+00:48:50,087 --> 00:48:52,567
+it should only be like accessing specific 
+
+1264
+00:48:52,567 --> 00:48:53,947
+files or folders. 
+
+1265
+00:48:53,947 --> 00:48:56,427
+You specifically grant permission to do so 
+
+1266
+00:48:56,427 --> 00:48:58,747
+because you do, as you know, it will 
+
+1267
+00:48:58,747 --> 00:49:00,987
+actually ask you permission for whatever 
+
+1268
+00:49:00,987 --> 00:49:04,807
+prompt that you put in or task in this case. 
+
+1269
+00:49:04,807 --> 00:49:05,167
+Okay. 
+
+1270
+00:49:05,167 --> 00:49:07,667
+So kind of like notebook lm you've faded 
+
+1271
+00:49:07,667 --> 00:49:08,247
+files. 
+
+1272
+00:49:08,247 --> 00:49:10,167
+It talks about those files. 
+
+1273
+00:49:10,167 --> 00:49:10,707
+Yeah. 
+
+1274
+00:49:10,707 --> 00:49:11,387
+Yeah. 
+
+1275
+00:49:11,387 --> 00:49:14,587
+Because you, you have to point co-work to 
+
+1276
+00:49:14,587 --> 00:49:15,667
+specific folders. 
+
+1277
+00:49:15,667 --> 00:49:18,791
+It can't access files outside of that scope. 
+
+1278
+00:49:18,791 --> 00:49:20,831
+So when you say like, if you said, go into 
+
+1279
+00:49:20,831 --> 00:49:25,371
+my Don work file and pull up, look 
+
+1280
+00:49:25,371 --> 00:49:27,631
+through all the invoices I've sent out and 
+
+1281
+00:49:27,631 --> 00:49:30,091
+find and pull the, you know, the highest 
+
+1282
+00:49:30,091 --> 00:49:33,551
+revenue ones over the last 12 months, it 
+
+1283
+00:49:33,551 --> 00:49:35,011
+will literally do that task for you. 
+
+1284
+00:49:35,011 --> 00:49:35,611
+That's awesome. 
+
+1285
+00:49:35,611 --> 00:49:36,851
+And put them in a new folder. 
+
+1286
+00:49:36,851 --> 00:49:40,031
+Um, but before you do that, there will be a 
+
+1287
+00:49:40,031 --> 00:49:43,151
+question to say, can I access this folder 
+
+1288
+00:49:43,151 --> 00:49:43,771
+specifically? 
+
+1289
+00:49:43,771 --> 00:49:45,571
+Okay. 
+
+1290
+00:49:46,311 --> 00:49:48,411
+And unfortunately, I won't access my 
+
+1291
+00:49:48,411 --> 00:49:51,291
+Google Drive, my virtual Google Drive. 
+
+1292
+00:49:51,291 --> 00:49:56,031
+I have to move files onto my C drive before 
+
+1293
+00:49:56,031 --> 00:49:57,911
+it can get access to it. 
+
+1294
+00:49:57,911 --> 00:49:58,931
+Kind of a pain in the butt. 
+
+1295
+00:49:58,931 --> 00:50:01,391
+Well, for co-work, yes. 
+
+1296
+00:50:01,391 --> 00:50:03,131
+I mean, if you're talking about your 
+
+1297
+00:50:03,131 --> 00:50:04,951
+master prompt for like your company, 
+
+1298
+00:50:04,951 --> 00:50:06,871
+that's exactly what it does. 
+
+1299
+00:50:06,871 --> 00:50:09,071
+Or if you store it on Google Drive, which a 
+
+1300
+00:50:09,071 --> 00:50:11,451
+lot of people do once it's finished, if they 
+
+1301
+00:50:11,451 --> 00:50:13,671
+use that for their company currently or 
+
+1302
+00:50:13,671 --> 00:50:14,711
+Microsoft or. 
+
+1303
+00:50:15,079 --> 00:50:19,239
+our stage three software, it's really, the 
+
+1304
+00:50:19,239 --> 00:50:22,379
+advice on that is store it where you 
+
+1305
+00:50:22,379 --> 00:50:25,119
+typically were operating, like whatever 
+
+1306
+00:50:25,119 --> 00:50:27,159
+you use, it's a little easier that way. 
+
+1307
+00:50:27,159 --> 00:50:29,299
+But we certainly can recommend if you 
+
+1308
+00:50:29,299 --> 00:50:30,479
+have questions about it. 
+
+1309
+00:50:30,479 --> 00:50:32,319
+And we cover that in the end, once the 
+
+1310
+00:50:32,319 --> 00:50:33,879
+master prompt is sort of finished, like, 
+
+1311
+00:50:33,879 --> 00:50:35,619
+hey, how do you store this, share this with 
+
+1312
+00:50:35,619 --> 00:50:37,459
+your team and all of those things. 
+
+1313
+00:50:37,459 --> 00:50:39,979
+But right now, currently we're, as you all 
+
+1314
+00:50:39,979 --> 00:50:42,239
+know, kind of going through each section 
+
+1315
+00:50:42,239 --> 00:50:44,559
+of your business to do the assessments. 
+
+1316
+00:50:44,559 --> 00:50:46,339
+Hi, everybody, by the way. 
+
+1317
+00:50:46,339 --> 00:50:46,819
+Hey, Matt. 
+
+1318
+00:50:46,819 --> 00:50:49,179
+I've been around. 
+
+1319
+00:50:49,179 --> 00:50:51,079
+Unfortunately, schedule-wise, I haven't 
+
+1320
+00:50:51,079 --> 00:50:53,759
+been able to make any live sessions, but 
+
+1321
+00:50:53,759 --> 00:50:56,599
+this has been a hell of a course so far, and 
+
+1322
+00:50:56,599 --> 00:50:57,819
+so thanks for all the work. 
+
+1323
+00:50:57,819 --> 00:50:59,159
+Thank you, my friend. 
+
+1324
+00:50:59,159 --> 00:51:00,259
+I appreciate that. 
+
+1325
+00:51:00,259 --> 00:51:03,259
+Well, no pressure, Matt, but you just 
+
+1326
+00:51:03,259 --> 00:51:06,759
+logged in, so wherever you're at, you can 
+
+1327
+00:51:06,759 --> 00:51:08,559
+share with everybody, or if you have 
+
+1328
+00:51:08,559 --> 00:51:10,419
+anything you'd like to unpack, we'd be 
+
+1329
+00:51:10,419 --> 00:51:11,019
+happy to help. 
+
+1330
+00:51:11,019 --> 00:51:13,399
+Of course, you can learn a lot from us, but 
+
+1331
+00:51:13,399 --> 00:51:15,499
+also these people have been going 
+
+1332
+00:51:15,499 --> 00:51:17,099
+through the program with you. 
+
+1333
+00:51:17,099 --> 00:51:20,359
+So it's just a kind of a open Q and a or 
+
+1334
+00:51:20,359 --> 00:51:21,679
+open dialogue. 
+
+1335
+00:51:21,679 --> 00:51:24,119
+Do you have a couple of questions? 
+
+1336
+00:51:24,119 --> 00:51:26,639
+Um, as far as where I'm at, I'm, I'm, I just 
+
+1337
+00:51:26,639 --> 00:51:32,499
+finished the fourth, uh, lesson and all of 
+
+1338
+00:51:32,499 --> 00:51:34,379
+the prompts and all of that. 
+
+1339
+00:51:34,379 --> 00:51:37,679
+And, um, and so I think the question I had, 
+
+1340
+00:51:37,679 --> 00:51:41,259
+cause this just came up is that at times 
+
+1341
+00:51:41,259 --> 00:51:43,799
+Claude gets a little, um, 
+
+1342
+00:51:43,799 --> 00:51:44,639
+Ambitious. 
+
+1343
+00:51:44,639 --> 00:51:47,999
+And so at one point he, you know, it was 
+
+1344
+00:51:47,999 --> 00:51:50,679
+putting together like all of the level one, 
+
+1345
+00:51:50,679 --> 00:51:52,819
+level two sops into one big document. 
+
+1346
+00:51:52,819 --> 00:51:55,059
+And I had just finished the video about 
+
+1347
+00:51:55,059 --> 00:51:56,179
+splitting that off. 
+
+1348
+00:51:56,179 --> 00:51:58,739
+And so i said hey hey whoa i don't want 
+
+1349
+00:51:58,739 --> 00:51:59,559
+one big document. 
+
+1350
+00:51:59,559 --> 00:52:01,099
+I want like multiples. 
+
+1351
+00:52:01,099 --> 00:52:03,419
+And I'm curious. 
+
+1352
+00:52:03,419 --> 00:52:06,339
+So what happened in this, I learned this 
+
+1353
+00:52:06,339 --> 00:52:09,019
+before and i'll tell you guys how i handle 
+
+1354
+00:52:09,019 --> 00:52:09,179
+it. 
+
+1355
+00:52:09,179 --> 00:52:10,879
+And then i'm curious on whether i'm doing 
+
+1356
+00:52:10,879 --> 00:52:12,059
+it the right way or if anybody else sees 
+
+1357
+00:52:12,059 --> 00:52:15,703
+this, but Oftentimes when I ask Claude or 
+
+1358
+00:52:15,703 --> 00:52:17,983
+Jim and I to do something like that, where 
+
+1359
+00:52:17,983 --> 00:52:19,023
+it's like, okay, you've created this 
+
+1360
+00:52:19,023 --> 00:52:20,723
+document, but really what I wanted was 
+
+1361
+00:52:20,723 --> 00:52:24,903
+these four, I would get errors in the 
+
+1362
+00:52:24,903 --> 00:52:25,783
+documents that it made. 
+
+1363
+00:52:25,783 --> 00:52:30,343
+And so what I started to do is after it 
+
+1364
+00:52:30,343 --> 00:52:32,163
+would produce that new document, I 
+
+1365
+00:52:32,163 --> 00:52:33,043
+would have it do an audit. 
+
+1366
+00:52:33,043 --> 00:52:35,183
+I would say, Hey, I want you to audit it 
+
+1367
+00:52:35,183 --> 00:52:37,043
+against the project files. 
+
+1368
+00:52:37,043 --> 00:52:40,043
+Tell me what you find and find it. 
+
+1369
+00:52:40,043 --> 00:52:41,443
+And then I would have it reproduce, you 
+
+1370
+00:52:41,443 --> 00:52:42,343
+know, and then I would have it, 
+
+1371
+00:52:42,583 --> 00:52:45,823
+you know, go from there at times that's 
+
+1372
+00:52:45,823 --> 00:52:46,583
+worked really well. 
+
+1373
+00:52:46,583 --> 00:52:47,763
+And then sometimes it feels like a going 
+
+1374
+00:52:47,763 --> 00:52:50,023
+down a rabbit hole where it's like, I get 
+
+1375
+00:52:50,023 --> 00:52:50,523
+errors. 
+
+1376
+00:52:50,523 --> 00:52:51,923
+It just kind of compounds. 
+
+1377
+00:52:51,923 --> 00:52:54,143
+So I'm curious, like how you guys handle 
+
+1378
+00:52:54,143 --> 00:52:56,883
+situations like that. 
+
+1379
+00:52:56,883 --> 00:52:59,443
+Didn't see it happen. 
+
+1380
+00:52:59,443 --> 00:53:01,043
+Yeah. 
+
+1381
+00:53:01,043 --> 00:53:03,743
+I mean myself, I mean, how I typically do it 
+
+1382
+00:53:03,743 --> 00:53:06,963
+when I create an SOP in this course 
+
+1383
+00:53:06,963 --> 00:53:08,123
+regard, like, so let's say you're going 
+
+1384
+00:53:08,123 --> 00:53:10,163
+through an assessment and I create a 
+
+1385
+00:53:10,163 --> 00:53:13,639
+level one SOP, for example, Um, I, I 
+
+1386
+00:53:13,639 --> 00:53:17,699
+personally have never used Claude, um, to 
+
+1387
+00:53:17,699 --> 00:53:20,419
+sort of, you know, go back on its own. 
+
+1388
+00:53:20,419 --> 00:53:23,359
+That's when I like it does the, the, the time 
+
+1389
+00:53:23,359 --> 00:53:24,279
+consuming part for me. 
+
+1390
+00:53:24,279 --> 00:53:26,859
+So I like to just go over the SOP or 
+
+1391
+00:53:26,859 --> 00:53:28,859
+whatever architect you end up producing. 
+
+1392
+00:53:28,859 --> 00:53:31,339
+That's what, where I spend my time. 
+
+1393
+00:53:31,339 --> 00:53:33,139
+Most of the questions in the back and 
+
+1394
+00:53:33,139 --> 00:53:35,599
+forth are pretty, or I'll say fairly 
+
+1395
+00:53:35,599 --> 00:53:36,179
+straightforward. 
+
+1396
+00:53:36,179 --> 00:53:38,819
+So when an SOP is created, I'm going to go 
+
+1397
+00:53:38,819 --> 00:53:41,379
+over it with my eyeballs and just say, Hey, 
+
+1398
+00:53:42,231 --> 00:53:45,091
+you know, change this part and then just 
+
+1399
+00:53:45,091 --> 00:53:45,731
+redo it. 
+
+1400
+00:53:45,731 --> 00:53:46,971
+And that's going to be the finalized 
+
+1401
+00:53:46,971 --> 00:53:47,471
+version. 
+
+1402
+00:53:47,471 --> 00:53:51,071
+So that could be one to potentially a lot of 
+
+1403
+00:53:51,071 --> 00:53:53,291
+iterations if Claude doesn't understand 
+
+1404
+00:53:53,291 --> 00:53:54,891
+some things about your company in that 
+
+1405
+00:53:54,891 --> 00:53:55,271
+regard. 
+
+1406
+00:53:55,271 --> 00:53:57,331
+But, you know, like anything, there's no 
+
+1407
+00:53:57,331 --> 00:53:58,231
+one way to do anything. 
+
+1408
+00:53:58,231 --> 00:54:01,191
+If you all have been in a similar experience 
+
+1409
+00:54:01,191 --> 00:54:03,251
+as Matt, you feel free to share how you've 
+
+1410
+00:54:03,251 --> 00:54:05,411
+kind of unpacked that for yourself if 
+
+1411
+00:54:05,411 --> 00:54:05,711
+helpful. 
+
+1412
+00:54:05,931 --> 00:54:10,411
+I do have a follow-up on that too that I'm 
+
+1413
+00:54:10,411 --> 00:54:12,823
+curious on because it kind of one leads 
+
+1414
+00:54:12,823 --> 00:54:15,423
+into the other is that one of the situations 
+
+1415
+00:54:15,423 --> 00:54:18,703
+I ran into was realizing as I went through 
+
+1416
+00:54:18,703 --> 00:54:19,383
+the process. 
+
+1417
+00:54:19,383 --> 00:54:21,743
+So I, for, I guess, for everybody's sake, 
+
+1418
+00:54:21,743 --> 00:54:22,843
+cause I haven't been on here before. 
+
+1419
+00:54:22,843 --> 00:54:26,023
+I, um, I'm the executive vice president for 
+
+1420
+00:54:26,023 --> 00:54:28,603
+a marketing agency, but I just launched a 
+
+1421
+00:54:28,603 --> 00:54:30,443
+consulting division business unit. 
+
+1422
+00:54:30,443 --> 00:54:31,923
+And that's really kind of where I'm gonna 
+
+1423
+00:54:31,923 --> 00:54:33,563
+be spending all my time going forward. 
+
+1424
+00:54:33,563 --> 00:54:36,003
+And I'm having to build it from scratch, 
+
+1425
+00:54:36,003 --> 00:54:38,983
+um, how we do strategic engagements, 
+
+1426
+00:54:38,983 --> 00:54:40,603
+differentiation, everything. 
+
+1427
+00:54:41,463 --> 00:54:44,263
+Um, and so in building those processes, 
+
+1428
+00:54:44,263 --> 00:54:46,783
+my original, you know, I had phases 
+
+1429
+00:54:46,783 --> 00:54:47,223
+essentially. 
+
+1430
+00:54:47,223 --> 00:54:51,403
+And what happened in doing the exercise 
+
+1431
+00:54:51,403 --> 00:54:52,943
+yesterday is that I realized that there 
+
+1432
+00:54:52,943 --> 00:54:56,443
+were some blueprint style sections that 
+
+1433
+00:54:56,443 --> 00:54:58,383
+were kind of in the wrong phase. 
+
+1434
+00:54:58,383 --> 00:55:02,103
+So kind of the same question as before, 
+
+1435
+00:55:02,103 --> 00:55:05,363
+but like when you iterate, like you guys 
+
+1436
+00:55:05,363 --> 00:55:06,523
+are all going through your business 
+
+1437
+00:55:06,523 --> 00:55:09,143
+processes or, or Josh Midori, What is the 
+
+1438
+00:55:09,143 --> 00:55:13,983
+ideal way to go back and iterate on that 
+
+1439
+00:55:13,983 --> 00:55:14,423
+stuff? 
+
+1440
+00:55:14,423 --> 00:55:16,603
+I can tell you what I did. 
+
+1441
+00:55:16,603 --> 00:55:19,483
+And I was in the success to delivery chat. 
+
+1442
+00:55:19,483 --> 00:55:23,543
+And when I was like, oh, I need to do this. 
+
+1443
+00:55:23,543 --> 00:55:25,803
+And I asked it, I was like, hey, what would 
+
+1444
+00:55:25,803 --> 00:55:27,743
+be the best way to go about this? 
+
+1445
+00:55:27,743 --> 00:55:29,283
+And it basically created a guide. 
+
+1446
+00:55:29,283 --> 00:55:31,723
+And then I went and started a new chat. 
+
+1447
+00:55:31,723 --> 00:55:34,203
+I uploaded the guide, uploaded all of the 
+
+1448
+00:55:34,203 --> 00:55:37,343
+documents in the previous iteration. 
+
+1449
+00:55:37,343 --> 00:55:39,563
+And, and then it reproduced those 
+
+1450
+00:55:39,563 --> 00:55:40,123
+documents. 
+
+1451
+00:55:40,123 --> 00:55:41,623
+And so i just basically went through it that 
+
+1452
+00:55:41,623 --> 00:55:41,803
+way. 
+
+1453
+00:55:41,803 --> 00:55:43,743
+Is that what everybody else is doing when 
+
+1454
+00:55:43,743 --> 00:55:45,323
+you're iterating like that or have 
+
+1455
+00:55:45,323 --> 00:55:46,503
+something comes up where it kind of 
+
+1456
+00:55:46,503 --> 00:55:47,883
+changes your SOPs? 
+
+1457
+00:55:48,343 --> 00:55:50,363
+Yeah. 
+
+1458
+00:55:50,363 --> 00:55:52,323
+And certainly anybody else can answer. 
+
+1459
+00:55:52,323 --> 00:55:53,703
+I would say yes. 
+
+1460
+00:55:53,703 --> 00:55:57,563
+Um, again, I, I think that as you're going 
+
+1461
+00:55:57,563 --> 00:55:59,603
+through any of these, the, the reason the 
+
+1462
+00:55:59,603 --> 00:56:01,343
+prompts are structured the way that they 
+
+1463
+00:56:01,343 --> 00:56:04,623
+are, Matt, why, why there's a conversation 
+
+1464
+00:56:04,623 --> 00:56:06,863
+is because it it starts to let you know 
+
+1465
+00:56:06,863 --> 00:56:08,463
+what, Claude doesn't understand about 
+
+1466
+00:56:08,463 --> 00:56:09,003
+your business. 
+
+1467
+00:56:09,003 --> 00:56:12,143
+And so for you, if you're focusing on the 
+
+1468
+00:56:12,143 --> 00:56:15,863
+consultating processes from scratch 
+
+1469
+00:56:15,863 --> 00:56:17,883
+outside of your marketing agency, there's 
+
+1470
+00:56:17,883 --> 00:56:20,423
+probably a little bit more that you will 
+
+1471
+00:56:20,423 --> 00:56:23,283
+have to do in that regard, just because 
+
+1472
+00:56:23,283 --> 00:56:26,123
+we've had people do the exact same thing. 
+
+1473
+00:56:26,123 --> 00:56:28,903
+And I haven't done it from like starting 
+
+1474
+00:56:28,903 --> 00:56:31,223
+from scratch business, but I would think 
+
+1475
+00:56:31,223 --> 00:56:34,563
+that Claude is very optimistic and it 
+
+1476
+00:56:34,563 --> 00:56:35,103
+probably 
+
+1477
+00:56:35,459 --> 00:56:38,099
+gives very grandiose plans and things that 
+
+1478
+00:56:38,099 --> 00:56:40,799
+sound good, especially if this is truly 
+
+1479
+00:56:40,799 --> 00:56:41,979
+starting from scratch. 
+
+1480
+00:56:41,979 --> 00:56:44,519
+And so that's what I remind everybody. 
+
+1481
+00:56:44,519 --> 00:56:46,799
+You know, there's a lot of solopreneur to 
+
+1482
+00:56:46,799 --> 00:56:49,159
+like 10 person companies here that, that 
+
+1483
+00:56:49,159 --> 00:56:51,479
+last part of the third SOP, we're a small 
+
+1484
+00:56:51,479 --> 00:56:53,219
+team, you know, and power lab is about 
+
+1485
+00:56:53,219 --> 00:56:53,759
+10 people. 
+
+1486
+00:56:53,759 --> 00:56:56,339
+So, you know, some of the plans that get 
+
+1487
+00:56:56,339 --> 00:56:59,339
+spit out that last part of the, the SOP 
+
+1488
+00:56:59,339 --> 00:57:02,259
+process of like, is this over engineered for 
+
+1489
+00:57:02,259 --> 00:57:05,551
+a team my size or, Is this completely 
+
+1490
+00:57:05,551 --> 00:57:08,271
+over-engineered knowing that I'm starting 
+
+1491
+00:57:08,271 --> 00:57:10,671
+this process from scratch and just having 
+
+1492
+00:57:10,671 --> 00:57:13,011
+that kind of iterative process, but I don't 
+
+1493
+00:57:13,011 --> 00:57:15,431
+think you're doing anything wrong by any 
+
+1494
+00:57:15,431 --> 00:57:17,111
+means. 
+
+1495
+00:57:17,111 --> 00:57:17,991
+I appreciate that. 
+
+1496
+00:57:17,991 --> 00:57:22,091
+I had, I had a, yeah, let's say a similar issue 
+
+1497
+00:57:22,091 --> 00:57:27,391
+in the same cohort, sorry, in the same 
+
+1498
+00:57:27,391 --> 00:57:27,691
+part. 
+
+1499
+00:57:27,691 --> 00:57:30,331
+I think it's four, number four. 
+
+1500
+00:57:30,331 --> 00:57:33,391
+I discussed that with Hayden. 
+
+1501
+00:57:33,955 --> 00:57:38,895
+And my solution at the end was going 
+
+1502
+00:57:38,895 --> 00:57:44,015
+back to two steps before, reiterate it 
+
+1503
+00:57:44,015 --> 00:57:47,795
+again, and create a new chat doing the 
+
+1504
+00:57:47,795 --> 00:57:48,875
+same work. 
+
+1505
+00:57:48,875 --> 00:57:55,155
+And while doing that, I detected I might 
+
+1506
+00:57:55,155 --> 00:58:02,215
+forgot to add one chat output, so an 
+
+1507
+00:58:02,215 --> 00:58:02,895
+empty file. 
+
+1508
+00:58:03,395 --> 00:58:06,295
+the project as an artifact. 
+
+1509
+00:58:06,295 --> 00:58:12,495
+And therefore, he lost traction and 
+
+1510
+00:58:12,495 --> 00:58:16,975
+created then strange proposals for the 
+
+1511
+00:58:16,975 --> 00:58:17,555
+blueprints. 
+
+1512
+00:58:17,555 --> 00:58:19,975
+Totally wrong. 
+
+1513
+00:58:19,975 --> 00:58:24,155
+And yeah, it's an assumption because I 
+
+1514
+00:58:24,155 --> 00:58:25,635
+cannot remember because it's so 
+
+1515
+00:58:25,635 --> 00:58:26,275
+overwhelming. 
+
+1516
+00:58:26,275 --> 00:58:30,795
+I don't know where I stepped out of the 
+
+1517
+00:58:30,795 --> 00:58:31,435
+procedure. 
+
+1518
+00:58:32,003 --> 00:58:37,463
+Anyway, it is sometimes worse to step one 
+
+1519
+00:58:37,463 --> 00:58:41,343
+step back and then going to forward, let's 
+
+1520
+00:58:41,343 --> 00:58:43,323
+say. 
+
+1521
+00:58:43,323 --> 00:58:44,603
+Yeah, that's my experience. 
+
+1522
+00:58:44,603 --> 00:58:47,763
+I've definitely experienced before this 
+
+1523
+00:58:47,763 --> 00:58:49,823
+course, the grandiosity for sure. 
+
+1524
+00:58:49,823 --> 00:58:53,563
+My phase zero of, you know, five phase 
+
+1525
+00:58:53,563 --> 00:58:54,763
+approach to doing a strategic 
+
+1526
+00:58:54,763 --> 00:58:55,243
+engagement. 
+
+1527
+00:58:55,243 --> 00:58:57,083
+I work specifically in tourism. 
+
+1528
+00:58:57,083 --> 00:58:59,243
+So I work with destination marketing 
+
+1529
+00:58:59,243 --> 00:59:01,263
+organizations and 
+
+1530
+00:59:01,667 --> 00:59:04,347
+It was like 28 pages for phase zero. 
+
+1531
+00:59:04,347 --> 00:59:05,247
+Yeah. 
+
+1532
+00:59:05,247 --> 00:59:05,707
+Yeah. 
+
+1533
+00:59:05,707 --> 00:59:08,487
+And Matt, why we certainly appreciate 
+
+1534
+00:59:08,487 --> 00:59:10,627
+that because obviously if you were a, a 
+
+1535
+00:59:10,627 --> 00:59:13,587
+larger mature organization, um, that, that 
+
+1536
+00:59:13,587 --> 00:59:14,267
+is awesome. 
+
+1537
+00:59:14,267 --> 00:59:17,487
+But that again, it's that key part of, I do 
+
+1538
+00:59:17,487 --> 00:59:18,947
+this a lot, you know, there's, there's 
+
+1539
+00:59:18,947 --> 00:59:20,347
+constant iterations, right? 
+
+1540
+00:59:20,347 --> 00:59:22,527
+Like even internally, since it's your call, 
+
+1541
+00:59:22,527 --> 00:59:23,827
+Matt, I'll tell you, you know, as, as a 
+
+1542
+00:59:23,827 --> 00:59:26,067
+leadership team here with our master 
+
+1543
+00:59:26,067 --> 00:59:27,647
+prompt, you know, we, we built it. 
+
+1544
+00:59:27,939 --> 00:59:29,359
+And we had our core one, but then 
+
+1545
+00:59:29,359 --> 00:59:31,039
+different people of the leadership team 
+
+1546
+00:59:31,039 --> 00:59:34,199
+own different actual like lead to sale or 
+
+1547
+00:59:34,199 --> 00:59:36,979
+market to lead wherever you are the 
+
+1548
+00:59:36,979 --> 00:59:37,479
+leader at. 
+
+1549
+00:59:37,479 --> 00:59:40,379
+And we thought we were going to redo the 
+
+1550
+00:59:40,379 --> 00:59:41,599
+assessment quarterly. 
+
+1551
+00:59:41,599 --> 00:59:44,399
+That was the idea that in our head, but 
+
+1552
+00:59:44,399 --> 00:59:46,819
+the truth is, is it, it ends up happening a 
+
+1553
+00:59:46,819 --> 00:59:48,119
+lot sooner than that. 
+
+1554
+00:59:48,119 --> 00:59:50,479
+It even for the variety of reason, if like, 
+
+1555
+00:59:50,479 --> 00:59:52,359
+think about for all of you can relate to in 
+
+1556
+00:59:52,359 --> 00:59:54,539
+the simplest form, whatever assessment 
+
+1557
+00:59:54,539 --> 00:59:56,559
+they're talking about delivery to success, 
+
+1558
+00:59:56,559 --> 00:59:56,819
+but 
+
+1559
+00:59:57,027 --> 00:59:59,667
+Let's say someone leaves someone in 
+
+1560
+00:59:59,667 --> 01:00:01,187
+sales, someone in marketing, someone in 
+
+1561
+01:00:01,187 --> 01:00:02,427
+your operation leaves. 
+
+1562
+01:00:02,427 --> 01:00:05,807
+That's a big part that I, you know, iterate 
+
+1563
+01:00:05,807 --> 01:00:07,887
+like, Hey, this person left, we hired a new 
+
+1564
+01:00:07,887 --> 01:00:10,187
+person or this person left in the 
+
+1565
+01:00:10,187 --> 01:00:13,087
+meantime, I am filling the gap or this 
+
+1566
+01:00:13,087 --> 01:00:14,927
+person is now filling the gap. 
+
+1567
+01:00:14,927 --> 01:00:17,307
+How can we streamline with their 
+
+1568
+01:00:17,307 --> 01:00:21,047
+responsibilities, ABC, along with D E and F 
+
+1569
+01:00:21,047 --> 01:00:22,387
+to make sure that they're not 
+
+1570
+01:00:22,387 --> 01:00:22,927
+overwhelmed. 
+
+1571
+01:00:22,927 --> 01:00:26,107
+I mean, there's the editor of process is 
+
+1572
+01:00:26,107 --> 01:00:26,507
+great. 
+
+1573
+01:00:26,915 --> 01:00:29,255
+Because above anything, you're getting 
+
+1574
+01:00:29,255 --> 01:00:33,995
+thought leadership from AI on top of 
+
+1575
+01:00:33,995 --> 01:00:35,915
+speed, efficiency, quality of output, 
+
+1576
+01:00:35,915 --> 01:00:37,535
+because it has the business brain. 
+
+1577
+01:00:37,535 --> 01:00:41,135
+So the iterative process will never stop. 
+
+1578
+01:00:41,135 --> 01:00:44,515
+And just like Benny's point, like if you 
+
+1579
+01:00:44,515 --> 01:00:47,755
+forget to add an artifact to your master 
+
+1580
+01:00:47,755 --> 01:00:50,235
+prompt or you end up going back by the 
+
+1581
+01:00:50,235 --> 01:00:51,855
+end of this, you might say something 
+
+1582
+01:00:51,855 --> 01:00:54,375
+drastically changed in my marketing 
+
+1583
+01:00:54,375 --> 01:00:56,015
+process or my sales or 
+
+1584
+01:00:56,899 --> 01:00:58,259
+you know, delivery to success. 
+
+1585
+01:00:58,259 --> 01:01:00,099
+But if you have account managers in 
+
+1586
+01:01:00,099 --> 01:01:02,439
+Matt's case, if he's an agency or what, 
+
+1587
+01:01:02,439 --> 01:01:04,059
+everyone has a lot of different types of 
+
+1588
+01:01:04,059 --> 01:01:06,919
+businesses, but you could go back, reopen 
+
+1589
+01:01:06,919 --> 01:01:10,639
+the chat from, and from this last produced 
+
+1590
+01:01:10,639 --> 01:01:14,799
+artifact, I'd like you to, you know, take it 
+
+1591
+01:01:14,799 --> 01:01:16,179
+wherever you want to go from there. 
+
+1592
+01:01:16,179 --> 01:01:17,859
+And then to Matt's point, you're looking at 
+
+1593
+01:01:17,859 --> 01:01:19,719
+the output and then you may take that 
+
+1594
+01:01:19,719 --> 01:01:23,219
+and save it over your, you know, delivery 
+
+1595
+01:01:23,219 --> 01:01:25,479
+to success assessment, just to make sure 
+
+1596
+01:01:25,479 --> 01:01:27,759
+things are, up to date. 
+
+1597
+01:01:27,759 --> 01:01:30,879
+I, um, well, my last two things is I know 
+
+1598
+01:01:30,879 --> 01:01:31,499
+we're at time. 
+
+1599
+01:01:31,499 --> 01:01:36,059
+Um, one, are, are you guys, this might be a 
+
+1600
+01:01:36,059 --> 01:01:36,579
+dumb question. 
+
+1601
+01:01:36,579 --> 01:01:39,879
+Are you guys saving the HTML files into 
+
+1602
+01:01:39,879 --> 01:01:42,479
+your projects or is that only for stage 
+
+1603
+01:01:42,479 --> 01:01:43,019
+three? 
+
+1604
+01:01:43,019 --> 01:01:45,479
+That's a good question. 
+
+1605
+01:01:45,479 --> 01:01:46,519
+I had the same. 
+
+1606
+01:01:46,519 --> 01:01:46,879
+Yeah. 
+
+1607
+01:01:46,879 --> 01:01:47,339
+Yeah. 
+
+1608
+01:01:47,339 --> 01:01:48,379
+He had the same. 
+
+1609
+01:01:48,379 --> 01:01:50,959
+I mean, you, you can absolutely do it, 
+
+1610
+01:01:50,959 --> 01:01:50,999
+Benny. 
+
+1611
+01:01:50,999 --> 01:01:52,759
+I think you were, I think you were asking, 
+
+1612
+01:01:53,111 --> 01:01:55,231
+specifically about your SOP. 
+
+1613
+01:01:55,231 --> 01:01:58,511
+So the, an SOP artifact is just a markdown 
+
+1614
+01:01:58,511 --> 01:02:01,671
+file, but in an HTML file specifically, you 
+
+1615
+01:02:01,671 --> 01:02:03,291
+can certainly put it in your master 
+
+1616
+01:02:03,291 --> 01:02:03,691
+prompt. 
+
+1617
+01:02:03,691 --> 01:02:06,971
+Um, it becomes a little more convenient in 
+
+1618
+01:02:06,971 --> 01:02:09,351
+stage three map, just because when you 
+
+1619
+01:02:09,351 --> 01:02:11,971
+copy you literally, instead of like, I'm not 
+
+1620
+01:02:11,971 --> 01:02:13,271
+sure how you're adding it to your master 
+
+1621
+01:02:13,271 --> 01:02:13,511
+prompt. 
+
+1622
+01:02:13,511 --> 01:02:14,911
+You saw the different ways, but for the 
+
+1623
+01:02:14,911 --> 01:02:17,531
+HTML, when you put it in stage three, it 
+
+1624
+01:02:17,531 --> 01:02:20,011
+immediately populates like the visual 
+
+1625
+01:02:20,011 --> 01:02:22,151
+element, which is super helpful. 
+
+1626
+01:02:22,679 --> 01:02:24,779
+And really what you won't see in Claude, 
+
+1627
+01:02:24,779 --> 01:02:27,179
+unless you're sort of looking into the 
+
+1628
+01:02:27,179 --> 01:02:29,839
+artifact itself, opposed to like in the 
+
+1629
+01:02:29,839 --> 01:02:30,399
+master prompt. 
+
+1630
+01:02:30,399 --> 01:02:33,099
+So does that answer your question? 
+
+1631
+01:02:33,099 --> 01:02:34,579
+No, it totally does. 
+
+1632
+01:02:34,579 --> 01:02:37,779
+And then another project file question is 
+
+1633
+01:02:37,779 --> 01:02:41,539
+that eventually what I need to do will be 
+
+1634
+01:02:41,539 --> 01:02:44,739
+to have this instance guide me with how 
+
+1635
+01:02:44,739 --> 01:02:46,939
+to set up things like Asana, because that's 
+
+1636
+01:02:46,939 --> 01:02:48,999
+what we'll do for project management 
+
+1637
+01:02:48,999 --> 01:02:51,119
+within the environment that I'm in. 
+
+1638
+01:02:51,991 --> 01:02:53,831
+When you guys are doing that, do you 
+
+1639
+01:02:53,831 --> 01:02:56,531
+suggest, I mean, is there enough built in 
+
+1640
+01:02:56,531 --> 01:02:59,691
+baked in knowledge for Claude to handle 
+
+1641
+01:02:59,691 --> 01:03:01,051
+instructions? 
+
+1642
+01:03:01,051 --> 01:03:02,551
+Because what I've run into in the past is 
+
+1643
+01:03:02,551 --> 01:03:03,811
+that sometimes it'll tell you to do all these 
+
+1644
+01:03:03,811 --> 01:03:06,291
+things and it's, you know, either 
+
+1645
+01:03:06,291 --> 01:03:08,011
+hallucinating or it's using an old version or 
+
+1646
+01:03:08,011 --> 01:03:08,291
+whatever. 
+
+1647
+01:03:08,291 --> 01:03:10,351
+So do you guys typically like go and 
+
+1648
+01:03:10,351 --> 01:03:13,491
+download some big manual for like Asana 
+
+1649
+01:03:13,491 --> 01:03:15,011
+or whatever, and then put that in the 
+
+1650
+01:03:15,011 --> 01:03:15,711
+project files? 
+
+1651
+01:03:15,711 --> 01:03:19,251
+Is that good idea, bad idea? 
+
+1652
+01:03:19,767 --> 01:03:22,467
+No, I think it's a good question. 
+
+1653
+01:03:22,467 --> 01:03:27,627
+How I've handled this is the good news is 
+
+1654
+01:03:27,627 --> 01:03:32,167
+with the open API, things can pretty much 
+
+1655
+01:03:32,167 --> 01:03:33,527
+integrate directly. 
+
+1656
+01:03:33,527 --> 01:03:37,087
+Now, an easy way, a lot of people use 
+
+1657
+01:03:37,087 --> 01:03:39,207
+Zapier for a variety of reasons. 
+
+1658
+01:03:39,207 --> 01:03:40,427
+It's cheap. 
+
+1659
+01:03:40,427 --> 01:03:44,047
+At this point, it kind of integrates with 
+
+1660
+01:03:44,047 --> 01:03:44,607
+everything. 
+
+1661
+01:03:44,607 --> 01:03:46,087
+And at worst case, 
+
+1662
+01:03:46,263 --> 01:03:48,383
+whatever system like Asana or let's say 
+
+1663
+01:03:48,383 --> 01:03:53,083
+you use kind of a rare system, I'm pretty 
+
+1664
+01:03:53,083 --> 01:03:54,843
+confident that it'll integrate with Zapier. 
+
+1665
+01:03:54,843 --> 01:03:56,683
+And like one thing that I've figured out 
+
+1666
+01:03:56,683 --> 01:03:58,163
+through Claude is like sometimes things 
+
+1667
+01:03:58,163 --> 01:04:01,923
+don't directly integrate, but in just having 
+
+1668
+01:04:01,923 --> 01:04:04,563
+a dialogue with Claude, Matt, like 
+
+1669
+01:04:04,563 --> 01:04:07,743
+anything will zap to a Google Sheet and 
+
+1670
+01:04:07,743 --> 01:04:09,203
+Google Sheet will go to anything. 
+
+1671
+01:04:09,203 --> 01:04:11,443
+So sometimes I've just added a step like, 
+
+1672
+01:04:11,443 --> 01:04:14,423
+hey, this isn't in automation or workflow 
+
+1673
+01:04:14,423 --> 01:04:15,203
+in this scenario. 
+
+1674
+01:04:15,927 --> 01:04:18,867
+But I absolutely start just like you said, 
+
+1675
+01:04:18,867 --> 01:04:21,507
+like if I said, hey, I use Asana as my project 
+
+1676
+01:04:21,507 --> 01:04:24,447
+management tool in my company blank or 
+
+1677
+01:04:24,447 --> 01:04:26,227
+like I'm wanting to use it for my new 
+
+1678
+01:04:26,227 --> 01:04:28,407
+consulting, however you're going about 
+
+1679
+01:04:28,407 --> 01:04:29,047
+this. 
+
+1680
+01:04:29,047 --> 01:04:32,627
+This is the current technology that I have. 
+
+1681
+01:04:32,627 --> 01:04:35,407
+I have nothing but a Google Drive and I 
+
+1682
+01:04:35,407 --> 01:04:36,707
+just signed up for Asana. 
+
+1683
+01:04:37,207 --> 01:04:38,907
+This is the workflow and all of these 
+
+1684
+01:04:38,907 --> 01:04:39,307
+different things. 
+
+1685
+01:04:39,307 --> 01:04:40,647
+You could kind of unpack that. 
+
+1686
+01:04:40,647 --> 01:04:42,547
+And I'm looking to integrate this directly. 
+
+1687
+01:04:42,547 --> 01:04:44,767
+Could you give me an overview framework 
+
+1688
+01:04:44,767 --> 01:04:46,547
+of exactly what that would look like from 
+
+1689
+01:04:46,547 --> 01:04:47,687
+a technical standpoint? 
+
+1690
+01:04:47,687 --> 01:04:51,327
+A lot of times it will give you is like, well, 
+
+1691
+01:04:51,327 --> 01:04:52,867
+you're going to need a connector to 
+
+1692
+01:04:52,867 --> 01:04:55,427
+connect this and you could use Zapier or 
+
+1693
+01:04:55,427 --> 01:04:57,927
+different other web hooks and things. 
+
+1694
+01:04:57,927 --> 01:05:00,387
+Or like if it's open API, like it just connects 
+
+1695
+01:05:00,387 --> 01:05:04,067
+here and it'll tell you where to get that in 
+
+1696
+01:05:04,067 --> 01:05:05,187
+Asana, for example. 
+
+1697
+01:05:05,399 --> 01:05:05,659
+right? 
+
+1698
+01:05:05,659 --> 01:05:06,979
+It'll go to settings and this is where you 
+
+1699
+01:05:06,979 --> 01:05:08,459
+get your open API webhook. 
+
+1700
+01:05:08,459 --> 01:05:10,459
+So it does pretty good. 
+
+1701
+01:05:10,459 --> 01:05:13,659
+I also will say like, I'm not a developer, like 
+
+1702
+01:05:13,659 --> 01:05:14,259
+deep. 
+
+1703
+01:05:14,259 --> 01:05:16,279
+There's a lot of things that are connected 
+
+1704
+01:05:16,279 --> 01:05:18,779
+open API that you will have, you will need 
+
+1705
+01:05:18,779 --> 01:05:20,719
+like some level of technical prowess. 
+
+1706
+01:05:20,719 --> 01:05:24,519
+But for anybody of just saying like, hey, 
+
+1707
+01:05:24,519 --> 01:05:26,499
+how would, whether it's a workflow or an 
+
+1708
+01:05:26,499 --> 01:05:28,519
+automation or anything that you're 
+
+1709
+01:05:28,519 --> 01:05:29,939
+looking to achieve from a technical 
+
+1710
+01:05:29,939 --> 01:05:31,599
+standpoint, Claude, you'd be surprised. 
+
+1711
+01:05:31,599 --> 01:05:34,879
+Claude's pretty good at least giving you 
+
+1712
+01:05:35,095 --> 01:05:37,895
+the foundational overview of what that's 
+
+1713
+01:05:37,895 --> 01:05:38,775
+going to look like. 
+
+1714
+01:05:38,775 --> 01:05:40,895
+If it's too complicated, of course, you 
+
+1715
+01:05:40,895 --> 01:05:43,595
+might have to inquire someone else to set 
+
+1716
+01:05:43,595 --> 01:05:44,795
+it up. 
+
+1717
+01:05:44,795 --> 01:05:48,715
+I guess my tip, I don't know if this is a tip 
+
+1718
+01:05:48,715 --> 01:05:52,675
+or not, but one thing that I would suggest 
+
+1719
+01:05:52,675 --> 01:05:54,155
+people experimenting with that's been 
+
+1720
+01:05:54,155 --> 01:05:55,555
+very helpful to me, something I was 
+
+1721
+01:05:55,555 --> 01:05:57,595
+actually doing before I joined the course, I 
+
+1722
+01:05:57,595 --> 01:06:00,635
+started this like last fall, was to create 
+
+1723
+01:06:00,635 --> 01:06:02,595
+what I call a master profile. 
+
+1724
+01:06:03,191 --> 01:06:07,871
+Because one of the things that I deal with 
+
+1725
+01:06:07,871 --> 01:06:08,691
+is having ADHD. 
+
+1726
+01:06:08,691 --> 01:06:11,651
+And so when you travel, like I do a 
+
+1727
+01:06:11,651 --> 01:06:13,191
+hundred and something days a year and 
+
+1728
+01:06:13,191 --> 01:06:15,751
+have different things going on, like ADHD 
+
+1729
+01:06:15,751 --> 01:06:17,071
+is a real pain in the butt. 
+
+1730
+01:06:17,071 --> 01:06:23,911
+And so what I ended up doing was 
+
+1731
+01:06:23,911 --> 01:06:27,351
+essentially I started off with like a voice 
+
+1732
+01:06:27,351 --> 01:06:28,831
+dump is what I call it. 
+
+1733
+01:06:28,831 --> 01:06:31,091
+So I went for a walk for like an hour and 
+
+1734
+01:06:31,091 --> 01:06:31,791
+just talked. 
+
+1735
+01:06:32,631 --> 01:06:34,851
+I uploaded that as a starting spot. 
+
+1736
+01:06:34,851 --> 01:06:37,471
+And then had it kind of get a base of who I 
+
+1737
+01:06:37,471 --> 01:06:37,831
+was. 
+
+1738
+01:06:37,831 --> 01:06:40,491
+And then I essentially, you know, said, 
+
+1739
+01:06:40,491 --> 01:06:41,271
+hey, I have ADHD. 
+
+1740
+01:06:41,271 --> 01:06:42,631
+And, you know, like everybody else that 
+
+1741
+01:06:42,631 --> 01:06:44,011
+has it, you know, you go to the doctor and 
+
+1742
+01:06:44,011 --> 01:06:45,651
+they say, yep, you got it after like five 
+
+1743
+01:06:45,651 --> 01:06:46,131
+questions. 
+
+1744
+01:06:46,131 --> 01:06:47,591
+And here's some Adderall and pat you on 
+
+1745
+01:06:47,591 --> 01:06:48,371
+the back and off you go. 
+
+1746
+01:06:48,371 --> 01:06:50,971
+And that's great for about a month until 
+
+1747
+01:06:50,971 --> 01:06:52,891
+you realize that like, it's really not that 
+
+1748
+01:06:52,891 --> 01:06:54,791
+magical after about that long. 
+
+1749
+01:06:54,791 --> 01:06:57,971
+And so I had to do a much longer 
+
+1750
+01:06:57,971 --> 01:07:01,331
+assessment, which if you have ADHD, you 
+
+1751
+01:07:01,331 --> 01:07:03,199
+would understand that like, being given a 
+
+1752
+01:07:03,199 --> 01:07:05,699
+hundred question assessment is like 
+
+1753
+01:07:05,699 --> 01:07:08,499
+climbing mount Everest, but i did it 
+
+1754
+01:07:08,499 --> 01:07:10,559
+through voice, which made it a lot easier. 
+
+1755
+01:07:10,559 --> 01:07:12,419
+So I was basically transcribing the notes in 
+
+1756
+01:07:12,419 --> 01:07:13,799
+otter and then just uploading those 
+
+1757
+01:07:13,799 --> 01:07:17,279
+dialogues, which also had the benefit of 
+
+1758
+01:07:17,279 --> 01:07:18,959
+helping it further understand my 
+
+1759
+01:07:18,959 --> 01:07:19,779
+personality. 
+
+1760
+01:07:19,779 --> 01:07:23,379
+And then i did basically every major 
+
+1761
+01:07:23,379 --> 01:07:26,159
+personality or other assessment, 
+
+1762
+01:07:26,159 --> 01:07:29,399
+everything from the colby to what is it the 
+
+1763
+01:07:29,399 --> 01:07:32,079
+the briar i can't remember, but anyway, 
+
+1764
+01:07:32,215 --> 01:07:34,155
+Yep. 
+
+1765
+01:07:34,155 --> 01:07:36,815
+I did about 10 of those. 
+
+1766
+01:07:36,815 --> 01:07:38,635
+I think it cost me, I think I ended up 
+
+1767
+01:07:38,635 --> 01:07:41,775
+spending about $200 total and uploaded 
+
+1768
+01:07:41,775 --> 01:07:42,635
+all those assessments. 
+
+1769
+01:07:42,635 --> 01:07:43,135
+I did. 
+
+1770
+01:07:43,135 --> 01:07:48,295
+I uploaded enough material on the 
+
+1771
+01:07:48,295 --> 01:07:50,075
+chronotype book to do a chronotype 
+
+1772
+01:07:50,075 --> 01:07:50,615
+assessment. 
+
+1773
+01:07:50,615 --> 01:07:54,015
+And so what it did for me was that it 
+
+1774
+01:07:54,015 --> 01:07:56,375
+created a master profile that said, this is 
+
+1775
+01:07:56,375 --> 01:07:56,995
+who Matt is. 
+
+1776
+01:07:56,995 --> 01:07:58,835
+This is when he does his best work. 
+
+1777
+01:07:58,835 --> 01:08:01,195
+This is where he's weak. 
+
+1778
+01:08:01,975 --> 01:08:03,195
+And one of the things that's really come 
+
+1779
+01:08:03,195 --> 01:08:04,915
+out in this course for me is that as I've 
+
+1780
+01:08:04,915 --> 01:08:06,555
+gone through this, it's repeatedly 
+
+1781
+01:08:06,555 --> 01:08:09,435
+reminded me in things like the blueprints 
+
+1782
+01:08:09,435 --> 01:08:11,695
+where I'm very weak in the middle phase. 
+
+1783
+01:08:11,695 --> 01:08:15,875
+So I'm big on wonder and invention and 
+
+1784
+01:08:15,875 --> 01:08:16,995
+those sorts of things. 
+
+1785
+01:08:16,995 --> 01:08:18,815
+So zero to 25, I'm really good. 
+
+1786
+01:08:18,815 --> 01:08:21,115
+And then when I'm under a deadline, 75 to 
+
+1787
+01:08:21,115 --> 01:08:23,815
+100% of a project and I'm under stress, 
+
+1788
+01:08:23,815 --> 01:08:26,175
+then I can put out 150% and get it done. 
+
+1789
+01:08:26,175 --> 01:08:28,315
+It's in the middle where things go to die 
+
+1790
+01:08:28,315 --> 01:08:28,755
+with me. 
+
+1791
+01:08:29,687 --> 01:08:31,687
+So where I've really found it very helpful, 
+
+1792
+01:08:31,687 --> 01:08:34,047
+and this includes how I've had to modify 
+
+1793
+01:08:34,047 --> 01:08:37,687
+things like the second brain from Tiago, is 
+
+1794
+01:08:37,687 --> 01:08:40,527
+making it work for me and my particular 
+
+1795
+01:08:40,527 --> 01:08:43,507
+setup of my mental setup. 
+
+1796
+01:08:43,507 --> 01:08:46,787
+So even like the tools I use, my tech stack 
+
+1797
+01:08:46,787 --> 01:08:50,227
+that I use, and it's constantly reminding 
+
+1798
+01:08:50,227 --> 01:08:51,987
+me, yeah, that sounds great, but you're 
+
+1799
+01:08:51,987 --> 01:08:53,607
+never going to stick with that. 
+
+1800
+01:08:53,607 --> 01:08:54,987
+It sounds awesome, but you're never 
+
+1801
+01:08:54,987 --> 01:08:55,887
+going to do that. 
+
+1802
+01:08:55,887 --> 01:09:00,419
+And it also helps me in terms of like, now 
+
+1803
+01:09:00,419 --> 01:09:03,119
+with this, what we've been doing and 
+
+1804
+01:09:03,119 --> 01:09:05,939
+having those processes, um, I've been 
+
+1805
+01:09:05,939 --> 01:09:06,639
+playing with it. 
+
+1806
+01:09:06,639 --> 01:09:08,299
+And what I found it to be really useful is 
+
+1807
+01:09:08,299 --> 01:09:09,699
+that like, because it understands the 
+
+1808
+01:09:09,699 --> 01:09:12,379
+processes down to the nth degree, I can 
+
+1809
+01:09:12,379 --> 01:09:13,759
+actually have it, schedule it out on my 
+
+1810
+01:09:13,759 --> 01:09:14,139
+calendar. 
+
+1811
+01:09:14,139 --> 01:09:16,419
+And because it understands me and it 
+
+1812
+01:09:16,419 --> 01:09:17,659
+understands the work and understands 
+
+1813
+01:09:17,659 --> 01:09:19,779
+the time involved to do the work because 
+
+1814
+01:09:19,779 --> 01:09:24,059
+of this class, it's actually been successful 
+
+1815
+01:09:24,059 --> 01:09:25,279
+in blocking out time. 
+
+1816
+01:09:25,279 --> 01:09:28,059
+That's appropriate, like for a full project, 
+
+1817
+01:09:28,059 --> 01:09:28,479
+essentially. 
+
+1818
+01:09:28,823 --> 01:09:31,543
+over the course of weeks to get it done. 
+
+1819
+01:09:31,543 --> 01:09:35,303
+And that's a godsend for me, but I, I, any 
+
+1820
+01:09:35,303 --> 01:09:38,183
+case, I I'm happy to share if people are 
+
+1821
+01:09:38,183 --> 01:09:40,083
+interested, I'm happy to post kind of what 
+
+1822
+01:09:40,083 --> 01:09:44,303
+my methodology was to create that. 
+
+1823
+01:09:44,303 --> 01:09:47,503
+It's far less sophisticated than what we're 
+
+1824
+01:09:47,503 --> 01:09:51,043
+doing here, but it has, I did load it into the 
+
+1825
+01:09:51,043 --> 01:09:51,983
+empower project. 
+
+1826
+01:09:51,983 --> 01:09:52,583
+Yeah. 
+
+1827
+01:09:52,583 --> 01:09:56,323
+And I think it has been very, very helpful 
+
+1828
+01:09:56,323 --> 01:09:57,823
+as I've gone through this process. 
+
+1829
+01:09:57,823 --> 01:10:00,015
+It's really been, it's a powerful 
+
+1830
+01:10:00,015 --> 01:10:00,675
+combination. 
+
+1831
+01:10:00,675 --> 01:10:03,375
+So that was, I guess that's my, my offering 
+
+1832
+01:10:03,375 --> 01:10:03,955
+to the group. 
+
+1833
+01:10:03,955 --> 01:10:05,675
+And again, if there's interest, I'll post it in 
+
+1834
+01:10:05,675 --> 01:10:07,995
+the discussion about how I went about it. 
+
+1835
+01:10:07,995 --> 01:10:08,355
+Yeah, man. 
+
+1836
+01:10:08,355 --> 01:10:09,155
+Thank you for sharing. 
+
+1837
+01:10:09,155 --> 01:10:10,535
+And yeah, please post. 
+
+1838
+01:10:10,535 --> 01:10:12,895
+I know everyone's asking, but someone 
+
+1839
+01:10:12,895 --> 01:10:15,595
+will for sure get value from that. 
+
+1840
+01:10:15,595 --> 01:10:17,175
+So I would encourage you to post it. 
+
+1841
+01:10:17,175 --> 01:10:19,455
+And by the way, like just on that, like 
+
+1842
+01:10:19,455 --> 01:10:21,135
+there's been so many people who have 
+
+1843
+01:10:21,135 --> 01:10:22,415
+done different versions of this. 
+
+1844
+01:10:22,415 --> 01:10:23,255
+I know internally, 
+
+1845
+01:10:23,959 --> 01:10:26,259
+Matt, we've all taken at Empower Labs, 
+
+1846
+01:10:26,259 --> 01:10:27,979
+we've taken all the assessments, Colby, 
+
+1847
+01:10:27,979 --> 01:10:30,119
+Cantor, Pathfinder, you name it, we've 
+
+1848
+01:10:30,119 --> 01:10:31,059
+taken it. 
+
+1849
+01:10:31,059 --> 01:10:34,279
+And I'm the kind of guy personally, like I 
+
+1850
+01:10:34,279 --> 01:10:35,519
+do those just to do them. 
+
+1851
+01:10:35,519 --> 01:10:37,939
+I'm like, I'll do the assessment, I'll get the 
+
+1852
+01:10:37,939 --> 01:10:38,299
+results. 
+
+1853
+01:10:38,299 --> 01:10:42,699
+And so I have found funny ways to take 
+
+1854
+01:10:42,699 --> 01:10:44,439
+the information of everyone on the 
+
+1855
+01:10:44,439 --> 01:10:47,919
+leadership team and build a project with 
+
+1856
+01:10:47,919 --> 01:10:50,079
+all of the outputs of everyone there. 
+
+1857
+01:10:50,079 --> 01:10:52,399
+For example, like when conflict comes up, 
+
+1858
+01:10:53,111 --> 01:10:55,131
+Um, when they're like leadership does not 
+
+1859
+01:10:55,131 --> 01:10:57,331
+agree when there is friction points, how 
+
+1860
+01:10:57,331 --> 01:10:59,691
+we make decisions, how we communicate, 
+
+1861
+01:10:59,691 --> 01:11:00,051
+right? 
+
+1862
+01:11:00,051 --> 01:11:02,091
+All of those things are, are, are measured 
+
+1863
+01:11:02,091 --> 01:11:03,611
+in full transparency. 
+
+1864
+01:11:03,611 --> 01:11:05,351
+I didn't look at any of the results. 
+
+1865
+01:11:05,351 --> 01:11:08,111
+I did, however, put all of our results in a 
+
+1866
+01:11:08,111 --> 01:11:08,871
+cloud project. 
+
+1867
+01:11:08,871 --> 01:11:11,531
+And so if I have to talk to a specific person 
+
+1868
+01:11:11,531 --> 01:11:14,671
+who all of these assessments have, have, 
+
+1869
+01:11:14,671 --> 01:11:17,671
+uh, literally three full assessments, um, I 
+
+1870
+01:11:17,671 --> 01:11:21,051
+will say I'm going to go with this intention 
+
+1871
+01:11:21,051 --> 01:11:21,631
+in mind. 
+
+1872
+01:11:21,631 --> 01:11:22,471
+I will use that. 
+
+1873
+01:11:23,063 --> 01:11:25,703
+We've had people build their own master 
+
+1874
+01:11:25,703 --> 01:11:28,643
+prompts for their personal health. 
+
+1875
+01:11:28,643 --> 01:11:31,423
+You know, it's a lot of cool things people 
+
+1876
+01:11:31,423 --> 01:11:32,043
+have shared. 
+
+1877
+01:11:32,043 --> 01:11:35,123
+And just like Matt, by the way, I'll sort of 
+
+1878
+01:11:35,123 --> 01:11:36,303
+leave you all with this. 
+
+1879
+01:11:36,303 --> 01:11:39,863
+We all do this internally is what Matt said. 
+
+1880
+01:11:39,863 --> 01:11:42,323
+And you can add this to your master 
+
+1881
+01:11:42,323 --> 01:11:45,643
+prompt, especially as you start using it 
+
+1882
+01:11:45,643 --> 01:11:48,403
+post cohort is personal preferences. 
+
+1883
+01:11:48,403 --> 01:11:51,943
+So the easiest way to explain this is in the 
+
+1884
+01:11:51,943 --> 01:11:54,943
+assessment form is we all have strengths 
+
+1885
+01:11:54,943 --> 01:11:56,463
+and weaknesses, right? 
+
+1886
+01:11:56,463 --> 01:11:59,323
+So Matt can mention like, Hey, I have 
+
+1887
+01:11:59,323 --> 01:11:59,763
+ADHD. 
+
+1888
+01:11:59,763 --> 01:12:03,223
+So like in his personal preferences, like 
+
+1889
+01:12:03,223 --> 01:12:04,763
+there's, there's, here's are my strengths 
+
+1890
+01:12:04,763 --> 01:12:06,023
+and my personal preferences. 
+
+1891
+01:12:06,023 --> 01:12:06,823
+These are my strengths. 
+
+1892
+01:12:06,823 --> 01:12:07,763
+These are my weaknesses. 
+
+1893
+01:12:07,763 --> 01:12:10,143
+And the key point that might be helpful 
+
+1894
+01:12:10,143 --> 01:12:11,683
+for you, Matt, if you don't have this, is 
+
+1895
+01:12:11,683 --> 01:12:14,803
+this, these are some key things that could 
+
+1896
+01:12:14,803 --> 01:12:16,723
+be bullet points of how I want 
+
+1897
+01:12:16,947 --> 01:12:20,567
+this AI to help me on a daily, weekly, 
+
+1898
+01:12:20,567 --> 01:12:22,707
+monthly, quarterly, yearly basis. 
+
+1899
+01:12:22,707 --> 01:12:26,027
+So that's a little bit of a step up because 
+
+1900
+01:12:26,027 --> 01:12:27,787
+it's your master prompt, all the business 
+
+1901
+01:12:27,787 --> 01:12:31,627
+stuff, but it's literally saying like, hey, I 
+
+1902
+01:12:31,627 --> 01:12:32,587
+struggle with ADHD. 
+
+1903
+01:12:32,587 --> 01:12:35,867
+So if I'm going down a rabbit hole, I want 
+
+1904
+01:12:35,867 --> 01:12:37,367
+to make sure I'm making this up. 
+
+1905
+01:12:37,367 --> 01:12:39,607
+But like if I'm an hour and a half in an 
+
+1906
+01:12:39,607 --> 01:12:41,967
+assessment because of my ADHD, I want 
+
+1907
+01:12:41,967 --> 01:12:44,507
+you to tie back the project to my strategic 
+
+1908
+01:12:44,507 --> 01:12:46,107
+initiatives to make sure I'm not going 
+
+1909
+01:12:46,107 --> 01:12:49,311
+down an unnecessarily, you know, rabbit 
+
+1910
+01:12:49,311 --> 01:12:51,511
+hole in a make-believe example. 
+
+1911
+01:12:51,511 --> 01:12:54,171
+But Hayden has different sort of pros, 
+
+1912
+01:12:54,171 --> 01:12:56,451
+cons, and what he uses AI for. 
+
+1913
+01:12:56,451 --> 01:13:00,071
+The easiest way for business owners is use 
+
+1914
+01:13:00,071 --> 01:13:01,951
+AI to do the things that you hate doing. 
+
+1915
+01:13:01,951 --> 01:13:05,591
+That's the easy sort of like, this is things I 
+
+1916
+01:13:05,591 --> 01:13:06,551
+just hate doing. 
+
+1917
+01:13:06,551 --> 01:13:09,351
+And other times I get fulfillment and all of 
+
+1918
+01:13:09,351 --> 01:13:09,831
+those things. 
+
+1919
+01:13:09,831 --> 01:13:14,171
+So Sebastian, he just signed off, but he put 
+
+1920
+01:13:14,171 --> 01:13:15,571
+it, the sugar mill we're implementing 
+
+1921
+01:13:15,571 --> 01:13:16,471
+step-by-step 
+
+1922
+01:13:17,075 --> 01:13:18,975
+the learnings from the cohort. 
+
+1923
+01:13:18,975 --> 01:13:21,035
+Claude is currently used to solve complex 
+
+1924
+01:13:21,035 --> 01:13:22,555
+situations with great success. 
+
+1925
+01:13:22,555 --> 01:13:24,835
+At this time, we apply it to develop the 
+
+1926
+01:13:24,835 --> 01:13:28,715
+strategy for implementing the IEC 62402 
+
+1927
+01:13:28,715 --> 01:13:31,115
+standard for, uh, obsolescence 
+
+1928
+01:13:31,115 --> 01:13:31,735
+management. 
+
+1929
+01:13:31,735 --> 01:13:34,955
+Um, it is possible and it works. 
+
+1930
+01:13:34,955 --> 01:13:37,075
+Consider that we are a large agricultural 
+
+1931
+01:13:37,075 --> 01:13:39,295
+and industrial enterprise. 
+
+1932
+01:13:39,295 --> 01:13:41,235
+Um, cool. 
+
+1933
+01:13:41,235 --> 01:13:41,815
+Yeah. 
+
+1934
+01:13:41,815 --> 01:13:42,455
+And you know what? 
+
+1935
+01:13:42,455 --> 01:13:44,755
+I'll send you, um, I'll post a case study on 
+
+1936
+01:13:44,755 --> 01:13:45,315
+these guys. 
+
+1937
+01:13:45,315 --> 01:13:48,779
+Um, You know, he's, um, Sebastian's been 
+
+1938
+01:13:48,779 --> 01:13:51,439
+pretty silent, but we have an amazing case 
+
+1939
+01:13:51,439 --> 01:13:53,599
+study that I'm going to post in the group 
+
+1940
+01:13:53,599 --> 01:13:55,259
+after this, just for you all to see, cause it's 
+
+1941
+01:13:55,259 --> 01:13:58,079
+a sugar mill in Guatemala and they, um, 
+
+1942
+01:13:58,079 --> 01:14:00,939
+they solved, uh, the definition of a 
+
+1943
+01:14:00,939 --> 01:14:04,259
+complex problem, um, with sort of using 
+
+1944
+01:14:04,259 --> 01:14:07,079
+our processes and they saved, you know, 
+
+1945
+01:14:07,079 --> 01:14:09,419
+hundreds of thousands, if not millions of 
+
+1946
+01:14:09,419 --> 01:14:11,579
+dollars in doing so, which, which teaching 
+
+1947
+01:14:11,579 --> 01:14:14,279
+the editor of process that we all kind of 
+
+1948
+01:14:14,279 --> 01:14:15,779
+unpacked on today's call. 
+
+1949
+01:14:15,779 --> 01:14:16,079
+So. 
+
+1950
+01:14:16,467 --> 01:14:19,647
+Matt, please do post any and all stuff like 
+
+1951
+01:14:19,647 --> 01:14:19,887
+that. 
+
+1952
+01:14:19,887 --> 01:14:21,927
+That will be valuable for people for sure. 
+
+1953
+01:14:21,927 --> 01:14:24,147
+I'm glad that you joined the call, my 
+
+1954
+01:14:24,147 --> 01:14:24,427
+friend. 
+
+1955
+01:14:24,427 --> 01:14:26,007
+Hope to see you on the next one. 
+
+1956
+01:14:26,007 --> 01:14:29,487
+And if anybody needs anything as it comes 
+
+1957
+01:14:29,487 --> 01:14:31,447
+up, please lean on Circle. 
+
+1958
+01:14:31,447 --> 01:14:33,387
+We will be here to support you. 
+
+1959
+01:14:33,387 --> 01:14:35,607
+Otherwise, we will see you Monday on the 
+
+1960
+01:14:35,607 --> 01:14:36,087
+next call. 
+
+1961
+01:14:36,087 --> 01:14:38,047
+Thanks, everyone. 
+
+1962
+01:14:38,047 --> 01:14:39,127
+Have a good one. 
+
+1963
+01:14:39,127 --> 01:14:39,507
+Thanks, everyone. 
+
+1964
+01:14:39,507 --> 01:14:40,247
+Thank you. 
+
+1965
+01:14:40,247 --> 01:14:41,987
+Thanks. 
+

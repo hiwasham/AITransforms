@@ -1,0 +1,287 @@
+{
+  "id": 28452135,
+  "name": "Welcome to EMPOWER Labs Cohort 4 🎉",
+  "slug": "welcome-to-empower-labs-cohort-4",
+  "type": "Posts::Basic",
+  "status": "published",
+  "user_id": 39364111,
+  "published_at": "2026-01-09T15:48:20.407Z",
+  "updated_at": "2026-01-16T16:56:10.902Z",
+  "created_at": "2026-01-09T15:48:20.407Z",
+  "hide_meta_info": false,
+  "community_member_id": 51527687,
+  "is_truncation_disabled": null,
+  "hide_from_featured_areas": false,
+  "flagged_for_approval_at": null,
+  "pinned_at": null,
+  "internal_custom_html": null,
+  "is_comments_enabled": true,
+  "is_liking_enabled": true,
+  "share_post_enabled": null,
+  "share_uid": null,
+  "minimal_layout": false,
+  "show_post_teaser": false,
+  "editor": "tiptap",
+  "is_comments_closed": false,
+  "is_comments_disabled": false,
+  "is_liking_disabled": false,
+  "display_title": "Welcome to EMPOWER Labs Cohort 4 🎉",
+  "cover_image": null,
+  "cover_image_url": null,
+  "cover_image_variants": {},
+  "cardview_thumbnail": null,
+  "cardview_thumbnail_url": null,
+  "cardview_image_url": null,
+  "space_name": "Announcements",
+  "space_slug": "announcements-4101a0",
+  "community_slug": "empower-labs",
+  "space_id": 2414936,
+  "pin_to_top": false,
+  "pinned_at_top_of_space": false,
+  "bookmark_id": null,
+  "topics": [],
+  "community_member": {
+    "id": 51527687,
+    "user_id": 39364111,
+    "public_uid": "b2be8b1e",
+    "first_name": "Ronnie",
+    "last_name": "Seguilla",
+    "name": "Ronnie Seguilla",
+    "admin": true,
+    "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzM5MzY0MTExP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--526c8da859ab73228e0fe33cfc7e422ab8b19331",
+    "type": "CommunityMember",
+    "headline": "Admin",
+    "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTE1Mjc2ODc_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--ff7e32066a01f1a91da71adf5a71bc9c75b95f13",
+    "avatar_url": null
+  },
+  "conversation_summary_overview": "",
+  "body_trix_content": "",
+  "body_for_editor": null,
+  "truncated_content": "Before the cohort starts on January 26, please complete the 5 short lessons in the Getting Started​ section of our # Curriculum here on Circle. \n\nThis will only take around 15-25 minutes.\n\nThese lessons will set you up for success by walking you throug...",
+  "show_more": true,
+  "tiptap_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Before the cohort starts on January 26, please complete the 5 short lessons in the ",
+              "type": "text",
+              "circle_ios_fallback_text": "Before the cohort starts on January 26, please complete the 5 short lessons in the "
+            },
+            {
+              "text": "Getting Started",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Getting Started"
+            },
+            {
+              "text": "​",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://learn.buildingasecondbrain.com/c/curriculum-59604b/sections/651259/lessons/2464596",
+                    "class": "ck-link",
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "circle_ios_fallback_text": "​"
+            },
+            {
+              "text": " section of our ",
+              "type": "text",
+              "circle_ios_fallback_text": " section of our "
+            },
+            {
+              "type": "entity",
+              "attrs": {
+                "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQzP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--d85439759b0d7a5e6f92043c61ea5cc968e072ff"
+              },
+              "circle_ios_fallback_text": "# Curriculum"
+            },
+            {
+              "text": " here on Circle. ",
+              "type": "text",
+              "circle_ios_fallback_text": " here on Circle. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This will only take around 15-25 minutes.",
+              "type": "text",
+              "circle_ios_fallback_text": "This will only take around 15-25 minutes."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "These lessons will set you up for success by walking you through the essential tools, introductions, and logistics you need to know.",
+              "type": "text",
+              "circle_ios_fallback_text": "These lessons will set you up for success by walking you through the essential tools, introductions, and logistics you need to know."
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://community.empowerlabs.ai/c/curriculum-f7e760/",
+            "color": "#2B2E33",
+            "label": "Start Your Onboarding",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In addition, please complete the ",
+              "type": "text",
+              "circle_ios_fallback_text": "In addition, please complete the "
+            },
+            {
+              "text": "Beginner’s Guide to Claude",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "rel": "noopener noreferrer nofollow",
+                    "href": "https://community.empowerlabs.ai/c/beginner-s-guide-to-claude/",
+                    "class": null,
+                    "target": "_blank"
+                  }
+                },
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Beginner’s Guide to Claude"
+            },
+            {
+              "text": ", which will walk you through how to use Claude effectively during the cohort.",
+              "type": "text",
+              "circle_ios_fallback_text": ", which will walk you through how to use Claude effectively during the cohort."
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "attrs": {
+            "url": "https://community.empowerlabs.ai/c/beginner-s-guide-to-claude/",
+            "color": "#2B2E33",
+            "label": " Beginner's Guide to Claude",
+            "alignment": "center",
+            "full_width": false,
+            "text_color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Complete these lessons as soon as possible",
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "circle_ios_fallback_text": "Complete these lessons as soon as possible"
+            },
+            {
+              "text": " – they're designed to get you ready to participate fully from day one.",
+              "type": "text",
+              "circle_ios_fallback_text": " – they're designed to get you ready to participate fully from day one."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Let us know in the ",
+              "type": "text",
+              "circle_ios_fallback_text": "Let us know in the "
+            },
+            {
+              "type": "entity",
+              "attrs": {
+                "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa"
+              },
+              "circle_ios_fallback_text": "#Discussion"
+            },
+            {
+              "text": " space if you have any questions as you go. We’re here to support you every step of the way!",
+              "type": "text",
+              "circle_ios_fallback_text": " space if you have any questions as you go. We’re here to support you every step of the way!"
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "Before the cohort starts on January 26, please complete the 5 short lessons in the Getting Started​ section of our # Curriculum here on Circle. This will only take around 15-25 minutes.These lessons will set you up for success by walking you through the essential tools, introductions, and logistics you need to know.In addition, please complete the Beginner’s Guide to Claude, which will walk you through how to use Claude effectively during the cohort.Complete these lessons as soon as possible – they're designed to get you ready to participate fully from day one.Let us know in the #Discussion space if you have any questions as you go. We’re here to support you every step of the way!",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQzP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--d85439759b0d7a5e6f92043c61ea5cc968e072ff": {
+        "id": 2414943,
+        "name": " Curriculum",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQzP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--d85439759b0d7a5e6f92043c61ea5cc968e072ff",
+        "type": "Space",
+        "circle_ios_fallback_text": "# Curriculum",
+        "url": "https://community.empowerlabs.ai/c/curriculum-f7e760",
+        "slug": "curriculum-f7e760"
+      },
+      "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa": {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    },
+    "format": "post",
+    "community_members": [],
+    "entities": [
+      {
+        "id": 2414943,
+        "name": " Curriculum",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQzP2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--d85439759b0d7a5e6f92043c61ea5cc968e072ff",
+        "type": "Space",
+        "circle_ios_fallback_text": "# Curriculum",
+        "url": "https://community.empowerlabs.ai/c/curriculum-f7e760",
+        "slug": "curriculum-f7e760"
+      },
+      {
+        "id": 2414947,
+        "name": "Discussion",
+        "sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9TcGFjZS8yNDE0OTQ3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--3031cd24469e95cebbb4312094c5d544ec45d8aa",
+        "type": "Space",
+        "circle_ios_fallback_text": "#Discussion",
+        "url": "https://community.empowerlabs.ai/c/discussion-b92449",
+        "slug": "discussion-b92449"
+      }
+    ],
+    "group_mentions": [],
+    "polls": []
+  }
+}

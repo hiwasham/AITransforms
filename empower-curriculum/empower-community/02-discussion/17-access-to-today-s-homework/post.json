@@ -1,0 +1,110 @@
+{
+  "id": 29114214,
+  "name": "Access to today's homework",
+  "slug": "access-to-today-s-homework",
+  "type": "Posts::Basic",
+  "status": "published",
+  "user_id": 31043807,
+  "published_at": "2026-01-28T20:12:31.292Z",
+  "updated_at": "2026-01-28T22:23:26.537Z",
+  "created_at": "2026-01-28T20:12:31.292Z",
+  "hide_meta_info": false,
+  "community_member_id": 52281051,
+  "is_truncation_disabled": null,
+  "hide_from_featured_areas": false,
+  "flagged_for_approval_at": null,
+  "pinned_at": null,
+  "internal_custom_html": null,
+  "is_comments_enabled": true,
+  "is_liking_enabled": true,
+  "share_post_enabled": null,
+  "share_uid": null,
+  "minimal_layout": false,
+  "show_post_teaser": false,
+  "editor": "tiptap",
+  "is_comments_closed": false,
+  "is_comments_disabled": false,
+  "is_liking_disabled": false,
+  "display_title": "Access to today's homework",
+  "cover_image": null,
+  "cover_image_url": null,
+  "cover_image_variants": {},
+  "cardview_thumbnail": null,
+  "cardview_thumbnail_url": null,
+  "cardview_image_url": null,
+  "space_name": "Discussion",
+  "space_slug": "discussion-b92449",
+  "community_slug": "empower-labs",
+  "space_id": 2414947,
+  "pin_to_top": false,
+  "pinned_at_top_of_space": false,
+  "bookmark_id": null,
+  "topics": [
+    336022
+  ],
+  "community_member": {
+    "id": 52281051,
+    "user_id": 31043807,
+    "public_uid": "ab6468c9",
+    "first_name": "lee@refreshcollective.org",
+    "last_name": null,
+    "name": "lee@refreshcollective.org",
+    "admin": false,
+    "user_attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIxZ2lkOi8vanVtcHN0YXJ0LWFwcC9Vc2VyLzMxMDQzODA3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIg9hdHRhY2hhYmxlBjsAVEkiD2V4cGlyZXNfYXQGOwBUMA==--b1b98ffbf8200a189ff37f5fd5e85a271243fe74",
+    "type": "CommunityMember",
+    "headline": "Integrator",
+    "rich_text_field_sgid": "BAh7CEkiCGdpZAY6BkVUSSI8Z2lkOi8vanVtcHN0YXJ0LWFwcC9Db21tdW5pdHlNZW1iZXIvNTIyODEwNTE_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiFHJpY2hfdGV4dF9maWVsZAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--6bca5c85446edefc9599b7ecb72b1f8b4d86a0ef",
+    "avatar_url": "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTmN3YWdZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b9d497839d6eb86147c695ee00d9f0ecf2ce7dc6/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBTU0lKYW5CbFp3WTZCa1ZVT2hSeVpYTnBlbVZmZEc5ZmJHbHRhWFJiQjJrQ0xBRnBBaXdCT2dwellYWmxjbnNHT2dwemRISnBjRlE9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--ef295ed08e817a599d692fd6d8761673d3ed547f/IMG_2681.jpeg"
+  },
+  "conversation_summary_overview": "",
+  "body_trix_content": "",
+  "body_for_editor": null,
+  "truncated_content": "Hi All,\n\nI do not seem to have access to the homework for today (post live session 2). Did I miss something? Thnx.\n\nLee",
+  "show_more": false,
+  "tiptap_body": {
+    "body": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hi All,",
+              "type": "text",
+              "circle_ios_fallback_text": "Hi All,"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "I do not seem to have access to the homework for today (post live session 2). Did I miss something? Thnx.",
+              "type": "text",
+              "circle_ios_fallback_text": "I do not seem to have access to the homework for today (post live session 2). Did I miss something? Thnx."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Lee",
+              "type": "text",
+              "circle_ios_fallback_text": "Lee"
+            }
+          ]
+        }
+      ]
+    },
+    "circle_ios_fallback_text": "Hi All,I do not seem to have access to the homework for today (post live session 2). Did I miss something? Thnx.Lee",
+    "attachments": [],
+    "inline_attachments": [],
+    "sgids_to_object_map": {},
+    "format": "post",
+    "community_members": [],
+    "entities": [],
+    "group_mentions": [],
+    "polls": []
+  }
+}

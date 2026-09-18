@@ -1,0 +1,121 @@
+[
+  {
+    "slug": "ai-audit",
+    "url": "https://empowerlabs.ai/ai-audit",
+    "path": "/ai-audit",
+    "bytes": 99568,
+    "links": 18
+  },
+  {
+    "slug": "apply",
+    "url": "https://empowerlabs.ai/apply",
+    "path": "/apply",
+    "bytes": 83888,
+    "links": 18
+  },
+  {
+    "slug": "blog",
+    "url": "https://empowerlabs.ai/blog",
+    "path": "/blog",
+    "bytes": 64240,
+    "links": 20
+  },
+  {
+    "slug": "blog__acquira-crm-transformation",
+    "url": "https://empowerlabs.ai/blog/acquira-crm-transformation",
+    "path": "/blog/acquira-crm-transformation",
+    "bytes": 78062,
+    "links": 22
+  },
+  {
+    "slug": "blog__ai-provider-sovereignty",
+    "url": "https://empowerlabs.ai/blog/ai-provider-sovereignty",
+    "path": "/blog/ai-provider-sovereignty",
+    "bytes": 75376,
+    "links": 20
+  },
+  {
+    "slug": "business-brain",
+    "url": "https://empowerlabs.ai/business-brain",
+    "path": "/business-brain",
+    "bytes": 60760,
+    "links": 4
+  },
+  {
+    "slug": "business-brain__lesson-1",
+    "url": "https://empowerlabs.ai/business-brain/lesson-1",
+    "path": "/business-brain/lesson-1",
+    "bytes": 70687,
+    "links": 8
+  },
+  {
+    "slug": "business-brain__lesson-2",
+    "url": "https://empowerlabs.ai/business-brain/lesson-2",
+    "path": "/business-brain/lesson-2",
+    "bytes": 105397,
+    "links": 6
+  },
+  {
+    "slug": "business-brain__lesson-3",
+    "url": "https://empowerlabs.ai/business-brain/lesson-3",
+    "path": "/business-brain/lesson-3",
+    "bytes": 152604,
+    "links": 7
+  },
+  {
+    "slug": "cohort",
+    "url": "https://empowerlabs.ai/cohort",
+    "path": "/cohort",
+    "bytes": 220407,
+    "links": 24
+  },
+  {
+    "slug": "five-hour-agency",
+    "url": "https://empowerlabs.ai/five-hour-agency",
+    "path": "/five-hour-agency",
+    "bytes": 167715,
+    "links": 8
+  },
+  {
+    "slug": "home",
+    "url": "https://empowerlabs.ai/",
+    "path": "/",
+    "bytes": 142807,
+    "links": 24
+  },
+  {
+    "slug": "how-it-works",
+    "url": "https://empowerlabs.ai/how-it-works",
+    "path": "/how-it-works",
+    "bytes": 92736,
+    "links": 0
+  },
+  {
+    "slug": "logo",
+    "url": "https://empowerlabs.ai/logo",
+    "path": "/logo",
+    "bytes": 52838,
+    "links": 3
+  },
+  {
+    "slug": "masterclass-replay",
+    "url": "https://empowerlabs.ai/masterclass-replay",
+    "path": "/masterclass-replay",
+    "bytes": 86767,
+    "links": 17
+  },
+  {
+    "slug": "privacy",
+    "url": "https://empowerlabs.ai/privacy",
+    "path": "/privacy",
+    "bytes": 66664,
+    "links": 0
+  },
+  {
+    "slug": "teams",
+    "url": "https://empowerlabs.ai/teams",
+    "path": "/teams",
+    "bytes": 164225,
+    "links": 21
+  }
+]
