@@ -384,6 +384,97 @@ referral motion, thin acquisition.**
   `materials/Nasim-CEO_DRalavi-conversations-chats/` is empty. These are the
   purest buyer VOC; get them before finalizing Sections 1–3.
 
+## 🔑 EARLY WhatsApp thread (first_conversations.md) — how the relationship began (Aug 27+)
+
+Full opening thread, CEO ↔ Nasim, verbatim. Highest-authority origin source.
+Confirms and sharpens the comp picture. Reconciled into the sections above where
+it supersedes; new/changed facts logged here.
+
+**How he found her & what he wanted:** cold-emailed after her CV + portfolio site;
+opening ask = *"CN you produce content like this"* (a Dr. Dolphin-style animated
+medical reel) + *"can you create product identity."* Goal in his words: *"We are
+looking to create market identity to market for the platform / To attract more
+subscribers."*
+
+**How she won him (the move to echo in the plan):** she did NOT just copy the
+reel. She reframed — *copying that account raises followers but not convertible
+buyers; Bayan's strength is distinct products for distinct segments (students,
+residents, nurses), so content strategy must tie to business goals per segment
+from day one, not just reach/engagement.* CEO: *"ممتاز جدا"* (excellent) +
+*"شكرا على جديتك"* (thank you for your seriousness). This is the exact
+"social content → social strategy tied to business" pivot the whole plan sells.
+
+**⚑ Compensation ladder — Nasim's OWN fully-quoted tiers (this is the spine of the raise):**
+| Plan | Scope | Nasim's floor (OMR/mo) |
+|---|---|---|
+| **Plan 1** | Content Production only (execute their scripts/ideas) | **250–300** |
+| **Plan 2** | Content Strategy + Production (ideas, scripts, formats, direction) | **450–500** |
+| **Plan 3** | + Social Media Management (plan, publish, daily reels, audience, performance) | **650** |
+| **Plan 4** | + Marketing & Growth (ads, acquisition, overall strategy) — ALL 4 | **900** |
+
+**⚑ CEO's stated choice (the gap the plan must close):** *"I am more interested
+in plan 1"* + conference help paid separately at *"100 dollar per day plus
+accommodation/transportation and tickets."* He wants a **3-month remote trial
+contract** with a fixed monthly salary, framed-of-work, post/video counts, then
+re-evaluate. → **The plan's job: move him from Plan 1 (250-300, operator) to Plan
+3/4 (650-900+, owner), toward the 1000 OMR goal.** She already told him she wants
+Plan 3 ("this is the level of responsibility... I can be with you in plan 3, and
+over time even plan 4").
+
+**Weekly output she committed to (use as the deliverable baseline):** *"2-3 videos
+(like Dr Dolphin) and 10-15 pictures"* per week — "more than enough for your social
+media."
+
+**Management style (verbatim — the pitch's emotional key):** *"You are welcome to
+share your thoughts. I like proactive people. I share with you objectives and you
+have freedom to build on them. I don't like micromanaging things."* → sell an
+owner who runs on objectives + freedom, low-touch.
+
+**Mascots are personal:** Bissan is literally **the CEO's own daughter's name**
+(*"I will give her my daughter name Bissan"*); Gassan = his son. He sent real
+photos of his children to base the characters on. Emotional investment in the
+brand identity is high — the mascots aren't just assets, they're his kids.
+
+**Cultural direction (verbatim, non-negotiable):** characters must be **18 y/o**
+med students (not children) for narrative realism; **girl in covering hijab**
+*"to reflect reality of hospitals here"*; skin tone he wanted **lighter/whiter**
+than Omani-default (Nasim pushed back on losing local identity — CEO held); 3D
+realistic-but-cute, "cultural context... where others are conservative."
+
+**Brand / slogan candidates seen in-thread (for §
+
+ brand):** "Medical knowledge
+without borders" / "Knowledge without borders" / "Medicine beyond borders" /
+"Study anywhere. Qualify everywhere" / "Better Learning, Better Care. Bayan" /
+acrostic B-A-Y-A-N (Believe/Adapt/Evolve/Advance/Navigate). Nasim's rule: tie any
+slogan to the logo's **"B."** CEO wanted **Oman at the center** ("originating from
+Oman to the world" — the gold logo dot = Oman).
+
+**Booth giveaway thinking (Nasim's differentiator):** rejects generic cups/notebooks
+(*"the obvious idea everyone thinks of... after a while it gets ignored"*); pushes
+daily-use, industry-relevant items (stethoscope keychain, exam bullet-journal for
+ADHD/focus, pill organizer) + **QR to exclusive content / free-access vouchers**.
+CEO agreed: *"Free access vouchers to the platform."*
+
+**⚠️ NEW conflict — country count:** CEO says *"already we have users in 55
+countries"* in this thread, vs 30+/32 elsewhere. Add to conflict list — reconcile
+before public copy.
+
+**CEO on commercials (verbatim):** *"We have investors and now mainly depends on
+the investment for growth"* + *"We are need strong marketing"*; best-performing
+product = *"Gulf exam preparation"*; met *"around 30 applicants"* but interested
+in her animation + experience.
+
+**Nasim's founder-fit credibility (her own words, for the pitch's "why me"):**
+several semesters of **medical study** (knows med students + clinical world) + BA
+**Dramatic Literature & Arts** (scriptwriting) + MA **Psychology** (audience/market
+insight) + prior **sales & marketing** on a near-identical edu product. Track
+record: deputy manager at **Iran Fluent** (online intl courses, reached **11,000+
+students, zero paid ads**); product manager at **FJ** brand, grew IG **~8K → 211K**
+followers (reference letter available). Fully remote, no fixed hours, *"fully
+dedicated around the clock."* Self-aware perfectionist / detail-obsessed (a
+strength + a coordination note).
+
 ## Skipped as false-positive
 
 `6a5cc719` (feroxbuster OSINT), `6a5cc3b5` (generic Oman job search), `6aacc4ad`
