@@ -73,3 +73,26 @@ marketingclub-archive/**/*.m4a
 marketingclub-archive/**/*.wav
 marketingclub-archive/**/*.mov
 marketingclub-archive/**/*.webm
+
+# --- Bayan marketing-plan materials (added 2026-09-21) ---
+# LIVE browser session cookies (ChatGPT/Gemini auth tokens) — never commit.
+# Belong nowhere in git; used only to export the conversations, then delete.
+**/*cookies*.txt
+**/*_cookies*.txt
+# Raw LLM conversation exports: personal/PII-bearing, used as plan source
+# material only. Compiled outputs (research.md, company-profile.md) are what
+# gets committed, not these raws. Un-ignore specific files if ever needed.
+marketing-plans/**/materials/chatgpt_full/
+marketing-plans/**/materials/chatgpt_full_history.*
+marketing-plans/**/materials/*_conversations.*
+# Gemini exports (added 2026-09-21) — same PII policy as ChatGPT raws.
+marketing-plans/**/materials/gemini_full/
+marketing-plans/**/materials/*_full_history.*
+# CEO transcripts + screenshots: private buyer VOC, never commit the raws.
+marketing-plans/**/materials/Nasim-CEO*/
+marketing-plans/**/materials/google_drive_bayan.json
+
+# --- Corey Ganim credentials (untracked 2026-09-22) ---
+# Plaintext login — belongs in Infisical, never in git. Already leaked to
+# private remote in commit eeb41e9; password must be rotated. See UNFINISHED-WORK.md.
+corey-creds.md
