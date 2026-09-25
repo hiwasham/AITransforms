@@ -96,3 +96,32 @@ marketing-plans/**/materials/google_drive_bayan.json
 # Plaintext login — belongs in Infisical, never in git. Already leaked to
 # private remote in commit eeb41e9; password must be rotated. See UNFINISHED-WORK.md.
 corey-creds.md
+
+# --- Bayan product archive (added 2026-09-25) ---
+# Plaintext login for bayan.edu.om — belongs in Infisical, never in git.
+marketing-plans/bayan/bayan.edu.om.credentials.json
+# Hiwa's manual client-area browsing notes — carry the account login context.
+# The redacted teardown in product-archive/ is what gets committed instead.
+marketing-plans/bayan/bayan.edu.om.credentials-hiwa.json
+# Verbatim API payloads that embed the test account's email/user_id/PII.
+# The rendered product-archive/ Markdown views strip identifying fields.
+marketing-plans/bayan/product-archive/raw-json/api__profile.json
+marketing-plans/bayan/product-archive/raw-json/*-me.json
+marketing-plans/bayan/product-archive/raw-json/auth-*.json
+# Dashboard payload carries the test account's displayName + activity trail.
+marketing-plans/bayan/product-archive/raw-json/api__dashboard.json
+# Full inventory embeds every response body (PII + the whole content corpus).
+marketing-plans/bayan/product-archive/raw-json/_endpoint-inventory.json
+# Bayan's proprietary content corpus — documenting these is fair use for a
+# teardown, REPUBLISHING them verbatim is not. Structure + scale + one redacted
+# sample per corpus lives in the committed Markdown; the full dumps stay local.
+# (Also: review/questions embeds internal reviewer UUIDs.)
+marketing-plans/bayan/product-archive/raw-json/api__review__questions.json
+marketing-plans/bayan/product-archive/raw-json/api__pharma__drugs.json
+marketing-plans/bayan/product-archive/raw-json/api__library__859.json
+# Leaderboard payload embeds the viewer's own name + country + institution.
+# The 05-gamification doc keeps the anonymized schema + a redacted sample.
+marketing-plans/bayan/product-archive/raw-json/api__leaderboard.json
+# Profile page-text capture carries the login email + display name. The
+# redacted profile data model lives in 01-dashboard-and-profile.md instead.
+marketing-plans/bayan/product-archive/pages/profile.txt
