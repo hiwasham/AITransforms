@@ -39,6 +39,10 @@ Every known gap in this teardown, with the cause. Nothing silently dropped.
 
 ## Follow-ups (not requested this session — confirm before starting)
 
-- Move `bayan.edu.om.credentials.json` into Infisical (currently plaintext, git-ignored).
+- ~~Move `bayan.edu.om.credentials.json` into Infisical~~ **DONE (2026-09-25)** —
+  login now lives in Infisical under prefix `BAYAN_EDU` (project "Personal", `dev`).
+  Load it with `source <(python3 ~/.infisical/creds-env.py BAYAN_EDU)` →
+  `BAYAN_EDU_URL/_USERNAME/_PASSWORD`. The local plaintext file was deleted;
+  Hiwa's separate `-hiwa.json` browsing notes remain local + git-ignored.
 - Rephrase leadership/strategist "audit questions" into a `master-prompt.md`.
 - Update stale `progress.md` checkboxes.
