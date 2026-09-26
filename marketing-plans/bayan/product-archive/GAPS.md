@@ -6,7 +6,7 @@ Every known gap in this teardown, with the cause. Nothing silently dropped.
 
 | Gap | Cause |
 |---|---|
-| **Signup / onboarding flow** | Explicitly deferred by Hiwa. URL: `/login?mode=signup&redirect=%2Fonboarding`. Onboarding uses a diagnostic (STEMI quiz) per Hiwa's notes; not live-captured. |
+| ~~**Signup / onboarding flow**~~ **CLOSED (doc 10)** | Captured read-only 2026-09-26 (Hiwa-authorized). `/login?mode=signup&redirect=%2Fonboarding` → for an authed user redirects to `/onboarding`: a diagnostic-first flow ("Welcome to Bayan — Let's see what you know") leading with an inferior-STEMI MCQ, then a write-gated profile-setup step. No account created; `training_level` re-verified `intern` (unchanged). |
 | **Native mobile apps** (iOS `id6792406710`, Android `com.bayanai.bayan`) | Documented as "parts of the product" but native-only teardown needs an emulator/device. Deferred. The web app is the same Supabase backend. |
 
 ## Blocked by the GET-only / no-mutation rule (need explicit confirmation)
