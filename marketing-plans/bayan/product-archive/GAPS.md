@@ -6,29 +6,29 @@ Every known gap in this teardown, with the cause. Nothing silently dropped.
 
 | Gap | Cause |
 |---|---|
-| **Signup / onboarding flow** | Explicitly deferred by Hiwa. URL: `/login?mode=signup&redirect=%2Fonboarding`. Onboarding uses a diagnostic (STEMI quiz) per Hiwa's notes; not live-captured. |
+| ~~**Signup / onboarding flow**~~ **CLOSED (doc 10)** | Captured read-only 2026-09-26 (Hiwa-authorized). `/login?mode=signup&redirect=%2Fonboarding` → for an authed user redirects to `/onboarding`: a diagnostic-first flow ("Welcome to Bayan — Let's see what you know") leading with an inferior-STEMI MCQ, then a write-gated profile-setup step. No account created; `training_level` re-verified `intern` (unchanged). |
 | **Native mobile apps** (iOS `id6792406710`, Android `com.bayanai.bayan`) | Documented as "parts of the product" but native-only teardown needs an emulator/device. Deferred. The web app is the same Supabase backend. |
 
 ## Blocked by the GET-only / no-mutation rule (need explicit confirmation)
 
 | Gap | Why it's a mutation |
 |---|---|
-| **Answer submission + results screen** (live) | Writes attempt history / XP. Flow documented from Hiwa's notes only. |
-| **Student & Resident dashboards** | Account track is nurse. Seeing other role dashboards needs a profile track switch = write. A `Preview As` toggle may be non-mutating but was **not clicked** (unverified). |
-| **Confirm Quality / Quarantine** (reviewer) | Writes a review decision. Console + checklist captured read-only; the action buttons were not pressed. |
-| **Study-plan generation** | "Generate Study Plan" likely writes a plan to the account. Not triggered. |
-| **Flashcard review / drug/course purchase** | State-changing. Not triggered. |
+| ~~**Answer submission + results screen**~~ **CLOSED (doc 12)** | Live-captured 2026-09-26 (user-authorized "do all", MUTATION). A real 5-Q `arab_board` quiz was answered + submitted; per-question feedback (CORRECT/INCORRECT + Explanation/Deep Dive/References/👍👎/Discussion/Flag/difficulty-feedback) and the full **results summary** (score, time analysis, adaptive Level X/5, spaced-review scheduling, by-specialty breakdown, recommended articles/Explore links, WhatsApp/X share, Telegram CTA) + Review Answers mode all captured. Attempt/XP/SRS written to the test account (daily counter → 7/10, streak → 2d); track unchanged (Intern). |
+| **Student & Resident dashboards** | Account track is nurse. Seeing other role dashboards needs a profile track switch = write. A `Preview As` toggle may be non-mutating but was **not clicked** (unverified). **Partial-close (doc 07):** all 11 track NAMES + the nurse-track exams/settings/history/achievements are now enumerated; the other 10 dashboards' exam sets stay `[TBD — confirm per track]`, write-gated. **Further (doc 08):** the dashboard ROUTES are now confirmed from the client config — `/student/dashboard`, `/nursing/dashboard`, `/postgrad/dashboard` (all physician/resident tracks), `/admin`; and each track's exam SCOPE is derivable from the catalog's profession/educationLevel. **CLOSED — live-confirmed (doc 07, 2026-09-26):** all 12 tracks were switched on the real account (authorized) and read back from the persisted `<select>` value; the route mapping is now empirical, not inferred — only `medical_student`→`/student/dashboard` and `nurse`→`/nursing/dashboard` are distinct, the other 10 (incl. pharmacist and family-medicine `resident`) all render an identical "Postgrad Dashboard" at `/postgrad/dashboard`. Account restored to its original **Intern** track. Only the exact per-track default `exam_targets` selection remains write-gated. |
+| ~~**Confirm Quality / Quarantine**~~ **CLOSED (doc 15)** | Live-captured 2026-09-26 (user-authorized, scoped "Quarantine #4", MUTATION). The `/review` reviewer console (REVIEWER-role-gated), its AI-audit findings (typed+scored, e.g. `CORRECT_ANSWER_WRONG` accuracy 0/10), the 14-point safety/quality checklist, and the three terminal decisions (Confirm Quality / Mark minor revision / Quarantine Critical Issue) are all captured. One flagged item — **Q#1197** (Thyroid Disorders, **NOT LIVE**, audit CRITICAL) — was **quarantined** (flag reason "Wrong answer" + safety note). Verified: queue fell 200→199, form closed, "saved/Quarantine" toast. Own-account moderation state; track unchanged (Intern). |
+| ~~**Study-plan generation**~~ **CLOSED (doc 13)** | Live-triggered 2026-09-26 (user-authorized "do all", MUTATION). "Generate Study Plan" for Arab Board (IM) + 15 Dec 2026 built a full 80-day, topic-phased, blueprint-weighted calendar plan (per-day 20Q+3A, per-system question targets, pre-exam taper). Written to the test account; reversible via on-page **Reset Plan**. Track unchanged (Intern). |
+| ~~**Flashcard review**~~ **CLOSED (doc 14)** / **drug/course purchase HELD** | Flashcards live-captured 2026-09-26 (user-authorized "do all", MUTATION): SM-2/Anki-style review — Again(<1min)/Hard(~1day)/Good(~3days)/Easy(~1week), leech tracking, per-deck mastery %, and **auto-generated-from-mistakes** cards (the quiz's 6 wrong answers became the 6 due cards). One card graded "Good" (SRS state written); track unchanged (Intern). **PURCHASE still HELD** — a drug/course purchase is a real financial transaction requiring payment credentials I must never handle; not performed even under "do all". Confirm explicitly to attempt (and note payment data cannot pass through the agent). |
 
 ## Not deep-captured (low marketing value / no API)
 
 | Gap | Note |
 |---|---|
-| **Calculators / Tools hub** | Client-side, no API. Nav confirmed; individual tools not enumerated. |
-| **Explore Topics page** | No dedicated API (page props). Not text-captured. |
-| **Article catalog (all 472)** | No listing endpoint (`/api/library/list` → 400). Only article #859 captured as the schema exemplar; catalog lives in page props. |
-| **OSCE stations (40)** | Counted via `/api/public-stats`; no station-detail endpoint probed. |
-| **Full question bank (5,610)** | Only the 200-item undergrad **review queue** is reachable via API from this account. Nursing-scope questions not enumerated. |
-| **Subscription plan names / prices** | Fields exist; values are `[TBD — confirm with team]`. |
+| ~~**Calculators / Tools hub**~~ **CLOSED (doc 09)** | Client-side, no API — enumerated read-only from `/tools` + `/tools/calculator`: 22 medical calculators (8 categories), Perioperative Risk, 150+ drug monographs, interaction checker, renal dosing, IV compatibility, 20 emergency drug cards, voice-enabled Virtual Patients, OSCE, Death Certification. |
+| ~~**Explore Topics page**~~ **CLOSED (doc 11)** | Text-captured read-only: 12 specialty hubs at `/explore/<slug>`, each cross-linking questions + articles + drugs + calculators + flashcards + virtual patients (e.g. Cardiovascular = 38 drugs, 4 calculators, 10 adaptive Qs). |
+| ~~**Article catalog (all 472)**~~ **CLOSED (doc 11)** | `/library` DOM lists articles as `/library/<id>` — 200 visible for the postgrad track (472 total across tracks per public-stats). Per-article metadata (category, read-time, difficulty, "Verified" human-review badge) + title sample captured; full corpus stays local (fair use). |
+| ~~**OSCE stations (40)**~~ **CLOSED (doc 11)** | `/osce` taxonomy captured: 4 station types × 7 specialties × 3 difficulties, mock circuit at `/osce/circuit`, "aligned with OMSB Licensing / USMLE CS", standardized marking checklists. Station-detail not opened (starting a station may write = mutation-gated). |
+| **Full question bank (5,610)** | Only the 200-item undergrad **review queue** is reachable via API from this account. Nursing-scope questions not enumerated. **Partial-close (doc 08):** per-exam question counts for all 28 catalog exams now known from the client config (e.g. USMLE Step 2 CK 316, SMLE 200, OEN 100). |
+| ~~**Subscription plan names / prices**~~ **CLOSED (doc 08)** | Extracted read-only from the client JS config: 3 consumer tiers (Student $9.99/$69, Nurse $19/$129, Physician $29/$199; 30-day trial, ~43% annual save), per-seat institutional pricing (min 20 seats, 1-yr trial, via MedResearch Academy), free-tier limits (5 Q/day), and the humanitarian free-country access list. Prices are USD. |
 
 ## Method deviation (documented, not a gap in coverage)
 
@@ -44,5 +44,7 @@ Every known gap in this teardown, with the cause. Nothing silently dropped.
   Load it with `source <(python3 ~/.infisical/creds-env.py BAYAN_EDU)` →
   `BAYAN_EDU_URL/_USERNAME/_PASSWORD`. The local plaintext file was deleted;
   Hiwa's separate `-hiwa.json` browsing notes remain local + git-ignored.
-- Rephrase leadership/strategist "audit questions" into a `master-prompt.md`.
+- ~~Rephrase leadership/strategist "audit questions" into a `master-prompt.md`~~
+  **DONE** — `marketing-plans/bayan/master-prompt.md` now holds the shared-language
+  operating system (interaction style, strategic approach, resources, framework).
 - Update stale `progress.md` checkboxes.
