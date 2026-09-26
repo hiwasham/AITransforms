@@ -60,3 +60,22 @@ To assess your organization’s performance in the sale-to-delivery process, gau
 ## Questions?
 
 If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the [Discussion](https://community.empowerlabs.ai/c/discussion-b92449) space.
+
+# Stage 3
+## Instructions
+
+1. Click the **Start Exercise** button below to begin the assessment
+    
+2. Maya will guide you through each question one at a time. The more specific and honest you are, the more tailored and effective the guidance will be.
+    
+3. At the end, Maya will generate a comprehensive assessment report with your scores and recommendations
+    
+4. You can save the assessment results to your Knowledge Documents for future reference
+    
+
+Ready to start this exercise?Click the button below to open the Curriculum Coach and begin your guided exercise.Start Assessment41 of 70 Maya messages remaining
+
+**Time to complete:** 45 minutes
+
+---
+

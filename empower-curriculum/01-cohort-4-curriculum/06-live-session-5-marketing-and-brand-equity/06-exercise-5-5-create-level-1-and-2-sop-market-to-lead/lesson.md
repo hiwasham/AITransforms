@@ -19,7 +19,7 @@ created_at: "2026-02-04T23:20:33.295Z"
 updated_at: "2026-02-06T19:10:17.804Z"
 fetched_at: "2026-08-28T00:56:04+00:00"
 ---
-
+[Case Study: Market to Lead - Email Re-engagement](./05-case-study-market-to-lead-email-re-engagement/post.md)
 # Exercise 5.5: Create Level 1 & 2 SOP (Market to Lead)
 
 > Curriculum › Section 6: Live Session 5: Marketing & Brand Equity › Lesson 6

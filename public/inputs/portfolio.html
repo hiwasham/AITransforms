@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Project Portfolio — Hayden Miyamoto | EMPOWER Labs</title>
+<meta name="description" content="Real AI systems built across 30+ businesses. From lead qualification agents to acquisition due diligence — documented, deployed, and generating measurable ROI.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#09090b;--g900:#18181b;--g800:#27272a;--g700:#3f3f46;
+  --g600:#52525b;--g500:#71717a;--g400:#a1a1aa;--g300:#d4d4d8;
+  --g200:#e4e4e7;--g100:#f4f4f5;--g50:#fafafa;--white:#fff;
+  --blue:#2563eb;--blue-l:#3b82f6;--blue-xl:#60a5fa;
+  --green:#22c55e;--amber:#f59e0b;--purple:#8b5cf6;
+  --ease:cubic-bezier(.4,0,.2,1);--spring:cubic-bezier(.34,1.56,.64,1);
+}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--white);color:var(--black);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+
+/* ── NAV ── */
+.nav{background:rgba(255,255,255,.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--g200);padding:0 24px;position:sticky;top:0;z-index:100}
+.nav-i{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-size:1rem;font-weight:900;letter-spacing:-.02em}
+.logo span{color:var(--blue)}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-link{font-size:.85rem;font-weight:500;color:var(--g500);padding:7px 12px;border-radius:8px;transition:color .15s,background .15s;cursor:pointer}
+.nav-link:hover{color:var(--black);background:var(--g100)}
+.nav-link.active{color:var(--black);background:var(--g100)}
+.nav-cta{background:var(--black);color:var(--white);font-size:.85rem;font-weight:700;padding:8px 18px;border-radius:10px;transition:opacity .15s;cursor:pointer;border:none}
+.nav-cta:hover{opacity:.85}
+
+/* ── HERO ── */
+.hero{background:var(--black);color:var(--white);padding:88px 24px 80px;position:relative;overflow:hidden;text-align:center}
+.hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse 85% 60% at 50% -5%,rgba(37,99,235,.4) 0%,transparent 65%);pointer-events:none;animation:gp 7s ease-in-out infinite}
+@keyframes gp{0%,100%{opacity:.75}50%{opacity:1}}
+.hero-inner{position:relative;z-index:1}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);border-radius:100px;padding:6px 16px;font-size:.74rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--g400);margin-bottom:28px}
+.hero-tag-dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 7px var(--green);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;letter-spacing:-.04em;line-height:1.08;max-width:760px;margin:0 auto 20px}
+.hero h1 em{font-style:normal;background:linear-gradient(135deg,#60a5fa,#a78bfa,#f472b6);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{font-size:1rem;color:var(--g400);max-width:540px;margin:0 auto 40px;line-height:1.75}
+
+/* ── STATS ── */
+.stats{display:flex;justify-content:center;gap:0;flex-wrap:wrap;border-top:1px solid var(--g800);border-bottom:1px solid var(--g800);padding:24px 24px}
+.stat{text-align:center;padding:0 40px;border-right:1px solid var(--g800)}
+.stat:last-child{border-right:none}
+.stat-val{font-size:2rem;font-weight:900;color:var(--white);letter-spacing:-.04em;line-height:1}
+.stat-label{font-size:.75rem;color:var(--g600);margin-top:5px;font-weight:500}
+
+/* ── FILTERS ── */
+.filter-wrap{padding:40px 24px 32px;display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+.filter-btn{font-size:.82rem;font-weight:500;padding:8px 16px;border-radius:100px;border:1px solid var(--g200);background:var(--white);color:var(--g600);cursor:pointer;transition:all .15s}
+.filter-btn:hover{border-color:var(--g400);color:var(--black)}
+.filter-btn.active{background:var(--black);color:var(--white);border-color:var(--black)}
+
+/* ── FEATURED ── */
+.featured-wrap{max-width:1160px;margin:0 auto;padding:0 24px 48px}
+.featured-label{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--g500);margin-bottom:14px}
+.featured-card{background:var(--black);color:var(--white);border-radius:20px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;position:relative;overflow:hidden}
+.featured-card::before{content:'';position:absolute;top:-40px;right:-40px;width:300px;height:300px;background:radial-gradient(circle,rgba(37,99,235,.2),transparent 70%);pointer-events:none}
+.fc-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(37,99,235,.18);border:1px solid rgba(37,99,235,.3);color:#60a5fa;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:100px;margin-bottom:16px}
+.fc-title{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;letter-spacing:-.03em;line-height:1.15;margin-bottom:14px}
+.fc-desc{color:var(--g400);font-size:.9rem;line-height:1.72;margin-bottom:24px}
+.fc-stack{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:28px}
+.fc-chip{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:var(--g300);font-size:.72rem;font-weight:500;padding:4px 10px;border-radius:6px}
+.fc-outcome{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.2);border-radius:12px;padding:16px 20px}
+.fc-outcome-label{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:4px}
+.fc-outcome-val{font-size:1.5rem;font-weight:900;color:var(--white);letter-spacing:-.02em}
+.fc-outcome-desc{font-size:.8rem;color:var(--g400);margin-top:3px}
+.fc-visual{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:28px;font-family:'Courier New',monospace}
+.fc-visual-title{font-size:.68rem;color:var(--g600);letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;font-family:'Inter',sans-serif}
+.fc-line{font-size:.78rem;color:var(--g500);margin:7px 0;display:flex;align-items:center;gap:8px}
+.fc-line-val{color:var(--green)}
+.fc-line-prog{flex:1;height:3px;background:rgba(255,255,255,.06);border-radius:2px;overflow:hidden}
+.fc-line-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--blue-l),var(--purple))}
+
+/* ── PROJECT GRID ── */
+.grid-wrap{max-width:1160px;margin:0 auto;padding:0 24px 80px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--white);border:1px solid var(--g200);border-radius:18px;padding:26px;display:flex;flex-direction:column;transition:box-shadow .22s,transform .22s var(--spring),border-color .2s;cursor:default}
+.card:hover{box-shadow:0 12px 40px rgba(0,0,0,.09);transform:translateY(-4px);border-color:var(--g300)}
+.card-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:16px}
+.card-icon{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;border:1px solid}
+.card-difficulty{font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:6px;border:1px solid}
+.diff-advanced{background:#EEEDFE;color:#534AB7;border-color:#AFA9EC}
+.diff-intermediate{background:#E6F1FB;color:#185FA5;border-color:#85B7EB}
+.diff-expert{background:#FCEBEB;color:#A32D2D;border-color:#F09595}
+.card-cat{font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--g500);margin-bottom:6px}
+.card-title{font-size:1.05rem;font-weight:700;letter-spacing:-.01em;color:var(--black);margin-bottom:8px;line-height:1.3}
+.card-desc{font-size:.83rem;color:var(--g600);line-height:1.65;flex:1;margin-bottom:16px}
+.card-stack{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:16px}
+.chip{font-size:.68rem;font-weight:500;padding:3px 8px;border-radius:6px;background:var(--g50);border:1px solid var(--g200);color:var(--g600)}
+.card-outcome{background:var(--g50);border-radius:10px;padding:11px 13px;border:1px solid var(--g200)}
+.outcome-label{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--g500);margin-bottom:2px}
+.outcome-val{font-size:1.1rem;font-weight:900;letter-spacing:-.02em;color:var(--black)}
+.outcome-desc{font-size:.72rem;color:var(--g500);margin-top:1px}
+.card-status{display:flex;align-items:center;gap:5px;font-size:.72rem;font-weight:500;margin-top:14px}
+.status-dot{width:6px;height:6px;border-radius:50%}
+
+/* ── CTA ── */
+.cta{background:var(--black);color:var(--white);text-align:center;padding:80px 24px}
+.cta h2{font-size:clamp(1.8rem,4vw,3rem);font-weight:900;letter-spacing:-.03em;margin-bottom:14px}
+.cta p{color:var(--g400);max-width:500px;margin:0 auto 36px;line-height:1.7}
+.cta-btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn-w{background:var(--white);color:var(--black);font-weight:700;font-size:.9rem;padding:13px 26px;border-radius:11px;border:none;cursor:pointer;transition:opacity .15s}
+.btn-w:hover{opacity:.88}
+.btn-o{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.22);font-weight:600;font-size:.9rem;padding:13px 26px;border-radius:11px;cursor:pointer;transition:all .15s}
+.btn-o:hover{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.06)}
+
+/* ── HIDDEN (filter) ── */
+.card.hidden{display:none}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}.featured-card{grid-template-columns:1fr}.fc-visual{display:none}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.stat{padding:0 20px}.hero h1{font-size:2rem}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-i">
+    <div class="logo">EMPOWER<span>Labs</span></div>
+    <div class="nav-links">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/cohort" class="nav-link">Live Cohort</a>
+      <a href="/teams" class="nav-link">For Teams</a>
+      <a href="/portfolio" class="nav-link active">Portfolio</a>
+      <button class="nav-cta">Get Started</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-tag"><div class="hero-tag-dot"></div>Real AI Systems — Not Demos</div>
+    <h1>AI Projects Built<br><em>Across 30+ Businesses</em></h1>
+    <p class="hero-sub">Every system here runs in production. Each one started as a documented process — and became an AI-powered machine. This is what the EMPOWER methodology looks like when deployed.</p>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="stat-val">10+</div><div class="stat-label">AI systems in production</div></div>
+    <div class="stat"><div class="stat-val">30+</div><div class="stat-label">Businesses running these systems</div></div>
+    <div class="stat"><div class="stat-val">$2M+</div><div class="stat-label">Revenue impact documented</div></div>
+    <div class="stat"><div class="stat-val">178</div><div class="stat-label">Operators trained to replicate</div></div>
+  </div>
+</section>
+
+<!-- FILTERS -->
+<div class="filter-wrap">
+  <button class="filter-btn active" data-cat="all" onclick="filter('all',this)">All Projects</button>
+  <button class="filter-btn" data-cat="automation" onclick="filter('automation',this)"><i class="ti ti-bolt"></i> Business Automation</button>
+  <button class="filter-btn" data-cat="revenue" onclick="filter('revenue',this)"><i class="ti ti-currency-dollar"></i> Revenue Tools</button>
+  <button class="filter-btn" data-cat="knowledge" onclick="filter('knowledge',this)"><i class="ti ti-brain"></i> Knowledge Systems</button>
+  <button class="filter-btn" data-cat="analytics" onclick="filter('analytics',this)"><i class="ti ti-chart-bar"></i> Analytics</button>
+  <button class="filter-btn" data-cat="agents" onclick="filter('agents',this)"><i class="ti ti-robot"></i> AI Agents</button>
+</div>
+
+<!-- FEATURED PROJECT -->
+<div class="featured-wrap">
+  <div class="featured-label">Flagship project</div>
+  <div class="featured-card" data-cat="knowledge">
+    <div>
+      <div class="fc-badge"><i class="ti ti-star" style="font-size:13px"></i> Flagship · Knowledge Systems</div>
+      <h2 class="fc-title">EMPOWER OS — Business Documentation System</h2>
+      <p class="fc-desc">The full documentation infrastructure that transforms any business from founder-dependent to AI-augmented. Eight core processes mapped four levels deep, connected to a Master Prompt engine that makes every AI interaction specific, accurate, and on-brand.</p>
+      <div class="fc-stack">
+        <span class="fc-chip">Next.js 14</span>
+        <span class="fc-chip">Supabase</span>
+        <span class="fc-chip">Claude API</span>
+        <span class="fc-chip">OpenAI GPT-4</span>
+        <span class="fc-chip">n8n</span>
+        <span class="fc-chip">Notion API</span>
+        <span class="fc-chip">Zapier</span>
+      </div>
+      <div class="fc-outcome">
+        <div class="fc-outcome-label">Measured outcome</div>
+        <div class="fc-outcome-val">178 businesses systematized</div>
+        <div class="fc-outcome-desc">Average time from chaos to documented foundation: 5 weeks</div>
+      </div>
+    </div>
+    <div class="fc-visual">
+      <div class="fc-visual-title">System health monitor</div>
+      <div class="fc-line"><span style="color:var(--blue-xl);min-width:90px">Customer Flow</span><div class="fc-line-prog"><div class="fc-line-fill" style="width:94%"></div></div><span class="fc-line-val">94%</span></div>
+      <div class="fc-line"><span style="color:var(--blue-xl);min-width:90px">Money Flow</span><div class="fc-line-prog"><div class="fc-line-fill" style="width:88%"></div></div><span class="fc-line-val">88%</span></div>
+      <div class="fc-line"><span style="color:var(--blue-xl);min-width:90px">People Flow</span><div class="fc-line-prog"><div class="fc-line-fill" style="width:76%"></div></div><span class="fc-line-val">76%</span></div>
+      <div class="fc-line"><span style="color:var(--blue-xl);min-width:90px">AI Readiness</span><div class="fc-line-prog"><div class="fc-line-fill" style="width:91%"></div></div><span class="fc-line-val">91%</span></div>
+      <div style="margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.06)">
+        <div style="font-size:.68rem;color:var(--g600);margin-bottom:8px;font-family:'Inter',sans-serif;letter-spacing:.06em;text-transform:uppercase">Recent activity</div>
+        <div style="font-size:.74rem;color:var(--g500);margin:5px 0"><span style="color:var(--green)">✓</span> SOP auto-generated from Zoom transcript</div>
+        <div style="font-size:.74rem;color:var(--g500);margin:5px 0"><span style="color:var(--green)">✓</span> Master Prompt updated with Q4 positioning</div>
+        <div style="font-size:.74rem;color:var(--g500);margin:5px 0"><span style="color:var(--green)">✓</span> 3 new Level 3 Guides published</div>
+        <div style="font-size:.74rem;color:var(--amber);margin:5px 0"><span>◎</span> People Flow — 2 gaps flagged for review</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT GRID -->
+<div class="grid-wrap">
+  <div class="grid" id="project-grid">
+
+    <!-- PROJECT 1: AI Lead Qualifier -->
+    <div class="card" data-cat="revenue">
+      <div class="card-top">
+        <div class="card-icon" style="background:#EFF6FF;border-color:#BFDBFE;color:#2563eb"><i class="ti ti-target"></i></div>
+        <span class="card-difficulty diff-intermediate">Intermediate</span>
+      </div>
+      <div class="card-cat">Revenue Tools</div>
+      <div class="card-title">AI Lead Qualifier</div>
+      <div class="card-desc">Analyzes Zoom call transcripts in real time and returns a binary qualified/unqualified verdict against a documented ICP scorecard. Eliminates 68% of unqualified calls before they reach a salesperson.</div>
+      <div class="card-stack">
+        <span class="chip">OpenAI GPT-4o</span><span class="chip">n8n</span><span class="chip">Zapier</span><span class="chip">Vtiger CRM</span><span class="chip">Whisper API</span>
+      </div>
+      <div class="card-outcome">
+        <div class="outcome-label">Outcome</div>
+        <div class="outcome-val">68% fewer unqualified calls</div>
+        <div class="outcome-desc">Sales team time recovered per week: 12 hours</div>
+      </div>
+      <div class="card-status">
+        <div class="status-dot" style="background:#22c55e"></div>
+        <span style="color:#22c55e;font-size:.72rem">Live in 3 businesses</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 2: Proposal Generator -->
+    <div class="card" data-cat="revenue">
+      <div class="card-top">
+        <div class="card-icon" style="background:#F5F3FF;border-color:#DDD6FE;color:#7C3AED"><i class="ti ti-file-text"></i></div>
+        <span class="card-difficulty diff-intermediate">Intermediate</span>
+      </div>
+      <div class="card-cat">Revenue Tools</div>
+      <div class="card-title">AI Proposal Generator</div>
+      <div class="card-desc">Discovery call transcript goes in, hyper-personalized proposal comes out in under 20 minutes. Pulls from documented service offerings and client pain points. Replaces an 8–10 hour manual process.</div>
+      <div class="card-stack">
+        <span class="chip">Claude 3.5 Sonnet</span><span class="chip">n8n</span><span class="chip">Google Docs API</span><span class="chip">Whisper</span>
+      </div>
+      <div class="card-outcome">
+        <div class="outcome-label">Outcome</div>
+        <div class="outcome-val">8 hrs → 20 minutes</div>
+        <div class="outcome-desc">Close rate improved 31% from faster turnaround</div>
+      </div>
+      <div class="card-status">
+        <div class="status-dot" style="background:#22c55e"></div>
+        <span style="color:#22c55e;font-size:.72rem">Live in 7 businesses</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 3: SOP Generator -->
+    <div class="card" data-cat="knowledge">
+      <div class="card-top">
+        <div class="card-icon" style="background:#E1F5EE;border-color:#9FE1CB;color:#0F6E56"><i class="ti ti-clipboard-text"></i></div>
+        <span class="card-difficulty diff-intermediate">Intermediate</span>
+      </div>
+      <div class="card-cat">Knowledge Systems</div>
+      <div class="card-title">Transcript → SOP Engine</div>
+      <div class="card-desc">Any Zoom meeting, screen recording, or voice memo gets automatically transcribed and converted into a structured Level 3 SOP. Uses the EMPOWER four-level documentation framework to assign the right depth automatically.</div>
+      <div class="card-stack">
+        <span class="chip">Whisper API</span><span class="chip">Claude API</span><span class="chip">Notion API</span><span class="chip">n8n</span><span class="chip">Zapier</span>
+      </div>
+      <div class="card-outcome">
+        <div class="outcome-label">Outcome</div>
+        <div class="outcome-val">90% faster documentation</div>
+        <div class="outcome-desc">Average: 45-min meeting → SOP in 8 minutes</div>
+      </div>
+      <div class="card-status">
+        <div class="status-dot" style="background:#22c55e"></div>
+        <span style="color:#22c55e;font-size:.72rem">Live — 500+ SOPs generated</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 4: Acquisition Due Diligence AI -->
+    <div class="card" data-cat="analytics">
+      <div class="card-top">
+        <div class="card-icon" style="background:#FAEEDA;border-color:#FAC775;color:#633806"><i class="ti ti-building-store"></i></div>
+        <span class="card-difficulty diff-expert">Expert</span>
+      </div>
+      <div class="card-cat">Analytics</div>
+      <div class="card-title">Acquisition Due Diligence AI</div>
+      <div class="card-desc">Compresses business acquisition due diligence from 3 weeks to 3 days. Analyzes financial statements, operational docs, staff structure, and market position against a 47-point scoring rubric. Returns a buy/pass recommendation with risk flags.</div>
+      <div class="card-stack">
+        <span class="chip">Claude 3.5</span><span class="chip">Python</span><span class="chip">Airtable</span><span class="chip">PDF parsing</span><span class="chip">Custom scoring</span>
+      </div>
+      <div class="card-outcome">
+        <div class="outcome-label">Outcome</div>
+        <div class="outcome-val">3 weeks → 3 days</div>
+        <div class="outcome-desc">Used on 12 acquisitions — 4 deals closed faster</div>
+      </div>
+      <div class="card-status">
+        <div class="status-dot" style="background:#22c55e"></div>
+        <span style="color:#22c55e;font-size:.72rem">Active — 12 acquisitions analyzed</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 5: Portfolio Intelligence Monitor -->
+    <div class="card" data-cat="analytics">
+      <div class="card-top">
+        <div class="card-icon" style="background:#EAF3DE;border-color:#C0DD97;color:#27500A"><i class="ti ti-chart-line"></i></div>
+        <span class="card-difficulty diff-advanced">Advanced</span>
+      </div>
+      <div class="card-cat">Analytics</div>
+      <div class="card-title">Portfolio Intelligence Monitor</div>
+      <div class="card-desc">Monitors KPIs across 30+ businesses simultaneously. Each morning, AI pulls data from each company's systems, flags anomalies against documented thresholds, and delivers a Slack digest ranked by urgency. No analyst needed.</div>
+      <div class="card-stack">
+        <span class="chip">n8n</span><span class="chip">OpenAI</span><span class="chip">Slack API</span><span class="chip">Airtable</span><span class="chip">Stripe API</span><span class="chip">QuickBooks</span>
+      </div>
+      <div class="card-outcome">
+        <div class="outcome-label">Outcome</div>
+        <div class="outcome-val">30+ businesses, 1 analyst</div>
+        <div class="outcome-desc">$180K/yr analyst headcount eliminated</div>
+      </div>
+      <div class="card-status">
+        <div class="status-dot" style="background:#22c55e"></div>
+        <span style="color:#22c55e;font-size:.72rem">Live — 7 months running</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 6: AI Content Repurposing Engine -->
+    <div class="card" data-cat="automation">
+      <div class="card-top">
+        <div class="card-icon" style="background:#FBEAF0;border-color:#F4C0D1;color:#72243E"><i class="ti ti-repeat"></i></div>
+        <span class="card-difficulty diff-intermediate">Intermediate</span>
+      </div>
+      <div class="card-cat">Business Automation</div>
+      <div class="card-title">Content Repurposing Engine</div>
+      <div class="card-desc">One raw idea — a voice memo, a framework diagram, a meeting insight — gets transformed into LinkedIn post, email newsletter, Twitter thread, short-form video script, and blog outline. All in brand voice. All in 4 minutes.</div>
+      <div class="card-stack">
+        <span class="chip">Claude API</span><span class="chip">n8n</span><span class="chip">Beehiiv API</span><span class="chip">Buffer</span><span class="chip">Notion</span>
+      </div>
+      <div class="card-outcome">
+        <div class="outcome-label">Outcome</div>
+        <div class="outcome-val">10x content output</div>
+        <div class="outcome-desc">Same time investment, 10 formats per idea</div>
+      </div>
+      <div class="card-status">
+        <div class="status-dot" style="background:#22c55e"></div>
+        <span style="color:#22c55e;font-size:.72rem">Live — personal + 3 client accounts</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 7: AI Onboarding System -->
+    <div class="card" data-cat="automation">
+      <div class="card-top">
+        <div class="card-icon" style="background:#EFF6FF;border-color:#BFDBFE;color:#1e40af"><i class="ti ti-arrow-bar-right"></i></div>
+        <span class="card-difficulty diff-advanced">Advanced</span>
+      </div>
+      <div class="card-cat">Business Automation</div>
+      <div class="card-title">AI Client Onboarding System</div>
+      <div class="card-desc">New client signed → entire onboarding sequence triggered automatically. Welcome sequence, account setup tasks, training module scheduling, 7-day check-ins, and 30-day milestone reviews — all without a human touching it.</div>
+      <div class="card-stack">
+        <span class="chip">n8n</span><span class="chip">Airtable</span><span class="chip">Slack</span><span class="chip">Loom API</span><span class="chip">OpenAI</span><span class="chip">Zapier</span>
+      </div>
+      <div class="card-outcome">
+        <div class="outcome-label">Outcome</div>
+        <div class="outcome-val">2 weeks → 3 days</div>
+        <div class="outcome-desc">Client satisfaction score up 44% post-deploy</div>
+      </div>
+      <div class="card-status">
+        <div class="status-dot" style="background:#22c55e"></div>
+        <span style="color:#22c55e;font-size:.72rem">Live in 5 businesses</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 8: Contract Scope Guard -->
+    <div class="card" data-cat="agents">
+      <div class="card-top">
+        <div class="card-icon" style="background:#EEEDFE;border-color:#AFA9EC;color:#3C3489"><i class="ti ti-shield-check"></i></div>
+        <span class="card-difficulty diff-advanced">Advanced</span>
+      </div>
+      <div class="card-cat">AI Agents</div>
+      <div class="card-title">Contract Scope Guard Agent</div>
+      <div class="card-desc">An AI agent that monitors incoming client requests and automatically compares them against documented service offerings. Flags scope creep in real time, categorizes as standard / exception / new service, and drafts the response message for the team to send.</div>
+      <div class="card-stack">
+        <span class="chip">Claude API</span><span class="chip">n8n</span><span class="chip">Gmail API</span><span class="chip">Slack</span><span class="chip">Airtable</span>
+      </div>
+      <div class="card-outcome">
+        <div class="outcome-label">Outcome</div>
+        <div class="outcome-val">Zero scope creep incidents</div>
+        <div class="outcome-desc">$240K in out-of-scope work identified in year 1</div>
+      </div>
+      <div class="card-status">
+        <div class="status-dot" style="background:#22c55e"></div>
+        <span style="color:#22c55e;font-size:.72rem">Live — monitoring 3 agencies</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 9: Master Prompt Engine -->
+    <div class="card" data-cat="knowledge">
+      <div class="card-top">
+        <div class="card-icon" style="background:#E1F5EE;border-color:#5DCAA5;color:#085041"><i class="ti ti-brain"></i></div>
+        <span class="card-difficulty diff-expert">Expert</span>
+      </div>
+      <div class="card-cat">Knowledge Systems</div>
+      <div class="card-title">Master Prompt Engine</div>
+      <div class="card-desc">Extracts a company's complete Business DNA — ICP, brand voice, pricing logic, competitive positioning, decision frameworks, and cultural values — into a structured, versioned context document. Makes every AI interaction 3x more accurate from day one.</div>
+      <div class="card-stack">
+        <span class="chip">Claude API</span><span class="chip">Next.js</span><span class="chip">Supabase</span><span class="chip">Custom framework</span>
+      </div>
+      <div class="card-outcome">
+        <div class="outcome-label">Outcome</div>
+        <div class="outcome-val">3x AI output quality</div>
+        <div class="outcome-desc">Measured across 178 business deployments</div>
+      </div>
+      <div class="card-status">
+        <div class="status-dot" style="background:#22c55e"></div>
+        <span style="color:#22c55e;font-size:.72rem">Core of EMPOWER OS — 178 deployed</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 10: AI Quality Auditor -->
+    <div class="card" data-cat="agents">
+      <div class="card-top">
+        <div class="card-icon" style="background:#FAEEDA;border-color:#EF9F27;color:#412402"><i class="ti ti-eye"></i></div>
+        <span class="card-difficulty diff-advanced">Advanced</span>
+      </div>
+      <div class="card-cat">AI Agents</div>
+      <div class="card-title">24/7 Quality Audit Agent</div>
+      <div class="card-desc">An always-on AI auditor that analyzes every support interaction, sales call, and client touchpoint against documented quality standards. Scores each interaction 1–10. Only alerts the manager when something scores below threshold — enabling leadership by exception at scale.</div>
+      <div class="card-stack">
+        <span class="chip">OpenAI Whisper</span><span class="chip">Claude API</span><span class="chip">n8n</span><span class="chip">Slack API</span><span class="chip">Custom rubric</span>
+      </div>
+      <div class="card-outcome">
+        <div class="outcome-label">Outcome</div>
+        <div class="outcome-val">700+ interactions/day audited</div>
+        <div class="outcome-desc">Founder review time: 0 hrs/week (was 12)</div>
+      </div>
+      <div class="card-status">
+        <div class="status-dot" style="background:#22c55e"></div>
+        <span style="color:#22c55e;font-size:.72rem">Live — Hamkelasi (700+ schools)</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 11: CRM Enrichment Agent -->
+    <div class="card" data-cat="agents">
+      <div class="card-top">
+        <div class="card-icon" style="background:#E6F1FB;border-color:#B5D4F4;color:#0C447C"><i class="ti ti-database"></i></div>
+        <span class="card-difficulty diff-intermediate">Intermediate</span>
+      </div>
+      <div class="card-cat">AI Agents</div>
+      <div class="card-title">CRM Enrichment Agent</div>
+      <div class="card-desc">After every sales call, an AI agent automatically transcribes the conversation, extracts contact details, pain points, next steps, and deal signals — then pushes everything to the CRM with zero manual input from the salesperson.</div>
+      <div class="card-stack">
+        <span class="chip">Whisper</span><span class="chip">GPT-4o</span><span class="chip">n8n</span><span class="chip">HubSpot API</span><span class="chip">Vtiger</span>
+      </div>
+      <div class="card-outcome">
+        <div class="outcome-label">Outcome</div>
+        <div class="outcome-val">20% of sales day recovered</div>
+        <div class="outcome-desc">Data quality up 89% — zero manual CRM entries</div>
+      </div>
+      <div class="card-status">
+        <div class="status-dot" style="background:#22c55e"></div>
+        <span style="color:#22c55e;font-size:.72rem">Live — 4 sales teams</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 12: EMPOWER Assessment Tool -->
+    <div class="card" data-cat="analytics">
+      <div class="card-top">
+        <div class="card-icon" style="background:#F5F3FF;border-color:#DDD6FE;color:#26215C"><i class="ti ti-adjustments-horizontal"></i></div>
+        <span class="card-difficulty diff-advanced">Advanced</span>
+      </div>
+      <div class="card-cat">Analytics</div>
+      <div class="card-title">EMPOWER OS Assessment Tool</div>
+      <div class="card-desc">The 7-pillar scoring system that tells any business which of their processes to document first for maximum AI impact. Evaluates Expansion, Marketing, Profitability, Offering, Workforce, Execution, and Robustness — outputs a prioritized action roadmap.</div>
+      <div class="card-stack">
+        <span class="chip">Next.js</span><span class="chip">React</span><span class="chip">Supabase</span><span class="chip">Claude API</span>
+      </div>
+      <div class="card-outcome">
+        <div class="outcome-label">Outcome</div>
+        <div class="outcome-val">178 roadmaps generated</div>
+        <div class="outcome-desc">Avg. documentation priority clarity: 94% reported</div>
+      </div>
+      <div class="card-status">
+        <div class="status-dot" style="background:#22c55e"></div>
+        <span style="color:#22c55e;font-size:.72rem">Core EMPOWER tool — 178 used</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>Want These Systems<br>In Your Business?</h2>
+  <p>Every project here started with documented processes. Join the cohort and build the foundation that makes AI like this possible in your business.</p>
+  <div class="cta-btns">
+    <button class="btn-w" onclick="window.location.href='/cohort'">Join the Live Cohort</button>
+    <button class="btn-o" onclick="window.location.href='/teams'">Enroll Your Team</button>
+  </div>
+</div>
+
+<script>
+function filter(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'))
+  btn.classList.add('active')
+
+  document.querySelectorAll('#project-grid .card').forEach(card => {
+    if (cat === 'all' || card.dataset.cat === cat) {
+      card.classList.remove('hidden')
+      card.style.animation = 'none'
+      card.offsetHeight
+      card.style.animation = 'fadein .3s ease both'
+    } else {
+      card.classList.add('hidden')
+    }
+  })
+
+  const feat = document.querySelector('.featured-card')
+  if (feat) {
+    feat.style.display = (cat === 'all' || feat.dataset.cat === cat) ? 'grid' : 'none'
+    document.querySelector('.featured-label').style.display =
+      (cat === 'all' || feat.dataset.cat === cat) ? 'block' : 'none'
+  }
+}
+
+const style = document.createElement('style')
+style.textContent = '@keyframes fadein{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}'
+document.head.appendChild(style)
+</script>
+</body>
+</html>

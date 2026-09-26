@@ -50,3 +50,5 @@ To assess your organization’s performance in the Market to Lead process, gauge
 ## Questions?
 
 If any questions or roadblocks show up as you’re building your master prompt, we invite you to post them in the [Discussion](https://community.empowerlabs.ai/c/discussion-b92449) space.
+
+[Case Study: Market to Lead - B2B Seller Outreach](./04-case-study-market-to-lead-b2b-seller-outreach/post.md)

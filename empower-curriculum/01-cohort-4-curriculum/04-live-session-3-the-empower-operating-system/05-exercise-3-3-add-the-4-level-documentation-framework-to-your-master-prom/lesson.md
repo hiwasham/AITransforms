@@ -42,6 +42,7 @@ To give Claude an understanding of the 4 levels of documentation, so it can help
 4. Click “Add Content”
 
 → **[Access the Doc](https://docs.google.com/document/d/130JlqKzDo6eQLeXve0yE9v54CSILlt1ahdnf4GSJp28/edit?tab=t.ucuqe5n375q3)**
+[[Hayden Miyamoto EMPOWER Labs-Build Your Business Brain mini-course-1-Create Your AI Business Advisor-What is a Master Prompt-Cohort 4 Prompt (External)-3-The EMPOWER Operating System-2-Add the 4-Level Documentation Framework||Add the 4-Level Documentation Framework]]
 
 **Time to complete:** 2 minutes
 

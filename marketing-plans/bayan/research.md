@@ -1,3 +1,4 @@
+[[Hayden Miyamoto EMPOWER Labs-Build Your Business Brain mini-course-3-Process Mapping With AI-Building Your Process Library-Financial management-Agents-Research & modeling-market researcher]]
 # Bayan — Marketing Plan Research Record
 
 **Date:** 2026-09-21

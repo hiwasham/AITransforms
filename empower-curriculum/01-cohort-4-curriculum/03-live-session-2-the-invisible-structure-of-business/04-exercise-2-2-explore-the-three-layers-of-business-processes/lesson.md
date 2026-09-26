@@ -19,7 +19,7 @@ created_at: "2026-01-28T20:51:22.009Z"
 updated_at: "2026-01-28T20:52:47.669Z"
 fetched_at: "2026-08-28T00:54:41+00:00"
 ---
-
+[[Hayden Miyamoto EMPOWER Labs-optin stage3 trial-dashboard-Business Process Framework-3 Process Categories Strategic, Core Customer, Enabling]]
 # Exercise 2.2: Explore the Three Layers of Business Processes
 
 > Curriculum › Section 3: Live Session 2: The Invisible Structure of Business › Lesson 4

@@ -19,7 +19,7 @@ created_at: "2026-01-26T17:56:06.314Z"
 updated_at: "2026-05-29T18:18:00.923Z"
 fetched_at: "2026-08-28T00:54:49+00:00"
 ---
-
+[[Hayden Miyamoto EMPOWER Labs-Build Your Business Brain mini-course-2-The Business Framework-Shared Language-resources-bayan|bayan resources]]
 # Exercise 2.4: Add "Shared Language" to Your Master Prompt
 
 > Curriculum › Section 3: Live Session 2: The Invisible Structure of Business › Lesson 8

@@ -16,7 +16,7 @@
 
 1. [Live Session 1: Replay](./02-live-session-1-tech-setup-and-overview/01-live-session-1-replay/lesson.md)  ·  🔗 vimeo · 📕 1 pdf · 📎 1
 2. [Session 1 : Tech Setup & Overview](./02-live-session-1-tech-setup-and-overview/02-session-1-tech-setup-and-overview/lesson.md)  ·  📕 1 pdf
-3. [Exercise 1.1: Create Your Master Prompt v.1](./02-live-session-1-tech-setup-and-overview/03-exercise-1-1-create-your-master-prompt-v-1/lesson.md)
+3. [Exercise 1.1: Create Your Master Prompt v.1](03-exercise-1-1-create-your-master-prompt-v-1-lesson.md)
 4. [Google Drive Master Prompt Archive Protocol (optional)](./02-live-session-1-tech-setup-and-overview/04-google-drive-master-prompt-archive-protocol-optional/lesson.md)
 
 ## 3. [Live Session 2: The Invisible Structure of Business](./03-live-session-2-the-invisible-structure-of-business/)
@@ -57,7 +57,7 @@
 ## 6. [Live Session 5: Marketing & Brand Equity](./06-live-session-5-marketing-and-brand-equity/)
 
 1. [Live Session 5: Replay](./06-live-session-5-marketing-and-brand-equity/01-live-session-5-replay/lesson.md)  ·  📝 transcript · 📕 1 pdf · 📎 1
-2. [Exercise 5.1: Research Your Competitors (Optional)](./06-live-session-5-marketing-and-brand-equity/02-exercise-5-1-research-your-competitors-optional/lesson.md)  ·  🎬 1 video (30 MB)
+2. [Exercise 5.1: Research Your Competitors (Optional)](02-exercise-5-1-research-your-competitors-optional-lesson.md)  ·  🎬 1 video (30 MB)
 3. [Exercise 5.2: Craft Your UVP v1](./06-live-session-5-marketing-and-brand-equity/03-exercise-5-2-craft-your-uvp-v1/lesson.md)
 4. [Exercise 5.3 : Run the Assessment (Market to Lead)](./06-live-session-5-marketing-and-brand-equity/04-exercise-5-3-run-the-assessment-market-to-lead/lesson.md)
 5. [Exercise 5.4: Analyze Your Unit Economics (Fractional CRO)](./06-live-session-5-marketing-and-brand-equity/05-exercise-5-4-analyze-your-unit-economics-fractional-cro/lesson.md)  ·  🎬 3 video (272 MB)

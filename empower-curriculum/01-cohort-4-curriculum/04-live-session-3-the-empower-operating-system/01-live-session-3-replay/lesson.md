@@ -50,11 +50,16 @@ Hayden discussed various business operating systems, including Traction, Scaling
 
 ### Business Frameworks and AI Implementation
 
-The group discussed various business frameworks and tools, including the 7 Habits of Highly Effective People, Crucial Conversations, and the Business Model Canvas. Hayden emphasized the democratizing effect of AI in implementing business frameworks, while Don shared his experience using Claude to explore strategic plans. Josh conducted a poll to gauge participants' experience with different operating systems, revealing that 40% were scaling up, 30% were in traction, and others had implemented various frameworks like the Business Model Canvas and Value Proposition Design. Beni shared insights on adapting the Business Model Canvas to changing target groups and products over time, highlighting the importance of aligning with board decisions.
+The group discussed various business frameworks and tools, including the 7 Habits of Highly Effective People, Crucial Conversations, and the Business Model Canvas. 
+Hayden emphasized the democratizing effect of AI in implementing business frameworks, while Don shared his experience using Claude to explore strategic plans.
+Josh conducted a poll to gauge participants' experience with different operating systems, revealing that 40% were scaling up, 30% were in traction, and others had implemented various frameworks like the Business Model Canvas and Value Proposition Design.
+Beni shared insights on adapting the Business Model Canvas to changing target groups and products over time, highlighting the importance of aligning with board decisions.
 
 ### EMPOWER: Enhancing Business Value
 
-Hayden introduced EMPOWER, an operating system and framework designed to enhance process creation and improve business value, particularly in conjunction with AI. He outlined the structure of upcoming sessions, which will cover various aspects of business operations including sales, marketing, finance, and workforce management. Hayden emphasized that EMPOWER complements existing operating systems by focusing on practical, value-centered processes and implementation, making it particularly useful for business owners looking to improve their companies' intrinsic value for potential liquidity events.
+Hayden introduced EMPOWER, an operating system and framework designed to enhance process creation and improve business value, particularly in conjunction with AI. 
+He outlined the structure of upcoming sessions, which will cover various aspects of business operations including sales, marketing, finance, and workforce management.
+Hayden emphasized that EMPOWER complements existing operating systems by focusing on practical, value-centered processes and implementation, making it particularly useful for business owners looking to improve their companies' intrinsic value for potential liquidity events.
 
 ### Business Process Stages and Evolution
 

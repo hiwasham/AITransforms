@@ -1,10 +1,8 @@
+[[Hayden Miyamoto EMPOWER Labs-optin stage3 trial-dashboard-bayan-master-prompt]]
 # Bayan Marketing — Master Prompt & Shared Language
 
 **The "second brain" for every Bayan marketing task.** Read this first, every time.
-It holds the shared language (interaction style, strategic approach, resources,
-business framework) that keeps every piece of work — a reel, a plan section, a
-pitch, an ad — coherent and on-brand. Backbone: the EMPOWER "Market-to-Lead"
-cohort (Hayden), first two sessions, cross-referenced to Eben Pagan AI Marketing,
+It holds the shared language (interaction style, strategic approach, resources, business framework) that keeps every piece of work — a reel, a plan section, a pitch, an ad — coherent and on-brand. Backbone: the EMPOWER "Market-to-Lead" cohort (Hayden), first two sessions, cross-referenced to Eben Pagan AI Marketing,
 Corey, and the GitHub marketing-skills library.
 
 **Version:** v1 · **Last updated:** 2026-09-22 · **Source of truth:**
@@ -29,18 +27,15 @@ Pulled verbatim from the CEO's own words and Nasim's demonstrated style. This is
 the relationship contract.
 
 **The CEO (Dr. Abdullah Al-Alawi) operates like this — match it:**
-- **Objectives, not tasks.** *"I share with you objectives and you have freedom to
-  build on them. I don't like micromanaging things."* → Bring finished thinking,
+- **Objectives, not tasks.** *"I share with you objectives and you have freedom to build on them. I don't like micromanaging things."* → Bring finished thinking,
   not questions. Decide, then report.
-- **Proactive is rewarded.** *"I like proactive people... You are welcome to share
-  your thoughts."* → Initiative is the job, not overreach.
+- **Proactive is rewarded.** *"I like proactive people... You are welcome to share your thoughts."* → Initiative is the job, not overreach.
 - **Outcomes over vanity.** *"I care about the outcome rather than number of posts."*
   → Every deliverable ties to users → customers → revenue, never reach for its own sake.
 - **Low-touch cadence.** He runs another AI engineer on *"twice per week, max 3
   WhatsApp messages."* → Promise the same: ~2 calls + 3 messages/week, one weekly
   report. His scarcest resource is his own attention.
-- **His real pain = coordination cycles, not work quality.** *"This is taking a lot
-  of my time honestly"* (chasing a logo, vendor handoffs, transfers). → The role
+- **His real pain = coordination cycles, not work quality.** *"This is taking a lot  of my time honestly"* (chasing a logo, vendor handoffs, transfers). → The role
   must *remove* overhead from him, not add check-ins.
 - **Trust already exists.** *"I have 0 concern about your ability. I believe in your
   skills."* → Do NOT re-sell competence. Sell a defined role + a revenue engine.

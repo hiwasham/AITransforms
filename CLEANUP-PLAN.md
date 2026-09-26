@@ -4,7 +4,7 @@ You picked: resolve on laptop with VS Code's 3-way merge editor. Right call —
 these branches conflict by the hundreds, and CLI conflict-reading is painful.
 This doc is your checklist. Open it in VS Code and work top to bottom.
 
-## Step 0 — get everything (2 min)
+## Step 0 — get everything (2 min) : DONE
 
 ```bash
 git fetch --all --prune

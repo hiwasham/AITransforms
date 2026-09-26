@@ -19,7 +19,7 @@ created_at: "2026-02-10T16:21:17.318Z"
 updated_at: "2026-02-16T19:45:21.912Z"
 fetched_at: "2026-08-28T00:56:33+00:00"
 ---
-
+[Case Study: Lead to Sale - AI Sales Management](./03-case-study-lead-to-sale-ai-sales-management/post.md)
 # Exercise 7.1: Run the Assessment (Lead to Sale)
 
 > Curriculum › Section 8: Live Session 7: Offering & Sales Effectiveness › Lesson 2
@@ -36,7 +36,7 @@ To conduct a comprehensive evaluation of your sales process, identifying opportu
 
 ## **Instructions**
 
-- Copy and paste the prompt into a NEW chat within your Master Prompt project
+- Copy and paste [[Hayden Miyamoto EMPOWER Labs-Build Your Business Brain mini-course-1-Create Your AI Business Advisor-What is a Master Prompt-Cohort 4 Prompt (External)-7-The EMPOWER Operating System-Offering & Sales Effectiveness|the prompt]] into a NEW chat within your Master Prompt project
 - Rename the chat "Sales Diagnostic & Assessment"
 - Let Claude guide you through the process
 - Be specific and honest - the more detailed your responses, the more valuable the guidance
@@ -45,6 +45,8 @@ To conduct a comprehensive evaluation of your sales process, identifying opportu
 → **[Access the Prompt](https://docs.google.com/document/d/130JlqKzDo6eQLeXve0yE9v54CSILlt1ahdnf4GSJp28/edit?tab=t.2nsqy9yfeawt)**
 
 **Time to complete:** 75-90 minutes
+
+باید خودم اانجام بدم ولی در [[Hayden Miyamoto EMPOWER Labs-optin stage3 trial]] چت بات کمک میکنه
 
 ---
 

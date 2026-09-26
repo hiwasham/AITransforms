@@ -20,6 +20,7 @@ updated_at: "2026-03-02T23:27:12.831Z"
 fetched_at: "2026-08-28T00:57:00+00:00"
 ---
 
+
 # Live Session 9: Replay
 
 > Curriculum › Section 10: Live Session 9: Execution Systems › Lesson 1
@@ -69,3 +70,5 @@ The meeting focused on implementing AI solutions to improve team efficiency and 
 📎 **[02-Cohort-4-Live-Session-9-Chat.txt](assets/02-Cohort-4-Live-Session-9-Chat.txt)**
 
 📎 **[03-Cohort-4-Live-Session-9-Transcript.srt](assets/03-Cohort-4-Live-Session-9-Transcript.srt)**
+
+[Case Study: An AI-Enabled Operation - Automated Call Tracking](./01-case-study-an-ai-enabled-operation-automated-call-tracking/post.md)

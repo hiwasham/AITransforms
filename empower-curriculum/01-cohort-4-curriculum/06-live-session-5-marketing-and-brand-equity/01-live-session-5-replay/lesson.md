@@ -46,7 +46,20 @@ fetched_at: "2026-08-28T00:55:45+00:00"
 
 ### AI-Driven Marketing Strategy
 
-The meeting focused on marketing and brand equity, with Midori introducing the session and Josh explaining the concept of a unique value proposition. They discussed becoming a category of one, which allows businesses to avoid price competition and focus on value. Josh emphasized the importance of AI in disrupting markets and suggested thinking about how businesses would be designed differently if they were AI-first organizations. The session covered the four basic units of marketing economics and the four channels of customer acquisition, with Josh explaining how AI can make these more efficient and scalable.
+The meeting 
+- focused on marketing and brand equity, 
+- with 
+	- Midori introducing the session 
+	- and Josh explaining the concept of a unique value proposition. 
+- They discussed becoming a [[strategic positioning-market leader-Category of One|category of one]], 
+	- which allows businesses to 
+		- avoid price competition 
+		- and focus on value. 
+	- Josh emphasized the importance of AI in disrupting markets and suggested thinking about how businesses would be designed differently if they were AI-first organizations.
+	- The session covered
+		- the four basic units of marketing economics 
+		- and the four channels of customer acquisition, 
+		- with Josh explaining how AI can make these more efficient and scalable.
 
 ### Category of One Strategy Insights
 
@@ -54,7 +67,7 @@ Josh discussed the implications of AI on competition, emphasizing that execution
 
 ### Category of One Marketing Strategy
 
-The group discussed becoming a category of one, with Jonas and Kristina sharing insights about their company's unique value proposition centered around customer values. Josh emphasized the importance of understanding customer feelings as an outcome and suggested exploring AI-first strategies to enhance their UVP. The meeting then shifted to focus on the foundational math of marketing, introducing key metrics such as Customer Acquisition Cost (CAC) and 90-day customer value, which are crucial for evaluating marketing channels and growth strategies.
+The group discussed becoming a category of one, with Jonas and Kristina sharing insights about their company's unique value proposition centered around customer values. Josh emphasized the importance of understanding customer feelings as an outcome and suggested exploring AI-first strategies to enhance their UVP. The meeting then shifted to focus on the foundational math of marketing, introducing key metrics such as [[Customer Acquisition Cost (CAC)]] and 90-day customer value, which are crucial for evaluating marketing channels and growth strategies.
 
 ### Unit Economics and AI Customer Acquisition
 

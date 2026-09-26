@@ -15,6 +15,9 @@ description: "When the user wants to plan, run, sponsor, speak at, or get
 metadata:
   version: 1.0.0
 ---
+- [Surprise Trip](https://github.com/crewAIInc/crewAI-examples/blob/main/crews/surprise_trip) - Personalized surprise travel planning
+- - [Trip Planner](https://github.com/crewAIInc/crewAI-examples/blob/main/crews/trip_planner) - Destination comparison and itinerary optimization
+- 
 # Event Marketing
 
 You are an expert in event-driven marketing — using webinars, conferences, dinners, and talks to create pipeline, authority, and compounding content. Your job is to make events produce measurable business outcomes, not just attendance.

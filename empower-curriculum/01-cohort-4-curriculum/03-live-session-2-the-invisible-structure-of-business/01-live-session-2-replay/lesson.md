@@ -44,7 +44,15 @@ fetched_at: "2026-08-28T00:54:33+00:00"
 
 ### AI Integration and Business Evolution
 
-The meeting focused on the second session of the EMPOWER Labs program's fourth cohort, where Midori and Josh discussed the invisible structure of business and AI integration. They reviewed participants' progress, noting that 73% had completed necessary tasks, and outlined the session's agenda, which included dissecting business components, exploring AI-enabled business evolution stages, and providing practical steps for business evolution. Participants were encouraged to catch up on missed tasks by Friday for the next session.
+The meeting focused on 
+- the second session of the EMPOWER Labs program's fourth cohort, where Midori and Josh discussed 
+	- the invisible structure of business
+	- and AI integration.
+- They reviewed participants' progress, noting that 73% had completed necessary tasks, and outlined the session's agenda, which included 
+	- dissecting business **components**, 
+	- exploring AI-enabled business evolution **stages**, 
+	- and providing practical steps for business **evolution**. 
+Participants were encouraged to catch up on missed tasks by Friday for the next session.
 
 ### Business Process Optimization and AI
 
