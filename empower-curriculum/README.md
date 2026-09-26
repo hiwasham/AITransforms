@@ -1,15 +1,20 @@
 # EMPOWER Labs — archive
 
-Offline copy of the course, the case studies and the member directory from https://community.empowerlabs.ai.
+Offline copy 
+- of 
+	- the course,
+	- the case studies 
+	- and the member directory 
+- from https://community.empowerlabs.ai.
 
-| | |
-|---|---|
-| Lessons saved | **96 / 97** |
-| Readable transcripts | 13 |
-| Files downloaded | 120 (0.49 GB) |
-| Slide decks (PDF) | 15 |
-| Video files | 8 |
-| Images | 64 |
+|                      |               |
+| -------------------- | ------------- |
+| Lessons saved        | **96 / 97**   |
+| Readable transcripts | 13            |
+| Files downloaded     | 120 (0.49 GB) |
+| Slide decks (PDF)    | 15            |
+| Video files          | 8             |
+| Images               | 64            |
 
 ## Courses
 
@@ -23,7 +28,9 @@ Offline copy of the course, the case studies and the member directory from https
 ## Community archive
 
 - **[Case studies](./empower-casestudies/)** — 5 member implementations · 5 PDFs · full write-ups and the discussion under them
+	- [[03.Projects/AITransforms/empower-curriculum/empower-casestudies/README|README]]
 - **[Participants](./empower-participants/)** — 428 members (358 listed) · leaderboards · who posts and what about
+	- [[03.Projects/AITransforms/empower-curriculum/empower-participants/README|README]]
 
 ## How to read this
 

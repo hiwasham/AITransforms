@@ -45,6 +45,10 @@ Create the first version of your Master Prompt, which will allow your LLM to pro
 
 **Time to complete: **20 - 30 minutes
 
+
+[[03-exercise-1-1-create-your-master-prompt-v-1-lesson-Maya Curriculum Coach|Maya Curriculum Coach]]
+
+
 ---
 
 ## **Tip**
@@ -58,11 +62,15 @@ If you prefer to speak your answers instead of writing them, use a voice-to-text
 Watch Tiago and Hayden officially introduce the Master Prompt Method —a powerful way to train your AI with full context about you and your business. They break down how it works and share practical tips.
 
 🎬 **embed** {"sgid": "BAh7CEkiCGdpZAY6BkVUSSI6Z2lkOi8vanVtcHN0YXJ0LWFwcC9SaWNoVGV4dE9lbWJlZC8xNzA3MjI2P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--b6215249bd5b0fede16aa625ad6b86c5e6f6d02e"}
+https://www.youtube.com/watch?v=_K_F_icxtrI
 
 In this video, Hayden guides Tiago through creating a Master Prompt for his business.
 
 🎬 **embed** {"sgid": "BAh7CEkiCGdpZAY6BkVUSSI6Z2lkOi8vanVtcHN0YXJ0LWFwcC9SaWNoVGV4dE9lbWJlZC8xNzA3MjI3P2V4cGlyZXNfaW4GOwBUSSIMcHVycG9zZQY7AFRJIhRyaWNoX3RleHRfZmllbGQGOwBUSSIPZXhwaXJlc19hdAY7AFQw--667e169054ca46ad7392bde5ca5c937ba95d9979"}
+https://www.youtube.com/watch?v=D9DpUDntQRc
 
+go also take  a look at these two folder i dont know which one is the main one or if these are last version or not. you analyze them {D:\Obsidi1\03.Projects\AITransforms\M2L, D:\Obsidi1\03.Projects\AITransforms\empower-market-to-lead}
+also dont remove repos on my laptop i think i did some minor changes on the md files i wanna keep them. they are like notes and docs. not code.
 ---
 
 ## Questions?

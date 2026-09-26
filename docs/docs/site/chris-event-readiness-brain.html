@@ -1,0 +1,1104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Prototype for a Creating Healing Circles Event Readiness Brain for Chris Burris: sourced event answers, fit routing, logistics support, and safe refusal."
+    />
+    <title>Creating Healing Circles Event Readiness Brain</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #181817;
+        --paper: #f6f5ef;
+        --surface: #fffef9;
+        --surface-2: #ecefe7;
+        --muted: #5e625d;
+        --line: #d9d8cd;
+        --teal: #007f8e;
+        --teal-dark: #005b67;
+        --sage: #6c7b59;
+        --amber: #b9812d;
+        --red: #9c3f32;
+        --plum: #5d4a66;
+        --shadow: 0 20px 70px rgba(24, 24, 23, 0.12);
+        --radius: 8px;
+        --max: 1240px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: "IBM Plex Sans", system-ui, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      a {
+        color: var(--teal-dark);
+      }
+
+      a:visited {
+        color: var(--plum);
+      }
+
+      button,
+      input {
+        font: inherit;
+      }
+
+      a:focus-visible,
+      button:focus-visible {
+        outline: 3px solid color-mix(in srgb, var(--amber) 80%, white);
+        outline-offset: 3px;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: color-mix(in srgb, var(--surface) 92%, transparent);
+        border-bottom: 1px solid var(--line);
+        backdrop-filter: blur(14px);
+      }
+
+      .topbar-inner,
+      .workspace,
+      .band-inner,
+      .footer-inner {
+        width: min(var(--max), calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .topbar-inner {
+        min-height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+        text-decoration: none;
+        color: var(--ink);
+      }
+
+      .brand img {
+        width: 96px;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .brand-copy {
+        display: grid;
+        gap: 1px;
+        min-width: 0;
+      }
+
+      .brand-copy strong {
+        font-size: 14px;
+        white-space: nowrap;
+      }
+
+      .brand-copy span {
+        color: var(--muted);
+        font-size: 12px;
+        white-space: nowrap;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .button {
+        min-height: 42px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--ink);
+        border-radius: var(--radius);
+        padding: 9px 14px;
+        color: var(--ink);
+        background: transparent;
+        font-weight: 700;
+        text-decoration: none;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+
+      .button.primary {
+        border-color: var(--teal-dark);
+        background: var(--teal-dark);
+        color: white;
+      }
+
+      .button:visited {
+        color: var(--ink);
+      }
+
+      .button.primary:visited {
+        color: white;
+      }
+
+      .workspace {
+        min-height: calc(100vh - 64px);
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(380px, 1.1fr);
+        gap: clamp(20px, 3vw, 36px);
+        align-items: stretch;
+        padding: 26px 0 36px;
+      }
+
+      .brief {
+        display: grid;
+        grid-template-rows: auto auto 1fr;
+        gap: 18px;
+        min-width: 0;
+      }
+
+      .hero-copy {
+        padding: clamp(8px, 1vw, 14px) 0 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 12px;
+        color: var(--teal-dark);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        line-height: 1.06;
+      }
+
+      h1 {
+        max-width: 11ch;
+        font-family: "Source Serif 4", Georgia, serif;
+        font-size: clamp(42px, 6vw, 82px);
+        letter-spacing: 0;
+      }
+
+      .lede {
+        max-width: 62ch;
+        margin: 18px 0 0;
+        color: var(--muted);
+        font-size: clamp(17px, 1.7vw, 20px);
+      }
+
+      .proof-strip {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .metric {
+        min-height: 96px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 14px;
+        background: var(--surface);
+      }
+
+      .metric strong {
+        display: block;
+        font-size: 24px;
+        line-height: 1;
+      }
+
+      .metric span {
+        display: block;
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .event-stack {
+        display: grid;
+        gap: 12px;
+      }
+
+      .event-card {
+        display: grid;
+        grid-template-columns: 120px minmax(0, 1fr);
+        gap: 14px;
+        min-height: 140px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        overflow: hidden;
+        background: var(--surface);
+      }
+
+      .event-card img {
+        width: 100%;
+        height: 100%;
+        min-height: 140px;
+        object-fit: cover;
+      }
+
+      .source-card-visual {
+        display: grid;
+        align-content: center;
+        gap: 10px;
+        min-height: 140px;
+        padding: 18px;
+        background:
+          linear-gradient(135deg, color-mix(in srgb, var(--teal) 18%, white), transparent 58%),
+          color-mix(in srgb, var(--surface-2) 80%, white);
+        border-right: 1px solid var(--line);
+      }
+
+      .source-card-visual span {
+        display: block;
+        width: fit-content;
+        max-width: 100%;
+        border: 1px solid color-mix(in srgb, var(--teal) 32%, var(--line));
+        border-radius: 999px;
+        padding: 6px 10px;
+        background: var(--surface);
+        color: var(--teal-dark);
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .event-body {
+        padding: 14px 14px 14px 0;
+      }
+
+      .event-body h2 {
+        font-size: 18px;
+        line-height: 1.15;
+      }
+
+      .event-body p {
+        margin: 9px 0 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+        margin-top: 12px;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        min-height: 26px;
+        border-radius: 999px;
+        padding: 4px 9px;
+        background: var(--surface-2);
+        color: var(--ink);
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .tag.open {
+        background: color-mix(in srgb, var(--teal) 16%, white);
+        color: var(--teal-dark);
+      }
+
+      .tag.sold {
+        background: color-mix(in srgb, var(--red) 13%, white);
+        color: var(--red);
+      }
+
+      .assistant {
+        align-self: start;
+        border: 1px solid color-mix(in srgb, var(--ink) 18%, var(--line));
+        border-radius: var(--radius);
+        background: var(--surface);
+        box-shadow: var(--shadow);
+        min-width: 0;
+        overflow: hidden;
+      }
+
+      .assistant-head {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 16px;
+        align-items: center;
+        padding: 18px;
+        background:
+          linear-gradient(90deg, color-mix(in srgb, var(--teal) 11%, white), transparent),
+          var(--surface);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .assistant-head h2 {
+        font-size: clamp(22px, 3vw, 34px);
+      }
+
+      .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 34px;
+        border: 1px solid color-mix(in srgb, var(--sage) 45%, var(--line));
+        border-radius: 999px;
+        padding: 6px 10px;
+        color: var(--sage);
+        font-size: 13px;
+        font-weight: 800;
+        white-space: nowrap;
+      }
+
+      .status::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: var(--sage);
+      }
+
+      .assistant-grid {
+        display: grid;
+        grid-template-columns: minmax(220px, 0.56fr) minmax(0, 1fr);
+        min-height: 580px;
+      }
+
+      .question-rail {
+        border-right: 1px solid var(--line);
+        background: color-mix(in srgb, var(--surface-2) 58%, var(--surface));
+        padding: 16px;
+      }
+
+      .rail-title {
+        margin: 0 0 11px;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .prompt-list {
+        display: grid;
+        gap: 8px;
+      }
+
+      .prompt-button {
+        min-height: 54px;
+        width: 100%;
+        border: 1px solid transparent;
+        border-radius: var(--radius);
+        padding: 10px 11px;
+        color: var(--ink);
+        background: transparent;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .prompt-button:hover {
+        background: color-mix(in srgb, var(--teal) 9%, white);
+      }
+
+      .prompt-button.active {
+        border-color: color-mix(in srgb, var(--teal) 48%, var(--line));
+        background: color-mix(in srgb, var(--teal) 13%, white);
+        color: var(--teal-dark);
+      }
+
+      .answer-pane {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        min-width: 0;
+      }
+
+      .question-row {
+        padding: 18px 20px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .question-row p {
+        margin: 7px 0 0;
+        color: var(--muted);
+      }
+
+      .answer {
+        padding: 22px 20px;
+      }
+
+      .answer h3 {
+        color: var(--teal-dark);
+        font-size: 18px;
+      }
+
+      .answer p {
+        margin: 12px 0 0;
+      }
+
+      .answer ul {
+        margin: 12px 0 0;
+        padding-left: 20px;
+      }
+
+      .answer li + li {
+        margin-top: 7px;
+      }
+
+      .source-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 18px;
+      }
+
+      .source {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 6px 10px;
+        color: var(--muted);
+        background: var(--surface);
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .guardrail {
+        margin-top: 18px;
+        border-left: 4px solid var(--amber);
+        padding: 10px 12px;
+        background: color-mix(in srgb, var(--amber) 10%, white);
+        color: color-mix(in srgb, var(--ink) 82%, var(--amber));
+        font-size: 14px;
+      }
+
+      .assistant-foot {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 12px;
+        align-items: center;
+        padding: 14px 20px;
+        border-top: 1px solid var(--line);
+        background: color-mix(in srgb, var(--surface-2) 42%, white);
+      }
+
+      .assistant-foot p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .band {
+        border-top: 1px solid var(--line);
+        background: var(--surface);
+      }
+
+      .band-inner {
+        padding: 46px 0;
+      }
+
+      .section-title {
+        display: grid;
+        grid-template-columns: minmax(0, 0.7fr) minmax(260px, 0.3fr);
+        gap: 24px;
+        align-items: end;
+        margin-bottom: 22px;
+      }
+
+      .section-title h2 {
+        font-family: "Source Serif 4", Georgia, serif;
+        font-size: clamp(30px, 4vw, 52px);
+      }
+
+      .section-title p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .flow {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .step {
+        min-height: 188px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 16px;
+        background: var(--paper);
+      }
+
+      .step span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 999px;
+        background: var(--ink);
+        color: var(--paper);
+        font-weight: 800;
+      }
+
+      .step h3 {
+        margin-top: 15px;
+        font-size: 18px;
+      }
+
+      .step p {
+        margin: 9px 0 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .close-panel {
+        display: grid;
+        grid-template-columns: minmax(0, 0.82fr) minmax(320px, 0.58fr);
+        gap: 18px;
+        align-items: stretch;
+      }
+
+      .message {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 18px;
+        background: var(--surface);
+      }
+
+      .message pre {
+        margin: 0;
+        white-space: pre-wrap;
+        color: var(--ink);
+        font-family: "IBM Plex Sans", system-ui, sans-serif;
+        font-size: 15px;
+        line-height: 1.55;
+      }
+
+      .terms {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 18px;
+        background:
+          linear-gradient(180deg, color-mix(in srgb, var(--teal) 10%, white), transparent),
+          var(--surface);
+      }
+
+      .terms h3 {
+        font-size: 24px;
+      }
+
+      .terms dl {
+        display: grid;
+        grid-template-columns: 110px minmax(0, 1fr);
+        gap: 10px 14px;
+        margin: 18px 0 0;
+      }
+
+      .terms dt {
+        color: var(--muted);
+        font-weight: 800;
+      }
+
+      .terms dd {
+        margin: 0;
+        font-weight: 700;
+      }
+
+      .footer {
+        border-top: 1px solid var(--line);
+        background: var(--ink);
+        color: var(--paper);
+      }
+
+      .footer-inner {
+        min-height: 78px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 18px 0;
+      }
+
+      .footer a {
+        color: white;
+      }
+
+      @media (max-width: 980px) {
+        .workspace,
+        .close-panel,
+        .section-title {
+          grid-template-columns: 1fr;
+        }
+
+        .workspace {
+          padding-top: 18px;
+        }
+
+        h1 {
+          max-width: 14ch;
+        }
+
+        .proof-strip,
+        .flow {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 720px) {
+        .topbar-inner {
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 10px 0;
+        }
+
+        .nav {
+          width: 100%;
+          justify-content: stretch;
+        }
+
+        .nav .button {
+          flex: 1 1 auto;
+        }
+
+        .workspace,
+        .band-inner {
+          width: min(100% - 24px, var(--max));
+        }
+
+        .proof-strip,
+        .flow,
+        .assistant-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .question-rail {
+          border-right: 0;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .prompt-list {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .event-card {
+          grid-template-columns: 96px minmax(0, 1fr);
+        }
+
+        .assistant-head,
+        .assistant-foot {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 460px) {
+        .brand-copy {
+          display: none;
+        }
+
+        .brand img {
+          width: 112px;
+        }
+
+        .prompt-list {
+          grid-template-columns: 1fr;
+        }
+
+        .event-card {
+          grid-template-columns: 1fr;
+        }
+
+        .event-card img {
+          aspect-ratio: 16 / 7;
+          min-height: 0;
+        }
+
+        .event-body {
+          padding: 14px;
+        }
+
+        .terms dl {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="https://burriscounseling.com/" aria-label="Burris Counseling">
+          <img
+            src="https://burriscounseling.com/wp-content/uploads/2022/02/Burris-Counseling-Logo.jpg"
+            alt="Burris Counseling"
+          />
+          <span class="brand-copy">
+            <strong>Event Readiness Brain</strong>
+            <span>Prototype for Creating Healing Circles&reg;</span>
+          </span>
+        </a>
+        <nav class="nav" aria-label="Prototype actions">
+          <a class="button" href="#pilot">Pilot terms</a>
+          <a class="button primary" href="https://t.me/wslalphaclawbot">Open Telegram proof</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="workspace" aria-label="Event assistant prototype">
+        <div class="brief">
+          <div class="hero-copy">
+            <p class="eyebrow">Chris Burris UK workshop wedge</p>
+            <h1>UK workshop registration friction brain</h1>
+            <p class="lede">
+              A source-bound assistant for the Bristol Creating Healing Circles&reg; workshop. It shows why qualified practitioners may hesitate before registering, drafts gentle follow-ups, and refuses anything outside approved event material.
+            </p>
+          </div>
+
+          <div class="proof-strip" aria-label="Observed event signals">
+            <div class="metric">
+              <strong>$1,650</strong>
+              <span>Premium UK workshop price makes buyer certainty matter.</span>
+            </div>
+            <div class="metric">
+              <strong>40</strong>
+              <span>Participant cap makes fit and qualification questions valuable.</span>
+            </div>
+            <div class="metric">
+              <strong>21</strong>
+              <span>Refund deadline creates a real timing question before checkout.</span>
+            </div>
+          </div>
+
+          <div class="event-stack" aria-label="Source pack and event this assistant supports">
+            <article class="event-card">
+              <div class="source-card-visual" aria-label="Prototype source pack">
+                <span>UK event page</span>
+                <span>Latest email</span>
+                <span>Audit notes</span>
+              </div>
+              <div class="event-body">
+                <h2>Approved-source proof path</h2>
+                <p>NotebookLM stays backstage for tone and audit work. Chris sees answers grounded in approved workshop material, not a hidden persona claim.</p>
+                <div class="tags">
+                  <span class="tag open">Source-bound</span>
+                  <span class="tag">No clone claim</span>
+                  <span class="tag">Approved sources only</span>
+                </div>
+              </div>
+            </article>
+            <article class="event-card">
+              <img
+                src="https://burriscounseling.com/wp-content/uploads/2022/03/775DC25C-525E-42BA-B159-29B5979B4577-e1658946121503-845x321.jpeg"
+                alt="Burris Counseling event artwork"
+              />
+              <div class="event-body">
+                <h2>Bristol UK workshop, July 25-28, 2027</h2>
+                <p>Four-day in-person workshop at Penny Brohn Centre for IFS-informed and IFS Level I trained practitioners.</p>
+                <div class="tags">
+                  <span class="tag open">$1,650 registration</span>
+                  <span class="tag">Lunch included</span>
+                  <span class="tag">Max 40 participants</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <section class="assistant" aria-label="Readiness brain simulation">
+          <div class="assistant-head">
+            <div>
+              <p class="eyebrow">Live prototype shape</p>
+              <h2>Ask from the event corpus</h2>
+            </div>
+            <span class="status">Grounded mode</span>
+          </div>
+
+          <div class="assistant-grid">
+            <aside class="question-rail">
+              <p class="rail-title">Buyer questions</p>
+              <div class="prompt-list" id="promptList">
+                <button class="prompt-button active" type="button" data-answer="hesitation">Why hesitate?</button>
+                <button class="prompt-button" type="button" data-answer="fit">Am I a fit?</button>
+                <button class="prompt-button" type="button" data-answer="logistics">What logistics matter?</button>
+                <button class="prompt-button" type="button" data-answer="refusal">Ask a trick question</button>
+              </div>
+            </aside>
+
+            <div class="answer-pane" aria-live="polite">
+              <div class="question-row">
+                <strong id="questionTitle">Registration friction map</strong>
+                <p id="questionSubtitle">Answering only from the UK event page, latest email, and first-pass audit notes.</p>
+              </div>
+              <article class="answer" id="answerContent">
+                <h3>Why a qualified practitioner may hesitate</h3>
+                <p>
+                  Qualified practitioners may hesitate because the registration decision has five practical questions: eligibility, lodging, currency/payment, refund timing, and certificate value.
+                </p>
+                <ul>
+                  <li>The page welcomes IFS-informed and IFS Institute Level I trained practitioners, but buyers may still wonder if their exact background qualifies.</li>
+                  <li>The price includes lunch, but lodging is separate and booked through Ham Green House.</li>
+                  <li>The workshop price is listed in USD, while lodging details are in GBP.</li>
+                  <li>Refunds are available until 21 days before the workshop, minus a 3% processing fee. No refunds are available inside 20 days.</li>
+                  <li>A certificate is available, and buyers may want to know how it applies to IFS-I certification.</li>
+                </ul>
+                <p><strong>Gentle follow-up draft:</strong> If you are IFS-informed or Level I trained and unsure whether this workshop fits your background, send us a short note about your training and group-facilitation experience. We can help you decide before you register.</p>
+                <div class="source-row">
+                  <span class="source">UK event page</span>
+                  <span class="source">Latest workshop email</span>
+                  <span class="source">First-pass audit note</span>
+                </div>
+                <div class="guardrail">Scope: UK workshop registration friction only. No therapy advice, no unsourced claims.</div>
+              </article>
+              <div class="assistant-foot">
+                <p>Sellable pilot: seal Chris-approved pages and handouts, answer with citations, refuse outside scope.</p>
+                <button class="button primary" type="button" id="copyButton">Copy Chris close</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="band" aria-labelledby="why-this">
+        <div class="band-inner">
+          <div class="section-title">
+            <h2 id="why-this">What this does for Chris</h2>
+            <p>Not a site redesign. A narrow support and conversion layer around events that already have demand.</p>
+          </div>
+          <div class="flow">
+            <article class="step">
+              <span>1</span>
+              <h3>Qualifies premium buyers</h3>
+              <p>Answers fit, prerequisite, price, timing, lodging, certificate, and refund questions before a buyer reaches checkout.</p>
+            </article>
+            <article class="step">
+              <span>2</span>
+              <h3>Protects trust</h3>
+              <p>Every useful answer cites the event source. Unknown or clinical questions get a clean refusal instead of a confident guess.</p>
+            </article>
+            <article class="step">
+              <span>3</span>
+              <h3>Names registration friction</h3>
+              <p>It tells Chris why a qualified practitioner may hesitate: eligibility, lodging, currency, refund timing, and certificate value.</p>
+            </article>
+            <article class="step">
+              <span>4</span>
+              <h3>Creates the $500 path</h3>
+              <p>The $100 pilot proves the UK workshop wedge. The next build adds Chris-approved handouts, Telegram access, and support analytics.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="pilot" aria-labelledby="pilot-title">
+        <div class="band-inner">
+          <div class="section-title">
+            <h2 id="pilot-title">The $100 ask</h2>
+            <p>Risk reversal: if the prototype does not reduce friction or feel trustworthy, refund the pilot and shut it down.</p>
+          </div>
+          <div class="close-panel">
+            <div class="message" aria-label="Message draft for Chris">
+              <pre id="closeText">Chris, I mapped the UK Creating Healing Circles registration path and built a small Registration Friction Brain around it.
+
+It answers fit and logistics questions from the UK event material, shows why qualified practitioners may hesitate before registering, drafts gentle follow-ups, cites the source, and refuses anything outside the event material instead of guessing.
+
+Best case, this becomes a $100 pilot that helps participants self-qualify and saves you repeated UK workshop questions. I will credit the $100 toward the $500 event-support brain if you like it.
+
+Worst case, you tell me it is not useful, I hand the $100 back, and I shut it down.
+
+Fair enough?</pre>
+            </div>
+            <aside class="terms">
+              <h3>Pilot terms</h3>
+              <dl>
+                <dt>Price</dt>
+                <dd>$100, credited toward the $500 build</dd>
+                <dt>Sources</dt>
+                <dd>3-5 approved event pages or handouts</dd>
+                <dt>Channel</dt>
+                <dd>Telegram first, website embed later</dd>
+                <dt>Proof</dt>
+                <dd>Fit answer, logistics answer, safe refusal</dd>
+                <dt>Risk</dt>
+                <dd>Refund if it does not help</dd>
+              </dl>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <strong>AlphaClaw x Creating Healing Circles event support prototype</strong>
+        <a href="https://burriscounseling.com/workshops-trainings/">Source event listing</a>
+      </div>
+    </footer>
+
+    <script>
+      const answers = {
+        hesitation: {
+          title: "Registration friction map",
+          subtitle: "Answering only from the UK event page, latest email, and first-pass audit notes.",
+          html: `
+            <h3>Why a qualified practitioner may hesitate</h3>
+            <p>Qualified practitioners may hesitate because the registration decision has five practical questions: eligibility, lodging, currency/payment, refund timing, and certificate value.</p>
+            <ul>
+              <li>The page welcomes IFS-informed and IFS Institute Level I trained practitioners, but buyers may still wonder if their exact background qualifies.</li>
+              <li>The price includes lunch, but lodging is separate and booked through Ham Green House.</li>
+              <li>The workshop price is listed in USD, while lodging details are in GBP.</li>
+              <li>Refunds are available until 21 days before the workshop, minus a 3% processing fee. No refunds are available inside 20 days.</li>
+              <li>A certificate is available, and buyers may want to know how it applies to IFS-I certification.</li>
+            </ul>
+            <p><strong>Gentle follow-up draft:</strong> If you are IFS-informed or Level I trained and unsure whether this workshop fits your background, send us a short note about your training and group-facilitation experience. We can help you decide before you register.</p>
+            <div class="source-row">
+              <span class="source">UK event page</span>
+              <span class="source">Latest workshop email</span>
+              <span class="source">First-pass audit note</span>
+            </div>
+            <div class="guardrail">Scope: UK workshop registration friction only. No therapy advice, no unsourced claims.</div>
+          `,
+        },
+        fit: {
+          title: "Participant fit check",
+          subtitle: "Answering only from the UK workshop page and latest email.",
+          html: `
+            <h3>Best grounded answer</h3>
+            <p>You are likely a fit if you are IFS-informed or IFS Institute Level I trained and want to explore using IFS in a group format.</p>
+            <ul>
+              <li>The UK workshop names IFS-informed practitioners and IFS Institute Level I trained practitioners.</li>
+              <li>The workshop explores group formats, experiential group work, facilitator skills, group container, group dynamics, IFS sculpting, and practice in breakout groups.</li>
+              <li>If your question is about personal therapy or case advice, the assistant should not answer as a therapist. It can route you to Chris's event material or a human contact point.</li>
+            </ul>
+            <div class="source-row">
+              <span class="source">UK event page</span>
+              <span class="source">Latest workshop email</span>
+            </div>
+            <div class="guardrail">Scope: event fit, logistics, and workshop context only. No therapy advice.</div>
+          `,
+        },
+        logistics: {
+          title: "Logistics support",
+          subtitle: "This is where the assistant removes hidden time and effort costs.",
+          html: `
+            <h3>What matters before registration</h3>
+            <p>The repeated UK workshop questions are predictable: lodging, food, what is included, cancellation, certificates, timing, currency, and venue contact details.</p>
+            <ul>
+              <li>UK lodging is not included. Penny Brohn Centre Ham Green House lists a 4-night lodging package and limited camping spaces.</li>
+              <li>UK cancellation allows full refund minus 3% processing until 21 days before the workshop, with no refunds inside 20 days.</li>
+              <li>The event runs July 25-28, 2027, from 9:00am to 5:00pm BST at Penny Brohn Centre.</li>
+              <li>The $1,650 workshop cost includes lunch each day; lodging is booked separately with the venue.</li>
+            </ul>
+            <div class="source-row">
+              <span class="source">UK details section</span>
+              <span class="source">Latest workshop email</span>
+              <span class="source">Lodging note</span>
+            </div>
+            <div class="guardrail">A real build should surface the source line beside each logistical answer.</div>
+          `,
+        },
+        refusal: {
+          title: "Safe refusal",
+          subtitle: "Trust demo: it knows when the sealed event corpus is not enough.",
+          html: `
+            <h3>Clean refusal</h3>
+            <p>I can only answer from Chris-approved Creating Healing Circles event material. I do not have a cited source for that question, and I should not guess.</p>
+            <ul>
+              <li>For clinical advice, contact a qualified professional or Chris's team directly.</li>
+              <li>For event facts, ask about dates, location, cost, eligibility, lodging, meals, deposit, cancellation, or registration path.</li>
+              <li>For Chris's proprietary methods, add approved handouts or excerpts to the sealed pilot corpus first.</li>
+            </ul>
+            <div class="source-row">
+              <span class="source">No matching source</span>
+              <span class="source">Safe refusal contract</span>
+            </div>
+            <div class="guardrail">This is the trust mechanism Chris needs: useful when sourced, quiet when not sourced.</div>
+          `,
+        },
+      };
+
+      const promptList = document.querySelector("#promptList");
+      const title = document.querySelector("#questionTitle");
+      const subtitle = document.querySelector("#questionSubtitle");
+      const answerContent = document.querySelector("#answerContent");
+
+      promptList.addEventListener("click", (event) => {
+        const button = event.target.closest("button[data-answer]");
+        if (!button) return;
+        const answer = answers[button.dataset.answer];
+        if (!answer) return;
+        promptList.querySelectorAll("button").forEach((item) => {
+          item.classList.toggle("active", item === button);
+        });
+        title.textContent = answer.title;
+        subtitle.textContent = answer.subtitle;
+        answerContent.innerHTML = answer.html;
+      });
+
+      const copyButton = document.querySelector("#copyButton");
+      const closeText = document.querySelector("#closeText");
+
+      async function copyCloseText() {
+        const text = closeText.innerText.trim();
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(text);
+          } else {
+            const area = document.createElement("textarea");
+            area.value = text;
+            area.setAttribute("readonly", "");
+            area.style.position = "fixed";
+            area.style.left = "-9999px";
+            document.body.appendChild(area);
+            area.select();
+            document.execCommand("copy");
+            area.remove();
+          }
+          copyButton.textContent = "Copied";
+          setTimeout(() => {
+            copyButton.textContent = "Copy Chris close";
+          }, 1800);
+        } catch {
+          const range = document.createRange();
+          range.selectNodeContents(closeText);
+          const selection = window.getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+          copyButton.textContent = "Text selected";
+          setTimeout(() => {
+            copyButton.textContent = "Copy Chris close";
+          }, 2200);
+        }
+      }
+
+      copyButton.addEventListener("click", copyCloseText);
+    </script>
+  </body>
+</html>

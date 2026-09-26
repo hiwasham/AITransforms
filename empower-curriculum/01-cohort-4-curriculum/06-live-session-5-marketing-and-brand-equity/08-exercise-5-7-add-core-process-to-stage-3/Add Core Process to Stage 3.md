@@ -19,7 +19,7 @@ created_at: "2026-02-04T23:22:22.598Z"
 updated_at: "2026-02-07T12:22:34.391Z"
 fetched_at: "2026-08-28T00:56:11+00:00"
 ---
-
+[[./06-live-session-5-marketing-and-brand-equity/08-exercise-5-7-add-core-process-to-stage-3/lesson]]
 # Exercise 5.7: Add Core Process to Stage 3
 
 > Curriculum › Section 6: Live Session 5: Marketing & Brand Equity › Lesson 8

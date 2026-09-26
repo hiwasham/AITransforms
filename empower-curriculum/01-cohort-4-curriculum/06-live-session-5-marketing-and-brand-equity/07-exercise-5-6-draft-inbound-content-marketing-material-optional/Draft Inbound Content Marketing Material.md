@@ -36,7 +36,7 @@ To give you an idea of how effective Claude can be in creating diverse marketing
 
 ## **Instructions**
 
-1. Copy and paste the prompt into a NEW chat within your Master Prompt project.
+1. Copy and paste [[Hayden Miyamoto EMPOWER Labs-Build Your Business Brain mini-course-1-Create Your AI Business Advisor-What is a Master Prompt-Cohort 4 Prompt (External)-5-The EMPOWER Operating System-Draft Inbound Content Marketing Material (Optional)|the prompt]] into a NEW chat within your Master Prompt project.
 2. Rename the chat “Inbound Content Marketing” (so you can easily find it later)
 3. Let Claude guide you through the questions.
 4. Claude will create multiple artifacts as the output. Download anything you want to keep at this point.

@@ -20,16 +20,16 @@ The community's people, pulled from [members](https://community.empowerlabs.ai/m
 
 ## Files
 
-| File | What's in it |
-|---|---|
+| File                               | What's in it                                                                                                  |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------- |
 | [in-the-room.md](./in-the-room.md) | **Start here for cohort-mates.** Who actually attended the live sessions, from the chat logs and transcripts. |
-| [active.md](./active.md) | Points leaderboard plus everyone who has posted or commented, and what about. |
-| [leads.md](./leads.md) | The same people grouped by seniority, bios included for the ones who wrote one. |
-| [by-location.md](./by-location.md) | Grouped by country, then name — for timezones and local meetups. |
-| [directory.md](./directory.md) | Everyone, A→Z. The plain reference copy. |
-| `members.json` | Raw API records, all 428, unmodified. |
-| `leaderboard.json` | Points for 7 days / 30 days / all time. |
-| `activity.json` | Every post and comment found, with author and link. |
+| [active.md](./active.md)           | Points leaderboard plus everyone who has posted or commented, and what about.                                 |
+| [leads.md](./leads.md)             | The same people grouped by seniority, bios included for the ones who wrote one.                               |
+| [by-location.md](./by-location.md) | Grouped by country, then name — for timezones and local meetups.                                              |
+| [directory.md](./directory.md)     | Everyone, A→Z. The plain reference copy.                                                                      |
+| `members.json`                     | Raw API records, all 428, unmodified.                                                                         |
+| `leaderboard.json`                 | Points for 7 days / 30 days / all time.                                                                       |
+| `activity.json`                    | Every post and comment found, with author and link.                                                           |
 
 ## How to use it
 

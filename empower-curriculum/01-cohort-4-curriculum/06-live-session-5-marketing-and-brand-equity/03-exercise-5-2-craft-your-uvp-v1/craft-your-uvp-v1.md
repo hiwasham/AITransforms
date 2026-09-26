@@ -36,7 +36,7 @@ To define how you differentiate yourself in the market so you can communicate ef
 
 ## **Instructions**
 
-1. Copy and paste the prompt into a NEW chat within your Master Prompt project.
+1. Copy and paste [[Hayden Miyamoto EMPOWER Labs-Build Your Business Brain mini-course-1-Create Your AI Business Advisor-What is a Master Prompt-Cohort 4 Prompt (External)-5-The EMPOWER Operating System-Marketing & Brand Equity-Craft Your UVP v1|the prompt]] into a NEW chat within your Master Prompt project.
 2. Rename the chat “Market to Lead” (so you can easily find it later).
 3. Let Claude guide you through the process. The more specific and honest you are, the more tailored and effective the guidance will be.
 4. Claude will create an artifact as the output. Select “Copy to Project” to add the artifact to your project knowledge.
