@@ -327,6 +327,11 @@ needs pixel-perfect confirmation.
   bank," "flashcard." [6aa98121]
 - **Content-integrity:** "AI assists with drafting — humans own what reaches
   learners." [6a8c3396]
+- **Integrity / no-shortcuts (CEO's own script rewrite — anchors the "never Pass
+  Guarantee" rule):** he rewrote a mascot script so Bissan corrects Gassan —
+  *"There are NO shortcuts, Gassan! That's the whole point — we help you actually
+  LEARN the material."* Approved AI framing from the same thread: *"We use AI to
+  make medical education and career pathways easier."* [first_conversations.md]
 - **Nasim's strategic frame (a differentiator to echo in the pitch):** move "from
   social media content to social media strategy actually tied to business" —
   followers → users → customers → revenue, not reach. [6a80526a]
@@ -396,9 +401,11 @@ needs pixel-perfect confirmation.
 ## Conflicts to resolve with the team (before any public copy)
 
 1. **Metric drift (highest risk)** — clinical questions 3,550→4,000→5,000→5,500→
-   5,760. Sept-7 says 5,500+ (5,589). **Live 2026-09-25: homepage 4,000+, both
+   5,760→**10,000+**. Sept-7 says 5,500+ (5,589). **Live 2026-09-25: homepage 4,000+, both
    stores 5,000+, /pricing per-track 3k+2k+3k. The 5,500+ figure now appears on
    ZERO live source** — and it is baked into the CEO-demo `marketing plan.html`.
+   The **10,000+** is the highest and least-supported figure — it comes from the
+   CEO's own Aug-29 exhibition brief (`nasim-ceo-emails-section1.md`); do NOT use it.
    A banner number that contradicts the live app kills credibility. Lock one.
 2. **Domains** — bayan.edu.om vs bayanai.tech vs www.BayanAi.tech vs old
    bayan-ai.com. Pick one canonical primary URL.
@@ -434,10 +441,16 @@ referral motion, thin acquisition.**
 - 107 high-signal conversation exports (score ≥4 on Bayan-term density) from
   `materials/chatgpt_full/` (367 files) + `materials/gemini_full/conversations/`
   (100 files), ranked in `/tmp/bayan_ranked_v2.txt`, extracted 2026-09-21.
-- **Still outstanding (highest-value, not yet on disk):** the direct **Nasim ↔ CEO
-  transcripts + screenshots** (Drive folder `1atS-...`) — the folder
-  `materials/Nasim-CEO_DRalavi-conversations-chats/` is empty. These are the
-  purest buyer VOC; get them before finalizing Sections 1–3.
+- **Direct Nasim ↔ CEO sources — NOW ON DISK + analyzed** (purest buyer VOC,
+  reconciled into the sections above):
+  - `first_conversations.md` — the opening WhatsApp thread (Aug 27+). Integrated in
+    "🔑 EARLY WhatsApp thread" below.
+  - `nasim-ceo-emails-section1.md` — the CEO↔Nasim email chain. Source of the
+    Sept-7 canonical set, the Aug-29 exhibition brief, and the metric-drift chain.
+    ⚠️ **Provenance caution:** the CEO's own **Aug-29 brief** (sent from
+    `info@medresearch-academy.om` — keep MedResearch separate from Bayan) uses
+    **banned language**: "Prometric," "AI-powered / AI-verified," "10,000+ questions,"
+    "Pass Guarantee." Do NOT lift it as canonical copy — reframe to the brand rules.
 
 ## 🔑 EARLY WhatsApp thread (first_conversations.md) — how the relationship began (Aug 27+)
 
