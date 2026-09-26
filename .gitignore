@@ -100,8 +100,12 @@ corey-creds.md
 # --- Bayan product archive (added 2026-09-25) ---
 # Plaintext login for bayan.edu.om — belongs in Infisical, never in git.
 marketing-plans/bayan/bayan.edu.om.credentials.json
+# Second plaintext bayan.edu.om login (repo root, added 2026-09-26) — Infisical.
+bayan.edu.om-account.md
 # Hiwa's manual client-area browsing notes — carry the account login context.
 # The redacted teardown in product-archive/ is what gets committed instead.
+# Glob covers both the bayan/ copy and the product-archive/ copy (added 2026-09-26).
+marketing-plans/bayan/**/bayan.edu.om.credentials-hiwa.json
 marketing-plans/bayan/bayan.edu.om.credentials-hiwa.json
 # Verbatim API payloads that embed the test account's email/user_id/PII.
 # The rendered product-archive/ Markdown views strip identifying fields.
@@ -125,3 +129,4 @@ marketing-plans/bayan/product-archive/raw-json/api__leaderboard.json
 # Profile page-text capture carries the login email + display name. The
 # redacted profile data model lives in 01-dashboard-and-profile.md instead.
 marketing-plans/bayan/product-archive/pages/profile.txt
+.gbrain-source
