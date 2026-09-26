@@ -129,4 +129,10 @@ marketing-plans/bayan/product-archive/raw-json/api__leaderboard.json
 # Profile page-text capture carries the login email + display name. The
 # redacted profile data model lives in 01-dashboard-and-profile.md instead.
 marketing-plans/bayan/product-archive/pages/profile.txt
+
+# --- magistermarketing.com archive (untracked 2026-09-26) ---
+# Plaintext login + live Supabase session cookie for magistermarketing.com.
+# Belong in Infisical, never in git. Used only for the GET-only archive capture.
+magistermarketing-credentials.md
+magistermarketing-cookie.md
 .gbrain-source
