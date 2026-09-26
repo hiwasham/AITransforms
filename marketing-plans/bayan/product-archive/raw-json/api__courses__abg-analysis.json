@@ -1,0 +1,73 @@
+{
+ "id": 6,
+ "slug": "abg-analysis",
+ "title": "ABG & Acid-Base",
+ "description": "Arterial blood gas interpretation and acid-base disorders",
+ "education_level": "postgraduate",
+ "specialty": null,
+ "difficulty": "intermediate",
+ "estimated_hours": 1,
+ "module_count": 5,
+ "status": "published",
+ "cover_image_url": null,
+ "created_at": "2026-06-03T11:11:11.16109+00:00",
+ "updated_at": "2026-06-03T11:11:11.16109+00:00",
+ "modules": [
+  {
+   "id": 28,
+   "slug": "abg-basics",
+   "title": "Arterial Blood Gas: What It Tells You",
+   "description": null,
+   "order_index": 0,
+   "content_type": "reading",
+   "estimated_minutes": 8,
+   "image_url": null,
+   "progress": null
+  },
+  {
+   "id": 29,
+   "slug": "systematic-approach",
+   "title": "The 5-Step Systematic Approach",
+   "description": null,
+   "order_index": 1,
+   "content_type": "reading",
+   "estimated_minutes": 15,
+   "image_url": null,
+   "progress": null
+  },
+  {
+   "id": 30,
+   "slug": "four-disorders",
+   "title": "The Four Primary Acid-Base Disorders",
+   "description": null,
+   "order_index": 2,
+   "content_type": "reading",
+   "estimated_minutes": 12,
+   "image_url": null,
+   "progress": null
+  },
+  {
+   "id": 31,
+   "slug": "mixed-disorders",
+   "title": "Mixed Disorders & Clinical Application",
+   "description": null,
+   "order_index": 3,
+   "content_type": "reading",
+   "estimated_minutes": 15,
+   "image_url": null,
+   "progress": null
+  },
+  {
+   "id": 32,
+   "slug": "oxygenation",
+   "title": "Oxygenation Assessment & the A-a Gradient",
+   "description": null,
+   "order_index": 4,
+   "content_type": "reading",
+   "estimated_minutes": 10,
+   "image_url": null,
+   "progress": null
+  }
+ ],
+ "enrollment": null
+}
