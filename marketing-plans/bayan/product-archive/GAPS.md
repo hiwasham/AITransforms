@@ -14,7 +14,7 @@ Every known gap in this teardown, with the cause. Nothing silently dropped.
 | Gap | Why it's a mutation |
 |---|---|
 | **Answer submission + results screen** (live) | Writes attempt history / XP. Flow documented from Hiwa's notes only. |
-| **Student & Resident dashboards** | Account track is nurse. Seeing other role dashboards needs a profile track switch = write. A `Preview As` toggle may be non-mutating but was **not clicked** (unverified). |
+| **Student & Resident dashboards** | Account track is nurse. Seeing other role dashboards needs a profile track switch = write. A `Preview As` toggle may be non-mutating but was **not clicked** (unverified). **Partial-close (doc 07):** all 11 track NAMES + the nurse-track exams/settings/history/achievements are now enumerated; the other 10 dashboards' exam sets stay `[TBD — confirm per track]`, write-gated. **Further (doc 08):** the dashboard ROUTES are now confirmed from the client config — `/student/dashboard`, `/nursing/dashboard`, `/postgrad/dashboard` (all physician/resident tracks), `/admin`; and each track's exam SCOPE is derivable from the catalog's profession/educationLevel. Only the exact per-track default `exam_targets` selection remains write-gated. |
 | **Confirm Quality / Quarantine** (reviewer) | Writes a review decision. Console + checklist captured read-only; the action buttons were not pressed. |
 | **Study-plan generation** | "Generate Study Plan" likely writes a plan to the account. Not triggered. |
 | **Flashcard review / drug/course purchase** | State-changing. Not triggered. |
@@ -27,8 +27,8 @@ Every known gap in this teardown, with the cause. Nothing silently dropped.
 | **Explore Topics page** | No dedicated API (page props). Not text-captured. |
 | **Article catalog (all 472)** | No listing endpoint (`/api/library/list` → 400). Only article #859 captured as the schema exemplar; catalog lives in page props. |
 | **OSCE stations (40)** | Counted via `/api/public-stats`; no station-detail endpoint probed. |
-| **Full question bank (5,610)** | Only the 200-item undergrad **review queue** is reachable via API from this account. Nursing-scope questions not enumerated. |
-| **Subscription plan names / prices** | Fields exist; values are `[TBD — confirm with team]`. |
+| **Full question bank (5,610)** | Only the 200-item undergrad **review queue** is reachable via API from this account. Nursing-scope questions not enumerated. **Partial-close (doc 08):** per-exam question counts for all 28 catalog exams now known from the client config (e.g. USMLE Step 2 CK 316, SMLE 200, OEN 100). |
+| ~~**Subscription plan names / prices**~~ **CLOSED (doc 08)** | Extracted read-only from the client JS config: 3 consumer tiers (Student $9.99/$69, Nurse $19/$129, Physician $29/$199; 30-day trial, ~43% annual save), per-seat institutional pricing (min 20 seats, 1-yr trial, via MedResearch Academy), free-tier limits (5 Q/day), and the humanitarian free-country access list. Prices are USD. |
 
 ## Method deviation (documented, not a gap in coverage)
 
@@ -44,5 +44,7 @@ Every known gap in this teardown, with the cause. Nothing silently dropped.
   Load it with `source <(python3 ~/.infisical/creds-env.py BAYAN_EDU)` →
   `BAYAN_EDU_URL/_USERNAME/_PASSWORD`. The local plaintext file was deleted;
   Hiwa's separate `-hiwa.json` browsing notes remain local + git-ignored.
-- Rephrase leadership/strategist "audit questions" into a `master-prompt.md`.
+- ~~Rephrase leadership/strategist "audit questions" into a `master-prompt.md`~~
+  **DONE** — `marketing-plans/bayan/master-prompt.md` now holds the shared-language
+  operating system (interaction style, strategic approach, resources, framework).
 - Update stale `progress.md` checkboxes.
