@@ -23,7 +23,7 @@ Every known gap in this teardown, with the cause. Nothing silently dropped.
 
 | Gap | Note |
 |---|---|
-| **Calculators / Tools hub** | Client-side, no API. Nav confirmed; individual tools not enumerated. |
+| ~~**Calculators / Tools hub**~~ **CLOSED (doc 09)** | Client-side, no API — enumerated read-only from `/tools` + `/tools/calculator`: 22 medical calculators (8 categories), Perioperative Risk, 150+ drug monographs, interaction checker, renal dosing, IV compatibility, 20 emergency drug cards, voice-enabled Virtual Patients, OSCE, Death Certification. |
 | **Explore Topics page** | No dedicated API (page props). Not text-captured. |
 | **Article catalog (all 472)** | No listing endpoint (`/api/library/list` → 400). Only article #859 captured as the schema exemplar; catalog lives in page props. |
 | **OSCE stations (40)** | Counted via `/api/public-stats`; no station-detail endpoint probed. |
