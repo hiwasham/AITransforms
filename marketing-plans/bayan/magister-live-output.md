@@ -125,6 +125,28 @@ Heading: **See What a Structured Prep Journey Can Look Like** / ببینید ی�
 analytics card explicitly "without implying any learner result." No fabricated
 people, testimonials, or pass rates.
 
+---
+
+## Track 8 — Founder Credibility  ✅ (6 credits)
+
+Eyebrow: **Founder & Mission** / بنیان‌گذار و مأموریت / المؤسس والرسالة
+Heading: **Built Around a Clinician-Reviewed Standard** / بر پایه استانداردی با بازبینی بالینی / منصة مبنية على معيار يراجعه الأطباء والمختصون
+
+**Founder framing (EN):** Founded by [Founder name — confirm with team], Bayan was
+built to make structured Gulf Licensing Exam Preparation clearer and more accessible
+for healthcare learners. Clinicians and educators review and own everything that
+reaches learners, across 5,589 questions and 55+ countries.
+**FA:** بیان با بنیان‌گذاری [نام بنیان‌گذار — تأیید با تیم]، با این مأموریت شکل گرفت که آمادگی ساختاریافته برای آزمون‌های مجوز پزشکی در خلیج فارس را برای یادگیرندگان حوزه سلامت روشن‌تر و دسترس‌پذیرتر کند. پزشکان و مربیان همه محتوایی را که به یادگیرندگان می‌رسد بررسی و تأیید می‌کنند؛ در مجموعه‌ای شامل ۵٬۵۸۹ سؤال و یادگیرندگانی در بیش از ۵۵ کشور.
+**AR:** أسس [اسم المؤسس — يُرجى التأكيد مع الفريق] بيان بهدف جعل التحضير المنظّم لاختبارات الترخيص الطبي في الخليج أوضح وأكثر إتاحة للمتعلمين في المجال الصحي. يراجع الأطباء والمعلّمون كل ما يصل إلى المتعلمين ويعتمدونه ويتحمّلون مسؤوليته، ضمن مجموعة تضم ٥٬٥٨٩ سؤالًا ومتعلمين في أكثر من ٥٥ دولة.
+
+Pull quote (EN): "Trust in medical education begins with who reviews what learners receive."
+
+**Review note:** ✅ no fabricated affiliations — `[Founder name — confirm with team]`
+placeholder used. **Slot the verified specifics from the offline founder card
+(commit d960a3c, sourced from research.md L126-165) into the placeholder — do NOT
+cite SQUH/OMSB/SQU as employer; keep MedResearch Academy separate.**
+
+
 
 
 

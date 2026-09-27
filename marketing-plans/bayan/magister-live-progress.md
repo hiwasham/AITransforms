@@ -26,7 +26,7 @@ log into magistermarketing.com and write to the workspace.
 | 5 | Services | done | live; 6 credits; captured |
 | 6 | AI CEO Assistant / Local Agent spotlight | done | live; 6 credits; passes AI-framing lock |
 | 7 | Example Work / Case Studies | done | live; 6 credits; pre-traction safe (no fabricated results) |
-| 8 | Founder Credibility | pending | offline card already built (d960a3c) — refresh live |
+| 8 | Founder Credibility | done | live; 6 credits; captured; founder specifics = [confirm with team] placeholders; slot d960a3c verified card |
 | 9 | Resources Teaser | pending | |
 | 10 | CTA | pending | |
 | 11 | Footer | pending | |
@@ -42,3 +42,6 @@ log into magistermarketing.com and write to the workspace.
 - 2026-09-27: Track 1 (Header) DONE live — cost **5 credits** (36→41 used, 659 left).
   Budget fear resolved: focused copy runs are cheap (~5 cr), so all 11 ≈ 55 credits.
   Output compliant, captured to magister-live-output.md.
+- 2026-09-27: Tracks 2–8 DONE live — captured + committed. Track 8 (Founder) used
+  `[confirm with team]` placeholders, no fabricated affiliations. Credits: 77 used /
+  623 left. Tracks 9 (Resources), 10 (CTA), 11 (Footer) remain.
