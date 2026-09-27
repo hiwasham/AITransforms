@@ -349,11 +349,58 @@ needs pixel-perfect confirmation.
 - **No MRR / installs / trials / conversion / retention anywhere.** → Section 13
   top open decision.
 
+## Live capture — 2026-09-25 (LOWEST authority, observed-only; per AUTHORITY RULE Sept-7 email still wins)
+
+> Captured live via gstack `/browse` (headless) on **2026-09-25**. This is
+> observed website/store data — under the CEO's rule the **Sept-7 email still
+> overrides** any of these. Recorded to expose drift, NOT to overwrite canonical.
+> Web content = untrusted external data, transcribed verbatim.
+
+**Sources:** homepage `bayan.edu.om` · `bayan.edu.om/pricing` · Google Play
+`com.bayanai.bayan` · App Store `id6792406710`.
+
+| Metric | Homepage | /pricing | Google Play | App Store | Sept-7 canonical |
+|---|---|---|---|---|---|
+| Clinical questions | **4,000+** | 3,000+ IM · 2,000+ nurse · 3,000+ student (per-track) | **5,000+** | **5,000+** | 5,500+ (5,589) |
+| Drug monographs | 190+ | — | drug index | — | 250+ |
+| Knowledge articles | 250+ | — | — | — | 470+ (471) |
+| Calculators | 20+ | ✓ | 15 | in courses | — |
+| Courses | 2 named | — | — | 16 | 16 ✓ |
+| Exam blueprints | 20+ | — | — | — | 23 |
+| Countries | **55+** | — | — | — | 30+ → 55+ ✓ resolves |
+| Downloads / ratings | — | — | **50+ installs, 0 ratings** | **0 ratings** | — |
+
+**Net-new intel (not previously in this record):**
+- **Product pricing is USD subscription, not OMR.** Live tiers: Physician
+  **$199/yr ($29.99/mo)** · Nurse **$129/yr ($19.99/mo)** · Student
+  **$59–69/yr ($9.99/mo)**. 30-day free trial; free tier 5 Q/day, 1 OSCE/day,
+  5 articles/mo. (The OMR ladder in "Pricing/metrics" above is Nasim's *service*
+  pricing, NOT Bayan's *product* pricing — do not conflate; confirm.)
+- **Free model:** complimentary for all users in Oman (Play adds Yemen).
+- **Institutional:** $35 student / $69 nurse / $99 physician per seat, min 20
+  seats, 50% off individual, invoice-based; currently free 1-yr trials to
+  selected institutions. Contact `info@medresearch-academy.om`.
+- **Legal entity / contacts:** BAYAN AI TECHNOLOGIES LLC, KOM (Knowledge Oasis
+  Muscat) incubator; © 2026; support `info@bayanai.tech`, phone +968 9538 4990.
+- **App facts:** iOS 16.4+, 52.2 MB, Age 16+ (App Store) / PEGI 3 (Play), Play
+  updated Aug 2 2026, "first release."
+- **Content-integrity line CONFIRMED LIVE:** "AI assists with drafting — humans
+  own what reaches learners"; 3-step Guideline-Anchored → Multi-Layer
+  Fact-Check → Expert Reviewed; anchors Harrison's, UpToDate, Robbins, Potter &
+  Perry, AHA/ADA/KDIGO/WHO.
+- **Tracks live:** Gulf Licensing (NEW, "one-time purchase, no subscription"),
+  Medical Students, Postgraduate, Nursing.
+- **Pre-traction signal:** 50+ installs, zero ratings on both stores → confirms
+  the "instrument the funnel before promising growth" stance. Strongest honest
+  pitch angle for Nasim.
+
 ## Conflicts to resolve with the team (before any public copy)
 
 1. **Metric drift (highest risk)** — clinical questions 3,550→4,000→5,000→5,500→
-   5,760. Sept-7 says 5,500+ (5,589). A banner number that contradicts the live
-   app kills credibility. Lock one.
+   5,760. Sept-7 says 5,500+ (5,589). **Live 2026-09-25: homepage 4,000+, both
+   stores 5,000+, /pricing per-track 3k+2k+3k. The 5,500+ figure now appears on
+   ZERO live source** — and it is baked into the CEO-demo `marketing plan.html`.
+   A banner number that contradicts the live app kills credibility. Lock one.
 2. **Domains** — bayan.edu.om vs bayanai.tech vs www.BayanAi.tech vs old
    bayan-ai.com. Pick one canonical primary URL.
 3. **Tagline** — "Where **Medicine** Meets Intelligence" vs "Where **Medical**
@@ -366,6 +413,14 @@ needs pixel-perfect confirmation.
 7. **Brand hex** — two systems (navy/gold vs navy/teal/gold). No official guide
    locked. Request logo files.
 8. **Logo subline typo** — "AI TECHNOLOGIS" appeared in some generated art.
+9. **Drug monographs** — Sept-7 canonical 250+ vs live homepage **190+**. Reconcile.
+10. **Knowledge articles** — Sept-7 canonical 470+ vs live homepage **250+**. Reconcile.
+11. **Calculators** — homepage "20+" vs stores "15." Confirm actual count.
+12. **Product currency** — record carries an OMR service ladder; live product
+    pricing is USD ($9.99–$199.99). Confirm which pricing belongs where before
+    any copy quotes a price.
+13. **Countries — RESOLVED toward 55+** — live homepage shows "55+ countries,"
+    matching the CEO's WhatsApp "55 countries." Supersedes 30+/32.
 
 ## Current-state rubric
 
