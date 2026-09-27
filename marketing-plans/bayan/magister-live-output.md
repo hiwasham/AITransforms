@@ -108,6 +108,24 @@ CTA (EN): See How the Assistant Supports the Team / آشنایی با پشتیب
 and educators review, approve, and own everything that reaches learners." No
 "AI-powered". Human-ownership framing carried in all 3 languages.
 
+---
+
+## Track 7 — Example Work / Case Studies  ✅ (6 credits)
+
+Eyebrow: **Illustrative Examples** / نمونه‌های توضیحی / أمثلة توضيحية
+Heading: **See What a Structured Prep Journey Can Look Like** / ببینید یک مسیر ساختاریافته آمادگی چگونه می‌تواند باشد / تعرّف إلى شكل مسار تحضير منظّم
+
+| Card | English | فارسی | العربية |
+|---|---|---|---|
+| Sample Study Path | Illustrative example: Begin with a diagnostic set, follow targeted practice, then revisit missed topics. | نمونه مسیر مطالعه — مثال توضیحی: با یک مجموعه تشخیصی شروع کنید، تمرین هدفمند را ادامه دهید و سپس موضوعات دشوار را مرور کنید. | نموذج لمسار الدراسة — مثال توضيحي: ابدأ بمجموعة أسئلة تشخيصية، ثم تدرّب على موضوعات محددة وراجع الموضوعات الصعبة. |
+| Sample Analytics View | Illustrative example: Topic analytics highlights areas for review without implying any learner result. | نمونه نمای تحلیل عملکرد — مثال توضیحی: تحلیل موضوعی حوزه‌های نیازمند مرور را نشان می‌دهد، بدون ادعای نتیجه برای هیچ یادگیرنده‌ای. | نموذج لتحليلات الأداء — مثال توضيحي: تُظهر تحليلات الموضوعات المجالات التي تحتاج إلى مراجعة، من دون الإيحاء بأي نتيجة للمتعلّم. |
+| Sample Question Walkthrough | Illustrative example: A clinician-reviewed question is followed by a clear explanation and a supporting reference where available. | نمونه بررسی یک سؤال — مثال توضیحی: یک سؤال بازبینی‌شده توسط پزشک با توضیح روشن و در صورت وجود، منبع پشتیبان همراه می‌شود. | نموذج لشرح سؤال — مثال توضيحي: يتبع السؤال الذي راجعه أطباء شرح واضح ومرجع داعم عند توفره. |
+
+**Review note:** ✅ pre-traction safe. Every card labelled "Illustrative example";
+analytics card explicitly "without implying any learner result." No fabricated
+people, testimonials, or pass rates.
+
+
 
 
 
