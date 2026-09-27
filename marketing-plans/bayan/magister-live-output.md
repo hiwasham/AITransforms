@@ -165,6 +165,26 @@ CTA (EN): Explore Free & Preview Resources / مشاهده منابع رایگا�
 framing; Gulf Licensing Exam Preparation (no bare Prometric); no outcome/pass language;
 no invented facts.
 
+---
+
+## Track 10 — CTA  ✅ (~6 credits, 84→90 used)
+
+Heading: **Build a Clearer Path for Your Gulf Licensing Exam Preparation** / مسیر روشن‌تری برای آمادگی آزمون‌های مجوز پزشکی در خلیج فارس بسازید / ابنِ مسارًا أوضح للتحضير لاختبارات الترخيص الطبي في الخليج
+
+Subheading:
+- **EN:** Study with clinician-reviewed resources, structured practice, and human-owned educational content across 5,589 questions and 55+ countries.
+- **FA:** با منابع بازبینی‌شده توسط پزشکان، تمرین ساختاریافته و محتوای آموزشی با مسئولیت انسانی، در میان ۵٬۵۸۹ سؤال و بیش از ۵۵ کشور مطالعه کنید.
+- **AR:** تعلّم من خلال موارد يراجعها أطباء ومختصون، وتدريب منظّم، ومحتوى تعليمي بمسؤولية بشرية، ضمن ٥٬٥٨٩ سؤالًا وفي أكثر من ٥٥ دولة.
+
+| CTA | English | فارسی | العربية |
+|---|---|---|---|
+| Primary | Explore Gulf Licensing Exam Preparation | مشاهده آمادگی آزمون‌های مجوز پزشکی در خلیج فارس | استكشف التحضير لاختبارات الترخيص الطبي في الخليج |
+| Secondary | Try Sample Questions | تجربه سؤالات نمونه | جرّب أسئلة نموذجية |
+
+**Review note:** ✅ compliant — "Gulf Licensing Exam Preparation" (no bare Prometric);
+no pass/guarantee/"on the first attempt" language; "clinician-reviewed and human-owned"
+(no "AI-powered"); verified facts only (5,589 questions, 55+ countries).
+
 
 
 

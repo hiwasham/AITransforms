@@ -28,7 +28,7 @@ log into magistermarketing.com and write to the workspace.
 | 7 | Example Work / Case Studies | done | live; 6 credits; pre-traction safe (no fabricated results) |
 | 8 | Founder Credibility | done | live; 6 credits; captured; founder specifics = [confirm with team] placeholders; slot d960a3c verified card |
 | 9 | Resources Teaser | done | live; 7 credits; captured; free/preview framing, no guarantees |
-| 10 | CTA | pending | |
+| 10 | CTA | done | live; ~6 credits (84→90 used); captured; no guarantee language, human-owned, Gulf Licensing Exam Preparation |
 | 11 | Footer | pending | |
 
 ## Session log
@@ -45,3 +45,6 @@ log into magistermarketing.com and write to the workspace.
 - 2026-09-27: Tracks 2–8 DONE live — captured + committed. Track 8 (Founder) used
   `[confirm with team]` placeholders, no fabricated affiliations. Credits: 77 used /
   623 left. Tracks 9 (Resources), 10 (CTA), 11 (Footer) remain.
+- 2026-09-27: Tracks 9 (Resources) + 10 (CTA) DONE live — captured + compliant
+  (free/preview framing, no guarantees; Gulf Licensing Exam Preparation, human-owned).
+  Credits: ~90 used / ~610 left. **Only Track 11 (Footer) remains.**
