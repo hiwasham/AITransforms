@@ -70,5 +70,23 @@ Heading: **A Structured Method for Gulf Licensing Exam Preparation** / روشی 
 
 **Review note:** compliant. Four-step method, human-reviewed framing, no guarantees.
 
+---
+
+## Track 5 — Services  ✅ (6 credits)
+
+Eyebrow: **What We Offer** / خدمات ما / خدماتنا
+Heading: **Complete Support for Gulf Licensing Exam Preparation** / پشتیبانی جامع برای آمادگی آزمون‌های مجوز پزشکی در خلیج فارس / دعم متكامل للتحضير لاختبارات الترخيص الطبي في الخليج
+
+| Service | English | فارسی | العربية |
+|---|---|---|---|
+| Question Banks | Clinician-Reviewed Question Banks — Practice with structured questions and evidence-based explanations for licensing and board pathways. | بانک‌های سؤال با بازبینی بالینی — با سؤالات ساختاریافته و توضیحات مبتنی بر شواهد برای مسیرهای مجوز و بورد تمرین کنید. | بنوك أسئلة يراجعها أطباء ومختصون — تدرّب على أسئلة منظّمة مع شروحات قائمة على الأدلة لمسارات الترخيص والاختصاص. |
+| Courses | Exam-Focused Courses — Study through structured learning for ABG and Acid-Base, OMSB, and Arab Board preparation. | دوره‌های متمرکز بر آزمون — با آموزش ساختاریافته برای ABG و اسید ـ باز و آمادگی OMSB و Arab Board مطالعه کنید. | دورات تركّز على الاختبار — تعلّم من خلال دورات منظّمة في تفسير غازات الدم والتوازن الحمضي القاعدي، والتحضير لـ OMSB وArab Board. |
+| OSCE | OSCE & Practical Preparation — Develop applied clinical skills through OSCE stations, clinical cases, and virtual patients. | آمادگی OSCE و مهارت‌های عملی — مهارت‌های بالینی کاربردی را با ایستگاه‌های OSCE، موارد بالینی و بیماران مجازی تمرین کنید. | التحضير لاختبارات OSCE والمهارات العملية — طوّر مهاراتك السريرية التطبيقية من خلال محطات OSCE والحالات السريرية والمرضى الافتراضيين. |
+| Analytics | Performance Analytics — Use topic analytics and weak-area detection to identify what to review next. | تحلیل عملکرد — با تحلیل موضوعی و شناسایی نقاط ضعف، بدانید چه چیزی را بعدی مرور کنید. | تحليلات الأداء — استخدم تحليلات الموضوعات وتحديد نقاط الضعف لمعرفة ما ينبغي مراجعته بعد ذلك. |
+
+**Review note:** compliant. Uses OMSB/Arab Board (not bare Prometric), evidence-based
+framing, no guarantees.
+
+
 
 
