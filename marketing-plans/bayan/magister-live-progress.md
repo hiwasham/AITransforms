@@ -24,7 +24,7 @@ log into magistermarketing.com and write to the workspace.
 | 3 | Problem | done | live; 5 credits; captured |
 | 4 | Framework | done | live; 6 credits; captured |
 | 5 | Services | done | live; 6 credits; captured |
-| 6 | AI CEO Assistant / Local Agent spotlight | pending | |
+| 6 | AI CEO Assistant / Local Agent spotlight | done | live; 6 credits; passes AI-framing lock |
 | 7 | Example Work / Case Studies | pending | |
 | 8 | Founder Credibility | pending | offline card already built (d960a3c) — refresh live |
 | 9 | Resources Teaser | pending | |

@@ -87,6 +87,28 @@ Heading: **Complete Support for Gulf Licensing Exam Preparation** / پشتیبا
 **Review note:** compliant. Uses OMSB/Arab Board (not bare Prometric), evidence-based
 framing, no guarantees.
 
+---
+
+## Track 6 — AI CEO Assistant / Local Agent spotlight  ✅ (6 credits)
+
+Eyebrow: **AI CEO Assistant** / دستیار هوش مصنوعی مدیرعامل / مساعد الرئيس التنفيذي بالذكاء الاصطناعي
+Heading: **Faster Operations. Human-Owned Education.** / عملیات سریع‌تر؛ آموزش با مسئولیت انسانی / عمليات أسرع، ومحتوى تعليمي بمسؤولية بشرية
+
+**Description (EN):** Bayan's local assistant helps the CEO and educator team draft,
+organize, and coordinate content and daily operations. AI assists with drafting and
+operations; clinicians and educators review, approve, and own everything that reaches
+learners.
+**FA:** دستیار محلی بیان به مدیرعامل و تیم آموزش کمک می‌کند محتوا و عملیات روزانه را سریع‌تر پیش‌نویس، سازمان‌دهی و هماهنگ کنند. هوش مصنوعی در تدوین و عملیات کمک می‌کند؛ پزشکان و مربیان همه محتوایی را که به دست یادگیرندگان می‌رسد بررسی، تأیید و مسئولیت آن را بر عهده دارند.
+**AR:** يساعد المساعد المحلي في بيان الرئيس التنفيذي وفريق التعليم على إعداد المسودات وتنظيم المحتوى وتنسيق العمليات اليومية. يساهم الذكاء الاصطناعي في الصياغة والعمليات؛ بينما يراجع الأطباء والمعلّمون كل ما يصل إلى المتعلمين ويعتمدونه ويتحمّلون مسؤوليته.
+
+Bullets (EN): Draft and structure educational content · Organize campaigns, resources, and workflows · Prepare materials for clinician review
+CTA (EN): See How the Assistant Supports the Team / آشنایی با پشتیبانی دستیار از تیم / تعرّف إلى دعم المساعد للفريق
+
+**Review note:** ✅ passes the strictest lock. Explicitly "AI assists... clinicians
+and educators review, approve, and own everything that reaches learners." No
+"AI-powered". Human-ownership framing carried in all 3 languages.
+
+
 
 
 
