@@ -38,3 +38,20 @@ not a platform-wide "AI-powered" claim — acceptable. Numerals correctly locali
 **Review note:** compliant. "clinician-reviewed" reinforces human-owned content.
 No outcome guarantees. Proof line uses locked verified facts.
 
+---
+
+## Track 3 — Problem  ✅ (5 credits)
+
+| Element | English (LTR) | فارسی (RTL) | العربية (RTL) |
+|---|---|---|---|
+| Eyebrow | The Challenge | چالش آمادگی | التحدّي |
+| Heading | Gulf Licensing Exam Preparation Should Not Feel Fragmented | آمادگی برای آزمون‌های مجوز پزشکی در خلیج فارس نباید پراکنده باشد | لا ينبغي أن يكون التحضير لاختبارات الترخيص الطبي في الخليج مجزّأً |
+| Bullet 1 | Study materials are scattered across generic courses, notes, and question banks. | منابع مطالعه بین دوره‌های عمومی، یادداشت‌ها و بانک‌های سؤال پراکنده‌اند. | تتوزّع مواد الدراسة بين دورات عامة وملاحظات وبنوك أسئلة متفرقة. |
+| Bullet 2 | Unclear blueprint coverage makes it difficult to know what to prioritize. | نبودِ تصویر روشن از سرفصل‌های آزمون، اولویت‌بندی مطالعه را دشوار می‌کند. | عدم وضوح مخطط محتوى الاختبار يجعل تحديد الأولويات صعبًا. |
+| Bullet 3 | Generic, non-reviewed questions offer limited clinical relevance. | سؤالات عمومی و بدون بازبینی، ارتباط بالینی مطالب را روشن نمی‌کنند. | الأسئلة العامة وغير المراجَعة لا توضّح مدى ارتباطها بالممارسة السريرية. |
+| Bullet 4 | Without performance analytics, weak areas are difficult to identify and revisit. | بدون تحلیل عملکرد، شناسایی و مرور نقاط ضعف دشوار است. | من دون تحليلات الأداء، يصعب تحديد نقاط الضعف ومراجعتها. |
+
+**Review note:** compliant. Pain points frame the gap without disparaging named
+competitors or making outcome claims.
+
+
