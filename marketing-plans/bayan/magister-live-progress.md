@@ -20,7 +20,7 @@ log into magistermarketing.com and write to the workspace.
 | # | Track (section) | Status | Notes |
 |---|---|---|---|
 | 1 | Header + language switcher | done | live; 5 credits; captured to magister-live-output.md |
-| 2 | Hero | pending | |
+| 2 | Hero | done | live; 1 credit; captured |
 | 3 | Problem | pending | |
 | 4 | Framework | pending | |
 | 5 | Services | pending | |

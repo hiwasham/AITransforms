@@ -22,3 +22,19 @@ Model: GPT-5.6 Luna, X-High effort. Trilingual: EN (default) / FA (RTL) / AR (RT
 
 **Review note:** compliant. "AI CEO Assistant" nav label names our product feature,
 not a platform-wide "AI-powered" claim — acceptable. Numerals correctly localized.
+
+---
+
+## Track 2 — Hero  ✅ (1 credit)
+
+| Element | English (LTR) | فارسی (RTL) | العربية (RTL) |
+|---|---|---|---|
+| Headline | Structured Gulf Licensing Exam Preparation for Healthcare Professionals | آمادگی ساختاریافته برای آزمون‌های مجوز پزشکی در خلیج فارس | تحضير منظّم لاختبارات الترخيص الطبي في الخليج |
+| Subheadline | Practice with clinician-reviewed questions, clear explanations, and exam-focused learning paths for physicians, residents, nurses, and medical students. | با پرسش‌های بازبینی‌شده توسط پزشکان، توضیحات روشن و مسیرهای مطالعه متناسب با آزمون تمرین کنید؛ برای پزشکان، دستیاران، پرستاران و دانشجویان پزشکی. | تدرّب على أسئلة يراجعها أطباء، مع شروحات واضحة ومسارات دراسة مخصصة للاختبار للأطباء والمقيمين والممرضين وطلاب الطب. |
+| Primary CTA | Explore Gulf Licensing Exam Preparation | مشاهده آمادگی آزمون‌های مجوز پزشکی در خلیج فارس | استكشف التحضير لاختبارات الترخيص الطبي في الخليج |
+| Secondary CTA | Try Sample Questions | تجربه سؤالات نمونه | جرّب أسئلة نموذجية |
+| Trust strip | 5,589 questions · 55+ countries | ۵٬۵۸۹ سؤال · ۵۵+ کشور | ٥٬٥٨٩ سؤالًا · ٥٥+ دولة |
+
+**Review note:** compliant. "clinician-reviewed" reinforces human-owned content.
+No outcome guarantees. Proof line uses locked verified facts.
+
