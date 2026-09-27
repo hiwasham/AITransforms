@@ -146,6 +146,25 @@ placeholder used. **Slot the verified specifics from the offline founder card
 (commit d960a3c, sourced from research.md L126-165) into the placeholder — do NOT
 cite SQUH/OMSB/SQU as employer; keep MedResearch Academy separate.**
 
+---
+
+## Track 9 — Resources Teaser  ✅ (7 credits)
+
+Eyebrow: **Free & Preview Resources** / منابع رایگان و پیش‌نمایش / موارد مجانية ومعاينة
+Heading: **Start with Clinician-Reviewed Study Resources** / با منابع مطالعه بازبینی‌شده توسط پزشکان شروع کنید / ابدأ بموارد دراسية يراجعها أطباء ومختصون
+
+| Card | English | فارسی | العربية |
+|---|---|---|---|
+| Free Sample Questions | Preview human-reviewed questions and clear explanations for Gulf Licensing Exam Preparation. | سؤالات نمونه رایگان — نمونه‌ای از سؤالات بازبینی‌شده توسط متخصصان و توضیحات روشن برای آمادگی آزمون‌های مجوز پزشکی در خلیج فارس. | أسئلة نموذجية مجانية — اطّلع على أسئلة راجعها مختصون مع شروحات واضحة للتحضير لاختبارات الترخيص الطبي في الخليج. |
+| Study-Blueprint Overview | Learn how to compare your profession, exam pathway, and priority study topics. | مرور چارچوب مطالعه — یاد بگیرید چگونه حرفه، مسیر آزمون و موضوعات اولویت‌دار مطالعه خود را مقایسه کنید. | نظرة عامة على مخطط الدراسة — تعرّف إلى كيفية مقارنة مهنتك ومسار اختبارك وموضوعات الدراسة ذات الأولوية. |
+| ABG & Acid-Base Primer | Review foundational concepts before exploring Bayan's structured clinical-learning resources. | مقدمات ABG و اسید ـ باز — پیش از بررسی منابع ساختاریافته یادگیری بالینی بیان، مفاهیم پایه را مرور کنید. | مقدمة في غازات الدم والتوازن الحمضي القاعدي — راجع المفاهيم الأساسية قبل استكشاف موارد بيان للتعلّم السريري المنظّم. |
+
+CTA (EN): Explore Free & Preview Resources / مشاهده منابع رایگان و پیش‌نمایش / استكشف الموارد المجانية والمعاينة
+
+**Review note:** ✅ compliant. "Free & Preview" not "free forever"; human/clinician-reviewed
+framing; Gulf Licensing Exam Preparation (no bare Prometric); no outcome/pass language;
+no invented facts.
+
 
 
 

@@ -27,7 +27,7 @@ log into magistermarketing.com and write to the workspace.
 | 6 | AI CEO Assistant / Local Agent spotlight | done | live; 6 credits; passes AI-framing lock |
 | 7 | Example Work / Case Studies | done | live; 6 credits; pre-traction safe (no fabricated results) |
 | 8 | Founder Credibility | done | live; 6 credits; captured; founder specifics = [confirm with team] placeholders; slot d960a3c verified card |
-| 9 | Resources Teaser | pending | |
+| 9 | Resources Teaser | done | live; 7 credits; captured; free/preview framing, no guarantees |
 | 10 | CTA | pending | |
 | 11 | Footer | pending | |
 
