@@ -22,7 +22,7 @@ log into magistermarketing.com and write to the workspace.
 | 1 | Header + language switcher | done | live; 5 credits; captured to magister-live-output.md |
 | 2 | Hero | done | live; 1 credit; captured |
 | 3 | Problem | done | live; 5 credits; captured |
-| 4 | Framework | pending | |
+| 4 | Framework | done | live; 6 credits; captured |
 | 5 | Services | pending | |
 | 6 | AI CEO Assistant / Local Agent spotlight | pending | |
 | 7 | Example Work / Case Studies | pending | |

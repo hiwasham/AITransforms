@@ -54,4 +54,21 @@ No outcome guarantees. Proof line uses locked verified facts.
 **Review note:** compliant. Pain points frame the gap without disparaging named
 competitors or making outcome claims.
 
+---
+
+## Track 4 — Framework  ✅ (6 credits)
+
+Eyebrow: **Our Framework** / چارچوب ما / منهجنا
+Heading: **A Structured Method for Gulf Licensing Exam Preparation** / روشی ساختاریافته برای آمادگی آزمون‌های مجوز پزشکی در خلیج فارس / منهج منظّم للتحضير لاختبارات الترخيص الطبي في الخليج
+
+| Step | English | فارسی | العربية |
+|---|---|---|---|
+| Diagnose | Establish your baseline and identify the topics that need attention. | ارزیابی — سطح پایه خود را بسنجید و موضوعات نیازمند توجه را شناسایی کنید. | التشخيص — حدّد مستواك الأساسي والموضوعات التي تحتاج إلى مزيد من التركيز. |
+| Practice | Work through clinician-reviewed questions with clear explanations and timed sessions. | تمرین — با سؤالات بازبینی‌شده توسط پزشکان، توضیحات روشن و جلسات زمان‌دار تمرین کنید. | التدريب — تدرّب على أسئلة يراجعها أطباء، مع شروحات واضحة وجلسات محددة الوقت. |
+| Analyze | Use topic analytics to understand performance and locate knowledge gaps. | تحلیل — با استفاده از تحلیل موضوعی، عملکرد و شکاف‌های دانشی خود را بررسی کنید. | التحليل — استخدم تحليلات الموضوعات لفهم أدائك وتحديد الفجوات المعرفية. |
+| Review | Revisit missed questions with spaced repetition and targeted practice. | مرور — سؤالات نادرست را با مرور فاصله‌دار و تمرین هدفمند دوباره بررسی کنید. | المراجعة — أعد مراجعة الأسئلة التي أخطأت فيها من خلال التكرار المتباعد والتدريب الموجّه. |
+
+**Review note:** compliant. Four-step method, human-reviewed framing, no guarantees.
+
+
 
