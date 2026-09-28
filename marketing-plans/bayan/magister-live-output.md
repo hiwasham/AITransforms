@@ -185,6 +185,32 @@ Subheading:
 no pass/guarantee/"on the first attempt" language; "clinician-reviewed and human-owned"
 (no "AI-powered"); verified facts only (5,589 questions, 55+ countries).
 
+---
+
+## Track 11 — Footer  ✅ (live; Magistered 3s)
+
+Compact trilingual footer, mirrors header nav.
+
+**Brand + category tagline:** Bayan — Gulf Licensing Exam Preparation / آمادگی آزمون‌های مجوز پزشکی در خلیج فارس / التحضير لاختبارات الترخيص الطبي في الخليج
+
+| Block | English | فارسی | العربية |
+|---|---|---|---|
+| Navigation | Problem · Framework · Services · AI CEO Assistant · Example Work · Founder · Resources | مسئله · چارچوب · خدمات · دستیار هوش مصنوعی مدیرعامل · نمونه‌کارها · بنیان‌گذار · منابع | المشكلة · المنهج · الخدمات · مساعد الرئيس التنفيذي بالذكاء الاصطناعي · نماذج من الأعمال · المؤسس · الموارد |
+| Resources & Legal | Privacy · Terms | حریم خصوصی · شرایط استفاده | الخصوصية · الشروط |
+| Languages | English · فارسی · العربية | English · فارسی · العربية | English · فارسی · العربية |
+| Verified proof | 5,589 questions · 55+ countries | ۵٬۵۸۹ سؤال · بیش از ۵۵ کشور | ٥٬٥٨٩ سؤالًا · أكثر من ٥٥ دولة |
+| Contact | [contact email — confirm with team] | [ایمیل تماس — تأیید با تیم] | [البريد الإلكتروني للتواصل — يُرجى التأكيد مع الفريق] |
+
+**Footer note / disclaimer:**
+- **EN:** [© year Bayan Learning]. Content is clinician-reviewed and human-owned. AI assists with drafting only; clinicians and educators review and approve content before it reaches learners.
+- **FA:** [© سال Bayan Learning]. محتوا توسط پزشکان و متخصصان بررسی می‌شود و مسئولیت آن با انسان‌هاست. هوش مصنوعی فقط در تهیه پیش‌نویس کمک می‌کند؛ پزشکان و مربیان محتوا را پیش از رسیدن به یادگیرندگان بررسی و تأیید می‌کنند.
+- **AR:** [© السنة Bayan Learning]. يراجع الأطباء والمختصون المحتوى، وتبقى مسؤوليته بشرية. يساهم الذكاء الاصطناعي في إعداد المسودات فقط؛ ويراجع الأطباء والمعلّمون المحتوى ويعتمدونه قبل وصوله إلى المتعلمين.
+
+**Review note:** ✅ compliant — Gulf Licensing Exam Preparation (no bare Prometric);
+human-owned/clinician-reviewed disclaimer, never bare "AI-powered"; no outcome/pass
+guarantees; verified counts only with localized FA/AR numerals; contact + copyright
+left as `[confirm with team]` placeholders, no invented address/phone/social.
+
 
 
 
