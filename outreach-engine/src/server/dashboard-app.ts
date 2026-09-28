@@ -69,6 +69,7 @@ type AcceptedContentType = "form" | "json" | null;
 interface DashboardRoute extends Route {
   access: AccessClass;
   mutation: boolean;
+  allowMissingOrigin?: true;
   acceptedContentType: AcceptedContentType;
   audit?: {
     route:
@@ -247,6 +248,7 @@ export function createDashboardApp(deps: DashboardAppDeps): App {
       segments: ["login"],
       access: "public",
       mutation: true,
+      allowMissingOrigin: true,
       acceptedContentType: "form",
       handler: login,
     },
@@ -366,9 +368,11 @@ export function createDashboardApp(deps: DashboardAppDeps): App {
     }
 
     let response: Response;
+    const origin = request.headers.get("origin");
     if (
       policy.mutation &&
-      request.headers.get("origin") !== deps.config.publicOrigin
+      origin !== deps.config.publicOrigin &&
+      !(policy.allowMissingOrigin && origin === null)
     ) {
       response = fixedError("forbidden", "Request forbidden", 403);
     } else if (policy.acceptedContentType !== null) {

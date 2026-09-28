@@ -34,7 +34,10 @@ Offline copy
 
 ## How to read this
 
-Start at a course README, pick a section, open a lesson's `lesson.md`. Each lesson folder holds:
+- Start at a course README, 
+- pick a section, 
+- open a lesson's `lesson.md`. 
+	- Each lesson folder holds:
 
 | File | What it is |
 |---|---|

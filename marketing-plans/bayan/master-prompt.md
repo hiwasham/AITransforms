@@ -88,6 +88,22 @@ people, hijab, real hospital scenarios); English-first content (Arab medical stu
 is in English); AI-assisted but human-owned medical content (*"AI assists with
 drafting — humans own what reaches learners"*).
 
+**Hard messaging rules (do-not-say) — brand red lines. Every asset is checked against these:**
+- **No shortcuts / no "pass without studying."** The CEO enforced this himself —
+  he rewrote a script so Bissan corrects Gassan: *"There are NO shortcuts, Gassan!
+  That's the whole point — we help you actually LEARN the material."* Integrity-first.
+  **Never "Pass Guarantee."**
+- **AI is a tool, never the authority.** Approved framing: *"We use AI to make
+  medical education and career pathways easier."* Never say "AI-powered" without the
+  human-review caveat.
+- **Market as "Gulf Licensing Exam Preparation," never "Prometric"** (OMSB runs via
+  Pearson VUE). Exam names (SMLE, DHA, OMSB) may appear as *targets*; never cite
+  SQUH / OMSB / SQU as the CEO's *employer*, and keep **MedResearch Academy** a
+  separate brand from Bayan.
+- **⚠️ The CEO's own Aug-29 brief breaks these rules** (used "Prometric,"
+  "AI-powered / AI-verified," "10,000+ questions," "Pass Guarantee"). Do NOT lift
+  his brief as canonical copy — reframe to comply.
+
 ---
 
 ## 3. Resources (what we have to work with)
