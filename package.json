@@ -11,13 +11,12 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "js-sha256": "^1.0.0",
+    "js-sha256": "1.0.0",
     "next": "16.2.12",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
   "devDependencies": {
-    "@playwright/test": "^1.62.1",
     "@tailwindcss/postcss": "^4",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",

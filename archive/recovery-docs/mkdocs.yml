@@ -1,0 +1,15 @@
+site_name: AITransforms - Project Recovery
+theme: readthedocs
+docs_dir: docs
+site_dir: site
+nav:
+  - Overview: index.md
+  - Recovery Report: project-recovery.md
+  - Operating System: operating-system.md
+  - Project Story: project-story.md
+  - LLM Story Brief: artifacts/PROJECT_STORY_LLM_BRIEF.md
+  - Commit Plan: artifacts/COMMIT_PLAN.md
+  - Dashboard: artifacts/DASHBOARD.md
+  - Build Packet: artifacts/BUILD-PACKET.md
+  - Brainsweep: artifacts/BRAINSWEEP.md
+  - Evidence Guide: evidence.md
