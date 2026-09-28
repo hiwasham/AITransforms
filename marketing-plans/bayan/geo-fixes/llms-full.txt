@@ -1,0 +1,61 @@
+# Bayan — MedResearch Academy (full profile for language models)
+
+> Bayan (MedResearch Academy) is a clinician-built medical education platform based in Muscat, Oman, serving healthcare learners across the Gulf (GCC) and MENA region. It helps medical students, postgraduate physicians, and nurses prepare for licensing, board, and clinical examinations through clinician-reviewed questions, structured courses, and applied clinical tools.
+
+## What Bayan is
+
+Bayan is an evidence-based exam-preparation and clinical-learning platform. Every question, article, and monograph is written, reviewed, and maintained by practicing physicians and nurse educators. Content is organized around published exam blueprints and mapped to the learner's training stage, rather than presented as one undifferentiated question pool.
+
+Bayan does not offer or imply guarantees of passing. Its value is structured, clinician-reviewed preparation and applied clinical practice.
+
+## Who Bayan is for
+
+- **Medical students** in preclinical and clinical training who need question banks and structured courses aligned to their curriculum.
+- **Residents and postgraduate physicians** preparing for board examinations who need adaptive, blueprint-aligned practice and clinical cases.
+- **Nurses and healthcare professionals** preparing for Gulf licensing or nursing exams (OEN, SNLE, DHA nursing, NCLEX-RN).
+- **Gulf licensing candidates** sitting Prometric-delivered exams (DHA, MOH, SCFHS/SMLE, QCHP, OMSB, NHRA).
+
+## Exam pathways in detail
+
+**Gulf licensing / Prometric.** Preparation for the region's licensing exams: DHA (Dubai), MOH (UAE), SCFHS/SMLE (Saudi Arabia), QCHP (Qatar), OMSB (Oman), and NHRA (Bahrain). Question banks are mapped to each authority's blueprint.
+
+**Medical students.** Preclinical and clinical question banks, structured courses, flashcards, and spaced-repetition review for curriculum and early licensing preparation.
+
+**Postgraduate / board exams.** Adaptive-difficulty question banks, clinical cases, and OSCE practice aligned to board blueprints for residents and postgraduate physicians.
+
+**Nursing.** Dedicated preparation for OEN, SNLE, DHA nursing, and NCLEX-RN, with clinician-reviewed questions and rationales.
+
+## Learning tools
+
+- **Question bank:** 5,600+ clinician-reviewed questions with explanations, across specialties and exam types.
+- **OSCE stations:** structured objective clinical examination practice.
+- **Virtual patients:** interactive clinical cases for applied reasoning.
+- **Drug monographs:** 190+ evidence-based medication references.
+- **Clinical calculators:** point-of-care and exam-relevant calculations.
+- **Flashcards and spaced repetition:** structured retention tools.
+- **Exam blueprints:** 20+ published blueprints mapped to target licensing and board exams.
+
+## Courses
+
+- **Death Certification** — practical certification course.
+- **ABG & Acid-Base Interpretation** — structured interpretation training.
+
+## Reference library
+
+470+ clinician-reviewed clinical articles supporting exam preparation and applied practice.
+
+## Positioning and differentiators
+
+Bayan gives physicians, nurses, and medical students a clinician-built, evidence-based platform for exam preparation and clinical learning, combining structured question banks with courses, OSCEs, virtual patients, drug references, calculators, and spaced-repetition tools.
+
+1. One platform serves distinct medical-student, postgraduate, nursing, and Gulf-licensing pathways — not a single learner group.
+2. It extends beyond question practice with certificate courses, OSCE stations, virtual patients, calculators, flashcards, and drug monographs.
+3. Content is written, reviewed, and maintained by practicing physicians and nurse educators, with blueprint coverage and adaptive difficulty.
+
+## Facts
+
+- Organization: MedResearch Academy.
+- Product: Bayan.
+- Location: Muscat, Oman.
+- Website: https://www.bayan.edu.om/
+- Region served: Gulf Cooperation Council (GCC) and MENA.
