@@ -50,4 +50,4 @@ However you decide, the plan is yours to take into your team.
 
 Thank you,
 Hiwa
-AITransforms — AI systems for business
+AI systems for business

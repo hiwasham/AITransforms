@@ -1,6 +1,6 @@
 # Bayan — a first win this week, and where it goes
 
-*Prepared for Dr. Abdullah Al-Alawi · from Hiwa (AITransforms) & Nasim*
+*Prepared for Dr. Abdullah Al-Alawi · from Hiwa & Nasim*
 
 ## The problem, in one line
 
@@ -39,12 +39,12 @@ Each stage is small and proves itself before the next. Nothing big to commit to 
 
 - **Nasim** — marketing, communication and networking, brand and design (including
   AI-assisted design), and storytelling. The face and voice of Bayan.
-- **Hiwa (AITransforms)** — the AI systems underneath: turning your knowledge into working
+- **Hiwa** — the AI systems underneath: turning your knowledge into working
   tools, and building the systems that run your SEO, your visibility inside AI answers
   (GEO), and your marketing — then putting them into production.
 
-Two halves of one capability. AITransforms has built systems like this before — one recent
-project collapsed 171 scattered sources into a single trusted reference in about 25 minutes.
+Two halves of one capability. I've built systems like this before — one recent project
+collapsed 171 scattered sources into a single trusted reference in about 25 minutes.
 
 ## Why start small
 
@@ -52,4 +52,11 @@ Low risk, fast proof, clear path. A week and a small fixed fee gets you a workin
 and a report you can act on. If it delivers, we scale into the bigger brain as it earns its
 place. If it doesn't, you've risked almost nothing.
 
-**Week-1 fee:** $500, one time. Later stages are priced only as you decide to take them.
+**Week-1 fee:** for others this is $500. For Bayan, the first win is on me — no charge.
+The fastest way to show you what this does is to just do it, with nothing for you to weigh
+up first. Nasim is already part of the team, and I'd rather earn the later stages by
+proving this one than ask you to bet on a promise. Those later stages are priced only if
+and when you choose to take them.
+
+If you have a bit more time and want the full detail behind this, there's a complete
+proposal you can read.
