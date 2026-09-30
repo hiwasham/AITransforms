@@ -30,7 +30,9 @@ ran the check this morning: your two main sites currently name **two different c
 your headline question count reads **4,000+** on the live site while the figure your team
 treats as official is **5,589** — a number that appears on neither site. Every time this
 surfaces — as it did right before the Oman Health Exhibition — it costs you and your team
-hours to reconcile, and it puts inconsistent facts in front of buyers.
+hours to reconcile, and it puts inconsistent facts in front of buyers. And it isn't only
+numbers: in your words, *"we have been running around cycles for missing Bayan logo"* — the
+same root cause, a different day.
 
 I'll fix the root cause, not the symptom: build **one canonical, you-approved reference**
 for every product's figures, pricing, positioning, taglines, and brand identity — that
@@ -51,7 +53,7 @@ surfaces this morning. Three conflicts are live **right now**:
 | Fact | One surface says | Another says | The conflict |
 |---|---|---|---|
 | Company name | bayan.edu.om: "A MedResearch Academy Initiative · © MedResearch Academy" | bayanai.tech: "© 2026 Bayan AI Technologies LLC" | Your two main sites name **two different companies** |
-| Question count | bayan.edu.om: **4,000+** | your team's official figure: **5,589** | The number your team treats as official is on **neither** live site (the App Store and the exhibition brief showed 5,000+ and 5,760+) |
+| Question count | bayan.edu.om: **4,000+** | your team's official figure: **5,589** | The official number is on **neither** live site — across all your surfaces this one figure appears as **eight different values** (3,550 / 4,000 / 5,000 / 5,500 / 5,589 / 5,610 / 5,760 / 10,000+) |
 | Product count | bayanai.tech text: "**Seven** initiatives" | bayanai.tech's own filter: "Showing **6** solutions" | **One page contradicts itself** |
 
 One drift has *already* moved since the September check: JournalReady pricing now reads
@@ -66,6 +68,14 @@ problem: there is no single approved place that says *"this is the official numb
 so every surface drifts, and reconciling them lands on your desk. In your words:
 *"this is taking a lot of my time."*
 
+And in exam prep the stakes run deeper than tidy marketing. In a product whose entire
+value is *being correct*, a fact out of place doesn't just look sloppy — it quietly
+undercuts the one thing Bayan sells: trust. "AI-powered" is already table stakes in this
+market; **verified, consistent accuracy is the real differentiator** — and a source of
+truth is the infrastructure that guarantees it. For a founder whose own work is held to
+citation-level rigor, public numbers that disagree with each other are a credibility leak;
+the fix should meet the same standard you'd apply to a manuscript.
+
 ---
 
 ## What I'll build (the wedge)
@@ -74,7 +84,10 @@ Three pieces, one week:
 
 1. **The Product Brain** — one structured, versioned, you-approved record per product:
    headline figures, pricing, positioning, taglines, brand entity, live / in-development
-   status. The single answer to "what's official?"
+   status. The single answer to "what's official?" You already resolve conflicts by an
+   authority rule in your head — the latest approved email beats an older brief or a stale
+   site. The brain makes that rule explicit, shared, and re-runnable, so it doesn't live
+   only with you.
 
 2. **Ask-the-brain** — plain-language query, in English or Arabic:
    *"What's Bayan's official question count?"* → the one approved answer, instantly.
@@ -139,7 +152,9 @@ That's later. The pilot earns it.
 
 ## Engagement
 
-- **Pilot:** 1 week, the fixed scope above, one-time fixed fee **$500**.
+- **Pilot:** 1 week, the fixed scope above, one-time fixed fee **$500**. A build like this
+  normally runs $15k+; the pilot is priced to prove it on your own data, not to price the
+  value.
 - **After (optional):** a low-touch monthly retainer to keep the brain current plus a
   scheduled drift report before each event — **$200/mo**.
 - Delivered by **AITransforms**. This is separate from the marketing work — in fact it
@@ -152,9 +167,11 @@ That's later. The pilot earns it.
 
 You've already seen AITransforms' work through the trilingual marketing plan and the
 AI-visibility tracking built for Bayan. AITransforms does one thing: turn a business's
-knowledge, documents, and decisions into practical AI systems. The Product Brain is exactly
-that, at the smallest useful size — a real win this week, and the first block of everything
-after.
+knowledge, documents, and decisions into practical AI systems. It's the same pattern I've
+already shipped elsewhere — one recent system collapsed 171 scattered sources into a single
+authoritative artifact in about 25 minutes. Your six products across a dozen surfaces is
+that same problem. The Product Brain is exactly that, at the smallest useful size — a real
+win this week, and the first block of everything after.
 
 ---
 
