@@ -27,7 +27,9 @@ Pricing enforcement began **2026-05-01**. Every account created before that date
 **grandfathered to full free access, permanently** (the app's own access model). Add the
 13 humanitarian free-access countries. The result: the real *addressable* base — users who
 could actually become paying customers — is **far smaller than 1,300**, and we do not yet
-know its size because **the funnel has zero instrumentation.**
+know its size because **the conversion funnel isn't yet instrumented for trial→paid.** (Week 1
+inventories what's already emitting — PostHog is listed as connected in the project's
+integration status — before building anything new.)
 
 So Week 1 is not "write landing pages and hope." Week 1 is: **measure the funnel, count who
 is actually convertible, and only then aim the conversion work at them.** That is the
@@ -68,8 +70,8 @@ Concrete artifacts every week. Week 1 is exactly what Dr. Abdullah specified.
 ### Week 1 — Diagnose + first landing pages
 | Deliverable | Done when (verify) |
 |---|---|
-| **Non-payer segmentation report** — split the 1,300 into grandfathered / free-country / inactive / **addressable** cohorts; count each; size the real conversion denominator | One page: cohort counts + the addressable number + $ at stake |
-| **Funnel instrumentation live** — the `track()` event layer + `analytics_events` sink from `analytics-events-spec.md`; baseline the 6 rates | 10 core events landing as rows; trial→paid + activation rates read real numbers |
+| **Non-payer segmentation report** — split the 1,300 by **eligibility** into grandfathered / free-country / **addressable** / unresolved (mutually exclusive), then cross-tab active/inactive *within* each (inactivity is a usage state, not a cohort); the addressable count `A` is the real conversion denominator | One page: eligibility counts + active/inactive cross-tab + `A` + a $-at-stake *formula* (`A × scenario % × verified net price`), not a made-up amount |
+| **Funnel event audit (PostHog-first)** — inventory what PostHog already emits; build the `track()` layer + `analytics_events` sink from `analytics-events-spec.md` only for the gaps; baseline the 6 rates | existing events inventoried; the 10 core events landing as rows; trial→paid + activation rates read real numbers |
 | **3 landing pages drafted** — (a) highest-volume winnable exam (e.g. SMLE / OMSB), (b) free readiness-diagnostic opt-in, (c) upgrade/pricing page with the moat as hero | 3 pages, compliance-passed, ready for sign-off |
 | **Locked question count** — one official number, applied to the pages | Same number on every page; no 4k/5k/10k drift |
 
@@ -98,31 +100,45 @@ Concrete artifacts every week. Week 1 is exactly what Dr. Abdullah specified.
 ## 4. The numbers (specific, as requested)
 
 > ⚠️ **Method note:** targets are set on the **addressable base**, which Week 1 pins down —
-> not on the vanity 1,300. Conversion figures are industry benchmarks (SaaS/EdTech freemium);
-> web sources will be appended when access is restored. Every number here is a model with its
-> inputs shown, so it can be checked, not a promise pulled from air.
+> not on the vanity 1,300. Conversion figures are industry benchmarks (SaaS/EdTech freemium),
+> cited below. Every number here is a model with its inputs shown, so it can be checked, not a
+> promise pulled from air; all targets re-baseline against Bayan's own data once Week-1
+> instrumentation is live.
 
 **Baseline (verified):** 1,300 registered · **$277 total revenue to date** · <1% conversion · funnel uninstrumented.
 
-**Benchmark context:** freemium free→paid runs ~2–3% median, 4–5% good, 6–8% best-in-class.
-Bayan at <1% sits **below median** — the headroom is real. A re-engaged, nurtured base with a
-working paywall realistically reaches **3–5% of the addressable cohort within 90 days.**
+**Benchmark context (sources verified 2026-10-01):** freemium free→paid averages **~3.7%**
+across SaaS, and **~2.6% in EdTech specifically** — EdTech sits at the *low* end (First Page
+Sage, 80+ clients 2021–2025). General freemium runs 2–5%; "good" is 4–5%, best-in-class 6–8%
+(and AI-native products skew to that top band). Bayan at **<1% sits below even the EdTech
+average** — the headroom is real. A re-engaged, nurtured base with a working paywall and a
+mid-tier SKU realistically reaches **3–5% of the addressable cohort within 90 days.** Note the
+Month-1 **scenario** of 3% sits just above the 2.6% EdTech average — on the reasoning that an
+activated existing base converts higher than cold EdTech acquisition — but it stays a *scenario*,
+not a committed target, until Week-1 instrumentation gives Bayan's own baseline.
 
-**Worked model (illustrative — replace `A` with Week-1's addressable count):**
+**Worked model (illustrative scenario — not a target; replace `A` with Week-1's addressable count):**
 
 | | Month 1 | Month 2 | Month 3 |
 |---|---|---|---|
-| Conversion of addressable base `A` | 3% | 5% | 7% |
-| If `A = 400` → new paid | ~12 | ~20 | ~28 |
-| Added MRR @ ~$16 blended ARPU | ~$190 | ~$320 | ~$450 |
-| Cumulative vs. **$277 lifetime today** | already > lifetime | ~2× | ~3–4× |
+| Cumulative conversion of addressable base `A` | 3% | 5% | 7% |
+| If `A = 400` → **cumulative** paid | 12 | 20 | 28 |
+| **New** buyers added that month | 12 | 8 | 8 |
+| If recurring @ $16/mo → gross MRR run-rate | $192 | $320 | $448 |
+| …of which *incremental* MRR vs prior month | +$192 | +$128 | +$128 |
+| If one-time exam pass @ $16 → gross receipts that month | $192 | $128 | $128 |
 
-Even the conservative Month-1 figure **beats total revenue to date** — because it monetizes
-users Bayan already paid to acquire, at near-zero new cost.
+Read this honestly for the CEO: the 12/20/28 are **cumulative** buyers, so only **12 / 8 / 8**
+are *new* each month. If the SKU is a monthly subscription, $192/$320/$448 is the **run-rate
+level** (incremental lift is +$192/+$128/+$128), not new money each month. If it's a one-time
+exam pass, those are **receipts, not MRR** — don't call them MRR. And don't compare any of
+these monthly figures to the **$277 lifetime-to-date**: that's a cumulative total over an
+unknown window, so compare it only to cumulative receipts over the same window, never to a
+monthly run-rate. `A`, the price, and the sub-vs-pass mix are all **[confirm in Week 1]**.
 
 **CAC:**
-- **Existing-base conversion (Weeks 1–4) = ~$0 CAC.** This is the cheapest MRR available and why we start here — no ad spend, converting users already in the door.
-- **New paid acquisition:** held at **$0 until the funnel proves it converts organically.** If Week-4 data justifies a test, blended low-ticket EdTech CAC in MENA is roughly **$30–80/paid user** (estimate, to verify) — only defensible once LTV:CAC ≥ 3:1 is demonstrable, which needs retention data we don't yet have.
+- **Existing-base conversion (Weeks 1–4) = $0 paid-media — not $0 CAC.** No ad spend, but the loaded program cost (Nasim's fee + any engineering + tooling + payment fees) is real; report media CAC and fully-loaded CAC *separately*. It's still the cheapest MRR available because it converts users already in the door.
+- **New paid acquisition:** held at **$0 until the funnel proves it converts organically.** If Week-4 data justifies a test, EdTech CAC runs **~$10–150 per signup/trial and ~$50–300 per *paying* customer** (verified 2026-10-01, EdTech/online-tutoring benchmarks) — only defensible once **LTV:CAC ≥ 3:1** with payback inside 12 months is demonstrable, which needs retention data we don't yet have.
 
 **Budget (two scenarios):**
 
@@ -165,7 +181,7 @@ trial produces. *(This number is the one input the plan cannot invent — it is 
 | Item | Status |
 |---|---|
 | Addressable base size unknown until Week-1 segmentation | ⚠️ The whole numbers model hinges on it — Week 1 pins it before any target is committed |
-| Funnel uninstrumented today | ⚠️ Can't measure conversion until the event layer ships (Week 1, row 2) |
+| Conversion funnel not instrumented for trial→paid (PostHog connected, those events unconfirmed) | ⚠️ Week 1 inventories PostHog first, then fills only the gaps |
 | Grandfathering may be most of the base | ⚠️ If so, the fixable denominator is small and the CEO's sunset/convert decision becomes the biggest lever |
 | Conversion %s are benchmarks, not Bayan-measured | 💬 Framed as models with inputs shown; re-baselined against real data after Week 1 |
 | Retention data absent → LTV unknown | 💬 Blocks any paid-acquisition CAC defense until Week-4 data exists |
