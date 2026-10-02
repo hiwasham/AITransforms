@@ -1,3 +1,4 @@
+[[2026-09-30-bayan-ceo-marketing-plan Conversion-First Plan revised 2026-10-02]]
 # Bayan — Growth Plan for the CEO
 
 **Prepared:** 2026-09-28 · **Platform:** Magister ("Edu" workspace) · **Site:** bayan.edu.om

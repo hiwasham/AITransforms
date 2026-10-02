@@ -41,9 +41,11 @@ To conduct a comprehensive evaluation of your sales process, identifying opportu
 - Let Claude guide you through the process
 - Be specific and honest - the more detailed your responses, the more valuable the guidance
 - Claude will create artifacts as outputs - select "Copy to Project" to add them to your project knowledge
+[[03.Projects/AITransforms/empower-curriculum/empower-casestudies/03-case-study-lead-to-sale-ai-sales-management/post|empower-casestudies/03-case-study-lead-to-sale-ai-sales-management]]
+[[Hayden Miyamoto EMPOWER Labs-Build Your Business Brain mini-course-3-Process Mapping With AI-1-Run the Assessment (Lead to Sale)-prompt]]
 
 → **[Access the Prompt](https://docs.google.com/document/d/130JlqKzDo6eQLeXve0yE9v54CSILlt1ahdnf4GSJp28/edit?tab=t.2nsqy9yfeawt)**
-
+[[Hayden Miyamoto EMPOWER Labs-Build Your Business Brain mini-course-1-Create Your AI Business Advisor-What is a Master Prompt-Cohort 4 Prompt (External)-7-The EMPOWER Operating System-Offering & Sales Effectiveness|Offering & Sales (Lead to Sale)]]
 **Time to complete:** 75-90 minutes
 
 باید خودم اانجام بدم ولی در [[Hayden Miyamoto EMPOWER Labs-optin stage3 trial]] چت بات کمک میکنه

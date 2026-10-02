@@ -1,20 +1,26 @@
 # Bayan — Revenue Integration Strategy
 
-How the four archived models combine into one Bayan revenue machine, and the
-Phase 0 + Phase 1 task list to execute it. Companion to
-[analytics-events-spec.md](analytics-events-spec.md) (the measurement layer this
-plan depends on).
+How 
+- the four archived models combine into one Bayan revenue machine, 
+	- (1) Empower + Stage3 cohort model, 
+	- (2) magistermarketing AI-agent SaaS, 
+	- (3) Eben Pagan AI Marketing Club, 
+	- (4) Bayan's own current state.
+- and the Phase 0 + Phase 1 task list to execute it.
 
-Sources synthesized: (1) Empower + Stage3 cohort model, (2) magistermarketing
-AI-agent SaaS, (3) Eben Pagan AI Marketing Club, (4) Bayan's own current state.
+ Companion to [analytics-events-spec.md](analytics-events-spec.md) 
+ - (the measurement layer this plan depends on).
+ 
 
-## Thesis
-
-Bayan already owns the one layer every other startup lacks — a trustworthy,
-clinician-gated content moat — and is missing the three layers the other archives
-have each perfected: demand, packaging, and engine. The play is to bolt proven
-funnel / packaging / agent machinery onto a moat that already exists. Most
-startups have a funnel and no moat; Bayan is the reverse.
+Bayan
+- already owns the one layer every other startup lacks
+	- — a trustworthy, clinician-gated content moat — 
+- and is missing the three layers the other archives have each perfected: 
+	- demand, 
+	- packaging, 
+	- and engine. 
+The play is to bolt proven funnel / packaging / agent machinery onto a moat that already exists. 
+Most startups have a funnel and no moat; Bayan is the reverse.
 
 ## Four sources = four layers of ONE machine
 
@@ -24,45 +30,42 @@ startups have a funnel and no moat; Bayan is the reverse.
 | Packaging / price ladder | Empower + Stage3 | free diagnostic → sub → cohort → institution; metered-coach paywall | no mid tier; dormant B2B; untuned trial→paid |
 | Demand / conversion | Eben Pagan | offer science, copy, education-based follow-up funnel, lead magnet | no funnel; no lifecycle/referral; moat invisible |
 | Product / moat | Bayan | 5,610 clinician-reviewed Qs, 20-point rubric, dated PMIDs, human gate | (the asset the other three lack) |
-
-Note: Stage3 was captured on Bayan's OWN trial account, and the Magister archive is
-Magister's client workspace FOR Bayan. Two of four sources were already Bayan
-scouting these models — this completes an evaluation Bayan started.
-
 ## Synergy — each source's weakness is another's strength
 
-| This source's fatal weakness… | …is fixed by |
-|---|---|
-| Bayan: pre-traction, no instrumented funnel (50+ installs, 0 ratings) | Eben (funnel) + Empower (packaging) |
-| Empower: thin content, community 93% silent (28 of 428 active) | Bayan's deep clinician-reviewed corpus fills the empty tiers |
-| Eben: hype/guru tactics would destroy a medical brand | Bayan's moat makes education-based marketing credible |
-| Magister: an engine with no domain, content, or safety gate | Bayan supplies domain + reviewed content + clinician fence; Magister supplies the engine Bayan's empty AI slot needs |
+| This source's fatal weakness…                                         | …is fixed by                                                                                                         |
+| --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Bayan: pre-traction, no instrumented funnel (50+ installs, 0 ratings) | Eben (funnel) + Empower (packaging)                                                                                  |
+| Empower: thin content, community 93% silent (28 of 428 active)        | Bayan's deep clinician-reviewed corpus fills the empty tiers                                                         |
+| Eben: hype/guru tactics would destroy a medical brand                 | Bayan's moat makes education-based marketing credible                                                                |
+| Magister: an engine with no domain, content, or safety gate           | Bayan supplies domain + reviewed content + clinician fence; Magister supplies the engine Bayan's empty AI slot needs |
+|                                                                       |                                                                                                                      |
+
+Note: Stage3 was captured on Bayan's OWN trial account, and the Magister archive is Magister's client workspace FOR Bayan. 
+Two of four sources were already Bayan scouting these models — this completes an evaluation Bayan started.
+
 
 **Convergence point (highest-leverage single build): a free readiness diagnostic** —
-three engines meet there: Eben's "move the free line" lead magnet + Empower's "AI
-Audit" + Magister's audit→plan compiler. One artifact does lead-gen,
-personalization, and study-plan generation at once.
+three engines meet there: Eben's "move the free line" lead magnet + Empower's "AI Audit" + Magister's audit→plan compiler. 
+One artifact does lead-gen, personalization, and study-plan generation at once.
 
 ## The combined revenue machine (end to end)
 
-1. **TOP — Demand:** Free Readiness Diagnostic (50-Q mock or OSCE walkthrough,
-   segmented by exam path). Scores weak areas → emails report + generated study
-   plan. Captures contact before the wall.
-2. **MIDDLE — Conversion:** Education-based follow-up funnel drips Bayan's 472
-   clinician-reviewed articles ("one lesson a week until they buy") via the existing
-   @BayanMedEd Telegram + email. Eben's 25–50%-convert-over-a-year lever. Paywall =
-   Empower's metered AI-coach wrapping the existing 5-Q/day free tier.
-3. **PRICE LADDER:** free diagnostic → existing $9.99/$19/$29 sub → NEW low mid-tier
-   (single-exam / exam-window pass) → NEW clinician-led live cohort (timed to exam
-   sittings; Bayan's 15+ reviewers = the scarce live-expert asset) → activate the
-   dormant institutional B2B lane.
-4. **ENGINE:** Magister's task-contract agent becomes the AI study-coach that only
-   answers with citations to clinician-reviewed content (the differentiator vs raw
-   ChatGPT). Magister also runs Bayan's own funnel.
-5. **MOAT (linchpin):** the 20-point review rubric + human gate + dated PMIDs is
-   today invisible to buyers. Make it the hero of every message. It justifies premium
-   price, makes the AI tutor trustworthy, unlocks B2B, and is the safety rail that
-   lets every aggressive tactic run without becoming a guru-scam.
+1. **TOP — Demand:** 
+	   - Free Readiness Diagnostic (50-Q mock or OSCE walkthrough, segmented by exam path).
+	   - Scores weak areas → emails report + generated study plan. 
+	   - Captures contact before the wall.
+2. **MIDDLE — Conversion:** 
+	   - Education-based follow-up funnel drips Bayan's 472    clinician-reviewed articles ("one lesson a week until they buy") via the existing    @BayanMedEd Telegram + email. 
+	   - Eben's 25–50%-convert-over-a-year lever.
+	   - Paywall =  Empower's metered AI-coach wrapping the existing 5-Q/day free tier.
+3. **PRICE LADDER:** 
+	   - free diagnostic → existing $9.99/$19/$29 sub → NEW low mid-tier    (single-exam / exam-window pass) → NEW clinician-led live cohort (timed to exam    sittings; Bayan's 15+ reviewers = the scarce live-expert asset) → activate the    dormant institutional B2B lane.
+4. **ENGINE:** 
+	   - Magister's task-contract agent becomes the AI study-coach that only    answers with citations to clinician-reviewed content (the differentiator vs raw    ChatGPT). Magister also runs Bayan's own funnel.
+5. **MOAT (linchpin):** 
+	   - the 20-point review rubric + human gate + dated PMIDs is    today invisible to buyers. 
+	   - Make it the hero of every message. 
+	   - It justifies premium    price, makes the AI tutor trustworthy, unlocks B2B, and is the safety rail that    lets every aggressive tactic run without becoming a guru-scam.
 
 ## Phase 0 — Precondition (1–2 weeks). Do not skip.
 
