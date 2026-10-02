@@ -67,10 +67,12 @@ at no extra charge.
 
 Concrete artifacts every week. Week 1 is exactly what Dr. Abdullah specified.
 
+> *Internal method note (not for the CEO deck): W1's diagnostic and W2's trigger follow the EMPOWER Lead-to-Sale method — the segmentation + funnel audit produce the **baseline score** (the rigorous "why don't they pay"), and the trial→paid work is written as a **repeatable SOP Nasim owns**, not a one-off send. See `bayan-b2b-track.md` §4 for the SOP shape.*
+
 ### Week 1 — Diagnose + first landing pages
 | Deliverable | Done when (verify) |
 |---|---|
-| **Non-payer segmentation report** — split the 1,300 by **eligibility** into grandfathered / free-country / **addressable** / unresolved (mutually exclusive), then cross-tab active/inactive *within* each (inactivity is a usage state, not a cohort); the addressable count `A` is the real conversion denominator | One page: eligibility counts + active/inactive cross-tab + `A` + a $-at-stake *formula* (`A × scenario % × verified net price`), not a made-up amount |
+| **Non-payer segmentation report** — split the 1,300 by **eligibility** into grandfathered / free-country / **addressable** / unresolved (mutually exclusive), then cross-tab active/inactive *within* each (inactivity is a usage state, not a cohort); the addressable count `A` is the real conversion denominator | One page: eligibility counts + active/inactive cross-tab + `A` + a $-at-stake *formula* (`A × scenario % × verified net price`), not a made-up amount — this is the Lead-to-Sale **baseline score** |
 | **Funnel event audit (PostHog-first)** — inventory what PostHog already emits; build the `track()` layer + `analytics_events` sink from `analytics-events-spec.md` only for the gaps; baseline the 6 rates | existing events inventoried; the 10 core events landing as rows; trial→paid + activation rates read real numbers |
 | **3 landing pages drafted** — (a) highest-volume winnable exam (e.g. SMLE / OMSB), (b) free readiness-diagnostic opt-in, (c) upgrade/pricing page with the moat as hero | 3 pages, compliance-passed, ready for sign-off |
 | **Locked question count** — one official number, applied to the pages | Same number on every page; no 4k/5k/10k drift |
@@ -79,7 +81,7 @@ Concrete artifacts every week. Week 1 is exactly what Dr. Abdullah specified.
 | Deliverable | Done when |
 |---|---|
 | **Onboarding flow** — first-login 5-Q weak-area diagnostic → personalized "your gap" screen → routed to the matching bank (first value in session 1) | Live; fires activation event |
-| **Trial→paid sequence** — trial-day-1, mid-trial value email, day-3-before-expiry nudge, expiry offer | Sequence live; sends tracked |
+| **Trial→paid SOP** — a documented, repeatable sequence (process map + per-step blueprint), not just emails: trial-day-1, mid-trial value email, day-3-before-expiry nudge, expiry offer | Written as an SOP Nasim can run and improve; sequence live; sends tracked |
 | **Paywall moment** — a clear, non-aggressive upgrade prompt at the 5-Q/day wall | Prompt live; `paywall_hit` + `subscribe_clicked` tracked |
 
 ### Week 3 — Reactivate the dormant base + mid-tier SKU
