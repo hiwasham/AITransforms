@@ -1,3 +1,4 @@
+![[deepseek_html_20261003_f32e4e.html]]
 # Bayan Learning — Product QA & Improvement Report
 
 **For:** BayanLearning CEO / Product Manager
@@ -23,15 +24,15 @@ Neither is visible as a crash, so they can persist for months. Both are fixable 
 
 ## Status table
 
-| # | Finding | Severity | Type | Status |
-|---|---------|----------|------|--------|
-| 1 | CSP blocks all GA4 + Google Ads conversion tracking | 🔴 HIGH | Bug — revenue/marketing | ⚠️ needs a decision |
-| 2 | Two authenticated queries return HTTP 400 (quiz history + OSCE stations) | 🔴 HIGH | Bug — data integrity | ⚠️ needs a decision |
-| 3 | Cross-track data bleed: nursing stats inside an IM board-prep profile | 🟠 MEDIUM | Bug — data model | 💬 evidence below |
-| 4 | "Exam readiness" number disagrees between Dashboard (39%) and Analytics (32%) | 🟠 MEDIUM | Bug — consistency | 💬 evidence below |
-| 5 | Drug-monograph count differs across 3 pages (190+ / 100+ / 260) | 🟡 LOW | Content/consistency | 💬 evidence below |
-| 6 | Library cards show "0 sections"; inconsistent difficulty casing | 🟡 LOW | Polish | 💬 evidence below |
-| — | Clinical calculators are accurate and well-built | ✅ strength | — | verified |
+| #   | Finding                                                                       | Severity   | Type                    | Status              |
+| --- | ----------------------------------------------------------------------------- | ---------- | ----------------------- | ------------------- |
+| 1   | CSP blocks all GA4 + Google Ads conversion tracking                           | 🔴 HIGH    | Bug — revenue/marketing | ⚠️ needs a decision |
+| 2   | Two authenticated queries return HTTP 400 (quiz history + OSCE stations)      | 🔴 HIGH    | Bug — data integrity    | ⚠️ needs a decision |
+| 3   | Cross-track data bleed: nursing stats inside an IM board-prep profile         | 🟠 MEDIUM  | Bug — data model        | 💬 evidence below   |
+| 4   | "Exam readiness" number disagrees between Dashboard (39%) and Analytics (32%) | 🟠 MEDIUM  | Bug — consistency       | 💬 evidence below   |
+| 5   | Drug-monograph count differs across 3 pages (190+ / 100+ / 260)               | 🟡 LOW     | Content/consistency     | 💬 evidence below   |
+| 6   | Library cards show "0 sections"; inconsistent difficulty casing               | 🟡 LOW     | Polish                  | 💬 evidence below   |
+| —   | Clinical calculators are accurate and well-built                              | ✅ strength | —                       | verified            |
 
 **Riskiest item:** #1. Every day it runs, Google Ads is bidding with no conversion feedback and your GA4 funnel is empty — you cannot tell which channel produces paying subscribers. This is the one to fix first.
 

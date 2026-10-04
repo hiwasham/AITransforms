@@ -1,3 +1,5 @@
+[[03.Projects/AITransforms/marketing-plans/bayan/bayan-conversion-first-plan-magister v3|bayan-conversion-first-plan-magister v3]]
+![[deepseek_html_20261003_b7842a.html]]
 # Bayan — 30-Day Conversion-First Trial (revised)
 
 **Revision:** Updated after the CEO-review material was supplied in `inbox/paste-1-fe13620d.md` through `inbox/paste-7-fe13620d.md` and `inbox/analytics-events-spec-fe13620d.md`.  

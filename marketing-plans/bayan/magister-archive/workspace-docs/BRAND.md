@@ -1,6 +1,6 @@
 # Brand context
 
-<!-- MAGISTER:GENERATED BRAND START -->
+<!-- NASIM:GENERATED BRAND START -->
 ### Generated from the latest marketing audit
 
 Source: marketing audit, observed 2026-09-23T22:26:34.360885+00:00. Audit inferences are not user confirmation; verify changeable product facts with the connected source.
@@ -57,4 +57,4 @@ Objections: Whether the available content fully matches their specific licensing
 - Exam-specific preparation organized around licensing, board, and career-stage pathways.
 - Applied clinical learning through OSCEs, virtual patients, cases, calculators, and structured courses.
 - A comprehensive learning toolkit that goes beyond conventional question banks.
-<!-- MAGISTER:GENERATED BRAND END -->
+<!-- NASIM:GENERATED BRAND END -->
