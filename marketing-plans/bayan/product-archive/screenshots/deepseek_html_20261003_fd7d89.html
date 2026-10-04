@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bayan — Screenshot Gallery</title>
+<style>
+  :root{
+    --ink:#0a0d14;
+    --ink2:#0f131c;
+    --panel:#151b26;
+    --panel2:#1a2230;
+    --line:#232c3b;
+    --txt:#eef2f9;
+    --mut:#8b95a9;
+    --mut2:#5a6477;
+    --bayan:#1a4ff5;
+    --bayan2:#4d7bff;
+    --emerald:#34d399;
+    --amber:#fbbf24;
+    --rose:#f43f5e;
+    --violet:#a78bfa;
+    --cyan:#22d3ee;
+    --radius:14px;
+    --thumb-bg:#e9edf3;
+    --thumb-bg2:#dce2eb;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);
+    color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ============ STICKY TOP NAV ============ */
+  .topnav{
+    position:sticky;top:0;z-index:50;
+    padding:14px 32px;
+    background:linear-gradient(180deg,rgba(10,13,20,.96),rgba(10,13,20,.7) 80%,transparent);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    border-bottom:1px solid transparent;
+    transition:border-color .3s;
+  }
+  .topnav.scrolled{border-bottom-color:var(--line)}
+  .nav-inner{
+    max-width:1280px;margin:0 auto;
+    display:flex;align-items:center;gap:20px;flex-wrap:wrap;
+  }
+  .nav-brand{
+    display:flex;align-items:center;gap:12px;
+    flex:0 0 auto;
+  }
+  .nav-brand .mark{
+    width:32px;height:32px;border-radius:9px;
+    display:grid;place-items:center;
+    background:linear-gradient(140deg,var(--bayan),var(--violet));
+    color:#fff;font-size:14px;font-weight:800;
+    box-shadow:0 0 24px -6px rgba(26,79,245,.7);
+  }
+  .nav-brand .name{
+    font-size:13px;font-weight:700;color:#fff;
+    letter-spacing:-.005em;line-height:1.2;
+  }
+  .nav-brand .sub{
+    font-size:10.5px;color:var(--mut2);letter-spacing:.05em;
+  }
+  .nav-filters{
+    display:flex;gap:4px;flex:1;min-width:0;
+    overflow-x:auto;padding:2px 0;
+    scrollbar-width:none;
+  }
+  .nav-filters::-webkit-scrollbar{display:none}
+  .filter-chip{
+    all:unset;cursor:pointer;
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12px;font-weight:600;
+    padding:8px 14px;border-radius:9px;
+    color:var(--mut);background:transparent;
+    border:1px solid transparent;
+    transition:.18s;white-space:nowrap;
+    letter-spacing:-.005em;
+  }
+  .filter-chip:hover{color:#c8d2e2;background:rgba(255,255,255,.04)}
+  .filter-chip.active{
+    color:#fff;background:rgba(26,79,245,.15);
+    border-color:rgba(26,79,245,.35);
+  }
+  .filter-chip .count{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:10.5px;font-weight:700;
+    padding:1px 6px;border-radius:5px;
+    background:rgba(255,255,255,.08);
+    color:#cbd5e1;
+  }
+  .filter-chip.active .count{
+    background:rgba(26,79,245,.25);color:#fff;
+  }
+  .nav-hint{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:11px;color:var(--mut2);
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    flex:0 0 auto;
+  }
+  .kbd{
+    display:inline-flex;align-items:center;justify-content:center;
+    min-width:20px;height:20px;padding:0 5px;
+    font-size:10px;font-weight:700;
+    background:rgba(255,255,255,.06);
+    border:1px solid var(--line);
+    border-radius:5px;
+    color:#cbd5e1;
+    font-family:ui-monospace,monospace;
+  }
+
+  /* ============ MAIN ============ */
+  main{
+    max-width:1280px;margin:0 auto;
+    padding:0 32px 100px;
+  }
+
+  /* ============ HERO ============ */
+  .hero{
+    padding:56px 0 40px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:36px;
+  }
+  .hero .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:11px;font-weight:600;
+    letter-spacing:.1em;text-transform:uppercase;
+    color:var(--bayan2);
+    padding:6px 12px;border-radius:8px;
+    background:rgba(26,79,245,.12);
+    border:1px solid rgba(26,79,245,.3);
+    margin-bottom:20px;
+  }
+  .hero .eyebrow::before{
+    content:"";width:6px;height:6px;border-radius:50%;
+    background:var(--emerald);
+    box-shadow:0 0 10px 0 rgba(52,211,153,.9);
+    animation:pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse{
+    0%,100%{opacity:1;transform:scale(1)}
+    50%{opacity:.5;transform:scale(.7)}
+  }
+  .hero h1{
+    font-size:44px;line-height:1.1;
+    letter-spacing:-.035em;font-weight:800;
+    color:#fff;margin-bottom:18px;
+    max-width:22ch;
+  }
+  .hero .lede{
+    font-size:16px;line-height:1.75;
+    color:#b8c2d2;max-width:70ch;
+    margin-bottom:28px;
+  }
+  .hero .lede b{color:#fff;font-weight:600}
+  .hero .lede code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13.5px;
+    background:rgba(255,255,255,.05);
+    padding:2px 7px;border-radius:5px;
+    color:#dfe7f4;
+  }
+  .hero-stats{
+    display:flex;gap:32px;flex-wrap:wrap;
+    padding-top:22px;
+    border-top:1px dashed var(--line);
+  }
+  .hs-item{display:flex;align-items:baseline;gap:10px}
+  .hs-item .n{
+    font-size:24px;font-weight:800;
+    letter-spacing:-.03em;color:#fff;
+    font-variant-numeric:tabular-nums;
+  }
+  .hs-item .l{
+    font-size:11.5px;color:var(--mut2);
+    letter-spacing:.05em;text-transform:uppercase;
+    font-weight:600;
+  }
+
+  /* ============ SECTION ============ */
+  section{margin-bottom:56px}
+  .sec-head{
+    display:flex;align-items:baseline;
+    gap:16px;margin-bottom:22px;flex-wrap:wrap;
+  }
+  .sec-head h2{
+    font-size:22px;line-height:1.2;
+    letter-spacing:-.02em;font-weight:700;
+    color:#fff;
+  }
+  .sec-head .count{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;font-weight:700;
+    color:var(--bayan2);
+    padding:4px 10px;border-radius:7px;
+    background:rgba(26,79,245,.12);
+    border:1px solid rgba(26,79,245,.28);
+  }
+  .sec-head .desc{
+    flex:1;min-width:240px;
+    font-size:13.5px;color:var(--mut);
+    line-height:1.6;
+  }
+
+  /* ============ GRID ============ */
+  .grid{
+    display:grid;
+    gap:18px;
+  }
+  .grid-desktop{
+    grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  }
+  .grid-mobile{
+    grid-template-columns:repeat(auto-fill,minmax(190px,1fr));
+  }
+
+  /* ============ CARD ============ */
+  .shot{
+    position:relative;
+    display:flex;flex-direction:column;
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    overflow:hidden;
+    cursor:pointer;
+    transition:transform .3s cubic-bezier(.2,.7,.3,1),
+               border-color .25s,
+               box-shadow .3s;
+    animation:fadeUp .5s cubic-bezier(.2,.7,.3,1) both;
+    animation-delay:var(--d,0ms);
+  }
+  @keyframes fadeUp{
+    from{opacity:0;transform:translateY(12px)}
+    to{opacity:1;transform:none}
+  }
+  .shot:hover{
+    transform:translateY(-4px);
+    border-color:rgba(26,79,245,.5);
+    box-shadow:0 24px 60px -30px rgba(26,79,245,.85),
+               0 0 0 1px rgba(26,79,245,.08);
+  }
+
+  /* thumb */
+  .thumb{
+    position:relative;
+    background:linear-gradient(180deg,var(--thumb-bg),var(--thumb-bg2));
+    display:grid;place-items:center;
+    overflow:hidden;
+    border-bottom:1px solid rgba(0,0,0,.08);
+  }
+  .grid-desktop .thumb{aspect-ratio:16/10;padding:14px}
+  .grid-mobile .thumb{aspect-ratio:9/19;padding:12px}
+
+  .thumb img{
+    max-width:100%;max-height:100%;
+    width:auto;height:auto;
+    object-fit:contain;
+    border-radius:5px;
+    box-shadow:0 6px 20px -6px rgba(0,0,0,.22),
+               0 1px 0 0 rgba(255,255,255,.6) inset;
+    transition:transform .45s cubic-bezier(.2,.7,.3,1),
+               box-shadow .3s;
+    display:block;
+  }
+  .shot:hover .thumb img{
+    transform:scale(1.035);
+    box-shadow:0 14px 34px -10px rgba(0,0,0,.35);
+  }
+
+  /* hover hint */
+  .hover-hint{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg,transparent 55%,rgba(10,13,20,.7));
+    opacity:0;transition:.3s;
+    display:flex;align-items:flex-end;justify-content:center;
+    padding-bottom:16px;
+    pointer-events:none;
+  }
+  .hover-hint .label{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:11px;font-weight:600;
+    letter-spacing:.05em;text-transform:uppercase;
+    color:#fff;
+    padding:7px 13px;border-radius:99px;
+    background:rgba(26,79,245,.9);
+    border:1px solid rgba(255,255,255,.15);
+    backdrop-filter:blur(8px);
+    box-shadow:0 8px 24px -8px rgba(0,0,0,.5);
+  }
+  .hover-hint .label::before{
+    content:"⤢";font-size:12px;
+  }
+  .shot:hover .hover-hint{opacity:1}
+
+  /* meta */
+  .meta{
+    padding:14px 16px 15px;
+    display:flex;flex-direction:column;gap:8px;
+    background:var(--panel);
+    flex:1;
+  }
+  .meta .fname{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;font-weight:600;
+    color:#eef2f9;letter-spacing:-.005em;
+    word-break:break-all;
+    line-height:1.35;
+  }
+  .meta .view{
+    font-size:12.5px;color:var(--mut);
+    line-height:1.5;
+  }
+  .meta-foot{
+    display:flex;align-items:center;gap:8px;
+    margin-top:auto;padding-top:10px;
+    border-top:1px dashed var(--line);
+  }
+  .doc-chip{
+    display:inline-flex;align-items:center;gap:6px;
+    font-size:10.5px;font-weight:700;
+    letter-spacing:.06em;text-transform:uppercase;
+    padding:4px 9px;border-radius:6px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  .doc-chip::before{
+    content:"";width:5px;height:5px;border-radius:50%;
+    background:currentColor;
+  }
+  .doc-1{background:rgba(26,79,245,.14);color:var(--bayan2)}
+  .doc-2{background:rgba(167,139,250,.14);color:var(--violet)}
+  .doc-3{background:rgba(52,211,153,.14);color:var(--emerald)}
+  .doc-4{background:rgba(244,63,94,.14);color:var(--rose)}
+  .doc-5{background:rgba(251,191,36,.14);color:var(--amber)}
+  .orient-badge{
+    margin-left:auto;
+    font-size:10px;font-weight:600;
+    letter-spacing:.05em;
+    color:var(--mut2);
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+
+  /* ============ LIGHTBOX ============ */
+  .lightbox{
+    position:fixed;inset:0;z-index:200;
+    background:rgba(5,7,11,.94);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    display:none;
+    align-items:center;justify-content:center;
+    opacity:0;
+    transition:opacity .28s ease;
+  }
+  .lightbox.open{display:flex}
+  .lightbox.visible{opacity:1}
+
+  .lb-stage{
+    position:relative;
+    max-width:min(1400px,90vw);
+    max-height:88vh;
+    display:flex;align-items:center;justify-content:center;
+    z-index:2;
+  }
+  .lb-img{
+    max-width:100%;max-height:88vh;
+    width:auto;height:auto;
+    object-fit:contain;
+    border-radius:10px;
+    box-shadow:0 40px 90px -30px rgba(0,0,0,.9),
+               0 0 0 1px rgba(255,255,255,.06);
+    background:#fff;
+    display:block;
+    animation:lbIn .35s cubic-bezier(.2,.7,.3,1) both;
+  }
+  @keyframes lbIn{
+    from{opacity:0;transform:scale(.96)}
+    to{opacity:1;transform:none}
+  }
+
+  .lb-bar{
+    position:absolute;left:0;right:0;bottom:0;
+    padding:18px 28px;
+    display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+    z-index:3;
+    background:linear-gradient(0deg,rgba(5,7,11,.9),transparent);
+    border-radius:0 0 10px 10px;
+    pointer-events:none;
+  }
+  .lb-bar > *{pointer-events:auto}
+  .lb-fname{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13.5px;font-weight:600;
+    color:#fff;letter-spacing:-.005em;
+  }
+  .lb-view{
+    font-size:13px;color:var(--mut);
+  }
+  .lb-view::before{content:" · ";margin:0 4px;color:var(--mut2)}
+  .lb-counter{
+    margin-left:auto;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px;font-weight:600;
+    color:#cbd5e1;
+    padding:6px 12px;border-radius:7px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.1);
+    font-variant-numeric:tabular-nums;
+  }
+
+  .lb-nav{
+    position:absolute;top:50%;translate:0 -50%;
+    width:52px;height:52px;
+    border-radius:50%;
+    display:grid;place-items:center;
+    font-size:22px;font-weight:300;
+    color:#fff;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.1);
+    cursor:pointer;transition:.2s;
+    backdrop-filter:blur(10px);
+    z-index:4;
+    user-select:none;
+  }
+  .lb-nav:hover{
+    background:rgba(26,79,245,.85);
+    border-color:rgba(26,79,245,1);
+    transform:translate(0,-50%) scale(1.06);
+  }
+  .lb-prev{left:24px}
+  .lb-next{right:24px}
+  .lb-nav.hidden{display:none}
+
+  .lb-close{
+    position:absolute;top:24px;right:24px;
+    width:44px;height:44px;
+    border-radius:50%;
+    display:grid;place-items:center;
+    font-size:20px;font-weight:300;
+    color:#fff;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.1);
+    cursor:pointer;transition:.2s;
+    backdrop-filter:blur(10px);
+    z-index:4;
+  }
+  .lb-close:hover{
+    background:rgba(244,63,94,.85);
+    border-color:rgba(244,63,94,1);
+    transform:rotate(90deg);
+  }
+
+  /* backdrop click area (safe zone) */
+  .lb-backdrop{
+    position:absolute;inset:0;z-index:1;
+    cursor:zoom-out;
+  }
+
+  /* ============ FOOTER ============ */
+  footer{
+    max-width:1280px;margin:0 auto;
+    padding:32px 32px 60px;
+    border-top:1px solid var(--line);
+    font-size:12.5px;color:var(--mut2);
+    text-align:center;line-height:1.85;
+  }
+  footer .mark{color:var(--bayan2);font-weight:600}
+  footer code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.04);
+    padding:2px 7px;border-radius:5px;
+    color:#cfd8e8;
+  }
+
+  /* ============ EMPTY STATE ============ */
+  .empty{
+    padding:80px 20px;text-align:center;
+    border:1px dashed var(--line);border-radius:var(--radius);
+  }
+  .empty .ico{
+    font-size:36px;margin-bottom:16px;opacity:.35;
+  }
+  .empty .t{
+    font-size:15px;font-weight:600;color:#eef2f9;
+    margin-bottom:6px;
+  }
+  .empty .d{
+    font-size:13px;color:var(--mut);
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:900px){
+    main{padding:0 20px 80px}
+    footer{padding:32px 20px 60px}
+    .topnav{padding:12px 20px}
+    .nav-hint{display:none}
+    .hero h1{font-size:34px}
+    .grid-desktop{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+    .grid-mobile{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+  }
+  @media (max-width:640px){
+    main{padding:0 16px 60px}
+    .topnav{padding:12px 16px}
+    .nav-brand .name,.nav-brand .sub{display:none}
+    .hero{padding:36px 0 28px}
+    .hero h1{font-size:26px;letter-spacing:-.025em}
+    .hero .lede{font-size:14.5px}
+    .hero-stats{gap:20px}
+    .hs-item .n{font-size:20px}
+    .grid{gap:12px}
+    .grid-desktop{grid-template-columns:1fr 1fr}
+    .grid-mobile{grid-template-columns:1fr 1fr}
+    .meta{padding:11px 12px 12px}
+    .meta .fname{font-size:11px}
+    .meta .view{font-size:11px}
+    .lb-nav{width:42px;height:42px;font-size:18px}
+    .lb-prev{left:12px}
+    .lb-next{right:12px}
+    .lb-close{top:16px;right:16px}
+    .lb-bar{padding:14px 16px;gap:10px}
+    .lb-fname{font-size:12px}
+    .lb-counter{font-size:11px;padding:5px 9px}
+  }
+  @media (max-width:420px){
+    .grid-desktop,.grid-mobile{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ TOP NAV ============ -->
+<nav class="topnav" id="topnav">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <div class="mark">B</div>
+      <div>
+        <div class="name">Screenshot Gallery</div>
+        <div class="sub">bayan.edu.om · authenticated</div>
+      </div>
+    </div>
+
+    <div class="nav-filters" id="navFilters">
+      <button class="filter-chip active" data-filter="all">
+        All <span class="count" data-count="all">18</span>
+      </button>
+      <button class="filter-chip" data-filter="desktop">
+        Desktop <span class="count">13</span>
+      </button>
+      <button class="filter-chip" data-filter="mobile">
+        Mobile <span class="count">5</span>
+      </button>
+      <button class="filter-chip" data-filter="doc-1">Doc 01</button>
+      <button class="filter-chip" data-filter="doc-2">Doc 02</button>
+      <button class="filter-chip" data-filter="doc-3">Doc 03</button>
+      <button class="filter-chip" data-filter="doc-4">Doc 04</button>
+      <button class="filter-chip" data-filter="doc-5">Doc 05</button>
+    </div>
+
+    <div class="nav-hint">
+      <span class="kbd">←</span>
+      <span class="kbd">→</span>
+      <span class="kbd">Esc</span>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <span class="eyebrow">Captured 2026-09-25 · read-only</span>
+    <h1>Every captured view, in one gallery.</h1>
+    <p class="lede">
+      Full-page captures of the logged-in <b>bayan.edu.om</b> learner app at
+      desktop and mobile widths — so the section docs reference the
+      <b>rendered UI</b>, not just the API shape. Click any thumbnail to open
+      the full-size view.
+    </p>
+    <div class="hero-stats">
+      <div class="hs-item">
+        <span class="n">18</span>
+        <span class="l">total captures</span>
+      </div>
+      <div class="hs-item">
+        <span class="n">13</span>
+        <span class="l">desktop · 1440×900</span>
+      </div>
+      <div class="hs-item">
+        <span class="n">5</span>
+        <span class="l">mobile · 390×844</span>
+      </div>
+      <div class="hs-item">
+        <span class="n">5</span>
+        <span class="l">section docs covered</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ DESKTOP SECTION ============ -->
+  <section id="section-desktop" data-section="desktop">
+    <div class="sec-head">
+      <h2>Desktop captures</h2>
+      <span class="count">13</span>
+      <div class="desc">1440×900 · full-page views of the authenticated learner app.</div>
+    </div>
+    <div class="grid grid-desktop" id="gridDesktop"></div>
+  </section>
+
+  <!-- ============ MOBILE SECTION ============ -->
+  <section id="section-mobile" data-section="mobile">
+    <div class="sec-head">
+      <h2>Mobile captures</h2>
+      <span class="count">5</span>
+      <div class="desc">390×844 · responsive views to prove the mobile layout.</div>
+    </div>
+    <div class="grid grid-mobile" id="gridMobile"></div>
+  </section>
+
+</main>
+
+<footer>
+  <p><span class="mark">Bayan</span> · Screenshot gallery · captured 2026-09-25</p>
+  <p style="margin-top:6px">
+    Read-only captures of the authenticated learner app · test-account PII
+    redacted in the docs, low-res in-frame chrome remains ·
+    native apps deferred, see <code>GAPS.md</code>
+  </p>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lb-backdrop" id="lbBackdrop"></div>
+  <button class="lb-close" id="lbClose" aria-label="Close">×</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Next">›</button>
+  <div class="lb-stage">
+    <img class="lb-img" id="lbImg" src="" alt="">
+    <div class="lb-bar">
+      <span class="lb-fname" id="lbName"></span>
+      <span class="lb-view" id="lbView"></span>
+      <span class="lb-counter" id="lbCounter"></span>
+    </div>
+  </div>
+</div>
+
+<script>
+/* =========================================================
+   IMAGE DATA — all 18 captures, read from current directory
+   ========================================================= */
+const SHOTS = [
+  // ---------- DESKTOP (13) ----------
+  {
+    file: "desktop-dashboard.png",
+    orient: "desktop",
+    view: "Learner dashboard, above the fold",
+    doc: "1"
+  },
+  {
+    file: "desktop-profile.png",
+    orient: "desktop",
+    view: "Profile page",
+    doc: "1"
+  },
+  {
+    file: "desktop-quiz.png",
+    orient: "desktop",
+    view: "Quiz setup — modes / lengths / pools / specialties",
+    doc: "2"
+  },
+  {
+    file: "desktop-study-plan.png",
+    orient: "desktop",
+    view: "Study-plan generator + exam dropdown",
+    doc: "2"
+  },
+  {
+    file: "desktop-explore.png",
+    orient: "desktop",
+    view: "Explore Topics",
+    doc: "2"
+  },
+  {
+    file: "desktop-courses.png",
+    orient: "desktop",
+    view: "Course catalog",
+    doc: "3"
+  },
+  {
+    file: "desktop-course-abg.png",
+    orient: "desktop",
+    view: "ABG course detail",
+    doc: "3"
+  },
+  {
+    file: "desktop-pharma.png",
+    orient: "desktop",
+    view: "Drug reference",
+    doc: "3"
+  },
+  {
+    file: "desktop-flashcards.png",
+    orient: "desktop",
+    view: "Flashcards / SRS",
+    doc: "3"
+  },
+  {
+    file: "desktop-review.png",
+    orient: "desktop",
+    view: "Reviewer console + Quality Checklist",
+    doc: "4"
+  },
+  {
+    file: "desktop-leaderboard.png",
+    orient: "desktop",
+    view: "Weekly anonymised leaderboard",
+    doc: "5"
+  },
+  {
+    file: "desktop-analytics.png",
+    orient: "desktop",
+    view: "Analytics — client-side view",
+    doc: "5"
+  },
+  {
+    file: "desktop-certificates.png",
+    orient: "desktop",
+    view: "Certificates",
+    doc: "5"
+  },
+
+  // ---------- MOBILE (5) ----------
+  {
+    file: "mobile-dashboard.png",
+    orient: "mobile",
+    view: "Dashboard — responsive",
+    doc: "1"
+  },
+  {
+    file: "mobile-profile.png",
+    orient: "mobile",
+    view: "Profile — responsive",
+    doc: "1"
+  },
+  {
+    file: "mobile-quiz.png",
+    orient: "mobile",
+    view: "Quiz setup — responsive",
+    doc: "2"
+  },
+  {
+    file: "mobile-pharma.png",
+    orient: "mobile",
+    view: "Drug reference — responsive",
+    doc: "3"
+  },
+  {
+    file: "mobile-review.png",
+    orient: "mobile",
+    view: "Reviewer console — responsive",
+    doc: "4"
+  }
+];
+
+/* =========================================================
+   STATE
+   ========================================================= */
+const state = {
+  filter: "all",
+  activeList: [],     // images visible under current filter, in order
+  current: 0
+};
+
+/* =========================================================
+   RENDER CARDS
+   ========================================================= */
+function renderGallery(){
+  const gridD = document.getElementById("gridDesktop");
+  const gridM = document.getElementById("gridMobile");
+
+  gridD.innerHTML = "";
+  gridM.innerHTML = "";
+
+  SHOTS.forEach((s, i) => {
+    const el = buildCard(s, i);
+    if (s.orient === "desktop") gridD.appendChild(el);
+    else gridM.appendChild(el);
+  });
+
+  applyFilter(state.filter);
+}
+
+function buildCard(s, idx){
+  const card = document.createElement("figure");
+  card.className = "shot";
+  card.dataset.orient = s.orient;
+  card.dataset.doc = "doc-" + s.doc;
+  card.dataset.index = idx;
+  card.style.setProperty("--d", (idx % 6) * 45 + "ms");
+
+  card.innerHTML = `
+    <div class="thumb">
+      <img src="${s.file}" alt="${s.view}" loading="lazy" draggable="false">
+      <div class="hover-hint">
+        <span class="label">View full size</span>
+      </div>
+    </div>
+    <figcaption class="meta">
+      <div class="fname">${s.file}</div>
+      <div class="view">${s.view}</div>
+      <div class="meta-foot">
+        <span class="doc-chip doc-${s.doc}">Doc ${String(s.doc).padStart(2,"0")}</span>
+        <span class="orient-badge">${s.orient === "desktop" ? "1440×900" : "390×844"}</span>
+      </div>
+    </figcaption>
+  `;
+
+  card.addEventListener("click", () => openLightbox(s.file));
+  return card;
+}
+
+/* =========================================================
+   FILTER
+   ========================================================= */
+function applyFilter(filter){
+  state.filter = filter;
+
+  // update chips
+  document.querySelectorAll(".filter-chip").forEach(c => {
+    c.classList.toggle("active", c.dataset.filter === filter);
+  });
+
+  // section visibility
+  const secD = document.getElementById("section-desktop");
+  const secM = document.getElementById("section-mobile");
+
+  // compute visible matches
+  const visible = [];
+  document.querySelectorAll(".shot").forEach(card => {
+    const s = SHOTS[parseInt(card.dataset.index)];
+    const matches = matchesFilter(s, filter);
+    card.style.display = matches ? "" : "none";
+    if (matches) visible.push(s.file);
+  });
+  state.activeList = visible;
+
+  // hide empty sections
+  const hasDesktop = [...document.querySelectorAll("#gridDesktop .shot")]
+    .some(c => c.style.display !== "none");
+  const hasMobile = [...document.querySelectorAll("#gridMobile .shot")]
+    .some(c => c.style.display !== "none");
+  secD.style.display = hasDesktop ? "" : "none";
+  secM.style.display = hasMobile ? "" : "none";
+}
+
+function matchesFilter(s, filter){
+  if (filter === "all") return true;
+  if (filter === "desktop") return s.orient === "desktop";
+  if (filter === "mobile") return s.orient === "mobile";
+  if (filter.startsWith("doc-")) return ("doc-" + s.doc) === filter;
+  return true;
+}
+
+/* =========================================================
+   LIGHTBOX
+   ========================================================= */
+const lb = document.getElementById("lightbox");
+const lbImg = document.getElementById("lbImg");
+const lbName = document.getElementById("lbName");
+const lbView = document.getElementById("lbView");
+const lbCounter = document.getElementById("lbCounter");
+const lbPrev = document.getElementById("lbPrev");
+const lbNext = document.getElementById("lbNext");
+const lbClose = document.getElementById("lbClose");
+const lbBackdrop = document.getElementById("lbBackdrop");
+
+function openLightbox(file){
+  const list = state.activeList.length ? state.activeList : SHOTS.map(s => s.file);
+  state.activeList = list;
+  state.current = Math.max(0, list.indexOf(file));
+  if (state.current < 0) state.current = 0;
+  paintLightbox();
+  lb.classList.add("open");
+  lb.setAttribute("aria-hidden", "false");
+  requestAnimationFrame(() => lb.classList.add("visible"));
+  document.body.style.overflow = "hidden";
+}
+
+function closeLightbox(){
+  lb.classList.remove("visible");
+  lb.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+  setTimeout(() => lb.classList.remove("open"), 260);
+}
+
+function paintLightbox(){
+  const file = state.activeList[state.current];
+  const s = SHOTS.find(x => x.file === file);
+  if (!s) return;
+
+  // fade-in
+  lbImg.style.animation = "none";
+  void lbImg.offsetHeight;
+  lbImg.style.animation = "";
+
+  lbImg.src = s.file;
+  lbImg.alt = s.view;
+  lbName.textContent = s.file;
+  lbView.textContent = s.view;
+  lbCounter.textContent = (state.current + 1) + " / " + state.activeList.length;
+
+  const onlyOne = state.activeList.length <= 1;
+  lbPrev.classList.toggle("hidden", onlyOne);
+  lbNext.classList.toggle("hidden", onlyOne);
+}
+
+function nextImage(){
+  if (state.activeList.length <= 1) return;
+  state.current = (state.current + 1) % state.activeList.length;
+  paintLightbox();
+}
+
+function prevImage(){
+  if (state.activeList.length <= 1) return;
+  state.current = (state.current - 1 + state.activeList.length) % state.activeList.length;
+  paintLightbox();
+}
+
+lbNext.addEventListener("click", e => { e.stopPropagation(); nextImage(); });
+lbPrev.addEventListener("click", e => { e.stopPropagation(); prevImage(); });
+lbClose.addEventListener("click", closeLightbox);
+lbBackdrop.addEventListener("click", closeLightbox);
+
+/* keyboard */
+document.addEventListener("keydown", e => {
+  if (!lb.classList.contains("open")) return;
+  if (e.key === "Escape") closeLightbox();
+  else if (e.key === "ArrowRight") nextImage();
+  else if (e.key === "ArrowLeft") prevImage();
+});
+
+/* =========================================================
+   FILTER CHIPS
+   ========================================================= */
+document.getElementById("navFilters").addEventListener("click", e => {
+  const chip = e.target.closest(".filter-chip");
+  if (!chip) return;
+  applyFilter(chip.dataset.filter);
+  // scroll to top of grid smoothly when filtering
+  window.scrollTo({top: 0, behavior: "smooth"});
+});
+
+/* =========================================================
+   TOP NAV SHADOW ON SCROLL
+   ========================================================= */
+const topnav = document.getElementById("topnav");
+window.addEventListener("scroll", () => {
+  topnav.classList.toggle("scrolled", window.scrollY > 20);
+}, {passive:true});
+
+/* =========================================================
+   BOOT
+   ========================================================= */
+renderGallery();
+</script>
+
+</body>
+</html>

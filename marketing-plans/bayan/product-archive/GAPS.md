@@ -1,3 +1,4 @@
+![[deepseek_html_20261003_162885.html]]
 # GAPS — what is NOT archived, and why
 
 Every known gap in this teardown, with the cause. Nothing silently dropped.
@@ -21,13 +22,13 @@ Every known gap in this teardown, with the cause. Nothing silently dropped.
 
 ## Not deep-captured (low marketing value / no API)
 
-| Gap | Note |
-|---|---|
-| ~~**Calculators / Tools hub**~~ **CLOSED (doc 09)** | Client-side, no API — enumerated read-only from `/tools` + `/tools/calculator`: 22 medical calculators (8 categories), Perioperative Risk, 150+ drug monographs, interaction checker, renal dosing, IV compatibility, 20 emergency drug cards, voice-enabled Virtual Patients, OSCE, Death Certification. |
-| ~~**Explore Topics page**~~ **CLOSED (doc 11)** | Text-captured read-only: 12 specialty hubs at `/explore/<slug>`, each cross-linking questions + articles + drugs + calculators + flashcards + virtual patients (e.g. Cardiovascular = 38 drugs, 4 calculators, 10 adaptive Qs). |
-| ~~**Article catalog (all 472)**~~ **CLOSED (doc 11)** | `/library` DOM lists articles as `/library/<id>` — 200 visible for the postgrad track (472 total across tracks per public-stats). Per-article metadata (category, read-time, difficulty, "Verified" human-review badge) + title sample captured; full corpus stays local (fair use). |
-| ~~**OSCE stations (40)**~~ **CLOSED (doc 11)** | `/osce` taxonomy captured: 4 station types × 7 specialties × 3 difficulties, mock circuit at `/osce/circuit`, "aligned with OMSB Licensing / USMLE CS", standardized marking checklists. Station-detail not opened (starting a station may write = mutation-gated). |
-| **Full question bank (5,610)** | Only the 200-item undergrad **review queue** is reachable via API from this account. Nursing-scope questions not enumerated. **Partial-close (doc 08):** per-exam question counts for all 28 catalog exams now known from the client config (e.g. USMLE Step 2 CK 316, SMLE 200, OEN 100). |
+| Gap                                                          | Note                                                                                                                                                                                                                                                                                                                                    |
+| ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ~~**Calculators / Tools hub**~~ **CLOSED (doc 09)**          | Client-side, no API — enumerated read-only from `/tools` + `/tools/calculator`: 22 medical calculators (8 categories), Perioperative Risk, 150+ drug monographs, interaction checker, renal dosing, IV compatibility, 20 emergency drug cards, voice-enabled Virtual Patients, OSCE, Death Certification.                               |
+| ~~**Explore Topics page**~~ **CLOSED (doc 11)**              | Text-captured read-only: 12 specialty hubs at `/explore/<slug>`, each cross-linking questions + articles + drugs + calculators + flashcards + virtual patients (e.g. Cardiovascular = 38 drugs, 4 calculators, 10 adaptive Qs).                                                                                                         |
+| ~~**Article catalog (all 472)**~~ **CLOSED (doc 11)**        | `/library` DOM lists articles as `/library/<id>` — 200 visible for the postgrad track (472 total across tracks per public-stats). Per-article metadata (category, read-time, difficulty, "Verified" human-review badge) + title sample captured; full corpus stays local (fair use).                                                    |
+| ~~**OSCE stations (40)**~~ **CLOSED (doc 11)**               | `/osce` taxonomy captured: 4 station types × 7 specialties × 3 difficulties, mock circuit at `/osce/circuit`, "aligned with OMSB Licensing / USMLE CS", standardized marking checklists. Station-detail not opened (starting a station may write = mutation-gated).                                                                     |
+| **Full question bank (5,610)**                               | Only the 200-item undergrad **review queue** is reachable via API from this account. Nursing-scope questions not enumerated. **Partial-close (doc 08):** per-exam question counts for all 28 catalog exams now known from the client config (e.g. USMLE Step 2 CK 316, SMLE 200, OEN 100).                                              |
 | ~~**Subscription plan names / prices**~~ **CLOSED (doc 08)** | Extracted read-only from the client JS config: 3 consumer tiers (Student $9.99/$69, Nurse $19/$129, Physician $29/$199; 30-day trial, ~43% annual save), per-seat institutional pricing (min 20 seats, 1-yr trial, via MedResearch Academy), free-tier limits (5 Q/day), and the humanitarian free-country access list. Prices are USD. |
 
 ## Method deviation (documented, not a gap in coverage)
