@@ -28,8 +28,7 @@ Pulled verbatim from the CEO's own words and Nasim's demonstrated style. This is
 the relationship contract.
 
 **The CEO (Dr. Abdullah Al-Alawi) operates like this — match it:**
-- **Objectives, not tasks.** *"I share with you objectives and you have freedom to build on them. I don't like micromanaging things."* → Bring finished thinking,
-  not questions. Decide, then report.
+- **Objectives, not tasks.** *"I share with you objectives and you have freedom to build on them. I don't like micromanaging things."* → Bring finished thinking,  not questions. Decide, then report.
 - **Proactive is rewarded.** *"I like proactive people... You are welcome to share your thoughts."* → Initiative is the job, not overreach.
 - **Outcomes over vanity.** *"I care about the outcome rather than number of posts."*
   → Every deliverable ties to users → customers → revenue, never reach for its own sake.
@@ -37,8 +36,7 @@ the relationship contract.
   WhatsApp messages."* → Promise the same: ~2 calls + 3 messages/week, one weekly report. His scarcest resource is his own attention.
 - **His real pain = coordination cycles, not work quality.** *"This is taking a lot  of my time honestly"* (chasing a logo, vendor handoffs, transfers). → The role
   must *remove* overhead from him, not add check-ins.
-- **Trust already exists.** *"I have 0 concern about your ability. I believe in your
-  skills."* → Do NOT re-sell competence. Sell a defined role + a revenue engine.
+- **Trust already exists.** *"I have 0 concern about your ability. I believe in your  skills."* → Do NOT re-sell competence. Sell a defined role + a revenue engine.
 
 **Nasim's style (the value she brings — protect it):**
 - Reframes before executing (turned "copy this reel" into "content strategy tied to

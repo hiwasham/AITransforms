@@ -1,3 +1,4 @@
+![[deepseek_html_20261003_e1b604.html]]
 # 07 — Training Levels, Settings & Personalization
 
 Source: live learner-app UI (nurse test account), captured 2026-09-26 from

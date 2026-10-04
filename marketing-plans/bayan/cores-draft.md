@@ -6,7 +6,7 @@ prepared: 2026-09-26
 status: "local drafts — review before writing into live hq.stage3.app account"
 note: "Numbers flagged [confirm] have unresolved conflicts in research.md; KPIs flagged [TBD] await funnel instrumentation (proc 22)."
 ---
-
+![[deepseek_html_20261003_ab3888.html]]
 # Strategic Planning cores — proc 4 (fill the 8 blank scaffolds)
 
 ## 215 — ICP & Persona

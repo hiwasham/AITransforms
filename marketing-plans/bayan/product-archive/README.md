@@ -1,3 +1,4 @@
+![[deepseek_html_20261003_0a341a.html]]
 # Bayan Learning — Product Archive (authenticated web app)
 
 A pro-grade teardown of the **bayan.edu.om** authenticated web app (the learner

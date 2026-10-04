@@ -1,3 +1,4 @@
+![[deepseek_html_20261003_0176b7.html]]
 <!-- /autoplan restore point: "/root/.gstack/projects/hiwasham-AITransforms/mcp-magister-autoplan-restore-20260928-130005.md" -->
 ## Implementation plan
 # Bayan — V1 Marketing Execution Plan

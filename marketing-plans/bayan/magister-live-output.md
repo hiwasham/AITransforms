@@ -1,3 +1,7 @@
+
+تفاوت کلاد و مجیستر
+![[deepseek_html_20261001_dd03fb.html]]
+
 # Bayan — Magister Live 11-Track Output
 
 Captured LIVE from the Magister "Edu"/Bayan workspace (chat c921c81c), one
