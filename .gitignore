@@ -138,6 +138,12 @@ magistermarketing-cookie.md
 magistermarketing-cookie2.md
 .gbrain-source
 
+# --- Infisical-only credentials (untracked 2026-10-04) ---
+# Plaintext logins that were sitting untracked but NOT ignored — one `git add -A`
+# away from being committed. Belong in Infisical, never in git.
+hcnsec.cn-credentials.json
+hq-stage3-archive/hq-stage3-username-password.md
+
 # Raw chat history dumps - do not commit
 marketing-plans/bayan/materials/_raw_do_not_read/
 archive/aitransforms-okldmaybe/
