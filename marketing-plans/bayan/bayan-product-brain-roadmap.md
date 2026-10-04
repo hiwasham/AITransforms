@@ -1,3 +1,4 @@
+![[deepseek_html_20261003_91ff8a.html]]
 # Roadmap — Bayan Product Brain
 
 From the 1-week pilot to a standing AI system for Bayan. Draft-first throughout:

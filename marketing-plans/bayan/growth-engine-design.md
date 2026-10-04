@@ -7,7 +7,7 @@ mode: "Builder / ship-fast"
 status: "design — approval pending before any live edits or chatbot spend"
 sources: "research.md, master-prompt.md, master-prompt2.md, live hq.stage3.app account (read-only recon 2026-09-26)"
 ---
-
+![[deepseek_html_20261003_7fd01e.html]]
 # Bayan Growth & Revenue Engine
 
 **Goal (user):** the full pipeline for a growth engine, especially more revenue, built
