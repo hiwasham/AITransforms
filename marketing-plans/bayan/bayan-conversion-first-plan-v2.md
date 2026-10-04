@@ -1,9 +1,9 @@
-# Bayan — 30-Day Conversion-First Plan (v2)
+# Bayan — 30-Day Conversion-First Plan (FINAL)
 
 **To:** Dr. Abdullah Al-Alawi · **From:** Nasim & Hiwa · **Date:** 2026-10-04
-**Revision:** v2 — folds in everything built since your 2026-09-29 review.
+**Revision:** final — folds in everything built since your 2026-09-29 review, and answers your five points in order.
 
-> Same machine already designed in `revenue-integration-strategy.md`,
+> The same machine already designed in `revenue-integration-strategy.md`,
 > `growth-engine-design.md`, and `analytics-events-spec.md` — reordered to put
 > **conversion first, traffic last**, exactly as you asked. Nothing here ships
 > without your sign-off.
@@ -12,12 +12,14 @@
 
 ## 0. A note on the timing (read first)
 
-You gave us your notes on **29 September**. This plan is **5 days later** than we said it would be. That is on us, and we're sorry.
+You gave us your notes on **29 September**. This plan is **5 days later** than we said it would be. That is on us.
 
 Here is what those 5 days went into — not more planning, but building:
 
+- **The full marketing site** — all **11 sections** drafted, reviewed against Bayan's content locks, and written in **three languages** (English, Persian, Arabic).
 - A **full live audit** of Bayan's search and AI-answer visibility (measured, not guessed — every "now" number in §6 is what your site scores today).
 - **10 exam pages drafted and ready** (Prometric cluster + hub), **6 technical GEO fixes drafted**, **7 Days-31–60 content pieces drafted**.
+- Nasim's **three-month Instagram plan** — the page's content system, per exam path, with a 90-day test.
 - A **keyword map** showing exactly which searches you can win at zero difficulty — including one you already rank **#28** for.
 - The **measurement spec** the whole conversion plan depends on.
 
@@ -68,6 +70,7 @@ Week 1 is exactly what you specified. **Lead-to-Sale (conversion → revenue) ru
 | **Funnel event audit (PostHog-first)** — inventory what already emits; build only the gaps; baseline the 6 rates | Existing events inventoried; the 10 core events landing as rows |
 | **3 landing pages drafted** — (a) highest-volume winnable exam (SMLE/OMSB), (b) free readiness-diagnostic opt-in, (c) upgrade/pricing page with the moat as hero | 3 pages, compliance-passed, ready for sign-off |
 | **Locked question count** — one official number, applied to the pages | Same number everywhere; no 4k/5k/10k drift |
+| **Checkout test** — one real test purchase, end-to-end, so we know the payment path itself works | One successful test transaction recorded |
 
 ### Week 2 — Activation + trial→paid trigger
 | Deliverable | Done when |
@@ -75,12 +78,13 @@ Week 1 is exactly what you specified. **Lead-to-Sale (conversion → revenue) ru
 | **Onboarding flow** — first-login diagnostic → personalized "your gap" screen → routed to the matching bank | Live; fires the activation event |
 | **Trial→paid SOP** — a documented, repeatable sequence: trial-day-1, mid-trial value, 3-days-before-expiry nudge, expiry offer | Written as an SOP Nasim runs; sequence live; sends tracked |
 | **Paywall moment** — a clear, non-aggressive upgrade prompt at the 5-Q/day wall | Prompt live; `paywall_hit` + `subscribe_clicked` tracked |
+| **First-value audit** — confirm a new user reaches a first answer in the first session, and remove what blocks it | Documented first-value path; blockers listed |
 
 ### Week 3 — Reactivate the dormant base + mid-tier SKU + **Market-to-Lead engine**
 | Deliverable | Done when |
 |---|---|
 | **Winback drip to addressable dormant users** — education-based (Bayan's 472 reviewed articles), via email + @BayanMedEd Telegram | Drip live to the addressable cohort only; opens/clicks tracked |
-| **Single-exam / exam-window pass SKU** — the missing low rung | SKU live in checkout, priced (you sign the price) |
+| **Single-exam / exam-window pass SKU** — timed to the next sitting (~60–90 days) | SKU live in checkout, priced (you sign the price) |
 | **Grandfathering proposal** — count + $ at risk + a gentle convert/sunset option | Written proposal on your desk (no migration without sign-off) |
 | **Instagram + social engine — first cohort** — exam-specific content rhythm per exam path (SMLE, OMSB, nursing), reel + carousel cadence, first 2 weeks scheduled | Calendar live; first posts scheduled and tagged to the matching landing page *(built from Nasim's Instagram plan)* |
 
@@ -88,6 +92,7 @@ Week 1 is exactly what you specified. **Lead-to-Sale (conversion → revenue) ru
 | Deliverable | Done when |
 |---|---|
 | **30-day results readout** — the 6 funnel rates before/after, new paid count, MRR added, cost | One-page scorecard, real numbers |
+| **Lever attribution** — which of the three levers (activation / nurture / price) moved what | One table: lever → change → $ |
 | **Go/no-go on months 2–3** — what worked, what to double down on, whether to unlock a small paid test | Written recommendation tied to the numbers |
 | **Instagram + social — scale decision** — which exam path's content pulled best | Recommendation + month-2 cadence |
 
@@ -95,11 +100,12 @@ Week 1 is exactly what you specified. **Lead-to-Sale (conversion → revenue) ru
 
 ## 4. What we've already built (so you're not paying for planning)
 
-This is the work finished **before** this document — much of it while you waited.
+This is the work finished **before** this document — much of it while you waited. Nothing here needs new headcount or paid spend.
 
 | Asset | State | What it does |
 |---|---|---|
 | Brand profile + full site audit | ✅ done | Ground truth for every decision below |
+| **The full marketing site — 11 sections** | ✅ drafted | Every section written, reviewed against Bayan's content locks, in **EN / FA / AR (RTL)** — header, hero, problem, framework, services, AI-assistant spotlight, example work, founder, resources, CTA, footer |
 | **AI-visibility audit** (14 prompts × 5 engines) | ✅ scored | Shows exactly where Bayan is invisible (un-branded category questions score 4–7) |
 | **Live 90-day plan** (6 moves / 11 items) | ✅ active | The engine this 30-day sprint plugs into |
 | AEO audit (score 71, 6 actionable fails) | ✅ ready | The shortest path to a score lift |
@@ -107,16 +113,17 @@ This is the work finished **before** this document — much of it while you wait
 | **6 GEO fixes** (llms.txt, FAQ schema, BLUF, meta, noscript) | ✅ drafted + deploy runbook | Lift AI + Google + Website scores at once |
 | **10 Prometric/exam pages** (HUB + 9 exams) | ✅ drafted | The pages that capture the zero-score probes |
 | **Days 31–60 content** (7 pieces incl. MRCP, ABG, SMLE-vs-OMSB, OMSB) | ✅ drafted | Owns the uncontested long-tail cluster |
+| **Nasim's 3-month Instagram plan** | ✅ ready | Per-exam-path content system, 90-day test with one decision per month, mascots Bissan & Gassan |
 | Social calendar (exam-specific) | ✅ drafted | Rhythm for the Instagram engine above |
 | Conversion-first plan + numbers annex + B2B track/sizing | ✅ written | This document and its backups |
 | Analytics event spec (vendor-neutral) | ✅ written | The measurement layer Week 1 implements |
 | CEO decision briefs (grandfathering, mid-tier price) | ✅ ready | The two decisions only you can make |
 
-**Nothing here needed new headcount or paid spend.** Every item is a draft waiting on your go.
+**Every item is a draft waiting on your go.**
 
 ---
 
-## 5. The system underneath — how this keeps working without you
+## 5. The consistency layer — how this keeps working without you
 
 The conversion work above is the *first* win. Underneath it sits one small system that stops the same problem from coming back: **one approved source of truth for Bayan's facts.**
 
@@ -128,7 +135,7 @@ You already have the symptoms today — the question count shows eight different
 - **You approve the official numbers once.** After that, no one asks you again.
 - It reads your public pages only, and changes nothing without your sign-off.
 
-This is not a separate product pitch — it is the **consistency layer the conversion machine needs**. You declined the bigger "Second Brain" build; we're not re-pitching it. We are keeping the *one* piece the marketing genuinely can't do without: **locked, approved facts** — folded into the Week-1 landing-page work. (The only thing we keep from it is the single locked question count, §3, Week 1.)
+This is not a separate product pitch — it is the **consistency layer the conversion machine needs**. You declined the bigger "Second Brain" build; we're not re-pitching it. We keep only the *one* piece the marketing genuinely can't do without — **locked, approved facts** — folded into the Week-1 landing-page work.
 
 ---
 
@@ -170,7 +177,7 @@ The 12/20/28 are **cumulative**; only 12/8/8 are new each month. Recurring → r
 
 **Budget:** lifecycle-only for the trial = **$0 ad spend** (email + analytics, existing Telegram / low tiers ~$0–150/mo). A paid test ($300–500) only if Week-4 data justifies it.
 
-**Nasim's fee:** unchanged from last month, paid **at month-end**.
+**Nasim's fee:** unchanged rate. This month is **400 rials** (the agreed 500, less 100 because return travel cut into the month), **payable 23 October**.
 
 ---
 
@@ -199,7 +206,7 @@ The 12/20/28 are **cumulative**; only 12/8/8 are new each month. Recurring → r
 ## 10. What we need from you
 
 1. **The go** to start Week 1 (segmentation + funnel instrumentation + first 3 landing pages) — by end of week.
-2. **Nasim's fee confirmation** (unchanged from last month, paid at month-end) — no other budget needed for the sprint.
+2. **Nasim's fee confirmation** (unchanged rate; 400 rials this month, payable 23 October) — no other budget needed for the sprint.
 3. Later, when the data is in: your decision on **grandfathering** and the **mid-tier SKU price** (Week 3).
 
 If you approve, Week 1 ships immediately — the segmentation analysis and the first 3 landing pages in your hands by the end of the week.
