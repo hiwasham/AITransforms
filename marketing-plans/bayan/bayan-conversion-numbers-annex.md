@@ -1,3 +1,4 @@
+![[deepseek_html_20261003_c1b5cf.html]]
 # Bayan conversion-first trial — revised numbers annex
 
 **Companion to:** `resources/bayan-conversion-first-plan.md`  

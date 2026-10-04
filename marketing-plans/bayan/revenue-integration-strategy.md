@@ -1,3 +1,4 @@
+![[deepseek_html_20261003_2db0f0.html]]
 # Bayan — Revenue Integration Strategy
 
 How 

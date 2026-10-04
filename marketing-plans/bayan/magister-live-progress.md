@@ -1,3 +1,4 @@
+![[deepseek_html_20261003_16bcfb.html]]
 # Bayan — Magister Live 11-Track Progress
 
 Resumable state for the `/loop` (15m) live-Magister integration. Each loop

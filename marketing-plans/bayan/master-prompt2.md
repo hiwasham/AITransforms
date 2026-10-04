@@ -1,3 +1,4 @@
+![[deepseek_html_20261003_f2b16c.html]]
 
 https://hq.stage3.app/ai/master-prompts
 

@@ -1,3 +1,4 @@
+![[deepseek_html_20261003_3d3af4.html]]
 # Bayan — B2B / Institutional Track ("Motion B")
 
 **Status:** Internal operating doc for Hiwa + Nasim — **NOT a CEO deliverable.** Authorizes no spend, no outreach, no entitlement change. Built on `bayan-b2b-sizing-memo.md` (the sizing) and the EMPOWER Lead-to-Sale method (Session 7).
@@ -56,13 +57,13 @@ Don't run the warm-book motion from memory. Document it once as a repeatable SOP
 
 **Level 2 — blueprint per step (what "good" looks like):**
 
-| Step | Input | Owner action | Output / tracked |
-|---|---|---|---|
-| Rank warmth | trial list + relationships | score by usage + relationship | ranked shortlist |
-| Book the call | shortlist | relationship-first ask (CEO's style: "friendship first, then proposal") | call booked |
-| Tailored one-pager | call notes | per-institution proposal (not a generic deck) | proposal sent |
-| Capture contract value | proposal reply | log the real number (unknown #1) | data point recorded |
-| Close or nurture | reply | sign, or add to a light nurture | logo OR next-touch date |
+| Step                   | Input                      | Owner action                                                            | Output / tracked        |
+| ---------------------- | -------------------------- | ----------------------------------------------------------------------- | ----------------------- |
+| Rank warmth            | trial list + relationships | score by usage + relationship                                           | ranked shortlist        |
+| Book the call          | shortlist                  | relationship-first ask (CEO's style: "friendship first, then proposal") | call booked             |
+| Tailored one-pager     | call notes                 | per-institution proposal (not a generic deck)                           | proposal sent           |
+| Capture contract value | proposal reply             | log the real number (unknown #1)                                        | data point recorded     |
+| Close or nurture       | reply                      | sign, or add to a light nurture                                         | logo OR next-touch date |
 
 This SOP is the internal tool, not a CEO deliverable. It is also the thing that turns one lucky deal into a repeatable motion.
 
@@ -80,11 +81,12 @@ Case Study 03 (Acquira AI sales management: AI scores every call, flags low ones
 
 **Open `[confirm]` before any move:**
 
-| # | Needed | Owner |
-|---|---|---|
-| 1 | List of institutions already on free trials (warm book) | Internal / product |
-| 2 | Avg negotiated contract value per institution (verdict-flipping) | Nasim — get it from move #2 |
-| 3 | CEO's 20% commission basis on any B2B contract | CEO |
-| 4 | Does Nasim have bandwidth for this alongside the fee-scoped B2C work? | Nasim / Hiwa |
+| #   | Needed                                                                | Owner                       |
+| --- | --------------------------------------------------------------------- | --------------------------- |
+| 1   | List of institutions already on free trials (warm book)               | Internal / product          |
+| 2   | Avg negotiated contract value per institution (verdict-flipping)      | Nasim — get it from move #2 |
+| 3   | CEO's 20% commission basis on any B2B contract                        | CEO                         |
+| 4   | Does Nasim have bandwidth for this alongside the fee-scoped B2C work? | Nasim / Hiwa                |
+|     |                                                                       |                             |
 
 **Not doing now:** cold prospecting, paid enrichment tools (Clay/Wiza), AI call-scoring build, any seat-cash revenue target. B2B is scored on logos + trial→B2C conversions + one lighthouse, per the sizing memo.
