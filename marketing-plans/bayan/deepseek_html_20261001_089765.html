@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lead → Sale · Level 1 Core Process SOP</title>
+<style>
+  :root{
+    --ink:#05070b;--ink2:#0a0e14;--panel:#0f141c;--panel2:#141b25;
+    --line:#1b2430;--txt:#e9eef6;--mut:#7b8798;--mut2:#4d5666;
+    --gold:245,190,60;--cyan:34,211,238;--violet:167,139,250;
+    --emerald:52,211,153;--slate:148,163,184;--rose:244,63,94;
+    --accent:245,190,60;
+    --rcol:123,164,255;--acol:245,190,60;--ccol:120,132,148;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{background:var(--ink);color:var(--txt);font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;overflow:hidden;line-height:1.5}
+
+  /* =============== ambient =============== */
+  .bg{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+  .bg::before{content:"";position:absolute;inset:-30%;
+    background:
+      radial-gradient(38% 34% at 10% 6%, rgba(var(--gold),.09), transparent 62%),
+      radial-gradient(36% 34% at 92% 82%, rgba(var(--emerald),.07), transparent 62%),
+      radial-gradient(34% 30% at 60% 50%, rgba(var(--violet),.05), transparent 60%);
+    filter:blur(30px)}
+  .bg::after{content:"";position:absolute;inset:0;
+    background-image:linear-gradient(rgba(255,255,255,.016) 1px,transparent 1px),
+                     linear-gradient(90deg,rgba(255,255,255,.016) 1px,transparent 1px);
+    background-size:48px 48px;
+    mask-image:radial-gradient(80% 65% at 50% 40%,#000 20%,transparent 100%)}
+
+  /* =============== grid =============== */
+  .app{position:relative;z-index:1;display:grid;
+    grid-template-columns:262px 1fr;height:100vh}
+
+  /* =============== left rail =============== */
+  .rail{border-right:1px solid var(--line);
+    background:linear-gradient(180deg,rgba(14,18,24,.94),rgba(9,12,16,.94));
+    backdrop-filter:blur(14px);display:flex;flex-direction:column;
+    padding:18px 12px 14px;gap:14px;min-height:0}
+
+  .brand{display:flex;align-items:center;gap:11px;padding:2px 6px 14px;
+    border-bottom:1px solid var(--line)}
+  .logo{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;
+    font:700 11px/1 var(--mono);color:#06090d;letter-spacing:.02em;
+    background:linear-gradient(140deg,rgb(var(--gold)),rgb(var(--emerald)));
+    box-shadow:0 0 24px -4px rgba(var(--gold),.7)}
+  .brand-name{font-size:13px;font-weight:650;letter-spacing:.01em}
+  .brand-sub{font:400 9.5px/1.4 var(--mono);color:var(--mut2);
+    letter-spacing:.11em;text-transform:uppercase}
+
+  .rail-label{font:600 9.5px/1 var(--mono);letter-spacing:.14em;
+    text-transform:uppercase;color:var(--mut2);padding:0 8px;margin-bottom:2px}
+
+  .view-switch{display:flex;flex-direction:column;gap:3px}
+  .view-btn{all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;
+    padding:9px 11px;border-radius:9px;color:var(--mut);transition:.2s;
+    font:500 11.5px/1 var(--sans);letter-spacing:.01em}
+  .view-btn:hover{background:rgba(255,255,255,.04);color:#c3ccdc}
+  .view-btn.on{background:rgba(var(--accent),.1);color:var(--txt);
+    box-shadow:inset 2px 0 0 rgb(var(--accent))}
+  .view-btn .vi{width:20px;height:20px;border-radius:6px;flex:0 0 20px;
+    display:grid;place-items:center;font:600 10px/1 var(--mono);
+    background:rgba(255,255,255,.05);color:var(--mut2)}
+  .view-btn.on .vi{background:rgba(var(--accent),.2);color:rgb(var(--accent))}
+
+  .lane-nav{display:flex;flex-direction:column;gap:2px;overflow-y:auto;
+    flex:1;min-height:0;padding-right:2px}
+  .lane-nav::-webkit-scrollbar{width:4px}
+  .lane-nav::-webkit-scrollbar-thumb{background:#222a36;border-radius:9px}
+
+  .lane-link{all:unset;cursor:pointer;position:relative;
+    display:flex;align-items:center;gap:10px;
+    padding:9px 11px 9px 13px;border-radius:9px;
+    transition:background .18s,color .18s;color:var(--mut)}
+  .lane-link:hover{background:rgba(255,255,255,.035);color:#c3ccdc}
+  .lane-link:hover::before,.lane-link.on::before{content:"";position:absolute;
+    left:0;top:50%;translate:0 -50%;width:3px;height:18px;border-radius:9px;
+    background:rgb(var(--lc));box-shadow:0 0 12px 0 rgba(var(--lc),.9)}
+  .lane-link.on{color:var(--txt);background:rgba(var(--lc),.08)}
+  .lane-link .ln{width:24px;height:24px;flex:0 0 24px;border-radius:7px;
+    display:grid;place-items:center;font:700 10px/1 var(--mono);
+    background:rgba(var(--lc),.14);color:rgb(var(--lc));
+    border:1px solid rgba(var(--lc),.3)}
+  .lane-link .lt{display:flex;flex-direction:column;gap:1px;min-width:0;flex:1}
+  .lane-link .lt-name{font-size:11.5px;font-weight:560;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .lane-link .lt-cnt{font:400 9.5px/1.3 var(--mono);color:var(--mut2);
+    letter-spacing:.05em}
+
+  .rail-foot{border-top:1px solid var(--line);padding-top:12px;
+    display:flex;flex-direction:column;gap:10px}
+
+  .stats-mini{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;
+    padding:0 4px}
+  .stat-mini{padding:8px 6px;border-radius:9px;
+    background:rgba(255,255,255,.03);border:1px solid var(--line);
+    text-align:center}
+  .stat-mini .n{font:700 15px/1 var(--sans);letter-spacing:-.03em;color:#fff;
+    font-variant-numeric:tabular-nums}
+  .stat-mini .l{font:500 8.5px/1.3 var(--mono);letter-spacing:.07em;
+    text-transform:uppercase;color:var(--mut2);margin-top:3px}
+
+  .btn-demo{all:unset;cursor:pointer;text-align:center;
+    font:600 10px/1 var(--mono);letter-spacing:.09em;text-transform:uppercase;
+    padding:10px 12px;border-radius:9px;color:rgb(var(--accent));
+    background:rgba(var(--accent),.10);border:1px solid rgba(var(--accent),.3);
+    transition:.2s}
+  .btn-demo:hover{background:rgba(var(--accent),.18)}
+  .btn-demo.playing{color:#0a0e13;background:rgb(var(--accent))}
+
+  /* =============== main =============== */
+  .canvas{display:flex;flex-direction:column;min-width:0;min-height:0}
+
+  .topbar{display:flex;align-items:center;gap:14px;
+    padding:14px 26px;border-bottom:1px solid var(--line);
+    background:rgba(9,12,16,.55);backdrop-filter:blur(10px);
+    flex-wrap:wrap}
+  .crumb{flex:1;min-width:0;display:flex;align-items:center;gap:11px;
+    font:500 12px/1.3 var(--mono);color:var(--mut);letter-spacing:.02em;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .crumb b{color:#dfe7f4;font-weight:600}
+  .crumb .sep{color:var(--mut2)}
+  .crumb .pill{font:600 10px/1 var(--mono);letter-spacing:.09em;
+    text-transform:uppercase;padding:5px 9px;border-radius:7px;
+    background:rgba(var(--accent),.12);color:rgb(var(--accent));
+    border:1px solid rgba(var(--accent),.28)}
+
+  .boundary{display:flex;align-items:center;gap:12px;
+    font:500 10.5px/1.4 var(--mono);color:var(--mut);letter-spacing:.04em}
+  .boundary .bd{display:flex;align-items:center;gap:7px}
+  .boundary .bd .d{width:8px;height:8px;border-radius:50%}
+  .boundary .arr{color:var(--mut2);font-size:13px}
+
+  .stage{flex:1;min-height:0;overflow-y:auto;padding:26px 26px 40px;
+    display:flex;flex-direction:column;gap:16px}
+  .stage::-webkit-scrollbar{width:9px}
+  .stage::-webkit-scrollbar-thumb{background:#1d2531;border-radius:9px}
+  .stage::-webkit-scrollbar-thumb:hover{background:#28323f}
+
+  /* =============== section head =============== */
+  .sop-hero{border-radius:18px;border:1px solid var(--line);
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    padding:22px 24px;position:relative;overflow:hidden;
+    animation:fadeUp .55s cubic-bezier(.2,.7,.3,1) both}
+  .sop-hero::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,rgb(var(--gold)),rgb(var(--cyan)),rgb(var(--violet)),rgb(var(--emerald)))}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .sop-hero .k{font:600 10px/1 var(--mono);letter-spacing:.15em;
+    text-transform:uppercase;color:rgb(var(--gold));margin-bottom:10px}
+  .sop-hero h1{font:700 28px/1.15 var(--sans);letter-spacing:-.03em;
+    margin-bottom:8px}
+  .sop-hero p{font-size:13.5px;color:var(--mut);max-width:72ch;line-height:1.6}
+  .sop-hero p b{color:#cfd8e8;font-weight:600}
+
+  /* =============== boundary bar =============== */
+  .boundary-bar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+    padding:14px 20px;border-radius:14px;
+    background:linear-gradient(90deg,rgba(var(--gold),.06),rgba(var(--emerald),.06));
+    border:1px solid var(--line);
+    animation:fadeUp .55s cubic-bezier(.2,.7,.3,1) both;animation-delay:.08s}
+  .boundary-bar .side{display:flex;align-items:center;gap:9px}
+  .boundary-bar .side .dot{width:10px;height:10px;border-radius:50%;
+    box-shadow:0 0 14px 0 currentColor}
+  .boundary-bar .side .lbl{font:700 10px/1 var(--mono);letter-spacing:.12em;
+    text-transform:uppercase;color:var(--mut2)}
+  .boundary-bar .side .val{font:600 12.5px/1.3 var(--sans);color:#dfe7f4}
+  .boundary-bar .mid{flex:1;min-width:60px;height:1px;
+    background:linear-gradient(90deg,
+      rgba(245,190,60,.1),rgba(255,255,255,.06),rgba(52,211,153,.1));
+    position:relative}
+  .boundary-bar .mid::after{content:"";position:absolute;inset:0;
+    background:repeating-linear-gradient(90deg,
+      transparent 0 8px,rgba(255,255,255,.08) 8px 9px);
+    animation:shimmer 3s linear infinite}
+  @keyframes shimmer{from{background-position:0 0}to{background-position:18px 0}}
+
+  /* =============== legend =============== */
+  .legend{display:flex;gap:9px;flex-wrap:wrap;
+    animation:fadeUp .55s cubic-bezier(.2,.7,.3,1) both;animation-delay:.14s}
+  .legend .lg{display:flex;align-items:center;gap:9px;
+    padding:8px 12px;border-radius:9px;
+    background:rgba(255,255,255,.025);border:1px solid var(--line);
+    font:500 10.5px/1 var(--mono);letter-spacing:.04em;color:#b9c4d6;
+    transition:.25s;cursor:pointer}
+  .legend .lg:hover{border-color:rgba(var(--lc),.4);
+    background:rgba(var(--lc),.05)}
+  .legend .lg.on{border-color:rgb(var(--lc));background:rgba(var(--lc),.12);
+    color:#fff}
+  .legend .lg .sw{width:10px;height:10px;border-radius:3px;background:rgb(var(--lc));
+    box-shadow:0 0 10px -1px rgba(var(--lc),.95)}
+  .legend .lg .cnt{color:var(--mut2);font-size:9.5px;margin-left:2px}
+  .legend .lg.on .cnt{color:rgb(var(--lc))}
+  .legend .lg.cross{border-style:dashed}
+
+  /* =============== lane wrapper =============== */
+  .lane-wrap{position:relative;
+    border-radius:18px;border:1px solid var(--line);
+    background:linear-gradient(180deg,rgba(var(--lc),.035),rgba(15,20,28,.65));
+    overflow:hidden;
+    animation:fadeUp .6s cubic-bezier(.2,.7,.3,1) both;
+    transition:opacity .3s,filter .3s}
+  .lane-wrap.faded{opacity:.32;filter:grayscale(.55)}
+  .lane-wrap::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+    background:rgb(var(--lc));opacity:.8;
+    box-shadow:0 0 20px -2px rgba(var(--lc),.9)}
+
+  .lane-head{display:flex;align-items:center;gap:13px;
+    padding:15px 20px 14px 22px;border-bottom:1px solid rgba(255,255,255,.04)}
+  .lane-head .ln{width:34px;height:34px;flex:0 0 34px;border-radius:10px;
+    display:grid;place-items:center;font:700 12px/1 var(--mono);
+    background:rgba(var(--lc),.16);color:rgb(var(--lc));
+    border:1px solid rgba(var(--lc),.35);
+    box-shadow:0 0 22px -8px rgba(var(--lc),.9)}
+  .lane-head .info{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0}
+  .lane-head .name{font:650 16px/1.2 var(--sans);letter-spacing:-.01em}
+  .lane-head .sub{font:500 10px/1.3 var(--mono);color:var(--mut2);
+    letter-spacing:.06em;text-transform:lowercase}
+  .lane-head .cnt{font:600 10px/1 var(--mono);letter-spacing:.09em;
+    color:rgb(var(--lc));background:rgba(var(--lc),.12);
+    padding:5px 9px;border-radius:7px;border:1px solid rgba(var(--lc),.28)}
+
+  /* =============== .lane — the required container =============== */
+  .lane{
+    display:flex;
+    gap:36px;
+    padding:22px 22px 26px;
+    overflow-x:auto;
+    position:relative;
+    scroll-behavior:smooth;
+  }
+  .lane::-webkit-scrollbar{height:7px}
+  .lane::-webkit-scrollbar-thumb{background:#1d2531;border-radius:9px}
+  .lane::-webkit-scrollbar-thumb:hover{background:#28323f}
+
+  /* color context per lane class */
+  .lane-qualify{--lc:var(--gold)}
+  .lane-develop{--lc:var(--cyan)}
+  .lane-engage{--lc:var(--violet)}
+  .lane-close{--lc:var(--emerald)}
+  .lane-cross{--lc:var(--slate)}
+
+  /* =============== .step-box — the required card =============== */
+  .step-box{
+    flex:0 0 270px;min-width:270px;
+    position:relative;
+    display:flex;flex-direction:column;gap:9px;
+    padding:16px 17px 15px;
+    border-radius:14px;
+    background:linear-gradient(180deg,rgba(22,29,39,.95),rgba(15,20,28,.95));
+    border:1px solid rgba(var(--lc),.26);
+    cursor:pointer;
+    transition:transform .28s cubic-bezier(.2,.7,.3,1),
+               border-color .25s,box-shadow .25s,
+               background .25s;
+    animation:stepIn .55s cubic-bezier(.2,.7,.3,1) both;
+    animation-delay:var(--d,0ms);
+    overflow:hidden;
+  }
+  @keyframes stepIn{
+    from{opacity:0;transform:translateY(14px) scale(.97)}
+    to{opacity:1;transform:none}}
+  .step-box::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:2px;
+    background:linear-gradient(90deg,rgba(var(--lc),.9),rgba(var(--lc),.1))}
+  .step-box:hover{
+    transform:translateY(-4px);
+    border-color:rgba(var(--lc),.6);
+    box-shadow:0 22px 48px -26px rgba(var(--lc),.95),
+               0 0 0 1px rgba(var(--lc),.15) inset}
+  .step-box.highlight{
+    border-color:rgb(var(--lc));
+    box-shadow:0 0 0 2px rgba(var(--lc),.35),
+               0 22px 48px -22px rgba(var(--lc),.95)}
+  .step-box.dimmed{opacity:.28;filter:grayscale(.5)}
+
+  .step-title{
+    font:650 13.5px/1.35 var(--sans);
+    letter-spacing:-.005em;color:#eef3fb;
+    padding-right:34px; /* space for step-num */
+  }
+  .step-desc{
+    font:400 11.5px/1.55 var(--sans);
+    color:#a5b1c3;
+    flex:1;
+  }
+
+  /* the required .raci block */
+  .raci{
+    display:flex;align-items:center;gap:6px;flex-wrap:wrap;
+    padding:8px 10px;border-radius:9px;
+    background:rgba(var(--lc),.06);
+    border:1px solid rgba(var(--lc),.16);
+    font:500 10px/1.4 var(--mono);
+    letter-spacing:.01em;
+    color:#9aa6b8;
+    transition:.2s;
+  }
+  .step-box:hover .raci{background:rgba(var(--lc),.1);
+    border-color:rgba(var(--lc),.3)}
+  .raci b{
+    font-weight:700;letter-spacing:.03em;padding:2px 0;
+  }
+  .raci b.r{color:rgb(var(--rcol))}
+  .raci b.a{color:rgb(var(--acol))}
+  .raci b.c{color:rgb(var(--ccol))}
+  .raci .sep{color:var(--mut2);opacity:.5;margin:0 1px;
+    font-style:normal;font-weight:400}
+
+  /* step number badge */
+  .step-num{
+    position:absolute;top:13px;right:14px;
+    font:700 9px/1 var(--mono);letter-spacing:.06em;
+    color:rgba(var(--lc),.7);
+    padding:3px 6px;border-radius:5px;
+    background:rgba(var(--lc),.08);
+    border:1px solid rgba(var(--lc),.16);
+    transition:.25s;
+  }
+  .step-box:hover .step-num{
+    color:rgb(var(--lc));
+    background:rgba(var(--lc),.16);
+    border-color:rgba(var(--lc),.4)}
+
+  /* horizontal flow arrow between step-boxes */
+  .step-box::after{
+    content:"";position:absolute;
+    left:100%;top:50%;
+    width:36px;height:2px;
+    transform:translateY(-50%);
+    background:linear-gradient(90deg,
+      rgba(var(--lc),.15) 0%,
+      rgba(var(--lc),.15) 38%,
+      rgba(var(--lc),.95) 50%,
+      rgba(var(--lc),.15) 62%,
+      rgba(var(--lc),.15) 100%);
+    background-size:220% 100%;
+    animation:flowLine 3s linear infinite;
+    pointer-events:none;
+  }
+  .step-box:last-child::after{display:none}
+  @keyframes flowLine{
+    from{background-position:220% 0}
+    to{background-position:-220% 0}}
+
+  /* arrowhead */
+  .step-box .arrowhead{
+    position:absolute;
+    left:100%;top:50%;
+    margin-left:30px;
+    width:0;height:0;
+    border-left:8px solid rgb(var(--lc));
+    border-top:5px solid transparent;
+    border-bottom:5px solid transparent;
+    transform:translateY(-50%);
+    pointer-events:none;
+    filter:drop-shadow(0 0 5px rgba(var(--lc),.7));
+  }
+  .step-box:last-child .arrowhead{display:none}
+
+  /* =============== handoff between lanes =============== */
+  .handoff{
+    display:flex;align-items:center;justify-content:center;
+    gap:16px;padding:6px 22px;
+    animation:fadeUp .55s cubic-bezier(.2,.7,.3,1) both}
+  .handoff .line{
+    flex:1;max-width:200px;height:1px;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);
+  }
+  .handoff .label{
+    display:flex;align-items:center;gap:11px;
+    padding:9px 15px;border-radius:11px;
+    background:rgba(255,255,255,.035);
+    border:1px solid var(--line);
+    font:600 10px/1 var(--mono);letter-spacing:.13em;
+    text-transform:uppercase;color:var(--mut);
+    white-space:nowrap;
+    position:relative;
+  }
+  .handoff .label::before{
+    content:"";position:absolute;inset:-4px;border-radius:13px;
+    border:1px solid rgba(255,255,255,.05);
+    animation:ripplePulse 3s ease-in-out infinite}
+  @keyframes ripplePulse{
+    0%,100%{opacity:.2;inset:-4px}
+    50%{opacity:.6;inset:-9px}}
+  .handoff .label .arrow{
+    display:grid;place-items:center;width:16px;height:16px;
+    color:rgb(var(--hc,245,190,60));font-size:12px;
+    animation:arrowBob 2s ease-in-out infinite}
+  @keyframes arrowBob{
+    0%,100%{transform:translateY(-1px)}
+    50%{transform:translateY(2px)}}
+
+  /* =============== cross-cutting lane =============== */
+  .lane-wrap.cross{
+    background:linear-gradient(180deg,rgba(var(--slate),.04),rgba(15,20,28,.6));
+    border-style:dashed}
+  .lane-wrap.cross .lane-head .ln{
+    background:rgba(var(--slate),.14);color:rgb(var(--slate));
+    border-color:rgba(var(--slate),.3);box-shadow:none}
+  .lane-wrap.cross .cnt{
+    color:rgb(var(--slate));background:rgba(var(--slate),.1);
+    border-color:rgba(var(--slate),.28)}
+  .lane-wrap.cross .step-box{
+    border-style:dashed;
+    border-color:rgba(var(--slate),.32)}
+
+  /* =============== RACI MATRIX VIEW =============== */
+  .matrix-wrap{border-radius:18px;border:1px solid var(--line);
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    overflow:hidden;
+    animation:fadeUp .55s cubic-bezier(.2,.7,.3,1) both}
+  .matrix-scroll{overflow-x:auto;max-width:100%}
+  .matrix-scroll::-webkit-scrollbar{height:9px}
+  .matrix-scroll::-webkit-scrollbar-thumb{background:#1d2531;border-radius:9px}
+
+  table.matrix{border-collapse:separate;border-spacing:0;
+    font:500 11px/1.3 var(--mono);width:100%}
+  table.matrix th,table.matrix td{
+    padding:10px 12px;text-align:left;
+    border-bottom:1px solid var(--line);
+    white-space:nowrap}
+  table.matrix thead th{
+    background:rgba(255,255,255,.025);
+    font:600 10px/1.3 var(--mono);letter-spacing:.08em;
+    text-transform:uppercase;color:var(--mut);
+    position:sticky;top:0;z-index:2;
+    border-bottom:1px solid var(--line)}
+  table.matrix thead th.role-col{min-width:104px;text-align:center}
+  table.matrix thead th.step-col{min-width:240px;text-align:left}
+  table.matrix tbody td{
+    color:#a5b1c3;font-size:12px;font-family:var(--sans);
+    letter-spacing:.005em}
+  table.matrix tbody td.role-cell{
+    text-align:center;font-family:var(--mono);font-size:11px}
+  table.matrix tbody tr:hover td{background:rgba(255,255,255,.02)}
+  table.matrix .lane-row td{
+    background:rgba(255,255,255,.012);
+    font:600 10px/1 var(--mono);letter-spacing:.12em;
+    text-transform:uppercase;color:rgb(var(--lc));
+    padding-top:13px;padding-bottom:13px}
+  table.matrix .lane-row td::before{
+    content:"";display:inline-block;width:8px;height:8px;
+    border-radius:3px;margin-right:9px;
+    background:rgb(var(--lc));
+    box-shadow:0 0 10px -1px rgba(var(--lc),.9);
+    vertical-align:middle}
+  table.matrix .step-name{
+    font-weight:600;color:#dfe7f4;font-size:12.5px}
+  table.matrix .step-desc-sm{
+    color:var(--mut2);font-size:10.5px;margin-top:3px;
+    white-space:normal;line-height:1.45;max-width:340px}
+
+  .raci-chip{
+    display:inline-grid;place-items:center;
+    width:24px;height:24px;border-radius:7px;
+    font:700 11px/1 var(--mono);letter-spacing:.02em;
+    border:1px solid transparent}
+  .raci-chip.r{
+    background:rgba(var(--rcol),.14);color:rgb(var(--rcol));
+    border-color:rgba(var(--rcol),.35)}
+  .raci-chip.a{
+    background:rgba(var(--acol),.14);color:rgb(var(--acol));
+    border-color:rgba(var(--acol),.35)}
+  .raci-chip.c{
+    background:rgba(var(--ccol),.12);color:rgb(var(--ccol));
+    border-color:rgba(var(--ccol),.3)}
+
+  .matrix-empty{color:var(--mut2);opacity:.35;font-size:14px}
+
+  /* =============== ROLE FOCUS VIEW =============== */
+  .roles-grid{display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+    gap:14px}
+  .role-card{
+    border-radius:16px;border:1px solid var(--line);
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    padding:18px 20px;position:relative;overflow:hidden;
+    animation:fadeUp .55s cubic-bezier(.2,.7,.3,1) both;
+    transition:border-color .25s,transform .25s,box-shadow .25s;
+    cursor:pointer}
+  .role-card:hover{
+    transform:translateY(-3px);
+    border-color:rgba(var(--accent),.4)}
+  .role-card.expanded{
+    border-color:rgba(var(--accent),.55);
+    box-shadow:0 22px 50px -28px rgba(var(--accent),.6)}
+  .role-head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+  .role-ico{
+    width:38px;height:38px;flex:0 0 38px;border-radius:11px;
+    display:grid;place-items:center;
+    font:700 13px/1 var(--mono);
+    background:rgba(var(--accent),.14);color:rgb(var(--accent));
+    border:1px solid rgba(var(--accent),.32)}
+  .role-name{font:650 15px/1.25 var(--sans);letter-spacing:-.01em}
+  .role-meta{font:400 10px/1.3 var(--mono);color:var(--mut2);
+    letter-spacing:.05em;margin-top:3px}
+
+  .role-stats{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:14px}
+  .role-stat{
+    display:flex;align-items:center;gap:7px;
+    padding:6px 10px;border-radius:8px;
+    background:rgba(255,255,255,.03);border:1px solid var(--line);
+    font:500 10.5px/1 var(--mono);color:#b9c4d6}
+  .role-stat .k{
+    font-weight:700;
+    width:16px;height:16px;border-radius:5px;
+    display:grid;place-items:center;font-size:9.5px}
+  .role-stat .k.r{background:rgba(var(--rcol),.15);color:rgb(var(--rcol))}
+  .role-stat .k.a{background:rgba(var(--acol),.15);color:rgb(var(--acol))}
+  .role-stat .k.c{background:rgba(var(--ccol),.15);color:rgb(var(--ccol))}
+
+  .role-steps{
+    max-height:0;overflow:hidden;
+    transition:max-height .5s cubic-bezier(.2,.7,.3,1),
+               opacity .35s,margin .35s;
+    opacity:0}
+  .role-card.expanded .role-steps{
+    max-height:520px;opacity:1;margin-top:6px}
+  .role-step{
+    display:flex;align-items:flex-start;gap:10px;
+    padding:9px 0;border-top:1px solid var(--line);
+    animation:slideInR .4s cubic-bezier(.2,.7,.3,1) both}
+  @keyframes slideInR{
+    from{opacity:0;transform:translateX(-8px)}
+    to{opacity:1;transform:none}}
+  .role-step .k{
+    flex:0 0 20px;width:20px;height:20px;border-radius:6px;
+    display:grid;place-items:center;font:700 10px/1 var(--mono);
+    margin-top:1px}
+  .role-step .k.r{background:rgba(var(--rcol),.15);color:rgb(var(--rcol))}
+  .role-step .k.a{background:rgba(var(--acol),.15);color:rgb(var(--acol))}
+  .role-step .k.c{background:rgba(var(--ccol),.15);color:rgb(var(--ccol))}
+  .role-step .body{flex:1;min-width:0}
+  .role-step .ttl{font:600 12px/1.4 var(--sans);color:#dfe7f4}
+  .role-step .lane{font:400 9.5px/1.3 var(--mono);color:var(--mut2);
+    letter-spacing:.04em;margin-top:3px}
+
+  .role-hint{
+    font:500 9.5px/1 var(--mono);letter-spacing:.08em;
+    text-transform:uppercase;color:var(--mut2);margin-top:12px;
+    display:flex;align-items:center;gap:6px}
+  .role-card.expanded .role-hint{color:rgb(var(--accent))}
+  .role-hint .chev{transition:transform .3s}
+  .role-card.expanded .role-hint .chev{transform:rotate(90deg)}
+
+  /* =============== step drawer =============== */
+  .drawer{
+    position:fixed;top:0;right:0;bottom:0;width:390px;z-index:40;
+    background:linear-gradient(180deg,rgba(14,18,24,.98),rgba(9,12,16,.98));
+    backdrop-filter:blur(20px);
+    border-left:1px solid var(--line);
+    transform:translateX(100%);
+    transition:transform .4s cubic-bezier(.2,.7,.3,1);
+    display:flex;flex-direction:column;
+    box-shadow:-30px 0 80px -30px rgba(0,0,0,.9)}
+  .drawer.open{transform:none}
+  .drawer-head{padding:18px 22px 16px;
+    border-bottom:1px solid var(--line);
+    display:flex;align-items:center;gap:12px}
+  .drawer-head .badge{
+    font:700 10px/1 var(--mono);letter-spacing:.09em;
+    padding:6px 9px;border-radius:7px;
+    background:rgba(var(--dc,245,190,60),.14);
+    color:rgb(var(--dc,245,190,60));
+    border:1px solid rgba(var(--dc,245,190,60),.3)}
+  .drawer-head .title{
+    flex:1;font:600 12px/1.3 var(--mono);letter-spacing:.06em;
+    text-transform:uppercase;color:var(--mut)}
+  .drawer-close{
+    all:unset;cursor:pointer;width:28px;height:28px;border-radius:8px;
+    display:grid;place-items:center;color:var(--mut);
+    border:1px solid var(--line);background:rgba(255,255,255,.02);
+    transition:.2s}
+  .drawer-close:hover{color:#c3ccdc;border-color:#2b3543}
+
+  .drawer-body{flex:1;overflow-y:auto;padding:20px 22px 26px;
+    display:flex;flex-direction:column;gap:18px}
+  .drawer-body::-webkit-scrollbar{width:7px}
+  .drawer-body::-webkit-scrollbar-thumb{background:#1d2531;border-radius:9px}
+
+  .d-section{}
+  .d-k{font:600 9.5px/1 var(--mono);letter-spacing:.13em;
+    text-transform:uppercase;color:var(--mut2);margin-bottom:8px;
+    display:block}
+  .d-title{font:650 19px/1.3 var(--sans);letter-spacing:-.015em;
+    color:#eef3fb;margin-bottom:10px}
+  .d-desc{font:400 13px/1.65 var(--sans);color:#b9c4d6}
+  .d-lane{
+    display:flex;align-items:center;gap:9px;
+    padding:8px 11px;border-radius:9px;
+    background:rgba(var(--dc),.08);border:1px solid rgba(var(--dc),.22);
+    font:600 10.5px/1 var(--mono);letter-spacing:.05em;
+    color:rgb(var(--dc))}
+
+  /* big RACI cards in drawer */
+  .raci-cards{display:flex;flex-direction:column;gap:8px}
+  .raci-card{
+    display:flex;align-items:center;gap:13px;
+    padding:12px 14px;border-radius:11px;
+    background:rgba(255,255,255,.025);
+    border:1px solid var(--line);
+    transition:.22s}
+  .raci-card:hover{background:rgba(255,255,255,.04)}
+  .raci-card .k{
+    flex:0 0 34px;width:34px;height:34px;border-radius:10px;
+    display:grid;place-items:center;
+    font:700 14px/1 var(--mono)}
+  .raci-card .k.r{background:rgba(var(--rcol),.14);color:rgb(var(--rcol));
+    border:1px solid rgba(var(--rcol),.35)}
+  .raci-card .k.a{background:rgba(var(--acol),.14);color:rgb(var(--acol));
+    border:1px solid rgba(var(--acol),.35)}
+  .raci-card .k.c{background:rgba(var(--ccol),.12);color:rgb(var(--ccol));
+    border:1px solid rgba(var(--ccol),.3)}
+  .raci-card .body{flex:1}
+  .raci-card .role{font:600 13px/1.3 var(--sans);color:#eef3fb}
+  .raci-card .def{font:400 11px/1.4 var(--sans);color:var(--mut2);
+    margin-top:3px}
+
+  .journey-pos{
+    display:flex;align-items:center;gap:12px;
+    padding:12px 14px;border-radius:11px;
+    background:rgba(255,255,255,.025);
+    border:1px dashed var(--line)}
+  .journey-pos .pos{
+    font:700 18px/1 var(--mono);color:#fff;
+    letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+  .journey-pos .pos small{font-size:11px;color:var(--mut2);margin-left:3px;
+    font-weight:600}
+  .journey-pos .lbl{font:500 10px/1.4 var(--mono);
+    letter-spacing:.06em;text-transform:uppercase;color:var(--mut2)}
+
+  .drawer-actions{display:flex;gap:8px;margin-top:6px}
+  .btn-sm{
+    all:unset;cursor:pointer;
+    font:600 10.5px/1 var(--mono);letter-spacing:.07em;
+    text-transform:uppercase;
+    padding:9px 12px;border-radius:8px;
+    color:var(--mut);border:1px solid var(--line);
+    background:rgba(255,255,255,.02);
+    transition:.2s;flex:1;text-align:center}
+  .btn-sm:hover{color:#c3ccdc;border-color:#2b3543}
+  .btn-sm.primary{color:#0a0e13;background:rgb(var(--accent));
+    border-color:rgb(var(--accent))}
+  .btn-sm.primary:hover{filter:brightness(1.1)}
+
+  /* backdrop for drawer */
+  .backdrop{
+    position:fixed;inset:0;z-index:35;
+    background:rgba(0,0,0,.35);backdrop-filter:blur(2px);
+    opacity:0;pointer-events:none;transition:opacity .3s}
+  .backdrop.on{opacity:1;pointer-events:auto}
+
+  /* =============== statusbar =============== */
+  .statusbar{display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+    padding:10px 26px;border-top:1px solid var(--line);
+    background:rgba(9,12,16,.6);
+    font:400 10.5px/1 var(--mono);color:var(--mut2);letter-spacing:.03em}
+  .statusbar b{color:var(--mut);font-weight:500}
+  .statusbar .right{margin-left:auto;display:flex;align-items:center;
+    gap:14px;flex-wrap:wrap}
+  .statusbar .chip{color:rgb(var(--accent));background:rgba(var(--accent),.1);
+    padding:4px 7px;border-radius:5px;font-size:9.5px;letter-spacing:.05em}
+
+  /* =============== responsive =============== */
+  @media (max-width:1000px){
+    .app{grid-template-columns:1fr;grid-template-rows:auto 1fr}
+    .rail{flex-direction:column;border-right:none;
+      border-bottom:1px solid var(--line);
+      padding:12px 12px 0;gap:10px}
+    .brand{padding-bottom:10px}
+    .view-switch{flex-direction:row;overflow-x:auto;gap:5px;
+      padding-bottom:6px}
+    .view-btn{flex:0 0 auto;padding:8px 12px}
+    .lane-nav{flex-direction:row;overflow-x:auto;overflow-y:hidden;
+      padding-bottom:12px;gap:6px}
+    .lane-link{flex:0 0 auto;padding:8px 12px}
+    .lane-link .lt{flex-direction:row;align-items:center;gap:8px}
+    .lane-link .lt-cnt{display:none}
+    .rail-foot{display:none}
+    .stage{padding:18px 14px 30px}
+    .sop-hero{padding:18px}
+    .sop-hero h1{font-size:22px}
+    .step-box{flex:0 0 240px;min-width:240px}
+    .handoff{padding:4px 14px}
+    .handoff .label{font-size:9px;padding:7px 11px}
+    .drawer{width:100%}
+  }
+  @media (max-width:560px){
+    .topbar{padding:12px 14px}
+    .step-box{flex:0 0 210px;min-width:210px}
+    .lane{gap:28px;padding:18px 14px 22px}
+    .step-box::after{width:28px}
+    .step-box .arrowhead{margin-left:22px}
+  }
+</style>
+</head>
+<body>
+
+<div class="bg"></div>
+
+<div class="app">
+
+  <!-- ============ LEFT RAIL ============ -->
+  <aside class="rail">
+    <div class="brand">
+      <div class="logo">L→S</div>
+      <div>
+        <div class="brand-name">Lead → Sale SOP</div>
+        <div class="brand-sub">level 1 · core process</div>
+      </div>
+    </div>
+
+    <div class="rail-label">View</div>
+    <div class="view-switch" id="viewSwitch">
+      <button class="view-btn on" data-view="diagram" style="--accent:245,190,60">
+        <span class="vi">▤</span> Process diagram
+      </button>
+      <button class="view-btn" data-view="matrix" style="--accent:167,139,250">
+        <span class="vi">⊞</span> RACI matrix
+      </button>
+      <button class="view-btn" data-view="roles" style="--accent:34,211,238">
+        <span class="vi">◉</span> Role focus
+      </button>
+    </div>
+
+    <div class="rail-label">Lanes</div>
+    <div class="lane-nav" id="laneNav"></div>
+
+    <div class="rail-foot">
+      <div class="stats-mini">
+        <div class="stat-mini">
+          <div class="n" id="statSteps">0</div>
+          <div class="l">steps</div>
+        </div>
+        <div class="stat-mini">
+          <div class="n" id="statLanes">0</div>
+          <div class="l">lanes</div>
+        </div>
+        <div class="stat-mini">
+          <div class="n" id="statRoles">0</div>
+          <div class="l">roles</div>
+        </div>
+      </div>
+      <button class="btn-demo" id="demoBtn">▶ run demo</button>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <main class="canvas">
+    <header class="topbar">
+      <div class="crumb" id="crumb"></div>
+    </header>
+
+    <section class="stage" id="stage"></section>
+
+    <footer class="statusbar" id="statusbar">
+      <span>author <b>Level 1 SOP</b></span>
+      <span class="right">
+        <span id="statusSteps"><b>0</b> process steps</span>
+        <span class="chip" id="statusChip">RACI · 4 lanes</span>
+      </span>
+    </footer>
+  </main>
+
+</div>
+
+<!-- ============ DRAWER ============ -->
+<div class="backdrop" id="backdrop"></div>
+<aside class="drawer" id="drawer"></aside>
+
+<script>
+/* =========================================================
+   DATA — the SOP (matches the raw artifact exactly)
+   ========================================================= */
+const COMPANY = "Bayan";
+
+const LANES = [
+  {
+    id:"qualify", num:"01",
+    name:"Lead Qualification", sub:"MQL → SQL",
+    cls:"lane-qualify", color:"245,190,60",
+    steps:[
+      { title:"MQL Intake & Routing",
+        desc:"MQL arrives from marketing via Telegram, email, or signup form. Logged, de-duplicated, and routed to the sales queue within 15 minutes.",
+        r:"Marketing Ops", a:"Founder", c:"Sales Lead" },
+      { title:"Lead Scoring & ICP Match",
+        desc:"Score against ICP — exam path, urgency signals, budget indicators, engagement history. Auto-flag tier-1 leads for priority outreach.",
+        r:"SDR", a:"Sales Lead", c:"Marketing Lead" },
+      { title:"Qualification Call (MQL → SQL)",
+        desc:"Structured 10-minute qualifying call or message thread. Confirm budget, authority, need, and timeline (BANT). Promote to SQL or return to nurture.",
+        r:"SDR", a:"Sales Lead", c:"N/A" }
+    ]
+  },
+  {
+    id:"develop", num:"02",
+    name:"Sales Development", sub:"SDR / BDR activities",
+    cls:"lane-develop", color:"34,211,238",
+    steps:[
+      { title:"SDR Outreach Sequence",
+        desc:"Multi-touch cadence across Telegram + email. Five touches over ten days, personalised by exam path and content already consumed.",
+        r:"SDR", a:"Sales Lead", c:"Marketing Lead" },
+      { title:"Enablement Asset Delivery",
+        desc:"Send the relevant case study, clinician-reviewed article, or exam-path guide matched to the lead's stated goal. No generic PDF dumps.",
+        r:"SDR", a:"Sales Lead", c:"Clinical Lead" },
+      { title:"Discovery Call Booking",
+        desc:"Book the discovery call on the AE calendar. Send a pre-call brief with lead context, scoring, and full content history.",
+        r:"SDR", a:"Sales Lead", c:"N/A" }
+    ]
+  },
+  {
+    id:"engage", num:"03",
+    name:"Sales Engagement", sub:"Discovery → proposal",
+    cls:"lane-engage", color:"167,139,250",
+    steps:[
+      { title:"Discovery Call",
+        desc:"Structured 30-minute discovery. Uncover pain, goals, decision process, and success criteria. Confirm budget and timeline.",
+        r:"AE", a:"Sales Lead", c:"Clinical Lead" },
+      { title:"Needs Assessment & Gap Analysis",
+        desc:"Document current state vs. target state. Map to product capabilities. Score fit and flag any clinical-content needs.",
+        r:"AE", a:"Sales Lead", c:"Clinical Lead" },
+      { title:"Demo / Presentation Delivery",
+        desc:"Tailored demo built around the lead's exam path and weak areas. Show the clinician-review workflow, not just features.",
+        r:"AE", a:"Sales Lead", c:"Product Lead" },
+      { title:"Proposal Creation",
+        desc:"Generate proposal from the standard template. Apply the correct pricing tier; no ad-hoc pricing without written approval.",
+        r:"AE", a:"Sales Lead", c:"Finance" },
+      { title:"Objection Handling",
+        desc:"Address price, timing, and credibility objections using documented responses. Loop in Clinical Lead for content-trust objections.",
+        r:"AE", a:"Sales Lead", c:"Clinical Lead" }
+    ]
+  },
+  {
+    id:"close", num:"04",
+    name:"Closing Activities", sub:"Negotiation → closed-won",
+    cls:"lane-close", color:"52,211,153",
+    steps:[
+      { title:"Negotiation & Pricing Approval",
+        desc:"Final terms. Any discount beyond the guardrail escalates to the Founder for approval before the contract goes out.",
+        r:"AE", a:"Founder/CEO", c:"Finance" },
+      { title:"Contract Management & Signature",
+        desc:"Send contract via e-signature, collect signature, verify payment method. Handle any redlines with Legal.",
+        r:"AE", a:"Founder/CEO", c:"Legal" },
+      { title:"Closed-Won & Handoff",
+        desc:"Mark the deal closed-won in the CRM. Trigger onboarding sequence and notify Customer Success within 24 hours.",
+        r:"AE", a:"Founder/CEO", c:"CS Lead" }
+    ]
+  }
+];
+
+const CROSS_LANE = {
+  id:"cross", num:"05",
+  name:"Cross-Cutting", sub:"runs across all lanes",
+  cls:"lane-cross", color:"148,163,184",
+  steps:[
+    { title:"Pipeline Management",
+      desc:"Weekly pipeline review. Forecast update, stage hygiene, stale-deal triage. Runs every Monday without exception.",
+      r:"Sales Lead", a:"Founder/CEO", c:"N/A" },
+    { title:"Sales Coaching",
+      desc:"Call reviews, script refinement, skill development. Bi-weekly 1:1s plus a monthly team session.",
+      r:"Sales Lead", a:"Founder/CEO", c:"N/A" }
+  ]
+};
+
+/* =========================================================
+   STATE
+   ========================================================= */
+const state = {
+  view:"diagram",         // diagram | matrix | roles
+  activeLane:null,        // null | laneId (for legend filter)
+  selectedStep:null,      // {laneId, stepIdx} | null
+  expandedRole:null,      // role string | null
+  demoPlaying:false,
+  demoTimeout:null,
+  demoQueue:[],
+  demoIdx:0
+};
+
+/* =========================================================
+   HELPERS
+   ========================================================= */
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+
+function allLanes(){ return [...LANES, CROSS_LANE]; }
+
+function allRoles(){
+  const set = new Set();
+  allLanes().forEach(l => l.steps.forEach(s => {
+    if (s.r && s.r !== 'N/A') set.add(s.r);
+    if (s.a && s.a !== 'N/A') set.add(s.a);
+    if (s.c && s.c !== 'N/A') set.add(s.c);
+  }));
+  return [...set].sort();
+}
+
+function stepGlobalIndex(laneId, stepIdx){
+  let n = 0;
+  for (const l of allLanes()){
+    for (let i = 0; i < l.steps.length; i++){
+      if (l.id === laneId && i === stepIdx) return n;
+      n++;
+    }
+  }
+  return -1;
+}
+
+function totalSteps(){
+  return allLanes().reduce((sum, l) => sum + l.steps.length, 0);
+}
+
+/* =========================================================
+   RENDER — rail lane nav
+   ========================================================= */
+function renderLaneNav(){
+  const html = allLanes().map(l => `
+    <button class="lane-link" data-lane="${l.id}" style="--lc:${l.color}">
+      <span class="ln">${l.num}</span>
+      <span class="lt">
+        <span class="lt-name">${l.name}</span>
+        <span class="lt-cnt">${l.steps.length} steps</span>
+      </span>
+    </button>`).join('');
+  $('laneNav').innerHTML = html;
+
+  $('laneNav').querySelectorAll('.lane-link').forEach(btn => {
+    btn.addEventListener('click', () => {
+      stopDemo();
+      const id = btn.dataset.lane;
+      const el = document.querySelector(`[data-lane-wrap="${id}"]`);
+      if (el){
+        el.scrollIntoView({behavior:'smooth', block:'center'});
+        el.animate([
+          {boxShadow:'0 0 0 0 rgba(255,255,255,.5)'},
+          {boxShadow:'0 0 0 4px rgba(255,255,255,.14)'},
+          {boxShadow:'0 0 0 0 rgba(255,255,255,0)'}
+        ], {duration: 1400, easing:'ease-out'});
+      }
+    });
+  });
+}
+
+/* =========================================================
+   RENDER — top crumb
+   ========================================================= */
+function renderCrumb(){
+  const counts = {
+    diagram: totalSteps() + ' steps',
+    matrix:  allRoles().length + ' roles',
+    roles:   allRoles().length + ' role cards'
+  };
+
+  $('crumb').innerHTML = `
+    <span class="pill">SOP</span>
+    <span class="sep">·</span>
+    <span>Lead → Sale</span>
+    <span class="sep">·</span>
+    <span style="color:var(--mut2)">${state.view} view · ${counts[state.view]}</span>`;
+}
+
+/* =========================================================
+   RENDER — mini stats
+   ========================================================= */
+function renderStats(){
+  animateCount($('statSteps'), totalSteps());
+  animateCount($('statLanes'), allLanes().length);
+  animateCount($('statRoles'), allRoles().length);
+}
+
+function animateCount(el, target){
+  const dur = 700, t0 = performance.now();
+  const start = parseInt(el.textContent) || 0;
+  function tick(now){
+    const p = Math.min(1, (now - t0) / dur);
+    const e = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(start + (target - start) * e);
+    if (p < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+/* =========================================================
+   RENDER — dispatcher
+   ========================================================= */
+function renderStage(){
+  if (state.view === 'diagram') renderDiagram();
+  else if (state.view === 'matrix') renderMatrix();
+  else if (state.view === 'roles') renderRoles();
+
+  // update rail switch state
+  $('viewSwitch').querySelectorAll('.view-btn').forEach(b =>
+    b.classList.toggle('on', b.dataset.view === state.view));
+
+  // update lane nav visibility (only meaningful for diagram)
+  const laneNav = $('laneNav');
+  laneNav.style.opacity = state.view === 'diagram' ? '1' : '.35';
+  laneNav.style.pointerEvents = state.view === 'diagram' ? 'auto' : 'none';
+}
+
+/* =========================================================
+   RENDER — DIAGRAM
+   ========================================================= */
+function renderDiagram(){
+  const lanes = allLanes();
+
+  const hero = `
+    <div class="sop-hero">
+      <div class="k">Level 1 · Core Process SOP</div>
+      <h1>Lead → Sale</h1>
+      <p>From <b>Marketing Qualified Lead</b> to signed contract. Four colour-coded
+        activity lanes, each step a separate arrow-connected block. RACI roles are
+        assigned by <b>title</b>, not name — so the SOP survives hiring.</p>
+    </div>`;
+
+  const boundary = `
+    <div class="boundary-bar">
+      <div class="side" style="color:rgb(var(--gold))">
+        <span class="dot"></span>
+        <span class="lbl">Start</span>
+        <span class="val">MQL received</span>
+      </div>
+      <div class="mid"></div>
+      <div class="side" style="color:rgb(var(--emerald))">
+        <span class="lbl">End</span>
+        <span class="val">Closed-Won contract</span>
+        <span class="dot"></span>
+      </div>
+    </div>`;
+
+  const legend = `
+    <div class="legend" id="legend">
+      ${LANES.map(l => `
+        <div class="lg" data-lane="${l.id}" style="--lc:${l.color}">
+          <span class="sw"></span>
+          ${l.name}
+          <span class="cnt">${l.steps.length}</span>
+        </div>`).join('')}
+      <div class="lg cross" data-lane="cross" style="--lc:${CROSS_LANE.color}">
+        <span class="sw"></span>
+        ${CROSS_LANE.name}
+        <span class="cnt">${CROSS_LANE.steps.length}</span>
+      </div>
+    </div>`;
+
+  // build lanes + handoffs
+  let lanesHTML = "";
+  const mainLanes = LANES;
+  mainLanes.forEach((lane, li) => {
+    lanesHTML += renderLaneWrap(lane, li);
+
+    if (li < mainLanes.length - 1){
+      const next = mainLanes[li+1];
+      const labels = [
+        "qualified → develop",
+        "booked → engage",
+        "proposed → close"
+      ];
+      lanesHTML += `
+        <div class="handoff" style="--hc:${next.color}">
+          <span class="line"></span>
+          <span class="label">
+            <span class="arrow">▼</span>
+            ${labels[li]}
+          </span>
+          <span class="line"></span>
+        </div>`;
+    }
+  });
+
+  // cross-cutting lane (visually distinct)
+  lanesHTML += renderLaneWrap(CROSS_LANE, mainLanes.length, true);
+
+  $('stage').innerHTML = hero + boundary + legend + lanesHTML;
+
+  wireDiagram();
+}
+
+function renderLaneWrap(lane, li, isCross = false){
+  const totalIdx = stepGlobalIndex(lane.id, 0);
+
+  const stepsHTML = lane.steps.map((s, si) => {
+    const num = lane.num + "." + (si + 1);
+    const d = (li * 3 + si) * 65 + 260;
+    return `
+      <div class="step-box" data-lane="${lane.id}" data-step="${si}"
+           style="--d:${d}ms">
+        <span class="step-num">${num}</span>
+        <div class="step-title">${esc(s.title)}</div>
+        <div class="step-desc">${esc(s.desc)}</div>
+        <div class="raci">${raciInline(s)}</div>
+        <span class="arrowhead"></span>
+      </div>`;
+  }).join('');
+
+  return `
+    <div class="lane-wrap ${isCross ? 'cross' : ''}"
+         data-lane-wrap="${lane.id}"
+         style="--lc:${lane.color};animation-delay:${li * 80 + 180}ms">
+      <div class="lane-head">
+        <span class="ln">${lane.num}</span>
+        <div class="info">
+          <span class="name">${lane.name}</span>
+          <span class="sub">${lane.sub}</span>
+        </div>
+        <span class="cnt">${lane.steps.length} steps</span>
+      </div>
+      <div class="lane ${lane.cls}">
+        ${stepsHTML}
+      </div>
+    </div>`;
+}
+
+function raciInline(s){
+  const parts = [
+    `<b class="r">R:</b> ${esc(s.r)}`,
+    `<i class="sep">|</i>`,
+    `<b class="a">A:</b> ${esc(s.a)}`,
+    `<i class="sep">|</i>`,
+    `<b class="c">C:</b> ${esc(s.c)}`
+  ];
+  return parts.join(' ');
+}
+
+function wireDiagram(){
+  // legend filters
+  $('legend').querySelectorAll('.lg').forEach(lg => {
+    lg.addEventListener('click', () => {
+      stopDemo();
+      const laneId = lg.dataset.lane;
+      const isOn = lg.classList.contains('on');
+      $('legend').querySelectorAll('.lg').forEach(x => x.classList.remove('on'));
+      if (isOn){
+        state.activeLane = null;
+        document.querySelectorAll('.lane-wrap').forEach(w =>
+          w.classList.remove('faded'));
+      } else {
+        state.activeLane = laneId;
+        lg.classList.add('on');
+        document.querySelectorAll('.lane-wrap').forEach(w => {
+          w.classList.toggle('faded',
+            w.dataset.laneWrap !== laneId);
+        });
+      }
+    });
+  });
+
+  // click a step → open drawer
+  document.querySelectorAll('.step-box').forEach(box => {
+    box.addEventListener('click', () => {
+      stopDemo();
+      const laneId = box.dataset.lane;
+      const stepIdx = parseInt(box.dataset.step);
+      openDrawer(laneId, stepIdx);
+    });
+  });
+}
+
+/* =========================================================
+   RENDER — MATRIX
+   ========================================================= */
+function renderMatrix(){
+  const roles = allRoles();
+  const lanes = allLanes();
+
+  const head = `
+    <tr>
+      <th class="step-col">Step</th>
+      ${roles.map(r => `<th class="role-col">${esc(r)}</th>`).join('')}
+    </tr>`;
+
+  let rows = "";
+  lanes.forEach(lane => {
+    rows += `
+      <tr class="lane-row" style="--lc:${lane.color}">
+        <td colspan="${roles.length + 1}">${lane.num} · ${lane.name}</td>
+      </tr>`;
+
+    lane.steps.forEach((s, si) => {
+      const cells = roles.map(r => {
+        let chip = "";
+        if (s.r === r) chip = `<span class="raci-chip r">R</span>`;
+        else if (s.a === r) chip = `<span class="raci-chip a">A</span>`;
+        else if (s.c === r) chip = `<span class="raci-chip c">C</span>`;
+        else chip = `<span class="matrix-empty">·</span>`;
+        return `<td class="role-cell">${chip}</td>`;
+      }).join('');
+
+      rows += `
+        <tr>
+          <td>
+            <div class="step-name">${esc(s.title)}</div>
+            <div class="step-desc-sm">${esc(s.desc)}</div>
+          </td>
+          ${cells}
+        </tr>`;
+    });
+  });
+
+  $('stage').innerHTML = `
+    <div class="sop-hero">
+      <div class="k">RACI matrix</div>
+      <h1>Who does what</h1>
+      <p>Every step mapped against every role. <b>R</b> = Responsible (does the work),
+        <b>A</b> = Accountable (owns the outcome), <b>C</b> = Consulted (provides input).
+        Scroll horizontally to see all roles.</p>
+    </div>
+
+    <div class="matrix-wrap">
+      <div class="matrix-scroll">
+        <table class="matrix">
+          <thead>${head}</thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    </div>`;
+
+  // animate rows in
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    document.querySelectorAll('table.matrix tbody tr').forEach((tr, i) => {
+      tr.animate([
+        {opacity:0, transform:'translateX(-8px)'},
+        {opacity:1, transform:'none'}
+      ], {duration: 420, delay: i * 18, easing:'cubic-bezier(.2,.7,.3,1)',
+          fill:'backwards'});
+    });
+  }));
+}
+
+/* =========================================================
+   RENDER — ROLES
+   ========================================================= */
+function renderRoles(){
+  const roles = allRoles();
+  const lanes = allLanes();
+
+  // build role data
+  const data = roles.map(role => {
+    const steps = [];
+    lanes.forEach(lane => {
+      lane.steps.forEach((s, si) => {
+        if (s.r === role) steps.push({lane, si, s, kind:'R'});
+        if (s.a === role) steps.push({lane, si, s, kind:'A'});
+        if (s.c === role) steps.push({lane, si, s, kind:'C'});
+      });
+    });
+    const counts = {
+      r: steps.filter(x => x.kind === 'R').length,
+      a: steps.filter(x => x.kind === 'A').length,
+      c: steps.filter(x => x.kind === 'C').length
+    };
+    return { role, steps, counts };
+  });
+
+  // sort: most responsible first
+  data.sort((a,b) => (b.counts.r + b.counts.a + b.counts.c) - (a.counts.r + a.counts.a + a.counts.c));
+
+  const cardsHTML = data.map((d, i) => {
+    const initials = d.role.split(/[\s/]+/).map(w => w[0]).join('').slice(0,3).toUpperCase();
+    const stepsHTML = d.steps.map((x, j) => `
+      <div class="role-step" style="animation-delay:${j*30}ms">
+        <span class="k ${x.kind.toLowerCase()}">${x.kind}</span>
+        <div class="body">
+          <div class="ttl">${esc(x.s.title)}</div>
+          <div class="lane">${x.lane.name} · step ${x.lane.num}.${x.si+1}</div>
+        </div>
+      </div>`).join('');
+
+    return `
+      <div class="role-card" data-role="${esc(d.role)}"
+           style="animation-delay:${i*55 + 200}ms">
+        <div class="role-head">
+          <div class="role-ico">${esc(initials)}</div>
+          <div style="flex:1;min-width:0">
+            <div class="role-name">${esc(d.role)}</div>
+            <div class="role-meta">${d.steps.length} touchpoint${d.steps.length===1?'':'s'} across the process</div>
+          </div>
+        </div>
+        <div class="role-stats">
+          ${d.counts.r ? `<div class="role-stat"><span class="k r">R</span> ${d.counts.r} responsible</div>` : ''}
+          ${d.counts.a ? `<div class="role-stat"><span class="k a">A</span> ${d.counts.a} accountable</div>` : ''}
+          ${d.counts.c ? `<div class="role-stat"><span class="k c">C</span> ${d.counts.c} consulted</div>` : ''}
+        </div>
+        <div class="role-steps">${stepsHTML}</div>
+        <div class="role-hint">
+          <span class="chev">›</span> expand to see steps
+        </div>
+      </div>`;
+  }).join('');
+
+  $('stage').innerHTML = `
+    <div class="sop-hero">
+      <div class="k">Role focus</div>
+      <h1>${roles.length} roles, ${totalSteps()} steps</h1>
+      <p>Each role card shows its footprint across the Lead → Sale process. Click a
+        card to expand the exact steps where that role is Responsible, Accountable,
+        or Consulted.</p>
+    </div>
+    <div class="roles-grid">${cardsHTML}</div>`;
+
+  // wire expand
+  $('stage').querySelectorAll('.role-card').forEach(card => {
+    card.addEventListener('click', () => {
+      stopDemo();
+      const isOpen = card.classList.contains('expanded');
+      $('stage').querySelectorAll('.role-card').forEach(c =>
+        c.classList.remove('expanded'));
+      if (!isOpen) card.classList.add('expanded');
+    });
+  });
+}
+
+/* =========================================================
+   DRAWER
+   ========================================================= */
+function openDrawer(laneId, stepIdx){
+  const lane = allLanes().find(l => l.id === laneId);
+  if (!lane) return;
+  const step = lane.steps[stepIdx];
+  if (!step) return;
+
+  const gIdx = stepGlobalIndex(laneId, stepIdx);
+  const total = totalSteps();
+
+  // drawer accent = lane color
+  $('drawer').style.setProperty('--dc', lane.color);
+
+  $('drawer').innerHTML = `
+    <div class="drawer-head">
+      <span class="badge">${lane.num}.${stepIdx+1}</span>
+      <span class="title">Step detail</span>
+      <button class="drawer-close" id="drawerClose" title="Close">✕</button>
+    </div>
+    <div class="drawer-body">
+
+      <div class="d-section">
+        <span class="d-k">Position in journey</span>
+        <div class="journey-pos">
+          <span class="pos">${gIdx+1}<small>/ ${total}</small></span>
+          <span class="lbl">step ${lane.num}.${stepIdx+1} · ${lane.name}</span>
+        </div>
+      </div>
+
+      <div class="d-section">
+        <span class="d-k">Step</span>
+        <div class="d-title">${esc(step.title)}</div>
+        <div class="d-desc">${esc(step.desc)}</div>
+      </div>
+
+      <div class="d-section">
+        <span class="d-k">Lane</span>
+        <div class="d-lane">
+          <span style="width:8px;height:8px;border-radius:3px;background:rgb(${lane.color});box-shadow:0 0 10px -1px rgba(${lane.color},.9)"></span>
+          ${lane.name} · ${lane.sub}
+        </div>
+      </div>
+
+      <div class="d-section">
+        <span class="d-k">RACI</span>
+        <div class="raci-cards">
+          <div class="raci-card">
+            <span class="k r">R</span>
+            <div class="body">
+              <div class="role">${esc(step.r)}</div>
+              <div class="def">Responsible · does the work</div>
+            </div>
+          </div>
+          <div class="raci-card">
+            <span class="k a">A</span>
+            <div class="body">
+              <div class="role">${esc(step.a)}</div>
+              <div class="def">Accountable · owns the outcome</div>
+            </div>
+          </div>
+          <div class="raci-card">
+            <span class="k c">C</span>
+            <div class="body">
+              <div class="role">${esc(step.c)}</div>
+              <div class="def">Consulted · provides input</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="drawer-actions">
+        <button class="btn-sm" id="drawerPrev">‹ Prev</button>
+        <button class="btn-sm primary" id="drawerNext">Next ›</button>
+      </div>
+
+    </div>`;
+
+  $('drawer').classList.add('open');
+  $('backdrop').classList.add('on');
+
+  $('drawerClose').addEventListener('click', closeDrawer);
+  $('backdrop').addEventListener('click', closeDrawer);
+
+  $('drawerPrev').addEventListener('click', () => navigateDrawer(-1));
+  $('drawerNext').addEventListener('click', () => navigateDrawer(1));
+
+  // highlight the matching step box
+  document.querySelectorAll('.step-box').forEach(b => {
+    b.classList.toggle('highlight',
+      b.dataset.lane === laneId && parseInt(b.dataset.step) === stepIdx);
+  });
+
+  state.selectedStep = {laneId, stepIdx};
+}
+
+function closeDrawer(){
+  $('drawer').classList.remove('open');
+  $('backdrop').classList.remove('on');
+  document.querySelectorAll('.step-box').forEach(b =>
+    b.classList.remove('highlight'));
+  state.selectedStep = null;
+}
+
+function navigateDrawer(dir){
+  if (!state.selectedStep) return;
+  const flat = [];
+  allLanes().forEach(l => l.steps.forEach((s, i) => {
+    flat.push({laneId: l.id, stepIdx: i});
+  }));
+  const cur = flat.findIndex(f =>
+    f.laneId === state.selectedStep.laneId &&
+    f.stepIdx === state.selectedStep.stepIdx);
+  const next = (cur + dir + flat.length) % flat.length;
+  openDrawer(flat[next].laneId, flat[next].stepIdx);
+}
+
+/* =========================================================
+   VIEW SWITCH
+   ========================================================= */
+$('viewSwitch').addEventListener('click', e => {
+  const btn = e.target.closest('.view-btn');
+  if (!btn) return;
+  stopDemo();
+  state.view = btn.dataset.view;
+  state.activeLane = null;
+  closeDrawer();
+  renderStage();
+  renderCrumb();
+});
+
+/* =========================================================
+   DEMO
+   ========================================================= */
+function startDemo(){
+  stopDemo();
+  state.demoPlaying = true;
+  $('demoBtn').classList.add('playing');
+  $('demoBtn').textContent = '■ stop demo';
+
+  // reset to diagram view
+  state.view = 'diagram';
+  state.activeLane = null;
+  state.expandedRole = null;
+  closeDrawer();
+
+  // build flat queue of steps
+  state.demoQueue = [];
+  allLanes().forEach(l => l.steps.forEach((s, i) => {
+    state.demoQueue.push({laneId: l.id, stepIdx: i});
+  }));
+  state.demoIdx = 0;
+
+  renderStage();
+  renderCrumb();
+
+  setTimeout(() => demoStep(), 500);
+}
+
+function stopDemo(){
+  state.demoPlaying = false;
+  if (state.demoTimeout) clearTimeout(state.demoTimeout);
+  state.demoTimeout = null;
+  const btn = $('demoBtn');
+  if (btn){
+    btn.classList.remove('playing');
+    btn.textContent = '▶ run demo';
+  }
+  document.querySelectorAll('.step-box').forEach(b =>
+    b.classList.remove('highlight'));
+}
+
+function demoStep(){
+  if (!state.demoPlaying) return;
+  if (state.demoIdx >= state.demoQueue.length){
+    // end — open artifacts-style finish
+    stopDemo();
+    return;
+  }
+
+  const {laneId, stepIdx} = state.demoQueue[state.demoIdx];
+
+  // scroll to the step
+  const box = document.querySelector(
+    `.step-box[data-lane="${laneId}"][data-step="${stepIdx}"]`);
+  if (box){
+    box.scrollIntoView({behavior:'smooth', block:'center', inline:'center'});
+  }
+
+  // highlight briefly
+  document.querySelectorAll('.step-box').forEach(b =>
+    b.classList.remove('highlight'));
+  if (box) box.classList.add('highlight');
+
+  state.demoIdx++;
+
+  state.demoTimeout = setTimeout(() => {
+    if (!state.demoPlaying) return;
+    demoStep();
+  }, 900);
+}
+
+$('demoBtn').addEventListener('click', () => {
+  if (state.demoPlaying) stopDemo();
+  else startDemo();
+});
+
+/* =========================================================
+   KEYBOARD
+   ========================================================= */
+document.addEventListener('keydown', e => {
+  if (e.target.matches('input,textarea')) return;
+  if (e.key === 'Escape') closeDrawer();
+  if (state.selectedStep){
+    if (e.key === 'ArrowRight') navigateDrawer(1);
+    if (e.key === 'ArrowLeft') navigateDrawer(-1);
+  }
+});
+
+/* =========================================================
+   BOOT
+   ========================================================= */
+renderLaneNav();
+renderStage();
+renderCrumb();
+renderStats();
+
+$('statusSteps').innerHTML = `<b>${totalSteps()}</b> process steps`;
+$('statusChip').textContent = `RACI · ${allLanes().length} lanes`;
+</script>
+</body>
+</html>

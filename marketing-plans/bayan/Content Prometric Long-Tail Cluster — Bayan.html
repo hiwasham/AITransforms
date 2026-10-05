@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Prometric Pages — Bayan</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#04070E; --panel:rgba(12,20,34,.65); --panel-2:rgba(255,255,255,.025);
+  --ink:#EAF0FA; --dim:#8998B0; --faint:#414E63;
+  --line:rgba(137,152,176,.14); --line-hi:rgba(137,152,176,.3);
+  --teal:#2DD4BF; --violet:#A78BFA; --blue:#60A5FA;
+  --amber:#FBBF24; --red:#F87171; --green:#34D399; --pink:#F472B6;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --mono:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--ink);
+  font-family:'Inter',-apple-system,sans-serif;
+  line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+.bg-grid{
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(45,212,191,.02) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(45,212,191,.02) 1px,transparent 1px);
+  background-size:120px 120px;
+  mask-image:radial-gradient(ellipse 90% 70% at 50% 30%,#000 25%,transparent 95%);
+}
+.orb{position:fixed;border-radius:50%;filter:blur(120px);opacity:.12;pointer-events:none;z-index:0}
+.orb.a{width:520px;height:520px;background:var(--teal);top:-200px;left:-160px;animation:drift 34s ease-in-out infinite}
+.orb.b{width:460px;height:460px;background:var(--amber);top:38%;right:-200px;animation:drift 40s ease-in-out infinite reverse}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,-40px)}}
+
+/* status rail */
+.status-rail{
+  position:sticky;top:0;z-index:100;
+  background:linear-gradient(180deg,rgba(4,7,14,.95),rgba(4,7,14,.72));
+  backdrop-filter:blur(16px) saturate(160%);
+  border-bottom:1px solid rgba(251,191,36,.22);
+}
+.status-inner{
+  max-width:1420px;margin:0 auto;padding:11px 32px;
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+}
+.status-pill{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:6px 13px;border-radius:8px;
+  background:rgba(251,191,36,.12);
+  border:1px solid rgba(251,191,36,.35);
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--amber);font-weight:600;
+}
+.status-pill .pulse{
+  width:7px;height:7px;border-radius:50%;background:var(--amber);
+  box-shadow:0 0 0 4px rgba(251,191,36,.18);
+  animation:pulse 1.8s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.status-stats{
+  display:flex;gap:8px;flex-wrap:wrap;
+}
+.sstat{
+  display:flex;align-items:center;gap:7px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.06em;
+  padding:6px 11px;border-radius:7px;
+  background:rgba(255,255,255,.03);border:1px solid var(--line);
+  color:var(--dim);
+}
+.sstat .n{font-weight:600;font-size:13px}
+.sstat.ready .n{color:var(--green)}
+.sstat.gated .n{color:var(--amber)}
+.sstat.total .n{color:var(--teal)}
+.status-spacer{flex:1;min-width:8px}
+.status-branch{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;
+  color:var(--faint);
+}
+.status-branch b{color:var(--ink);font-weight:500}
+
+/* layout */
+.wrap{position:relative;z-index:2;max-width:1420px;margin:0 auto;padding:0 32px 100px}
+@media(max-width:640px){.wrap{padding:0 18px 60px};.status-inner{padding:11px 18px}}
+
+header{padding:44px 0 20px}
+.kicker{
+  font-family:var(--mono);font-size:11px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--faint);
+  display:flex;align-items:center;gap:12px;margin-bottom:16px;
+}
+.kicker::before{content:'';width:26px;height:1px;background:var(--faint)}
+h1{
+  font-size:clamp(30px,4.6vw,52px);font-weight:900;
+  letter-spacing:-.05em;line-height:1.02;margin-bottom:14px;max-width:22ch;
+}
+h1 em{
+  font-style:normal;
+  background:linear-gradient(100deg,var(--teal) 0%,var(--blue) 55%,var(--amber) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  background-size:200% 100%;animation:shift 9s ease-in-out infinite;
+}
+@keyframes shift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.lede{color:var(--dim);font-size:15.5px;max-width:72ch;line-height:1.65}
+.lede b{color:var(--ink);font-weight:600}
+
+/* section head */
+section{margin-top:64px;scroll-margin-top:80px}
+.sec-head{
+  display:flex;align-items:baseline;gap:16px;margin-bottom:24px;flex-wrap:wrap;
+}
+.sec-num{
+  font-family:var(--mono);font-size:12px;letter-spacing:.16em;
+  color:var(--teal);padding:4px 10px;border-radius:6px;
+  background:rgba(45,212,191,.1);border:1px solid rgba(45,212,191,.25);
+}
+.sec-head h2{font-size:clamp(20px,2.6vw,28px);font-weight:800;letter-spacing:-.035em}
+.sec-head .tag{
+  font-family:'Caveat',cursive;font-size:20px;color:var(--dim);
+  opacity:.8;margin-left:auto;
+}
+
+/* ═══ DIAGRAM ═══ */
+.diagram-wrap{
+  display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);
+  gap:24px;align-items:start;
+}
+@media(max-width:960px){.diagram-wrap{grid-template-columns:1fr}}
+
+.map-stage{
+  border-radius:20px;border:1px solid var(--line);
+  background:linear-gradient(180deg,rgba(8,14,26,.7),rgba(4,7,14,.5));
+  backdrop-filter:blur(6px);padding:20px;
+  position:relative;overflow:hidden;
+}
+.map-stage::before{
+  content:'fig. 08 — the prometric set';
+  position:absolute;top:14px;left:18px;
+  font-family:'Caveat',cursive;font-size:19px;color:var(--teal);
+  opacity:.75;pointer-events:none;z-index:3;
+}
+.map-stage::after{
+  content:'7 ready · 3 gated';
+  position:absolute;bottom:12px;right:18px;
+  font-family:var(--mono);font-size:10px;letter-spacing:.12em;
+  color:var(--faint);z-index:3;pointer-events:none;
+}
+svg#map{display:block;width:100%;height:auto;overflow:visible}
+
+.spoke{cursor:pointer}
+.spoke .ring-track{fill:none;stroke:rgba(255,255,255,.06);stroke-width:1}
+.spoke .node-bg{
+  transition:fill .3s,stroke .3s,r .35s var(--ease),filter .35s;
+}
+.spoke:hover .node-bg,.spoke.hot .node-bg{
+  r:56; filter:url(#nodeGlow);
+}
+.spoke.dim{opacity:.2;transition:opacity .35s}
+.spoke .s-id{
+  font-family:var(--mono);font-size:16px;font-weight:600;
+  text-anchor:middle;dominant-baseline:central;
+  pointer-events:none;transition:.3s;
+}
+.spoke .s-label{
+  font-family:'Inter',sans-serif;font-size:12px;font-weight:700;
+  letter-spacing:-.01em;fill:var(--ink);text-anchor:middle;
+  pointer-events:none;
+}
+.spoke .s-sub{
+  font-family:var(--mono);font-size:9px;letter-spacing:.12em;
+  text-transform:uppercase;fill:var(--faint);text-anchor:middle;
+  pointer-events:none;
+}
+
+.core-ring{fill:none;stroke:rgba(45,212,191,.2);stroke-width:1;stroke-dasharray:4 8}
+.core-pulse{fill:none;stroke:var(--teal);stroke-width:1;opacity:0}
+@keyframes corePulse{0%{r:60;opacity:.6}100%{r:200;opacity:0}}
+#corePulse{animation:corePulse 3.5s ease-out infinite}
+
+.conn{stroke-width:1.6;stroke-linecap:round;fill:none;transition:opacity .35s,stroke-width .35s}
+.conn.dim{opacity:.08}
+.conn.hot{stroke-width:2.6}
+.conn.dashed{stroke-dasharray:5 6}
+.flow-dot{fill:#fff;opacity:0;transition:opacity .3s}
+.flow-dot.active{opacity:1}
+
+/* detail panel */
+.detail{
+  border-radius:20px;border:1px solid var(--line);
+  background:var(--panel);backdrop-filter:blur(10px);
+  padding:26px;min-height:420px;
+  transition:border-color .4s;
+  position:sticky;top:74px;
+}
+@media(max-width:960px){.detail{position:relative;top:0;min-height:0}}
+.detail-top{display:flex;align-items:flex-start;gap:14px;margin-bottom:18px}
+.detail-icon{
+  width:52px;height:52px;border-radius:14px;flex-shrink:0;
+  display:grid;place-items:center;
+  font-family:var(--mono);font-size:17px;font-weight:600;
+  border:1px solid var(--line);transition:.4s;
+}
+.detail h2{
+  font-size:20px;font-weight:800;letter-spacing:-.03em;
+  line-height:1.15;margin-bottom:3px;
+}
+.detail .d-role{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--faint);
+}
+.detail .d-file{
+  font-family:var(--mono);font-size:11.5px;color:var(--dim);
+  padding:10px 12px;border-radius:9px;
+  background:rgba(0,0,0,.25);border:1px solid var(--line);
+  margin-bottom:18px;word-break:break-all;
+  transition:.3s;
+}
+.detail .d-file:hover{border-color:var(--faint)}
+.d-kw{
+  padding:16px 18px;border-radius:11px;
+  background:rgba(45,212,191,.06);
+  border:1px solid rgba(45,212,191,.22);
+  margin-bottom:18px;
+}
+.d-kw .lbl{
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--teal);margin-bottom:8px;
+}
+.d-kw .kw{
+  font-size:16px;font-weight:700;letter-spacing:-.02em;
+  color:var(--ink);margin-bottom:10px;
+}
+.d-kw .stats{
+  display:flex;gap:14px;flex-wrap:wrap;
+}
+.d-kw .stat{
+  font-family:var(--mono);font-size:11.5px;color:var(--dim);
+}
+.d-kw .stat b{color:var(--teal);font-weight:600;font-size:13px}
+
+.d-role-block{
+  padding:14px 16px;border-radius:10px;
+  background:var(--panel-2);border:1px solid var(--line);
+  font-size:13.5px;color:var(--dim);line-height:1.55;
+}
+.d-role-block b{color:var(--ink);font-weight:600}
+
+.d-status{
+  margin-top:16px;padding:12px 14px;border-radius:10px;
+  display:flex;align-items:center;gap:11px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;font-weight:600;
+}
+.d-status.ready{
+  background:rgba(52,211,153,.1);
+  border:1px solid rgba(52,211,153,.3);
+  color:var(--green);
+}
+.d-status.gated{
+  background:rgba(251,191,36,.1);
+  border:1px solid rgba(251,191,36,.3);
+  color:var(--amber);
+}
+.d-status .sd{
+  width:7px;height:7px;border-radius:50%;background:currentColor;
+  box-shadow:0 0 0 4px color-mix(in srgb,currentColor 18%,transparent);
+}
+
+/* ═══ PAGE GRID ═══ */
+.page-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:12px;
+}
+.page-card{
+  border-radius:14px;border:1px solid var(--line);
+  background:var(--panel-2);padding:18px;
+  transition:.4s var(--ease);cursor:pointer;
+  position:relative;overflow:hidden;
+}
+.page-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:var(--pc);transform:scaleX(0);transform-origin:left;
+  transition:transform .5s var(--ease);
+}
+.page-card:hover{
+  transform:translateY(-4px);
+  border-color:color-mix(in srgb,var(--pc) 40%,var(--line));
+  background:color-mix(in srgb,var(--pc) 4%,var(--panel-2));
+}
+.page-card:hover::before{transform:scaleX(1)}
+.page-card.gated{opacity:.85}
+.page-card.gated:hover{opacity:1}
+
+.pc-top{
+  display:flex;justify-content:space-between;align-items:flex-start;
+  gap:10px;margin-bottom:12px;
+}
+.pc-id{
+  font-family:var(--mono);font-size:22px;font-weight:600;
+  color:var(--pc);letter-spacing:-.03em;line-height:1;
+}
+.pc-chip{
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;
+  text-transform:uppercase;padding:3px 8px;border-radius:5px;
+  font-weight:600;
+}
+.pc-chip.ready{background:rgba(52,211,153,.14);color:var(--green)}
+.pc-chip.gated{background:rgba(251,191,36,.14);color:var(--amber)}
+.pc-chip.hub{background:rgba(45,212,191,.14);color:var(--teal)}
+
+.pc-role{
+  font-size:14px;font-weight:700;letter-spacing:-.015em;
+  margin-bottom:6px;line-height:1.3;
+}
+.pc-kw{
+  font-family:var(--mono);font-size:11px;color:var(--dim);
+  line-height:1.5;margin-bottom:12px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+  overflow:hidden;
+}
+.pc-meta{
+  display:flex;gap:10px;font-family:var(--mono);font-size:10.5px;
+  color:var(--faint);padding-top:12px;border-top:1px solid var(--line);
+}
+.pc-meta b{color:var(--pc);font-weight:600}
+
+/* ═══ GEO COMPLIANCE ═══ */
+.compliance-card{
+  border-radius:18px;border:1px solid var(--line);
+  background:var(--panel-2);overflow:hidden;
+}
+.comp-head{
+  padding:20px 24px;border-bottom:1px solid var(--line);
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+  flex-wrap:wrap;
+}
+.comp-head .ch-l{
+  font-family:var(--mono);font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--faint);
+}
+.comp-head .ch-t{
+  font-size:15px;font-weight:700;letter-spacing:-.015em;
+}
+.comp-head .ch-t b{color:var(--teal)}
+.comp-legend{
+  display:flex;gap:12px;font-family:var(--mono);font-size:10.5px;
+  color:var(--dim);flex-wrap:wrap;
+}
+.comp-legend span{display:flex;align-items:center;gap:6px}
+.comp-legend .dot{
+  width:7px;height:7px;border-radius:50%;background:var(--green);
+}
+.comp-table{
+  width:100%;border-collapse:collapse;
+}
+.comp-table th,.comp-table td{
+  padding:11px 16px;text-align:left;font-size:12.5px;
+}
+.comp-table thead th{
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--faint);font-weight:600;
+  border-bottom:1px solid var(--line);
+  padding-top:14px;padding-bottom:14px;
+  white-space:nowrap;
+}
+.comp-table thead th:first-child{width:44px;text-align:center}
+.comp-table tbody tr{
+  border-bottom:1px solid rgba(137,152,176,.07);
+  transition:background .25s;
+}
+.comp-table tbody tr:last-child{border-bottom:none}
+.comp-table tbody tr:hover{background:rgba(255,255,255,.02)}
+.comp-table tbody tr.gated{background:rgba(251,191,36,.03)}
+.comp-table td:first-child{
+  font-family:var(--mono);font-size:12px;font-weight:600;
+  color:var(--pc,var(--teal));text-align:center;
+  width:44px;
+}
+.comp-table td.pname{
+  font-size:12.5px;color:var(--ink);font-weight:500;
+}
+.comp-table td.check{
+  text-align:center;width:60px;
+}
+.comp-check{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:22px;height:22px;border-radius:50%;
+  background:rgba(52,211,153,.14);border:1px solid rgba(52,211,153,.3);
+  color:var(--green);font-size:11px;font-weight:700;
+  animation:checkPop .5s var(--ease) backwards;
+}
+@keyframes checkPop{
+  from{transform:scale(0);opacity:0}
+  to{transform:scale(1);opacity:1}
+}
+.comp-table tbody tr.gated .comp-check{
+  background:rgba(251,191,36,.14);border-color:rgba(251,191,36,.3);
+  color:var(--amber);
+}
+
+/* ═══ GATE SECTION ═══ */
+.gate-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px;
+}
+@media(max-width:900px){.gate-grid{grid-template-columns:1fr}}
+.gate-card{
+  border-radius:16px;border:1px solid rgba(251,191,36,.25);
+  background:linear-gradient(135deg,rgba(251,191,36,.04),rgba(251,191,36,.01));
+  padding:24px;position:relative;overflow:hidden;
+  transition:.4s var(--ease);
+}
+.gate-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(251,191,36,.45);
+  background:linear-gradient(135deg,rgba(251,191,36,.07),rgba(251,191,36,.02));
+}
+.gate-card .gc-head{
+  display:flex;align-items:center;gap:12px;margin-bottom:14px;
+}
+.gate-card .gc-icon{
+  width:38px;height:38px;border-radius:10px;
+  display:grid;place-items:center;
+  background:rgba(251,191,36,.12);
+  border:1px solid rgba(251,191,36,.35);
+  color:var(--amber);font-size:15px;
+}
+.gate-card .gc-num{
+  font-family:var(--mono);font-size:11px;letter-spacing:.12em;
+  color:var(--amber);font-weight:600;
+}
+.gate-card .gc-t{
+  font-size:15px;font-weight:700;letter-spacing:-.015em;
+  margin-bottom:8px;
+}
+.gate-card .gc-d{
+  font-size:13px;color:var(--dim);line-height:1.6;
+}
+.gate-card .gc-d b{color:var(--ink);font-weight:600}
+.gate-card .gc-footer{
+  margin-top:16px;padding-top:14px;border-top:1px solid rgba(251,191,36,.2);
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;
+  color:var(--amber);
+  display:flex;align-items:center;gap:8px;
+}
+
+.gate-reason{
+  margin-top:20px;padding:18px 22px;border-radius:12px;
+  border:1px solid rgba(251,191,36,.22);
+  background:linear-gradient(90deg,rgba(251,191,36,.05),transparent);
+  display:flex;gap:14px;align-items:flex-start;
+}
+.gate-reason .gr-ico{
+  color:var(--amber);font-size:17px;flex-shrink:0;
+}
+.gate-reason .gr-t{
+  font-size:13.5px;color:var(--dim);line-height:1.65;
+}
+.gate-reason .gr-t b{color:var(--amber);font-weight:600}
+
+/* ═══ CHECKLIST ═══ */
+.checklist{
+  display:grid;gap:10px;
+}
+.check-item{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:16px 20px;border-radius:12px;
+  border:1px solid var(--line);background:var(--panel-2);
+  cursor:pointer;transition:.35s var(--ease);
+}
+.check-item:hover{
+  transform:translateX(4px);
+  border-color:var(--line-hi);
+  background:rgba(255,255,255,.04);
+}
+.check-item.done{
+  border-color:rgba(52,211,153,.3);
+  background:rgba(52,211,153,.04);
+}
+.check-box{
+  width:22px;height:22px;border-radius:7px;flex-shrink:0;
+  border:1.5px solid var(--line-hi);
+  display:grid;place-items:center;
+  font-size:12px;color:transparent;font-weight:700;
+  transition:.35s var(--ease);
+}
+.check-item.done .check-box{
+  background:var(--green);border-color:var(--green);color:#04211E;
+}
+.check-body{min-width:0}
+.check-t{
+  font-size:14px;font-weight:600;letter-spacing:-.01em;
+  margin-bottom:4px;line-height:1.4;
+}
+.check-d{
+  font-size:12.5px;color:var(--dim);line-height:1.55;
+}
+.check-d b{color:var(--ink);font-weight:600}
+.check-d code{
+  font-family:var(--mono);font-size:11.5px;color:var(--teal);
+  background:rgba(45,212,191,.08);padding:2px 6px;border-radius:5px;
+}
+.checklist-foot{
+  margin-top:16px;padding:14px 20px;border-radius:10px;
+  background:rgba(248,113,113,.05);
+  border:1px solid rgba(248,113,113,.2);
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;
+  color:var(--red);display:flex;align-items:center;gap:10px;
+}
+.checklist-foot::before{content:'⚠';font-size:14px}
+
+/* ═══ TERMINAL ═══ */
+.terminal{
+  border-radius:16px;border:1px solid var(--line);
+  background:#03060C;overflow:hidden;
+  box-shadow:0 30px 60px -30px rgba(0,0,0,.8);
+}
+.term-bar{
+  display:flex;align-items:center;gap:8px;
+  padding:12px 18px;background:rgba(255,255,255,.025);
+  border-bottom:1px solid var(--line);
+}
+.term-bar .dots{display:flex;gap:6px}
+.term-bar .dot{width:10px;height:10px;border-radius:50%}
+.term-bar .dot.r{background:#FF5F57}
+.term-bar .dot.y{background:#FEBC2E}
+.term-bar .dot.g{background:#28C840}
+.term-bar .path{
+  font-family:var(--mono);font-size:11px;color:var(--faint);
+  margin-left:auto;
+}
+.term-body{
+  padding:22px 24px;font-family:var(--mono);font-size:12.5px;
+  line-height:1.9;
+}
+.term-line{
+  display:flex;gap:12px;align-items:flex-start;
+  opacity:0;transform:translateY(6px);
+  transition:.4s var(--ease);
+}
+.term-line.in{opacity:1;transform:none}
+.term-line .prompt{color:var(--teal);flex-shrink:0}
+.term-line .cmd{
+  color:var(--ink);white-space:pre-wrap;word-break:break-all;
+}
+.term-out{
+  color:var(--green);margin-left:20px;
+  font-size:11.5px;line-height:1.7;
+  opacity:0;transition:.4s var(--ease);
+}
+.term-out.in{opacity:1}
+.term-out.pending{color:var(--amber)}
+.term-out.note{color:var(--faint);font-style:italic}
+
+/* footer */
+footer{
+  margin-top:60px;padding-top:28px;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;
+  color:var(--faint);
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01s!important;transition-duration:.01s!important}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="orb a"></div>
+<div class="orb b"></div>
+
+<!-- STICKY STATUS RAIL -->
+<div class="status-rail">
+  <div class="status-inner">
+    <span class="status-pill"><span class="pulse"></span>Draft</span>
+    <div class="status-stats">
+      <span class="sstat total"><span class="n">10</span>files</span>
+      <span class="sstat ready"><span class="n">7</span>ready</span>
+      <span class="sstat gated"><span class="n">3</span>gated</span>
+    </div>
+    <span class="status-spacer"></span>
+    <span class="status-branch">content(bayan): <b>GEO fixes + 10 Prometric pages + Days 31–60 drafts</b></span>
+  </div>
+</div>
+
+<div class="wrap">
+  <header>
+    <div class="kicker">Days 0–30 · item 3 · + Days 31–60 · item 4</div>
+    <h1>Ten pages. Seven ready. <em>Three held.</em></h1>
+    <p class="lede">
+      Ten page drafts targeting the <b>difficulty-0 Prometric cluster</b> confirmed by
+      DataForSEO. Bayan currently ranks for zero commercial keywords — these are the
+      fastest wins available. <b>Every page already follows the GEO fixes.</b> The
+      three allied-health pages stay gated until Bayan confirms those banks exist.
+    </p>
+  </header>
+
+  <!-- ═══ HUB DIAGRAM ═══ -->
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <h2>Hub-and-spoke map</h2>
+      <span class="tag">the structure is the SEO strategy</span>
+    </div>
+
+    <div class="diagram-wrap">
+      <div class="map-stage">
+        <svg id="map" viewBox="0 0 1000 1000" role="img" aria-label="Prometric page hub and spokes">
+          <defs>
+            <filter id="nodeGlow" x="-60%" y="-60%" width="220%" height="220%">
+              <feGaussianBlur stdDeviation="6" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <filter id="coreGlow" x="-60%" y="-60%" width="220%" height="220%">
+              <feGaussianBlur stdDeviation="10" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"/>
+            </marker>
+          </defs>
+
+          <!-- construction rings -->
+          <circle class="core-ring" cx="500" cy="500" r="200"/>
+          <circle class="core-ring" cx="500" cy="500" r="300"/>
+          <circle class="core-ring" cx="500" cy="500" r="380" style="opacity:.3"/>
+
+          <!-- compass ticks -->
+          <g id="ticks" stroke="rgba(137,152,176,.18)" stroke-width="1"></g>
+
+          <!-- connections -->
+          <g id="connections"></g>
+          <g id="flowDots"></g>
+
+          <!-- core pulse -->
+          <circle id="corePulse" cx="500" cy="500" r="60"
+                  fill="none" stroke="#2DD4BF" stroke-width="1" opacity="0"/>
+
+          <!-- hub core -->
+          <g id="core">
+            <circle cx="500" cy="500" r="62" fill="rgba(45,212,191,.1)" stroke="#2DD4BF" stroke-width="2" filter="url(#coreGlow)"/>
+            <circle cx="500" cy="500" r="7" fill="#2DD4BF" filter="url(#nodeGlow)"/>
+            <text x="500" y="548" text-anchor="middle"
+                  style="font-family:'Caveat',cursive;font-size:20px;fill:#2DD4BF;opacity:.9">
+              hub
+            </text>
+          </g>
+
+          <!-- spokes injected -->
+          <g id="spokes"></g>
+        </svg>
+      </div>
+
+      <aside class="detail" id="detail"></aside>
+    </div>
+  </section>
+
+  <!-- ═══ PAGE GRID ═══ -->
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">02</span>
+      <h2>The ten pages</h2>
+      <span class="tag">hover any card to inspect</span>
+    </div>
+    <div class="page-grid" id="pageGrid"></div>
+  </section>
+
+  <!-- ═══ GEO COMPLIANCE ═══ -->
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <h2>Every page already follows the GEO fixes</h2>
+      <span class="tag">four checks per page · all green</span>
+    </div>
+
+    <div class="compliance-card">
+      <div class="comp-head">
+        <div>
+          <div class="ch-l">◆ compliance matrix</div>
+          <div class="ch-t">10 pages × <b>4 GEO rules</b> — all passing</div>
+        </div>
+        <div class="comp-legend">
+          <span><span class="dot"></span>Compliant</span>
+          <span><span class="dot" style="background:var(--amber)"></span>Gated (drafted, not published)</span>
+        </div>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="comp-table" id="compTable">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Page</th>
+              <th>BLUF</th>
+              <th>FAQ</th>
+              <th>Meta</th>
+              <th>Voice</th>
+            </tr>
+          </thead>
+          <tbody id="compBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ GATE EXPLAINER ═══ -->
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">04</span>
+      <h2>Why three pages are held</h2>
+      <span class="tag">scope not yet confirmed</span>
+    </div>
+
+    <div class="gate-grid" id="gateGrid"></div>
+
+    <div class="gate-reason">
+      <span class="gr-ico">⚠</span>
+      <span class="gr-t">
+        <b>Publishing any of these before Bayan confirms the pathway exists would be an
+        unsupported claim</b> under the brand rule. Verified brand data covers
+        <b>physicians, nurses, and students</b> only. Confirm the bank exists — then publish.
+      </span>
+    </div>
+  </section>
+
+  <!-- ═══ CHECKLIST ═══ -->
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">05</span>
+      <h2>Before publishing</h2>
+      <span class="tag">confirm these — the agent could not verify</span>
+    </div>
+
+    <div class="checklist" id="checklist"></div>
+
+    <div class="checklist-foot">
+      These are the four things that must be confirmed by a human before anything ships.
+    </div>
+  </section>
+
+  <!-- ═══ VERIFY ═══ -->
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">06</span>
+      <h2>Verify after publishing</h2>
+      <span class="tag">run the loop · check every path</span>
+    </div>
+
+    <div class="terminal">
+      <div class="term-bar">
+        <div class="dots">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        </div>
+        <span class="path">bayan.edu.om — verify 10 prometric pages</span>
+      </div>
+      <div class="term-body" id="termBody"></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>fig. 08 — prometric pages · edu / bayan · 10 drafts</span>
+    <span>7 ready · 3 gated on scope confirmation</span>
+  </footer>
+</div>
+
+<script>
+/* ═══════════════════════════════════════════════════
+   PAGE DATA
+   ═══════════════════════════════════════════════════ */
+const PAGES = [
+  { id:'00', file:'00-prometric-exam-questions-HUB.md',
+    kw:'prometric exam questions', vol:'90', diff:'0',
+    role:'Hub', sub:'HUB', group:'hub', color:'#2DD4BF',
+    angle:-90, ready:true,
+    detail:'The central page that links down to every authority page. Ranks first, and its internal linking pattern is what makes the spokes rank.' },
+
+  { id:'01', file:'01-dha-prometric-exam-questions.md',
+    kw:'dha prometric exam questions', vol:'~10–30', diff:'0',
+    role:'Dubai', sub:'DHA', group:'auth', color:'#60A5FA',
+    angle:-160, ready:true,
+    detail:'Dubai Health Authority pathway page. Targets the DHA Prometric exam question intent for UAE-bound physicians.' },
+
+  { id:'02', file:'02-scfhs-smle-prometric-questions.md',
+    kw:'scfhs / smle prometric questions', vol:'~10–30', diff:'0',
+    role:'Saudi', sub:'SCFHS', group:'auth', color:'#60A5FA',
+    angle:-128, ready:true,
+    detail:'Saudi Commission for Health Specialties / SMLE pathway page — the largest Gulf licensing market.' },
+
+  { id:'03', file:'03-qchp-prometric-exam-questions.md',
+    kw:'qchp prometric exam questions', vol:'~10–30', diff:'0',
+    role:'Qatar', sub:'QCHP', group:'auth', color:'#60A5FA',
+    angle:-96, ready:true,
+    detail:'Qatar Council for Healthcare Practitioners pathway page. Targets Qatar licensing candidates.' },
+
+  { id:'04', file:'04-nursing-prometric-exam-questions.md',
+    kw:'nursing prometric exam questions', vol:'~10–30', diff:'0',
+    role:'Nursing', sub:'NURSING', group:'auth', color:'#60A5FA',
+    angle:-64, ready:true,
+    detail:'The strongest AI pathway in the set. Covers OEN / SNLE / DHA-nursing / NCLEX-RN — pending confirmation these are all live.' },
+
+  { id:'05', file:'05-oman-moh-prometric-exam-questions.md',
+    kw:'oman moh prometric exam questions', vol:'~10–30', diff:'0',
+    role:'Oman', sub:'OMAN', group:'auth', color:'#60A5FA',
+    angle:-32, ready:true,
+    detail:'Oman Ministry of Health pathway page. Bayan\'s home market — highest contextual relevance.' },
+
+  { id:'06', file:'06-nhra-prometric-exam-questions.md',
+    kw:'nhra prometric exam questions', vol:'~10–30', diff:'0',
+    role:'Bahrain', sub:'NHRA', group:'auth', color:'#60A5FA',
+    angle:0, ready:true,
+    detail:'National Health Regulatory Authority (Bahrain) pathway page. Completes Gulf authority coverage.' },
+
+  { id:'07', file:'07-pharmacist-prometric-exam-questions.md',
+    kw:'pharmacist prometric exam questions', vol:'~10–30', diff:'0',
+    role:'Pharmacist', sub:'PHARM', group:'gated', color:'#FBBF24',
+    angle:60, ready:false,
+    detail:'Allied-health pathway — drafted and ready to publish, but the pharmacist question bank is not confirmed in verified brand data.' },
+
+  { id:'08', file:'08-physiotherapist-prometric-exam-questions.md',
+    kw:'physiotherapist prometric exam questions', vol:'~10–30', diff:'0',
+    role:'Physiotherapist', sub:'PHYSIO', group:'gated', color:'#FBBF24',
+    angle:100, ready:false,
+    detail:'Allied-health pathway — drafted and ready to publish, but the physiotherapy bank is not confirmed in verified brand data.' },
+
+  { id:'09', file:'09-lab-technician-prometric-exam-questions.md',
+    kw:'lab technician prometric exam questions', vol:'~10–30', diff:'0',
+    role:'Lab Technician', sub:'LAB', group:'gated', color:'#FBBF24',
+    angle:140, ready:false,
+    detail:'Allied-health pathway — drafted and ready to publish, but the lab-technician bank is not confirmed in verified brand data.' }
+];
+
+/* ═══════════════════════════════════════════════════
+   GEOMETRY
+   ═══════════════════════════════════════════════════ */
+const NS = 'http://www.w3.org/2000/svg';
+const CX = 500, CY = 500, R = 300;
+const HUB_R = 62;
+
+function el(tag, attrs={}, parent=null) {
+  const n = document.createElementNS(NS, tag);
+  for (const k in attrs) n.setAttribute(k, attrs[k]);
+  if (parent) parent.appendChild(n);
+  return n;
+}
+
+function pos(angle, r=350) {
+  const a = angle * Math.PI / 180;
+  return { x: CX + r * Math.cos(a), y: CY + r * Math.sin(a) };
+}
+
+/* ═══════════════════════════════════════════════════
+   COMPASS TICKS
+   ═══════════════════════════════════════════════════ */
+(function ticks() {
+  const g = document.getElementById('ticks');
+  for (let i = 0; i < 72; i++) {
+    const a = i * 5 * Math.PI / 180;
+    const major = i % 6 === 0;
+    const r1 = 388, r2 = major ? 376 : 382;
+    el('line', {
+      x1: CX + r1 * Math.cos(a), y1: CY + r1 * Math.sin(a),
+      x2: CX + r2 * Math.cos(a), y2: CY + r2 * Math.sin(a)
+    }, g);
+  }
+})();
+
+/* ═══════════════════════════════════════════════════
+   CONNECTIONS
+   ═══════════════════════════════════════════════════ */
+const connG = document.getElementById('connections');
+const flowG = document.getElementById('flowDots');
+PAGES.forEach((p, i) => {
+  if (p.group === 'hub') return;
+  const pp = pos(p.angle, R);
+  // trim endpoints
+  const dx = pp.x - CX, dy = pp.y - CY;
+  const len = Math.hypot(dx, dy);
+  const ux = dx / len, uy = dy / len;
+  const x1 = CX + ux * HUB_R;
+  const y1 = CY + uy * HUB_R;
+  const x2 = pp.x - ux * 48;
+  const y2 = pp.y - uy * 48;
+
+  const gated = p.group === 'gated';
+  const conn = el('line', {
+    class:'conn' + (gated ? ' dashed' : ''),
+    x1, y1, x2, y2,
+    stroke: p.color,
+    'stroke-opacity': gated ? .55 : .7,
+    'marker-end': gated ? 'none' : 'url(#arrow)'
+  }, connG);
+  conn.style.color = p.color;
+  conn.dataset.id = p.id;
+
+  // flow dot along the connection
+  const dot = el('circle', {
+    class:'flow-dot',
+    r:4, fill:p.color,
+    cx:x1, cy:y1
+  }, flowG);
+  const anim = el('animateMotion', {
+    dur: gated ? '4.5s' : '3s',
+    repeatCount:'indefinite',
+    rotate:'auto',
+    path: `M ${x2} ${y2} L ${x1} ${y1}`,
+    begin: (i * 0.35) + 's'
+  }, dot);
+  dot.dataset.id = p.id;
+});
+
+/* ═══════════════════════════════════════════════════
+   SPOKES
+   ═══════════════════════════════════════════════════ */
+const spokesG = document.getElementById('spokes');
+PAGES.forEach(p => {
+  if (p.group === 'hub') return;
+  const pp = pos(p.angle, R);
+  const g = el('g', { class:'spoke', 'data-id':p.id }, spokesG);
+
+  el('circle', {
+    class:'node-bg',
+    cx:pp.x, cy:pp.y, r:48,
+    fill:'rgba(8,14,26,.92)',
+    stroke:p.color,
+    'stroke-width': p.group === 'gated' ? 1.5 : 1.8,
+    'stroke-dasharray': p.group === 'gated' ? '4 4' : 'none'
+  }, g);
+
+  // page id inside
+  const txt = el('text', {
+    class:'s-id', x:pp.x, y:pp.y + 1,
+    fill:p.color
+  }, g);
+  txt.textContent = p.id;
+
+  // label below/above depending on angle
+  const isBottom = p.angle > 20 && p.angle < 160;
+  const ly = isBottom ? pp.y + 68 : pp.y - 66;
+  const ly2 = isBottom ? pp.y + 84 : pp.y - 50;
+
+  const lbl = el('text', { class:'s-label', x:pp.x, y:ly }, g);
+  lbl.textContent = p.role;
+
+  const sub = el('text', { class:'s-sub', x:pp.x, y:ly2 }, g);
+  sub.textContent = p.sub;
+
+  g.addEventListener('mouseenter', () => highlight(p.id));
+  g.addEventListener('mouseleave', () => highlight(selected));
+  g.addEventListener('click', () => select(p.id));
+});
+
+/* ═══════════════════════════════════════════════════
+   DETAIL PANEL
+   ═══════════════════════════════════════════════════ */
+const detail = document.getElementById('detail');
+let selected = '00';
+
+function select(id) {
+  selected = id;
+  document.querySelectorAll('.spoke').forEach(s =>
+    s.classList.toggle('hot', s.dataset.id === id));
+  renderDetail(id);
+}
+
+function highlight(id) {
+  const near = new Set([id, '00']);
+  // if selected is hub, all spoke connections are near
+  if (id === '00') PAGES.forEach(p => near.add(p.id));
+
+  document.querySelectorAll('.spoke').forEach(s =>
+    s.classList.toggle('dim', !near.has(s.dataset.id)));
+  document.querySelectorAll('.conn').forEach(c =>
+    c.classList.toggle('dim', !near.has(c.dataset.id)));
+  document.querySelectorAll('.flow-dot').forEach(d =>
+    d.classList.toggle('active', near.has(d.dataset.id)));
+}
+
+function renderDetail(id) {
+  const p = PAGES.find(x => x.id === id);
+  if (!p) return;
+  const gated = p.group === 'gated';
+
+  detail.style.borderColor = p.color + '40';
+  detail.innerHTML = `
+    <div class="detail-top">
+      <div class="detail-icon" style="color:${p.color};border-color:${p.color}55;background:${p.color}12">
+        ${p.id}
+      </div>
+      <div>
+        <h2>${p.role} page</h2>
+        <div class="d-role">${p.group === 'hub' ? 'Hub · links to all authorities' :
+                           p.group === 'gated' ? 'Gated · awaiting scope confirmation' :
+                           'Authority page · ready to publish'}</div>
+      </div>
+    </div>
+
+    <div class="d-file">${p.file}</div>
+
+    <div class="d-kw">
+      <div class="lbl">◆ target keyword</div>
+      <div class="kw">${p.kw}</div>
+      <div class="stats">
+        <span class="stat">volume <b>${p.vol}</b></span>
+        <span class="stat">difficulty <b>${p.diff}</b></span>
+      </div>
+    </div>
+
+    <div class="d-role-block">${p.detail}</div>
+
+    <div class="d-status ${gated ? 'gated' : 'ready'}">
+      <span class="sd"></span>
+      ${gated ? 'HELD · not scheduled' : 'READY · awaiting publish approval'}
+    </div>
+  `;
+}
+
+/* ═══════════════════════════════════════════════════
+   PAGE GRID
+   ═══════════════════════════════════════════════════ */
+const pageGrid = document.getElementById('pageGrid');
+PAGES.forEach(p => {
+  const card = document.createElement('div');
+  card.className = 'page-card' + (p.group === 'gated' ? ' gated' : '');
+  card.style.setProperty('--pc', p.color);
+  card.dataset.id = p.id;
+
+  const chip = p.group === 'hub' ? '<span class="pc-chip hub">Hub</span>'
+             : p.group === 'gated' ? '<span class="pc-chip gated">Gated</span>'
+             : '<span class="pc-chip ready">Ready</span>';
+
+  card.innerHTML = `
+    <div class="pc-top">
+      <span class="pc-id">${p.id}</span>
+      ${chip}
+    </div>
+    <div class="pc-role">${p.role}</div>
+    <div class="pc-kw">${p.kw}</div>
+    <div class="pc-meta">
+      <span>vol <b>${p.vol}</b></span>
+      <span>diff <b>${p.diff}</b></span>
+    </div>`;
+
+  card.addEventListener('mouseenter', () => highlight(p.id));
+  card.addEventListener('mouseleave', () => highlight(selected));
+  card.addEventListener('click', () => {
+    select(p.id);
+    document.querySelector('.map-stage').scrollIntoView({ behavior:'smooth', block:'center' });
+  });
+
+  pageGrid.appendChild(card);
+});
+
+/* ═══════════════════════════════════════════════════
+   GEO COMPLIANCE MATRIX
+   ═══════════════════════════════════════════════════ */
+const compBody = document.getElementById('compBody');
+PAGES.forEach((p, i) => {
+  const tr = document.createElement('tr');
+  if (p.group === 'gated') tr.className = 'gated';
+  tr.style.setProperty('--pc', p.color);
+
+  const checks = ['BLUF','FAQ','Meta','Voice'].map((_, ci) =>
+    `<td class="check"><span class="comp-check" style="animation-delay:${(i*40)+(ci*80)}ms">✓</span></td>`
+  ).join('');
+
+  tr.innerHTML = `
+    <td>${p.id}</td>
+    <td class="pname">${p.role}${p.group === 'gated' ? ' <span style="color:var(--amber);font-size:11px">· gated</span>' : ''}</td>
+    ${checks}`;
+  compBody.appendChild(tr);
+});
+
+/* ═══════════════════════════════════════════════════
+   GATE CARDS
+   ═══════════════════════════════════════════════════ */
+const gateGrid = document.getElementById('gateGrid');
+const gated = PAGES.filter(p => p.group === 'gated');
+gated.forEach((p, i) => {
+  const card = document.createElement('div');
+  card.className = 'gate-card';
+  card.innerHTML = `
+    <div class="gc-head">
+      <span class="gc-icon">🔒</span>
+      <span class="gc-num">PAGE ${p.id}</span>
+    </div>
+    <div class="gc-t">${p.role}</div>
+    <div class="gc-d">
+      Target keyword <b>${p.kw}</b> is live, but the <b>${p.role.toLowerCase()} bank
+      is not confirmed</b> in verified brand data.
+    </div>
+    <div class="gc-footer">◆ Confirm bank → publish</div>`;
+  gateGrid.appendChild(card);
+});
+
+/* ═══════════════════════════════════════════════════
+   CHECKLIST
+   ═══════════════════════════════════════════════════ */
+const checklistItems = [
+  { t:'Confirm each authority\'s exam scope is accurate',
+    d:'Every authority page claims exam scope — verify each is accurate for the current product before publishing.' },
+  { t:'Confirm URL paths match live routes',
+    d:'Adjust the internal <code>/…</code> links if the live routes differ from what the drafts assume.' },
+  { t:'Confirm nursing exam coverage is live',
+    d:'Page 04 assumes <b>OEN, SNLE, DHA-nursing, and NCLEX-RN</b> are all live. Verify before publishing.' },
+  { t:'Confirm the three allied-health banks exist',
+    d:'Pages <b>07–09</b> (pharmacist, physio, lab tech) require that each bank exists. Verified scope is physicians, nurses, and students only.' }
+];
+
+const checklist = document.getElementById('checklist');
+checklistItems.forEach(item => {
+  const el = document.createElement('div');
+  el.className = 'check-item';
+  el.innerHTML = `
+    <div class="check-box">✓</div>
+    <div class="check-body">
+      <div class="check-t">${item.t}</div>
+      <div class="check-d">${item.d}</div>
+    </div>`;
+  el.addEventListener('click', () => el.classList.toggle('done'));
+  checklist.appendChild(el);
+});
+
+/* ═══════════════════════════════════════════════════
+   TERMINAL
+   ═══════════════════════════════════════════════════ */
+const termBody = document.getElementById('termBody');
+const CMD = `for p in prometric-exam-questions dha-prometric-exam-questions \\
+  scfhs-smle-prometric-questions qchp-prometric-exam-questions \\
+  nursing-prometric-exam-questions oman-moh-prometric-exam-questions \\
+  nhra-prometric-exam-questions pharmacist-prometric-exam-questions \\
+  physiotherapist-prometric-exam-questions lab-technician-prometric-exam-questions; do
+  curl -sSI "https://www.bayan.edu.om/$p" | head -1
+done`;
+
+const OUTS = [
+  { text:'HTTP/2 200', cls:'', sub:'prometric-exam-questions' },
+  { text:'HTTP/2 200', cls:'', sub:'dha-prometric-exam-questions' },
+  { text:'HTTP/2 200', cls:'', sub:'scfhs-smle-prometric-questions' },
+  { text:'HTTP/2 200', cls:'', sub:'qchp-prometric-exam-questions' },
+  { text:'HTTP/2 200', cls:'', sub:'nursing-prometric-exam-questions' },
+  { text:'HTTP/2 200', cls:'', sub:'oman-moh-prometric-exam-questions' },
+  { text:'HTTP/2 200', cls:'', sub:'nhra-prometric-exam-questions' },
+  { text:'HTTP/2 404', cls:'pending', sub:'pharmacist-prometric-exam-questions · gated' },
+  { text:'HTTP/2 404', cls:'pending', sub:'physiotherapist-prometric-exam-questions · gated' },
+  { text:'HTTP/2 404', cls:'pending', sub:'lab-technician-prometric-exam-questions · gated' },
+  { text:'# then re-run keyword_research in ~4–6 weeks', cls:'note', sub:'' },
+  { text:'# difficulty 0 → page 1 is realistic', cls:'note', sub:'' }
+];
+
+// main command line
+const cmdLine = document.createElement('div');
+cmdLine.className = 'term-line';
+cmdLine.innerHTML = `<span class="prompt">$</span><span class="cmd">${CMD}</span>`;
+termBody.appendChild(cmdLine);
+
+// output lines
+OUTS.forEach((o, i) => {
+  const out = document.createElement('div');
+  out.className = 'term-out ' + o.cls;
+  out.textContent = '→ ' + o.text + (o.sub ? '  ·  ' + o.sub : '');
+  termBody.appendChild(out);
+});
+
+// animate in sequence
+const termObs = new IntersectionObserver(es => {
+  es.forEach(e => {
+    if (e.isIntersecting) {
+      setTimeout(() => cmdLine.classList.add('in'), 100);
+      OUTS.forEach((_, i) => {
+        setTimeout(() => {
+          termBody.querySelectorAll('.term-out')[i].classList.add('in');
+        }, 600 + i * 180);
+      });
+      termObs.unobserve(e.target);
+    }
+  });
+}, { threshold:.2 });
+termObs.observe(termBody);
+
+/* ═══════════════════════════════════════════════════
+   INIT
+   ═══════════════════════════════════════════════════ */
+select('00');
+highlight('00');
+</script>
+</body>
+</html>

@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IFS Companion — Session Flow Map</title>
+<style>
+  :root{
+    --bg:#070a10;
+    --card:#0f151e;
+    --card-2:#131b26;
+    --line:#1c2634;
+    --text:#e8eff8;
+    --muted:#7e8fa6;
+    --user:#22d3ee;
+    --agent:#a06bff;
+    --done:#2ed573;
+    --block:#ff4d5e;
+    --live:#ffb020;
+    --privacy:#ff5c8a;
+    --shared:#39c0c8;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:
+      radial-gradient(1100px 600px at 10% -8%, #14202e 0%, transparent 55%),
+      radial-gradient(900px 500px at 100% 0%, #1f1428 0%, transparent 50%),
+      var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    padding:0 22px 90px;
+  }
+  .wrap{max-width:1080px;margin:0 auto}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- HERO ---------- */
+  .hero{padding:64px 0 38px;border-bottom:1px solid var(--line)}
+  .eyebrow{
+    font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:20px;display:flex;align-items:center;gap:10px;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--agent);display:inline-block}
+  h1{
+    font-size:clamp(29px,5vw,52px);line-height:1.07;letter-spacing:-.035em;
+    font-weight:800;max-width:20ch;
+  }
+  h1 .hl{
+    background:linear-gradient(92deg,var(--agent),var(--user));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .lede{color:#a9b8cb;font-size:clamp(15px,1.7vw,18px);max-width:66ch;margin-top:20px}
+  .lede strong{color:#fff;font-weight:650}
+
+  .status-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+  .pill{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:var(--mono);font-size:11.5px;letter-spacing:.03em;
+    padding:7px 13px;border-radius:999px;border:1px solid var(--line);
+    background:var(--card);color:var(--muted);white-space:nowrap;
+  }
+  .pill .dot{width:7px;height:7px;border-radius:50%;background:currentColor;flex:0 0 auto}
+  .pill.live{color:var(--live);border-color:#4a3818;background:#1c1710}
+  .pill.live .dot{animation:pulseDot 1.6s ease-in-out infinite}
+  @keyframes pulseDot{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(255,176,32,.55)}50%{opacity:.5;box-shadow:0 0 0 6px rgba(255,176,32,0)}}
+  .pill.done{color:var(--done);border-color:#1c4433;background:#0f1d17}
+  .pill.block{color:var(--block);border-color:#4a2028;background:#1e1218}
+
+  /* ---------- SKIM NAV (sticky) ---------- */
+  .skim{
+    position:sticky;top:0;z-index:40;
+    background:rgba(7,10,16,.88);backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+    margin:0 -22px;padding:12px 22px;
+    overflow-x:auto;white-space:nowrap;
+    scrollbar-width:none;
+  }
+  .skim::-webkit-scrollbar{display:none}
+  .skim-inner{display:inline-flex;gap:6px;align-items:center;min-width:100%}
+  .skim-chip{
+    display:inline-flex;align-items:center;gap:7px;
+    font-family:var(--mono);font-size:11px;letter-spacing:.04em;
+    padding:7px 12px;border-radius:8px;border:1px solid var(--line);
+    background:var(--card);color:#8fa0b6;cursor:pointer;
+    transition:all .2s;flex:0 0 auto;
+  }
+  .skim-chip:hover{border-color:#33445c;color:#c3d0e2;transform:translateY(-1px)}
+  .skim-chip .d{width:6px;height:6px;border-radius:50%;background:currentColor;flex:0 0 auto}
+  .skim-chip[data-type="user"] .d{background:var(--user)}
+  .skim-chip[data-type="agent"] .d{background:var(--agent)}
+  .skim-chip[data-type="artifact"] .d{background:var(--done)}
+  .skim-chip[data-type="block"] .d{background:var(--block)}
+  .skim-chip[data-type="live"] .d{background:var(--live);animation:pulseDot 1.6s ease-in-out infinite}
+  .skim-chip[data-type="live"]{color:var(--live);border-color:#4a3818}
+  .skim-sep{width:1px;height:18px;background:var(--line);flex:0 0 auto;margin:0 4px}
+
+  /* ---------- SECTION ---------- */
+  section{padding:56px 0;border-bottom:1px solid var(--line)}
+  section:last-of-type{border-bottom:0}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:10px;flex-wrap:wrap}
+  .sec-num{font-family:var(--mono);font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:3px 8px}
+  h2{font-size:clamp(21px,2.9vw,30px);letter-spacing:-.03em;font-weight:760}
+  .sec-desc{color:var(--muted);font-size:15px;max-width:66ch;margin-bottom:30px}
+
+  /* ---------- TIMELINE ---------- */
+  .timeline{position:relative;padding-left:36px}
+  .timeline::before{
+    content:"";position:absolute;left:13px;top:8px;bottom:8px;width:2px;
+    background:linear-gradient(180deg,var(--user),var(--agent),var(--done),var(--live),var(--block),var(--agent));
+    opacity:.28;border-radius:2px;
+  }
+  .phase-group{margin-bottom:8px}
+  .phase-label{
+    display:flex;align-items:center;gap:10px;
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--muted);margin:26px 0 14px;position:relative;
+  }
+  .phase-label::before{
+    content:"";position:absolute;left:-36px;width:12px;height:12px;border-radius:50%;
+    background:var(--bg);border:2px solid var(--pc,#33445c);top:50%;transform:translateY(-50%);
+  }
+  .phase-label .pl-line{flex:1;height:1px;background:var(--line)}
+  .phase-group:first-child .phase-label{margin-top:0}
+
+  .beat{
+    position:relative;margin-bottom:10px;
+    background:linear-gradient(180deg,var(--card),var(--card-2));
+    border:1px solid var(--line);border-radius:12px;
+    transition:border-color .25s,transform .25s,box-shadow .25s;
+    cursor:pointer;overflow:hidden;
+  }
+  .beat::before{
+    content:"";position:absolute;left:-29px;top:22px;
+    width:10px;height:10px;border-radius:50%;
+    background:var(--bc);box-shadow:0 0 0 3px var(--bg),0 0 14px -2px var(--bc);
+    transition:transform .25s;
+  }
+  .beat:hover{border-color:color-mix(in srgb,var(--bc) 45%,var(--line));transform:translateX(3px)}
+  .beat.open{border-color:var(--bc);box-shadow:0 0 0 1px color-mix(in srgb,var(--bc) 25%,transparent)}
+  .beat.open::before{transform:scale(1.35)}
+
+  .beat-head{padding:16px 18px;display:flex;align-items:flex-start;gap:14px}
+  .beat-ic{
+    width:32px;height:32px;border-radius:9px;flex:0 0 auto;display:grid;place-items:center;
+    font-family:var(--mono);font-size:14px;font-weight:700;
+    background:color-mix(in srgb,var(--bc) 14%,transparent);
+    border:1px solid color-mix(in srgb,var(--bc) 38%,transparent);
+    color:var(--bc);
+  }
+  .beat-ic.pulse{animation:pulseIc 1.8s ease-in-out infinite}
+  @keyframes pulseIc{0%,100%{box-shadow:0 0 0 0 color-mix(in srgb,var(--bc) 45%,transparent)}50%{box-shadow:0 0 0 7px transparent}}
+  .beat-main{flex:1;min-width:0}
+  .beat-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:5px}
+  .beat-type{
+    font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--bc);padding:2px 7px;border-radius:5px;
+    background:color-mix(in srgb,var(--bc) 12%,transparent);
+    border:1px solid color-mix(in srgb,var(--bc) 30%,transparent);
+  }
+  .beat-title{font-size:15px;font-weight:660;color:#eef4fb;line-height:1.35}
+  .beat-sub{font-size:13px;color:var(--muted);line-height:1.45;margin-top:3px}
+  .beat-chev{
+    flex:0 0 auto;color:var(--muted);font-size:13px;margin-top:6px;
+    transition:transform .3s;
+  }
+  .beat.open .beat-chev{transform:rotate(90deg);color:var(--bc)}
+
+  .beat-detail{
+    max-height:0;overflow:hidden;opacity:0;
+    transition:max-height .5s cubic-bezier(.22,1,.36,1),opacity .3s,padding .3s;
+    padding:0 18px;
+  }
+  .beat.open .beat-detail{max-height:900px;opacity:1;padding:0 18px 18px}
+  .beat-detail-inner{
+    border-top:1px solid var(--line);padding-top:14px;
+    font-size:13.5px;color:#adbbce;line-height:1.65;
+  }
+  .beat-detail-inner strong{color:#e2eaf4;font-weight:640}
+  .beat-detail-inner code{
+    font-family:var(--mono);font-size:12px;color:#9fd8dd;
+    background:#0d1a1c;border:1px solid #1d3a3d;border-radius:5px;padding:1px 6px;
+    word-break:break-all;
+  }
+  .beat-detail-inner .cmd{
+    display:block;margin-top:10px;padding:11px 14px;
+    background:#0b1218;border:1px solid #1c2634;border-radius:8px;
+    font-family:var(--mono);font-size:12px;color:#9fd8dd;
+    overflow-x:auto;white-space:nowrap;
+  }
+
+  /* ---------- PRIVACY ---------- */
+  .privacy-grid{display:grid;grid-template-columns:1fr 74px 1fr;gap:0;align-items:stretch}
+  @media(max-width:800px){.privacy-grid{grid-template-columns:1fr;gap:16px}}
+  .zone{
+    border:1px solid var(--line);border-radius:16px;padding:24px 24px 22px;
+    background:linear-gradient(180deg,var(--card),var(--card-2));position:relative;overflow:hidden;
+  }
+  .zone.private{border-color:#40202e;background:linear-gradient(180deg,#170e14,#12161d)}
+  .zone.shared{border-color:#1c4247;background:linear-gradient(180deg,#0c1a1c,#10161f)}
+  .zone .zlabel{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+    margin-bottom:6px;display:flex;align-items:center;gap:8px;
+  }
+  .zone.private .zlabel{color:var(--privacy)}
+  .zone.shared .zlabel{color:var(--shared)}
+  .zone h3{font-size:17px;font-weight:740;color:#fff;margin-bottom:14px;letter-spacing:-.02em}
+  .zone ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+  .zone li{
+    font-size:13.5px;color:#b3c0d2;padding-left:20px;position:relative;line-height:1.5;
+  }
+  .zone.private li::before{
+    content:"🔒";position:absolute;left:0;top:0;font-size:11px;
+  }
+  .zone.shared li::before{
+    content:"↗";position:absolute;left:0;top:0;font-size:12px;font-weight:700;color:var(--shared);
+  }
+  .zone .foot{
+    margin-top:16px;padding-top:13px;border-top:1px dashed var(--line);
+    font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.5;
+  }
+  .wall{
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:12px;padding:0 6px;position:relative;
+  }
+  @media(max-width:800px){.wall{flex-direction:row;padding:8px 0}}
+  .wall::before{
+    content:"";position:absolute;top:0;bottom:0;left:50%;width:2px;
+    background:repeating-linear-gradient(180deg,#3a1c26 0 6px,transparent 6px 12px);
+    transform:translateX(-50%);
+  }
+  @media(max-width:800px){
+    .wall::before{top:50%;bottom:auto;left:0;right:0;width:auto;height:2px;
+      background:repeating-linear-gradient(90deg,#3a1c26 0 6px,transparent 6px 12px);transform:none}
+  }
+  .wall-badge{
+    position:relative;z-index:2;background:#12161d;border:1px solid #40202e;
+    border-radius:11px;padding:10px 8px;text-align:center;width:72px;
+    box-shadow:0 0 0 7px var(--bg);
+  }
+  .wall-badge .ic{font-size:16px;margin-bottom:3px;color:var(--privacy)}
+  .wall-badge .t{font-family:var(--mono);font-size:8.5px;letter-spacing:.1em;color:#9fb0c4;line-height:1.3;text-transform:uppercase}
+  @media(max-width:800px){.wall-badge{display:flex;align-items:center;gap:8px;padding:7px 12px;width:auto}
+    .wall-badge .ic{margin:0}}
+
+  /* ---------- PENDING ---------- */
+  .pending-grid{display:flex;flex-direction:column;gap:14px}
+  .task{
+    display:grid;grid-template-columns:52px 1fr;gap:18px;align-items:start;
+    border:1px solid var(--line);border-radius:14px;padding:22px 24px;
+    background:linear-gradient(180deg,var(--card),var(--card-2));
+    transition:border-color .25s,transform .25s;
+  }
+  .task:hover{border-color:#33445c;transform:translateX(3px)}
+  .task .n{
+    width:52px;height:52px;border-radius:13px;display:grid;place-items:center;
+    font-family:var(--mono);font-size:15px;font-weight:700;
+  }
+  .task.t-user .n{background:#1e1218;color:var(--block);border:1px solid #4a2028}
+  .task.t-both .n{background:#1c1710;color:var(--live);border:1px solid #4a3818}
+  .task h3{font-size:16.5px;font-weight:700;color:#fff;margin-bottom:7px;line-height:1.3}
+  .task p{font-size:14px;color:#b3c0d2;line-height:1.6}
+  .task .owner{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+    margin-top:14px;display:inline-flex;align-items:center;gap:7px;
+    padding:4px 10px;border-radius:6px;
+  }
+  .task.t-user .owner{color:var(--block);background:#1e1218;border:1px solid #4a2028}
+  .task.t-both .owner{color:var(--live);background:#1c1710;border:1px solid #4a3818}
+  .task .cmd{
+    display:block;margin-top:14px;padding:12px 15px;
+    background:#0a1016;border:1px solid #1c2634;border-radius:9px;
+    font-family:var(--mono);font-size:12px;color:#9fd8dd;
+    overflow-x:auto;white-space:nowrap;
+  }
+  .task .cmd b{color:var(--block);font-weight:700}
+
+  /* ---------- LIVE SESSION ---------- */
+  .live-card{
+    border:1px solid #4a3818;border-radius:18px;
+    background:
+      radial-gradient(700px 260px at 0% 0%, rgba(255,176,32,.13), transparent 65%),
+      linear-gradient(180deg,#161208,#10161f);
+    padding:34px 34px 30px;position:relative;overflow:hidden;
+  }
+  .live-card::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:2px;
+    background:linear-gradient(90deg,transparent,var(--live),transparent);
+    animation:scan 3s ease-in-out infinite;
+  }
+  @keyframes scan{0%,100%{opacity:.4;transform:scaleX(.7)}50%{opacity:1;transform:scaleX(1)}}
+  .live-tag{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--live);margin-bottom:16px;display:flex;align-items:center;gap:9px;
+  }
+  .live-tag .dot{width:8px;height:8px;border-radius:50%;background:var(--live);animation:pulseDot 1.6s ease-in-out infinite}
+  .live-card h3{
+    font-size:clamp(20px,2.8vw,28px);font-weight:780;letter-spacing:-.03em;line-height:1.25;
+    color:#fff;max-width:24ch;
+  }
+  .live-card .paused{
+    margin-top:22px;padding:20px 22px;border-radius:12px;
+    background:#0e141c;border:1px solid #2a2214;
+  }
+  .live-card .paused .q-label{
+    font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--live);margin-bottom:12px;
+  }
+  .live-card .paused .q{
+    font-size:clamp(16px,2vw,20px);font-weight:600;color:#f5ead6;line-height:1.5;
+  }
+  .live-card .paused .q .fa{display:block;direction:rtl;font-size:1.1em;margin-bottom:6px}
+  .live-card .paused .q .en{font-size:.85em;color:#a9b8cb;font-weight:500}
+  .live-card .paused .meta{
+    margin-top:14px;font-family:var(--mono);font-size:11.5px;color:var(--muted);
+  }
+  .live-rules{
+    margin-top:22px;display:grid;grid-template-columns:repeat(2,1fr);gap:10px;
+  }
+  @media(max-width:700px){.live-rules{grid-template-columns:1fr}}
+  .rule{
+    font-size:13px;color:#b3c0d2;line-height:1.5;
+    padding:12px 14px 12px 36px;position:relative;
+    background:#0e141c;border:1px solid #221b10;border-radius:10px;
+  }
+  .rule::before{
+    content:"◆";position:absolute;left:13px;top:11px;font-size:10px;color:var(--live);
+  }
+
+  /* ---------- CONCEPTS ---------- */
+  .concepts{display:flex;flex-wrap:wrap;gap:9px}
+  .concept{
+    font-family:var(--mono);font-size:12px;letter-spacing:.02em;
+    padding:8px 14px;border-radius:9px;border:1px solid var(--line);
+    background:var(--card);color:#93a4b8;cursor:default;
+    transition:all .25s;position:relative;
+  }
+  .concept:hover{border-color:#33445c;color:#dbe4f0;transform:translateY(-2px)}
+  .concept[data-c="ifs"]:hover{border-color:#4a3a6b;color:#c9b3ff}
+  .concept[data-c="stack"]:hover{border-color:#1c4247;color:#8fe6eb}
+  .concept[data-c="privacy"]:hover{border-color:#40202e;color:#ff9aba}
+  .concept[data-c="block"]:hover{border-color:#4a2028;color:#ff9aa4}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    margin-top:52px;padding-top:26px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+    font-family:var(--mono);font-size:11px;color:#5b6b80;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="eyebrow">IFS Companion · Session Flow Map · 2026-09-27</div>
+    <h1>The conversation, <span class="hl">skimmable</span> in one screen.</h1>
+    <p class="lede">
+      A guided IFS therapist AI — <strong>private by construction</strong>. This session
+      resumed a completed build, ran three follow-ups, loaded personal context, and
+      started a live session that is <strong>now paused</strong>, waiting for you.
+    </p>
+    <div class="status-row">
+      <span class="pill done"><span class="dot"></span>Build complete</span>
+      <span class="pill live"><span class="dot"></span>IFS session paused</span>
+      <span class="pill block"><span class="dot"></span>2 actions blocked · handed off</span>
+      <span class="pill"><span class="dot"></span>Privacy wall holding</span>
+    </div>
+  </header>
+
+  <!-- ============ SKIM NAV ============ -->
+  <nav class="skim" aria-label="Quick jump">
+    <div class="skim-inner" id="skimNav"></div>
+  </nav>
+
+  <!-- ============ 01 · TIMELINE ============ -->
+  <section class="reveal">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <h2>The flow</h2>
+    </div>
+    <p class="sec-desc">
+      Every beat of the conversation — user turns, agent actions, artifacts, and blocks.
+      <strong>Click any beat</strong> to zoom into the detail. The colored rail on the left
+      tells you the type at a glance.
+    </p>
+
+    <div class="timeline" id="timeline"></div>
+  </section>
+
+  <!-- ============ 02 · PRIVACY ============ -->
+  <section class="reveal">
+    <div class="sec-head">
+      <span class="sec-num">02</span>
+      <h2>The privacy boundary</h2>
+    </div>
+    <p class="sec-desc">
+      The single most important constraint in the whole build. IFS emotional content
+      <strong>never crosses the wall</strong>. Method cards may — they are knowledge, not
+      living data.
+    </p>
+
+    <div class="privacy-grid">
+      <div class="zone private">
+        <div class="zlabel"><span>🔒</span> Private — this machine only</div>
+        <h3>Never pushed. Never synced. Never indexed.</h3>
+        <ul>
+          <li>Parts map and taxonomy of Hiwa's parts</li>
+          <li>Session logs (<code style="font-family:var(--mono);font-size:11px;color:#ff9aba">Sessions/YYYY-MM-DD-*.md</code>)</li>
+          <li>Check-ins, weekly reviews, mood data</li>
+          <li>Emotional content, exiled parts, burdens</li>
+          <li>Legacy <code style="font-family:var(--mono);font-size:11px;color:#ff9aba">MySelfTherapy/</code> files — read-only</li>
+        </ul>
+        <div class="foot">Path: saveme/Hiwa_context/3-Perishable Context/IFS/</div>
+      </div>
+
+      <div class="wall">
+        <div class="wall-badge">
+          <div class="ic">⛔</div>
+          <div class="t">no<br>crossing</div>
+        </div>
+      </div>
+
+      <div class="zone shared">
+        <div class="zlabel"><span>↗</span> Shared — gbrain (remote)</div>
+        <h3>Allies can query. Knowledge only.</h3>
+        <ul>
+          <li>19 method KB cards (<code style="font-family:var(--mono);font-size:11px;color:#8fe6eb">kb/methods</code>)</li>
+          <li>Methodology, frameworks, roadmaps</li>
+          <li>Non-private project notes</li>
+          <li>Postgres/Supabase · Finland VPS · ~5000 pages</li>
+          <li>Indexed as type <code style="font-family:var(--mono);font-size:11px;color:#8fe6eb">ifs-method</code></li>
+        </ul>
+        <div class="foot">Constraint: gbrain is remote+shared — living IFS data stays out.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 · PENDING ============ -->
+  <section class="reveal">
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <h2>What's still open</h2>
+    </div>
+    <p class="sec-desc">
+      Three items. Two need you to run a command — the agent was blocked by harness
+      guards and deliberately handed execution over rather than working around them.
+    </p>
+
+    <div class="pending-grid">
+
+      <div class="task t-user">
+        <div class="n">01</div>
+        <div>
+          <h3>Import method cards into gbrain</h3>
+          <p>
+            The gbrain upgrade (0.59.0.0) may have fixed the embedding width mismatch.
+            The import was blocked <em>both</em> before and after the upgrade — this is
+            the harness's <strong>[Data Exfiltration]</strong> classifier, not fixable by
+            the agent. Run it yourself, then verify with a query.
+          </p>
+          <span class="owner">Owner · you</span>
+          <code class="cmd"><b>!</b> cd /mnt/d/Obsidi1/03.Projects/ifs && gbrain import kb/methods --type ifs-method</code>
+        </div>
+      </div>
+
+      <div class="task t-user">
+        <div class="n">02</div>
+        <div>
+          <h3>Arm the IFS cadence timers</h3>
+          <p>
+            Four systemd units are written and tested, but arming was blocked as
+            <strong>[Unauthorized Persistence]</strong>. The manual arm block is in
+            <code style="font-family:var(--mono);font-size:12px;color:#9fd8dd">docs/ifs-cadence.md</code>.
+            Timers stay inert until a private Telegram chat id exists at
+            <code style="font-family:var(--mono);font-size:12px;color:#9fd8dd">/root/.config/daily/telegram-chat-id</code>.
+          </p>
+          <span class="owner">Owner · you</span>
+        </div>
+      </div>
+
+      <div class="task t-both">
+        <div class="n">03</div>
+        <div>
+          <h3>Answer the opening question of the IFS session</h3>
+          <p>
+            The session is <strong>live and paused</strong> at step zero. Before any part
+            work begins, the agent asked for two things: your current Internal Energy
+            (🟢 / 🟡 / 🔴) and today's trailhead — what's alive and pulling at you right now.
+          </p>
+          <span class="owner">Owner · both</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ 04 · LIVE SESSION ============ -->
+  <section class="reveal">
+    <div class="sec-head">
+      <span class="sec-num">04</span>
+      <h2>The live session — paused here</h2>
+    </div>
+    <p class="sec-desc">
+      This is where the conversation actually stopped. The next move is yours.
+    </p>
+
+    <div class="live-card">
+      <div class="live-tag"><span class="dot"></span>Live · awaiting your reply</div>
+      <h3>Before we touch any part, we check the ground you're standing on.</h3>
+
+      <div class="paused">
+        <div class="q-label">The paused question</div>
+        <div class="q">
+          <span class="fa">انرژی درونی امروزت چیه؟ و امروز چه چیزی زنده‌ست و تو رو می‌کشه؟</span>
+          <span class="en">What is your Internal Energy today — 🟢 / 🟡 / 🔴 — and what's alive, pulling at you?</span>
+        </div>
+        <div class="meta">Paused at the opening step · no part work started · no target chosen</div>
+      </div>
+
+      <div class="live-rules">
+        <div class="rule">If energy is 🔴 — do not run a full session. Offer ifs-unblend or one grounding step instead.</div>
+        <div class="rule">One prompt at a time. Then wait.</div>
+        <div class="rule">Farsi-led. The agent never speaks as Self or plays a part.</div>
+        <div class="rule">The gate: "چه حسی نسبت به این بخش داری؟" — must be open, curious, compassionate.</div>
+        <div class="rule">Never access an exile without protector permission.</div>
+        <div class="rule">Crisis resources surface immediately if self-harm content appears: Iran 115 / 1480 · intl 988.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 · CONCEPTS ============ -->
+  <section class="reveal">
+    <div class="sec-head">
+      <span class="sec-num">05</span>
+      <h2>Concepts in play</h2>
+    </div>
+    <p class="sec-desc">Hover any chip for a color-coded hint at its category.</p>
+    <div class="concepts">
+      <span class="concept" data-c="ifs">IFS · parts / Self / 8 C's</span>
+      <span class="concept" data-c="ifs">Managers · Firefighters · Exiles</span>
+      <span class="concept" data-c="ifs">Blending / Unblending</span>
+      <span class="concept" data-c="ifs">Burdens · Unburdening</span>
+      <span class="concept" data-c="ifs">Jay Earley roadmap</span>
+      <span class="concept" data-c="ifs">The gate question</span>
+      <span class="concept" data-c="stack">Claude Code Agent Skills</span>
+      <span class="concept" data-c="stack">saveme Personal OS</span>
+      <span class="concept" data-c="stack">claude-nights · systemd timers</span>
+      <span class="concept" data-c="stack">gbrain · remote Postgres</span>
+      <span class="concept" data-c="stack">Wayfinder · planning skill</span>
+      <span class="concept" data-c="stack">CONTEXT_INDEX.md</span>
+      <span class="concept" data-c="privacy">Private Telegram only</span>
+      <span class="concept" data-c="privacy">Never sync session logs</span>
+      <span class="concept" data-c="privacy">gbrain is remote+shared</span>
+      <span class="concept" data-c="block">[Data Exfiltration] guard</span>
+      <span class="concept" data-c="block">[Unauthorized Persistence] guard</span>
+      <span class="concept" data-c="ifs">Internal Energy 🟢🟡🔴</span>
+      <span class="concept" data-c="ifs">Lost Player Protocol</span>
+    </div>
+  </section>
+
+  <footer>
+    <span>IFS Companion · session flow map</span>
+    <span>16 beats · 4 phases · 3 open items · 1 live session</span>
+  </footer>
+
+</div>
+
+<script>
+  /* ============ REVEAL ============ */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  /* ============ BEAT DATA ============ */
+  const beats = [
+    {
+      phase: 'Resume',
+      pc: 'var(--agent)',
+      type: 'system', bc: 'var(--agent)', ic: '↻',
+      title: 'Session resumed from a compaction summary',
+      sub: 'Prior build complete — 5 skills, 19 KB cards, living data, memory written.',
+      detail: `The prior session had already delivered the core IFS companion: five skills
+        (<code>ifs-checkin</code>, <code>ifs-session</code>, <code>ifs-unblend</code>,
+        <code>ifs-part</code>, <code>ifs-weekly</code>), 19 method KB cards totalling
+        2,417 lines, session/check-in templates, and the living-data folder under
+        <strong>saveme</strong>. This session picked up at the pending list: verify card 15,
+        register the data path, symlink skills globally, answer the wayfinder question,
+        write memory, and deliver synthesis.`
+    },
+    {
+      phase: 'The order',
+      pc: 'var(--user)',
+      type: 'user', bc: 'var(--user)', ic: '❯',
+      title: '"ALL THREE IN ORDER"',
+      sub: 'Execute the three optional follow-ups in sequence.',
+      detail: `The three follow-ups were: <strong>(1)</strong> wire the daily/weekly IFS cadence
+        into <code>claude-nights</code> / <code>mood-checkin</code>;
+        <strong>(2)</strong> <code>/browse</code> the Skills Wayfinder page and tighten skill
+        trigger descriptions; <strong>(3)</strong> <code>gbrain-index</code> the method KB for
+        cross-project recall. The instruction was explicit: <em>in order</em>.`
+    },
+    {
+      phase: 'Follow-up 1 · Cadence',
+      pc: 'var(--done)',
+      type: 'agent', bc: 'var(--agent)', ic: '⚙',
+      title: 'Wired the IFS cadence into claude-nights',
+      sub: '4 systemd units + executable ifs-remind + docs.',
+      detail: `Created <code>ifs-checkin.timer/.service</code> (21:30 Asia/Tehran, randomized
+        ±600s) and <code>ifs-weekly.timer/.service</code> (Fri 10:00 Asia/Tehran) — both
+        <code>oneshot</code> with <code>-</code>-prefixed ExecStart so failure doesn't cascade.
+        Wrote <code>bin/ifs-remind</code> (chmod +x) which sends a <strong>fixed Farsi nudge
+        string</strong> — no note, no part content — through the same private-only Telegram
+        guard as <code>daily-notify</code>. Dry-run tested for both modes; bad mode exits 2.
+        Wrote <code>docs/ifs-cadence.md</code> documenting the pieces, the privacy contract,
+        and manual arm instructions.`
+    },
+    {
+      phase: 'Follow-up 1 · Cadence',
+      pc: 'var(--block)',
+      type: 'block', bc: 'var(--block)', ic: '⛔',
+      title: 'Auto-installer blocked by persistence guard',
+      sub: 'Manual arm commands handed to the user instead.',
+      detail: `The auto-arming installer (<code>bin/ifs-install</code>) was blocked by the
+        harness as <strong>[Unauthorized Persistence]</strong>. Rather than work around it,
+        the agent wrote the arm block into <code>docs/ifs-cadence.md</code> for the user to
+        run consciously. The timers stay <em>inert</em> until a private Telegram chat id
+        exists at <code>/root/.config/daily/telegram-chat-id</code>.`
+    },
+    {
+      phase: 'Follow-up 2 · Wayfinder',
+      pc: 'var(--agent)',
+      type: 'agent', bc: 'var(--agent)', ic: '⌕',
+      title: 'Browsed the Skills Wayfinder page',
+      sub: 'Discovered it is a planning skill, not a skill-authoring methodology.',
+      detail: `<code>/browse</code> was unavailable ("Unknown skill: browse"), so the agent
+        fell back to WebFetch on the aihero.dev wayfinder URL. Key correction: Wayfinder is a
+        <strong>multi-session planning skill</strong> that produces decision-ticket maps — it
+        is <em>not</em> guidance on how to author skills. The earlier characterization was
+        wrong and was corrected.`
+    },
+    {
+      phase: 'Follow-up 2 · Wayfinder',
+      pc: 'var(--done)',
+      type: 'artifact', bc: 'var(--done)', ic: '✓',
+      title: 'Skill descriptions judged already strong',
+      sub: 'Deliberately did not churn them.',
+      detail: `Having corrected the mischaracterization, the agent reviewed the five skill
+        trigger descriptions and judged them already effective. The decision was to
+        <strong>not edit them</strong> — churning good descriptions to satisfy a follow-up
+        that no longer applied would have been motion without progress.`
+    },
+    {
+      phase: 'Follow-up 3 · gbrain',
+      pc: 'var(--agent)',
+      type: 'agent', bc: 'var(--agent)', ic: '⇪',
+      title: 'Investigated the gbrain backend, got consent, attempted import',
+      sub: 'Discovered gbrain is remote+shared — surfaced the tradeoff before acting.',
+      detail: `Investigation revealed gbrain is a <strong>remote Postgres/Supabase brain</strong>
+        (PgBouncer :6543, Finland VPS, ~5,000 pages) <em>shared with allies</em>. Because
+        indexing method cards there is a privacy tradeoff, the agent surfaced it via
+        AskUserQuestion before acting. The user chose <strong>"Remote: all method cards"</strong>.
+        Import was then attempted.`
+    },
+    {
+      phase: 'Follow-up 3 · gbrain',
+      pc: 'var(--block)',
+      type: 'block', bc: 'var(--block)', ic: '⛔',
+      title: 'Import blocked — [Data Exfiltration] classifier',
+      sub: 'Harness permission layer, not fixable by the agent.',
+      detail: `The <code>gbrain import</code> was blocked as <strong>[Data Exfiltration]</strong>.
+        This is the harness permission layer — the same block fired both before and after the
+        later gbrain upgrade. The agent respected the guard rather than working around it, and
+        handed the user the exact <code>!</code>-prefixed command to run himself.`
+    },
+    {
+      phase: 'Context',
+      pc: 'var(--user)',
+      type: 'user', bc: 'var(--user)', ic: '❯',
+      title: '"take a look at these ... to know me better"',
+      sub: 'Vault analysis reports · claude-nights · Hiwa_context.',
+      detail: `The user pointed at three locations:
+        <code>D:\\Obsidi1\\03.Projects\\saveme\\archive\\Obsidi1-analysis-20260723\\reports</code>,
+        <code>D:\\Obsidi1\\03.Projects\\claude-nights</code>, and
+        <code>D:\\Obsidi1\\03.Projects\\saveme\\Hiwa_context</code> — to give the agent
+        deeper context on who it was working with.`
+    },
+    {
+      phase: 'Context',
+      pc: 'var(--agent)',
+      type: 'agent', bc: 'var(--agent)', ic: '⌕',
+      title: 'Read the vault analysis, night units, and personal context',
+      sub: 'Informed cadence design and session framing.',
+      detail: `The vault analysis surfaced a dominant pattern: <strong>divergence before
+        completion</strong> ("I create divergence and say I will converge it later"),
+        convergence anxiety, state-inflation (treating built as done), capture-as-productivity,
+        and triggers around money pressure and external exposure / asking for payment.
+        Analysts recommended a 7-day outcome-review rhythm and <em>freeze new work after
+        Wednesday noon</em> — which is why the weekly nudge is Friday and the daily is evening
+        reflection.`
+    },
+    {
+      phase: 'Context',
+      pc: 'var(--user)',
+      type: 'user', bc: 'var(--user)', ic: '❯',
+      title: '"continue"',
+      sub: 'Proceed with the remaining tasks.',
+      detail: `A short turn to let the agent proceed through the remaining build items.`
+    },
+    {
+      phase: 'Build close',
+      pc: 'var(--done)',
+      type: 'artifact', bc: 'var(--done)', ic: '✓',
+      title: 'Build finalized',
+      sub: 'Skills global · data path registered · memory written.',
+      detail: `<strong>Skills:</strong> all five <code>~/.claude/skills/ifs-*</code> symlinks
+        resolve to valid SKILL.md files.
+        <strong>Data path:</strong> a Layer 6 row was added to
+        <code>Hiwa_context/CONTEXT_INDEX.md</code> pointing at the IFS living-data folder.
+        <strong>Memory:</strong> two project memory files written —
+        <code>ifs-companion-project.md</code> (engine/data split, privacy rule, central
+        dynamic) and <code>gbrain-is-remote-shared.md</code> (privacy tradeoff, embedding
+        error, exfiltration block) — plus two pointer lines in <code>MEMORY.md</code>.`
+    },
+    {
+      phase: 'The session',
+      pc: 'var(--user)',
+      type: 'user', bc: 'var(--user)', ic: '❯',
+      title: '"resl ifs session"',
+      sub: 'Start an actual guided IFS session.',
+      detail: `The user asked to run a real IFS session. Per the <code>ifs-session</code> skill
+        protocol, the agent first read the safety card, current weather, and parts index —
+        then stated the frame in Persian and asked the opening question.`
+    },
+    {
+      phase: 'The session',
+      pc: 'var(--live)',
+      type: 'live', bc: 'var(--live)', ic: '◉',
+      title: 'IFS session started — PAUSED at the opening',
+      sub: 'Awaiting Internal Energy + today\'s trailhead.',
+      detail: `The session is <strong>live and paused</strong>. The agent asked (in Persian)
+        for the user's current Internal Energy (🟢 / 🟡 / 🔴) and today's trailhead — what's
+        alive and pulling at him. No target part has been chosen. If energy is 🔴, the
+        protocol says <em>do not run a full session</em> — offer <code>ifs-unblend</code> or
+        one grounding step instead. The likely start point from the parts index is the
+        Procrastinator / Distractor protector.`
+    },
+    {
+      phase: 'The gbrain retry',
+      pc: 'var(--user)',
+      type: 'user', bc: 'var(--user)', ic: '❯',
+      title: '"btw gbrain fixed i think"',
+      sub: 'Ran self-upgrade + doctor.',
+      detail: `The user reported that gbrain had been upgraded (now <strong>0.59.0.0</strong>),
+        likely resolving the earlier "expected 1024 dimensions, not 1280" embedding-width
+        error. Wanted the import retried.`
+    },
+    {
+      phase: 'The gbrain retry',
+      pc: 'var(--block)',
+      type: 'block', bc: 'var(--block)', ic: '⛔',
+      title: 'Retry still blocked → command handed to the user',
+      sub: 'User runs the !-prefixed import himself.',
+      detail: `Even after the upgrade, the import was still blocked by the
+        <strong>[Data Exfiltration]</strong> classifier. The agent again respected the guard
+        rather than working around it, and handed the user the exact command:
+        <code>! cd /mnt/d/Obsidi1/03.Projects/ifs && gbrain import kb/methods --type ifs-method</code>.
+        Verification step: <code>gbrain query "..."</code>. If it still errors on embeddings,
+        the width mismatch needs reconciliation.`
+    },
+  ];
+
+  /* ============ RENDER TIMELINE ============ */
+  const timeline = document.getElementById('timeline');
+  let currentPhase = '';
+
+  beats.forEach((b, i) => {
+    if (b.phase !== currentPhase) {
+      currentPhase = b.phase;
+      const group = document.createElement('div');
+      group.className = 'phase-group';
+      group.innerHTML = `
+        <div class="phase-label" style="--pc:${b.pc}">
+          <span>${b.phase}</span>
+          <span class="pl-line"></span>
+        </div>
+      `;
+      timeline.appendChild(group);
+    }
+
+    const beat = document.createElement('div');
+    beat.className = 'beat';
+    beat.style.setProperty('--bc', b.bc);
+    beat.dataset.index = i;
+    beat.innerHTML = `
+      <div class="beat-head">
+        <div class="beat-ic ${b.type === 'live' ? 'pulse' : ''}">${b.ic}</div>
+        <div class="beat-main">
+          <div class="beat-top">
+            <span class="beat-type">${b.type}</span>
+          </div>
+          <div class="beat-title">${b.title}</div>
+          <div class="beat-sub">${b.sub}</div>
+        </div>
+        <div class="beat-chev">▶</div>
+      </div>
+      <div class="beat-detail">
+        <div class="beat-detail-inner">${b.detail}</div>
+      </div>
+    `;
+
+    beat.addEventListener('click', () => {
+      const isOpen = beat.classList.contains('open');
+      // close all
+      document.querySelectorAll('.beat').forEach(x => x.classList.remove('open'));
+      if (!isOpen) beat.classList.add('open');
+    });
+
+    timeline.appendChild(beat);
+  });
+
+  /* ============ RENDER SKIM NAV ============ */
+  const skimNav = document.getElementById('skimNav');
+  let lastPhase = '';
+  beats.forEach((b, i) => {
+    if (b.phase !== lastPhase && lastPhase !== '') {
+      const sep = document.createElement('span');
+      sep.className = 'skim-sep';
+      skimNav.appendChild(sep);
+    }
+    lastPhase = b.phase;
+
+    const chip = document.createElement('button');
+    chip.className = 'skim-chip';
+    chip.dataset.type = b.type;
+    // short label: use phase + a compact title hint
+    const short = b.title.length > 34 ? b.title.slice(0, 32).trim() + '…' : b.title;
+    chip.innerHTML = `<span class="d"></span>${short}`;
+    chip.addEventListener('click', () => {
+      const target = document.querySelector(`.beat[data-index="${i}"]`);
+      if (!target) return;
+      document.querySelectorAll('.beat').forEach(x => x.classList.remove('open'));
+      target.classList.add('open');
+      target.scrollIntoView({behavior: 'smooth', block: 'center'});
+      // subtle flash
+      target.style.transition = 'box-shadow .3s';
+      target.style.boxShadow = `0 0 0 3px ${b.bc}33`;
+      setTimeout(() => { target.style.boxShadow = ''; }, 900);
+    });
+    skimNav.appendChild(chip);
+  });
+
+  /* ============ OPEN THE LIVE BEAT BY DEFAULT ============ */
+  const liveBeat = document.querySelector('.beat[data-index="13"]');
+  if (liveBeat) {
+    liveBeat.classList.add('open');
+    // scroll to it after a moment
+    setTimeout(() => {
+      liveBeat.scrollIntoView({behavior: 'smooth', block: 'center'});
+    }, 1200);
+  }
+</script>
+</body>
+</html>
