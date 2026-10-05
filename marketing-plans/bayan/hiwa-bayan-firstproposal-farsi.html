@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bayan Product Brain — پیشنهاد برای Dr. Abdullah Al-Alawi</title>
+<style>
+/* ============ TOKENS ============ */
+@property --p { syntax:'<number>'; inherits:false; initial-value:0; }
+
+:root{
+  --bg:#05080d;
+  --bg2:#080d16;
+  --panel:rgba(15,23,38,.72);
+  --panel2:rgba(10,16,28,.9);
+  --line:#16233a;
+  --line2:#22344f;
+  --txt:#e8eefb;
+  --dim:#8fa0bd;
+  --dim2:#5d6d8a;
+  --cy:#22d3ee;
+  --teal:#2dd4bf;
+  --ind:#818cf8;
+  --red:#f87171;
+  --grn:#4ade80;
+  --amb:#fbbf24;
+  --r:18px;
+  --sh:0 24px 70px -26px rgba(0,0,0,.9);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--txt);
+  font-family:"Vazirmatn","Segoe UI",Tahoma,-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative;
+  direction:rtl;
+}
+
+/* ============ AMBIENT ============ */
+.orb{position:fixed;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0}
+.orb1{width:680px;height:680px;background:radial-gradient(circle,rgba(34,211,238,.55),transparent 70%);top:-260px;right:-200px;opacity:.16;animation:o1 24s ease-in-out infinite}
+.orb2{width:600px;height:600px;background:radial-gradient(circle,rgba(129,140,248,.5),transparent 70%);top:42%;left:-240px;opacity:.14;animation:o2 28s ease-in-out infinite}
+.orb3{width:540px;height:540px;background:radial-gradient(circle,rgba(45,212,191,.45),transparent 70%);bottom:-200px;right:34%;opacity:.1;animation:o3 32s ease-in-out infinite}
+@keyframes o1{50%{transform:translate(-90px,70px) scale(1.12)}}
+@keyframes o2{50%{transform:translate(80px,-60px) scale(1.08)}}
+@keyframes o3{50%{transform:translate(-60px,-80px) scale(1.1)}}
+
+.gridbg{
+  position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.4;
+  background-image:linear-gradient(rgba(34,211,238,.05) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(34,211,238,.05) 1px,transparent 1px);
+  background-size:60px 60px;
+  mask-image:radial-gradient(ellipse 100% 65% at 50% 0%,#000 15%,transparent 78%);
+  -webkit-mask-image:radial-gradient(ellipse 100% 65% at 50% 0%,#000 15%,transparent 78%);
+}
+
+/* ============ PROGRESS ============ */
+#prog{position:fixed;top:0;right:0;height:2px;width:0;z-index:200;
+  background:linear-gradient(90deg,var(--ind),var(--teal),var(--cy));
+  box-shadow:0 0 16px rgba(34,211,238,.8);transition:width .1s linear}
+
+/* ============ NAV ============ */
+#nav{
+  position:fixed;top:14px;left:50%;transform:translate(-50%,-140%);
+  z-index:150;display:flex;gap:6px;align-items:center;
+  padding:7px 9px;border-radius:999px;
+  background:rgba(8,13,22,.86);border:1px solid var(--line2);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  box-shadow:0 14px 40px -16px rgba(0,0,0,.9);
+  transition:transform .5s cubic-bezier(.2,.7,.3,1),opacity .4s;
+  opacity:0;max-width:calc(100vw - 24px);
+}
+#nav.show{transform:translate(-50%,0);opacity:1}
+#nav a{
+  color:var(--dim);text-decoration:none;font-size:12.5px;font-weight:600;
+  padding:7px 13px;border-radius:999px;white-space:nowrap;transition:.22s;
+}
+#nav a:hover{color:var(--txt);background:rgba(255,255,255,.06)}
+#nav a.cta{background:linear-gradient(135deg,rgba(34,211,238,.22),rgba(129,140,248,.22));
+  color:#bff5ff;border:1px solid rgba(34,211,238,.4)}
+#nav a.cta:hover{box-shadow:0 0 22px -6px rgba(34,211,238,.7)}
+@media(max-width:760px){#nav a:not(.cta){display:none}}
+
+/* ============ LAYOUT ============ */
+.wrap{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:0 22px}
+section{padding:74px 0;position:relative}
+
+/* ============ REVEAL ============ */
+.rv{opacity:0;transform:translateY(32px);
+  transition:opacity .85s cubic-bezier(.2,.7,.3,1),transform .85s cubic-bezier(.2,.7,.3,1)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}
+.d4{transition-delay:.28s}.d5{transition-delay:.35s}.d6{transition-delay:.42s}
+.d7{transition-delay:.49s}.d8{transition-delay:.56s}
+
+/* ============ HERO ============ */
+.hero{min-height:96vh;display:flex;flex-direction:column;justify-content:center;padding-top:110px}
+.tagline{
+  display:inline-flex;align-items:center;gap:10px;font-size:11.5px;font-weight:800;
+  letter-spacing:.06em;color:var(--cy);
+  border:1px solid rgba(34,211,238,.3);background:rgba(34,211,238,.06);
+  padding:8px 16px;border-radius:999px;margin-bottom:26px;width:fit-content;
+}
+.tagline .dot{width:7px;height:7px;border-radius:50%;background:var(--cy);
+  animation:pl 2s ease-in-out infinite}
+@keyframes pl{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(34,211,238,.6)}
+  50%{opacity:.5;box-shadow:0 0 0 9px rgba(34,211,238,0)}}
+
+h1{
+  font-size:clamp(1.7rem,5vw,3.6rem);line-height:1.3;font-weight:800;
+  letter-spacing:-.01em;
+  background:linear-gradient(112deg,#fff 5%,#a5f3fc 32%,#c7d2fe 62%,#99f6e4 92%);
+  background-size:250% 100%;-webkit-background-clip:text;background-clip:text;
+  color:transparent;animation:shim 10s ease-in-out infinite;
+}
+@keyframes shim{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+h1 em{font-style:normal;color:var(--cy);-webkit-text-fill-color:var(--cy)}
+
+.lede{font-size:clamp(1rem,2vw,1.18rem);color:var(--dim);max-width:740px;margin-top:26px}
+.lede b{color:#fff;font-weight:600}
+
+/* KPI strip */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:12px;margin-top:40px;max-width:820px}
+.kpi{
+  background:var(--panel);border:1px solid var(--line);border-radius:14px;
+  padding:16px 18px;backdrop-filter:blur(12px);transition:.3s;text-align:center;
+}
+.kpi:hover{border-color:var(--cy);transform:translateY(-3px);
+  box-shadow:0 14px 40px -18px rgba(34,211,238,.6)}
+.kpi .n{font-size:1.55rem;font-weight:800;letter-spacing:-.01em;color:var(--cy);
+  font-variant-numeric:tabular-nums;direction:ltr}
+.kpi .l{font-size:11.5px;color:var(--dim2);letter-spacing:.04em;font-weight:700;margin-top:3px}
+
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:38px}
+.btn{
+  border:1px solid var(--line2);background:rgba(255,255,255,.03);color:var(--txt);
+  padding:13px 24px;border-radius:12px;font-size:14.5px;font-weight:650;cursor:pointer;
+  transition:.25s;font-family:inherit;display:inline-flex;align-items:center;gap:9px;
+  text-decoration:none;
+}
+.btn:hover{border-color:var(--cy);background:rgba(34,211,238,.1);transform:translateY(-2px)}
+.btn.pri{background:linear-gradient(135deg,rgba(34,211,238,.2),rgba(129,140,248,.2));
+  border-color:rgba(34,211,238,.5);color:#d8fbff}
+.btn.pri:hover{box-shadow:0 12px 38px -12px rgba(34,211,238,.75)}
+
+/* ============ HEADINGS ============ */
+.sh{margin-bottom:36px}
+.sn{font-size:11.5px;font-weight:800;letter-spacing:.06em;color:var(--cy);
+  margin-bottom:12px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.sn .time{font-size:10px;letter-spacing:.04em;color:var(--dim2);
+  border:1px solid var(--line2);padding:3px 9px;border-radius:999px;font-weight:700}
+h2{font-size:clamp(1.4rem,3.2vw,2.2rem);font-weight:800;letter-spacing:-.01em;line-height:1.35}
+h2 .ac{color:var(--cy)}
+.ssub{color:var(--dim);margin-top:12px;max-width:760px;font-size:15.5px}
+.ssub b{color:#fff}
+
+/* ============ CARDS ============ */
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
+  padding:24px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  transition:.35s;position:relative;overflow:hidden}
+.card:hover{border-color:var(--line2);transform:translateY(-4px);box-shadow:var(--sh)}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(255px,1fr))}
+
+/* ============ PULL QUOTE ============ */
+.pull{
+  border-right:3px solid var(--cy);padding:6px 26px 6px 0;margin:8px 0;
+  position:relative;
+}
+.pull::before{
+  content:"";position:absolute;right:-3px;top:0;height:100%;width:3px;
+  background:linear-gradient(180deg,var(--cy),transparent);
+}
+.pull q{font-size:clamp(1.05rem,2.2vw,1.35rem);line-height:1.9;color:#dbe6f8;
+  display:block;font-weight:450}
+.pull q b{color:var(--cy);font-weight:700}
+.pull .src{font-size:12px;color:var(--dim2);margin-top:14px;
+  font-family:ui-monospace,SFMono-Regular,monospace;direction:ltr;text-align:right}
+
+/* ============ DRIFT REPORT ============ */
+.drift{
+  background:linear-gradient(180deg,rgba(28,12,16,.72),rgba(10,15,26,.88));
+  border:1px solid #3b1d24;border-radius:var(--r);padding:26px;
+  position:relative;overflow:hidden;transition:border-color .5s;
+}
+.drift.live{border-color:rgba(248,113,113,.42)}
+.drift::after{
+  content:"";position:absolute;top:0;right:-45%;width:45%;height:100%;
+  background:linear-gradient(270deg,transparent,rgba(248,113,113,.09),transparent);
+  animation:scan 3.6s linear infinite;pointer-events:none;opacity:0;transition:opacity .4s;
+}
+.drift.live::after{opacity:1}
+@keyframes scan{to{right:130%}}
+
+.dh{display:flex;justify-content:space-between;align-items:center;
+  gap:16px;flex-wrap:wrap;margin-bottom:20px}
+.dh h3{font-size:14px;color:#ffcccc;font-weight:750;
+  display:flex;align-items:center;gap:10px;line-height:1.6}
+.dh .meta{font-size:12px;color:var(--dim2);font-family:ui-monospace,monospace;direction:ltr}
+
+.dtable{display:flex;flex-direction:column;gap:0}
+.drow{
+  display:grid;grid-template-columns:minmax(120px,1fr) 1.6fr 1.6fr auto;
+  gap:14px;align-items:center;padding:15px 0;
+  border-bottom:1px dashed rgba(60,32,40,.85);transition:.5s;
+  opacity:.34;filter:grayscale(1);
+}
+.drow:last-child{border-bottom:none}
+.drift.live .drow{opacity:1;filter:none}
+.drift.live .drow.flagged{background:rgba(248,113,113,.05)}
+.drow .k{font-size:13px;color:var(--dim);font-weight:650}
+.dv{
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;
+  padding:6px 12px;border-radius:8px;background:rgba(255,255,255,.045);
+  border:1px solid var(--line);color:#cfd9ec;display:inline-block;
+  transition:.45s;direction:ltr;text-align:left;
+}
+.drift.live .flagged .dv{
+  color:#ffb8b8;border-color:rgba(248,113,113,.55);
+  background:rgba(248,113,113,.11);animation:jit .45s ease-in-out;
+}
+@keyframes jit{0%,100%{transform:translateX(0)}30%{transform:translateX(3px)}70%{transform:translateX(-3px)}}
+.dtag{
+  font-size:10.5px;font-weight:800;color:var(--dim2);
+  white-space:nowrap;opacity:0;transition:.45s;text-align:left;letter-spacing:.02em;
+}
+.drift.live .flagged .dtag{opacity:1;color:var(--red)}
+
+.drow.resolved .dv{color:#86efac;border-color:rgba(74,222,128,.45);
+  background:rgba(74,222,128,.09)}
+.drift.live .drow.resolved .dtag{opacity:1;color:var(--grn)}
+.drift.live .drow.resolved{opacity:1;filter:none;background:rgba(74,222,128,.045)}
+
+.dcontrols{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px;align-items:center}
+.dcount{
+  font-family:ui-monospace,monospace;font-size:13px;color:var(--dim2);
+  margin-right:auto;transition:.4s;
+}
+.dcount.hot{color:var(--red);font-weight:800}
+
+.dverdict{
+  margin-top:0;max-height:0;opacity:0;overflow:hidden;
+  transition:.7s cubic-bezier(.2,.7,.3,1);
+  border-radius:12px;border:1px solid transparent;
+}
+.dverdict.show{
+  max-height:320px;opacity:1;margin-top:22px;padding:18px 20px;
+  background:rgba(248,113,113,.08);border-color:rgba(248,113,113,.3);
+  font-size:14.5px;color:#ffd4d4;
+}
+.dverdict b{color:#fff}
+
+/* ============ ASK THE BRAIN ============ */
+.brain{
+  background:linear-gradient(160deg,rgba(8,32,44,.75),rgba(10,15,28,.9));
+  border:1px solid rgba(34,211,238,.28);border-radius:var(--r);
+  padding:26px;position:relative;overflow:hidden;
+}
+.brain::before{
+  content:"";position:absolute;top:-60%;left:-20%;width:400px;height:400px;
+  background:radial-gradient(circle,rgba(34,211,238,.14),transparent 70%);
+  pointer-events:none;animation:o3 18s ease-in-out infinite;
+}
+.brain-head{display:flex;align-items:center;gap:12px;margin-bottom:6px;position:relative;z-index:2}
+.brain-head .ic{
+  width:38px;height:38px;border-radius:11px;display:grid;place-items:center;
+  background:linear-gradient(135deg,rgba(34,211,238,.25),rgba(129,140,248,.25));
+  border:1px solid rgba(34,211,238,.4);font-size:17px;
+}
+.brain-head h3{font-size:16px;font-weight:750}
+.brain-sub{font-size:13px;color:var(--dim2);margin-bottom:20px;position:relative;z-index:2}
+
+.chat{
+  display:flex;flex-direction:column;gap:14px;min-height:190px;
+  position:relative;z-index:2;
+}
+.bub{
+  max-width:88%;padding:13px 17px;border-radius:14px;font-size:14.5px;
+  line-height:1.9;opacity:0;transform:translateY(12px);animation:bubIn .45s forwards;
+}
+@keyframes bubIn{to{opacity:1;transform:none}}
+.bub.q{
+  align-self:flex-start;background:rgba(129,140,248,.16);
+  border:1px solid rgba(129,140,248,.35);color:#ddd9ff;
+  border-bottom-right-radius:4px;
+}
+.bub.a{
+  align-self:flex-end;background:rgba(34,211,238,.1);
+  border:1px solid rgba(34,211,238,.3);color:#d3f5fb;
+  border-bottom-left-radius:4px;
+}
+.bub.a b{color:#fff;font-weight:750}
+.bub.a .note{display:block;margin-top:9px;font-size:12.5px;color:#8fb8c4;
+  padding-top:9px;border-top:1px dashed rgba(34,211,238,.25)}
+.bub .cursor{
+  display:inline-block;width:8px;height:16px;background:var(--cy);
+  vertical-align:-3px;margin-right:2px;animation:blink .8s step-end infinite;
+}
+@keyframes blink{50%{opacity:0}}
+
+.chips{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px;position:relative;z-index:2}
+.chip{
+  border:1px solid var(--line2);background:rgba(255,255,255,.03);color:var(--dim);
+  padding:9px 15px;border-radius:999px;font-size:12.5px;font-weight:600;
+  cursor:pointer;transition:.25s;font-family:inherit;
+}
+.chip:hover{color:#c6f6ff;border-color:var(--cy);background:rgba(34,211,238,.09);
+  transform:translateY(-2px)}
+.chip:disabled{opacity:.35;cursor:default;transform:none}
+.chip.ar{font-family:"Vazirmatn",Tahoma,sans-serif;direction:rtl}
+
+/* ============ BUILD PIECES ============ */
+.piece{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
+  padding:26px;position:relative;overflow:hidden;transition:.4s;
+  backdrop-filter:blur(14px);
+}
+.piece::before{
+  content:"";position:absolute;top:0;right:0;left:0;height:2px;
+  background:linear-gradient(270deg,var(--cy),var(--ind));
+  transform:scaleX(0);transform-origin:right;transition:transform .6s;
+}
+.piece:hover::before{transform:scaleX(1)}
+.piece:hover{transform:translateY(-5px);box-shadow:var(--sh);border-color:var(--line2)}
+.piece .num{
+  font-family:ui-monospace,monospace;font-size:12px;font-weight:800;
+  color:var(--cy);margin-bottom:14px;display:block;direction:ltr;text-align:right;
+}
+.piece h3{font-size:17px;font-weight:750;margin-bottom:10px;line-height:1.5}
+.piece p{font-size:14px;color:var(--dim);line-height:1.9}
+.piece p b{color:#dbe6f8;font-weight:650}
+.piece .ex{
+  margin-top:16px;font-size:13px;color:#a9c4d4;
+  padding:11px 14px;border-radius:10px;background:rgba(34,211,238,.06);
+  border-right:2px solid rgba(34,211,238,.45);
+}
+
+/* ============ SPREADSHEET COMPARE ============ */
+.vs{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;align-items:stretch}
+@media(max-width:700px){.vs{grid-template-columns:1fr;gap:14px}}
+.vs-card{
+  border-radius:var(--r);padding:24px;border:1px solid var(--line);
+  background:var(--panel);transition:.35s;
+}
+.vs-card.bad{border-top:3px solid var(--red)}
+.vs-card.good{border-top:3px solid var(--grn);background:rgba(15,28,26,.6)}
+.vs-card:hover{transform:translateY(-4px);box-shadow:var(--sh)}
+.vs-card h4{font-size:13px;font-weight:800;margin-bottom:16px;letter-spacing:.04em}
+.vs-card.bad h4{color:#fca5a5}
+.vs-card.good h4{color:#86efac}
+.vs-card ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.vs-card li{font-size:14px;color:#c3d0e6;padding-right:24px;position:relative;line-height:1.8}
+.vs-card li::before{position:absolute;right:0;top:0;font-weight:800}
+.vs-card.bad li::before{content:"✕";color:var(--red)}
+.vs-card.good li::before{content:"✓";color:var(--grn)}
+.vs-card li b{color:#fff;font-weight:650}
+.vs-mid{display:grid;place-items:center;font-size:12px;font-weight:800;
+  color:var(--dim2);direction:ltr}
+@media(max-width:700px){.vs-mid{padding:4px 0}}
+
+/* ============ BEFORE / AFTER ============ */
+.ba{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
+  padding:8px;overflow:hidden}
+.ba-toggle{display:flex;gap:6px;padding:8px;margin-bottom:6px}
+.ba-toggle button{
+  flex:1;padding:11px;border-radius:11px;border:1px solid transparent;
+  background:transparent;color:var(--dim);font-weight:700;font-size:13.5px;
+  cursor:pointer;transition:.28s;font-family:inherit;
+}
+.ba-toggle button:hover{color:var(--txt);background:rgba(255,255,255,.04)}
+.ba-toggle button.on{
+  background:rgba(34,211,238,.12);color:#c6f6ff;border-color:rgba(34,211,238,.4);
+}
+.ba-grid{display:grid;gap:1px;background:var(--line);border-radius:12px;overflow:hidden}
+.ba-row{
+  display:grid;grid-template-columns:1.1fr 1.3fr;gap:1px;background:var(--line);
+  transition:.4s;
+}
+.ba-row > div{background:var(--bg2);padding:18px 20px;transition:.4s}
+.ba-row .lbl{font-size:12.5px;color:var(--dim2);font-weight:700}
+.ba-row .val{font-size:14.5px;color:#d3ddf0}
+.ba-row .val b{color:#fff}
+.ba-row .val .hl{color:var(--cy);font-weight:750}
+.ba.future .ba-row .val .hl{color:var(--grn)}
+
+/* ============ TIME COST ============ */
+.timecard{
+  background:linear-gradient(140deg,rgba(34,211,238,.08),rgba(129,140,248,.06));
+  border:1px solid rgba(34,211,238,.24);border-radius:var(--r);padding:30px;
+  position:relative;overflow:hidden;
+}
+.timecard::after{
+  content:"";position:absolute;bottom:-50%;right:-10%;width:340px;height:340px;
+  background:radial-gradient(circle,rgba(34,211,238,.12),transparent 70%);
+  pointer-events:none;
+}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:14px;position:relative;z-index:2}
+.titem{
+  background:rgba(6,10,18,.6);border:1px solid var(--line2);border-radius:14px;
+  padding:20px;transition:.3s;text-align:center;
+}
+.titem:hover{border-color:var(--cy);transform:translateY(-3px)}
+.titem .big{font-size:1.5rem;font-weight:800;color:var(--cy);
+  font-variant-numeric:tabular-nums;direction:ltr}
+.titem .cap{font-size:13px;color:var(--dim);margin-top:6px;line-height:1.7}
+.titem .cap b{color:#dbe6f8}
+
+/* ============ ROADMAP ============ */
+.road{display:flex;flex-direction:column;gap:0;position:relative;padding-right:34px}
+.road::before{
+  content:"";position:absolute;right:11px;top:14px;bottom:14px;width:2px;
+  background:linear-gradient(180deg,var(--cy),var(--ind),transparent);
+}
+.ritem{position:relative;padding:0 0 30px 0}
+.ritem:last-child{padding-bottom:0}
+.ritem::before{
+  content:"";position:absolute;right:-29px;top:8px;width:12px;height:12px;
+  border-radius:50%;background:var(--bg);border:2px solid var(--cy);
+  transition:.4s;
+}
+.ritem.future::before{border-color:var(--dim2)}
+.ritem:hover::before{background:var(--cy);box-shadow:0 0 0 5px rgba(34,211,238,.16)}
+.ritem .rt{font-size:15px;font-weight:700;color:#e2eafb;margin-bottom:5px}
+.ritem .rd{font-size:13.5px;color:var(--dim);line-height:1.8}
+.ritem .badge-now{
+  font-size:10px;font-weight:800;color:var(--cy);
+  border:1px solid rgba(34,211,238,.4);padding:3px 9px;
+  border-radius:999px;margin-right:9px;vertical-align:2px;
+}
+.ritem .badge-later{
+  font-size:10px;font-weight:800;color:var(--dim2);
+  border:1px solid var(--line2);padding:3px 9px;
+  border-radius:999px;margin-right:9px;vertical-align:2px;
+}
+
+/* ============ PRICING ============ */
+.price{
+  border-radius:var(--r);padding:28px;border:1px solid var(--line);
+  background:var(--panel);transition:.35s;position:relative;overflow:hidden;
+}
+.price:hover{transform:translateY(-5px);box-shadow:var(--sh)}
+.price.main{border-color:rgba(34,211,238,.42);
+  background:linear-gradient(150deg,rgba(34,211,238,.09),rgba(10,15,28,.85))}
+.price .pk{font-size:11.5px;font-weight:800;color:var(--dim2);margin-bottom:14px;letter-spacing:.06em}
+.price.main .pk{color:var(--cy)}
+.price .amt{font-size:2.3rem;font-weight:800;
+  color:#fff;line-height:1.1;direction:ltr;text-align:right}
+.price.main .amt{color:var(--cy)}
+.price .amt small{font-size:14px;color:var(--dim);font-weight:600;margin-right:4px}
+.price ul{list-style:none;margin-top:20px;display:flex;flex-direction:column;gap:10px}
+.price li{font-size:13.5px;color:#c3d0e6;padding-right:22px;position:relative;line-height:1.8}
+.price li::before{content:"→";position:absolute;right:0;color:var(--cy);font-weight:800}
+.price li b{color:#fff}
+
+/* ============ CLOSE ============ */
+.close{
+  border-radius:22px;padding:44px 40px;position:relative;overflow:hidden;
+  background:linear-gradient(135deg,rgba(34,211,238,.14),rgba(129,140,248,.1) 55%,rgba(45,212,191,.07));
+  border:1px solid rgba(34,211,238,.4);text-align:center;
+}
+.close::before{
+  content:"";position:absolute;inset:-50%;
+  background:conic-gradient(from 0deg,transparent,rgba(34,211,238,.1),transparent 32%);
+  animation:spin 14s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.close > *{position:relative;z-index:2}
+.close h3{font-size:clamp(1.2rem,3vw,1.75rem);font-weight:800;
+  margin-bottom:16px;line-height:1.6}
+.close h3 em{font-style:normal;color:var(--cy)}
+.close p{font-size:15px;color:#d3ddf0;max-width:680px;margin:0 auto;line-height:1.95}
+.close .sig{margin-top:26px;font-size:13px;color:var(--dim2);
+  font-family:ui-monospace,monospace;direction:ltr;line-height:1.9}
+
+footer{
+  text-align:center;padding:54px 22px 70px;color:var(--dim2);font-size:12.5px;
+  border-top:1px solid var(--line);margin-top:44px;line-height:2;
+}
+footer .brand{color:var(--dim);font-weight:700}
+
+@media(max-width:760px){
+  section{padding:54px 0}
+  .drow{grid-template-columns:1fr;gap:9px;padding:18px 0}
+  .dtag{text-align:right}
+  .close{padding:30px 22px}
+  .drift{padding:20px}
+  .timecard{padding:22px}
+  .ba-row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div id="prog"></div>
+<div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div>
+<div class="gridbg"></div>
+
+<nav id="nav">
+  <a href="#brief">خط پایین</a>
+  <a href="#drift">drift زنده</a>
+  <a href="#brain">از brain بپرس</a>
+  <a href="#build">چه می‌سازم</a>
+  <a href="#engage">همکاری</a>
+  <a href="#engage" class="cta">تأیید pilot</a>
+</nav>
+
+<div class="wrap">
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section class="hero">
+    <div class="tagline rv in"><span class="dot"></span> پیشنهاد · برای Dr. Abdullah Al-Alawi</div>
+
+    <h1 class="rv in d1">واقعیت‌های شش محصول شما<br>از نقطه‌ای گذشته که<br><em>یک نفر بتواند همه را<br>در ذهنش نگه دارد.</em></h1>
+
+    <p class="lede rv in d2">
+      آن‌ها دقیقاً به همان چیزی نیاز دارند که Bayan خودش به پزشکان می‌فروشد:
+      <b>یک منبع واحد، سازمان‌یافته و قابل بازیابی.</b>
+      الان این منبع را ندارند — و هزینه‌اش روی میز شما می‌افتد.
+    </p>
+
+    <div class="kpis rv in d3">
+      <div class="kpi"><div class="n" data-count="1">0</div><div class="l">هفته pilot</div></div>
+      <div class="kpi"><div class="n" data-count="6">0</div><div class="l">محصول پوشش داده‌شده</div></div>
+      <div class="kpi"><div class="n" data-count="3">0</div><div class="l">تعارض زنده امروز</div></div>
+      <div class="kpi"><div class="n">$<span data-count="500">0</span></div><div class="l">مبلغ ثابت یک‌باره</div></div>
+    </div>
+
+    <div class="cta-row rv in d4">
+      <a class="btn pri" href="#drift">↓ مشاهده drift report زنده</a>
+      <a class="btn" href="#engage">پرش به درخواست</a>
+    </div>
+  </section>
+
+  <!-- ═══════════ 01 BOTTOM LINE ═══════════ -->
+  <section id="brief">
+    <div class="sh rv">
+      <div class="sn">۰۱ — خط پایین <span class="time">~۲۰ ثانیه مطالعه</span></div>
+      <h2>اگر <span class="ac">هیچ چیز دیگری</span> را نمی‌خوانید، این را بخوانید</h2>
+    </div>
+
+    <div class="card rv d1" style="padding:30px">
+      <p style="font-size:16px;color:#d3ddf0;line-height:2">
+        Bayan <b style="color:#fff">شش محصول</b> را روی یک سایت شرکتی، سایت‌های محصول،
+        app storeها، بروشورها و غرفه نمایشگاه اداره می‌کند. امروز
+        <b style="color:#fff">یک واقعیت مشترک</b> روی هر سطح
+        <b style="color:var(--red)">مقدار متفاوتی</b> دارد.
+      </p>
+      <p style="font-size:16px;color:#d3ddf0;line-height:2;margin-top:16px">
+        من <b style="color:#fff">ریشه را درست می‌کنم، نه نشانه را</b>: یک مرجع رسمی واحد
+        که خودتان تأیید می‌کنید — شامل اعداد، قیمت‌گذاری، positioning، taglineها و
+        هویت برند هر محصول — که هر کسی می‌تواند با زبان ساده از آن بپرسد،
+        و <b style="color:var(--cy)">هر سطحی که با آن مخالف باشد را خودکار flag می‌کند.</b>
+      </p>
+      <div style="margin-top:24px;padding:18px 20px;border-radius:14px;
+                  background:rgba(34,211,238,.07);border:1px solid rgba(34,211,238,.28)">
+        <div style="font-size:11.5px;font-weight:800;color:var(--cy);margin-bottom:8px">
+          درخواست
+        </div>
+        <div style="font-size:15px;color:#dbe6f8;line-height:1.95">
+          تأیید یک <b style="color:#fff">pilot یک‌هفته‌ای</b>. خروجی: <b style="color:#fff">Product Brain</b>
+          مورد تأیید شما به‌علاوه‌ی اولین <b style="color:#fff">drift report</b> که دقیقاً نشان می‌دهد
+          سطوح زنده‌ی شما امروز کجا با هم تناقض دارند.
+          <b style="color:var(--cy)">تقریباً هیچ زمانی از شما نمی‌گیرد.</b>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 02 MEDICAL PARALLEL ═══════════ -->
+  <section id="parallel">
+    <div class="sh rv">
+      <div class="sn">۰۲ — همان تز که خودتان می‌فروشید <span class="time">~۱۵ ثانیه مطالعه</span></div>
+      <h2>همان اصل. <span class="ac">روی خود شرکت شما.</span></h2>
+    </div>
+
+    <div class="pull rv d1">
+      <q>
+        پزشکی مدرن پذیرفته که دانش بالینی امروز
+        <b>فراتر از ظرفیت حافظه‌ی انسان</b> است — بنابراین این رشته از
+        «حفظ کردن دانش» به <b>سازمان‌دهی آن برای بازیابی</b> نقل مکان کرده.
+        این همان تزی است که Bayan خودش به پزشکان می‌فروشد.
+        این پیشنهاد همان اصل را روی دانش داخلی خود Bayan اعمال می‌کند.
+      </q>
+      <div class="src">— Knowledge-management principle, <em>Medical Teacher</em> (AMEE), 2024 · doi:10.1080/0142159X.2024.2336065</div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 03 DRIFT REPORT ═══════════ -->
+  <section id="drift">
+    <div class="sh rv">
+      <div class="sn">۰۳ — اثبات، نه ادعا <span class="time">~۴۰ ثانیه تعاملی</span></div>
+      <h2>اولین <span class="ac">drift report</span> شما — امروز صبح اجرا کردم</h2>
+      <p class="ssub">لازم نیست مشکل را باور کنید. سطوح زنده‌ی شما را در تاریخ
+        <b>2026-09-29</b> بررسی کردم. دکمه را بزنید — سه تعارض همین حالا زنده‌اند.</p>
+    </div>
+
+    <div class="drift rv d1" id="driftBox">
+      <div class="dh">
+        <h3>⚠ بررسی سطح زنده — bayan.edu.om · bayanai.tech · App Store · exhibition brief</h3>
+        <span class="meta">2026-09-29</span>
+      </div>
+
+      <div class="dtable">
+        <div class="drow" data-flag="1">
+          <div class="k">نام شرکت</div>
+          <div><span class="dv">bayan.edu.om: "MedResearch Academy"</span></div>
+          <div><span class="dv">bayanai.tech: "Bayan AI Technologies LLC"</span></div>
+          <div class="dtag">دو شرکت متفاوت</div>
+        </div>
+
+        <div class="drow" data-flag="2">
+          <div class="k">تعداد سوال</div>
+          <div><span class="dv">live site: 4,000+</span></div>
+          <div><span class="dv">official: 5,589</span></div>
+          <div class="dtag">روی هیچ‌کدام نیست</div>
+        </div>
+
+        <div class="drow" data-flag="3">
+          <div class="k">تعداد محصول</div>
+          <div><span class="dv">"Seven initiatives"</span></div>
+          <div><span class="dv">"Showing 6 solutions"</span></div>
+          <div class="dtag">همان صفحه</div>
+        </div>
+
+        <div class="drow resolved" data-flag="0">
+          <div class="k">قیمت JournalReady</div>
+          <div><span class="dv">site: $4.99 / $29.99</span></div>
+          <div><span class="dv">app: $4.99 / $29.99</span></div>
+          <div class="dtag">✓ حالا مطابق است</div>
+        </div>
+      </div>
+
+      <div class="dcontrols">
+        <button class="btn pri" id="runCheck">▶ اجرای بررسی زنده</button>
+        <button class="btn" id="resetCheck">ریست</button>
+        <span class="dcount" id="dcount">۰ تعارض شناسایی شد</span>
+      </div>
+    </div>
+
+    <div class="dverdict" id="dverdict">
+      <b>سه تعارض همین حالا زنده است.</b> دو سایت اصلی شما نام دو شرکت متفاوت را نشان می‌دهند.
+      عددی که تیم‌تان به‌عنوان رسمی می‌شناسد، روی <b>هیچ‌کدام</b> از سایت‌های زنده نیست.
+      و یک صفحه با خودش درباره‌ی تعداد محصولات‌تان تناقض دارد.<br><br>
+      هر بار این مشکل بالا می‌آید — همانطور که درست قبل از Oman Health Exhibition بالا آمد —
+      ساعت‌ها از شما و تیم‌تان می‌گیرد تا reconcile کنید، و واقعیت‌های متناقض را
+      جلوی چشم خریداران قرار می‌دهد.
+    </div>
+
+    <div class="card rv d3" style="margin-top:20px;border-right:3px solid var(--grn)">
+      <div style="font-size:11.5px;font-weight:800;color:var(--grn);margin-bottom:10px">
+        ⚠ یک drift قبلاً جابه‌جا شده
+      </div>
+      <p style="font-size:14.5px;color:#c9d5ea;line-height:2">
+        قیمت JournalReady حالا روی سایت <b style="color:#fff">$4.99 / $29.99</b> است و با app
+        مطابق است — به نظر می‌رسد اختلاف قبلی <b style="color:#fff">$19 / $144</b> حل شده.
+        و این دقیقاً همان نکته است: <b style="color:var(--cy)">drift یک پاکسازی یک‌باره نیست.</b>
+        واقعیت‌ها روی یک سطح اصلاح می‌شوند، بعد با ویرایش سایت‌ها، عرضه‌ی محصولات و
+        تغییر اعداد، دوباره drift می‌کنند. یک reconcile یک‌باره دوام نمی‌آورد —
+        <b style="color:#fff">یک source of truth دائمی به‌علاوه‌ی یک check قابل اجرای مجدد</b> دوام می‌آورد.
+      </p>
+      <p style="font-size:14.5px;color:var(--dim);line-height:2;margin-top:16px">
+        این یک مشکل محتوا نیست — محتوای شما قوی است. یک
+        <b style="color:var(--cy)">مشکل source-of-truth</b> است: هیچ جای رسمی واحدی وجود ندارد
+        که بگوید <em>«این عدد رسمی است،»</em> پس هر سطح drift می‌کند و reconcile کردن آن‌ها
+        روی میز شما می‌افتد. به قول خودتان:
+        <b style="color:#fff">«این دارد زمان زیادی از من می‌گیرد.»</b>
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════ 04 ASK THE BRAIN ═══════════ -->
+  <section id="brain">
+    <div class="sh rv">
+      <div class="sn">۰۴ — خودتان امتحان کنید <span class="time">~۳۰ ثانیه تعاملی</span></div>
+      <h2>از brain بپرسید. <span class="ac">یک جواب بگیرید.</span></h2>
+      <p class="ssub">پرس‌وجوی زبان طبیعی، به فارسی، انگلیسی یا عربی. دیگر هیچ‌کس لازم نیست از شما بپرسد.</p>
+    </div>
+
+    <div class="brain rv d1">
+      <div class="brain-head">
+        <div class="ic">🧠</div>
+        <h3>Bayan Product Brain — demo</h3>
+      </div>
+      <div class="brain-sub">یک سوال انتخاب کنید که ممکن است یک کارمند غرفه، یک استخدام جدید، یا Nasim بپرسد.</div>
+
+      <div class="chat" id="chat">
+        <div class="bub a" style="animation-delay:.1s">
+          آماده‌ام. هر چیزی درباره‌ی واقعیت‌های رسمی Bayan بپرسید —
+          <b>یک جواب مورد تأیید</b> به شما می‌دهم.
+        </div>
+      </div>
+
+      <div class="chips" id="chips">
+        <button class="chip" data-q="عدد رسمی سوالات Bayan چند است؟"
+          data-a="<b>۵,۵۸۹ سوال با بازبینی بالینی</b> — عدد مورد تأیید.<span class='note'>⚠ سایت‌های زنده الان 4,000+ و 5,000+ نشان می‌دهند. drift check هر دو را flag می‌کند.</span>">
+          عدد رسمی سوالات چند است؟
+        </button>
+        <button class="chip" data-q="شخصیت حقوقی کیست؟"
+          data-a="<b>Bayan AI Technologies LLC</b> — برند entity مورد تأیید.<span class='note'>⚠ bayan.edu.om الان 'MedResearch Academy' را نام می‌برد. Flag شده.</span>">
+          شخصیت حقوقی کیست؟
+        </button>
+        <button class="chip" data-q="چند محصول داریم؟"
+          data-a="<b>۶ محصول.</b><span class='note'>Q-bank · JournalReady · PreOp · Medad · SmartRota · OHealth. یک صفحه‌ی زنده الان می‌گوید 'Seven initiatives'.</span>">
+          چند محصول داریم؟
+        </button>
+        <button class="chip" data-q="قیمت JournalReady چقدر است؟"
+          data-a="<b>$4.99 / $29.99</b> — سایت و app حالا مطابق‌اند.<span class='note'>✓ روی این واقعیت drift شناسایی نشد.</span>">
+          قیمت JournalReady؟
+        </button>
+        <button class="chip ar" data-q="ما هو العدد الرسمي للأسئلة؟"
+          data-a="<b>5,589 سؤالاً</b> تمت مراجعتها من قبل أطباء — الرقم الرسمي المعتمد.<span class='note'>النظام يدعم العربية والإنجليزية.</span>">
+          ما هو العدد الرسمي للأسئلة؟
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 05 WHAT I BUILD ═══════════ -->
+  <section id="build">
+    <div class="sh rv">
+      <div class="sn">۰۵ — wedge <span class="time">~۲۵ ثانیه مطالعه</span></div>
+      <h2>سه قطعه. <span class="ac">یک هفته.</span></h2>
+    </div>
+
+    <div class="grid g3">
+      <div class="piece rv d1">
+        <span class="num">PIECE 01</span>
+        <h3>Product Brain</h3>
+        <p>یک رکورد <b>ساختاریافته، نسخه‌بندی‌شده و تأییدشده توسط شما</b> برای هر محصول:
+          اعداد اصلی، قیمت‌گذاری، positioning، taglineها، brand entity، وضعیت live /
+          in-development. تنها جواب به این سوال: <em>«چه چیزی رسمی است؟»</em></p>
+      </div>
+      <div class="piece rv d2">
+        <span class="num">PIECE 02</span>
+        <h3>Ask-the-brain</h3>
+        <p>پرس‌وجوی زبان طبیعی، به <b>فارسی، انگلیسی یا عربی</b>.
+          برای شما، Nasim، کارکنان غرفه، و هر استخدام آینده —
+          <b>تا دیگر هیچ‌کس مجبور نباشد از شما بپرسد.</b></p>
+        <div class="ex">«عدد رسمی سوالات Bayan چند است؟» → همان یک جواب مورد تأیید، بلافاصله.</div>
+      </div>
+      <div class="piece rv d3">
+        <span class="num">PIECE 03</span>
+        <h3>Drift check</h3>
+        <p>یک pass خودکار که سایت شرکتی، سایت‌های محصول و app listingهای زنده‌ی شما را
+          می‌خواند و یک <b>drift report</b> تولید می‌کند: هر جایی که یک سطح با brain
+          مورد تأیید تناقض دارد، در یک صفحه فهرست می‌شود.</p>
+        <div class="ex">قبل از هر exhibition، launch یا بروشور اجرایش کنید — دیگر هرگز mismatch را روی غرفه کشف نمی‌کنید.</div>
+      </div>
+    </div>
+
+    <p class="rv d4" style="margin-top:22px;font-size:13.5px;color:var(--dim2);text-align:center">
+      ساخته‌شده روی همان <b style="color:var(--cy)">موتور "business brain"</b> که AITransforms برای تبدیل دانش یک شرکت به AI systems فعال استفاده می‌کند.
+    </p>
+  </section>
+
+  <!-- ═══════════ 06 WHY NOT A SPREADSHEET ═══════════ -->
+  <section id="spreadsheet">
+    <div class="sh rv">
+      <div class="sn">۰۶ — ایراد واضح <span class="time">~۲۰ ثانیه مطالعه</span></div>
+      <h2>«چرا فقط یک <span class="ac">spreadsheet</span> نه؟»</h2>
+    </div>
+
+    <div class="vs">
+      <div class="vs-card bad rv d1">
+        <h4>یک spreadsheet</h4>
+        <ul>
+          <li>عدد را نگه می‌دارد — اما <b>نمی‌تواند سایت‌های زنده‌ی شما را بخواند</b></li>
+          <li>نمی‌تواند لحظه‌ای که چیزی drift می‌کند را flag کند</li>
+          <li>خودش <b>بلافاصله که یک سایت تغییر کند، کهنه می‌شود</b></li>
+          <li>هیچ‌کس نمی‌داند کدام نسخه نسخه‌ی اصلی است</li>
+        </ul>
+      </div>
+      <div class="vs-mid rv d2">vs</div>
+      <div class="vs-card good rv d3">
+        <h4>Product Brain</h4>
+        <ul>
+          <li>سطوح زنده‌ی شما را خودکار می‌خواند</li>
+          <li><b>mismatch را قبل از خریدارانتان می‌گیرد</b></li>
+          <li>قابل اجرای مجدد قبل از هر رویداد، launch، بروشور</li>
+          <li>یک جواب مورد تأیید، قابل پرس‌وجو به زبان ساده</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 07 QUICK WIN ═══════════ -->
+  <section id="win">
+    <div class="sh rv">
+      <div class="sn">۰۷ — برد سریع <span class="time">~۲۰ ثانیه تعاملی</span></div>
+      <h2>قابل اندازه‌گیری. <span class="ac">~۱ هفته.</span></h2>
+      <p class="ssub">اولین drift report خودش اثبات است. برای دیدن تغییر، toggle کنید.</p>
+    </div>
+
+    <div class="ba rv d1" id="ba">
+      <div class="ba-toggle">
+        <button class="on" data-mode="now">قبل از pilot</button>
+        <button data-mode="after">بعد از pilot</button>
+      </div>
+      <div class="ba-grid">
+        <div class="ba-row">
+          <div><div class="lbl">عدد رسمی سوال</div></div>
+          <div><div class="val" id="v1"><b style="color:var(--red)">۴ عدد متفاوت</b></div></div>
+        </div>
+        <div class="ba-row">
+          <div><div class="lbl">reconcile کردن واقعیت‌ها برای یک رویداد</div></div>
+          <div><div class="val" id="v2"><b style="color:var(--red)">ساعت‌ها از شما + تیم‌تان</b></div></div>
+        </div>
+        <div class="ba-row">
+          <div><div class="lbl">یک نفر به عدد مورد تأیید نیاز دارد</div></div>
+          <div><div class="val" id="v3"><b style="color:var(--red)">از شما می‌پرسد</b></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 08 YOUR TIME ═══════════ -->
+  <section id="time">
+    <div class="sh rv">
+      <div class="sn">۰۸ — این برای شما چه هزینه‌ای دارد <span class="time">~۱۵ ثانیه مطالعه</span></div>
+      <h2>تقریباً <span class="ac">هیچ‌کدام از زمان شما.</span></h2>
+    </div>
+
+    <div class="timecard rv d1">
+      <div class="tgrid">
+        <div class="titem">
+          <div class="big">~2</div>
+          <div class="cap"><b>تماس کوتاه</b> + چند پیام در طول هفته</div>
+        </div>
+        <div class="titem">
+          <div class="big">1</div>
+          <div class="cap"><b>یک pass تأیید</b> — شما اعداد رسمی را تأیید می‌کنید، تنها چیزی که فقط شما می‌توانید تصمیم بگیرید</div>
+        </div>
+        <div class="titem">
+          <div class="big">1</div>
+          <div class="cap"><b>گزارش هفتگی</b> با نتیجه و اعداد، به‌صورت مکتوب</div>
+        </div>
+        <div class="titem" style="border-color:rgba(74,222,128,.4)">
+          <div class="big" style="color:var(--grn)">0</div>
+          <div class="cap"><b>تغییری روی سایت‌های زنده‌ی شما</b> بدون تأیید شما. pilot فقط می‌خواند.</div>
+        </div>
+      </div>
+      <p style="margin-top:20px;font-size:14px;color:var(--dim);position:relative;z-index:2">
+        Draft-first، دقیقاً مثل marketing plan. من همان‌طور کار می‌کنم که AI engineer دیگر شما کار می‌کند — low-touch.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════ 09 WHERE NEXT ═══════════ -->
+  <section id="next">
+    <div class="sh rv">
+      <div class="sn">۰۹ — بعدش کجا می‌رود <span class="time">~۲۰ ثانیه مطالعه</span></div>
+      <h2>پایه، <span class="ac">نه کل ساختمان.</span></h2>
+    </div>
+
+    <div class="road">
+      <div class="ritem rv d1">
+        <div class="rt">Product Brain <span class="badge-now">Pilot · هفته ۱</span></div>
+        <div class="rd">یک مرجع مورد تأیید + ask-the-brain + اولین drift report. همین هفته.</div>
+      </div>
+      <div class="ritem future rv d2">
+        <div class="rt">AI CEO assistant <span class="badge-later">بعد از برد</span></div>
+        <div class="rd">به «رسمی‌مان X چند است؟» جواب می‌دهد و copy منسجم را در جا draft می‌کند.</div>
+      </div>
+      <div class="ritem future rv d3">
+        <div class="rt">واقعیت‌های auto-check شده در همه‌جا <span class="badge-later">بعد از برد</span></div>
+        <div class="rd">تغذیه‌ی marketing، بروشورها و app listingهای شما — به‌صورت پیش‌فرض منسجم.</div>
+      </div>
+    </div>
+
+    <p class="rv d4" style="margin-top:26px;font-size:14px;color:var(--dim2);text-align:center">
+      آن‌ها بعداً. <b style="color:var(--cy)">pilot آن‌ها را به دست می‌آورد.</b>
+    </p>
+  </section>
+
+  <!-- ═══════════ 10 ENGAGEMENT ═══════════ -->
+  <section id="engage">
+    <div class="sh rv">
+      <div class="sn">۱۰ — همکاری <span class="time">~۱۵ ثانیه مطالعه</span></div>
+      <h2>هیچ چیز اینجا شما را <span class="ac">فراتر از یک هفته</span> متعهد نمی‌کند.</h2>
+    </div>
+
+    <div class="grid g2">
+      <div class="price main rv d1">
+        <div class="pk">pilot</div>
+        <div class="amt">$500<small>یک‌باره، ثابت</small></div>
+        <ul>
+          <li><b>۱ هفته</b>، دامنه‌ی ثابت بالا</li>
+          <li>Product Brain مورد تأیید</li>
+          <li>Ask-the-brain (FA / EN / AR)</li>
+          <li>اولین drift report</li>
+          <li>تحویل توسط <b>AITransforms</b></li>
+        </ul>
+      </div>
+      <div class="price rv d2">
+        <div class="pk">بعد از آن — اختیاری</div>
+        <div class="amt">$200<small>/ ماه</small></div>
+        <ul>
+          <li>retainer ماهانه‌ی low-touch</li>
+          <li>نگه‌داشتن brain به‌روز</li>
+          <li><b>drift report زمان‌بندی‌شده</b> قبل از هر رویداد</li>
+          <li>هر زمان قابل لغو</li>
+          <li>جدا از کار marketing — در واقع <b>مرجع واحد مورد تأیید را به تیم می‌دهد</b> که مدام درخواستش را داشتند</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 11 CLOSE ═══════════ -->
+  <section id="close">
+    <div class="close rv">
+      <h3>pilot را تأیید کنید و اولین<br><em>drift report ظرف چند روز در دستان شماست.</em></h3>
+      <p>هیچ چیز اینجا شما را فراتر از یک هفته متعهد نمی‌کند. قبلاً کار AITransforms را دیده‌اید —
+        از طریق trilingual marketing plan و AI-visibility tracking که برای Bayan ساخته شده.</p>
+      <p style="margin-top:16px">AITransforms یک کار می‌کند: تبدیل دانش، اسناد و تصمیم‌های یک کسب‌وکار
+        به AI systems عملی. Product Brain دقیقاً همین است، در کوچک‌ترین اندازه‌ی مفید —
+        <b style="color:var(--cy)">یک برد واقعی همین هفته، و اولین بلوک از هر چیزی که بعد می‌آید.</b></p>
+      <div class="sig">Hiwa · AI Transformation Architect &amp; Founder · AITransforms<br>
+        2026-09-29 · 1-week pilot · draft-first · reads public surfaces only</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="brand">Bayan AI Technologies × AITransforms</div>
+    <div style="margin-top:8px">Proposal — The Bayan Product Brain · Prepared for Dr. Abdullah Al-Alawi</div>
+  </footer>
+
+</div>
+
+<script>
+/* ═══════════ PROGRESS + NAV ═══════════ */
+const prog = document.getElementById('prog');
+const nav = document.getElementById('nav');
+function onScroll(){
+  const h = document.documentElement;
+  const pct = h.scrollTop / (h.scrollHeight - h.clientHeight) * 100;
+  prog.style.width = pct + '%';
+  nav.classList.toggle('show', h.scrollTop > 420);
+}
+window.addEventListener('scroll', onScroll, {passive:true});
+onScroll();
+
+/* ═══════════ REVEAL ═══════════ */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('in');
+    io.unobserve(e.target);
+  });
+}, {threshold:0.12, rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+/* ═══════════ KPI COUNTERS ═══════════ */
+const counters = document.querySelectorAll('[data-count]');
+const cio = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target;
+    const target = +el.dataset.count;
+    const dur = 1100;
+    const start = performance.now();
+    function step(now){
+      const t = Math.min((now - start) / dur, 1);
+      const eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = Math.round(target * eased);
+      if (t < 1) requestAnimationFrame(step);
+      else el.textContent = target;
+    }
+    requestAnimationFrame(step);
+    cio.unobserve(el);
+  });
+}, {threshold:0.5});
+counters.forEach(c => cio.observe(c));
+
+/* ═══════════ DRIFT CHECK ═══════════ */
+const driftBox = document.getElementById('driftBox');
+const dverdict = document.getElementById('dverdict');
+const dcount   = document.getElementById('dcount');
+const runBtn   = document.getElementById('runCheck');
+const resetBtn = document.getElementById('resetCheck');
+
+let running = false;
+
+runBtn.addEventListener('click', async () => {
+  if (running) return;
+  running = true;
+
+  driftBox.classList.remove('live');
+  driftBox.querySelectorAll('.drow').forEach(r => r.classList.remove('flagged'));
+  dverdict.classList.remove('show');
+  dcount.classList.remove('hot');
+  dcount.textContent = '۰ تعارض شناسایی شد';
+  await wait(260);
+
+  driftBox.classList.add('live');
+  const rows = [...driftBox.querySelectorAll('.drow[data-flag]')]
+                .filter(r => r.dataset.flag !== '0');
+
+  let found = 0;
+  for (let i = 0; i < rows.length; i++){
+    await wait(i === 0 ? 320 : 520);
+    rows[i].classList.add('flagged');
+    found++;
+    dcount.textContent = toFa(found) + ' تعارض شناسایی شد';
+  }
+
+  await wait(520);
+  dcount.classList.add('hot');
+  dverdict.classList.add('show');
+  runBtn.textContent = '⟳ اجرای مجدد بررسی';
+  running = false;
+});
+
+resetBtn.addEventListener('click', () => {
+  driftBox.classList.remove('live');
+  driftBox.querySelectorAll('.drow').forEach(r => r.classList.remove('flagged'));
+  dverdict.classList.remove('show');
+  dcount.classList.remove('hot');
+  dcount.textContent = '۰ تعارض شناسایی شد';
+  runBtn.textContent = '▶ اجرای بررسی زنده';
+});
+
+function wait(ms){ return new Promise(r => setTimeout(r, ms)); }
+
+/* اعداد فارسی */
+function toFa(n){
+  return String(n).replace(/[0-9]/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
+}
+
+/* اجرای خودکار وقتی در دید قرار گرفت */
+const driftIO = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting){
+      setTimeout(() => runBtn.click(), 500);
+      driftIO.unobserve(e.target);
+    }
+  });
+}, {threshold:0.35});
+driftIO.observe(driftBox);
+
+/* ═══════════ ASK THE BRAIN ═══════════ */
+const chat = document.getElementById('chat');
+const chips = document.getElementById('chips');
+let busy = false;
+
+chips.addEventListener('click', async (e) => {
+  const chip = e.target.closest('.chip');
+  if (!chip || busy) return;
+  busy = true;
+
+  const q = chip.dataset.q;
+  const a = chip.dataset.a;
+
+  /* پیام کاربر */
+  const qb = document.createElement('div');
+  qb.className = 'bub q';
+  qb.textContent = q;
+  if (chip.classList.contains('ar')) qb.style.direction = 'rtl';
+  chat.appendChild(qb);
+  scrollChat();
+
+  await wait(340);
+  const tb = document.createElement('div');
+  tb.className = 'bub a';
+  tb.innerHTML = '<span class="cursor"></span>';
+  chat.appendChild(tb);
+  scrollChat();
+
+  await wait(720);
+  tb.remove();
+
+  const ab = document.createElement('div');
+  ab.className = 'bub a';
+  ab.style.direction = chip.classList.contains('ar') ? 'rtl' : 'ltr';
+  chat.appendChild(ab);
+  scrollChat();
+
+  await typeInto(ab, a);
+
+  busy = false;
+  chip.disabled = true;
+});
+
+function scrollChat(){
+  chat.scrollTop = chat.scrollHeight;
+}
+
+async function typeInto(el, html){
+  const tmp = document.createElement('div');
+  tmp.innerHTML = html;
+
+  const main = tmp.childNodes[0] ? tmp.childNodes[0].textContent : '';
+  const noteEl = tmp.querySelector('.note');
+  const noteHTML = noteEl ? noteEl.outerHTML : '';
+
+  for (let i = 0; i <= main.length; i++){
+    el.innerHTML = escapeHTML(main.slice(0, i)) +
+      (i < main.length ? '<span class="cursor"></span>' : '');
+    if (i % 2 === 0) await wait(14);
+  }
+  el.innerHTML = escapeHTML(main);
+  await wait(120);
+
+  if (noteHTML){
+    el.insertAdjacentHTML('beforeend', noteHTML);
+  }
+}
+
+function escapeHTML(s){
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+/* ═══════════ BEFORE / AFTER ═══════════ */
+const ba = document.getElementById('ba');
+const v1 = document.getElementById('v1');
+const v2 = document.getElementById('v2');
+const v3 = document.getElementById('v3');
+
+const DATA = {
+  now: [
+    '<b style="color:var(--red)">۴ عدد متفاوت</b>',
+    '<b style="color:var(--red)">ساعت‌ها از شما + تیم‌تان</b>',
+    '<b style="color:var(--red)">از شما می‌پرسد</b>'
+  ],
+  after: [
+    '<span class="hl">۱ عدد، ۱ جا، ۱ پرس‌وجو فاصله</span>',
+    '<span class="hl">یک drift report خودکار</span>',
+    '<span class="hl">از brain می‌پرسد</span>'
+  ]
+};
+
+document.querySelectorAll('.ba-toggle button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const mode = btn.dataset.mode;
+    document.querySelectorAll('.ba-toggle button').forEach(b => b.classList.remove('on'));
+    btn.classList.add('on');
+    ba.classList.toggle('future', mode === 'after');
+
+    [v1,v2,v3].forEach((el,i) => {
+      el.style.opacity = 0;
+      el.style.transform = 'translateY(8px)';
+      setTimeout(() => {
+        el.innerHTML = DATA[mode][i];
+        el.style.transition = '.4s';
+        el.style.opacity = 1;
+        el.style.transform = 'none';
+      }, 160);
+    });
+  });
+});
+
+/* ═══════════ SMOOTH ANCHORS ═══════════ */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (!t) return;
+    e.preventDefault();
+    t.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
+</script>
+</body>
+</html>

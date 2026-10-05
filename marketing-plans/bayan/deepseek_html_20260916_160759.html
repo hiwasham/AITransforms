@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Product Marketing · Skill Graph</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+
+  :root{
+    --gap:14px;
+    --cols:7;
+    --bg:#06080d;
+    --txt:#e8edf7;
+    --muted:#8b97ad;
+    --faint:#5b6679;
+    --line:rgba(255,255,255,.09);
+    --line-2:rgba(255,255,255,.18);
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+  }
+
+  html{-webkit-text-size-adjust:100%}
+
+  body{
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--txt);
+    line-height:1.5;
+    min-height:100vh;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ambient light */
+  body::before{
+    content:'';
+    position:fixed; inset:0; z-index:0; pointer-events:none;
+    background:
+      radial-gradient(900px 520px at 50% -12%, rgba(96,165,250,.16), transparent 70%),
+      radial-gradient(700px 420px at 6% 22%, rgba(167,139,250,.09), transparent 70%),
+      radial-gradient(700px 420px at 94% 32%, rgba(52,211,153,.07), transparent 70%);
+  }
+
+  .wrap{
+    position:relative; z-index:1;
+    max-width:1360px; margin:0 auto;
+    padding:60px 28px 90px;
+  }
+
+  /* ───────────── HERO ───────────── */
+  .hero{text-align:center; display:flex; flex-direction:column; align-items:center}
+
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:10.5px; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--muted); padding:5px 13px; border-radius:999px;
+    border:1px solid var(--line); background:rgba(255,255,255,.03);
+  }
+  .eyebrow i{
+    width:6px; height:6px; border-radius:50%;
+    background:#34d399; box-shadow:0 0 10px #34d399;
+  }
+
+  h1{
+    font-size:clamp(30px,4.8vw,54px);
+    font-weight:700; letter-spacing:-.035em; line-height:1.05;
+    margin:20px 0 0;
+  }
+  h1 .grad{
+    background:linear-gradient(100deg,#60a5fa,#a78bfa 42%,#22d3ee);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+
+  .sub{
+    color:var(--muted); font-size:15px; max-width:600px;
+    margin-top:16px;
+  }
+  .sub code{
+    font-family:var(--mono); font-size:13px;
+    background:rgba(255,255,255,.06); border:1px solid var(--line);
+    padding:1px 6px; border-radius:5px; color:#c9d4e6;
+  }
+
+  .stats{display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-top:28px}
+  .stat{
+    display:flex; align-items:baseline; gap:8px;
+    border:1px solid var(--line); background:rgba(255,255,255,.028);
+    border-radius:12px; padding:9px 16px;
+  }
+  .stat b{font-size:17px; font-weight:700; font-variant-numeric:tabular-nums; letter-spacing:-.02em}
+  .stat span{font-size:10.5px; color:var(--muted); letter-spacing:.1em; text-transform:uppercase}
+
+  /* search */
+  .search{
+    display:flex; align-items:center; gap:9px;
+    margin-top:26px;
+    border:1px solid var(--line); background:rgba(255,255,255,.035);
+    border-radius:999px; padding:9px 16px; width:min(300px,100%);
+    transition:border-color .2s, background .2s, box-shadow .2s;
+  }
+  .search:focus-within{
+    border-color:rgba(96,165,250,.5);
+    background:rgba(96,165,250,.06);
+    box-shadow:0 0 0 4px rgba(96,165,250,.09);
+  }
+  .search svg{color:var(--faint); flex:none}
+  .search input{
+    all:unset; flex:1; font-size:13px; color:var(--txt);
+    font-family:inherit; min-width:0;
+  }
+  .search input::placeholder{color:var(--faint)}
+  .search kbd{
+    font-family:var(--mono); font-size:10px; color:var(--faint);
+    border:1px solid var(--line); border-radius:5px; padding:1px 5px;
+  }
+
+  /* ───────────── ROOT NODE ───────────── */
+  .core-wrap{display:flex; justify-content:center; margin-top:60px; position:relative}
+
+  .core-wrap::before{
+    content:''; position:absolute; top:-40px; left:50%; transform:translateX(-50%);
+    width:420px; height:200px; pointer-events:none;
+    background:radial-gradient(closest-side, rgba(96,165,250,.22), transparent 75%);
+    filter:blur(14px);
+  }
+
+  .core{
+    position:relative;
+    width:min(540px,100%);
+    text-align:center;
+    padding:22px 28px 26px;
+    border-radius:20px;
+    background:linear-gradient(180deg,rgba(96,165,250,.16),rgba(167,139,250,.08) 55%,rgba(255,255,255,.02));
+    border:1px solid rgba(140,170,255,.3);
+    box-shadow:
+      0 0 0 1px rgba(96,165,250,.08),
+      0 34px 90px -34px rgba(96,165,250,.6),
+      inset 0 1px 0 rgba(255,255,255,.1);
+  }
+
+  .core-tag{
+    font-size:9.5px; letter-spacing:.2em; text-transform:uppercase;
+    color:#9fb6ff; font-weight:600;
+  }
+  .core h2{
+    font-family:var(--mono); font-size:clamp(18px,2.4vw,23px);
+    font-weight:600; letter-spacing:-.01em; color:#fff;
+    margin:9px 0 8px;
+  }
+  .core p{font-size:12.5px; color:#93a1b8; max-width:410px; margin:0 auto}
+
+  /* ───────────── FAN CONNECTOR ───────────── */
+  .fan{margin-top:0}
+
+  .fan-trunk{
+    width:2px; height:30px; margin:0 auto;
+    background:linear-gradient(180deg, rgba(150,180,255,.5), rgba(150,180,255,.12));
+  }
+
+  .fan-rail{
+    position:relative; height:26px;
+    display:grid; grid-template-columns:repeat(7,1fr); gap:var(--gap);
+  }
+  .fan-rail::before{
+    content:'';
+    position:absolute; top:0; height:1px;
+    left:calc((100% - 6 * var(--gap)) / 14);
+    right:calc((100% - 6 * var(--gap)) / 14);
+    background:linear-gradient(90deg,
+      rgba(255,255,255,.04),
+      rgba(255,255,255,.24) 10%,
+      rgba(255,255,255,.24) 90%,
+      rgba(255,255,255,.04));
+  }
+  .fan-rail span{position:relative}
+  .fan-rail span::after{
+    content:'';
+    position:absolute; top:0; left:50%; transform:translateX(-50%);
+    width:1px; height:26px;
+    background:linear-gradient(180deg,
+      color-mix(in srgb, var(--c) 80%, transparent),
+      transparent);
+  }
+
+  /* ───────────── DOMAIN GRID ───────────── */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(var(--cols),1fr);
+    gap:var(--gap);
+    align-items:start;
+  }
+
+  .domain{
+    position:relative;
+    border-radius:14px;
+    border:1px solid var(--line);
+    background:linear-gradient(180deg, rgba(255,255,255,.038), rgba(255,255,255,.012));
+    overflow:hidden;
+    transition:transform .25s cubic-bezier(.2,.7,.3,1),
+               border-color .25s, box-shadow .25s, background .25s;
+  }
+  .domain::before{
+    content:'';
+    position:absolute; top:0; left:0; right:0; height:2px;
+    background:linear-gradient(90deg, transparent, var(--c), transparent);
+    opacity:.55; transition:opacity .25s;
+  }
+  .domain:hover{
+    transform:translateY(-3px);
+    border-color:var(--line-2);
+    background:linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.018));
+  }
+  .domain.has-lit{
+    border-color:color-mix(in srgb, var(--c) 45%, transparent);
+    box-shadow:0 20px 60px -26px var(--c), 0 0 0 1px color-mix(in srgb, var(--c) 22%, transparent);
+  }
+  .domain.has-lit::before{opacity:1}
+
+  .d-head{
+    display:flex; align-items:center; gap:8px;
+    padding:12px 12px 11px;
+    border-bottom:1px solid var(--line);
+  }
+  .dot{
+    width:7px; height:7px; border-radius:50%; flex:none;
+    background:var(--c); box-shadow:0 0 12px var(--c);
+  }
+  .d-name{
+    font-size:12.5px; font-weight:650; letter-spacing:-.005em;
+    color:#dbe4f2; line-height:1.25;
+  }
+  .d-count{
+    margin-left:auto; flex:none;
+    font-size:10px; font-variant-numeric:tabular-nums;
+    color:var(--muted); background:rgba(255,255,255,.055);
+    border-radius:999px; padding:2px 7px;
+  }
+
+  .skills{padding:8px; display:flex; flex-direction:column; gap:1px}
+
+  .skill{
+    display:flex; align-items:center; gap:8px;
+    padding:5px 8px; border-radius:8px;
+    border:1px solid transparent;
+    font-family:var(--mono); font-size:11.5px; color:#aab6c9;
+    cursor:default;
+    transition:background .16s, color .16s, border-color .16s, opacity .2s, transform .16s;
+    outline:none;
+  }
+  .skill::before{
+    content:''; flex:none;
+    width:3px; height:3px; border-radius:50%;
+    background:var(--faint); transition:background .16s, box-shadow .16s;
+  }
+  .skill:hover, .skill:focus-visible{
+    background:rgba(255,255,255,.06);
+    border-color:var(--line);
+    color:#fff;
+    transform:translateX(2px);
+  }
+  .skill:hover::before, .skill:focus-visible::before{background:var(--c); box-shadow:0 0 8px var(--c)}
+
+  /* spotlight states */
+  body.spotlight .skill:not(.lit){opacity:.16; filter:saturate(.15)}
+  body.spotlight .domain:not(.has-lit){border-color:rgba(255,255,255,.05)}
+
+  .skill.lit{
+    background:color-mix(in srgb, var(--c) 16%, transparent);
+    border-color:color-mix(in srgb, var(--c) 42%, transparent);
+    color:#fff;
+  }
+  .skill.lit::before{background:var(--c); box-shadow:0 0 9px var(--c)}
+
+  /* ───────────── CROSS-LINKS ───────────── */
+  .links{margin-top:70px}
+
+  .links-head{
+    display:flex; align-items:center; gap:16px;
+    flex-wrap:wrap;
+    padding-bottom:14px; margin-bottom:18px;
+    border-bottom:1px solid var(--line);
+  }
+  .links-head h3{
+    font-size:13px; font-weight:650; letter-spacing:.02em;
+    color:#c6d1e3; text-transform:none;
+  }
+  .links-head h3::before{
+    content:''; display:inline-block; vertical-align:middle;
+    width:16px; height:1px; margin-right:9px;
+    background:linear-gradient(90deg,#60a5fa,transparent);
+  }
+
+  .link-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:12px;
+  }
+
+  .link-card{
+    all:unset;
+    display:block;
+    padding:15px 16px 16px;
+    border-radius:13px;
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.025);
+    cursor:pointer;
+    transition:border-color .2s, background .2s, transform .2s, box-shadow .2s;
+  }
+  .link-card:hover, .link-card:focus-visible{
+    border-color:var(--line-2);
+    background:rgba(255,255,255,.05);
+    transform:translateY(-2px);
+  }
+  .link-card.active{
+    border-color:rgba(96,165,250,.5);
+    background:rgba(96,165,250,.07);
+    box-shadow:0 18px 50px -26px rgba(96,165,250,.9);
+  }
+  .link-card.pinned{
+    border-color:rgba(52,211,153,.55);
+    background:rgba(52,211,153,.07);
+    box-shadow:0 0 0 1px rgba(52,211,153,.22), 0 18px 50px -26px rgba(52,211,153,.9);
+  }
+
+  .chain{display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin-bottom:11px}
+  .node{
+    font-family:var(--mono); font-size:10.5px;
+    padding:3.5px 8px; border-radius:7px;
+    background:rgba(255,255,255,.055);
+    border:1px solid var(--line);
+    color:#c4cfe0;
+    white-space:nowrap;
+  }
+  .node.src{
+    background:rgba(255,255,255,.1);
+    border-color:rgba(255,255,255,.26);
+    color:#fff;
+  }
+  .arrow{color:var(--faint); font-size:11px; line-height:1}
+
+  .link-note{font-size:11.5px; color:var(--muted); line-height:1.45}
+
+  .hint{
+    text-align:center; margin-top:26px;
+    font-size:11px; color:var(--faint); letter-spacing:.03em;
+  }
+  .hint b{color:var(--muted); font-weight:600}
+
+  /* ───────────── RESPONSIVE ───────────── */
+  @media (max-width:1279px){
+    :root{--cols:4}
+    .fan{display:none}
+    .grid{margin-top:34px}
+  }
+  @media (max-width:999px){
+    :root{--cols:3}
+  }
+  @media (max-width:699px){
+    :root{--cols:2}
+    .wrap{padding:44px 18px 70px}
+    .core-wrap{margin-top:44px}
+  }
+  @media (max-width:479px){
+    :root{--cols:1}
+    .stats{gap:8px}
+    .stat{padding:8px 13px}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none !important; animation:none !important}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="hero">
+    <span class="eyebrow"><i></i>Skill Library</span>
+    <h1>The Product Marketing<br><span class="grad">Skill Graph</span></h1>
+    <p class="sub">
+      One root skill, seven domains, forty tools. Every skill reads
+      <code>product-marketing</code> first — then they wire into each other.
+    </p>
+
+    <div class="stats">
+      <div class="stat"><b>1</b><span>Root</span></div>
+      <div class="stat"><b>7</b><span>Domains</span></div>
+      <div class="stat"><b>40</b><span>Skills</span></div>
+      <div class="stat"><b>4</b><span>Cross-links</span></div>
+    </div>
+
+    <label class="search">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/>
+      </svg>
+      <input id="search" type="search" placeholder="Filter skills…" aria-label="Filter skills" />
+    </label>
+  </header>
+
+  <!-- ROOT -->
+  <div class="core-wrap">
+    <div class="core">
+      <div class="core-tag">Read by all other skills first</div>
+      <h2>product-marketing</h2>
+      <p>Positioning, ICP and messaging — the shared context every other skill loads before it runs.</p>
+    </div>
+  </div>
+
+  <!-- FAN -->
+  <div class="fan" aria-hidden="true">
+    <div class="fan-trunk"></div>
+    <div class="fan-rail" id="fan-rail"></div>
+  </div>
+
+  <!-- DOMAINS -->
+  <div class="grid" id="grid"></div>
+
+  <!-- CROSS LINKS -->
+  <section class="links">
+    <div class="links-head">
+      <h3>Skills cross-reference each other</h3>
+    </div>
+    <div class="link-grid" id="link-grid"></div>
+    <p class="hint">
+      <b>Hover</b> a skill to trace its connections &nbsp;·&nbsp;
+      <b>Click</b> a link group to pin it
+    </p>
+  </section>
+
+</div>
+
+<script>
+/* ───────────────────────── DATA ───────────────────────── */
+
+const DOMAINS = [
+  { id:'seo', name:'SEO & Content', color:'#22d3ee',
+    skills:['seo-audit','ai-seo','site-arch','programmatic','schema','content','aso'] },
+
+  { id:'cro', name:'CRO', color:'#fbbf24',
+    skills:['cro','signup','onboarding','popups','paywalls'] },
+
+  { id:'copy', name:'Content & Copy', color:'#a78bfa',
+    skills:['copywriting','copy-edit','cold-email','emails','social','video','image','sms'] },
+
+  { id:'paid', name:'Paid & Measurement', color:'#fb7185',
+    skills:['ads','ad-creative','ab-testing','analytics'] },
+
+  { id:'growth', name:'Growth & Retention', color:'#34d399',
+    skills:['referrals','free-tools','churn-prevention','community','lead-magnets'] },
+
+  { id:'sales', name:'Sales & GTM', color:'#60a5fa',
+    skills:['revops','sales-enablement','launch','pricing','competitors','comp-profile','directory','prospecting'] },
+
+  { id:'strategy', name:'Strategy', color:'#f97316',
+    skills:['mktg-ideas','mktg-psych','customer-research'] }
+];
+
+const LINKS = [
+  { skills:['copywriting','cro','ab-testing'], fan:false,
+    note:'Copy sets the promise, CRO structures the page, testing proves the lift.' },
+
+  { skills:['revops','sales-enablement','cold-email'], fan:false,
+    note:'RevOps data shapes the sales playbooks; playbooks shape outbound.' },
+
+  { skills:['seo-audit','schema','ai-seo'], fan:false,
+    note:'Audit finds the gap, schema marks it up, AI-SEO makes it quotable.' },
+
+  { skills:['customer-research','copywriting','cro','competitors'], fan:true,
+    note:'One research pass feeds messaging, page design and competitive positioning.' }
+];
+
+/* ───────────────────────── BUILD: DOMAIN CARDS ───────────────────────── */
+
+const grid = document.getElementById('grid');
+
+DOMAINS.forEach(d => {
+  const card = document.createElement('article');
+  card.className = 'domain';
+  card.style.setProperty('--c', d.color);
+  card.dataset.domain = d.id;
+
+  card.innerHTML = `
+    <div class="d-head">
+      <span class="dot"></span>
+      <span class="d-name">${d.name}</span>
+      <span class="d-count">${d.skills.length}</span>
+    </div>
+    <div class="skills">
+      ${d.skills.map(s => `
+        <div class="skill" data-skill="${s}" tabindex="0" title="${s}">
+          <span>${s}</span>
+        </div>`).join('')}
+    </div>`;
+
+  grid.appendChild(card);
+});
+
+/* ───────────────────────── BUILD: FAN RAIL ───────────────────────── */
+
+const rail = document.getElementById('fan-rail');
+DOMAINS.forEach(d => {
+  const cell = document.createElement('span');
+  cell.style.setProperty('--c', d.color);
+  rail.appendChild(cell);
+});
+
+/* ───────────────────────── BUILD: LINK CARDS ───────────────────────── */
+
+const linkGrid = document.getElementById('link-grid');
+
+LINKS.forEach(l => {
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'link-card';
+  btn.dataset.skills = l.skills.join(',');
+
+  const chain = l.fan
+    ? `<span class="node src">${l.skills[0]}</span><span class="arrow">→</span>` +
+      l.skills.slice(1).map(s => `<span class="node">${s}</span>`).join('')
+    : l.skills.map((s, i) =>
+        (i ? '<span class="arrow">↔</span>' : '') + `<span class="node">${s}</span>`).join('');
+
+  btn.innerHTML = `<div class="chain">${chain}</div><p class="link-note">${l.note}</p>`;
+  linkGrid.appendChild(btn);
+});
+
+/* ───────────────────────── SPOTLIGHT ENGINE ───────────────────────── */
+
+const skillEls  = [...document.querySelectorAll('.skill')];
+const domainEls = [...document.querySelectorAll('.domain')];
+const linkEls   = [...document.querySelectorAll('.link-card')];
+
+let pinned = null;
+
+function clearSpot() {
+  document.body.classList.remove('spotlight');
+  skillEls.forEach(el => el.classList.remove('lit'));
+  domainEls.forEach(d => d.classList.remove('has-lit'));
+  linkEls.forEach(c => c.classList.remove('active'));
+}
+
+function spotlight(skillSet) {
+  document.body.classList.add('spotlight');
+
+  skillEls.forEach(el => el.classList.toggle('lit', skillSet.has(el.dataset.skill)));
+  domainEls.forEach(d => d.classList.toggle('has-lit', !!d.querySelector('.skill.lit')));
+  linkEls.forEach(c =>
+    c.classList.toggle('active', c.dataset.skills.split(',').some(s => skillSet.has(s)))
+  );
+}
+
+/* hover / focus a skill → light up itself + everything it cross-references */
+skillEls.forEach(el => {
+  const enter = () => {
+    if (pinned) return;
+    const me = el.dataset.skill;
+    const related = new Set([me]);
+
+    linkEls.forEach(card => {
+      const group = card.dataset.skills.split(',');
+      if (group.includes(me)) group.forEach(s => related.add(s));
+    });
+
+    spotlight(related);
+  };
+
+  const leave = () => { if (!pinned) clearSpot(); };
+
+  el.addEventListener('mouseenter', enter);
+  el.addEventListener('focus', enter);
+  el.addEventListener('mouseleave', leave);
+  el.addEventListener('blur', leave);
+});
+
+/* hover a link card → light up its chain */
+linkEls.forEach(card => {
+  const enter = () => {
+    if (pinned) return;
+    spotlight(new Set(card.dataset.skills.split(',')));
+  };
+  const leave = () => { if (!pinned) clearSpot(); };
+
+  card.addEventListener('mouseenter', enter);
+  card.addEventListener('focus', enter);
+  card.addEventListener('mouseleave', leave);
+  card.addEventListener('blur', leave);
+
+  card.addEventListener('click', () => {
+    if (pinned === card) {
+      card.classList.remove('pinned');
+      pinned = null;
+      clearSpot();
+    } else {
+      if (pinned) pinned.classList.remove('pinned');
+      pinned = card;
+      card.classList.add('pinned');
+      spotlight(new Set(card.dataset.skills.split(',')));
+    }
+  });
+});
+
+/* ───────────────────────── SEARCH FILTER ───────────────────────── */
+
+const search = document.getElementById('search');
+
+search.addEventListener('input', () => {
+  const q = search.value.trim().toLowerCase();
+
+  if (pinned) { pinned.classList.remove('pinned'); pinned = null; }
+  clearSpot();
+
+  domainEls.forEach(card => {
+    const nameMatch = q && card.querySelector('.d-name').textContent.toLowerCase().includes(q);
+    let visible = 0;
+
+    card.querySelectorAll('.skill').forEach(sk => {
+      const match = !q || nameMatch || sk.dataset.skill.includes(q);
+      sk.style.display = match ? '' : 'none';
+      if (match) visible++;
+    });
+
+    card.style.display = visible ? '' : 'none';
+  });
+});
+
+/* ───────────────────────── ESC = RESET ───────────────────────── */
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    if (pinned) { pinned.classList.remove('pinned'); pinned = null; }
+    clearSpot();
+    if (document.activeElement === search) {
+      search.value = '';
+      search.dispatchEvent(new Event('input'));
+      search.blur();
+    }
+  }
+});
+</script>
+</body>
+</html>

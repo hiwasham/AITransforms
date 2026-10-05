@@ -1,0 +1,2028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conversion Plan · Rigor vs Pitch</title>
+<style>
+  :root{
+    --ink:#04060a;--ink2:#080b11;--panel:#0d1218;--panel2:#131a22;
+    --line:#1a222e;--txt:#e9eef6;--mut:#78849a;--mut2:#4d5666;
+    --gold:245,190,60;--cyan:34,211,238;--emerald:52,211,153;
+    --violet:167,139,250;--amber:255,138,61;--rose:244,63,94;
+    --rigor:52,211,153;
+    --pitch:255,138,61;
+    --accent:52,211,153;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{background:var(--ink);color:var(--txt);font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;overflow:hidden;line-height:1.5}
+
+  /* ambient */
+  .bg{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+  .bg::before{content:"";position:absolute;inset:-30%;
+    background:
+      radial-gradient(38% 30% at 8% 4%, rgba(var(--rigor),.08), transparent 60%),
+      radial-gradient(38% 30% at 92% 96%, rgba(var(--pitch),.07), transparent 60%);
+    filter:blur(30px);transition:background 1s ease}
+  .bg::after{content:"";position:absolute;inset:0;
+    background-image:linear-gradient(rgba(255,255,255,.014) 1px,transparent 1px),
+                     linear-gradient(90deg,rgba(255,255,255,.014) 1px,transparent 1px);
+    background-size:52px 52px;
+    mask-image:radial-gradient(78% 62% at 50% 38%,#000 20%,transparent 100%)}
+
+  /* grid */
+  .app{position:relative;z-index:1;display:grid;
+    grid-template-columns:264px 1fr;height:100vh}
+
+  /* ============ LEFT RAIL ============ */
+  .rail{border-right:1px solid var(--line);
+    background:linear-gradient(180deg,rgba(13,18,24,.94),rgba(8,12,17,.94));
+    backdrop-filter:blur(14px);display:flex;flex-direction:column;
+    padding:18px 12px 14px;gap:14px;min-height:0}
+
+  .brand{display:flex;align-items:center;gap:11px;
+    padding:2px 6px 14px;border-bottom:1px solid var(--line)}
+  .logo{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;
+    font:700 13px/1 var(--mono);color:#06090d;letter-spacing:.02em;
+    background:linear-gradient(140deg,rgb(var(--rigor)),rgb(var(--pitch)));
+    box-shadow:0 0 26px -4px rgba(var(--rigor),.6),
+               0 0 26px -4px rgba(var(--pitch),.6)}
+  .brand-name{font-size:13px;font-weight:650;letter-spacing:.01em;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .brand-sub{font:400 9px/1.35 var(--mono);color:var(--mut2);
+    letter-spacing:.11em;text-transform:uppercase;margin-top:2px}
+
+  .rail-label{font:600 9.5px/1 var(--mono);letter-spacing:.14em;
+    text-transform:uppercase;color:var(--mut2);padding:0 8px;margin-bottom:2px}
+
+  .view-switch{display:flex;flex-direction:column;gap:3px}
+  .view-btn{all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;
+    padding:9px 11px;border-radius:9px;color:var(--mut);transition:.2s;
+    font:500 11.5px/1 var(--sans);letter-spacing:.01em}
+  .view-btn:hover{background:rgba(255,255,255,.04);color:#c3ccdc}
+  .view-btn.on{background:rgba(var(--accent),.1);color:var(--txt);
+    box-shadow:inset 2px 0 0 rgb(var(--accent))}
+  .view-btn .vi{width:20px;height:20px;border-radius:6px;flex:0 0 20px;
+    display:grid;place-items:center;font:600 10px/1 var(--mono);
+    background:rgba(255,255,255,.05);color:var(--mut2)}
+  .view-btn.on .vi{background:rgba(var(--accent),.2);color:rgb(var(--accent))}
+
+  .key-list{display:flex;flex-direction:column;gap:3px;overflow-y:auto;
+    flex:1;min-height:0;padding-right:2px}
+  .key-list::-webkit-scrollbar{width:4px}
+  .key-list::-webkit-scrollbar-thumb{background:#222a36;border-radius:9px}
+
+  .key-link{all:unset;cursor:pointer;position:relative;
+    display:flex;align-items:center;gap:10px;
+    padding:8px 10px 8px 12px;border-radius:9px;
+    transition:background .18s,color .18s;color:var(--mut);
+    font-size:11.5px}
+  .key-link:hover{background:rgba(255,255,255,.035);color:#c3ccdc}
+  .key-link.on{background:rgba(var(--kc),.1);color:var(--txt)}
+  .key-link.on::before{content:"";position:absolute;left:0;top:50%;
+    translate:0 -50%;width:3px;height:16px;border-radius:9px;
+    background:rgb(var(--kc));box-shadow:0 0 12px 0 rgba(var(--kc),.9)}
+  .key-link .kn{font:700 9.5px/1 var(--mono);
+    color:rgb(var(--kc));letter-spacing:.05em;
+    min-width:22px}
+  .key-link .kt{flex:1;min-width:0;font-weight:500;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .key-link .kd{width:6px;height:6px;border-radius:50%;
+    background:rgb(var(--kc));flex:0 0 6px;
+    box-shadow:0 0 8px 0 rgba(var(--kc),.9)}
+
+  .rail-foot{border-top:1px solid var(--line);padding-top:12px;
+    display:flex;flex-direction:column;gap:10px}
+
+  .split-meter{padding:0 8px;display:flex;flex-direction:column;gap:6px}
+  .split-row{display:flex;justify-content:space-between;align-items:baseline;
+    font:500 9.5px/1 var(--mono);letter-spacing:.08em;
+    text-transform:uppercase;color:var(--mut2)}
+  .split-row b{font-weight:700;font-size:11px;color:#cfd8e8;
+    letter-spacing:-.01em;text-transform:none;font-family:var(--sans)}
+  .split-bar{display:flex;height:6px;border-radius:99px;overflow:hidden;
+    background:#171e28}
+  .split-bar .rigor-fill{background:rgb(var(--rigor));
+    box-shadow:0 0 8px -1px rgba(var(--rigor),.9)}
+  .split-bar .pitch-fill{background:rgb(var(--pitch));
+    box-shadow:0 0 8px -1px rgba(var(--pitch),.9)}
+
+  .btn-demo{all:unset;cursor:pointer;text-align:center;
+    font:600 10px/1 var(--mono);letter-spacing:.09em;text-transform:uppercase;
+    padding:10px 12px;border-radius:9px;color:rgb(var(--accent));
+    background:rgba(var(--accent),.10);border:1px solid rgba(var(--accent),.3);
+    transition:.2s}
+  .btn-demo:hover{background:rgba(var(--accent),.18)}
+  .btn-demo.playing{color:#0a0e13;background:rgb(var(--accent))}
+
+  /* ============ MAIN ============ */
+  .canvas{display:flex;flex-direction:column;min-width:0;min-height:0}
+
+  .topbar{display:flex;align-items:center;gap:14px;
+    padding:14px 26px;border-bottom:1px solid var(--line);
+    background:rgba(8,12,17,.55);backdrop-filter:blur(10px);flex-wrap:wrap}
+  .crumb{flex:1;min-width:0;display:flex;align-items:center;gap:11px;
+    font:500 12px/1.3 var(--mono);color:var(--mut);letter-spacing:.02em;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .crumb b{color:#dfe7f4;font-weight:600}
+  .crumb .sep{color:var(--mut2)}
+  .crumb .pill{font:600 10px/1 var(--mono);letter-spacing:.08em;
+    text-transform:uppercase;padding:5px 9px;border-radius:7px;
+    background:rgba(var(--accent),.12);color:rgb(var(--accent));
+    border:1px solid rgba(var(--accent),.28)}
+
+  .legend-mini{display:flex;gap:14px;flex-wrap:wrap}
+  .lm{display:flex;align-items:center;gap:7px;
+    font:600 10px/1 var(--mono);letter-spacing:.09em;
+    text-transform:uppercase;color:var(--mut)}
+  .lm .sw{width:9px;height:9px;border-radius:3px}
+  .lm.rigor .sw{background:rgb(var(--rigor));
+    box-shadow:0 0 10px -1px rgba(var(--rigor),.9)}
+  .lm.pitch .sw{background:rgb(var(--pitch));
+    box-shadow:0 0 10px -1px rgba(var(--pitch),.9)}
+
+  .stage{flex:1;min-height:0;overflow-y:auto;padding:26px 26px 40px;
+    display:flex;flex-direction:column;gap:18px}
+  .stage::-webkit-scrollbar{width:9px}
+  .stage::-webkit-scrollbar-thumb{background:#1d2531;border-radius:9px}
+  .stage::-webkit-scrollbar-thumb:hover{background:#28323f}
+
+  /* hero */
+  .hero{border-radius:18px;border:1px solid var(--line);
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    padding:26px 28px;position:relative;overflow:hidden;
+    animation:fadeUp .55s cubic-bezier(.2,.7,.3,1) both}
+  .hero::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,
+      rgb(var(--rigor)) 0%,rgb(var(--rigor)) 49%,
+      rgb(var(--pitch)) 51%,rgb(var(--pitch)) 100%)}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}
+    to{opacity:1;transform:none}}
+  .hero .h-k{font:600 10px/1 var(--mono);letter-spacing:.15em;
+    text-transform:uppercase;color:var(--mut);margin-bottom:12px}
+  .hero h1{font:700 28px/1.15 var(--sans);letter-spacing:-.03em;
+    margin-bottom:12px;max-width:26ch}
+  .hero p{font-size:13.5px;color:#a5b1c3;max-width:78ch;line-height:1.65}
+  .hero p b{color:#dfe7f4;font-weight:600}
+  .hero p em{font-style:normal;font-weight:600}
+
+  /* shared spine strip */
+  .shared{margin-top:20px;padding:18px 20px;border-radius:13px;
+    border:1px solid rgba(var(--emerald),.25);
+    background:linear-gradient(90deg,rgba(var(--emerald),.06),
+      rgba(var(--emerald),.02) 70%,transparent)}
+  .shared .s-k{font:600 9.5px/1 var(--mono);letter-spacing:.14em;
+    text-transform:uppercase;color:rgb(var(--emerald));margin-bottom:12px;
+    display:flex;align-items:center;gap:9px}
+  .shared .s-k::before{content:"";width:10px;height:2px;border-radius:2px;
+    background:rgb(var(--emerald))}
+  .shared-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+    gap:8px}
+  .shared-item{display:flex;align-items:flex-start;gap:9px;
+    font-size:12px;line-height:1.55;color:#b9c4d6;
+    padding:7px 10px;border-radius:9px;
+    background:rgba(255,255,255,.02);border:1px solid var(--line)}
+  .shared-item .tick{flex:0 0 14px;width:14px;height:14px;border-radius:4px;
+    display:grid;place-items:center;font-size:8px;font-weight:800;
+    background:rgba(var(--emerald),.16);color:rgb(var(--emerald));
+    margin-top:2px}
+
+  /* ============ OVERVIEW — divergences ============ */
+  .div-list{display:flex;flex-direction:column;gap:12px}
+  .div-card{border-radius:16px;border:1px solid var(--line);
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    overflow:hidden;position:relative;
+    animation:fadeUp .5s cubic-bezier(.2,.7,.3,1) both;
+    animation-delay:var(--d,0ms);
+    transition:border-color .3s}
+  .div-card:hover{border-color:rgba(255,255,255,.14)}
+  .div-card.open{border-color:rgba(255,255,255,.2)}
+
+  .div-head{padding:18px 22px;display:flex;align-items:center;gap:14px;
+    cursor:pointer}
+  .div-num{
+    flex:0 0 34px;width:34px;height:34px;border-radius:10px;
+    display:grid;place-items:center;font:700 13px/1 var(--mono);
+    background:rgba(255,255,255,.05);color:var(--mut);
+    border:1px solid var(--line);
+    transition:.3s}
+  .div-card.open .div-num{background:rgba(var(--accent),.15);
+    color:rgb(var(--accent));border-color:rgba(var(--accent),.35)}
+  .div-meta{flex:1;min-width:0}
+  .div-name{font:650 15px/1.3 var(--sans);color:#eef3fb;
+    letter-spacing:-.01em;margin-bottom:5px}
+  .div-summary{font-size:12px;color:var(--mut);line-height:1.5}
+  .div-summary b{color:#cfd8e8;font-weight:500}
+  .div-chev{color:var(--mut2);transition:.3s;font-size:14px}
+  .div-card.open .div-chev{transform:rotate(90deg);color:rgb(var(--accent))}
+
+  .div-body{max-height:0;overflow:hidden;
+    transition:max-height .55s cubic-bezier(.2,.7,.3,1)}
+  .div-card.open .div-body{max-height:720px}
+  .div-panels{display:grid;grid-template-columns:1fr 1fr;gap:0;
+    border-top:1px solid var(--line)}
+  .div-panel{padding:18px 22px;position:relative}
+  .div-panel.rigor{background:linear-gradient(180deg,
+    rgba(var(--rigor),.04),transparent 70%);
+    border-right:1px solid var(--line)}
+  .div-panel.pitch{background:linear-gradient(180deg,
+    rgba(var(--pitch),.04),transparent 70%)}
+  .div-panel .dp-k{font:600 9.5px/1 var(--mono);letter-spacing:.14em;
+    text-transform:uppercase;margin-bottom:11px;
+    display:flex;align-items:center;gap:8px}
+  .div-panel.rigor .dp-k{color:rgb(var(--rigor))}
+  .div-panel.pitch .dp-k{color:rgb(var(--pitch))}
+  .div-panel .dp-k::before{content:"";width:10px;height:2px;border-radius:2px;
+    background:currentColor}
+  .div-panel .dp-pos{font-size:13px;line-height:1.65;color:#b9c4d6;
+    margin-bottom:12px}
+  .div-panel .dp-pos b{color:#fff;font-weight:600}
+  .div-panel .dp-quote{font:400 11px/1.6 var(--mono);color:var(--mut);
+    padding:11px 13px;border-radius:9px;
+    background:rgba(0,0,0,.35);
+    border-left:2px solid rgba(255,255,255,.08);
+    letter-spacing:.01em}
+  .div-panel.rigor .dp-quote{border-left-color:rgba(var(--rigor),.5)}
+  .div-panel.pitch .dp-quote{border-left-color:rgba(var(--pitch),.5)}
+  .div-verdict{padding:14px 22px;border-top:1px solid var(--line);
+    background:rgba(0,0,0,.25);
+    font:500 11.5px/1.55 var(--mono);color:var(--mut);
+    letter-spacing:.02em;display:flex;gap:12px;align-items:flex-start}
+  .div-verdict .vk{flex:0 0 auto;font:700 9px/1 var(--mono);
+    letter-spacing:.14em;text-transform:uppercase;
+    padding:4px 7px;border-radius:5px;
+    background:rgba(var(--gold),.14);color:rgb(var(--gold));
+    border:1px solid rgba(var(--gold),.3);margin-top:1px}
+  .div-verdict b{color:#e9eef6;font-weight:600}
+
+  /* ============ TARGETS ============ */
+  .target-hero{border-radius:18px;border:1px solid var(--line);
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    padding:26px 28px;position:relative;overflow:hidden;
+    animation:fadeUp .55s cubic-bezier(.2,.7,.3,1) both}
+  .target-hero::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,rgb(var(--rose)),rgb(var(--gold)))}
+  .target-hero .k{font:600 10px/1 var(--mono);letter-spacing:.15em;
+    text-transform:uppercase;color:rgb(var(--rose));margin-bottom:12px}
+  .target-hero h2{font:700 26px/1.2 var(--sans);letter-spacing:-.025em;
+    margin-bottom:12px;max-width:26ch}
+  .target-hero p{font-size:13.5px;color:#a5b1c3;max-width:78ch;line-height:1.65}
+  .target-hero p b{color:#dfe7f4;font-weight:600}
+
+  .ladder-wrap{border-radius:16px;border:1px solid var(--line);
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    padding:28px 26px 24px;
+    animation:fadeUp .55s cubic-bezier(.2,.7,.3,1) both .1s}
+  .ladder-head{display:flex;align-items:center;justify-content:space-between;
+    gap:14px;margin-bottom:26px;flex-wrap:wrap}
+  .ladder-title{font:650 15px/1.3 var(--sans);color:#eef3fb;
+    letter-spacing:-.01em}
+  .ladder-title small{display:block;font:400 10.5px/1.4 var(--mono);
+    color:var(--mut2);letter-spacing:.05em;margin-top:4px;
+    font-weight:400}
+  .ladder-legend{display:flex;gap:14px}
+  .ll{display:flex;align-items:center;gap:7px;
+    font:600 10.5px/1 var(--mono);letter-spacing:.08em;
+    text-transform:uppercase;color:var(--mut)}
+  .ll .sw{width:11px;height:11px;border-radius:3px}
+  .ll.rigor .sw{background:rgb(var(--rigor))}
+  .ll.pitch .sw{background:rgb(var(--pitch))}
+
+  .axis{position:relative;padding:32px 0 0}
+  .axis-lines{position:absolute;left:0;right:0;top:32px;bottom:0;
+    pointer-events:none}
+  .axis-line{position:absolute;left:0;right:0;
+    border-top:1px dashed rgba(255,255,255,.05)}
+  .axis-line span{position:absolute;right:0;top:-8px;
+    font:500 9.5px/1 var(--mono);color:var(--mut2);
+    letter-spacing:.06em;background:var(--panel);padding:1px 6px;
+    border-radius:3px}
+  .axis-line.median{border-top-style:solid;
+    border-top-color:rgba(var(--gold),.4)}
+  .axis-line.median span{color:rgb(var(--gold));
+    background:rgba(var(--gold),.1)}
+
+  .bar-groups{display:grid;
+    grid-template-columns:repeat(3,1fr);gap:24px;
+    position:relative;z-index:2}
+  .bar-group{display:flex;flex-direction:column;align-items:center;gap:10px}
+  .bar-pair{display:flex;gap:10px;align-items:flex-end;
+    height:260px;padding-bottom:0}
+  .bar{width:44px;border-radius:7px 7px 0 0;position:relative;
+    transition:height 1.1s cubic-bezier(.22,.75,.3,1);
+    min-height:3px}
+  .bar.rigor{background:linear-gradient(180deg,
+    rgb(var(--rigor)),rgba(var(--rigor),.35));
+    box-shadow:0 0 24px -8px rgba(var(--rigor),.9)}
+  .bar.pitch{background:linear-gradient(180deg,
+    rgb(var(--pitch)),rgba(var(--pitch),.35));
+    box-shadow:0 0 24px -8px rgba(var(--pitch),.9)}
+  .bar .bar-val{position:absolute;top:-22px;left:50%;translate:-50% 0;
+    font:700 12px/1 var(--mono);letter-spacing:-.02em;white-space:nowrap}
+  .bar.rigor .bar-val{color:rgb(var(--rigor))}
+  .bar.pitch .bar-val{color:rgb(var(--pitch))}
+  .bar-label{font:600 10.5px/1 var(--mono);letter-spacing:.12em;
+    text-transform:uppercase;color:var(--mut);
+    padding-top:8px;border-top:1px solid var(--line);width:100%;
+    text-align:center}
+
+  .gap-callout{display:grid;grid-template-columns:repeat(3,1fr);
+    gap:24px;margin-top:20px;padding-top:20px;
+    border-top:1px solid var(--line)}
+  .gap-cell{text-align:center}
+  .gap-cell .gk{font:600 9px/1 var(--mono);letter-spacing:.13em;
+    text-transform:uppercase;color:var(--mut2);margin-bottom:8px}
+  .gap-cell .gv{font:700 15px/1 var(--sans);letter-spacing:-.02em;
+    color:rgb(var(--rose));font-variant-numeric:tabular-nums}
+  .gap-cell .gv small{font-size:11px;color:var(--mut2);font-weight:600;
+    margin-left:2px}
+
+  .target-note{margin-top:20px;padding:14px 16px;border-radius:11px;
+    border:1px dashed rgba(var(--rose),.3);
+    background:rgba(var(--rose),.04);
+    display:flex;gap:12px;align-items:flex-start;
+    font-size:12.5px;line-height:1.6;color:#d8c4c8}
+  .target-note .ic{flex:0 0 22px;width:22px;height:22px;border-radius:7px;
+    display:grid;place-items:center;font-size:11px;
+    background:rgba(var(--rose),.15);color:#ff8a94}
+  .target-note b{color:#fff;font-weight:600}
+
+  /* ============ WEEKS ============ */
+  .week-tabs{display:flex;gap:6px;padding:5px;border-radius:11px;
+    background:rgba(255,255,255,.03);border:1px solid var(--line);
+    width:fit-content}
+  .week-tab{all:unset;cursor:pointer;
+    font:600 10.5px/1 var(--mono);letter-spacing:.09em;text-transform:uppercase;
+    padding:9px 14px;border-radius:8px;color:var(--mut);transition:.2s}
+  .week-tab:hover{color:#c3ccdc}
+  .week-tab.on{color:#0a0e13;background:rgb(var(--accent))}
+
+  .week-split{display:grid;grid-template-columns:1fr 1fr;gap:0;
+    border-radius:16px;border:1px solid var(--line);overflow:hidden}
+  .week-side{padding:24px 26px}
+  .week-side.rigor{background:linear-gradient(180deg,
+    rgba(var(--rigor),.04),rgba(13,18,24,.7));
+    border-right:1px solid var(--line)}
+  .week-side.pitch{background:linear-gradient(180deg,
+    rgba(var(--pitch),.04),rgba(13,18,24,.7))}
+  .week-side .ws-head{display:flex;align-items:center;gap:11px;
+    margin-bottom:18px;padding-bottom:14px;
+    border-bottom:1px solid var(--line)}
+  .week-side .ws-ico{width:32px;height:32px;border-radius:9px;
+    display:grid;place-items:center;font-size:14px}
+  .week-side.rigor .ws-ico{background:rgba(var(--rigor),.14);
+    color:rgb(var(--rigor));border:1px solid rgba(var(--rigor),.3)}
+  .week-side.pitch .ws-ico{background:rgba(var(--pitch),.14);
+    color:rgb(var(--pitch));border:1px solid rgba(var(--pitch),.3)}
+  .week-side .ws-name{font:650 14px/1.3 var(--sans);color:#eef3fb}
+  .week-side .ws-sub{font:500 10px/1.3 var(--mono);color:var(--mut2);
+    letter-spacing:.05em;margin-top:3px;text-transform:lowercase}
+
+  .deliv{display:flex;flex-direction:column;gap:12px}
+  .deliv-item{display:flex;gap:12px;align-items:flex-start;
+    padding:12px 14px;border-radius:11px;
+    background:rgba(255,255,255,.02);border:1px solid var(--line);
+    transition:.25s}
+  .deliv-item:hover{transform:translateX(2px)}
+  .week-side.rigor .deliv-item:hover{border-color:rgba(var(--rigor),.4);
+    background:rgba(var(--rigor),.03)}
+  .week-side.pitch .deliv-item:hover{border-color:rgba(var(--pitch),.4);
+    background:rgba(var(--pitch),.03)}
+  .deliv-num{flex:0 0 22px;width:22px;height:22px;border-radius:7px;
+    display:grid;place-items:center;font:700 10px/1 var(--mono);
+    margin-top:1px}
+  .week-side.rigor .deliv-num{background:rgba(var(--rigor),.14);
+    color:rgb(var(--rigor))}
+  .week-side.pitch .deliv-num{background:rgba(var(--pitch),.14);
+    color:rgb(var(--pitch))}
+  .deliv-body{flex:1;min-width:0}
+  .deliv-name{font:600 12.5px/1.4 var(--sans);color:#e9eef6;
+    margin-bottom:5px}
+  .deliv-verify{font-size:11px;line-height:1.55;color:var(--mut);
+    padding-top:6px;border-top:1px dashed #232c39;margin-top:6px}
+  .deliv-verify b{color:rgb(var(--accent));font-weight:600}
+
+  .week-summary{padding:16px 20px;border-top:1px solid var(--line);
+    background:rgba(0,0,0,.22);
+    display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+    font:500 11.5px/1.5 var(--mono);color:var(--mut);
+    letter-spacing:.02em}
+  .week-summary .ws-key{color:rgb(var(--accent));font-weight:600;
+    text-transform:uppercase;letter-spacing:.1em;font-size:10px}
+
+  /* ============ COVERAGE ============ */
+  .cov-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .cov-col{border-radius:16px;border:1px solid var(--line);
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    padding:22px 22px 20px;position:relative;overflow:hidden;
+    animation:fadeUp .5s cubic-bezier(.2,.7,.3,1) both}
+  .cov-col.rigor{--c:var(--rigor)}
+  .cov-col.pitch{--c:var(--pitch)}
+  .cov-col::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,rgb(var(--c)),rgba(var(--c),.15))}
+  .cov-head{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+  .cov-ico{width:36px;height:36px;border-radius:11px;
+    display:grid;place-items:center;font-size:15px;
+    background:rgba(var(--c),.14);color:rgb(var(--c));
+    border:1px solid rgba(var(--c),.3)}
+  .cov-name{font:650 15px/1.25 var(--sans);color:#eef3fb;
+    letter-spacing:-.01em}
+  .cov-sub{font:500 10px/1.3 var(--mono);color:var(--mut2);
+    letter-spacing:.05em;margin-top:3px}
+  .cov-list{display:flex;flex-direction:column;gap:9px}
+  .cov-item{display:flex;gap:11px;align-items:flex-start;
+    padding:11px 13px;border-radius:10px;
+    background:rgba(255,255,255,.02);border:1px solid var(--line);
+    font-size:12.5px;line-height:1.55;color:#b9c4d6;
+    transition:.25s}
+  .cov-item:hover{border-color:rgba(var(--c),.4);
+    background:rgba(var(--c),.04);transform:translateX(2px)}
+  .cov-item .tick{flex:0 0 14px;width:14px;height:14px;border-radius:4px;
+    display:grid;place-items:center;font-size:8px;font-weight:800;
+    background:rgba(var(--c),.16);color:rgb(var(--c));
+    margin-top:2px}
+
+  /* ============ SIMULATOR ============ */
+  .sim-hero{border-radius:18px;border:1px solid var(--line);
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    padding:26px 28px;position:relative;overflow:hidden;
+    animation:fadeUp .55s cubic-bezier(.2,.7,.3,1) both}
+  .sim-hero::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,rgb(var(--cyan)),rgb(var(--violet)),rgb(var(--emerald)))}
+  .sim-hero .k{font:600 10px/1 var(--mono);letter-spacing:.15em;
+    text-transform:uppercase;color:rgb(var(--cyan));margin-bottom:12px}
+  .sim-hero h2{font:700 26px/1.2 var(--sans);letter-spacing:-.025em;
+    margin-bottom:12px;max-width:26ch}
+  .sim-hero p{font-size:13.5px;color:#a5b1c3;max-width:78ch;line-height:1.65}
+  .sim-hero p b{color:#dfe7f4;font-weight:600}
+  .sim-hero p em{font-style:normal;color:rgb(var(--cyan));font-weight:600}
+
+  .sim-wrap{display:grid;grid-template-columns:340px 1fr;gap:18px;
+    align-items:start}
+  .sim-controls{border-radius:16px;border:1px solid var(--line);
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    padding:22px 22px 22px;
+    animation:fadeUp .5s cubic-bezier(.2,.7,.3,1) both .05s}
+  .sim-controls .sc-k{font:600 9.5px/1 var(--mono);letter-spacing:.14em;
+    text-transform:uppercase;color:var(--mut2);
+    margin-bottom:18px;display:flex;align-items:center;gap:9px}
+  .sim-controls .sc-k::before{content:"";width:10px;height:2px;
+    border-radius:2px;background:rgb(var(--accent))}
+
+  .sim-input{display:flex;flex-direction:column;gap:9px;
+    padding:14px 0;border-top:1px solid var(--line)}
+  .sim-input:first-of-type{border-top:none;padding-top:0}
+  .sim-input .si-row{display:flex;justify-content:space-between;
+    align-items:baseline;gap:10px}
+  .sim-input .si-name{font:600 12px/1.3 var(--sans);color:#e9eef6;
+    letter-spacing:-.005em;display:flex;align-items:center;gap:8px}
+  .sim-input .si-name code{font-family:var(--mono);font-size:10.5px;
+    color:rgb(var(--accent));background:rgba(var(--accent),.12);
+    padding:2px 5px;border-radius:4px}
+  .sim-input .si-val{font:700 15px/1 var(--mono);
+    color:rgb(var(--accent));letter-spacing:-.02em;
+    font-variant-numeric:tabular-nums;white-space:nowrap}
+  .sim-input .si-hint{font-size:10.5px;line-height:1.45;color:var(--mut2);
+    font-family:var(--mono);letter-spacing:.02em}
+  .sim-input input[type="range"]{
+    -webkit-appearance:none;appearance:none;
+    width:100%;height:4px;border-radius:99px;background:#171e28;
+    outline:none;margin:4px 0 2px;cursor:pointer}
+  .sim-input input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance:none;appearance:none;
+    width:16px;height:16px;border-radius:50%;
+    background:rgb(var(--accent));
+    box-shadow:0 0 0 4px rgba(var(--accent),.2),
+               0 0 14px -2px rgba(var(--accent),.9);
+    cursor:pointer;transition:.15s}
+  .sim-input input[type="range"]::-webkit-slider-thumb:hover{
+    transform:scale(1.1)}
+  .sim-input input[type="range"]::-moz-range-thumb{
+    width:16px;height:16px;border-radius:50%;
+    background:rgb(var(--accent));border:none;
+    box-shadow:0 0 0 4px rgba(var(--accent),.2);
+    cursor:pointer}
+
+  .sim-presets{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
+  .sim-preset{all:unset;cursor:pointer;
+    font:600 9.5px/1 var(--mono);letter-spacing:.05em;
+    padding:6px 10px;border-radius:6px;
+    color:var(--mut);border:1px solid var(--line);
+    background:rgba(255,255,255,.02);transition:.2s}
+  .sim-preset:hover{color:#c3ccdc;border-color:#2b3543}
+  .sim-preset.on{color:rgb(var(--accent));
+    border-color:rgba(var(--accent),.45);
+    background:rgba(var(--accent),.1)}
+
+  .sim-reset{all:unset;cursor:pointer;text-align:center;
+    width:100%;margin-top:14px;padding:10px 12px;border-radius:9px;
+    font:600 10px/1 var(--mono);letter-spacing:.09em;
+    text-transform:uppercase;color:var(--mut);
+    border:1px solid var(--line);background:rgba(255,255,255,.02);
+    transition:.2s}
+  .sim-reset:hover{color:#c3ccdc;border-color:#2b3543}
+
+  /* simulator outputs */
+  .sim-outputs{display:flex;flex-direction:column;gap:14px;
+    animation:fadeUp .5s cubic-bezier(.2,.7,.3,1) both .1s}
+
+  .sim-metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:12px}
+  .sim-metric{padding:18px 20px;border-radius:14px;
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    border:1px solid var(--line);position:relative;overflow:hidden;
+    transition:.25s}
+  .sim-metric::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;
+    background:linear-gradient(90deg,rgb(var(--mc)),rgba(var(--mc),.15))}
+  .sim-metric .sm-k{font:600 9.5px/1 var(--mono);letter-spacing:.13em;
+    text-transform:uppercase;color:var(--mut2);margin-bottom:10px}
+  .sim-metric .sm-v{font:700 26px/1 var(--sans);letter-spacing:-.04em;
+    color:rgb(var(--mc));font-variant-numeric:tabular-nums;
+    display:flex;align-items:baseline;gap:3px}
+  .sim-metric .sm-v small{font-size:12px;font-weight:600;color:var(--mut2)}
+  .sim-metric .sm-sub{font:400 11px/1.5 var(--sans);color:var(--mut);
+    margin-top:8px}
+  .sim-metric .sm-sub b{color:#cfd8e8;font-weight:500}
+
+  /* ladder verdict box */
+  .sim-verdict{padding:22px 24px;border-radius:16px;
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    border:1px solid var(--line);position:relative;overflow:hidden}
+  .sim-verdict::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;
+    background:linear-gradient(90deg,rgb(var(--gold)),rgba(var(--gold),.15))}
+  .sim-verdict .sv-k{font:600 9.5px/1 var(--mono);letter-spacing:.14em;
+    text-transform:uppercase;color:rgb(var(--gold));margin-bottom:14px;
+    display:flex;align-items:center;gap:9px}
+  .sim-verdict .sv-k::before{content:"";width:10px;height:2px;
+    border-radius:2px;background:currentColor}
+
+  .verdict-row{display:flex;align-items:center;gap:14px;
+    padding:11px 0;border-top:1px solid var(--line)}
+  .verdict-row:first-of-type{border-top:none;padding-top:0}
+  .verdict-row:last-of-type{padding-bottom:0}
+  .verdict-tag{flex:0 0 130px;
+    font:600 10px/1.3 var(--mono);letter-spacing:.09em;
+    text-transform:uppercase}
+  .verdict-tag.rigor{color:rgb(var(--rigor))}
+  .verdict-tag.pitch{color:rgb(var(--pitch))}
+  .verdict-bar{flex:1;height:8px;border-radius:99px;
+    background:#171e28;overflow:hidden;position:relative}
+  .verdict-bar .vb-fill{height:100%;border-radius:99px;
+    transition:width .55s cubic-bezier(.22,.75,.3,1)}
+  .verdict-bar .vb-fill.rigor{background:rgb(var(--rigor));
+    box-shadow:0 0 12px -2px rgba(var(--rigor),.9)}
+  .verdict-bar .vb-fill.pitch{background:rgb(var(--pitch));
+    box-shadow:0 0 12px -2px rgba(var(--pitch),.9)}
+  .verdict-bar .vb-mark{position:absolute;top:-3px;bottom:-3px;width:2px;
+    background:#fff;border-radius:2px;
+    box-shadow:0 0 6px 0 rgba(255,255,255,.7);
+    transition:left .55s cubic-bezier(.22,.75,.3,1)}
+  .verdict-status{flex:0 0 70px;text-align:right;
+    font:700 10px/1.3 var(--mono);letter-spacing:.08em;
+    text-transform:uppercase}
+  .verdict-status.pass{color:rgb(var(--emerald))}
+  .verdict-status.miss{color:rgb(var(--rose))}
+
+  .sim-note{margin-top:8px;padding:13px 15px;border-radius:11px;
+    border:1px dashed var(--line);font-size:11.5px;line-height:1.6;
+    color:var(--mut);font-family:var(--mono);letter-spacing:.02em}
+  .sim-note b{color:#cfd8e8;font-weight:600}
+
+  /* ============ MERGE ============ */
+  .merge-hero{border-radius:18px;border:1px solid var(--line);
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    padding:26px 28px;position:relative;overflow:hidden;
+    animation:fadeUp .55s cubic-bezier(.2,.7,.3,1) both}
+  .merge-hero::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,rgb(var(--rigor)),rgb(var(--gold)),rgb(var(--pitch)))}
+  .merge-hero .k{font:600 10px/1 var(--mono);letter-spacing:.15em;
+    text-transform:uppercase;color:rgb(var(--gold));margin-bottom:12px}
+  .merge-hero h2{font:700 26px/1.2 var(--sans);letter-spacing:-.025em;
+    margin-bottom:12px;max-width:28ch}
+  .merge-hero p{font-size:13.5px;color:#a5b1c3;max-width:78ch;line-height:1.65}
+  .merge-hero p b{color:#dfe7f4;font-weight:600}
+
+  .merge-table{border-radius:16px;border:1px solid var(--line);
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    overflow:hidden;
+    animation:fadeUp .5s cubic-bezier(.2,.7,.3,1) both .1s}
+  .merge-row{display:grid;
+    grid-template-columns:180px 1fr 1fr;
+    border-top:1px solid var(--line)}
+  .merge-row:first-child{border-top:none}
+  .merge-row.head{background:rgba(255,255,255,.02)}
+  .merge-row.head > div{font:600 9.5px/1.3 var(--mono);
+    letter-spacing:.13em;text-transform:uppercase;color:var(--mut2);
+    padding:14px 18px}
+  .merge-row.head > div.rigor-col{color:rgb(var(--rigor))}
+  .merge-row.head > div.pitch-col{color:rgb(var(--pitch))}
+  .merge-row > div{padding:15px 18px;
+    font-size:12.5px;line-height:1.6;color:#b9c4d6;
+    border-left:1px solid var(--line)}
+  .merge-row > div:first-child{border-left:none}
+  .merge-row .mr-key{font:600 11.5px/1.4 var(--sans);color:#eef3fb;
+    letter-spacing:-.005em}
+  .merge-row .mr-key small{display:block;font:500 10px/1.3 var(--mono);
+    color:var(--mut2);letter-spacing:.05em;margin-top:5px;
+    font-weight:400}
+  .merge-row .mr-cell.rigor{background:rgba(var(--rigor),.025)}
+  .merge-row .mr-cell.pitch{background:rgba(var(--pitch),.025)}
+  .merge-row .mr-cell .picked{
+    display:inline-flex;align-items:center;gap:7px;
+    font:700 9px/1 var(--mono);letter-spacing:.12em;
+    text-transform:uppercase;padding:4px 8px;border-radius:5px;
+    margin-bottom:8px}
+  .merge-row .mr-cell .picked.rigor{
+    background:rgba(var(--rigor),.14);color:rgb(var(--rigor));
+    border:1px solid rgba(var(--rigor),.3)}
+  .merge-row .mr-cell .picked.pitch{
+    background:rgba(var(--pitch),.14);color:rgb(var(--pitch));
+    border:1px solid rgba(var(--pitch),.3)}
+  .merge-row .mr-cell .picked.both{
+    background:rgba(var(--gold),.14);color:rgb(var(--gold));
+    border:1px solid rgba(var(--gold),.3)}
+  .merge-row .mr-cell .picked.none{
+    background:rgba(255,255,255,.04);color:var(--mut2);
+    border:1px solid var(--line)}
+  .merge-row .mr-cell .why{color:var(--mut);font-size:11.5px}
+
+  .merge-final{padding:24px 26px;border-radius:16px;
+    background:linear-gradient(135deg,
+      rgba(var(--rigor),.06),rgba(var(--gold),.04),rgba(var(--pitch),.06));
+    border:1px solid rgba(var(--gold),.28);
+    animation:fadeUp .5s cubic-bezier(.2,.7,.3,1) both .15s;
+    position:relative;overflow:hidden}
+  .merge-final::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;
+    background:linear-gradient(90deg,rgb(var(--rigor)),rgb(var(--gold)),rgb(var(--pitch)))}
+  .merge-final .mf-k{font:600 10px/1 var(--mono);letter-spacing:.15em;
+    text-transform:uppercase;color:rgb(var(--gold));margin-bottom:14px;
+    display:flex;align-items:center;gap:10px}
+  .merge-final .mf-k::before{content:"";width:14px;height:2px;
+    border-radius:2px;background:currentColor}
+  .merge-final h3{font:700 20px/1.3 var(--sans);letter-spacing:-.02em;
+    color:#fff;margin-bottom:14px;max-width:50ch}
+  .merge-final p{font-size:13.5px;line-height:1.7;color:#c4cfe0;
+    max-width:80ch}
+  .merge-final p + p{margin-top:12px}
+  .merge-final p b{color:#fff;font-weight:600}
+  .merge-final p em{font-style:normal;color:rgb(var(--gold));font-weight:600}
+
+  /* ============ STATUS BAR ============ */
+  .statusbar{display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+    padding:10px 26px;border-top:1px solid var(--line);
+    background:rgba(8,12,17,.6);
+    font:400 10.5px/1 var(--mono);color:var(--mut2);letter-spacing:.03em}
+  .statusbar b{color:var(--mut);font-weight:500}
+  .statusbar .right{margin-left:auto;display:flex;align-items:center;gap:14px;
+    flex-wrap:wrap}
+  .statusbar .chip{color:rgb(var(--accent));background:rgba(var(--accent),.1);
+    padding:4px 7px;border-radius:5px;font-size:9.5px;letter-spacing:.05em}
+  .statusbar .chip.rigor{color:rgb(var(--rigor));
+    background:rgba(var(--rigor),.1)}
+  .statusbar .chip.pitch{color:rgb(var(--pitch));
+    background:rgba(var(--pitch),.1)}
+
+  /* responsive */
+  @media (max-width:1000px){
+    .app{grid-template-columns:1fr;grid-template-rows:auto 1fr}
+    .rail{flex-direction:column;border-right:none;
+      border-bottom:1px solid var(--line);padding:12px 12px 0;gap:10px}
+    .brand{padding-bottom:10px}
+    .view-switch{flex-direction:row;overflow-x:auto;gap:5px;
+      padding-bottom:6px}
+    .view-btn{flex:0 0 auto;padding:8px 12px}
+    .key-list{flex-direction:row;overflow-x:auto;overflow-y:hidden;
+      padding-bottom:12px;gap:6px}
+    .key-link{flex:0 0 auto;padding:8px 12px}
+    .key-link.on::before{display:none}
+    .rail-foot{display:none}
+    .stage{padding:18px 16px 30px}
+    .div-panels{grid-template-columns:1fr}
+    .div-panel.rigor{border-right:none;
+      border-bottom:1px solid var(--line)}
+    .week-split{grid-template-columns:1fr}
+    .week-side.rigor{border-right:none;
+      border-bottom:1px solid var(--line)}
+    .cov-grid{grid-template-columns:1fr}
+    .sim-wrap{grid-template-columns:1fr}
+    .merge-row{grid-template-columns:1fr}
+    .merge-row.head{display:none}
+    .merge-row > div{border-left:none;border-top:1px solid var(--line)}
+    .merge-row > div:first-child{border-top:none}
+    .bar-groups{gap:14px}
+    .bar{width:34px}
+    .topbar{padding:12px 16px}
+    .statusbar{padding:10px 16px}
+    .statusbar .right{margin-left:0}
+  }
+  @media (max-width:560px){
+    .hero h1{font-size:22px}
+    .target-hero h2,.sim-hero h2,.merge-hero h2{font-size:20px}
+    .bar{width:28px}
+    .bar-pair{gap:6px}
+    .gap-callout{gap:12px}
+  }
+</style>
+</head>
+<body>
+
+<div class="bg" id="bg"></div>
+
+<div class="app">
+
+  <!-- ==================== LEFT RAIL ==================== -->
+  <aside class="rail">
+    <div class="brand">
+      <div class="logo">⇄</div>
+      <div>
+        <div class="brand-name">Plan Comparison</div>
+        <div class="brand-sub">rigor vs pitch</div>
+      </div>
+    </div>
+
+    <div class="rail-label">Views</div>
+    <div class="view-switch" id="viewSwitch">
+      <button class="view-btn on" data-view="overview" style="--accent:245,190,60">
+        <span class="vi">▤</span> Overview
+      </button>
+      <button class="view-btn" data-view="targets" style="--accent:244,63,94">
+        <span class="vi">◬</span> Targets
+      </button>
+      <button class="view-btn" data-view="weeks" style="--accent:167,139,250">
+        <span class="vi">▥</span> Week by week
+      </button>
+      <button class="view-btn" data-view="coverage" style="--accent:52,211,153">
+        <span class="vi">◇</span> Coverage
+      </button>
+      <button class="view-btn" data-view="sim" style="--accent:34,211,238">
+        <span class="vi">⌗</span> Calculator
+      </button>
+      <button class="view-btn" data-view="merge" style="--accent:245,190,60">
+        <span class="vi">⊕</span> Merge
+      </button>
+    </div>
+
+    <div class="rail-label" id="keyLabel">Divergences</div>
+    <div class="key-list" id="keyList"></div>
+
+    <div class="rail-foot">
+      <div class="split-meter">
+        <div class="split-row">
+          <span>Rigor wins</span>
+          <span>Pitch wins</span>
+        </div>
+        <div class="split-bar">
+          <div class="rigor-fill" id="rigorFill" style="width:50%"></div>
+          <div class="pitch-fill" id="pitchFill" style="width:50%"></div>
+        </div>
+      </div>
+      <button class="btn-demo" id="demoBtn">▶ run demo</button>
+    </div>
+  </aside>
+
+  <!-- ==================== MAIN ==================== -->
+  <main class="canvas">
+    <header class="topbar">
+      <div class="crumb" id="crumb"></div>
+      <div class="legend-mini">
+        <span class="lm rigor"><span class="sw"></span>Rigor · annex + plan</span>
+        <span class="lm pitch"><span class="sw"></span>Pitch · review brief</span>
+      </div>
+    </header>
+
+    <section class="stage" id="stage"></section>
+
+    <footer class="statusbar" id="statusbar"></footer>
+  </main>
+
+</div>
+
+<script>
+/* =========================================================
+   DATA
+   ========================================================= */
+const DIVERGENCES = [
+  {
+    num:"01",
+    name:"Conversion targets — 3× apart",
+    summary:"<b>1/2/3%</b> (rigor) vs <b>3/5/7%</b> (pitch). Same plan, different definition of success.",
+    rigor:{
+      pos:"M1 = <b>1.0%</b>, M2 = <b>2.0%</b>, M3 = <b>3.0%</b> cumulative on the addressable cohort. Framed explicitly as a <b>decision threshold</b>, not a forecast. Below the 8% median on purpose.",
+      quote:"“A deliberately conservative first decision threshold, pending denominator cleanup, and below the broad 8% six-month software median. It is a hypothesis, not inferred from Bayan history.”"
+    },
+    pitch:{
+      pos:"M1 = <b>3%</b>, M2 = <b>5%</b>, M3 = <b>7%</b>. Framed as <b>realistic</b>, with an explicit worked dollar model.",
+      quote:"“A re-engaged, nurtured base with a working paywall realistically reaches 3–5% of the addressable cohort within 90 days.”"
+    },
+    verdict:"If M2 = 2% (rigor) lands, the rigor reads as success. If the pitch is the contract and 2% lands, it reads as a miss. <b>Which ladder is the contract decides what 'working' means.</b>"
+  },
+  {
+    num:"02",
+    name:"Revenue math — parameterized vs worked numbers",
+    summary:"Rigor shows <code>A × r × P</code> with every term [confirm]. Pitch supplies A=400, ARPU ~$16, explicit MRR.",
+    rigor:{
+      pos:"Formula: <code>A × r × P</code>. Every cell marked <code>[confirm A and P]</code>. <b>$277 ÷ 1,300 is explicitly not ARPU.</b> No dollar figure is shown until inputs are verified.",
+      quote:"“It is not responsible to turn conversion targets into a revenue forecast… Existing $277 cannot be used as P without matched buyer count/window.”"
+    },
+    pitch:{
+      pos:"Worked model at <b>A = 400</b>, <b>ARPU ~$16</b>. Produces ~$190 / ~$320 / ~$450 MRR for M1/M2/M3. Every figure labelled “illustrative — replace A with Week-1's addressable count.”",
+      quote:"“If A = 400 → new paid ~12 / ~20 / ~28. Added MRR @ ~$16 blended ARPU ~$190 / ~$320 / ~$450.”"
+    },
+    verdict:"<b>Audit-safe vs motivating.</b> If the number is wrong, the pitch loses credibility. If it's right, the rigor looks evasive. Which one the CEO sees first sets the tone."
+  },
+  {
+    num:"03",
+    name:"Bucket model — 4 buckets vs 3 + inactive",
+    summary:"Rigor forces G + F + A + U = 1,300 with a precedence rule. Pitch supplies Oman NOT being free-country.",
+    rigor:{
+      pos:"Four buckets: <b>G</b> (grandfathered), <b>F</b> (free-country), <b>A</b> (addressable), <b>U</b> (unresolved). Documented <b>precedence rule</b> prevents double-counting. <code>G + F + A + U = 1,300</code> forced.",
+      quote:"“Use a documented precedence rule to avoid double-counting overlap… Reconcile the buckets to 1,300 only after deduplication.”"
+    },
+    pitch:{
+      pos:"Three buckets + inactive: grandfathered / free-country / inactive / addressable. Supplies a specific fact — <b>13 humanitarian countries; Oman is NOT on the list</b>. No precedence rule stated.",
+      quote:"“13 humanitarian countries free; some users aren't in a paying profession/exam. Oman is NOT on the [free-country] list.”"
+    },
+    verdict:"<b>Rigor is more rigorous about the denominator. Pitch supplies a load-bearing fact the rigor leaves open.</b> Merge: rigor's model + pitch's Oman finding."
+  },
+  {
+    num:"04",
+    name:"Week 1 — what ships first",
+    summary:"Rigor defers instrumentation to Week 2. Pitch does it Week 1 and adds the locked question count.",
+    rigor:{
+      pos:"Week 1 = segmentation + <b>3 landing page drafts</b>. Funnel instrumentation deferred to Week 2. No mention of the question-count problem.",
+      quote:"Week 1 deliverable 3: “Three full-copy, unpublished conversion landing-page drafts… mapped to existing verified site paths.”"
+    },
+    pitch:{
+      pos:"Week 1 = segmentation + <b>funnel instrumentation live</b> + <b>3 landing pages</b> + <b>locked question count</b> (fixes the 8 conflicting values across surfaces).",
+      quote:"“The official question count appears as 8 different values across the live surfaces (4,000 / 5,000 / 5,589 / 5,610 / 5,760 / 10,000+ …).”"
+    },
+    verdict:"<b>Sequencing disagreement.</b> Rigor's position: pages are drafts, they can ship before measurement. Pitch's position: nothing is measurable without instrumentation, so it goes first. Pitch's ordering is more honest about Week 2's dependency."
+  },
+  {
+    num:"05",
+    name:"Week 2 — measurement vs activation",
+    summary:"Rigor spends Week 2 still measuring. Pitch spends Week 2 shipping the activation machinery.",
+    rigor:{
+      pos:"Week 2 = <b>read-only funnel baseline</b> + measurement spec + one-page experiment brief. No live changes.",
+      quote:"“A read-only funnel baseline by eligible segment… No live changes or user outreach without CEO approval.”"
+    },
+    pitch:{
+      pos:"Week 2 = <b>onboarding flow</b> + <b>trial→paid sequence</b> + <b>paywall moment</b>. Ships the activation machinery.",
+      quote:"“Onboarding flow — first-login 5-Q weak-area diagnostic → personalized 'your gap' screen → routed to the matching bank.”"
+    },
+    verdict:"<b>Rigor waits; Pitch ships.</b> Rigor's bet: fix measurement before fixing the funnel. Pitch's bet: the missing trigger is the biggest lever and can be fixed now."
+  },
+  {
+    num:"06",
+    name:"Week 3 — test vs reactivation",
+    summary:"Rigor runs the experiment Week 3. Pitch uses Week 3 for winback, mid-tier SKU, and the grandfathering brief.",
+    rigor:{
+      pos:"Week 3 = <b>one approved conversion test</b> on the addressable base. Holdout preserved if feasible.",
+      quote:"“A limited test on the existing addressable base only if Dr. Abdullah approves the exact copy, audience, dates, and any product / pricing changes.”"
+    },
+    pitch:{
+      pos:"Week 3 = <b>winback drip</b> to dormant users via @BayanMedEd + <b>single-exam SKU</b> live + <b>grandfathering proposal</b> to CEO.",
+      quote:"“Winback drip to the addressable dormant users — education-based (Bayan's 472 reviewed articles), via email + @BayanMedEd Telegram.”"
+    },
+    verdict:"<b>Both are correct to a degree.</b> Rigor front-loads the experiment. Pitch front-loads infrastructure (SKU, brief). The experiment is implied in Pitch's Months 2–3, not the trial month."
+  },
+  {
+    num:"07",
+    name:"The question-count finding",
+    summary:"Pitch surfaces it as 'on-scope, no extra ask.' Rigor doesn't mention it.",
+    rigor:{
+      pos:"Not present. The rigor treats the question-count problem as Product Brain scope, not conversion scope.",
+      quote:"(No mention of question count in the annex or the plan.)"
+    },
+    pitch:{
+      pos:"Explicit finding: <b>8 different values</b> across live surfaces. Folded into Week 1 as a landing-page prerequisite. Recovered the useful core of Product Brain at no extra cost.",
+      quote:"“The inconsistency will actively undercut landing-page conversion, so locking one number is part of the Week-1 work — this is the useful core of the 'source of truth' idea, folded into marketing at no extra charge.”"
+    },
+    verdict:"<b>Pitch wins here unambiguously.</b> This is a real, verifiable finding that improves landing-page conversion and recovers Product Brain's useful core without re-pitching the engagement."
+  },
+  {
+    num:"08",
+    name:"Nasim's fee — [confirm] vs [PROPOSED structure]",
+    summary:"Rigor refuses to structure the fee. Pitch proposes a shape and leaves only the number blank.",
+    rigor:{
+      pos:"<code>[confirm exact amount + currency]</code>, <code>[confirm billing basis]</code>. “Do not imply a fee agreement until the engagement terms are confirmed.” No structure proposed.",
+      quote:"“Until confirmed in the engagement terms, fee is neither $0 nor a guessed amount and the total monthly cash requirement is unknown.”"
+    },
+    pitch:{
+      pos:"<code>[PROPOSED — Nasim/Hiwa confirm before sending]</code> a fixed 30-day trial fee. Structure: modest fixed trial fee, Months 2–3 optionally tied to results.",
+      quote:"“A modest fixed trial fee so the 'yes' is easy, with months 2–3 optionally tied to the results the trial produces.”"
+    },
+    verdict:"<b>Pitch is more useful as a sales artifact. Rigor is safer if the fee is contested.</b> Neither invents a number — both leave the actual amount for confirmation."
+  }
+];
+
+const SHARED = [
+  "Pivot from traffic to monetizing existing base",
+  "Grandfathering + free-country are structural blockers",
+  "Four fixable levers: activation, nurture, mid-tier SKU, paywall trigger",
+  "30-day trial · 4 weeks · ends in stop / revise / continue gate",
+  "$0 paid media for the trial by default",
+  "Paid acquisition held until conversion proves organically",
+  "Nasim's fee unresolved — one input neither plan can compute",
+  "SEO/GEO demoted to 'compounding, later' — not deleted",
+  "Second Brain not re-pitched",
+  "Guardrails: no outcome claims, no bare 'AI-powered', 'Gulf Licensing Exam Preparation' not 'Prometric', draft-first"
+];
+
+const TARGETS = {
+  rigor:{ label:"Rigor", color:"52,211,153", values:[1.0, 2.0, 3.0] },
+  pitch:{ label:"Pitch", color:"255,138,61", values:[3.0, 5.0, 7.0] },
+  benchmarkMedian:8.0
+};
+
+const WEEKS = {
+  1:{
+    rigor:{
+      name:"Diagnose + first landing pages",
+      sub:"week 1 · rigor",
+      deliverables:[
+        { name:"Non-payer segmentation report",
+          verify:"One page: cohort counts + addressable number + $ at stake." },
+        { name:"Three full landing-page drafts",
+          verify:"Source-backed offers, no invented price or outcome claim, unpublished." },
+        { name:"(Funnel baseline deferred to Week 2)",
+          verify:"—" }
+      ]
+    },
+    pitch:{
+      name:"Diagnose + instrument + pages",
+      sub:"week 1 · pitch",
+      deliverables:[
+        { name:"Non-payer segmentation report",
+          verify:"Cohort counts + addressable number + $ at stake." },
+        { name:"Funnel instrumentation live",
+          verify:"10 core events landing as rows; trial→paid + activation read real numbers." },
+        { name:"Three landing pages drafted",
+          verify:"(a) highest-volume winnable exam, (b) free diagnostic opt-in, (c) upgrade page with moat as hero." },
+        { name:"Locked question count",
+          verify:"Same number on every page; no 4k/5k/10k drift." }
+      ]
+    }
+  },
+  2:{
+    rigor:{
+      name:"Measure the path and locate friction",
+      sub:"week 2 · rigor",
+      deliverables:[
+        { name:"Read-only funnel baseline by segment",
+          verify:"Unique eligible users and first-time payers countable for a matched period." },
+        { name:"Measurement spec + checkout review",
+          verify:"Missing events specified; defects recorded separately from hypotheses." },
+        { name:"One-page experiment brief",
+          verify:"Primary change, control design, eligibility, metric, guardrails, stopping rule." }
+      ]
+    },
+    pitch:{
+      name:"Activation + trial→paid trigger",
+      sub:"week 2 · pitch",
+      deliverables:[
+        { name:"Onboarding flow",
+          verify:"First-login 5-Q weak-area diagnostic → personalized gap screen → routed to matching bank." },
+        { name:"Trial→paid sequence",
+          verify:"Day-1, mid-trial value, day-3-before-expiry nudge, expiry offer. Sends tracked." },
+        { name:"Paywall moment",
+          verify:"Clear prompt at 5-Q/day wall. paywall_hit + subscribe_clicked tracked." }
+      ]
+    }
+  },
+  3:{
+    rigor:{
+      name:"Run one approved conversion test",
+      sub:"week 3 · rigor",
+      deliverables:[
+        { name:"Segment-specific offer + CTA on highest-priority path",
+          verify:"Exact approved treatment documented; holdout preserved if feasible." },
+        { name:"Limited test on addressable base",
+          verify:"No grandfathered or free-country account receives a changed offer without approval." },
+        { name:"Daily/weekly readout template",
+          verify:"First purchases, conversion by segment, checkout completion, refunds, support issues." }
+      ]
+    },
+    pitch:{
+      name:"Reactivate dormant base + mid-tier SKU",
+      sub:"week 3 · pitch",
+      deliverables:[
+        { name:"Winback drip to addressable dormant users",
+          verify:"Education-based via 472 reviewed articles + @BayanMedEd. Opens/clicks tracked." },
+        { name:"Single-exam / exam-window pass SKU",
+          verify:"Live in checkout, priced for IMG self-funder. CEO signs the price." },
+        { name:"Grandfathering proposal",
+          verify:"Count + $ at risk + convert/sunset option. On CEO's desk. No migration without sign-off." }
+      ]
+    }
+  },
+  4:{
+    rigor:{
+      name:"Close the trial with a decision",
+      sub:"week 4 · rigor",
+      deliverables:[
+        { name:"Results memo",
+          verify:"Baseline vs treatment, cohort sizes, conversions, revenue, refunds. Measured outcome separated from interpretation." },
+        { name:"Economics sheet",
+          verify:"Actual plan price, net receipts, gross margin, Nasim's fee, tools, media spend." },
+        { name:"CEO decision: stop / revise / continue",
+          verify:"Concise decision pack. All next actions approved or draft-only." }
+      ]
+    },
+    pitch:{
+      name:"Measure + go/no-go",
+      sub:"week 4 · pitch",
+      deliverables:[
+        { name:"30-day results readout",
+          verify:"6 funnel rates before/after, new paid count, MRR added, cost. One-page scorecard." },
+        { name:"Go/no-go on Months 2–3",
+          verify:"What worked, what to double down on, whether to unlock a small paid-acquisition test." },
+        { name:"Written recommendation tied to numbers",
+          verify:"Explicit decision gate." }
+      ]
+    }
+  }
+};
+
+const COVERAGE = {
+  rigor:{
+    label:"Rigor · annex + plan",
+    sub:"audit-safe · parameterized · refuses to fabricate",
+    ico:"◈",
+    items:[
+      "CAC model: spend ÷ incremental payers · break-even = CM · allowable = CM × approved fraction",
+      "Explicit rule: if CM unknown or ≤0, paid-spend authorization stays $0",
+      "Four-bucket reconciliation with forced precedence rule to prevent double-counting",
+      "Refuses to compute $277 ÷ 1,300 as anything — not ARPU, ARPPU, LTV, or monthly",
+      "Caveat that <1% of 1,300 implies at most 12 payers only under strict definition",
+      "Formal Economics sheet as the Week 4 artifact, not just a scorecard",
+      "Budget's Option A vs Option B as an either/or decision with the CEO as decider",
+      "Full '7 CEO decisions needed' list"
+    ]
+  },
+  pitch:{
+    label:"Pitch · review brief",
+    sub:"persuasive · specific · named cuts",
+    ico:"◆",
+    items:[
+      "Question-count finding: 8 conflicting values across live surfaces",
+      "5-reason ranked table of why users don't pay, with fixability callouts",
+      "Oman specifically NOT on the free-country list",
+      "Specific onboarding flow design: 5-Q diagnostic → gap screen → matched bank",
+      "'On-scope, no extra ask' framing — recovers Product Brain's useful core without re-pitching",
+      "Explicit 'Parked' decisions on Turkey and Second Brain",
+      "A 'what we are NOT doing now' section — rigor implies, pitch states",
+      "Go/no-go on Months 2–3 as the Week-4 outcome"
+    ]
+  }
+};
+
+const MERGE_ROWS = [
+  {
+    key:"Week 1 activity",
+    sub:"what ships first",
+    rigor:{ picked:"none", why:"Defers instrumentation to Week 2." },
+    pitch:{ picked:"pitch", why:"Instrumentation + locked question count + pages, all in Week 1." }
+  },
+  {
+    key:"Bucket model",
+    sub:"denominator rigor",
+    rigor:{ picked:"rigor", why:"Four-bucket forced reconciliation with precedence rule." },
+    pitch:{ picked:"none", why:"Supplies Oman fact but no precedence rule." }
+  },
+  {
+    key:"Target ladder",
+    sub:"contract vs ambition",
+    rigor:{ picked:"both", why:"Use rigor's 1/2/3 as the contract. Pitch's 3/5/7 as stretch aspiration." },
+    pitch:{ picked:"both", why:"Same — both ladders are useful if the labels are honest." }
+  },
+  {
+    key:"Revenue math",
+    sub:"how numbers are shown",
+    rigor:{ picked:"rigor", why:"Parameterized formula A × r × P, no invented figures." },
+    pitch:{ picked:"none", why:"Worked numbers are motivating but become a liability if wrong." }
+  },
+  {
+    key:"Weeks 2–3 activity",
+    sub:"what actually ships",
+    rigor:{ picked:"none", why:"Spends those weeks measuring and testing." },
+    pitch:{ picked:"pitch", why:"Ships onboarding, trial→paid, paywall, winback, mid-tier SKU." }
+  },
+  {
+    key:"Week 4 economics",
+    sub:"how the trial closes",
+    rigor:{ picked:"rigor", why:"Formal Economics sheet with net receipts, CM, fees, media spend." },
+    pitch:{ picked:"none", why:"One-page scorecard is lighter than an economics sheet." }
+  },
+  {
+    key:"CAC model",
+    sub:"paid-spend discipline",
+    rigor:{ picked:"rigor", why:"Explicit break-even = CM, allowable = CM × fraction, $0 if CM unknown." },
+    pitch:{ picked:"none", why:"Mentions CAC range but no formal model." }
+  },
+  {
+    key:"Question-count fix",
+    sub:"hidden win",
+    rigor:{ picked:"none", why:"Not mentioned." },
+    pitch:{ picked:"pitch", why:"Real finding, improves landing-page conversion, zero extra cost." }
+  }
+];
+
+const MERGE_FINAL = {
+  heading:"Run the pitch's Weeks 1–3 activity on the rigor's math.",
+  p1:"<b>Week 1</b>: pitch's ordering (instrumentation + question count + segmentation + 3 pages). <b>Bucket model</b>: rigor's four-bucket reconciliation with precedence rule. <b>Target ladder</b>: rigor's 1/2/3 as the <em>contract</em>, pitch's 3/5/7 as the <em>ambition</em> — with the CEO told explicitly which is which.",
+  p2:"<b>Weeks 2–3</b>: pitch's activity (onboarding, trial→paid, paywall, winback, mid-tier SKU, grandfathering brief). <b>Week 4</b>: rigor's formal Economics sheet, not just a scorecard. <b>CAC</b>: rigor's formula — break-even = CM, $0 paid-spend until CM is known.",
+  p3:"<b>Never merge badly.</b> The risk of combining them lazily is a plan that promises 5% and delivers 2% and calls it a win. The risk of running rigor alone is a plan so hedged it doesn't give the CEO a decision. The risk of running pitch alone is dollar figures that collapse when the numerator turns out to be 11."
+};
+
+/* =========================================================
+   STATE
+   ========================================================= */
+const state = {
+  view:"overview",
+  openDiv:null,
+  week:1,
+  sim:{ A:400, r:3.0, P:16 },
+  demoPlaying:false,
+  demoTimeout:null
+};
+
+/* =========================================================
+   HELPERS
+   ========================================================= */
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/&/g,'&amp;')
+  .replace(/</g,'&lt;').replace(/>/g,'&gt;');
+
+function fmtUSD(n){
+  if (n >= 10000) return '$' + (n/1000).toFixed(1) + 'k';
+  if (n >= 1000) return '$' + (n/1000).toFixed(2) + 'k';
+  return '$' + Math.round(n);
+}
+
+/* =========================================================
+   NAV
+   ========================================================= */
+function renderKeyList(){
+  const list = $('keyList');
+  const label = $('keyLabel');
+  const items = [];
+
+  if (state.view === 'overview'){
+    label.textContent = 'Divergences';
+    DIVERGENCES.forEach((d, i) => {
+      items.push({ key:d.num, text:d.name.split('—')[0].trim(),
+        active: state.openDiv === d.num, color:"245,190,60" });
+    });
+    // shared spine chip
+    items.unshift({ key:"✓", text:"Shared spine",
+      active:false, color:"52,211,153" });
+  } else if (state.view === 'weeks'){
+    label.textContent = 'Weeks';
+    [1,2,3,4].forEach(w => {
+      items.push({ key:'W'+w,
+        text: WEEKS[w].rigor.name.split(' ').slice(0,3).join(' '),
+        active: state.week === w, color:"167,139,250" });
+    });
+  } else if (state.view === 'targets'){
+    label.textContent = 'Ladders';
+    items.push({ key:"R", text:"Rigor ladder 1/2/3",
+      active:true, color:"52,211,153" });
+    items.push({ key:"P", text:"Pitch ladder 3/5/7",
+      active:true, color:"255,138,61" });
+    items.push({ key:"M", text:"8% median",
+      active:false, color:"245,190,60" });
+  } else if (state.view === 'coverage'){
+    label.textContent = 'Coverage';
+    items.push({ key:"R", text:"Rigor has",
+      active:true, color:"52,211,153" });
+    items.push({ key:"P", text:"Pitch has",
+      active:true, color:"255,138,61" });
+  } else if (state.view === 'sim'){
+    label.textContent = 'Inputs';
+    items.push({ key:"A", text:"Addressable cohort",
+      active:true, color:"34,211,238" });
+    items.push({ key:"r", text:"Target rate",
+      active:true, color:"34,211,238" });
+    items.push({ key:"P", text:"Net revenue / payer",
+      active:true, color:"34,211,238" });
+  } else if (state.view === 'merge'){
+    label.textContent = 'Merge picks';
+    items.push({ key:"R", text:"Rigor wins",
+      active:true, color:"52,211,153" });
+    items.push({ key:"P", text:"Pitch wins",
+      active:true, color:"255,138,61" });
+    items.push({ key:"B", text:"Both / both ladders",
+      active:true, color:"245,190,60" });
+  }
+
+  list.innerHTML = items.map(it => `
+    <button class="key-link ${it.active?'on':''}"
+            data-key="${it.key}" style="--kc:${it.color}">
+      <span class="kn">${it.key}</span>
+      <span class="kt">${esc(it.text)}</span>
+      <span class="kd"></span>
+    </button>`).join('');
+}
+
+/* =========================================================
+   CHROME
+   ========================================================= */
+function renderChrome(){
+  const labels = {
+    overview:"8 divergences",
+    targets:"target ladder split",
+    weeks:"week by week",
+    coverage:"coverage gaps",
+    sim:"live calculator",
+    merge:"merge recommendation"
+  };
+  $('crumb').innerHTML = `
+    <span class="pill">⇄</span>
+    <span class="sep">·</span>
+    <span>Conversion Plan</span>
+    <span class="sep">·</span>
+    <span style="color:var(--mut2)">${labels[state.view]}</span>`;
+
+  // split meter
+  let rigorWins = 0, pitchWins = 0;
+  MERGE_ROWS.forEach(r => {
+    if (r.rigor.picked === 'rigor') rigorWins++;
+    else if (r.rigor.picked === 'pitch') pitchWins++;
+    if (r.pitch.picked === 'rigor') rigorWins++;
+    else if (r.pitch.picked === 'pitch') pitchWins++;
+  });
+  const total = rigorWins + pitchWins || 1;
+  $('rigorFill').style.width = (rigorWins / total * 100) + '%';
+  $('pitchFill').style.width = (pitchWins / total * 100) + '%';
+
+  $('statusbar').innerHTML = `
+    <span>comparing <b>rigor</b> vs <b>pitch</b></span>
+    <span class="right">
+      <span><b>${DIVERGENCES.length}</b> divergences</span>
+      <span class="chip rigor">rigor ${rigorWins}</span>
+      <span class="chip pitch">pitch ${pitchWins}</span>
+    </span>`;
+}
+
+/* =========================================================
+   DISPATCH
+   ========================================================= */
+function renderAll(){
+  renderKeyList();
+  renderChrome();
+  renderStage();
+}
+
+function renderStage(){
+  const accents = {
+    overview:"245,190,60",
+    targets:"244,63,94",
+    weeks:"167,139,250",
+    coverage:"52,211,153",
+    sim:"34,211,238",
+    merge:"245,190,60"
+  };
+  document.documentElement.style.setProperty('--accent', accents[state.view]);
+
+  if (state.view === 'overview') renderOverview();
+  else if (state.view === 'targets') renderTargets();
+  else if (state.view === 'weeks') renderWeeks();
+  else if (state.view === 'coverage') renderCoverage();
+  else if (state.view === 'sim') renderSim();
+  else if (state.view === 'merge') renderMerge();
+}
+
+/* =========================================================
+   OVERVIEW
+   ========================================================= */
+function renderOverview(){
+  const hero = `
+    <div class="hero">
+      <div class="h-k">Rigor vs Pitch · comparison console</div>
+      <h1>Two plans. Same pivot. Different temperatures.</h1>
+      <p>Both documents agree on the <b>architecture</b>: don't buy traffic,
+        monetize the base you already have; grandfathering and free-country are
+        structural blockers; four fixable levers; a 30-day trial ending in a
+        decision gate. They diverge on <b>how ambitious the target is</b>,
+        <b>how the numbers are shown</b>, and <b>what actually ships each week</b>.</p>
+
+      <div class="shared">
+        <div class="s-k">Shared spine · what both plans agree on</div>
+        <div class="shared-grid">
+          ${SHARED.map(s => `
+            <div class="shared-item">
+              <span class="tick">✓</span>
+              <span>${s}</span>
+            </div>`).join('')}
+        </div>
+      </div>
+    </div>`;
+
+  const divs = DIVERGENCES.map((d, i) => {
+    const isOpen = state.openDiv === d.num;
+    return `
+      <div class="div-card ${isOpen?'open':''}"
+           data-div="${d.num}" style="--d:${i*40}ms">
+        <div class="div-head">
+          <span class="div-num">${d.num}</span>
+          <div class="div-meta">
+            <div class="div-name">${esc(d.name)}</div>
+            <div class="div-summary">${d.summary}</div>
+          </div>
+          <span class="div-chev">›</span>
+        </div>
+
+        <div class="div-body">
+          <div class="div-panels">
+            <div class="div-panel rigor">
+              <div class="dp-k">Rigor · annex + plan</div>
+              <div class="dp-pos">${d.rigor.pos}</div>
+              <div class="dp-quote">${d.rigor.quote}</div>
+            </div>
+            <div class="div-panel pitch">
+              <div class="dp-k">Pitch · review brief</div>
+              <div class="dp-pos">${d.pitch.pos}</div>
+              <div class="dp-quote">${d.pitch.quote}</div>
+            </div>
+          </div>
+          <div class="div-verdict">
+            <span class="vk">Read</span>
+            <span>${d.verdict}</span>
+          </div>
+        </div>
+      </div>`;
+  }).join('');
+
+  $('stage').innerHTML = hero + `<div class="div-list">${divs}</div>`;
+
+  document.querySelectorAll('[data-div]').forEach(card => {
+    card.querySelector('.div-head').addEventListener('click', () => {
+      stopDemo();
+      const num = card.dataset.div;
+      const wasOpen = state.openDiv === num;
+      state.openDiv = wasOpen ? null : num;
+      renderAll();
+    });
+  });
+}
+
+/* =========================================================
+   TARGETS
+   ========================================================= */
+function renderTargets(){
+  const maxVal = 8.0;
+  const H = 220; // max bar height in px
+
+  const barH = v => Math.max(3, (v / maxVal) * H);
+
+  const hero = `
+    <div class="target-hero">
+      <div class="k">Target ladder · the 3× divergence</div>
+      <h2>Rigor's 1/2/3 versus Pitch's 3/5/7.</h2>
+      <p>Both ladders sit below the 8% cross-company median — but the gap between
+        them is <b>3× at every step</b>. If M2 = 2% (rigor) lands, the rigor reads
+        as success. If the pitch is the contract and 2% lands, it reads as a miss.
+        <b>Which ladder is the contract decides what 'working' means.</b></p>
+    </div>`;
+
+  const bars = `
+    <div class="ladder-wrap">
+      <div class="ladder-head">
+        <div class="ladder-title">
+          Cumulative conversion targets
+          <small>% of addressable cohort · M1 / M2 / M3</small>
+        </div>
+        <div class="ladder-legend">
+          <span class="ll rigor"><span class="sw"></span>Rigor 1/2/3</span>
+          <span class="ll pitch"><span class="sw"></span>Pitch 3/5/7</span>
+        </div>
+      </div>
+
+      <div class="axis">
+        <div class="axis-lines">
+          <div class="axis-line" style="top:0%"><span>8%</span></div>
+          <div class="axis-line" style="top:25%"><span>6%</span></div>
+          <div class="axis-line" style="top:50%"><span>4%</span></div>
+          <div class="axis-line" style="top:75%"><span>2%</span></div>
+          <div class="axis-line median" style="top:0%">
+            <span style="right:auto;left:0">8% median</span>
+          </div>
+        </div>
+
+        <div class="bar-groups">
+          ${[0,1,2].map(i => `
+            <div class="bar-group">
+              <div class="bar-pair">
+                <div class="bar rigor" style="height:${barH(TARGETS.rigor.values[i])}px">
+                  <span class="bar-val">${TARGETS.rigor.values[i]}%</span>
+                </div>
+                <div class="bar pitch" style="height:${barH(TARGETS.pitch.values[i])}px">
+                  <span class="bar-val">${TARGETS.pitch.values[i]}%</span>
+                </div>
+              </div>
+              <div class="bar-label">M${i+1}</div>
+            </div>`).join('')}
+        </div>
+      </div>
+
+      <div class="gap-callout">
+        ${[0,1,2].map(i => `
+          <div class="gap-cell">
+            <div class="gk">M${i+1} gap</div>
+            <div class="gv">${(TARGETS.pitch.values[i] / TARGETS.rigor.values[i]).toFixed(1)}×<small>delta</small></div>
+          </div>`).join('')}
+      </div>
+
+      <div class="target-note">
+        <span class="ic">⚑</span>
+        <div><b>Neither ladder is a forecast.</b> The rigor explicitly frames its
+          1/2/3 as "decision thresholds, not purported benchmarks." The pitch frames
+          its 3/5/7 as "planning hypotheses" — but presents them with worked dollar
+          outputs. The pitch's ladder is 3× more ambitious at every step with the
+          same underlying uncertainty about A, r, and P.</div>
+      </div>
+    </div>`;
+
+  $('stage').innerHTML = hero + bars;
+}
+
+/* =========================================================
+   WEEKS
+   ========================================================= */
+function renderWeeks(){
+  const w = state.week;
+  const wk = WEEKS[w];
+
+  const tabs = [1,2,3,4].map(n => `
+    <button class="week-tab ${n===w?'on':''}" data-week="${n}">Week ${n}</button>
+  `).join('');
+
+  const renderSide = (side, data) => `
+    <div class="week-side ${side}">
+      <div class="ws-head">
+        <div class="ws-ico">${side === 'rigor' ? '◈' : '◆'}</div>
+        <div>
+          <div class="ws-name">${esc(data.name)}</div>
+          <div class="ws-sub">${esc(data.sub)}</div>
+        </div>
+      </div>
+      <div class="deliv">
+        ${data.deliverables.map((d, i) => `
+          <div class="deliv-item">
+            <span class="deliv-num">${i+1}</span>
+            <div class="deliv-body">
+              <div class="deliv-name">${esc(d.name)}</div>
+              ${d.verify && d.verify !== '—' ? `
+                <div class="deliv-verify">
+                  <b>Done when</b> · ${esc(d.verify)}
+                </div>` : ''}
+            </div>
+          </div>`).join('')}
+      </div>
+    </div>`;
+
+  $('stage').innerHTML = `
+    <div class="target-hero" style="--accent:167,139,250">
+      <div class="k" style="color:rgb(var(--violet))">Week by week · 4-week trial</div>
+      <h2>Same 30 days. Different sequence.</h2>
+      <p>The rigor and the pitch agree that the trial runs 4 weeks and ends
+        in a decision gate. They differ on <b>what ships when</b>. Pick a week
+        to see both plans' deliverables side by side.</p>
+    </div>
+
+    <div style="display:flex;justify-content:center;margin-bottom:4px">
+      <div class="week-tabs" id="weekTabs">${tabs}</div>
+    </div>
+
+    <div class="week-split">
+      ${renderSide('rigor', wk.rigor)}
+      ${renderSide('pitch', wk.pitch)}
+    </div>
+
+    <div class="week-summary">
+      <span class="ws-key">Week ${w} read</span>
+      <span>${wk.rigor.sub.includes('rigor') ?
+        'Compare the two columns. The rigor side spends the week on measurement; the pitch side ships activation. Both preserve the CEO approval gate.' : ''}</span>
+    </div>`;
+
+  document.querySelectorAll('.week-tab').forEach(t => {
+    t.addEventListener('click', () => {
+      stopDemo();
+      state.week = parseInt(t.dataset.week);
+      renderAll();
+    });
+  });
+}
+
+/* =========================================================
+   COVERAGE
+   ========================================================= */
+function renderCoverage(){
+  const hero = `
+    <div class="lanes-hero" style="--accent:52,211,153">
+      <div class="k" style="color:rgb(var(--emerald))">Coverage · what each doc has the other lacks</div>
+      <h2>The honest asymmetry.</h2>
+      <p>Neither document is complete. Each contains material the other doesn't.
+        This is the real argument for reading both — not that one is better.</p>
+    </div>`;
+
+  const cols = `
+    <div class="cov-grid" style="margin-top:6px">
+      <div class="cov-col rigor">
+        <div class="cov-head">
+          <div class="cov-ico">◈</div>
+          <div>
+            <div class="cov-name">${COVERAGE.rigor.label}</div>
+            <div class="cov-sub">${COVERAGE.rigor.sub}</div>
+          </div>
+        </div>
+        <div class="cov-list">
+          ${COVERAGE.rigor.items.map(it => `
+            <div class="cov-item">
+              <span class="tick">✓</span>
+              <span>${it}</span>
+            </div>`).join('')}
+        </div>
+      </div>
+
+      <div class="cov-col pitch">
+        <div class="cov-head">
+          <div class="cov-ico">◆</div>
+          <div>
+            <div class="cov-name">${COVERAGE.pitch.label}</div>
+            <div class="cov-sub">${COVERAGE.pitch.sub}</div>
+          </div>
+        </div>
+        <div class="cov-list">
+          ${COVERAGE.pitch.items.map(it => `
+            <div class="cov-item">
+              <span class="tick">✓</span>
+              <span>${it}</span>
+            </div>`).join('')}
+        </div>
+      </div>
+    </div>`;
+
+  $('stage').innerHTML = hero + cols;
+}
+
+/* =========================================================
+   SIMULATOR
+   ========================================================= */
+function renderSim(){
+  const { A, r, P } = state.sim;
+
+  const newPayers = A * (r / 100);
+  const mrr = newPayers * P;
+  const lifetimeMultiple = mrr / 277; // vs $277 lifetime revenue
+  const rigorM1 = A * 0.01 * P;
+  const rigorM2 = A * 0.02 * P;
+  const rigorM3 = A * 0.03 * P;
+  const pitchM1 = A * 0.03 * P;
+  const pitchM2 = A * 0.05 * P;
+  const pitchM3 = A * 0.07 * P;
+
+  // which ladder does current r clear?
+  const clearsRigor = [1,2,3].map(v => r >= v);
+  const clearsPitch = [3,5,7].map(v => r >= v);
+
+  $('stage').innerHTML = `
+    <div class="sim-hero">
+      <div class="k">Live calculator · the load-bearing inputs</div>
+      <h2>Change the inputs. Watch the plan size change.</h2>
+      <p>Every dollar figure in either plan depends on three numbers the CEO
+        has not yet confirmed: <b>A</b> (addressable cohort), <b>r</b> (target
+        conversion rate), and <b>P</b> (net revenue per payer). Move the sliders
+        to see how much the plan's headline number depends on <em>inputs no one
+        has verified</em>.</p>
+    </div>
+
+    <div class="sim-wrap">
+      <div class="sim-controls">
+        <div class="sc-k">Inputs</div>
+
+        <div class="sim-input">
+          <div class="si-row">
+            <span class="si-name"><code>A</code> Addressable cohort</span>
+            <span class="si-val" id="simA">${A}</span>
+          </div>
+          <input type="range" id="rangeA" min="50" max="1200" step="10" value="${A}">
+          <div class="si-hint">The addressable non-payer count. Not yet known — Week 1 pins it.</div>
+        </div>
+
+        <div class="sim-input">
+          <div class="si-row">
+            <span class="si-name"><code>r</code> Target conversion rate</span>
+            <span class="si-val" id="simR">${r.toFixed(1)}%</span>
+          </div>
+          <input type="range" id="rangeR" min="0.5" max="8" step="0.1" value="${r}">
+          <div class="si-hint">Rigor's M1 = 1%. Pitch's M1 = 3%. Benchmark median = 8%.</div>
+        </div>
+
+        <div class="sim-input">
+          <div class="si-row">
+            <span class="si-name"><code>P</code> Net revenue per payer</span>
+            <span class="si-val" id="simP">$${P}</span>
+          </div>
+          <input type="range" id="rangeP" min="5" max="80" step="1" value="${P}">
+          <div class="si-hint">Net of refunds/discounts. Pitch uses $16. Rigor refuses to state one.</div>
+        </div>
+
+        <div class="sim-presets">
+          <button class="sim-preset" data-preset="rigorM1">Rigor M1</button>
+          <button class="sim-preset" data-preset="rigorM3">Rigor M3</button>
+          <button class="sim-preset" data-preset="pitchM1">Pitch M1</button>
+          <button class="sim-preset" data-preset="pitchM3">Pitch M3</button>
+          <button class="sim-preset" data-preset="benchmark">8% median</button>
+        </div>
+
+        <button class="sim-reset" id="simReset">↻ reset to defaults</button>
+      </div>
+
+      <div class="sim-outputs">
+        <div class="sim-metrics">
+          <div class="sim-metric" style="--mc:34,211,238">
+            <div class="sm-k">New payers / month</div>
+            <div class="sm-v" id="outPayers">${newPayers.toFixed(0)}</div>
+            <div class="sm-sub">A × r</div>
+          </div>
+          <div class="sim-metric" style="--mc:52,211,153">
+            <div class="sm-k">Added MRR</div>
+            <div class="sm-v" id="outMRR">${fmtUSD(mrr)}</div>
+            <div class="sm-sub">A × r × P</div>
+          </div>
+          <div class="sim-metric" style="--mc:245,190,60">
+            <div class="sm-k">Multiple of lifetime</div>
+            <div class="sm-v" id="outMult">${lifetimeMultiple.toFixed(1)}×<small>$277</small></div>
+            <div class="sm-sub">How many times over Bayan's all-time revenue</div>
+          </div>
+        </div>
+
+        <div class="sim-verdict">
+          <div class="sv-k">Which ladder does r = ${r.toFixed(1)}% clear?</div>
+
+          <div class="verdict-row">
+            <span class="verdict-tag rigor">Rigor M1 = 1%</span>
+            <div class="verdict-bar">
+              <div class="vb-fill rigor" style="width:${Math.min(100, r/1*100)}%"></div>
+              <div class="vb-mark" style="left:100%"></div>
+            </div>
+            <span class="verdict-status ${clearsRigor[0]?'pass':'miss'}">
+              ${clearsRigor[0]?'PASS':'MISS'}
+            </span>
+          </div>
+
+          <div class="verdict-row">
+            <span class="verdict-tag rigor">Rigor M2 = 2%</span>
+            <div class="verdict-bar">
+              <div class="vb-fill rigor" style="width:${Math.min(100, r/2*100)}%"></div>
+              <div class="vb-mark" style="left:100%"></div>
+            </div>
+            <span class="verdict-status ${clearsRigor[1]?'pass':'miss'}">
+              ${clearsRigor[1]?'PASS':'MISS'}
+            </span>
+          </div>
+
+          <div class="verdict-row">
+            <span class="verdict-tag rigor">Rigor M3 = 3%</span>
+            <div class="verdict-bar">
+              <div class="vb-fill rigor" style="width:${Math.min(100, r/3*100)}%"></div>
+              <div class="vb-mark" style="left:100%"></div>
+            </div>
+            <span class="verdict-status ${clearsRigor[2]?'pass':'miss'}">
+              ${clearsRigor[2]?'PASS':'MISS'}
+            </span>
+          </div>
+
+          <div class="verdict-row">
+            <span class="verdict-tag pitch">Pitch M1 = 3%</span>
+            <div class="verdict-bar">
+              <div class="vb-fill pitch" style="width:${Math.min(100, r/3*100)}%"></div>
+              <div class="vb-mark" style="left:100%"></div>
+            </div>
+            <span class="verdict-status ${clearsPitch[0]?'pass':'miss'}">
+              ${clearsPitch[0]?'PASS':'MISS'}
+            </span>
+          </div>
+
+          <div class="verdict-row">
+            <span class="verdict-tag pitch">Pitch M2 = 5%</span>
+            <div class="verdict-bar">
+              <div class="vb-fill pitch" style="width:${Math.min(100, r/5*100)}%"></div>
+              <div class="vb-mark" style="left:100%"></div>
+            </div>
+            <span class="verdict-status ${clearsPitch[1]?'pass':'miss'}">
+              ${clearsPitch[1]?'PASS':'MISS'}
+            </span>
+          </div>
+
+          <div class="verdict-row">
+            <span class="verdict-tag pitch">Pitch M3 = 7%</span>
+            <div class="verdict-bar">
+              <div class="vb-fill pitch" style="width:${Math.min(100, r/7*100)}%"></div>
+              <div class="vb-mark" style="left:100%"></div>
+            </div>
+            <span class="verdict-status ${clearsPitch[2]?'pass':'miss'}">
+              ${clearsPitch[2]?'PASS':'MISS'}
+            </span>
+          </div>
+
+          <div class="sim-note">
+            <b>What this shows:</b> the same r clears rigor's M3 at 3% and
+            misses pitch's M2 at 5%. So if the CEO approves the pitch's ladder
+            as the contract and the plan lands at 3%, the plan reads as a
+            <b>partial failure</b> — even though 3% beats rigor's M3. The ladder
+            you pick changes what "success" means.
+          </div>
+        </div>
+
+        <div class="sim-verdict" style="--accent:245,190,60">
+          <div class="sv-k" style="color:rgb(var(--gold))">Side-by-side ladder outputs at A = ${A}, P = $${P}</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:6px">
+            <div>
+              <div style="font:600 10px/1 var(--mono);letter-spacing:.12em;
+                text-transform:uppercase;color:rgb(var(--rigor));margin-bottom:10px">
+                Rigor ladder · 1/2/3%
+              </div>
+              ${[['M1', rigorM1],['M2', rigorM2],['M3', rigorM3]].map(([k,v]) => `
+                <div style="display:flex;justify-content:space-between;
+                  padding:8px 0;border-top:1px solid rgba(255,255,255,.04);
+                  font:500 12px/1.4 var(--mono)">
+                  <span style="color:var(--mut)">${k}</span>
+                  <span style="color:rgb(var(--rigor));font-weight:700">${fmtUSD(v)}/mo</span>
+                </div>`).join('')}
+            </div>
+            <div>
+              <div style="font:600 10px/1 var(--mono);letter-spacing:.12em;
+                text-transform:uppercase;color:rgb(var(--pitch));margin-bottom:10px">
+                Pitch ladder · 3/5/7%
+              </div>
+              ${[['M1', pitchM1],['M2', pitchM2],['M3', pitchM3]].map(([k,v]) => `
+                <div style="display:flex;justify-content:space-between;
+                  padding:8px 0;border-top:1px solid rgba(255,255,255,.04);
+                  font:500 12px/1.4 var(--mono)">
+                  <span style="color:var(--mut)">${k}</span>
+                  <span style="color:rgb(var(--pitch));font-weight:700">${fmtUSD(v)}/mo</span>
+                </div>`).join('')}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  wireSim();
+}
+
+function wireSim(){
+  const { A, r, P } = state.sim;
+
+  const rA = $('rangeA'), rR = $('rangeR'), rP = $('rangeP');
+  rA.addEventListener('input', e => {
+    state.sim.A = parseInt(e.target.value);
+    renderSim();
+  });
+  rR.addEventListener('input', e => {
+    state.sim.r = parseFloat(e.target.value);
+    renderSim();
+  });
+  rP.addEventListener('input', e => {
+    state.sim.P = parseInt(e.target.value);
+    renderSim();
+  });
+
+  document.querySelectorAll('.sim-preset').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const p = btn.dataset.preset;
+      if (p === 'rigorM1') state.sim.r = 1.0;
+      else if (p === 'rigorM3') state.sim.r = 3.0;
+      else if (p === 'pitchM1') state.sim.r = 3.0;
+      else if (p === 'pitchM3') state.sim.r = 7.0;
+      else if (p === 'benchmark') state.sim.r = 8.0;
+      renderSim();
+    });
+  });
+
+  const reset = $('simReset');
+  if (reset){
+    reset.addEventListener('click', () => {
+      state.sim = { A:400, r:3.0, P:16 };
+      renderSim();
+    });
+  }
+}
+
+/* =========================================================
+   MERGE
+   ========================================================= */
+function renderMerge(){
+  const hero = `
+    <div class="merge-hero">
+      <div class="k">Merge recommendation</div>
+      <h2>Run the pitch's Weeks 1–3 on the rigor's math.</h2>
+      <p>Neither plan alone is the right answer. The rigor is audit-safe but
+        too hedged to give the CEO a decision. The pitch is motivating but
+        shows dollar figures it can't defend if A turns out to be 11. The
+        merge takes the right half of each.</p>
+    </div>`;
+
+  const table = `
+    <div class="merge-table">
+      <div class="merge-row head">
+        <div>Element</div>
+        <div class="rigor-col">Rigor position</div>
+        <div class="pitch-col">Pitch position</div>
+      </div>
+      ${MERGE_ROWS.map(row => `
+        <div class="merge-row">
+          <div>
+            <div class="mr-key">${esc(row.key)}
+              <small>${esc(row.sub)}</small>
+            </div>
+          </div>
+          <div class="mr-cell rigor">
+            <span class="picked ${row.rigor.picked}">${
+              row.rigor.picked === 'rigor' ? 'RIGOR WINS' :
+              row.rigor.picked === 'pitch' ? 'PITCH WINS' :
+              row.rigor.picked === 'both' ? 'USE BOTH' :
+              'NOT USED'
+            }</span>
+            <div class="why">${esc(row.rigor.why)}</div>
+          </div>
+          <div class="mr-cell pitch">
+            <span class="picked ${row.pitch.picked}">${
+              row.pitch.picked === 'rigor' ? 'RIGOR WINS' :
+              row.pitch.picked === 'pitch' ? 'PITCH WINS' :
+              row.pitch.picked === 'both' ? 'USE BOTH' :
+              'NOT USED'
+            }</span>
+            <div class="why">${esc(row.pitch.why)}</div>
+          </div>
+        </div>`).join('')}
+    </div>`;
+
+  const final = `
+    <div class="merge-final">
+      <div class="mf-k">The recommendation</div>
+      <h3>${MERGE_FINAL.heading}</h3>
+      <p>${MERGE_FINAL.p1}</p>
+      <p>${MERGE_FINAL.p2}</p>
+      <p>${MERGE_FINAL.p3}</p>
+    </div>`;
+
+  $('stage').innerHTML = hero + table + final;
+}
+
+/* =========================================================
+   VIEW SWITCH
+   ========================================================= */
+$('viewSwitch').addEventListener('click', e => {
+  const btn = e.target.closest('.view-btn');
+  if (!btn) return;
+  stopDemo();
+  state.view = btn.dataset.view;
+  state.openDiv = null;
+  $('stage').scrollTop = 0;
+  renderAll();
+});
+
+/* =========================================================
+   DEMO
+   ========================================================= */
+function startDemo(){
+  stopDemo();
+  state.demoPlaying = true;
+  $('demoBtn').classList.add('playing');
+  $('demoBtn').textContent = '■ stop demo';
+
+  // restart at overview
+  state.view = 'overview';
+  state.openDiv = null;
+  state.week = 1;
+  document.querySelectorAll('.view-btn').forEach(b =>
+    b.classList.toggle('on', b.dataset.view === 'overview'));
+  renderAll();
+
+  // walk the divergences, then the other views
+  const steps = [
+    { view:'overview', delay:1400, action:() => {
+      // open each divergence in sequence
+      let i = 0;
+      function nextDiv(){
+        if (!state.demoPlaying) return;
+        if (i >= DIVERGENCES.length){
+          goTo('targets', 3200, nextPhase);
+          return;
+        }
+        state.openDiv = DIVERGENCES[i].num;
+        renderAll();
+        i++;
+        state.demoTimeout = setTimeout(nextDiv, 1100);
+      }
+      nextDiv();
+    }}
+  ];
+
+  function goTo(view, wait, done){
+    state.view = view;
+    state.openDiv = null;
+    document.querySelectorAll('.view-btn').forEach(b =>
+      b.classList.toggle('on', b.dataset.view === view));
+    renderAll();
+    state.demoTimeout = setTimeout(() => {
+      if (!state.demoPlaying) return;
+      if (done) done();
+    }, wait);
+  }
+
+  function nextPhase(){
+    goTo('weeks', 2200, () => {
+      // walk weeks 1-4
+      let w = 1;
+      function nextWeek(){
+        if (!state.demoPlaying) return;
+        if (w > 4){
+          goTo('coverage', 2600, () => {
+            goTo('sim', 2600, () => {
+              // move the slider
+              state.sim.r = 3.0;
+              renderSim();
+              state.demoTimeout = setTimeout(() => {
+                if (!state.demoPlaying) return;
+                state.sim.r = 7.0;
+                renderSim();
+                state.demoTimeout = setTimeout(() => {
+                  if (!state.demoPlaying) return;
+                  goTo('merge', 3200, stopDemo);
+                }, 1800);
+              }, 1200);
+            });
+          });
+          return;
+        }
+        state.week = w;
+        renderAll();
+        w++;
+        state.demoTimeout = setTimeout(nextWeek, 1000);
+      }
+      nextWeek();
+    });
+  }
+
+  state.demoTimeout = setTimeout(() => steps[0].action(), 600);
+}
+
+function stopDemo(){
+  state.demoPlaying = false;
+  if (state.demoTimeout) clearTimeout(state.demoTimeout);
+  state.demoTimeout = null;
+  const btn = $('demoBtn');
+  if (btn){
+    btn.classList.remove('playing');
+    btn.textContent = '▶ run demo';
+  }
+}
+
+$('demoBtn').addEventListener('click', () => {
+  if (state.demoPlaying) stopDemo();
+  else startDemo();
+});
+
+/* =========================================================
+   KEYBOARD
+   ========================================================= */
+document.addEventListener('keydown', e => {
+  if (e.target.matches('input,textarea')) return;
+  const views = ['overview','targets','weeks','coverage','sim','merge'];
+  const i = views.indexOf(state.view);
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown'){
+    e.preventDefault();
+    stopDemo();
+    state.view = views[(i+1) % views.length];
+    state.openDiv = null;
+    document.querySelectorAll('.view-btn').forEach(b =>
+      b.classList.toggle('on', b.dataset.view === state.view));
+    renderAll();
+  } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp'){
+    e.preventDefault();
+    stopDemo();
+    state.view = views[(i-1+views.length) % views.length];
+    state.openDiv = null;
+    document.querySelectorAll('.view-btn').forEach(b =>
+      b.classList.toggle('on', b.dataset.view === state.view));
+    renderAll();
+  }
+});
+
+/* =========================================================
+   BOOT
+   ========================================================= */
+renderAll();
+</script>
+</body>
+</html>

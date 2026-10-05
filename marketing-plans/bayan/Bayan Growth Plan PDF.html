@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bayan — Growth Plan for the CEO</title>
+<style>
+  /* ---------- Page setup ---------- */
+  @page {
+    size: A4;
+    margin: 18mm 16mm 20mm 16mm;
+  }
+
+  :root {
+    --ink:      #16222e;
+    --ink-soft: #46586a;
+    --navy:     #123a5e;
+    --accent:   #1a7f8e;
+    --line:     #d7e0e8;
+    --panel:    #f2f6f9;
+    --panel-2:  #fafcfd;
+    --warn:     #b06a00;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  body {
+    margin: 0 auto;
+    max-width: 210mm;
+    padding: 14mm 6mm;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.55;
+    color: var(--ink);
+    background: #fff;
+  }
+
+  /* ---------- Title block ---------- */
+  .doc-header {
+    border-top: 6px solid var(--navy);
+    padding-top: 12px;
+    margin-bottom: 22px;
+  }
+  .doc-eyebrow {
+    font-size: 8.5pt;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin: 0 0 6px;
+  }
+  h1.doc-title {
+    font-size: 22pt;
+    line-height: 1.15;
+    margin: 0 0 14px;
+    color: var(--navy);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .doc-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .doc-meta div {
+    padding: 7px 11px;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    font-size: 9pt;
+  }
+  .doc-meta div:nth-child(3n) { border-right: none; }
+  .doc-meta div:nth-child(n+4) { border-bottom: none; }
+  .doc-meta dt {
+    display: block;
+    font-size: 7.5pt;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 700;
+    margin-bottom: 1px;
+  }
+  .doc-meta dd { margin: 0; font-weight: 600; }
+
+  /* ---------- Headings ---------- */
+  h2 {
+    font-size: 13pt;
+    color: var(--navy);
+    margin: 26px 0 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--navy);
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+  h3 {
+    font-size: 11pt;
+    color: var(--accent);
+    margin: 18px 0 7px;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  p { margin: 0 0 9px; }
+
+  /* ---------- Lists ---------- */
+  ul, ol { margin: 0 0 10px; padding-left: 20px; }
+  li { margin-bottom: 4px; }
+  ul ul, ol ul { margin-top: 4px; }
+
+  /* ---------- Emphasis / inline ---------- */
+  strong { color: var(--ink); }
+  code {
+    font-family: "Cascadia Mono", Consolas, "SF Mono", Menlo, monospace;
+    font-size: 9pt;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    padding: 0 4px;
+    color: #1c3b52;
+  }
+
+  /* ---------- Callout ---------- */
+  .callout {
+    background: var(--panel);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 4px 4px 0;
+    padding: 12px 16px;
+    margin: 0 0 20px;
+    font-size: 9.5pt;
+    color: var(--ink-soft);
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .callout p { margin: 0; }
+
+  /* ---------- Tables ---------- */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 14px;
+    font-size: 9.5pt;
+    break-inside: auto;
+  }
+  thead { display: table-header-group; }
+  tr { break-inside: avoid; page-break-inside: avoid; }
+  th {
+    background: var(--navy);
+    color: #fff;
+    text-align: left;
+    font-weight: 600;
+    font-size: 8.5pt;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    padding: 7px 10px;
+    border: 1px solid var(--navy);
+  }
+  td {
+    padding: 7px 10px;
+    border: 1px solid var(--line);
+    vertical-align: top;
+  }
+  tbody tr:nth-child(even) td { background: var(--panel-2); }
+  td.num { white-space: nowrap; }
+  .filelist { color: var(--ink-soft); font-size: 8.5pt; }
+
+  /* ---------- Special blocks ---------- */
+  .locks {
+    background: #fdf6ec;
+    border: 1px solid #f0dcc0;
+    border-radius: 4px;
+    padding: 12px 16px 12px 32px;
+    margin: 12px 0 14px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .locks li { margin-bottom: 5px; }
+  .boundary {
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--warn);
+    background: var(--panel-2);
+    border-radius: 0 4px 4px 0;
+    padding: 10px 16px;
+    margin: 14px 0 0;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .boundary p { margin: 0; }
+  .engine-list { counter-reset: eng; list-style: none; padding-left: 0; }
+  .engine-list > li {
+    position: relative;
+    padding-left: 34px;
+    margin-bottom: 10px;
+    break-inside: avoid;
+  }
+  .engine-list > li::before {
+    counter-increment: eng;
+    content: counter(eng);
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-size: 9pt;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .appendix-list { list-style: none; padding-left: 0; }
+  .appendix-list > li {
+    margin-bottom: 9px;
+    padding-left: 16px;
+    position: relative;
+  }
+  .appendix-list > li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 8px;
+    width: 5px; height: 5px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+  .appendix-list ul { margin-top: 5px; }
+
+  hr.rule {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 24px 0;
+  }
+
+  /* ---------- Screen-only helper ---------- */
+  @media screen {
+    body {
+      box-shadow: 0 0 0 1px var(--line), 0 8px 34px rgba(0,0,0,.08);
+      margin: 24px auto;
+      border-radius: 3px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ TITLE BLOCK ============ -->
+<header class="doc-header">
+  <p class="doc-eyebrow">Growth Plan · Prepared for the CEO</p>
+  <h1 class="doc-title">Bayan — Growth Plan for the CEO</h1>
+  <dl class="doc-meta">
+    <div><dt>Prepared</dt><dd>2026-09-28</dd></div>
+    <div><dt>Platform</dt><dd>BayanMarketingSystem</dd></div>
+    <div><dt>Site</dt><dd>bayan.edu.om</dd></div>
+    <div><dt>Horizon</dt><dd>90 days</dd></div>
+    <div><dt>Primary goal</dt><dd>Revenue</dd></div>
+    <div><dt>Focus order</dt><dd>Website &amp; content → SEO → AI visibility</dd></div>
+  </dl>
+</header>
+
+<div class="callout">
+  <p>Every number below is measured from live tools (BayanMarketingSystem audit, DataForSEO, GEO audit, PageSpeed), not estimated. Content follows Bayan's locks: human-owned / clinician-reviewed, no outcome guarantees, verified counts only (5,589 questions · 55+ countries).</p>
+</div>
+
+<!-- ============ 1 ============ -->
+<h2>1. Bottom line (read this if nothing else)</h2>
+
+<p>Bayan has a <strong>strong product and weak discovery.</strong> (The gap)</p>
+<ul>
+  <li>5,589 clinician-reviewed questions,</li>
+  <li>learners in 55+ countries,</li>
+  <li>a server-rendered site AI crawlers can already read</li>
+  <li>— but it ranks for <strong>zero</strong> commercial-intent exam keywords, appears in <strong>zero</strong> of the AI answers buyers now ask, and its marketing health scores <strong>25/100.</strong>
+    <ul>
+      <li>The gap is entirely fixable with content Bayan is uniquely positioned to publish.</li>
+      <li>Fixing the tracked levers takes the health score from <strong>25 → 54</strong> and the AI-answer readiness (GEO) from <strong>71 → ~90</strong>, targeting question-bank keywords where difficulty is <strong>5–18</strong> (very winnable) and one term (MRCP Part 1) already ranks #28.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>The ask:</strong><br>
+approve a draft-first, 90-day Website &amp; content push (below).<br>
+Nothing publishes without sign-off.<br>
+BayanMarketingSystem now tracks the results weekly, automatically.</p>
+
+<!-- ============ 2 ============ -->
+<h2>2. Where Bayan stands today (verified baseline)</h2>
+
+<table>
+  <thead>
+    <tr><th style="width:26%">Dimension</th><th style="width:50%">Score / state</th><th style="width:24%">Source</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Overall marketing health</td><td><strong>25 / 100</strong></td><td>BayanMarketingSystem audit health</td></tr>
+    <tr><td>Google search visibility</td><td><strong>0 / 100</strong> — 0 of 10 target keywords in top 100</td><td>audit / DataForSEO</td></tr>
+    <tr><td>AI search visibility</td><td><strong>10 / 100</strong> — named in 0 of 3 tested AI answers</td><td>audit</td></tr>
+    <tr><td>Website &amp; content</td><td><strong>73 / 100</strong> — the strong base</td><td>audit</td></tr>
+    <tr><td>GEO / AI-answer readiness</td><td><strong>71 / 100</strong></td><td>AEO audit (2026-09-28)</td></tr>
+    <tr><td>Mobile LCP (load speed)</td><td><strong>5,039 ms</strong> — slow (redirects 780ms + unused JS 600ms)</td><td>web vitals</td></tr>
+    <tr><td>Organic keywords (domain)</td><td><strong>0</strong> commercial-intent; ranks 11–54 on ~20 long-tail clinical terms</td><td>DataForSEO</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Read:</strong><br>
+the product and the site's technical base are fine.
+The failure is that <strong>no buyer-intent path leads to them</strong></p>
+<ul>
+  <li>not in Google,</li>
+  <li>not in AI answers.</li>
+</ul>
+
+<hr class="rule">
+
+<!-- ============ 3 ============ -->
+<h2>3. The opportunity, quantified</h2>
+
+<h3>3a. Keywords Bayan can realistically win (DataForSEO, live)</h3>
+
+<p>These are buyer-intent terms with <strong>low difficulty</strong> — Bayan's content depth is the exact asset needed to rank. Volume is monthly searches; difficulty is 0–100.</p>
+
+<table>
+  <thead>
+    <tr><th style="width:34%">Keyword</th><th style="width:14%">Volume</th><th style="width:16%">Difficulty</th><th style="width:36%">Note</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>usmle step 3 question bank</td><td class="num">210</td><td class="num"><strong>5</strong></td><td>easiest win</td></tr>
+    <tr><td>usmle step 2 question bank</td><td class="num">390</td><td class="num"><strong>14</strong></td><td>highest volume</td></tr>
+    <tr><td>question bank for usmle</td><td class="num">170</td><td class="num">17</td><td></td></tr>
+    <tr><td>usmle question bank</td><td class="num">170</td><td class="num">17</td><td></td></tr>
+    <tr><td>usmle step 1 question bank</td><td class="num">260</td><td class="num">18</td><td></td></tr>
+    <tr><td>arab board exam questions</td><td class="num">110</td><td class="num">—</td><td>regional intent</td></tr>
+    <tr><td>prometric exam questions</td><td class="num">90</td><td class="num">—</td><td>regional intent</td></tr>
+    <tr><td>mrcp 1 sample questions</td><td class="num">140</td><td class="num">—</td><td><strong>already ranking #28</strong> — nudge to page 1</td></tr>
+  </tbody>
+</table>
+
+<p>Bayan already ranks (positions 11–54) for ~20 long-tail clinical terms</p>
+<ul>
+  <li>(e.g. "imvaccine sites" #11, "coagulation cascade vwf" #32)</li>
+  <li>— proof the domain <em>can</em> rank;</li>
+</ul>
+<p>it simply has no pages aimed at the commercial terms above.</p>
+
+<h3>3b. AI-answer readiness (GEO audit, 2026-09-28, score 71/100)</h3>
+
+<p>Crawlers already get in
+— Claude-SearchBot, OAI-SearchBot, PerplexityBot all returned <strong>HTTP 200</strong>; the site is server-rendered (5,515 chars) with valid EducationalOrganization + WebApplication schema and a 655-URL sitemap. Six fixable gaps hold the score down:</p>
+
+<table>
+  <thead>
+    <tr><th style="width:20%">Gap</th><th style="width:22%">Current</th><th style="width:44%">Fix</th><th style="width:14%">Effort</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>FAQ / Q&amp;A schema</td><td>Missing</td><td>Add FAQ schema to key pages — "dramatically improves AI citations"</td><td>Low</td></tr>
+    <tr><td>Meta description</td><td>301 chars (too long)</td><td>Trim to 50–160 chars</td><td>Trivial</td></tr>
+    <tr><td>BLUF direct-answer style</td><td>25%</td><td>Lead pages with a one-line direct answer</td><td>Low</td></tr>
+    <tr><td>llms.txt</td><td>Missing</td><td>Publish llms.txt</td><td>Trivial</td></tr>
+    <tr><td>llms-full.txt</td><td>Missing</td><td>Publish extended llms-full.txt</td><td>Low</td></tr>
+    <tr><td>noscript fallback</td><td>Missing</td><td>Add <code>&lt;noscript&gt;</code> with core content</td><td>Trivial</td></tr>
+  </tbody>
+</table>
+
+<p>Closing these lifts GEO <strong>71 → ~90</strong> and is the cheapest visibility gain available.</p>
+
+<h3>3c. AI-visibility tracking is now LIVE</h3>
+
+<p>A <strong>14-prompt tracker set across 5 AI engines</strong> (Claude, ChatGPT, Perplexity, Google AI Overview, Gemini) now runs <strong>weekly</strong>, measuring whether Bayan is named when buyers ask AI the questions that matter</p>
+<ul>
+  <li>— branded ("Is Bayan good for OMSB prep?"),</li>
+  <li>use-case ("How can I prepare for the OMSB exam?"),</li>
+  <li>and competitive ("Best question bank for Prometric medical licensing exams", benchmarked vs UWorld / AMBOSS / Lecturio).</li>
+</ul>
+<p>This is the scoreboard for the whole strategy.</p>
+
+<h3>3d. Projected result if the plan runs</h3>
+
+<table>
+  <thead>
+    <tr><th style="width:56%">Metric</th><th style="width:22%">Now</th><th style="width:22%">Projected</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Overall health</td><td class="num">25</td><td class="num"><strong>54</strong></td></tr>
+    <tr><td>Google search subscore</td><td class="num">0</td><td class="num">28</td></tr>
+    <tr><td>AI search subscore</td><td class="num">10</td><td class="num">42</td></tr>
+    <tr><td>Website &amp; content subscore</td><td class="num">73</td><td class="num">100</td></tr>
+    <tr><td>GEO audit</td><td class="num">71</td><td class="num">~90</td></tr>
+  </tbody>
+</table>
+
+<hr class="rule">
+
+<!-- ============ 4 ============ -->
+<h2>4. Strategy — one sentence per pillar</h2>
+
+<ol>
+  <li><strong>Website &amp; content (lead):</strong> publish clinician-reviewed pages targeting the low-difficulty question-bank keywords above — the direct revenue path.</li>
+  <li><strong>SEO (compound):</strong> FAQ schema, trimmed metadata, BLUF style, faster mobile load — make those pages rank and get cited.</li>
+  <li><strong>AI visibility (measure + capture):</strong> llms.txt + FAQ content so AI engines cite Bayan; the weekly tracker proves movement.</li>
+</ol>
+
+<p>Sequenced so the revenue goal is satisfied by a leading channel from task one — which also lifted the BayanMarketingSystem plan out of its earlier degraded compile state.</p>
+
+<hr class="rule">
+
+<!-- ============ 5 ============ -->
+<h2>5. The 90-day roadmap</h2>
+
+<p>BayanMarketingSystem compiled this plan <strong>clean</strong> (v6, non-degraded) with revenue as the primary goal and Website &amp; content as the lead channel. Eleven tasks, sequenced by when they pay off. Every task is <strong>draft-first</strong> — BayanMarketingSystem prepares it, a human approves before anything ships.</p>
+
+<h3>This week — the visibility unlocks (low effort, fast payoff)</h3>
+
+<table>
+  <thead>
+    <tr><th style="width:30%">Task</th><th style="width:14%">Channel</th><th style="width:56%">Why it matters</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Draft + answer the ABG course page</td>
+      <td>AI visibility</td>
+      <td>ABG is a probe where Bayan is named in <strong>0</strong> AI answers today — a direct-answer page starts fixing that
+        <span class="filelist">{1-abg-course-answer-page-draft.md<br>2-abg-course-evidence-gaps.md<br>3-abg-course-evidence-gaps.md}</span></td>
+    </tr>
+    <tr>
+      <td>Publish the Gulf exam guide</td>
+      <td>AI visibility</td>
+      <td>Captures "which platform for OMSB/Arab Board" intent AI can cite <span class="filelist">{gulf-medical-licensing-exam-question-bank-draft.md}</span></td>
+    </tr>
+    <tr>
+      <td>Add AI guidance files (llms.txt + llms-full.txt)</td>
+      <td>GEO</td>
+      <td>Trivial effort; tells every AI engine what Bayan is — biggest cheap GEO gain</td>
+    </tr>
+    <tr>
+      <td>Draft the exam-preparation FAQ</td>
+      <td>GEO</td>
+      <td>FAQ schema "dramatically improves AI citations"</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>This month — the ranking + reach layer</h3>
+
+<table>
+  <thead>
+    <tr><th style="width:30%">Task</th><th style="width:14%">Channel</th><th style="width:56%">Why it matters</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>BLUF + meta fixes (trim 301→160 chars, add noscript)</td><td>GEO</td><td>Closes the last three GEO gaps → 71→90</td></tr>
+    <tr><td>Map 10 target searches to pages</td><td>SEO</td><td>Aims the 170 / 110 / 70-volume terms at real pages (Google subscore 0→28)</td></tr>
+    <tr><td>Draft priority SEO page briefs</td><td>SEO</td><td>Turns the low-difficulty keyword list (diff 5–18) into rankable pages</td></tr>
+    <tr><td>Draft exam-specific social calendar</td><td>Social</td><td>Bayan already has X + Telegram; a posting rhythm lifts social 44→69</td></tr>
+    <tr><td>Draft a paid-ads test</td><td>Paid ads</td><td><strong>Held at $0/month</strong> pending unit economics — drafted, not funded, until you approve spend</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Sequencing logic:</strong> cheapest, fastest-compounding wins first (AI guidance files, FAQ, direct-answer pages), then the SEO pages that need those foundations to rank, then paid/social to amplify. Revenue goal is anchored by a leading content channel from day one — which is exactly what pulled the plan out of its earlier degraded state.</p>
+
+<p><strong>Projected lift if the plan runs:</strong><br>
+overall health 25→<strong>54</strong>;
+Google 0→28;
+AI search 10→42;
+Website &amp; content 73→<strong>100</strong>;
+GEO 71→<strong>90</strong>;
+plus ads 14→60 and social 44→69 as those tracks come online.</p>
+
+<!-- ============ 6 ============ -->
+<h2>6. What is already built (draft, awaiting your sign-off)</h2>
+
+<p>The full <strong>trilingual website copy</strong> — English (LTR), Persian (RTL), Arabic (RTL) — is drafted and passed compliance review against every content lock. Eleven sections, each captured live and reviewed:</p>
+
+<table>
+  <thead>
+    <tr><th style="width:6%">#</th><th style="width:36%">Section</th><th style="width:12%">State</th><th style="width:46%">Compliance</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="num">1</td><td>Header + language switcher</td><td>Draft</td><td>✅ verified counts, localized numerals</td></tr>
+    <tr><td class="num">2</td><td>Hero</td><td>Draft</td><td>✅ clinician-reviewed, no guarantees</td></tr>
+    <tr><td class="num">3</td><td>Problem</td><td>Draft</td><td>✅ no competitor disparagement</td></tr>
+    <tr><td class="num">4</td><td>Framework (Diagnose→Practice→Analyze→Review)</td><td>Draft</td><td>✅ human-reviewed framing</td></tr>
+    <tr><td class="num">5</td><td>Services (Q-banks · Courses · OSCE · Analytics)</td><td>Draft</td><td>✅ OMSB/Arab Board, not bare Prometric</td></tr>
+    <tr><td class="num">6</td><td>AI CEO Assistant spotlight</td><td>Draft</td><td>✅ "AI assists; humans own" — passes strictest lock</td></tr>
+    <tr><td class="num">7</td><td>Example Work</td><td>Draft</td><td>✅ every card "Illustrative"; no fabricated results</td></tr>
+    <tr><td class="num">8</td><td>Founder Credibility</td><td>Draft</td><td>⚠️ <code>[Founder name — confirm with team]</code></td></tr>
+    <tr><td class="num">9</td><td>Resources Teaser</td><td>Draft</td><td>✅ free/preview framing</td></tr>
+    <tr><td class="num">10</td><td>CTA</td><td>Draft</td><td>✅ no pass/guarantee language</td></tr>
+    <tr><td class="num">11</td><td>Footer</td><td>Draft</td><td>✅ trilingual, contact/copyright placeholders</td></tr>
+  </tbody>
+</table>
+
+<p><strong>What you get:</strong> a launch-ready homepage in three languages, with RTL handled for Persian and Arabic, verified proof points (5,589 questions · 55+ countries), and zero outcome guarantees or unverified claims anywhere.</p>
+
+<p><strong>What needs a human before it goes live:</strong> the founder's real name/credential and the contact email — both marked <code>[confirm with team]</code>. Nothing publishes until you say so.</p>
+
+<hr class="rule">
+
+<!-- ============ 7 ============ -->
+<h2>7. What BayanMarketingSystem now runs for Bayan, automatically</h2>
+
+<p>Three engines are live and self-updating — the plan is not a one-time document, it is a tracked system:</p>
+
+<ol class="engine-list">
+  <li><strong>Weekly AI-visibility tracker</strong> — 14 buyer prompts × 5 AI engines (Claude, ChatGPT, Perplexity, Google AI Overview, Gemini), benchmarked vs UWorld / AMBOSS / Lecturio / BecomeAnMD / Medmastery. Runs every Monday. This is the scoreboard: it measures whether Bayan gets named when a buyer asks AI the questions that lead to a purchase.</li>
+  <li><strong>GEO / AI-answer audit</strong> — re-runnable on demand; today's baseline is 71/100 with six named, low-effort fixes.</li>
+  <li><strong>Marketing plan</strong> — recompiles from fresh evidence, keeping the roadmap current as the numbers move.</li>
+</ol>
+
+<p>Prompt mix tracked: branded ("Is Bayan good for OMSB prep?"), use-case ("How can I prepare for the OMSB exam?", "ABG interpretation practice", "OSCE practice cases"), and competitive ("Best question bank for Prometric medical licensing exams", "DHA, QCHP and OMSB platforms compared").</p>
+
+<!-- ============ 8 ============ -->
+<h2>8. Risks, assumptions, and the guardrails that protect the brand</h2>
+
+<table>
+  <thead>
+    <tr><th style="width:52%">Item</th><th style="width:48%">Status</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Credits are one-time (free plan, non-refilling)</td><td>⚠️ pace metered runs; reads are free</td></tr>
+    <tr><td>Founder specifics unverified</td><td>⚠️ <code>[confirm with team]</code> — do not publish section 8 until filled</td></tr>
+    <tr><td>Keyword difficulty is winnable but ranking takes weeks</td><td>💬 content-led; expect movement in 4–8 weeks, not days</td></tr>
+    <tr><td>Mobile LCP 5,039 ms</td><td>💬 fixable (redirects + unused JS), on the SEO track</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Content locks enforced on every word (this is what keeps a medical brand safe):</strong></p>
+<ul class="locks">
+  <li>Human-owned / clinician-reviewed — never bare "AI-powered"</li>
+  <li>No pass or outcome guarantees, ever ("on the first attempt" is banned)</li>
+  <li>"Gulf Licensing Exam Preparation," not bare "Prometric"</li>
+  <li>Verified counts only — 5,589 questions · 55+ countries; nothing invented</li>
+  <li>Any unknown becomes a <code>[confirm with team]</code> placeholder, never a guess</li>
+</ul>
+
+<div class="boundary">
+  <p><strong>Publishing boundary:</strong> everything above is a <strong>draft</strong>. No page goes live, no email sends, no ad money is spent without explicit CEO sign-off.</p>
+</div>
+
+<hr class="rule">
+
+<!-- ============ 9 ============ -->
+<h2>9. Appendix — source data</h2>
+
+<ul class="appendix-list">
+  <li>
+    <strong>Marketing audit health:</strong> 25/100 (BayanMarketingSystem audit, 2026-09-28)
+    <ul>
+      <li><code>audits/</code>
+        <ul>
+          <li>holds dated audit snapshots that Magister writes (<code>*-light-audit.md</code>, <code>*-full-audit.md</code>).</li>
+          <li>The newest one is this brand's current baseline — it is not archive material. Never write there; your own audit notes go under <code>resources/audits/</code>.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>GEO/AEO audit:</strong> 71/100, six fixable gaps (2026-09-28)</li>
+  <li><strong>Keyword data:</strong> DataForSEO live pull — difficulty 5–18 on target question-bank terms</li>
+  <li><strong>AI-visibility set:</strong> <code>Bayan — Gulf Licensing &amp; Board Exam AI Visibility</code>, 14 prompts × 5 engines, weekly cadence, competitor-benchmarked</li>
+  <li><strong>Site:</strong> bayan.edu.om — server-rendered, valid EducationalOrganization + WebApplication schema, 655-URL sitemap, all AI crawlers return HTTP 200</li>
+</ul>
+
+</body>
+</html>
