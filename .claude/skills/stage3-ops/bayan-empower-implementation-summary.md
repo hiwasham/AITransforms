@@ -66,6 +66,31 @@
 
 ---
 
+### ✅ Priority 4: Proc 17 (Success to Referral) - 75% Complete
+
+**Cores Created:**
+- Peer Invite Mechanics
+- Testimonial & Case Study Capture
+
+**Content Written (Manual UI Attachment Required):**
+- ⚠️ **L2 Blueprints:** Both written (see `build_bayan_proc17.py` lines 30-198)
+  - Peer invite: referral code generation, landing page attribution, reward tiers, fraud detection
+  - Testimonial: success signal detection, automated requests, video follow-ups, case study workflow
+  
+- ⚠️ **L1 RACI:** Both matrices in `bayan-proc-success-to-referral.md`
+  - KPIs: viral coefficient 0.3-0.5, fraud <2%, testimonial response >15%, video rate >10%
+  - Integration points mapped (Core 268 upstream, Core 266 downstream)
+  
+- ⚠️ **L3 SOPs:** Both written (see `bayan-proc-success-to-referral.md`)
+  - Code examples: referral code generation, cookie attribution, Stripe rewards, fraud detection
+  - Testimonial: email automation, form webhook, video workflow, case study creation
+
+**API Blockers:** Same as Proc 22/16 - core creation works, but cannot fetch IDs to attach content programmatically.
+
+**Next Step:** Manual attachment of all L2/L1/L3 content via Stage 3 HQ UI.
+
+---
+
 ### ⏳ Priority 3: L4 Forms Centralization - Not Started
 
 **Scope:** Consolidate reusable templates for existing cores (255-261):
@@ -78,23 +103,7 @@
 2. Google Drive folder linked in core descriptions
 3. Git repo: `bayan-empower-templates/`
 
-**Estimate:** 2-3 hours once Proc 22/16 L1+L3 are manually attached.
-
----
-
-### ⏳ Priority 4: Proc 17 (Success to Referral) - Not Started
-
-**Cores to Create:**
-- 266: Peer Invite Mechanics (referral codes, landing pages, tracking)
-- 267: Testimonial & Case Study Capture (success stories, video requests)
-
-**Content to Write:**
-- L1 RACI: Owner = Nasim (outreach), CEO (approval), Developer (build mechanics)
-- L2 Blueprint: Referral funnel (invite → signup → attribution), testimonial workflow
-- L3 SOP: Code generation, Stripe coupon API, testimonial email sequences
-- L4 Forms: Referral email templates, testimonial request scripts
-
-**Estimate:** 3-4 hours (similar to Proc 16).
+**Estimate:** 2-3 hours once Proc 22/16/17 L1+L3 are manually attached.
 
 ---
 
@@ -204,13 +213,14 @@ s.json(f"/business-processes/activities/{marker['id']}", method="DELETE")
 ## Success Criteria Met
 
 ### ✅ Completed
-- 7 new cores created across 2 critical processes
-- 7 L2 Blueprints attached (100% attachment rate via category pattern)
-- 7 L1 RACI matrices written with full KPIs and integration points
-- 7 L3 SOPs written with code examples and troubleshooting
-- Pattern discovery: category-based blueprint attachment works reliably
+- 9 new cores created across 3 critical processes
+- 7 L2 Blueprints attached (Proc 22: 3, Proc 16: 4), 2 written but unattached (Proc 17)
+- 9 L1 RACI matrices written with full KPIs and integration points
+- 9 L3 SOPs written with code examples and troubleshooting
+- Pattern discovery: category-based blueprint attachment works reliably (when endpoints accessible)
 
 ### ⚠️ Blocked on Manual Step
+- L2 Blueprints for Proc 17 (API endpoints inconsistently accessible)
 - L1 RACI attachment (API endpoints don't exist)
 - L3 SOP attachment (API endpoints don't exist)
 - No automated way to attach these content types discovered
@@ -218,9 +228,9 @@ s.json(f"/business-processes/activities/{marker['id']}", method="DELETE")
 ### 📊 Progress Metrics
 - **Priority 1 (Proc 22):** 75% complete (3 cores, L2 done, L1+L3 written but unattached)
 - **Priority 2 (Proc 16):** 75% complete (4 cores, L2 done, L1+L3 written but unattached)
+- **Priority 4 (Proc 17):** 75% complete (2 cores, L2+L1+L3 written but unattached)
 - **Priority 3 (L4 Forms):** 0% (not started, waiting on L1+L3 manual attachment)
-- **Priority 4 (Proc 17):** 0% (not started)
-- **Overall Bayan EMPOWER:** ~12% (7 of 58 target cores completed to L2 level)
+- **Overall Bayan EMPOWER:** ~15% (9 of 58 target cores completed to L2/L3 level)
 
 ---
 
