@@ -163,6 +163,3 @@ nasim-meta-account.json
 # Nasim Meta account (credential, rotation cleanup 2026-10-06)
 nasim-meta-account.json
 *meta-account*.json
-
-# Stage 3 HQ local account config + cooked session jars (credentials)
-.stage3/
