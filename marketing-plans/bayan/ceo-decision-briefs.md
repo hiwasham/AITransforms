@@ -1,3 +1,4 @@
+![[deepseek_html_20261003_8eb800.html]]
 # Bayan — CEO Decision Briefs
 
 Two decisions gate Phase 0/1 (see

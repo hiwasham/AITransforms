@@ -1,0 +1,2009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bayan — Marketing Plan v1</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+
+  :root{
+    --bg:#07090f;
+    --txt:#e8edf7;
+    --muted:#8b97ad;
+    --faint:#5b6679;
+    --line:rgba(255,255,255,.08);
+    --line-2:rgba(255,255,255,.18);
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    --sidebar-w:260px;
+    --topbar-h:58px;
+    --accent:#a78bfa;
+  }
+
+  html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+
+  body{
+    font-family:var(--sans);
+    background:var(--bg);
+    color:var(--txt);
+    line-height:1.6;
+    min-height:100vh;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ═══════════ AMBIENT BACKGROUND ═══════════ */
+
+  .bg-ambient{
+    position:fixed; inset:0; z-index:0; pointer-events:none;
+    overflow:hidden;
+  }
+  .bg-ambient::before{
+    content:'';
+    position:absolute; inset:-20%;
+    background:
+      radial-gradient(700px 500px at 20% 10%, rgba(167,139,250,.18), transparent 65%),
+      radial-gradient(600px 500px at 85% 30%, rgba(96,165,250,.13), transparent 65%),
+      radial-gradient(700px 500px at 50% 90%, rgba(244,114,182,.09), transparent 65%);
+    animation:drift 26s ease-in-out infinite alternate;
+  }
+  @keyframes drift{
+    0%{transform:translate(0,0) scale(1)}
+    50%{transform:translate(2%, -1%) scale(1.04)}
+    100%{transform:translate(-1%, 1%) scale(1.02)}
+  }
+
+  .orb{
+    position:absolute; border-radius:50%;
+    filter:blur(60px); opacity:.35;
+    animation:float 18s ease-in-out infinite;
+  }
+  .orb.o1{width:280px; height:280px; background:#a78bfa; top:8%; left:6%}
+  .orb.o2{width:220px; height:220px; background:#60a5fa; top:32%; right:9%; animation-delay:-6s}
+  .orb.o3{width:260px; height:260px; background:#f472b6; bottom:12%; left:22%; animation-delay:-12s; opacity:.22}
+
+  @keyframes float{
+    0%,100%{transform:translate(0,0) scale(1)}
+    33%{transform:translate(24px, -30px) scale(1.08)}
+    66%{transform:translate(-18px, 22px) scale(0.95)}
+  }
+
+  /* star field */
+  .stars{
+    position:absolute; inset:0;
+    background-image:
+      radial-gradient(1px 1px at 12% 22%, rgba(255,255,255,.7), transparent),
+      radial-gradient(1px 1px at 34% 71%, rgba(255,255,255,.5), transparent),
+      radial-gradient(1.5px 1.5px at 56% 18%, rgba(255,255,255,.8), transparent),
+      radial-gradient(1px 1px at 78% 44%, rgba(255,255,255,.55), transparent),
+      radial-gradient(1px 1px at 91% 82%, rgba(255,255,255,.6), transparent),
+      radial-gradient(1px 1px at 22% 88%, rgba(255,255,255,.45), transparent),
+      radial-gradient(1.5px 1.5px at 68% 92%, rgba(255,255,255,.75), transparent),
+      radial-gradient(1px 1px at 45% 52%, rgba(255,255,255,.4), transparent),
+      radial-gradient(1px 1px at 8% 62%, rgba(255,255,255,.5), transparent),
+      radial-gradient(1px 1px at 88% 12%, rgba(255,255,255,.55), transparent);
+    animation:twinkle 6s ease-in-out infinite alternate;
+  }
+  @keyframes twinkle{
+    0%{opacity:.5}
+    100%{opacity:1}
+  }
+
+  /* cursor glow */
+  .cursor-glow{
+    position:fixed; width:520px; height:520px;
+    border-radius:50%; pointer-events:none; z-index:1;
+    background:radial-gradient(closest-side, rgba(167,139,250,.1), transparent 72%);
+    transform:translate(-50%, -50%);
+    transition:opacity .4s;
+    opacity:0;
+    mix-blend-mode:screen;
+  }
+  body:hover .cursor-glow{opacity:1}
+
+  /* ═══════════ TOPBAR ═══════════ */
+
+  .topbar{
+    position:sticky; top:0; z-index:60;
+    height:var(--topbar-h);
+    background:rgba(7,9,15,.78);
+    backdrop-filter:blur(16px) saturate(1.4);
+    -webkit-backdrop-filter:blur(16px) saturate(1.4);
+    border-bottom:1px solid var(--line);
+  }
+
+  .topbar-inner{
+    display:flex; align-items:center; gap:14px;
+    height:100%; padding:0 22px;
+  }
+
+  .brand{
+    display:flex; align-items:center; gap:10px;
+    font-size:13px; font-weight:650; letter-spacing:-.01em;
+    white-space:nowrap;
+  }
+  .brand-mark{
+    width:24px; height:24px; border-radius:7px;
+    background:conic-gradient(from 220deg, #a78bfa, #60a5fa, #f472b6, #a78bfa);
+    box-shadow:0 0 18px rgba(167,139,250,.55);
+    flex:none;
+    animation:spinGlow 8s linear infinite;
+  }
+  @keyframes spinGlow{
+    0%{box-shadow:0 0 18px rgba(167,139,250,.55)}
+    50%{box-shadow:0 0 22px rgba(96,165,250,.6)}
+    100%{box-shadow:0 0 18px rgba(167,139,250,.55)}
+  }
+  .brand-sub{
+    font-family:var(--mono); font-size:10.5px;
+    color:var(--faint); letter-spacing:.04em;
+    padding-left:10px; margin-left:2px;
+    border-left:1px solid var(--line);
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  }
+
+  .topbar-spacer{flex:1}
+
+  .view-toggle{
+    display:flex; align-items:center; gap:2px;
+    padding:3px; border-radius:10px;
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.03);
+    font-size:11.5px;
+    position:relative;
+  }
+  .view-btn{
+    all:unset;
+    padding:5px 12px; border-radius:7px;
+    color:var(--muted); cursor:pointer;
+    transition:color .2s, background .3s;
+    white-space:nowrap; position:relative; z-index:1;
+  }
+  .view-btn:hover{color:#fff}
+  .view-btn.is-active{color:#fff}
+  .view-pill{
+    position:absolute;
+    top:3px; bottom:3px;
+    border-radius:7px;
+    background:rgba(255,255,255,.09);
+    transition:left .35s cubic-bezier(.5,.2,.2,1), width .35s cubic-bezier(.5,.2,.2,1);
+    box-shadow:0 1px 0 rgba(255,255,255,.06) inset;
+  }
+
+  .print-btn{
+    all:unset;
+    display:flex; align-items:center; gap:6px;
+    padding:6px 12px; border-radius:8px;
+    font-size:11.5px; color:var(--muted);
+    border:1px solid var(--line);
+    cursor:pointer;
+    transition:background .2s, color .2s, border-color .2s, transform .15s;
+    white-space:nowrap;
+  }
+  .print-btn:hover{background:rgba(255,255,255,.06); color:#fff; border-color:var(--line-2); transform:translateY(-1px)}
+  .print-btn svg{width:13px; height:13px}
+
+  .progress-track{
+    position:absolute; bottom:-1px; left:0; right:0;
+    height:2px;
+    background:transparent;
+  }
+  .progress-fill{
+    height:100%; width:0%;
+    background:linear-gradient(90deg, #a78bfa, #60a5fa 40%, #22d3ee 70%, #f472b6);
+    box-shadow:0 0 12px rgba(167,139,250,.7);
+    transition:width .12s linear;
+    border-radius:0 2px 2px 0;
+  }
+
+  /* ═══════════ LAYOUT ═══════════ */
+
+  .layout{
+    position:relative; z-index:2;
+    display:grid;
+    grid-template-columns:var(--sidebar-w) 1fr;
+    max-width:1480px;
+    margin:0 auto;
+  }
+
+  /* ═══════════ SIDEBAR ═══════════ */
+
+  .sidebar{
+    position:sticky;
+    top:var(--topbar-h);
+    height:calc(100vh - var(--topbar-h));
+    overflow-y:auto;
+    padding:26px 14px 60px 22px;
+    border-right:1px solid var(--line);
+  }
+  .sidebar::-webkit-scrollbar{width:6px}
+  .sidebar::-webkit-scrollbar-thumb{background:rgba(255,255,255,.08); border-radius:3px}
+
+  .side-label{
+    font-size:9.5px; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--faint); font-weight:600;
+    padding:0 10px 12px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .side-label::after{
+    content:'';
+    flex:1; height:1px;
+    background:linear-gradient(90deg, var(--line), transparent);
+  }
+
+  .side-nav{display:flex; flex-direction:column; gap:1px; position:relative}
+
+  .side-item{
+    all:unset;
+    display:flex; align-items:center; gap:11px;
+    padding:8px 10px; border-radius:8px;
+    font-size:12.5px; color:var(--muted);
+    cursor:pointer;
+    transition:background .2s, color .2s, transform .25s;
+    position:relative;
+    line-height:1.3;
+  }
+  .side-item:hover{background:rgba(255,255,255,.04); color:#dbe4f2; transform:translateX(2px)}
+  .side-item.is-active{background:rgba(255,255,255,.055); color:#fff}
+  .side-item.is-active::before{
+    content:'';
+    position:absolute; left:-22px; top:50%;
+    width:2px; height:16px; border-radius:2px;
+    transform:translateY(-50%);
+    background:var(--sc);
+    box-shadow:0 0 12px var(--sc);
+    animation:pulseBar 2.4s ease-in-out infinite;
+  }
+  @keyframes pulseBar{
+    0%,100%{box-shadow:0 0 12px var(--sc)}
+    50%{box-shadow:0 0 20px var(--sc), 0 0 30px color-mix(in srgb, var(--sc) 50%, transparent)}
+  }
+
+  .side-num{
+    font-family:var(--mono); font-size:10px;
+    color:var(--faint); font-weight:600;
+    flex:none; width:18px;
+    font-variant-numeric:tabular-nums;
+    transition:color .2s;
+  }
+  .side-item.is-active .side-num{color:var(--sc)}
+  .side-title{flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+
+  /* ═══════════ MAIN ═══════════ */
+
+  main{padding:0 56px 130px; max-width:940px; min-width:0}
+
+  /* ═══════════ HERO ═══════════ */
+
+  .hero{
+    padding:60px 0 40px;
+    position:relative;
+  }
+
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:10.5px; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--muted); padding:6px 14px; border-radius:999px;
+    border:1px solid var(--line); background:rgba(255,255,255,.03);
+    opacity:0; animation:riseIn .7s .1s cubic-bezier(.2,.7,.3,1) forwards;
+  }
+  .eyebrow i{
+    width:6px; height:6px; border-radius:50%;
+    background:#a78bfa; box-shadow:0 0 12px #a78bfa;
+    animation:blink 2.4s ease-in-out infinite;
+  }
+  @keyframes blink{
+    0%,100%{opacity:1}
+    50%{opacity:.35}
+  }
+
+  .hero h1{
+    font-size:clamp(32px,4.8vw,54px);
+    font-weight:700; letter-spacing:-.038em; line-height:1.05;
+    margin:22px 0 0;
+    max-width:820px;
+    opacity:0; animation:riseIn .8s .2s cubic-bezier(.2,.7,.3,1) forwards;
+  }
+  .hero h1 .grad{
+    background:linear-gradient(100deg,#a78bfa,#60a5fa 38%,#22d3ee 66%,#f472b6 92%);
+    background-size:200% 100%;
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    animation:gradShift 8s ease infinite;
+  }
+  @keyframes gradShift{
+    0%,100%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+  }
+
+  .hero p.lede{
+    color:var(--muted); font-size:15.5px; max-width:600px;
+    margin-top:20px; line-height:1.65;
+    opacity:0; animation:riseIn .8s .3s cubic-bezier(.2,.7,.3,1) forwards;
+  }
+  .hero p.lede strong{color:#dbe4f2; font-weight:600}
+  .hero p.lede em{color:#c9d4e6; font-style:normal; font-family:var(--mono); font-size:13.5px}
+
+  @keyframes riseIn{
+    from{opacity:0; transform:translateY(14px)}
+    to{opacity:1; transform:translateY(0)}
+  }
+
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1fr 380px;
+    gap:48px;
+    align-items:center;
+    margin-top:8px;
+  }
+
+  @media (max-width:1100px){
+    .hero-grid{grid-template-columns:1fr; gap:40px}
+  }
+
+  /* ───────────── FUNNEL VISUAL ───────────── */
+
+  .funnel-wrap{
+    position:relative;
+    padding:24px 0;
+    opacity:0;
+    animation:riseIn .9s .5s cubic-bezier(.2,.7,.3,1) forwards;
+  }
+
+  .funnel{
+    position:relative;
+    display:flex; flex-direction:column; gap:9px;
+    padding:22px 20px;
+    border-radius:20px;
+    border:1px solid var(--line);
+    background:linear-gradient(180deg, rgba(255,255,255,.028), rgba(255,255,255,.006));
+    backdrop-filter:blur(8px);
+    overflow:hidden;
+  }
+  .funnel::before{
+    content:'';
+    position:absolute; inset:0;
+    background:
+      radial-gradient(200px 120px at 50% 0%, rgba(167,139,250,.16), transparent 70%),
+      radial-gradient(200px 120px at 50% 100%, rgba(244,114,182,.1), transparent 70%);
+    pointer-events:none;
+  }
+
+  .funnel-flow{
+    position:absolute;
+    left:50%; top:22px; bottom:22px;
+    width:1px;
+    transform:translateX(-50%);
+    background:linear-gradient(180deg,
+      rgba(167,139,250,.4),
+      rgba(96,165,250,.4) 25%,
+      rgba(34,211,238,.4) 55%,
+      rgba(192,132,252,.4) 78%,
+      rgba(244,114,182,.4));
+    pointer-events:none;
+    z-index:0;
+  }
+  .funnel-flow::after{
+    content:'';
+    position:absolute; left:50%;
+    width:8px; height:8px;
+    border-radius:50%;
+    background:#fff;
+    transform:translate(-50%, -50%);
+    box-shadow:0 0 18px 4px rgba(167,139,250,.9), 0 0 30px 8px rgba(96,165,250,.5);
+    animation:flowDown 5s linear infinite;
+  }
+  @keyframes flowDown{
+    0%{top:0%; opacity:0}
+    10%{opacity:1}
+    90%{opacity:1}
+    100%{top:100%; opacity:0}
+  }
+
+  .funnel-stage{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    z-index:1;
+    opacity:0;
+    animation:stageIn .7s cubic-bezier(.2,.7,.3,1) forwards;
+  }
+  .funnel-stage:nth-child(2){animation-delay:.65s}
+  .funnel-stage:nth-child(3){animation-delay:.75s}
+  .funnel-stage:nth-child(4){animation-delay:.85s}
+  .funnel-stage:nth-child(5){animation-delay:.95s}
+  .funnel-stage:nth-child(6){animation-delay:1.05s}
+
+  @keyframes stageIn{
+    from{opacity:0; transform:scaleX(.6)}
+    to{opacity:1; transform:scaleX(1)}
+  }
+
+  .fs-inner{
+    width:var(--w, 100%);
+    display:flex; align-items:center; gap:10px;
+    padding:10px 16px;
+    border-radius:12px;
+    background:linear-gradient(90deg,
+      color-mix(in srgb, var(--c) 22%, rgba(255,255,255,.02)),
+      color-mix(in srgb, var(--c) 8%, rgba(255,255,255,.02)));
+    border:1px solid color-mix(in srgb, var(--c) 38%, transparent);
+    box-shadow:
+      0 0 0 1px color-mix(in srgb, var(--c) 12%, transparent),
+      0 12px 32px -18px var(--c);
+    transition:transform .3s cubic-bezier(.2,.7,.3,1), box-shadow .3s;
+    cursor:default;
+  }
+  .fs-inner:hover{
+    transform:translateX(4px);
+    box-shadow:
+      0 0 0 1px color-mix(in srgb, var(--c) 25%, transparent),
+      0 18px 44px -18px var(--c);
+  }
+
+  .fs-dot{
+    width:8px; height:8px; border-radius:50%;
+    background:var(--c); box-shadow:0 0 12px var(--c);
+    flex:none;
+  }
+  .fs-label{
+    font-size:12.5px; font-weight:650; letter-spacing:-.005em;
+    color:#eef3fb;
+    flex:1;
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  }
+  .fs-count{
+    font-family:var(--mono); font-size:11.5px; font-weight:600;
+    color:color-mix(in srgb, var(--c) 80%, #fff);
+    font-variant-numeric:tabular-nums;
+    flex:none;
+  }
+
+  .funnel-caption{
+    text-align:center;
+    font-family:var(--mono); font-size:10px;
+    color:var(--faint); letter-spacing:.14em;
+    text-transform:uppercase;
+    margin-top:14px;
+  }
+
+  /* ───────────── METADATA ───────────── */
+
+  .meta{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:0;
+    margin-top:36px;
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+    background:rgba(255,255,255,.015);
+    opacity:0; animation:riseIn .8s .55s cubic-bezier(.2,.7,.3,1) forwards;
+  }
+  .meta-cell{
+    padding:14px 16px;
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    transition:background .2s;
+  }
+  .meta-cell:hover{background:rgba(255,255,255,.025)}
+  .meta-cell:last-child{border-right:none}
+  .meta-key{
+    font-size:9.5px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--faint); font-weight:600;
+    margin-bottom:6px;
+  }
+  .meta-val{
+    font-family:var(--mono); font-size:12.5px;
+    color:#dbe4f2; letter-spacing:-.005em;
+  }
+  .meta-val.empty{color:var(--faint); font-style:italic}
+
+  /* ───────────── STATS ───────────── */
+
+  .stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(120px, 1fr));
+    gap:10px;
+    margin-top:22px;
+    opacity:0; animation:riseIn .8s .7s cubic-bezier(.2,.7,.3,1) forwards;
+  }
+  .stat{
+    position:relative;
+    display:flex; flex-direction:column; gap:2px;
+    padding:16px 18px 15px;
+    border-radius:14px;
+    border:1px solid var(--line);
+    background:linear-gradient(180deg,rgba(255,255,255,.028),rgba(255,255,255,.008));
+    overflow:hidden;
+    transition:transform .25s cubic-bezier(.2,.7,.3,1), border-color .25s, box-shadow .25s;
+  }
+  .stat::before{
+    content:'';
+    position:absolute; top:0; left:0; right:0; height:2px;
+    background:linear-gradient(90deg, transparent, var(--sc, #a78bfa), transparent);
+    opacity:.5;
+    transition:opacity .25s;
+  }
+  .stat:hover{
+    transform:translateY(-3px);
+    border-color:var(--line-2);
+    box-shadow:0 18px 40px -26px var(--sc, #a78bfa);
+  }
+  .stat:hover::before{opacity:1}
+
+  .stat b{
+    font-size:26px; font-weight:700; letter-spacing:-.03em;
+    font-variant-numeric:tabular-nums;
+    color:#fff;
+    line-height:1.1;
+  }
+  .stat span{
+    font-size:10px; color:var(--muted);
+    letter-spacing:.12em; text-transform:uppercase;
+    font-weight:600;
+  }
+
+  /* ═══════════ SECTIONS ═══════════ */
+
+  .sections{
+    position:relative;
+    display:flex; flex-direction:column; gap:14px;
+    margin-top:56px;
+    padding-left:34px;
+  }
+
+  .sections::before{
+    content:'';
+    position:absolute; left:11px; top:14px; bottom:14px;
+    width:1px;
+    background:linear-gradient(180deg,
+      rgba(148,163,184,.05),
+      rgba(148,163,184,.14) 20%,
+      rgba(148,163,184,.14) 80%,
+      rgba(148,163,184,.05));
+  }
+
+  .section{
+    position:relative;
+    border-radius:18px;
+    border:1px solid var(--line);
+    background:linear-gradient(180deg, rgba(255,255,255,.026), rgba(255,255,255,.005));
+    overflow:hidden;
+    scroll-margin-top:calc(var(--topbar-h) + 22px);
+    transition:
+      border-color .3s,
+      background .3s,
+      transform .4s cubic-bezier(.2,.7,.3,1),
+      opacity .6s cubic-bezier(.2,.7,.3,1),
+      box-shadow .3s;
+    opacity:0;
+    transform:translateY(24px);
+  }
+  .section.in-view{
+    opacity:1;
+    transform:translateY(0);
+  }
+  .section::before{
+    content:'';
+    position:absolute; top:0; left:0; right:0; height:2px;
+    background:linear-gradient(90deg, transparent, var(--sc), transparent);
+    opacity:.55;
+    transition:opacity .3s;
+  }
+  .section:hover{
+    border-color:var(--line-2);
+    background:linear-gradient(180deg, rgba(255,255,255,.038), rgba(255,255,255,.01));
+  }
+  .section.is-open::before{opacity:1}
+
+  .section::after{
+    content:'';
+    position:absolute; left:-28px; top:26px;
+    width:11px; height:11px; border-radius:50%;
+    background:var(--bg);
+    border:2px solid color-mix(in srgb, var(--sc) 50%, transparent);
+    box-shadow:0 0 12px color-mix(in srgb, var(--sc) 40%, transparent);
+    transition:border-color .3s, box-shadow .3s, transform .3s;
+  }
+  .section.in-view::after{
+    border-color:var(--sc);
+    box-shadow:0 0 16px var(--sc), 0 0 28px color-mix(in srgb, var(--sc) 40%, transparent);
+  }
+  .section.is-open::after{
+    transform:scale(1.25);
+  }
+
+  .section-head{
+    display:flex; align-items:flex-start; gap:16px;
+    padding:22px 26px 18px;
+    cursor:pointer;
+    user-select:none;
+  }
+
+  .sec-icon{
+    flex:none;
+    width:42px; height:42px;
+    border-radius:11px;
+    display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(135deg,
+      color-mix(in srgb, var(--sc) 22%, transparent),
+      color-mix(in srgb, var(--sc) 8%, transparent));
+    border:1px solid color-mix(in srgb, var(--sc) 32%, transparent);
+    color:var(--sc);
+    transition:transform .4s cubic-bezier(.2,.7,.3,1), box-shadow .3s, border-color .3s;
+    position:relative;
+  }
+  .sec-icon::before{
+    content:'';
+    position:absolute; inset:-1px;
+    border-radius:inherit;
+    background:radial-gradient(closest-side, color-mix(in srgb, var(--sc) 24%, transparent), transparent);
+    opacity:0;
+    transition:opacity .3s;
+  }
+  .sec-icon svg{
+    width:19px; height:19px;
+    stroke-width:1.8;
+    position:relative; z-index:1;
+    transition:transform .4s cubic-bezier(.2,.7,.3,1);
+  }
+  .section:hover .sec-icon{
+    transform:scale(1.06);
+    border-color:color-mix(in srgb, var(--sc) 55%, transparent);
+  }
+  .section:hover .sec-icon::before{opacity:1}
+  .section:hover .sec-icon svg{transform:scale(1.08)}
+  .section.is-open .sec-icon{
+    box-shadow:0 0 0 1px color-mix(in srgb, var(--sc) 30%, transparent),
+                0 14px 30px -18px var(--sc);
+  }
+
+  .sec-head-text{flex:1; min-width:0; padding-top:2px}
+  .sec-title{
+    font-size:16.5px; font-weight:650; letter-spacing:-.015em;
+    color:#eef3fb; line-height:1.25;
+    display:flex; align-items:baseline; gap:9px;
+    flex-wrap:wrap;
+  }
+  .sec-num-inline{
+    font-family:var(--mono); font-size:10.5px;
+    color:var(--sc); font-weight:700;
+    letter-spacing:.04em;
+    font-variant-numeric:tabular-nums;
+    transition:color .3s;
+  }
+  .sec-purpose{
+    font-size:12.5px; color:var(--muted);
+    margin-top:7px; line-height:1.55;
+  }
+
+  .sec-toggle{
+    flex:none;
+    width:28px; height:28px; border-radius:8px;
+    display:flex; align-items:center; justify-content:center;
+    border:1px solid var(--line);
+    color:var(--faint);
+    background:rgba(255,255,255,.02);
+    transition:transform .35s cubic-bezier(.2,.7,.3,1), color .25s, border-color .25s, background .25s;
+    margin-top:3px;
+  }
+  .section.is-open .sec-toggle{
+    transform:rotate(180deg);
+    color:var(--sc);
+    border-color:color-mix(in srgb, var(--sc) 42%, transparent);
+    background:color-mix(in srgb, var(--sc) 8%, transparent);
+  }
+  .section:hover .sec-toggle{color:#fff}
+
+  .sec-body{
+    display:grid;
+    grid-template-rows:0fr;
+    transition:grid-template-rows .45s cubic-bezier(.3,.7,.3,1);
+  }
+  .section.is-open .sec-body{
+    grid-template-rows:1fr;
+  }
+  .sec-body-inner{
+    overflow:hidden;
+    min-height:0;
+  }
+
+  .sec-body-pad{
+    padding:0 26px 24px;
+  }
+
+  .sec-meta{
+    display:flex; flex-wrap:wrap; gap:8px;
+    margin-bottom:18px;
+  }
+  .pill{
+    display:inline-flex; align-items:center; gap:7px;
+    padding:5px 12px; border-radius:8px;
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.025);
+    font-family:var(--mono); font-size:10.5px;
+    color:var(--muted);
+    letter-spacing:.02em;
+    transition:border-color .2s, background .2s;
+  }
+  .pill:hover{
+    border-color:color-mix(in srgb, var(--sc) 30%, transparent);
+    background:color-mix(in srgb, var(--sc) 6%, transparent);
+  }
+  .pill svg{width:11px; height:11px; flex:none; opacity:.6}
+  .pill strong{
+    color:#dbe4f2; font-weight:600;
+    text-transform:uppercase; letter-spacing:.06em; font-size:9.5px;
+  }
+
+  .sec-block{margin-bottom:16px}
+  .sec-block:last-child{margin-bottom:0}
+
+  .block-label{
+    font-size:10px; letter-spacing:.15em; text-transform:uppercase;
+    color:var(--sc); font-weight:700;
+    margin-bottom:11px;
+    display:flex; align-items:center; gap:9px;
+  }
+  .block-label::after{
+    content:'';
+    flex:1; height:1px;
+    background:linear-gradient(90deg, color-mix(in srgb, var(--sc) 30%, transparent), transparent);
+  }
+
+  .struct-list{
+    list-style:none;
+    display:flex; flex-direction:column; gap:9px;
+  }
+  .struct-list li{
+    position:relative;
+    padding-left:20px;
+    font-size:13px; color:#c4cfe0;
+    line-height:1.55;
+    opacity:0;
+    transform:translateX(-6px);
+    transition:opacity .4s, transform .4s;
+  }
+  .section.is-open .struct-list li{
+    opacity:1; transform:translateX(0);
+  }
+  .section.is-open .struct-list li:nth-child(1){transition-delay:.08s}
+  .section.is-open .struct-list li:nth-child(2){transition-delay:.13s}
+  .section.is-open .struct-list li:nth-child(3){transition-delay:.18s}
+  .section.is-open .struct-list li:nth-child(4){transition-delay:.23s}
+  .section.is-open .struct-list li:nth-child(5){transition-delay:.28s}
+  .section.is-open .struct-list li:nth-child(6){transition-delay:.33s}
+  .section.is-open .struct-list li:nth-child(7){transition-delay:.38s}
+  .section.is-open .struct-list li:nth-child(8){transition-delay:.43s}
+
+  .struct-list li::before{
+    content:'';
+    position:absolute; left:3px; top:9px;
+    width:5px; height:5px; border-radius:50%;
+    background:var(--sc); opacity:.75;
+    box-shadow:0 0 8px color-mix(in srgb, var(--sc) 60%, transparent);
+  }
+  .struct-list li strong{color:#eef3fb; font-weight:600}
+  .struct-list li em{color:var(--muted); font-style:normal; font-family:var(--mono); font-size:11.5px}
+  .struct-list li code{
+    font-family:var(--mono); font-size:11px;
+    background:rgba(255,255,255,.055);
+    border:1px solid var(--line);
+    padding:1px 5px; border-radius:4px;
+    color:#c9d4e6;
+  }
+  .struct-list li ul{
+    margin-top:7px; padding-left:0;
+    list-style:none;
+    display:flex; flex-direction:column; gap:6px;
+  }
+  .struct-list li ul li{
+    padding-left:14px; font-size:12px;
+  }
+  .struct-list li ul li::before{
+    content:'·';
+    position:absolute; left:3px; top:-2px;
+    width:auto; height:auto; border-radius:0;
+    background:none; box-shadow:none;
+    color:var(--faint); font-size:14px;
+  }
+
+  .voice-notes{
+    padding:15px 17px;
+    border-radius:11px;
+    border:1px solid var(--line);
+    background:linear-gradient(180deg, rgba(251,191,36,.04), rgba(251,191,36,.008));
+    position:relative;
+    overflow:hidden;
+  }
+  .voice-notes::before{
+    content:'';
+    position:absolute; left:0; top:0; bottom:0; width:2px;
+    background:linear-gradient(180deg, transparent, #fbbf24, transparent);
+    opacity:.6;
+  }
+  .voice-notes .block-label{color:#fbbf24}
+  .voice-notes .block-label::after{
+    background:linear-gradient(90deg, rgba(251,191,36,.3), transparent);
+  }
+  .voice-notes ul{
+    list-style:none;
+    display:flex; flex-direction:column; gap:8px;
+  }
+  .voice-notes li{
+    position:relative; padding-left:16px;
+    font-size:12.5px; color:#b3c0d4; line-height:1.55;
+  }
+  .voice-notes li::before{
+    content:'';
+    position:absolute; left:0; top:8px;
+    width:4px; height:4px; border-radius:50%;
+    background:#fbbf24;
+    box-shadow:0 0 8px rgba(251,191,36,.7);
+  }
+
+  /* ── example ── */
+
+  .example{
+    margin-top:16px;
+    border-radius:12px;
+    border:1px dashed color-mix(in srgb, var(--sc) 32%, transparent);
+    background:color-mix(in srgb, var(--sc) 4%, transparent);
+    overflow:hidden;
+    display:none;
+  }
+  body.show-examples .example{
+    display:block;
+    animation:exampleIn .5s cubic-bezier(.2,.7,.3,1) backwards;
+  }
+  @keyframes exampleIn{
+    from{opacity:0; transform:translateY(-4px)}
+    to{opacity:1; transform:translateY(0)}
+  }
+  .example.is-open{display:block}
+
+  .example-head{
+    display:flex; align-items:center; gap:10px;
+    padding:12px 16px;
+    cursor:pointer;
+    font-family:var(--mono); font-size:10.5px;
+    color:color-mix(in srgb, var(--sc) 80%, #fff);
+    letter-spacing:.04em;
+    user-select:none;
+    transition:background .2s;
+  }
+  .example-head:hover{background:color-mix(in srgb, var(--sc) 6%, transparent)}
+  .example-head .arrow{
+    font-size:10px;
+    transition:transform .3s cubic-bezier(.2,.7,.3,1);
+    color:color-mix(in srgb, var(--sc) 70%, transparent);
+    display:inline-block;
+  }
+  .example.is-open .example-head .arrow{transform:rotate(90deg)}
+  .example-head .tag{
+    margin-left:auto;
+    font-size:9px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--faint);
+  }
+
+  .example-body-wrap{
+    display:grid;
+    grid-template-rows:0fr;
+    transition:grid-template-rows .35s cubic-bezier(.3,.7,.3,1);
+  }
+  .example.is-open .example-body-wrap{grid-template-rows:1fr}
+  .example-body-inner{overflow:hidden; min-height:0}
+
+  .example-body{
+    padding:0 16px 16px;
+    font-size:12.5px; color:#b8c5d8;
+    line-height:1.65;
+  }
+  .example-body p{margin-bottom:10px}
+  .example-body p:last-child{margin-bottom:0}
+  .example-body strong{color:#fff; font-weight:600}
+  .example-body em{color:var(--muted); font-style:italic}
+  .example-body ol, .example-body ul{
+    padding-left:20px; margin:8px 0 10px;
+    font-size:12.5px; line-height:1.6; color:#b8c5d8;
+  }
+  .example-body li{margin-bottom:5px}
+
+  .example-body table{
+    width:100%; border-collapse:collapse;
+    font-size:11.5px; margin:10px 0;
+  }
+  .example-body table th,
+  .example-body table td{
+    padding:7px 9px; text-align:left;
+    border-bottom:1px solid var(--line);
+  }
+  .example-body table th{
+    font-size:9.5px; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--faint); font-weight:600;
+    background:rgba(255,255,255,.02);
+  }
+  .example-body table td:first-child{
+    font-family:var(--mono); font-size:10.5px;
+    color:var(--muted);
+  }
+
+  /* ═══════════ HEURISTICS ═══════════ */
+
+  .heuristics{
+    margin-top:60px;
+    padding:32px 34px 34px;
+    border-radius:20px;
+    border:1px solid var(--line);
+    background:linear-gradient(180deg, rgba(167,139,250,.055), rgba(96,165,250,.015));
+    position:relative;
+    overflow:hidden;
+    opacity:0;
+    transform:translateY(24px);
+    transition:opacity .7s, transform .7s cubic-bezier(.2,.7,.3,1);
+  }
+  .heuristics.in-view{opacity:1; transform:translateY(0)}
+  .heuristics::before{
+    content:'';
+    position:absolute; top:0; left:0; right:0; height:2px;
+    background:linear-gradient(90deg, transparent, #a78bfa, #60a5fa, #f472b6, transparent);
+    opacity:.7;
+    background-size:200% 100%;
+    animation:gradShift 6s ease infinite;
+  }
+
+  .heur-head{
+    display:flex; align-items:center; gap:12px;
+    margin-bottom:22px;
+    flex-wrap:wrap;
+  }
+  .heur-badge{
+    font-family:var(--mono); font-size:9.5px; font-weight:700;
+    letter-spacing:.1em;
+    color:#c4b5fd;
+    padding:4px 9px; border-radius:6px;
+    background:rgba(167,139,250,.12);
+    border:1px solid rgba(167,139,250,.3);
+  }
+  .heur-title{
+    font-size:15.5px; font-weight:650;
+    color:#eef3fb; letter-spacing:-.01em;
+  }
+  .heur-sub{
+    font-size:12px; color:var(--muted);
+    margin-left:auto; max-width:280px;
+    text-align:right; line-height:1.4;
+  }
+
+  .heur-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:11px;
+  }
+  .heur-item{
+    position:relative;
+    padding:15px 16px 14px 42px;
+    border-radius:12px;
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.02);
+    transition:border-color .25s, background .25s, transform .25s, box-shadow .25s;
+    overflow:hidden;
+    opacity:0;
+    transform:translateY(12px);
+  }
+  .heuristics.in-view .heur-item{
+    opacity:1; transform:translateY(0);
+  }
+  .heuristics.in-view .heur-item:nth-child(1){transition:all .5s .1s cubic-bezier(.2,.7,.3,1)}
+  .heuristics.in-view .heur-item:nth-child(2){transition:all .5s .15s cubic-bezier(.2,.7,.3,1)}
+  .heuristics.in-view .heur-item:nth-child(3){transition:all .5s .2s cubic-bezier(.2,.7,.3,1)}
+  .heuristics.in-view .heur-item:nth-child(4){transition:all .5s .25s cubic-bezier(.2,.7,.3,1)}
+  .heuristics.in-view .heur-item:nth-child(5){transition:all .5s .3s cubic-bezier(.2,.7,.3,1)}
+  .heuristics.in-view .heur-item:nth-child(6){transition:all .5s .35s cubic-bezier(.2,.7,.3,1)}
+  .heuristics.in-view .heur-item:nth-child(7){transition:all .5s .4s cubic-bezier(.2,.7,.3,1)}
+  .heuristics.in-view .heur-item:nth-child(8){transition:all .5s .45s cubic-bezier(.2,.7,.3,1)}
+  .heuristics.in-view .heur-item:nth-child(9){transition:all .5s .5s cubic-bezier(.2,.7,.3,1)}
+
+  .heur-item::before{
+    content:'✓';
+    position:absolute; left:15px; top:50%;
+    transform:translateY(-50%);
+    width:18px; height:18px;
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-size:10px; font-weight:700;
+    background:rgba(167,139,250,.15);
+    border:1px solid rgba(167,139,250,.4);
+    color:#c4b5fd;
+    box-shadow:0 0 10px rgba(167,139,250,.3);
+  }
+  .heur-item:hover{
+    border-color:rgba(167,139,250,.35);
+    background:rgba(167,139,250,.045);
+    transform:translateY(-2px);
+    box-shadow:0 18px 40px -22px rgba(167,139,250,.6);
+  }
+
+  .heur-item .hn{
+    font-family:var(--mono); font-size:9.5px; font-weight:700;
+    color:#c4b5fd;
+    letter-spacing:.08em;
+    margin-bottom:6px;
+    text-transform:uppercase;
+  }
+  .heur-item .ht{
+    font-size:12px; color:#c4cfe0;
+    line-height:1.55;
+  }
+  .heur-item .ht em{
+    color:#e2e9f5; font-style:normal; font-weight:600;
+  }
+  .heur-item .ht code{
+    font-family:var(--mono); font-size:10.5px;
+    background:rgba(255,255,255,.06);
+    border:1px solid var(--line);
+    padding:1px 5px; border-radius:4px;
+    color:#c9d4e6;
+  }
+
+  /* ═══════════ FOOTER ═══════════ */
+
+  .doc-footer{
+    margin-top:56px;
+    padding-top:28px;
+    border-top:1px solid var(--line);
+    text-align:center;
+    position:relative;
+  }
+  .doc-footer::before{
+    content:'';
+    position:absolute; top:-1px; left:50%; transform:translateX(-50%);
+    width:80px; height:1px;
+    background:linear-gradient(90deg, transparent, #a78bfa, transparent);
+    box-shadow:0 0 12px #a78bfa;
+  }
+  .doc-footer p{
+    font-size:11.5px; color:var(--faint);
+    line-height:1.9; letter-spacing:.01em;
+  }
+  .doc-footer code{
+    font-family:var(--mono); font-size:10.5px;
+    background:rgba(255,255,255,.05);
+    border:1px solid var(--line);
+    padding:1px 6px; border-radius:4px;
+    color:#c9d4e6;
+  }
+
+  /* ═══════════ RESPONSIVE ═══════════ */
+
+  @media (max-width:1200px){
+    :root{--sidebar-w:220px}
+    main{padding:0 44px 110px}
+  }
+  @media (max-width:960px){
+    .layout{grid-template-columns:1fr}
+    .sidebar{
+      position:static; height:auto;
+      padding:16px 20px;
+      border-right:none; border-bottom:1px solid var(--line);
+      overflow-x:auto; overflow-y:hidden;
+    }
+    .side-nav{flex-direction:row; gap:6px; flex-wrap:nowrap}
+    .side-item{flex:none; white-space:nowrap}
+    .side-item.is-active::before{display:none}
+    .side-label{display:none}
+    main{padding:0 26px 90px; max-width:100%}
+    .brand-sub{display:none}
+    .print-btn span{display:none}
+    .print-btn{padding:6px 9px}
+    .sections{padding-left:26px}
+    .section::after{left:-22px}
+  }
+  @media (max-width:620px){
+    .hero{padding:44px 0 30px}
+    .topbar-inner{padding:0 14px; gap:10px}
+    .view-toggle{font-size:10.5px}
+    .view-btn{padding:5px 9px}
+    .section-head{padding:18px 18px 14px; gap:12px}
+    .sec-body-pad{padding:0 18px 20px}
+    .sec-title{font-size:15px}
+    .sec-icon{width:36px; height:36px}
+    .sec-icon svg{width:17px; height:17px}
+    .heuristics{padding:24px 20px 26px}
+    .heur-sub{display:none}
+    .sections{padding-left:0}
+    .sections::before{display:none}
+    .section::after{display:none}
+    .meta-cell{padding:12px 14px}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *, *::before, *::after{
+      animation-duration:.01ms !important;
+      animation-iteration-count:1 !important;
+      transition-duration:.01ms !important;
+    }
+    .section, .heuristics, .heur-item{opacity:1; transform:none}
+  }
+
+  @media print{
+    :root{
+      --bg:#fff; --txt:#0a0d14; --muted:#4b5563; --faint:#9ca3af;
+      --line:#e5e7eb; --line-2:#d1d5db;
+    }
+    body{background:#fff; color:#0a0d14}
+    .bg-ambient, .cursor-glow, .topbar, .sidebar, .sec-toggle,
+    .view-toggle, .print-btn, .example-head{display:none !important}
+    .layout{display:block; max-width:100%; margin:0}
+    main{padding:0; max-width:100%}
+    .section, .heuristics{
+      break-inside:avoid;
+      border:1px solid #e5e7eb;
+      background:#fff;
+      margin-bottom:16px;
+      opacity:1 !important; transform:none !important;
+    }
+    .sec-body{grid-template-rows:1fr !important}
+    .struct-list li{opacity:1 !important; transform:none !important}
+    .example{display:block !important; border-style:solid; background:#f9fafb}
+    .example-body-wrap{grid-template-rows:1fr !important}
+    .section::before, .section::after, .heuristics::before,
+    .funnel-flow, .orb, .brand-mark, .stars{display:none}
+    .sec-num-inline, .block-label{color:#374151}
+    .block-label::after{background:#d1d5db}
+    .heur-item, .pill, .meta, .stat, .funnel{background:#f9fafb}
+    .struct-list li::before{background:#6b7280}
+    .voice-notes li::before{background:#d97706}
+    .heur-item::before{background:#ede9fe; border-color:#a78bfa; color:#7c3aed}
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-ambient" aria-hidden="true">
+  <div class="stars"></div>
+  <div class="orb o1"></div>
+  <div class="orb o2"></div>
+  <div class="orb o3"></div>
+</div>
+<div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-mark"></span>
+      <span>Bayan</span>
+      <span class="brand-sub">/ marketing plan v1</span>
+    </div>
+
+    <div class="topbar-spacer"></div>
+
+    <div class="view-toggle" role="tablist" aria-label="View mode">
+      <span class="view-pill" id="view-pill"></span>
+      <button class="view-btn is-active" data-view="structure" role="tab">Structure</button>
+      <button class="view-btn" data-view="reference" role="tab">Reference</button>
+    </div>
+
+    <button class="print-btn" onclick="window.print()" title="Print or export as PDF">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 6 2 18 2 18 9"/>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+        <rect x="6" y="14" width="12" height="8"/>
+      </svg>
+      <span>Export</span>
+    </button>
+  </div>
+  <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+</header>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="side-label">Sections</div>
+    <nav class="side-nav" id="side-nav"></nav>
+  </aside>
+
+  <main>
+
+    <section class="hero">
+      <span class="eyebrow"><i></i>For Dr. Abdullah Al-Alawi</span>
+
+      <div class="hero-grid">
+        <div>
+          <h1>A <span class="grad">13-section</span><br>marketing plan</h1>
+          <p class="lede">
+            A working plan to turn Bayan's trusted, free-in-Oman exam-prep habit
+            into a measured Gulf-wide licensing funnel. Switch to
+            <em>Reference</em> above to read each section written for
+            <strong>Bayan</strong> in context.
+          </p>
+        </div>
+
+        <div class="funnel-wrap" aria-hidden="true">
+          <div class="funnel">
+            <div class="funnel-flow"></div>
+
+            <div class="funnel-stage">
+              <div class="fs-inner" style="--c:#a78bfa; --w:100%">
+                <span class="fs-dot"></span>
+                <span class="fs-label">Acquisition</span>
+                <span class="fs-count">24</span>
+              </div>
+            </div>
+            <div class="funnel-stage">
+              <div class="fs-inner" style="--c:#60a5fa; --w:78%">
+                <span class="fs-dot"></span>
+                <span class="fs-label">Activation</span>
+                <span class="fs-count">8</span>
+              </div>
+            </div>
+            <div class="funnel-stage">
+              <div class="fs-inner" style="--c:#22d3ee; --w:60%">
+                <span class="fs-dot"></span>
+                <span class="fs-label">Retention</span>
+                <span class="fs-count">9</span>
+              </div>
+            </div>
+            <div class="funnel-stage">
+              <div class="fs-inner" style="--c:#f472b6; --w:44%">
+                <span class="fs-dot"></span>
+                <span class="fs-label">Referral</span>
+                <span class="fs-count">5</span>
+              </div>
+            </div>
+            <div class="funnel-stage">
+              <div class="fs-inner" style="--c:#fbbf24; --w:28%">
+                <span class="fs-dot"></span>
+                <span class="fs-label">Revenue</span>
+                <span class="fs-count">4</span>
+              </div>
+            </div>
+          </div>
+          <div class="funnel-caption">AARRR · tactical surface area</div>
+        </div>
+      </div>
+
+      <div class="meta" aria-label="Plan metadata">
+        <div class="meta-cell">
+          <div class="meta-key">Client</div>
+          <div class="meta-val">Bayan AI Technologies</div>
+        </div>
+        <div class="meta-cell">
+          <div class="meta-key">Prepared for</div>
+          <div class="meta-val">Dr. Abdullah Al-Alawi, CEO</div>
+        </div>
+        <div class="meta-cell">
+          <div class="meta-key">Date</div>
+          <div class="meta-val">2026-09-23</div>
+        </div>
+        <div class="meta-cell">
+          <div class="meta-key">Version</div>
+          <div class="meta-val">v1.0</div>
+        </div>
+        <div class="meta-cell">
+          <div class="meta-key">Status</div>
+          <div class="meta-val">Draft — for review</div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat" style="--sc:#a78bfa">
+          <b data-count="13">0</b>
+          <span>Sections</span>
+        </div>
+        <div class="stat" style="--sc:#60a5fa">
+          <b data-count="5">0</b>
+          <span>AARRR stages</span>
+        </div>
+        <div class="stat" style="--sc:#22d3ee">
+          <b data-count="50">0</b>
+          <span>Ideas mapped</span>
+        </div>
+        <div class="stat" style="--sc:#f472b6">
+          <b data-count="90" data-suffix="d">0</b>
+          <span>First horizon</span>
+        </div>
+        <div class="stat" style="--sc:#fbbf24">
+          <b data-count="3">0</b>
+          <span>Big bets</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="sections" id="sections"></div>
+
+    <section class="heuristics" id="heuristics">
+      <div class="heur-head">
+        <span class="heur-badge">Quality bar</span>
+        <span class="heur-title">Per-section heuristics — is this section done?</span>
+        <span class="heur-sub">If any of these fail, the section isn't ready to ship.</span>
+      </div>
+      <div class="heur-list" id="heur-list"></div>
+    </section>
+
+    <footer class="doc-footer">
+      <p>
+        <code>Bayan — Marketing Plan v1</code> &nbsp;·&nbsp;
+        Prepared by <code>Nasim</code> for <code>Dr. Abdullah Al-Alawi</code> &nbsp;·&nbsp;
+        2026-09-23 &nbsp;·&nbsp; Draft for review and discussion.
+      </p>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+/* ═══════════════════════════════════════════════════════════════
+   ICONS
+   ═══════════════════════════════════════════════════════════════ */
+
+const ICONS = {
+  0:  '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>',
+  1:  '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>',
+  2:  '<circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>',
+  3:  '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',
+  4:  '<path d="M6 3v12a6 6 0 0 0 12 0V3"/><line x1="6" y1="9" x2="18" y2="9"/>',
+  5:  '<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>',
+  6:  '<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>',
+  7:  '<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>',
+  8:  '<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',
+  9:  '<rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>',
+  10: '<polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>',
+  11: '<polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/>',
+  12: '<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/>',
+  13: '<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>'
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   SECTIONS
+   ═══════════════════════════════════════════════════════════════ */
+
+const SECTIONS = [
+  {
+    n: 0, label: `Title block`, title: `Title block`,
+    color: '#94a3b8',
+    purpose: `The header every plan carries. Client, author, audience, date, status.`,
+    length: `1 block`,
+    structure: [
+      `<code># Bayan — Marketing Plan v1</code>`,
+      `<strong>Prepared by:</strong> Nasim (Marketing & Branding)`,
+      `<strong>For:</strong> Dr. Abdullah Al-Alawi, Founder & CEO`,
+      `<strong>Date:</strong> 2026-09-23`,
+      `<strong>Status:</strong> Draft v1 — for team review`
+    ],
+    voice: [`Plain. No flourish. This is the cover of a working document, not a pitch.`]
+  },
+  {
+    n: 1, label: `Executive summary`, title: `Executive summary`,
+    color: '#a78bfa',
+    purpose: `Lift-and-share. A founder should be able to paste this into a board update or investor email without editing.`,
+    length: `400–700 words. Tight.`,
+    structure: [
+      `<strong>One-sentence frame.</strong> What does this plan optimize for — specific to Bayan at this stage?`,
+      `<strong>Three big bets, ranked by leverage.</strong> Each a paragraph. A bet is a high-conviction thesis about where to focus.`,
+      `<strong>What twelve months looks like, plausibly.</strong> Bullet list. The outcome state at the horizon.`,
+      `<strong>90-day priorities.</strong> Numbered list. The moves that ship in the first quarter.`
+    ],
+    voice: [
+      `Match the founder's voice: credible, academic, calm.`,
+      `Use real numbers, or an explicit [TBD — confirm with team]. Never invent a metric.`,
+      `Tradeoffs named explicitly when they matter.`
+    ],
+    example: `<p><strong>Bayan has already earned the hard part — trust.</strong> Bayan Learning (bayan.edu.om) is live and used: 5,500+ exam questions, 23 licensing and board exams, 470+ articles, 250+ drug monographs, 1,200+ professionals across 30+ countries, free inside Oman. This plan optimizes for one thing: <strong>turning that trusted, free study habit into a measured, compounding Gulf-wide licensing-prep funnel</strong> — without spending on paid acquisition until we can actually see the funnel.</p>
+      <p><strong>Three big bets, ranked by leverage:</strong></p>
+      <ol>
+        <li><strong>Own "Gulf Licensing Exam Preparation" intent.</strong> Not "medical app." The category is preparation for Prometric-style, SMLE, OMSB, DHA and MOH licensing and board exams. The flagship bayan.edu.om is the wedge — the highest-intent search and app-store surface we have.</li>
+        <li><strong>Instrument before we optimize.</strong> Today there is no installs / trials / conversion / retention / MRR data. That is why <em>[TBD — confirm with team]</em> appears throughout this plan. First 90 days: install analytics, define the north-star metric, get baselines. Everything downstream stays a hypothesis until this lands.</li>
+        <li><strong>Make Dr. Al-Alawi the credible academic voice of medical AI in the Gulf.</strong> 88 publications, 1,777+ citations, H-index 18 — a moat no 145-OMR competitor or generic qbank can copy. Founder-led authority under "Where Medicine Meets Intelligence."</li>
+      </ol>
+      <p><em>What twelve months looks like:</em> analytics + north star live and baselined · bayan.edu.om ranking for 3 licensing-intent pillars · founder-led content shipping on a cadence · resident referral loop live off the SmartRota base (290+ residents) · paid acquisition only after unit economics validate · revenue target [TBD — set after baseline].</p>
+      <p><em>90-day priorities:</em> instrument the funnel · freeze the canonical metric set (end the 3,550→5,500 drift) · stake the SEO/ASO foundation for Gulf licensing intent · ship a founder-led content cadence · stand up the resident referral loop · rewrite the app-store and site listing in Bayan's voice.`
+  },
+  {
+    n: 2, label: `Strategic frame`, title: `Strategic frame`,
+    color: '#60a5fa',
+    purpose: `Distill positioning, ICP, business-model logic, and brand voice into a single page any team member or new hire can read to orient.`,
+    length: `800–1500 words.`,
+    structure: [
+      `<strong>What Bayan is, in one sentence.</strong>`,
+      `<strong>The category we're claiming.</strong> Name it.`,
+      `<strong>Who we're for (ICP, distilled).</strong> Stated problem vs. real problem vs. what they're buying.`,
+      `<strong>The business-model logic.</strong> How the company makes money; the acquisition unit-economics theory.`,
+      `<strong>Brand voice (the non-negotiable).</strong> YES / NO vocabulary. CTA rules. Every other section respects these.`
+    ],
+    voice: [
+      `Surface positioning that exists — don't invent it.`,
+      `If positioning is unclear or contradicted, flag it in Section 13's open decisions.`
+    ],
+    example: `<p><strong>What Bayan is:</strong> a medical education and clinical-intelligence company. Flagship Bayan Learning (bayan.edu.om) is a live exam-prep platform for physicians, residents, and medical students preparing Gulf and international licensing and board exams — 5,500+ questions, 23 exams, 470+ articles, 250+ drug monographs, free inside Oman.</p>
+      <p><strong>The category we're claiming:</strong> not "medical app," not "AI in healthcare." The category is <strong>Gulf Licensing Exam Preparation</strong> — the trusted way to prepare for Prometric-style and board licensing exams in the region. Sub-brand formula: <em>"Intelligence for Better ___."</em></p>
+      <p><strong>ICP:</strong> physicians, residents, medical students, and nurses preparing Gulf/international licensing and board exams — <em>not</em> the general public. Stated problem: <em>"I need to pass my licensing exam."</em> Real problem: <em>"I stopped guessing what to study."</em> What they're buying: confidence and a structured path to a pass.</p>
+      <p><strong>Business model:</strong> freemium. The flagship is free inside Oman (trust + habit); 20% code <code>Oman@2026</code> outside. Paid depth sits across the family — PreOp ($7.99/mo, $79.99/yr), JournalReady (pricing UNRESOLVED, [TBD — confirm with team]), Medad (in dev, "Launching Mid 2027"), SmartRota (live, OMSB-compliant, 290+ residents). Acquisition unit economics: [TBD — no CAC/LTV data yet].</p>
+      <p><strong>Brand voice — YES:</strong> prepare, pass, licensing, evidence, clinical, confidence, "Where Medicine Meets Intelligence," «من عمان للعالم». <strong>NO:</strong> "AI-powered" without a human-review caveat, "Pass Guarantee," hype or miracle claims. Never cite SQUH / OMSB / SQU as the CEO's employer. Content is human-owned and clinician-reviewed. <strong>CTA rule:</strong> calm and credible — "Start preparing," never "Don't fail."</p>`
+  },
+  {
+    n: 3, label: `Current state`, title: `Current state`,
+    color: '#22d3ee',
+    purpose: `Anchor the plan in reality. Team, budget, in-flight work, and stuck work today.`,
+    length: `1000–2000 words.`,
+    structure: [
+      `<strong>Team.</strong> Who does what.`,
+      `<strong>Budget.</strong> What we can actually spend.`,
+      `<strong>Live assets.</strong> What already ships.`,
+      `<strong>Honest audit table.</strong> Score each area; funnel rows are [TBD] until analytics exist.`,
+      `<strong>Stuck work.</strong> What's blocked and why.`
+    ],
+    voice: [`Brutally honest. A [TBD] is more useful than an invented number.`],
+    example: `<p><strong>Team:</strong> lean, founder-led. Dr. Al-Alawi owns medical authority and strategy; Nasim is proposed for marketing and branding (remote, Iran-based, contract); clinicians own and review all medical content.</p>
+      <p><strong>Budget:</strong> [TBD — confirm with team]. Market anchor for a marketing role: Media Solutions SPC ≈ 145 OMR/mo. Proposed Nasim path: base 300 OMR + 20% commission on closed deals.</p>
+      <p><strong>Live assets:</strong> bayan.edu.om (flagship, live) · PreOp (live) · JournalReady (live) · SmartRota (live, 290+ residents). Medad is in development ("Launching Mid 2027").</p>
+      <table><thead><tr><th>Area</th><th>State</th><th>Score</th><th>Note</th></tr></thead><tbody>
+      <tr><td>PMF signal</td><td>Strong qualitative</td><td>[TBD]</td><td>Real usage, no analytics to quantify</td></tr>
+      <tr><td>Positioning clarity</td><td>Emerging</td><td>3/5</td><td>Category not yet owned in search</td></tr>
+      <tr><td>Brand system</td><td>Defined</td><td>4/5</td><td>navy+gold · Sora/Inter/IBM Plex Arabic · Bissan & Gassan</td></tr>
+      <tr><td>Acquisition</td><td>Ad-hoc</td><td>2/5</td><td>No instrumented channels</td></tr>
+      <tr><td>Activation</td><td>Unknown</td><td>[TBD]</td><td>No analytics</td></tr>
+      <tr><td>Retention</td><td>Unknown</td><td>[TBD]</td><td>No analytics</td></tr>
+      <tr><td>Revenue</td><td>Pre-revenue / early</td><td>[TBD]</td><td>Pricing partly unresolved</td></tr>
+      </tbody></table>
+      <p><strong>Stuck work:</strong> metric drift (questions cited as 3,550 / 4,000 / 5,000 / 5,500 / 5,760 — canonical Sept-7 figure is 5,500+) · JournalReady pricing unresolved · no analytics instrumented.</p>`
+  },
+  {
+    n: 4, label: `Acquisition`, title: `Acquisition`,
+    color: '#818cf8',
+    purpose: `How new, right-fit learners first find Bayan. Ranked channels for the first 90 days.`,
+    length: `1000–1800 words.`,
+    structure: [
+      `<strong>Ranked 90-day channels.</strong> Highest-intent, compounding, and free first.`,
+      `<strong>What's held, and why.</strong>`,
+      `<strong>Current channel performance.</strong> Baselines are a Week-1 deliverable.`
+    ],
+    voice: [`Intent over reach. We serve exam-takers, not the general public.`],
+    example: `<p><strong>90-day channels, ranked:</strong></p>
+      <ol>
+        <li><strong>SEO on bayan.edu.om for Gulf licensing intent</strong> (Prometric-style / SMLE / OMSB / DHA / MOH exam prep, specialty qbank pages). Highest-intent, compounding, free.</li>
+        <li><strong>ASO for the flagship app listing</strong> — same intent keywords, screenshots that show the qbank and exam coverage.</li>
+        <li><strong>Founder-led content</strong> — Dr. Al-Alawi on LinkedIn/X plus short clips: evidence-based exam tips, "how to prepare for [exam]." The authority moat.</li>
+        <li><strong>Resident / program word-of-mouth</strong> via the SmartRota base and Oman residency programs (warm).</li>
+      </ol>
+      <p><strong>Held until instrumented:</strong> paid search and social ads. Reason: no CAC/LTV baseline means spending blind. Budget [TBD — confirm with team].</p>
+      <p><strong>One event lever:</strong> Gulf medical-education conferences — booth artwork + live demo + a founder talk.</p>
+      <p><strong>Current performance:</strong> [TBD — no analytics]. Establishing baselines is a Week-1 deliverable (Section 9).</p>`
+  },
+  {
+    n: 5, label: `Activation`, title: `Activation`,
+    color: '#2dd4bf',
+    purpose: `Define the moment a new user first gets real value — and how we get more of them there.`,
+    length: `800–1400 words.`,
+    structure: [
+      `<strong>The activation moment.</strong> One specific event.`,
+      `<strong>Why it isn't payment.</strong>`,
+      `<strong>Moves to raise the rate.</strong>`,
+      `<strong>Metrics.</strong> [TBD] where no analytics exist.`
+    ],
+    voice: [`Value before signup friction. Show the good explanation fast.`],
+    example: `<p><strong>Activation moment:</strong> the first <em>completed study session</em> — a learner attempts their first qbank set and reads an explanation they trust. That's the "aha."</p>
+      <p><strong>Why not payment:</strong> the flagship is free in Oman, so activation is habit formation (first session → first return), not a purchase.</p>
+      <p><strong>Moves:</strong> a frictionless first-question flow (value before a long signup) · an exam-picker onboarding ("which exam are you preparing for?") · explanation quality front-and-centre in the first session · surface the 20% code <code>Oman@2026</code> to outside-Oman users only <em>after</em> first value.</p>
+      <p><strong>Metrics:</strong> signup→first-session rate [TBD] · first-session→day-2 return [TBD]. No analytics yet, so every figure is [TBD — confirm with team].</p>`
+  },
+  {
+    n: 6, label: `Retention`, title: `Retention`,
+    color: '#34d399',
+    purpose: `Keep learners coming back until the exam date — the natural retention horizon for exam prep.`,
+    length: `800–1400 words.`,
+    structure: [
+      `<strong>The retention horizon.</strong> Prep is time-boxed by an exam date.`,
+      `<strong>Engagement engine.</strong> Exam-date countdown, streaks, spaced review.`,
+      `<strong>Metrics.</strong> [TBD] until analytics land.`
+    ],
+    voice: [`Retention here means "studied again this week," not "still subscribed in a year."`],
+    example: `<p><strong>Retention horizon:</strong> exam prep is time-boxed — a learner is "retained" if they keep studying week over week until their exam date, then ideally return for the next licensing or board milestone.</p>
+      <p><strong>Engagement engine:</strong> an exam-date countdown that sequences what to study · study streaks and weekly targets · spaced review that resurfaces missed questions · progress toward exam-readiness the learner can see.</p>
+      <p><strong>Metrics:</strong> weekly-active exam-prep learners [TBD] · week-1→week-4 retention [TBD] · sessions per week [TBD]. All [TBD — confirm with team] until analytics exist. This is the north-star surface (Section 13).</p>`
+  },
+  {
+    n: 7, label: `Referral`, title: `Referral`,
+    color: '#fbbf24',
+    purpose: `Turn trusted study habit into peer-to-peer growth — cohorts study together.`,
+    length: `700–1200 words.`,
+    structure: [
+      `<strong>Why referral fits.</strong> Residents prep in cohorts.`,
+      `<strong>The warm base.</strong> SmartRota's 290+ residents.`,
+      `<strong>The loop.</strong> Program-led, not incentive-hacked.`
+    ],
+    voice: [`Word-of-mouth from trust, not a paid-referral gimmick.`],
+    example: `<p><strong>Why referral fits:</strong> residents and students prepare in cohorts — same program, same exam, same timeline. A tool one resident trusts spreads to the whole cohort by word of mouth.</p>
+      <p><strong>Warm base:</strong> SmartRota is already live with 290+ residents on an OMSB-compliant rota. That's a standing, high-trust channel into Oman residency programs — the natural first place to seed the flagship.</p>
+      <p><strong>The loop:</strong> program-led adoption (a program lead endorses it) → cohort signs on → shared study surfaces → next cohort inherits the habit. Add a lightweight "invite your study group" only after the activation flow is instrumented.</p>
+      <p><strong>Metrics:</strong> referral rate [TBD] · invites per active learner [TBD]. [TBD — confirm with team].</p>`
+  },
+  {
+    n: 8, label: `Revenue`, title: `Revenue`,
+    color: '#fb7185',
+    purpose: `How the family makes money, and the unit-economics theory we must validate before spending.`,
+    length: `1000–1800 words.`,
+    structure: [
+      `<strong>The model.</strong> Free flagship (trust), paid depth across the family.`,
+      `<strong>Price points.</strong> What's set, what's unresolved.`,
+      `<strong>Unit economics.</strong> All [TBD] — the case for instrumenting first.`
+    ],
+    voice: [`No revenue projection without a baseline. Name every [TBD].`],
+    example: `<p><strong>Model:</strong> freemium. The flagship is free inside Oman to build trust and habit (20% code <code>Oman@2026</code> outside Oman); paid depth sits across the product family.</p>
+      <table><thead><tr><th>Product</th><th>Status</th><th>Price</th></tr></thead><tbody>
+      <tr><td>Bayan Learning (flagship)</td><td>Live</td><td>Free in Oman · 20% off outside</td></tr>
+      <tr><td>PreOp</td><td>Live</td><td>$7.99/mo · $79.99/yr</td></tr>
+      <tr><td>JournalReady</td><td>Live</td><td>Pricing UNRESOLVED [TBD — confirm with team]</td></tr>
+      <tr><td>SmartRota</td><td>Live (290+ residents)</td><td>[TBD]</td></tr>
+      <tr><td>Medad</td><td>In dev</td><td>"Launching Mid 2027"</td></tr>
+      </tbody></table>
+      <p><strong>Unit economics:</strong> CAC [TBD] · LTV [TBD] · payback [TBD] · MRR [TBD]. Target benchmark once measured: <strong>LTV:CAC &gt; 3</strong>. Every cell is [TBD — confirm with team] because no analytics are instrumented — which is exactly why paid acquisition is held (Section 4) and why instrumentation is the #1 open decision (Section 13).</p>`
+  },
+  {
+    n: 9, label: `90-day roadmap`, title: `90-day roadmap`,
+    color: '#c084fc',
+    purpose: `The first quarter, week by week. Instrument first, then optimize.`,
+    length: `1000–1600 words.`,
+    structure: [
+      `<strong>Four phases.</strong> Instrument → Foundation → Content → Loop.`,
+      `<strong>Move / Stage / Owner tables.</strong>`,
+      `<strong>The gate.</strong> Nothing paid until baselines exist.`
+    ],
+    voice: [`Concrete moves with owners. No vanity milestones.`],
+    example: `<p><strong>Weeks 1–2 — Instrument (AARRR: measure everything):</strong></p>
+      <table><thead><tr><th>Move</th><th>Stage</th><th>Owner</th></tr></thead><tbody>
+      <tr><td>Install analytics + define north-star metric</td><td>All</td><td>Founder + Nasim</td></tr>
+      <tr><td>Freeze the canonical metric set (end the 3,550→5,500 drift)</td><td>Acquisition</td><td>Nasim</td></tr>
+      <tr><td>Baseline installs / sessions / return rate</td><td>Activation/Retention</td><td>Founder</td></tr>
+      </tbody></table>
+      <p><strong>Weeks 3–5 — Foundation (SEO/ASO for Gulf licensing intent):</strong></p>
+      <table><thead><tr><th>Move</th><th>Stage</th><th>Owner</th></tr></thead><tbody>
+      <tr><td>Rewrite site + app-store listing in Bayan's voice</td><td>Acquisition</td><td>Nasim</td></tr>
+      <tr><td>Stake 3 licensing-intent SEO pillars on bayan.edu.om</td><td>Acquisition</td><td>Nasim</td></tr>
+      </tbody></table>
+      <p><strong>Weeks 6–9 — Content (founder-led authority):</strong></p>
+      <table><thead><tr><th>Move</th><th>Stage</th><th>Owner</th></tr></thead><tbody>
+      <tr><td>Ship a founder-led content cadence (exam tips, evidence)</td><td>Acquisition</td><td>Founder + Nasim</td></tr>
+      <tr><td>Harden the first-session onboarding (exam picker)</td><td>Activation</td><td>Founder</td></tr>
+      </tbody></table>
+      <p><strong>Weeks 10–13 — Loop (referral off the warm base):</strong></p>
+      <table><thead><tr><th>Move</th><th>Stage</th><th>Owner</th></tr></thead><tbody>
+      <tr><td>Stand up the resident referral loop (SmartRota 290+)</td><td>Referral</td><td>Nasim + Founder</td></tr>
+      <tr><td>Review baselines; decide if unit economics justify any paid test</td><td>Revenue</td><td>Founder</td></tr>
+      </tbody></table>
+      <p><strong>The gate:</strong> no paid acquisition until Weeks 1–2 baselines exist. Everything downstream stays a hypothesis until instrumentation lands.</p>`
+  },
+  {
+    n: 10, label: `12-month outlook`, title: `12-month outlook`,
+    color: '#38bdf8',
+    purpose: `Where this plausibly gets to in a year — stated as targets to set after baseline, not promises.`,
+    length: `600–1100 words.`,
+    structure: [
+      `<strong>The outcome state.</strong> What's true in 12 months.`,
+      `<strong>Targets.</strong> [TBD] until baselined — set after Week 2.`
+    ],
+    voice: [`Plausible, not aspirational. Pre-revenue honesty.`],
+    example: `<p><strong>Outcome state at 12 months (plausible):</strong> analytics + north star live and baselined · bayan.edu.om ranking for 3 licensing-intent pillars · a founder-led content cadence shipping · the resident referral loop live off the SmartRota base · paid acquisition attempted only if unit economics validate.</p>
+      <p><strong>Targets:</strong> weekly-active exam-prep learners [TBD — set after baseline] · organic install growth [TBD] · MRR [TBD] · LTV:CAC [TBD, benchmark &gt;3]. Bayan is pre-revenue/early on instrumented metrics; every number here is deliberately [TBD — confirm with team] rather than invented.</p>`
+  },
+  {
+    n: 11, label: `Ops stack`, title: `Ops stack`,
+    color: '#94a3b8',
+    purpose: `The people and tools that run marketing — and the human-review guardrail on all medical content.`,
+    length: `600–1100 words.`,
+    structure: [
+      `<strong>Who runs what.</strong>`,
+      `<strong>The content guardrail.</strong> AI-assisted, clinician-reviewed.`,
+      `<strong>Tools.</strong> Lightweight, no heavy stack.`
+    ],
+    voice: [`Small team, strict medical-review discipline. No "AI-powered" without the human-review caveat.`],
+    example: `<p><strong>Who runs what:</strong> Dr. Al-Alawi owns medical authority, strategy, and the founder-led content voice. Nasim owns marketing, branding, SEO/ASO, and campaign execution (remote, contract). Clinicians own and review all medical content.</p>
+      <p><strong>Content guardrail (non-negotiable):</strong> content may be AI-assisted for drafting, but every medical claim is human-owned and clinician-reviewed before publish. Never market as "AI-powered" without the human-review caveat. Never "Pass Guarantee." Never cite SQUH / OMSB / SQU as the CEO's employer.</p>
+      <p><strong>Tools:</strong> analytics (to be installed Week 1) · SEO/ASO tooling · a content calendar · design assets in the navy+gold system (Sora / Inter / IBM Plex Sans Arabic; mascots Bissan & Gassan). No CMS, no heavy backend.</p>`
+  },
+  {
+    n: 12, label: `Idea bank`, title: `Idea bank`,
+    color: '#a3e635',
+    purpose: `The full set of mapped ideas, bucketed by AARRR — the backlog this plan draws from.`,
+    length: `Reference list.`,
+    structure: [
+      `<strong>Counts by stage.</strong> 24 / 8 / 9 / 5 / 4 = 50.`,
+      `<strong>What we deliberately skipped, and why.</strong>`
+    ],
+    voice: [`A backlog, not a to-do list. Ranked by intent-fit.`],
+    example: `<p><strong>50 ideas mapped, by stage:</strong></p>
+      <table><thead><tr><th>Stage</th><th>Ideas</th></tr></thead><tbody>
+      <tr><td>Acquisition</td><td>24</td></tr>
+      <tr><td>Activation</td><td>8</td></tr>
+      <tr><td>Retention</td><td>9</td></tr>
+      <tr><td>Referral</td><td>5</td></tr>
+      <tr><td>Revenue</td><td>4</td></tr>
+      </tbody></table>
+      <p><strong>Deliberately skipped:</strong> paid ads before instrumentation (spending blind) · general-public reach plays (wrong ICP — we serve exam-takers) · "AI-powered" hype messaging (violates the human-review guardrail) · any "Pass Guarantee" claim. Skips are as load-bearing as picks.</p>`
+  },
+  {
+    n: 13, label: `Measurement & decisions`, title: `Measurement & open decisions`,
+    color: '#f472b6',
+    purpose: `The north star, the RACI for who owns what, and the ranked open decisions blocking the plan.`,
+    length: `800–1400 words.`,
+    structure: [
+      `<strong>North star.</strong> One metric.`,
+      `<strong>RACI.</strong> Who's responsible / accountable / consulted / informed.`,
+      `<strong>Ranked open decisions.</strong> #1 is the biggest blocker.`
+    ],
+    voice: [`The honest ledger. Decisions the team must make, ranked.`],
+    example: `<p><strong>North star:</strong> <strong>weekly active exam-prep learners</strong> — the count of learners who complete at least one study session per week. It captures acquisition that sticks and retention that compounds, in one number.</p>
+      <p><strong>RACI (marketing):</strong></p>
+      <table><thead><tr><th>Area</th><th>R</th><th>A</th><th>C</th><th>I</th></tr></thead><tbody>
+      <tr><td>Analytics + north star</td><td>Nasim</td><td>Founder</td><td>Clinicians</td><td>Team</td></tr>
+      <tr><td>SEO/ASO + listing</td><td>Nasim</td><td>Founder</td><td>—</td><td>Team</td></tr>
+      <tr><td>Founder-led content</td><td>Founder</td><td>Founder</td><td>Nasim</td><td>Team</td></tr>
+      <tr><td>Medical-content review</td><td>Clinicians</td><td>Founder</td><td>—</td><td>Nasim</td></tr>
+      </tbody></table>
+      <p><strong>Ranked open decisions:</strong></p>
+      <ol>
+        <li><strong>No analytics instrumented.</strong> The single biggest blocker — every funnel metric in this plan is [TBD] until this lands. Owner: Founder + Nasim, Week 1.</li>
+        <li><strong>JournalReady pricing unresolved.</strong> [TBD — confirm with team].</li>
+        <li><strong>Marketing budget undefined.</strong> Anchor 145 OMR/mo; Nasim path base 300 OMR + 20% commission. [TBD — confirm with team].</li>
+        <li><strong>Canonical metric set not frozen.</strong> Question count drifts (3,550→5,760); freeze at 5,500+ before any external publish.</li>
+      </ol>`
+  }
+];
+
+/* ═══════════════════════════════════════════════════════════════
+   HEURISTICS
+   ═══════════════════════════════════════════════════════════════ */
+
+const HEURISTICS = [
+  ['Intent over reach', `Serve exam-takers, not the general public. Rank every channel by intent-fit, not audience size.`],
+  ['Instrument before you optimize', `No analytics means every funnel number is a guess. Measure first; hold paid spend until baselines exist.`],
+  ['A [TBD] beats an invented metric', `An honest gap is more useful than a fabricated number. Mark unknowns, don't guess them.`],
+  ['Trust is the moat', `Free-in-Oman built the habit. Protect it — human-owned, clinician-reviewed content, never "AI-powered" without the caveat.`],
+  ['Own the category, not the tool', `Claim "Gulf Licensing Exam Preparation," not "medical app." The category is the wedge.`],
+  ['Founder authority compounds', `88 publications, 1,777+ citations, H-index 18 — a moat no 145-OMR competitor can copy.`],
+  ['Freeze the numbers', `Question count drifts (3,550→5,760). Freeze at 5,500+ before any external publish.`],
+  ['Warm base first', `SmartRota's 290+ residents are a standing, high-trust channel. Seed there before cold reach.`],
+  ['Calm, credible CTAs', `"Start preparing," never "Don't fail." No hype, no "Pass Guarantee."`]
+];
+
+/* ═══════════════════════════════════════════════════════════════
+   RENDER · SIDEBAR
+   ═══════════════════════════════════════════════════════════════ */
+
+function renderSidebar(){
+  const nav = document.getElementById('side-nav');
+  nav.innerHTML = SECTIONS.map(s => `
+    <a class="side-item" href="#sec-${s.n}" data-n="${s.n}" style="--sc:${s.color}">
+      <span class="side-num">${s.n === 0 ? '—' : String(s.n).padStart(2,'0')}</span>
+      <span class="side-title">${s.label}</span>
+    </a>
+  `).join('');
+
+  nav.querySelectorAll('.side-item').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.getElementById('sec-' + a.dataset.n);
+      if (target) target.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  });
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RENDER · SECTIONS
+   ═══════════════════════════════════════════════════════════════ */
+
+function renderSections(){
+  const wrap = document.getElementById('sections');
+
+  wrap.innerHTML = SECTIONS.map(s => {
+    const structHTML = s.structure.map(item => `<li>${item}</li>`).join('');
+    const voiceHTML = s.voice.map(item => `<li>${item}</li>`).join('');
+
+    const lengthPill = s.length
+      ? `<span class="pill">
+           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+             <path d="M4 7h16M4 12h16M4 17h10"/>
+           </svg>
+           <strong>Length</strong> ${s.length}
+         </span>` : '';
+
+    const exampleHTML = s.example
+      ? `<div class="example" data-example="${s.n}">
+           <div class="example-head">
+             <span class="arrow">▶</span>
+             Reference example
+             <span class="tag">Bayan plan</span>
+           </div>
+           <div class="example-body-wrap">
+             <div class="example-body-inner">
+               <div class="example-body">${s.example}</div>
+             </div>
+           </div>
+         </div>` : '';
+
+    return `
+      <article class="section" id="sec-${s.n}" data-n="${s.n}" style="--sc:${s.color}">
+        <div class="section-head">
+          <span class="sec-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              ${ICONS[s.n] || ICONS[0]}
+            </svg>
+          </span>
+          <div class="sec-head-text">
+            <h2 class="sec-title">
+              <span class="sec-num-inline">${s.n === 0 ? '00' : String(s.n).padStart(2,'0')}</span>
+              ${s.title}
+            </h2>
+            <p class="sec-purpose">${s.purpose}</p>
+          </div>
+          <span class="sec-toggle" aria-hidden="true">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </div>
+
+        <div class="sec-body">
+          <div class="sec-body-inner">
+            <div class="sec-body-pad">
+              <div class="sec-meta">${lengthPill}</div>
+
+              <div class="sec-block">
+                <div class="block-label">Structure</div>
+                <ul class="struct-list">${structHTML}</ul>
+              </div>
+
+              <div class="sec-block voice-notes">
+                <div class="block-label">Voice notes</div>
+                <ul>${voiceHTML}</ul>
+              </div>
+
+              ${exampleHTML}
+            </div>
+          </div>
+        </div>
+      </article>`;
+  }).join('');
+
+  wrap.querySelectorAll('.section').forEach(sec => {
+    const head = sec.querySelector('.section-head');
+    head.addEventListener('click', () => {
+      sec.classList.toggle('is-open');
+    });
+
+    const n = parseInt(sec.dataset.n, 10);
+    if (n <= 2) sec.classList.add('is-open');
+  });
+
+  wrap.querySelectorAll('.example-head').forEach(h => {
+    h.addEventListener('click', e => {
+      e.stopPropagation();
+      h.parentElement.classList.toggle('is-open');
+    });
+  });
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RENDER · HEURISTICS
+   ═══════════════════════════════════════════════════════════════ */
+
+function renderHeuristics(){
+  const el = document.getElementById('heur-list');
+  el.innerHTML = HEURISTICS.map(([n, t]) => `
+    <div class="heur-item">
+      <div class="hn">${n}</div>
+      <div class="ht">${t}</div>
+    </div>
+  `).join('');
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SCROLL REVEAL
+   ═══════════════════════════════════════════════════════════════ */
+
+function initReveal(){
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting){
+        entry.target.classList.add('in-view');
+        io.unobserve(entry.target);
+      }
+    });
+  }, {
+    rootMargin: '0px 0px -60px 0px',
+    threshold: 0.05
+  });
+
+  document.querySelectorAll('.section').forEach((s, i) => {
+    s.style.transitionDelay = Math.min(i * 0.04, 0.3) + 's';
+    io.observe(s);
+  });
+
+  const heur = document.getElementById('heuristics');
+  if (heur){
+    const hio = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting){
+          e.target.classList.add('in-view');
+          hio.unobserve(e.target);
+        }
+      });
+    }, {threshold: 0.1});
+    hio.observe(heur);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SCROLL SPY
+   ═══════════════════════════════════════════════════════════════ */
+
+function initScrollSpy(){
+  const sections = document.querySelectorAll('.section');
+  const navItems = document.querySelectorAll('.side-item');
+  const topbarH = 58;
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting){
+        const n = entry.target.dataset.n;
+        navItems.forEach(a => {
+          a.classList.toggle('is-active', a.dataset.n === n);
+        });
+      }
+    });
+  }, {
+    rootMargin: `-${topbarH + 40}px 0px -70% 0px`,
+    threshold: 0
+  });
+
+  sections.forEach(s => io.observe(s));
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PROGRESS BAR
+   ═══════════════════════════════════════════════════════════════ */
+
+function initProgress(){
+  const fill = document.getElementById('progress-fill');
+  let raf = null;
+
+  function update(){
+    const h = document.documentElement;
+    const scrollTop = h.scrollTop || document.body.scrollTop;
+    const scrollH = h.scrollHeight - h.clientHeight;
+    const pct = scrollH > 0 ? (scrollTop / scrollH) * 100 : 0;
+    fill.style.width = pct + '%';
+    raf = null;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!raf) raf = requestAnimationFrame(update);
+  }, {passive:true});
+
+  update();
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   COUNTER ANIMATION
+   ═══════════════════════════════════════════════════════════════ */
+
+function initCounters(){
+  const counters = document.querySelectorAll('[data-count]');
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseInt(el.dataset.count, 10);
+      const suffix = el.dataset.suffix || '';
+      const duration = 1200;
+      const start = performance.now();
+
+      function tick(now){
+        const t = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - t, 3);
+        el.textContent = Math.round(target * eased) + suffix;
+        if (t < 1) requestAnimationFrame(tick);
+        else el.textContent = target + suffix;
+      }
+      requestAnimationFrame(tick);
+      io.unobserve(el);
+    });
+  }, {threshold: 0.4});
+
+  counters.forEach(c => io.observe(c));
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   VIEW TOGGLE
+   ═══════════════════════════════════════════════════════════════ */
+
+function initViewToggle(){
+  const btns = document.querySelectorAll('.view-btn');
+  const pill = document.getElementById('view-pill');
+
+  function movePill(btn){
+    if (!pill || !btn) return;
+    const parent = btn.parentElement;
+    const pRect = parent.getBoundingClientRect();
+    const bRect = btn.getBoundingClientRect();
+    pill.style.left = (bRect.left - pRect.left) + 'px';
+    pill.style.width = bRect.width + 'px';
+  }
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      movePill(btn);
+
+      if (btn.dataset.view === 'reference'){
+        document.body.classList.add('show-examples');
+        document.querySelectorAll('.section').forEach(s => s.classList.add('is-open'));
+      } else {
+        document.body.classList.remove('show-examples');
+      }
+    });
+  });
+
+  requestAnimationFrame(() => movePill(document.querySelector('.view-btn.is-active')));
+  window.addEventListener('resize', () => movePill(document.querySelector('.view-btn.is-active')));
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CURSOR GLOW
+   ═══════════════════════════════════════════════════════════════ */
+
+function initCursorGlow(){
+  const glow = document.getElementById('cursor-glow');
+  if (!glow) return;
+  let mx = window.innerWidth / 2, my = window.innerHeight / 2;
+  let cx = mx, cy = my;
+  let raf;
+
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    if (!raf) loop();
+  });
+
+  function loop(){
+    cx += (mx - cx) * 0.08;
+    cy += (my - cy) * 0.08;
+    glow.style.left = cx + 'px';
+    glow.style.top = cy + 'px';
+    if (Math.abs(mx - cx) > 0.3 || Math.abs(my - cy) > 0.3){
+      raf = requestAnimationFrame(loop);
+    } else {
+      raf = null;
+    }
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   KEYBOARD
+   ═══════════════════════════════════════════════════════════════ */
+
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+  if (e.key === '[') document.querySelectorAll('.section').forEach(s => s.classList.remove('is-open'));
+  if (e.key === ']') document.querySelectorAll('.section').forEach(s => s.classList.add('is-open'));
+});
+
+/* ═══════════════════════════════════════════════════════════════
+   INIT
+   ═══════════════════════════════════════════════════════════════ */
+
+renderSidebar();
+renderSections();
+renderHeuristics();
+initReveal();
+initScrollSpy();
+initProgress();
+initCounters();
+initViewToggle();
+initCursorGlow();
+</script>
+</body>
+</html>

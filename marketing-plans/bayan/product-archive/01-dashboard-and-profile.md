@@ -1,3 +1,4 @@
+![[deepseek_html_20261003_623a36.html]]
 # 01 — Dashboard & Profile
 
 Source: `raw-json/api__dashboard.json` (git-ignored, PII), `api__profile.json`

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Gap — Bayan</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#04070E; --panel:rgba(12,20,34,.6); --panel-2:rgba(255,255,255,.025);
+  --ink:#EAF0FA; --dim:#8998B0; --faint:#414E63;
+  --line:rgba(137,152,176,.14); --line-hi:rgba(137,152,176,.3);
+  --teal:#2DD4BF; --teal-dim:#0D9488; --violet:#A78BFA; --blue:#60A5FA;
+  --amber:#FBBF24; --red:#F87171; --green:#34D399; --pink:#F472B6;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --mono:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--ink);
+  font-family:'Inter',-apple-system,sans-serif;
+  line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+
+.bg-tex{
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(45,212,191,.022) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(45,212,191,.022) 1px,transparent 1px);
+  background-size:140px 140px;
+  mask-image:radial-gradient(ellipse 100% 80% at 50% 30%,#000 20%,transparent 90%);
+}
+.orb{position:fixed;border-radius:50%;filter:blur(120px);opacity:.14;pointer-events:none;z-index:0}
+.orb.a{width:520px;height:520px;background:var(--teal);top:-180px;left:-140px;animation:drift 34s ease-in-out infinite}
+.orb.b{width:460px;height:460px;background:var(--red);bottom:-200px;right:-160px;animation:drift 40s ease-in-out infinite reverse}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,-40px)}}
+
+.wrap{position:relative;z-index:2;max-width:1380px;margin:0 auto;padding:0 32px 100px}
+@media(max-width:640px){.wrap{padding:0 18px 60px}}
+
+/* header */
+header{padding:52px 0 30px}
+.kicker{
+  font-family:var(--mono);font-size:11px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--faint);
+  display:flex;align-items:center;gap:12px;margin-bottom:20px;
+}
+.kicker::before{content:'';width:26px;height:1px;background:var(--faint)}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--red);box-shadow:0 0 0 4px rgba(248,113,113,.16);animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+h1{
+  font-size:clamp(34px,5.6vw,66px);font-weight:900;
+  letter-spacing:-.05em;line-height:1.0;margin-bottom:20px;
+  max-width:20ch;
+}
+h1 .strong{color:var(--teal)}
+h1 .weak{
+  background:linear-gradient(100deg,var(--amber),var(--red));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+   <h1>
+      <span class="strong">Strong product.</span><br>
+      <span class="weak">Weak discovery.</span>
+    </h1>
+.lede{
+  color:var(--dim);font-size:16.5px;max-width:64ch;
+  line-height:1.65;
+}
+.lede b{color:var(--ink);font-weight:600}
+
+/* ── THE GAP DIAGRAM ─────────────────────────────── */
+.gap-section{margin-top:52px}
+.gap-caption{
+  display:flex;justify-content:space-between;align-items:baseline;
+  margin-bottom:4px;font-family:'Caveat',cursive;font-size:22px;
+  color:var(--teal);opacity:.8;padding:0 6px;
+}
+.gap-caption .r{
+  font-family:var(--mono);font-size:10px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--faint);align-self:flex-end;
+}
+.gap-svg{
+  width:100%;height:auto;display:block;
+  border-radius:20px;border:1px solid var(--line);
+  background:linear-gradient(180deg,rgba(8,14,26,.6),rgba(4,7,14,.4));
+  backdrop-filter:blur(4px);
+}
+
+/* svg internal text */
+.t-label{font-family:'Inter',sans-serif;font-weight:800;fill:var(--ink);letter-spacing:-.02em}
+.t-sub{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;fill:var(--faint)}
+.t-num{font-family:var(--mono);font-weight:600;letter-spacing:-.03em}
+.t-cap{font-family:'Caveat',cursive;fill:currentColor;font-weight:600}
+
+/* ── LEDGER ──────────────────────────────────────── */
+.ledger-section{margin-top:80px}
+.sec-head{
+  display:flex;align-items:baseline;gap:16px;margin-bottom:26px;flex-wrap:wrap;
+}
+.sec-head h2{font-size:clamp(22px,2.8vw,30px);font-weight:800;letter-spacing:-.035em}
+.sec-head .tag{
+  font-family:'Caveat',cursive;font-size:20px;color:var(--teal);opacity:.75;
+}
+.ledger{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:820px){.ledger{grid-template-columns:1fr}}
+.col{
+  border-radius:18px;border:1px solid var(--line);
+  background:var(--panel);backdrop-filter:blur(8px);
+  padding:26px;
+  transition:.4s var(--ease);
+}
+.col.has{border-color:rgba(45,212,191,.25)}
+.col.sees{border-color:rgba(248,113,113,.25)}
+.col:hover{transform:translateY(-4px)}
+.col-head{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.col-badge{
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;
+  text-transform:uppercase;padding:4px 10px;border-radius:6px;
+}
+.col.has .col-badge{background:rgba(45,212,191,.14);color:var(--teal)}
+.col.sees .col-badge{background:rgba(248,113,113,.14);color:var(--red)}
+.col-title{font-size:15px;font-weight:700;letter-spacing:-.015em}
+
+.led-row{
+  display:grid;grid-template-columns:1fr auto;gap:14px;align-items:baseline;
+  padding:16px 0;border-bottom:1px solid var(--line);
+  transition:.3s;
+}
+.led-row:last-child{border-bottom:none;padding-bottom:0}
+.led-row:first-of-type{padding-top:0}
+.led-row:hover{transform:translateX(3px)}
+.led-row .lbl{font-size:13.5px;color:var(--dim);line-height:1.4}
+.led-row .lbl b{color:var(--ink);font-weight:500;display:block;margin-bottom:2px;font-size:14px}
+.led-row .val{
+  font-family:var(--mono);font-size:22px;font-weight:600;letter-spacing:-.03em;
+  text-align:right;white-space:nowrap;transition:.3s;
+}
+.col.has .val{color:var(--teal)}
+.col.sees .val{color:var(--red)}
+.col.sees .val.zero{color:var(--red);opacity:.6}
+
+/* ── THE FIX / TRAJECTORIES ─────────────────────── */
+.fix-section{margin-top:88px}
+.traj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.traj{
+  border-radius:18px;border:1px solid var(--line);
+  background:var(--panel-2);padding:24px;
+  transition:.4s var(--ease);position:relative;overflow:hidden;
+}
+.traj::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(400px circle at 20% 100%,color-mix(in srgb,var(--tc) 12%,transparent),transparent 70%);
+  opacity:0;transition:opacity .5s;pointer-events:none;
+}
+.traj:hover::before{opacity:1}
+.traj:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--tc) 40%,var(--line))}
+.traj-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;position:relative;z-index:1}
+.traj-label{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--faint);
+}
+.traj-badge{
+  font-family:var(--mono);font-size:10.5px;padding:3px 9px;border-radius:6px;
+  background:color-mix(in srgb,var(--tc) 14%,transparent);color:var(--tc);
+  letter-spacing:.1em;
+}
+.traj-scores{
+  display:flex;align-items:center;gap:16px;margin-bottom:14px;
+  position:relative;z-index:1;
+}
+.traj-num{
+  font-family:var(--mono);font-size:44px;font-weight:600;
+  letter-spacing:-.04em;line-height:1;
+}
+.traj-num.from{color:var(--faint)}
+.traj-num.to{color:var(--tc);text-shadow:0 0 30px color-mix(in srgb,var(--tc) 40%,transparent)}
+.traj-arrow{
+  color:var(--tc);font-size:22px;
+  animation:slide 2.4s ease-in-out infinite;
+}
+@keyframes slide{0%,100%{transform:translateX(0);opacity:.7}50%{transform:translateX(6px);opacity:1}}
+.traj-note{font-size:13px;color:var(--dim);line-height:1.55;position:relative;z-index:1}
+.traj-note b{color:var(--ink);font-weight:600}
+.traj-meter{
+  height:5px;border-radius:3px;background:rgba(255,255,255,.06);
+  margin-top:16px;position:relative;overflow:hidden;
+}
+.traj-fill{
+  position:absolute;top:0;bottom:0;left:0;border-radius:3px;
+  background:linear-gradient(90deg,var(--faint),var(--tc));
+  width:0;transition:width 1.2s var(--ease);
+}
+
+/* ── WINNABILITY ─────────────────────────────────── */
+.win-section{margin-top:88px}
+.win-card{
+  border-radius:20px;border:1px solid var(--line);
+  background:linear-gradient(180deg,rgba(8,14,26,.7),rgba(6,10,18,.5));
+  padding:34px 32px;backdrop-filter:blur(6px);
+}
+.win-intro{font-size:14.5px;color:var(--dim);max-width:70ch;margin-bottom:32px}
+.win-intro b{color:var(--ink);font-weight:600}
+.diff-axis{
+  position:relative;padding:34px 0 12px;
+}
+.diff-track{
+  height:8px;border-radius:4px;position:relative;
+  background:linear-gradient(90deg,
+    rgba(52,211,153,.35) 0%,
+    rgba(52,211,153,.4) 18%,
+    rgba(251,191,36,.35) 40%,
+    rgba(248,113,113,.4) 75%,
+    rgba(248,113,113,.6) 100%);
+  box-shadow:inset 0 0 20px rgba(0,0,0,.3);
+}
+.diff-zone{
+  position:absolute;top:-14px;bottom:-14px;
+  border-left:1px dashed rgba(52,211,153,.6);
+  border-right:1px dashed rgba(52,211,153,.6);
+  background:rgba(52,211,153,.05);
+  pointer-events:none;
+}
+.diff-zone .zone-label{
+  position:absolute;top:-22px;left:50%;transform:translateX(-50%);
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--green);white-space:nowrap;
+}
+.diff-mark{
+  position:absolute;top:-9px;
+  transform:translateX(-50%);
+  transition:.3s;
+  cursor:default;
+}
+.diff-pin{
+  width:14px;height:14px;border-radius:50%;
+  border:2px solid var(--bg);position:relative;
+  box-shadow:0 0 0 1px var(--mc),0 0 16px color-mix(in srgb,var(--mc) 60%,transparent);
+  background:var(--mc);
+}
+.diff-label{
+  position:absolute;top:24px;left:50%;transform:translateX(-50%);
+  font-family:var(--mono);font-size:10px;color:var(--mc);
+  white-space:nowrap;letter-spacing:.06em;
+  opacity:0;transition:.3s;
+}
+.diff-mark:hover .diff-label{opacity:1}
+.diff-mark:hover .diff-pin{transform:scale(1.3)}
+.diff-scale{
+  display:flex;justify-content:space-between;margin-top:14px;
+  font-family:var(--mono);font-size:10px;letter-spacing:.1em;
+  color:var(--faint);text-transform:uppercase;
+}
+
+.win-highlights{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:14px;margin-top:36px;
+}
+.highlight{
+  border-radius:14px;border:1px solid var(--line);
+  background:var(--panel-2);padding:18px;
+  display:flex;gap:14px;align-items:flex-start;
+  transition:.35s var(--ease);
+}
+.highlight:hover{transform:translateY(-3px);border-color:var(--line-hi)}
+.highlight .ico{
+  width:38px;height:38px;border-radius:10px;flex-shrink:0;
+  display:grid;place-items:center;font-size:16px;
+  background:rgba(255,255,255,.04);
+  border:1px solid var(--line);
+}
+.highlight .ico.green{color:var(--green);border-color:rgba(52,211,153,.3);background:rgba(52,211,153,.08)}
+.highlight .ico.teal{color:var(--teal);border-color:rgba(45,212,191,.3);background:rgba(45,212,191,.08)}
+.highlight .ico.amber{color:var(--amber);border-color:rgba(251,191,36,.3);background:rgba(251,191,36,.08)}
+.highlight .h-t{font-size:13.5px;font-weight:700;letter-spacing:-.01em;margin-bottom:4px}
+.highlight .h-d{font-size:12.5px;color:var(--dim);line-height:1.5}
+.highlight .h-d b{color:var(--ink);font-weight:600;font-family:var(--mono);font-size:12px}
+
+/* ── WHY FIXABLE ─────────────────────────────────── */
+.why-section{margin-top:88px}
+.why-card{
+  border-radius:20px;border:1px solid rgba(45,212,191,.25);
+  background:linear-gradient(135deg,rgba(45,212,191,.06),rgba(167,139,250,.03));
+  padding:36px;position:relative;overflow:hidden;
+}
+.why-card::before{
+  content:'';position:absolute;top:-100px;right:-100px;width:300px;height:300px;
+  background:radial-gradient(circle,rgba(45,212,191,.12),transparent 70%);
+  pointer-events:none;
+}
+.why-card .eyebrow{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--teal);margin-bottom:14px;
+}
+.why-card h3{
+  font-size:clamp(20px,2.6vw,28px);font-weight:800;
+  letter-spacing:-.03em;line-height:1.2;margin-bottom:16px;max-width:26ch;
+}
+.why-card p{font-size:14.5px;color:var(--dim);max-width:64ch;line-height:1.7}
+.why-card p b{color:var(--ink);font-weight:600}
+.why-card p + p{margin-top:12px}
+
+footer{
+  margin-top:70px;padding-top:28px;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--faint);
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-tex"></div>
+<div class="orb a"></div>
+<div class="orb b"></div>
+
+<div class="wrap">
+  <header>
+    <div class="kicker"><span class="dot"></span>fig. 03 — the gap · edu / bayan</div>
+    <h1>
+      <span class="strong">Strong product.</span><br>
+      <span class="weak">Weak discovery.</span>
+    </h1>
+    <p class="lede">
+      Bayan has built everything a medical learner needs and almost nothing the market
+      can find. The distance between what exists and what's visible <b>is the gap</b> —
+      and it's entirely fixable with content Bayan is uniquely positioned to publish.
+    </p>
+  </header>
+
+
+  <!-- ─────── LEDGER ─────── -->
+  <section class="ledger-section">
+    <div class="sec-head">
+      <h2>The ledger</h2>
+      <span class="tag">what exists vs. what's seen</span>
+    </div>
+
+    <div class="ledger">
+      <div class="col has reveal">
+        <div class="col-head">
+          <span class="col-badge">Built</span>
+          <span class="col-title">What Bayan has</span>
+        </div>
+        <div class="led-row">
+          <div class="lbl"><b>Clinician-reviewed questions</b>a real, deep question bank</div>
+          <div class="val" data-count="5589">0</div>
+        </div>
+        <div class="led-row">
+          <div class="lbl"><b>Countries with learners</b>a genuine international footprint</div>
+          <div class="val" data-count="55" data-suffix="+">0</div>
+        </div>
+        <div class="led-row">
+          <div class="lbl"><b>Server-rendered site</b>AI crawlers can already read it</div>
+          <div class="val" style="font-size:16px">READY</div>
+        </div>
+      </div>
+
+      <div class="col sees reveal">
+        <div class="col-head">
+          <span class="col-badge">Unseen</span>
+          <span class="col-title">What the market sees</span>
+        </div>
+        <div class="led-row">
+          <div class="lbl"><b>Commercial-intent exam keywords ranked</b>buyer searches with intent to choose</div>
+          <div class="val zero" data-count="0">0</div>
+        </div>
+        <div class="led-row">
+          <div class="lbl"><b>AI answer appearances</b>the layer buyers now ask first</div>
+          <div class="val zero" data-count="0">0</div>
+        </div>
+        <div class="led-row">
+          <div class="lbl"><b>Marketing health score</b>composite of the six channels</div>
+          <div class="val" data-count="25">0</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────── TRAJECTORIES ─────── -->
+  <section class="fix-section">
+    <div class="sec-head">
+      <h2>The fix</h2>
+      <span class="tag">what the tracked levers buy</span>
+    </div>
+
+    <div class="traj-grid">
+      <div class="traj reveal" style="--tc:#2DD4BF">
+        <div class="traj-head">
+          <span class="traj-label">Marketing health</span>
+          <span class="traj-badge">+29</span>
+        </div>
+        <div class="traj-scores">
+          <span class="traj-num from">25</span>
+          <span class="traj-arrow">→</span>
+          <span class="traj-num to">54</span>
+        </div>
+        <div class="traj-note">
+          Fixing the tracked levers moves the composite health score from
+          <b>red-alert to watchable</b> — enough to stop the bleeding while longer content lands.
+        </div>
+        <div class="traj-meter"><div class="traj-fill" data-target="54"></div></div>
+      </div>
+
+      <div class="traj reveal" style="--tc:#A78BFA">
+        <div class="traj-head">
+          <span class="traj-label">AI-answer readiness (GEO)</span>
+          <span class="traj-badge">+19</span>
+        </div>
+        <div class="traj-scores">
+          <span class="traj-num from">71</span>
+          <span class="traj-arrow">→</span>
+          <span class="traj-num to">~90</span>
+        </div>
+        <div class="traj-note">
+          Adding the guidance files, FAQ schema, and direct answers moves GEO
+          from <b>good to authoritative</b> — the layer machines read first.
+        </div>
+        <div class="traj-meter"><div class="traj-fill" data-target="90"></div></div>
+      </div>
+
+      <div class="traj reveal" style="--tc:#34D399">
+        <div class="traj-head">
+          <span class="traj-label">Win difficulty</span>
+          <span class="traj-badge">5–18</span>
+        </div>
+        <div class="traj-scores">
+          <span class="traj-num from" style="font-size:26px">winnable</span>
+          <span class="traj-arrow">◆</span>
+          <span class="traj-num to" style="font-size:26px">now</span>
+        </div>
+        <div class="traj-note">
+          The question-bank keywords Bayan should target sit at <b>very low difficulty</b> —
+          the room to enter without a years-long climb.
+        </div>
+        <div class="traj-meter"><div class="traj-fill" data-target="18"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────── WINNABILITY ─────── -->
+  <section class="win-section">
+    <div class="sec-head">
+      <h2>Winnability</h2>
+      <span class="tag">the targets are inside reach</span>
+    </div>
+
+    <div class="win-card reveal">
+      <p class="win-intro">
+        Difficulty on a 0–100 scale. <b>The green zone (5–18) is where Bayan can rank
+        with content it already has the substance to publish.</b> One term — MRCP Part 1 —
+        is already at <b>#28</b>, close enough to the top of page one to push.
+      </p>
+
+      <div class="diff-axis" id="diffAxis">
+        <div class="diff-track">
+          <div class="diff-zone" style="left:5%;right:82%">
+            <span class="zone-label">winnable zone</span>
+          </div>
+        </div>
+        <div class="diff-scale">
+          <span>0</span>
+          <span>25</span>
+          <span>50</span>
+          <span>75</span>
+          <span>100</span>
+        </div>
+      </div>
+
+      <div class="win-highlights">
+        <div class="highlight">
+          <span class="ico green">◆</span>
+          <div>
+            <div class="h-t">Question-bank keywords</div>
+            <div class="h-d">Difficulty range <b>5–18</b> — low-competition, high-intent terms Bayan can rank for directly.</div>
+          </div>
+        </div>
+        <div class="highlight">
+          <span class="ico teal">#</span>
+          <div>
+            <div class="h-t">MRCP Part 1 — already #28</div>
+            <div class="h-d">One term is already <b>on the cusp of page one</b>. A single dedicated page can move it.</div>
+          </div>
+        </div>
+        <div class="highlight">
+          <span class="ico amber">◆</span>
+          <div>
+            <div class="h-t">The gap is fixable</div>
+            <div class="h-d">Every lever points at content Bayan is <b>uniquely positioned to write</b> — not a new product, a new signal.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────── WHY FIXABLE ─────── -->
+  <section class="why-section">
+    <div class="why-card reveal">
+      <div class="eyebrow">◆ The shape of the fix</div>
+      <h3>This is not a product problem. It's a signal problem.</h3>
+      <p>
+        Bayan already has the substance — <b>5,589 clinician-reviewed questions</b> across
+        <b>55+ countries</b>, on a site that AI crawlers can read today. What's missing is
+        the layer that translates that substance into <b>direct answers</b>, <b>structured
+        guidance</b>, and <b>keyword-matched pages</b> the market can find.
+      </p>
+      <p>
+        The tracked levers alone move health from <b>25 → 54</b> and GEO from <b>71 → ~90</b>,
+        targeting question-bank keywords where difficulty is <b>5–18</b> and one term is
+        already at <b>#28</b>. Nothing on that path requires building something new —
+        only publishing what Bayan is uniquely able to say.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <span>fig. 03 — the gap · edu / bayan · magister audit 2026-09-28</span>
+    <span>strong product · weak discovery · the fix is content</span>
+  </footer>
+</div>
+
+<script>
+/* ── IntersectionObserver reveals ───────────────── */
+const io = new IntersectionObserver(es => {
+  es.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold:.15, rootMargin:'0px 0px -40px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* ── animated counters ─────────────────────────── */
+function animateCount(el) {
+  const target = parseFloat(el.dataset.count);
+  const suffix = el.dataset.suffix || '';
+  const dur = 1400;
+  const start = performance.now();
+  function frame(t) {
+    const p = Math.min((t - start) / dur, 1);
+    const eased = 1 - Math.pow(1 - p, 3);
+    const val = Math.round(target * eased);
+    el.textContent = val.toLocaleString() + suffix;
+    if (p < 1) requestAnimationFrame(frame);
+    else el.textContent = target.toLocaleString() + suffix;
+  }
+  requestAnimationFrame(frame);
+}
+
+const countObs = new IntersectionObserver(es => {
+  es.forEach(e => {
+    if (e.isIntersecting) {
+      animateCount(e.target);
+      countObs.unobserve(e.target);
+    }
+  });
+}, { threshold:.5 });
+document.querySelectorAll('[data-count]').forEach(el => countObs.observe(el));
+
+/* ── trajectory meters ─────────────────────────── */
+const meterObs = new IntersectionObserver(es => {
+  es.forEach(e => {
+    if (e.isIntersecting) {
+      const fill = e.target.querySelector('.traj-fill');
+      const target = parseInt(fill.dataset.target, 10);
+      setTimeout(() => { fill.style.width = target + '%'; }, 120);
+      meterObs.unobserve(e.target);
+    }
+  });
+}, { threshold:.3 });
+document.querySelectorAll('.traj').forEach(el => meterObs.observe(el));
+
+/* ── difficulty markers ────────────────────────── */
+const axis = document.getElementById('diffAxis');
+const track = axis.querySelector('.diff-track');
+const markers = [
+  { d: 5,  label: 'gulf licensing guide', color:'#34D399' },
+  { d: 9,  label: 'ABG course answer',    color:'#34D399' },
+  { d: 13, label: 'OMSB question bank',   color:'#34D399' },
+  { d: 18, label: 'arab board questions', color:'#34D399' },
+  { d: 28, label: 'MRCP Part 1 · #28',    color:'#2DD4BF', rank:true },
+  { d: 62, label: 'usmle question bank',  color:'#FBBF24' },
+  { d: 84, label: 'medical board prep',   color:'#F87171' }
+];
+
+markers.forEach(m => {
+  const el = document.createElement('div');
+  el.className = 'diff-mark';
+  el.style.left = m.d + '%';
+  el.style.setProperty('--mc', m.color);
+  el.innerHTML = `
+    <div class="diff-pin"></div>
+    <div class="diff-label">${m.label}</div>`;
+  track.appendChild(el);
+});
+
+/* ── smooth parallax on the gap SVG ────────────── */
+const gapSvg = document.querySelector('.gap-svg');
+if (gapSvg) {
+  let raf = null;
+  document.addEventListener('scroll', () => {
+    if (raf) return;
+    raf = requestAnimationFrame(() => {
+      const r = gapSvg.getBoundingClientRect();
+      const center = r.top + r.height / 2;
+      const vh = window.innerHeight;
+      const p = (center - vh / 2) / vh; // -1 to 1
+      const leftTower = gapSvg.querySelector('#leftTower');
+      const rightTower = gapSvg.querySelector('#rightTower');
+      if (leftTower) leftTower.setAttribute('transform', `translate(0 ${p * -8})`);
+      if (rightTower) rightTower.setAttribute('transform', `translate(0 ${p * 6})`);
+      raf = null;
+    });
+  }, { passive:true });
+}
+</script>
+</body>
+</html>

@@ -1,3 +1,5 @@
+![[deepseek_html_20261002_44d1ef.html]]
+
 # Bayan — Analytics Events Spec (build-ready)
 
 Vendor-neutral event layer for the Bayan learner app (Next.js + Supabase).

@@ -1,3 +1,4 @@
+![[deepseek_html_20261003_1ffdf2.html]]
 # 10 — Signup & Onboarding Journey
 
 Source: live, captured 2026-09-26 read-only from the logged-in account.

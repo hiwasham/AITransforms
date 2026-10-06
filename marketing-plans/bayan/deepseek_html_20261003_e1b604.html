@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>07 — Training Levels, Settings &amp; Personalization · Bayan Learning</title>
+<style>
+  :root{
+    --ink:#0a0d14;
+    --ink2:#0f131c;
+    --panel:#151b26;
+    --panel2:#1a2230;
+    --line:#232c3b;
+    --txt:#eef2f9;
+    --mut:#8b95a9;
+    --mut2:#5a6477;
+    --bayan:#1a4ff5;
+    --bayan2:#4d7bff;
+    --emerald:#34d399;
+    --amber:#fbbf24;
+    --rose:#f43f5e;
+    --violet:#a78bfa;
+    --cyan:#22d3ee;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);
+    color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  main{max-width:1000px;margin:0 auto;padding:0 24px 80px}
+
+  /* ============ TOP NAV ============ */
+  .topnav{
+    position:sticky;top:0;z-index:50;
+    padding:12px 24px;
+    background:linear-gradient(180deg,rgba(10,13,20,.95),rgba(10,13,20,.65) 80%,transparent);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    display:flex;gap:4px;overflow-x:auto;flex-wrap:wrap;
+    border-bottom:1px solid transparent;
+    transition:border-color .3s;
+  }
+  .topnav.scrolled{border-bottom-color:var(--line)}
+  .topnav::-webkit-scrollbar{display:none}
+  .topnav a{
+    all:unset;cursor:pointer;
+    font-size:12px;font-weight:500;
+    color:var(--mut);
+    padding:7px 12px;border-radius:8px;
+    transition:.2s;white-space:nowrap;
+  }
+  .topnav a:hover{color:#c8d2e2;background:rgba(255,255,255,.04)}
+  .topnav a.active{color:#fff;background:rgba(26,79,245,.15)}
+
+  /* ============ HEADER ============ */
+  header{
+    padding:56px 0 40px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:40px;
+  }
+  header .crumbs{
+    display:flex;align-items:center;gap:10px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    color:var(--mut2);
+    margin-bottom:20px;
+    flex-wrap:wrap;
+  }
+  header .crumbs .sep{color:var(--line)}
+  header .crumbs .here{color:var(--bayan2);font-weight:600}
+
+  header .tag{
+    display:inline-block;
+    font-size:11px;font-weight:600;
+    letter-spacing:.1em;text-transform:uppercase;
+    color:var(--bayan2);
+    background:rgba(26,79,245,.12);
+    border:1px solid rgba(26,79,245,.3);
+    padding:6px 12px;border-radius:8px;
+    margin-bottom:20px;
+  }
+  header h1{
+    font-size:36px;line-height:1.15;
+    letter-spacing:-.025em;font-weight:800;
+    color:#fff;margin-bottom:18px;
+  }
+  header .lede{
+    font-size:15.5px;line-height:1.75;
+    color:#b8c2d2;max-width:72ch;
+  }
+  header .lede b{color:#fff;font-weight:600}
+  header .lede code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:5px;
+    color:#dfe7f4;
+  }
+  header .meta{
+    display:flex;gap:24px;flex-wrap:wrap;
+    margin-top:24px;padding-top:24px;
+    border-top:1px dashed var(--line);
+    font-size:13px;color:var(--mut);
+  }
+  header .meta b{color:#cfd8e8;font-weight:600}
+  header .meta code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.04);
+    padding:2px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ SECTIONS ============ */
+  section{margin-bottom:56px;scroll-margin-top:80px}
+  section h2{
+    font-size:23px;line-height:1.3;
+    letter-spacing:-.02em;font-weight:700;
+    color:#fff;margin-bottom:10px;
+    display:flex;align-items:baseline;
+    gap:14px;flex-wrap:wrap;
+  }
+  section h2 .num{
+    font-size:12.5px;font-weight:700;
+    color:var(--bayan2);
+    background:rgba(26,79,245,.12);
+    border:1px solid rgba(26,79,245,.28);
+    padding:5px 10px;border-radius:7px;
+    letter-spacing:.04em;
+  }
+  section .desc{
+    font-size:14.5px;color:var(--mut);
+    margin-bottom:22px;max-width:78ch;
+  }
+  section .desc b{color:#cfd8e8;font-weight:600}
+  section .desc code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ TRAINING LEVEL TABLE ============ */
+  .table-wrap{
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow-x:auto;
+    background:var(--panel);
+  }
+  table{
+    width:100%;border-collapse:collapse;
+    min-width:560px;
+  }
+  thead th{
+    background:var(--panel2);
+    font-size:11px;font-weight:600;
+    letter-spacing:.06em;text-transform:uppercase;
+    color:var(--mut);padding:14px 18px;
+    text-align:left;
+    border-bottom:1px solid var(--line);
+    white-space:nowrap;
+  }
+  tbody td{
+    padding:14px 18px;
+    font-size:13.5px;
+    color:#cfd8e8;
+    border-bottom:1px solid var(--line);
+    vertical-align:middle;
+    line-height:1.6;
+  }
+  tbody tr:last-child td{border-bottom:none}
+  tbody tr:hover{background:rgba(255,255,255,.015)}
+  tbody td .num-cell{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    color:var(--mut2);
+    font-weight:600;
+    width:36px;
+  }
+  tbody td .label-cell{
+    font-weight:600;
+    color:#fff;
+  }
+  tbody td code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:2px 7px;border-radius:5px;
+    color:#dfe7f4;
+  }
+  tbody td .route{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    padding:4px 9px;border-radius:6px;
+    display:inline-block;
+    font-weight:600;
+  }
+  tbody td .route.student{
+    background:rgba(52,211,153,.12);
+    color:var(--emerald);
+    border:1px solid rgba(52,211,153,.3);
+  }
+  tbody td .route.nursing{
+    background:rgba(34,211,238,.12);
+    color:var(--cyan);
+    border:1px solid rgba(34,211,238,.3);
+  }
+  tbody td .route.postgrad{
+    background:rgba(167,139,250,.12);
+    color:var(--violet);
+    border:1px solid rgba(167,139,250,.3);
+  }
+
+  /* ============ ROUTE SUMMARY ============ */
+  .routes{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin-top:20px;
+  }
+  .route-card{
+    padding:22px 22px 20px;
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+  }
+  .route-card::before{
+    content:"";position:absolute;
+    top:0;right:0;bottom:0;width:3px;
+    background:rgb(var(--rc));
+  }
+  .route-card.student{--rc:52,211,153}
+  .route-card.nursing{--rc:34,211,238}
+  .route-card.postgrad{--rc:167,139,250}
+
+  .route-card .route-path{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13px;
+    font-weight:700;
+    color:rgb(var(--rc));
+    margin-bottom:10px;
+    letter-spacing:-.005em;
+  }
+  .route-card .route-count{
+    font-size:32px;
+    font-weight:800;
+    letter-spacing:-.04em;
+    color:#fff;
+    font-variant-numeric:tabular-nums;
+    line-height:1;
+    margin-bottom:8px;
+  }
+  .route-card .route-count small{
+    font-size:13px;
+    color:var(--mut2);
+    font-weight:600;
+    letter-spacing:0;
+    margin-left:4px;
+  }
+  .route-card .route-tracks{
+    font-size:12.5px;
+    line-height:1.6;
+    color:var(--mut);
+  }
+  .route-card .route-tracks b{color:#cfd8e8;font-weight:600}
+
+  /* ============ API BOX ============ */
+  .api-box{
+    margin-top:14px;
+    border-radius:11px;
+    background:#050810;
+    border:1px solid var(--line);
+    overflow:hidden;
+  }
+  .api-box .bar{
+    display:flex;align-items:center;
+    gap:8px;padding:10px 16px;
+    border-bottom:1px solid var(--line);
+    background:rgba(255,255,255,.02);
+  }
+  .api-box .bar .method{
+    font-family:ui-monospace,monospace;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:.06em;
+    padding:3px 7px;border-radius:5px;
+    background:rgba(52,211,153,.14);
+    color:var(--emerald);
+    border:1px solid rgba(52,211,153,.3);
+  }
+  .api-box .bar .path{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    color:#cbd5e1;
+    font-weight:600;
+  }
+  .api-box pre{
+    padding:14px 18px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px;
+    line-height:1.75;
+    color:#a8b3c5;
+    overflow-x:auto;
+    white-space:pre;
+  }
+  .api-box pre::-webkit-scrollbar{height:8px}
+  .api-box pre::-webkit-scrollbar-thumb{
+    background:#1d2531;border-radius:9px;
+  }
+  .api-box pre .k{color:#7ba4ff}
+  .api-box pre .s{color:#5fd39a}
+  .api-box pre .n{color:#f5be3c}
+
+  /* ============ SPLIT GRID ============ */
+  .split{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+  }
+  .split-card{
+    padding:22px 24px;
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+  }
+  .split-card::before{
+    content:"";position:absolute;
+    top:0;right:0;left:0;height:3px;
+    background:rgb(var(--sc));
+  }
+  .split-card.s-cyan{--sc:34,211,238}
+  .split-card.s-violet{--sc:167,139,250}
+  .split-card.s-emerald{--sc:52,211,153}
+  .split-card.s-amber{--sc:251,191,36}
+
+  .split-card .label{
+    font-size:11px;font-weight:700;
+    letter-spacing:.09em;text-transform:uppercase;
+    color:rgb(var(--sc));
+    margin-bottom:10px;
+  }
+  .split-card .title{
+    font-size:15px;font-weight:700;
+    color:#fff;
+    letter-spacing:-.01em;
+    margin-bottom:10px;
+    line-height:1.4;
+  }
+  .split-card p{
+    font-size:13.5px;
+    line-height:1.7;
+    color:#b8c2d2;
+  }
+  .split-card p b{color:#fff;font-weight:600}
+  .split-card p code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ CHIPS / TAGS ============ */
+  .chip-list{
+    display:flex;flex-wrap:wrap;gap:8px;
+    margin-top:12px;
+  }
+  .chip{
+    display:inline-flex;align-items:center;gap:7px;
+    font-size:12.5px;
+    font-weight:500;
+    padding:8px 13px;
+    border-radius:9px;
+    background:rgba(255,255,255,.03);
+    color:#cfd8e8;
+    border:1px solid var(--line);
+    transition:.18s;
+  }
+  .chip:hover{
+    background:rgba(26,79,245,.08);
+    color:#fff;
+    border-color:rgba(26,79,245,.4);
+    transform:translateY(-1px);
+  }
+  .chip .acr{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:11.5px;
+    font-weight:700;
+    color:var(--bayan2);
+  }
+
+  /* ============ SUBSETTINGS LIST ============ */
+  .sub-list{
+    display:flex;flex-direction:column;gap:12px;
+  }
+  .sub-item{
+    padding:18px 22px;
+    border-radius:12px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    display:flex;gap:16px;align-items:flex-start;
+    transition:.2s;
+  }
+  .sub-item:hover{
+    border-color:rgba(26,79,245,.35);
+    background:rgba(26,79,245,.025);
+  }
+  .sub-item .sub-num{
+    flex:0 0 32px;
+    width:32px;height:32px;
+    border-radius:9px;
+    display:grid;place-items:center;
+    font-family:ui-monospace,monospace;
+    font-size:12px;font-weight:800;
+    background:rgba(26,79,245,.14);
+    color:var(--bayan2);
+    border:1px solid rgba(26,79,245,.3);
+  }
+  .sub-item .body{flex:1;min-width:0}
+  .sub-item .title{
+    font-size:14px;
+    font-weight:700;
+    color:#fff;
+    letter-spacing:-.005em;
+    margin-bottom:6px;
+  }
+  .sub-item p{
+    font-size:13.5px;
+    line-height:1.7;
+    color:#b8c2d2;
+  }
+  .sub-item p + p{margin-top:8px}
+  .sub-item b{color:#fff;font-weight:600}
+  .sub-item code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ MILESTONE LADDER ============ */
+  .ladder{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:8px;
+    margin-top:16px;
+  }
+  .milestone{
+    padding:16px 12px 14px;
+    border-radius:11px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    text-align:center;
+    position:relative;
+    transition:.25s;
+  }
+  .milestone:hover{
+    border-color:rgba(26,79,245,.4);
+    background:rgba(26,79,245,.04);
+    transform:translateY(-3px);
+  }
+  .milestone::after{
+    content:"→";
+    position:absolute;
+    right:-10px;top:50%;
+    translate:0 -50%;
+    color:var(--mut2);
+    font-size:12px;
+    z-index:2;
+    background:var(--ink);
+    padding:0 2px;
+  }
+  .milestone:last-child::after{display:none}
+  .milestone .m-num{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:16px;
+    font-weight:800;
+    letter-spacing:-.02em;
+    color:var(--bayan2);
+    font-variant-numeric:tabular-nums;
+    line-height:1;
+  }
+  .milestone .m-lbl{
+    font-size:10px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--mut2);
+    margin-top:6px;
+    font-weight:600;
+  }
+
+  /* ============ HISTORY TABLE ============ */
+  .history-table{
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    overflow:hidden;
+  }
+  .history-table table{
+    width:100%;border-collapse:collapse;
+  }
+  .history-table thead th{
+    background:var(--panel2);
+    font-size:11px;font-weight:600;
+    letter-spacing:.06em;text-transform:uppercase;
+    color:var(--mut);
+    padding:12px 18px;
+    text-align:left;
+    border-bottom:1px solid var(--line);
+  }
+  .history-table tbody td{
+    padding:14px 18px;
+    font-size:13px;
+    color:#cfd8e8;
+    border-bottom:1px solid var(--line);
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  .history-table tbody td:last-child{border-right:none}
+  .history-table tbody tr:last-child td{border-bottom:none}
+  .history-table tbody tr:hover{background:rgba(255,255,255,.02)}
+  .history-table .type-badge{
+    display:inline-block;
+    font-size:11px;
+    font-weight:700;
+    padding:3px 8px;border-radius:5px;
+    background:rgba(26,79,245,.14);
+    color:var(--bayan2);
+    border:1px solid rgba(26,79,245,.3);
+    letter-spacing:.04em;
+    text-transform:lowercase;
+  }
+
+  /* ============ CALLOUTS ============ */
+  .callout{
+    padding:20px 24px;
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    margin-top:16px;
+    display:flex;gap:18px;align-items:flex-start;
+  }
+  .callout .icon{
+    flex:0 0 36px;width:36px;height:36px;
+    border-radius:10px;
+    display:grid;place-items:center;
+    font-size:17px;
+  }
+  .callout .body{flex:1;min-width:0}
+  .callout .body .label{
+    font-size:11px;font-weight:700;
+    letter-spacing:.09em;text-transform:uppercase;
+    margin-bottom:10px;
+  }
+  .callout .body p{
+    font-size:13.5px;line-height:1.7;
+    color:#b8c2d2;
+  }
+  .callout .body p + p{margin-top:10px}
+  .callout .body b{color:#fff;font-weight:600}
+  .callout .body code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+  .callout.info{
+    background:rgba(26,79,245,.05);
+    border-color:rgba(26,79,245,.3);
+  }
+  .callout.info .icon{
+    background:rgba(26,79,245,.15);
+    color:var(--bayan2);
+    border:1px solid rgba(26,79,245,.35);
+  }
+  .callout.info .label{color:var(--bayan2)}
+  .callout.warn{
+    background:rgba(251,191,36,.05);
+    border-color:rgba(251,191,36,.3);
+  }
+  .callout.warn .icon{
+    background:rgba(251,191,36,.15);
+    color:var(--amber);
+    border:1px solid rgba(251,191,36,.35);
+  }
+  .callout.warn .label{color:var(--amber)}
+  .callout.emerald{
+    background:rgba(52,211,153,.05);
+    border-color:rgba(52,211,153,.3);
+  }
+  .callout.emerald .icon{
+    background:rgba(52,211,153,.15);
+    color:var(--emerald);
+    border:1px solid rgba(52,211,153,.35);
+  }
+  .callout.emerald .label{color:var(--emerald)}
+
+  /* ============ TAKEAWAYS ============ */
+  .takeaways{
+    display:flex;flex-direction:column;gap:12px;
+  }
+  .takeaway{
+    padding:20px 24px;
+    border-radius:12px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    display:flex;gap:18px;align-items:flex-start;
+    transition:.2s;
+  }
+  .takeaway:hover{
+    border-color:rgba(26,79,245,.4);
+    background:rgba(26,79,245,.03);
+    transform:translateX(3px);
+  }
+  .takeaway .num{
+    flex:0 0 34px;
+    width:34px;height:34px;
+    border-radius:10px;
+    display:grid;place-items:center;
+    font-family:ui-monospace,monospace;
+    font-size:14px;font-weight:800;
+    background:rgba(26,79,245,.14);
+    color:var(--bayan2);
+    border:1px solid rgba(26,79,245,.3);
+  }
+  .takeaway .body{flex:1;min-width:0}
+  .takeaway .title{
+    font-size:14.5px;
+    font-weight:700;
+    color:#fff;
+    letter-spacing:-.005em;
+    margin-bottom:6px;
+  }
+  .takeaway p{
+    font-size:13.5px;
+    line-height:1.7;
+    color:#b8c2d2;
+  }
+  .takeaway p b{color:#fff;font-weight:600}
+  .takeaway p code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ FOOTER ============ */
+  footer{
+    padding-top:32px;
+    margin-top:56px;
+    border-top:1px solid var(--line);
+    font-size:12.5px;
+    color:var(--mut2);
+    text-align:center;
+    line-height:1.85;
+  }
+  footer .mark{color:var(--bayan2);font-weight:600}
+  footer code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.04);
+    padding:2px 7px;border-radius:5px;
+    color:#cfd8e8;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:820px){
+    main{padding:0 16px 60px}
+    header{padding:40px 0 30px;margin-bottom:32px}
+    header h1{font-size:26px}
+    header .lede{font-size:14.5px}
+    section{margin-bottom:44px}
+    section h2{font-size:20px}
+
+    .routes{grid-template-columns:1fr;gap:10px}
+    .split{grid-template-columns:1fr;gap:12px}
+    .ladder{grid-template-columns:repeat(3,1fr);gap:8px}
+    .milestone:nth-child(3)::after{display:none}
+
+    .topnav{padding:10px 16px}
+    .topnav a{font-size:11px;padding:6px 10px}
+  }
+  @media (max-width:480px){
+    header h1{font-size:22px}
+    .table-wrap table{min-width:0;font-size:12px}
+    thead th,tbody td{padding:10px 12px;font-size:12px}
+    .ladder{grid-template-columns:1fr 1fr}
+    .milestone::after{display:none}
+    .takeaway{padding:16px 18px;gap:14px}
+    .takeaway .num{flex:0 0 30px;width:30px;height:30px;font-size:12px}
+    .sub-item{padding:14px 16px;gap:12px}
+  }
+</style>
+</head>
+<body>
+
+<nav class="topnav" id="topnav">
+  <a href="#levels">Training levels</a>
+  <a href="#routes">Route mapping</a>
+  <a href="#targets">Target exams</a>
+  <a href="#settings">Settings</a>
+  <a href="#overview">Overview</a>
+  <a href="#history">Quiz history</a>
+  <a href="#achievements">Achievements</a>
+  <a href="#takeaways">Takeaways</a>
+</nav>
+
+<main>
+
+  <!-- ============ HEADER ============ -->
+  <header>
+    <div class="crumbs">
+      <span>Bayan Learning</span>
+      <span class="sep">/</span>
+      <span>Product Archive</span>
+      <span class="sep">/</span>
+      <span class="here">07 — Training Levels, Settings &amp; Personalization</span>
+    </div>
+
+    <span class="tag">Doc 07 · closes part of GAPS</span>
+    <h1>Training Levels, Settings &amp; Personalization</h1>
+    <p class="lede">
+      Captured live <b>2026-09-26</b> from the nurse test account's in-app
+      <b>Settings</b>, <b>Overview</b>, <b>History</b>, and <b>Achievements</b>
+      screens. The account's <code>Training Level</code> is a single field
+      that drives the whole experience — exam scope, question pool, and which
+      dashboard route the app lands on.
+    </p>
+
+    <div class="meta">
+      <span><b>Captured:</b> 2026-09-26 · read-only</span>
+      <span><b>Track:</b> restored to <code>intern</code> after capture</span>
+      <span><b>All 12 levels:</b> live-confirmed by switching the field</span>
+    </div>
+  </header>
+
+  <!-- ============ TRAINING LEVELS ============ -->
+  <section id="levels">
+    <h2><span class="num">01</span> Training levels · the master field</h2>
+    <p class="desc">
+      A single <code>&lt;select&gt;</code> field at <b>Settings → Edit Profile</b>
+      with 12 options. Confirmed live by switching on the real account and
+      reading the persisted value back after reload. <code>value</code> is what
+      is stored on <code>learner_profiles.training_level</code>.
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:44px">#</th>
+            <th>Label</th>
+            <th style="width:200px">Value</th>
+            <th style="width:200px">Dashboard route</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num-cell">01</td>
+            <td class="label-cell">Medical Student</td>
+            <td><code>medical_student</code></td>
+            <td><span class="route student">/student/dashboard</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">02</td>
+            <td class="label-cell">Intern</td>
+            <td><code>intern</code></td>
+            <td><span class="route postgrad">/postgrad/dashboard</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">03</td>
+            <td class="label-cell">R1 Resident</td>
+            <td><code>r1</code></td>
+            <td><span class="route postgrad">/postgrad/dashboard</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">04</td>
+            <td class="label-cell">R2 Resident</td>
+            <td><code>r2</code></td>
+            <td><span class="route postgrad">/postgrad/dashboard</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">05</td>
+            <td class="label-cell">R3 Resident</td>
+            <td><code>r3</code></td>
+            <td><span class="route postgrad">/postgrad/dashboard</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">06</td>
+            <td class="label-cell">R4 Resident</td>
+            <td><code>r4</code></td>
+            <td><span class="route postgrad">/postgrad/dashboard</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">07</td>
+            <td class="label-cell">R5 Resident</td>
+            <td><code>r5</code></td>
+            <td><span class="route postgrad">/postgrad/dashboard</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">08</td>
+            <td class="label-cell">Fellow</td>
+            <td><code>fellow</code></td>
+            <td><span class="route postgrad">/postgrad/dashboard</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">09</td>
+            <td class="label-cell">Attending / Consultant</td>
+            <td><code>attending</code></td>
+            <td><span class="route postgrad">/postgrad/dashboard</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">10</td>
+            <td class="label-cell">Nurse</td>
+            <td><code>nurse</code></td>
+            <td><span class="route nursing">/nursing/dashboard</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">11</td>
+            <td class="label-cell">Pharmacist</td>
+            <td><code>pharmacist</code></td>
+            <td><span class="route postgrad">/postgrad/dashboard</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">12</td>
+            <td class="label-cell">Family Medicine Resident</td>
+            <td><code>resident</code></td>
+            <td><span class="route postgrad">/postgrad/dashboard</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ ROUTES ============ -->
+  <section id="routes">
+    <h2><span class="num">02</span> Route mapping · 3 dashboards, 12 tracks</h2>
+    <p class="desc">
+      Only <b>3 distinct dashboards</b> back the 12 training levels. Confirmed
+      live <b>2026-09-26</b> by switching the field and reading the resulting
+      dashboard route. Account restored to <code>intern</code> afterward.
+    </p>
+
+    <div class="routes">
+      <div class="route-card student">
+        <div class="route-path">/student/dashboard</div>
+        <div class="route-count">1<small>track</small></div>
+        <div class="route-tracks">
+          <b>medical_student</b>
+        </div>
+      </div>
+
+      <div class="route-card nursing">
+        <div class="route-path">/nursing/dashboard</div>
+        <div class="route-count">1<small>track</small></div>
+        <div class="route-tracks">
+          <b>nurse</b>
+        </div>
+      </div>
+
+      <div class="route-card postgrad">
+        <div class="route-path">/postgrad/dashboard</div>
+        <div class="route-count">10<small>tracks</small></div>
+        <div class="route-tracks">
+          <b>intern · r1–r5 · fellow · attending · pharmacist · resident</b>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout info" style="margin-top:20px">
+      <div class="icon">◆</div>
+      <div class="body">
+        <div class="label">Two notable live findings</div>
+        <p>
+          <b>Pharmacist</b> and <b>Family Medicine Resident</b> both resolve to
+          the <b>postgrad dashboard</b> — not a dedicated pharmacy or
+          family-medicine screen.
+        </p>
+        <p>
+          <code>/postgrad/dashboard</code> renders an identical
+          <b>"Postgrad Dashboard"</b> heading for all 10 tracks. The route and
+          heading do <b>not</b> differentiate r1…r5 / fellow / attending /
+          intern / pharmacist / resident.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TARGET EXAMS ============ -->
+  <section id="targets">
+    <h2><span class="num">03</span> Target exams · nurse track</h2>
+    <p class="desc">
+      Multi-country Gulf nursing licensure — strong proof for the approved
+      <b>"Gulf Licensing Exam Preparation"</b> positioning (not
+      "Prometric"). The one set captured directly from the UI.
+    </p>
+
+    <div class="chip-list">
+      <div class="chip"><span class="acr">OEN</span> Omani Examination for Nurses</div>
+      <div class="chip"><span class="acr">SNLE</span> Saudi Nursing Licensing Exam</div>
+      <div class="chip"><span class="acr">DHA</span> Dubai Health Authority</div>
+      <div class="chip"><span class="acr">QCHP</span> Qatar</div>
+      <div class="chip"><span class="acr">NHRA</span> Bahrain</div>
+    </div>
+
+    <div class="callout warn" style="margin-top:20px">
+      <div class="icon">⚠</div>
+      <div class="body">
+        <div class="label">Per-track Target-Exam sets still write-gated</div>
+        <p>
+          Switching <code>training_level</code> does <b>not</b> auto-populate a
+          default <code>exam_targets</code>. That value is set per-user during
+          onboarding and is not surfaced by a track switch.
+        </p>
+        <p>
+          So the exam scope per track is <b>derivable</b> from doc 08's catalog
+          by profession / education level, but the exact default selection
+          remains <code>[TBD — confirm with team]</code>. The nurse-track Target
+          Exams above are the <b>only set</b> captured directly from the UI.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SETTINGS ============ -->
+  <section id="settings">
+    <h2><span class="num">04</span> Settings · personalization</h2>
+    <p class="desc">
+      The personalization controls available to the learner.
+    </p>
+
+    <div class="split">
+      <div class="split-card s-cyan">
+        <div class="label">Setting 01</div>
+        <div class="title">Lab Unit Preference</div>
+        <p>
+          Three options: <b>SI Units</b>, <b>US-Conventional</b>, or
+          <b>Both</b>. Affects how lab values display throughout the app.
+        </p>
+      </div>
+
+      <div class="split-card s-violet">
+        <div class="label">Setting 02</div>
+        <div class="title">Review Preferences</div>
+        <p>
+          <b>16 selectable subspecialties</b> filter the screening queue.
+          Unchecked = see everything.
+        </p>
+      </div>
+    </div>
+
+    <div class="sub-list" style="margin-top:16px">
+      <div class="sub-item">
+        <div class="sub-num">16</div>
+        <div class="body">
+          <div class="title">Subspecialties available for filtering</div>
+          <p>
+            Cardiovascular · Pulmonary · Gastroenterology · Nephrology ·
+            Endocrinology · Hematology · Infectious Disease · Rheumatology ·
+            Neurology · Oncology · Critical Care / ICU · Perioperative Medicine ·
+            Geriatric Medicine · Research &amp; Statistics · General Medicine ·
+            Ethics &amp; Professionalism.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OVERVIEW ============ -->
+  <section id="overview">
+    <h2><span class="num">05</span> Overview screen</h2>
+    <p class="desc">
+      The learner's performance summary. For the nurse test account, the
+      specialty breakdown reflects the nursing curriculum.
+    </p>
+
+    <div class="split">
+      <div class="split-card s-emerald">
+        <div class="label">Block 01</div>
+        <div class="title">Performance by Specialty</div>
+        <p>
+          Per-specialty accuracy bars. Test account categories:
+          <b>adult health</b> · <b>mental health</b> · <b>principles of care</b>.
+        </p>
+      </div>
+
+      <div class="split-card s-amber">
+        <div class="label">Block 02</div>
+        <div class="title">Weak Areas detector</div>
+        <p>
+          Auto-surfaces low-accuracy topics. Until enough data:
+          <b>"No weak areas identified yet. Keep practicing!"</b>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HISTORY ============ -->
+  <section id="history">
+    <h2><span class="num">06</span> Quiz History · data model</h2>
+    <p class="desc">
+      Table columns: <code>Date</code> · <code>Exam</code> ·
+      <code>Questions</code> · <code>Score</code> · <code>Type</code>.
+      <b>Type</b> includes <code>adaptive</code>.
+    </p>
+
+    <div class="history-table">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:130px">Date</th>
+            <th>Exam</th>
+            <th style="width:130px">Questions</th>
+            <th style="width:100px">Score</th>
+            <th style="width:130px">Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>25/09/2026</td>
+            <td>arab board</td>
+            <td>3 / 3</td>
+            <td>100%</td>
+            <td><span class="type-badge">adaptive</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout info" style="margin-top:16px">
+      <div class="icon">◆</div>
+      <div class="body">
+        <div class="label">Test-account noise</div>
+        <p>
+          The single row above is <b>trivial test-account noise</b> — kept only
+          to document the data model, not as a real performance figure.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ACHIEVEMENTS ============ -->
+  <section id="achievements">
+    <h2><span class="num">07</span> Achievements &amp; Certificates</h2>
+    <p class="desc">
+      The gamified retention mechanic. Milestones at 100 → 2,500 questions,
+      plus certificates for specialty mastery and consistent activity. Managed
+      at <code>/certificates</code>.
+    </p>
+
+    <div class="ladder">
+      <div class="milestone">
+        <div class="m-num">100</div>
+        <div class="m-lbl">start</div>
+      </div>
+      <div class="milestone">
+        <div class="m-num">250</div>
+        <div class="m-lbl">warm-up</div>
+      </div>
+      <div class="milestone">
+        <div class="m-num">500</div>
+        <div class="m-lbl">building</div>
+      </div>
+      <div class="milestone">
+        <div class="m-num">1K</div>
+        <div class="m-lbl">strong</div>
+      </div>
+      <div class="milestone">
+        <div class="m-num">2.5K</div>
+        <div class="m-lbl">advanced</div>
+      </div>
+      <div class="milestone">
+        <div class="m-num">5K</div>
+        <div class="m-lbl">mastery</div>
+      </div>
+    </div>
+
+    <div class="split" style="margin-top:20px">
+      <div class="split-card s-emerald">
+        <div class="label">Certificate types</div>
+        <div class="title">Milestone path &amp; specialty mastery</div>
+        <p>
+          Earned via the question-count milestones above, <b>plus</b> specialty
+          mastery and consistent activity.
+        </p>
+      </div>
+
+      <div class="split-card s-cyan">
+        <div class="label">Stats triplet</div>
+        <div class="title">Questions · Correct · Accuracy</div>
+        <p>
+          Each certificate surfaces the three core stats that earned it —
+          a clean summary of the underlying performance data.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TAKEAWAYS ============ -->
+  <section id="takeaways">
+    <h2><span class="num">08</span> Marketing takeaways</h2>
+    <p class="desc">
+      Four reads for the marketing work.
+    </p>
+
+    <div class="takeaways">
+      <div class="takeaway">
+        <div class="num">01</div>
+        <div class="body">
+          <div class="title">Multi-exam Gulf coverage is a concrete differentiator</div>
+          <p>
+            Five nursing licensure exams across five Gulf countries — matches
+            the approved <b>"Gulf Licensing Exam Preparation"</b> positioning.
+            Usable as a proof point, not a claim.
+          </p>
+        </div>
+      </div>
+
+      <div class="takeaway">
+        <div class="num">02</div>
+        <div class="body">
+          <div class="title">Adaptive engine + subspecialty filtering</div>
+          <p>
+            The <b>16 subspecialty filters</b> + adaptive quiz type = a real
+            personalization story. Concrete, demonstrable, and visible from
+            Settings.
+          </p>
+        </div>
+      </div>
+
+      <div class="takeaway">
+        <div class="num">03</div>
+        <div class="body">
+          <div class="title">Milestone / certificate ladder</div>
+          <p>
+            A gamified retention mechanic — <b>100 → 5,000</b> questions. Maps
+            to the EMPOWER <em>Retention</em> stage; usable as a product feature
+            in lifecycle messaging.
+          </p>
+        </div>
+      </div>
+
+      <div class="takeaway">
+        <div class="num">04</div>
+        <div class="body">
+          <div class="title">Physician-track exam sets are still a gap</div>
+          <p>
+            Only the nurse-track Target Exams were captured. The rest are
+            derivable from doc 08's catalog but the exact per-track defaults
+            remain <code>[TBD — confirm per track]</code>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <p><span class="mark">Bayan Learning</span> · Product Archive · Doc 07</p>
+    <p style="margin-top:6px">
+      Captured 2026-09-26 · read-only · companion to <code>README.md</code> and <code>GAPS.md</code>
+    </p>
+  </footer>
+
+</main>
+
+<script>
+/* ============ Top nav border on scroll ============ */
+const topnav = document.getElementById('topnav');
+window.addEventListener('scroll', () => {
+  topnav.classList.toggle('scrolled', window.scrollY > 20);
+}, {passive:true});
+
+/* ============ Active section highlight ============ */
+const navLinks = document.querySelectorAll('.topnav a');
+const sections = [...navLinks].map(a =>
+  document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+const navIo = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting){
+      const id = '#' + e.target.id;
+      navLinks.forEach(a => a.classList.toggle('active',
+        a.getAttribute('href') === id));
+    }
+  });
+}, {threshold:0.3, rootMargin:'-80px 0px -60% 0px'});
+
+sections.forEach(s => navIo.observe(s));
+
+/* ============ Smooth scroll ============ */
+navLinks.forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    const el = document.querySelector(id);
+    if (!el) return;
+    e.preventDefault();
+    const offset = el.getBoundingClientRect().top + window.scrollY - 70;
+    window.scrollTo({top:offset, behavior:'smooth'});
+  });
+});
+</script>
+
+</body>
+</html>
