@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Analytics — Revenue</title>
+<style>
+  :root{
+    --bg:#f7f8fc;
+    --bg-grad-1:#eef2ff;
+    --bg-grad-2:#fdf2f8;
+    --surface:#ffffff;
+    --surface-2:#fbfcfe;
+    --text:#0b1220;
+    --text-2:#1e293b;
+    --muted:#64748b;
+    --muted-2:#94a3b8;
+    --line:#e6e9f2;
+    --line-2:#eef1f8;
+    --dashed:#cbd5e1;
+    --accent:#6366f1;
+    --accent-2:#8b5cf6;
+    --accent-3:#ec4899;
+    --accent-hover:#4f46e5;
+    --success:#10b981;
+    --shadow-sm:0 1px 2px rgba(15,23,42,.04), 0 1px 3px rgba(15,23,42,.03);
+    --shadow-md:0 4px 12px rgba(15,23,42,.05), 0 2px 6px rgba(15,23,42,.04);
+    --shadow-lg:0 20px 40px -12px rgba(79,70,229,.18), 0 8px 20px -8px rgba(15,23,42,.08);
+    --shadow-xl:0 30px 60px -20px rgba(79,70,229,.28), 0 12px 28px -12px rgba(15,23,42,.10);
+    --radius:18px;
+    --radius-sm:12px;
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:14px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    min-height:100vh;
+    position:relative;
+    overflow-x:hidden;
+  }
+
+  /* Ambient background orbs */
+  body::before,
+  body::after{
+    content:"";
+    position:fixed;
+    border-radius:50%;
+    filter:blur(110px);
+    pointer-events:none;
+    z-index:0;
+    opacity:.55;
+  }
+  body::before{
+    width:640px; height:640px;
+    background:radial-gradient(circle at center, #c7d2fe 0%, transparent 70%);
+    top:-260px; left:-200px;
+    animation:floatA 22s ease-in-out infinite;
+  }
+  body::after{
+    width:560px; height:560px;
+    background:radial-gradient(circle at center, #fbcfe8 0%, transparent 70%);
+    top:-180px; right:-180px;
+    animation:floatB 26s ease-in-out infinite;
+  }
+  @keyframes floatA{
+    0%,100%{ transform:translate(0,0) scale(1); }
+    50%{ transform:translate(60px,40px) scale(1.06); }
+  }
+  @keyframes floatB{
+    0%,100%{ transform:translate(0,0) scale(1); }
+    50%{ transform:translate(-50px,50px) scale(1.08); }
+  }
+
+  .page{
+    position:relative;
+    z-index:1;
+    max-width:1520px;
+    margin:0 auto;
+    padding:28px 32px 56px;
+  }
+
+  /* ============ TOP BAR ============ */
+  .topbar{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    flex-wrap:wrap;
+    padding:18px 22px;
+    background:rgba(255,255,255,.72);
+    backdrop-filter:blur(20px) saturate(180%);
+    -webkit-backdrop-filter:blur(20px) saturate(180%);
+    border:1px solid rgba(255,255,255,.9);
+    border-radius:20px;
+    box-shadow:var(--shadow-md);
+  }
+
+  .title-wrap{
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+
+  .title-mark{
+    width:38px; height:38px;
+    border-radius:11px;
+    background:linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 55%, var(--accent-3) 100%);
+    display:grid;
+    place-items:center;
+    box-shadow:0 8px 20px -6px rgba(99,102,241,.6);
+    position:relative;
+    overflow:hidden;
+  }
+  .title-mark::after{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(135deg, transparent 40%, rgba(255,255,255,.35) 50%, transparent 60%);
+    transform:translateX(-100%);
+    animation:shine 4.5s ease-in-out infinite;
+  }
+  @keyframes shine{
+    0%, 60%{ transform:translateX(-100%); }
+    80%, 100%{ transform:translateX(100%); }
+  }
+  .title-mark svg{ width:19px; height:19px; color:#fff; position:relative; z-index:1; }
+
+  .title{
+    font-family:"Inter",-apple-system,sans-serif;
+    font-size:24px;
+    font-weight:700;
+    letter-spacing:-0.02em;
+    margin:0;
+    color:var(--text);
+    background:linear-gradient(135deg, #0b1220 0%, #334155 100%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+
+  .share-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:7px 15px 7px 12px;
+    font-size:13px;
+    font-weight:600;
+    color:var(--text-2);
+    cursor:pointer;
+    transition:all .2s cubic-bezier(.2,.7,.2,1);
+    box-shadow:var(--shadow-sm);
+  }
+  .share-btn:hover{
+    background:#f8fafc;
+    border-color:#cbd5e1;
+    transform:translateY(-1px);
+    box-shadow:var(--shadow-md);
+  }
+  .share-btn:active{ transform:translateY(0); }
+  .share-btn svg{ width:14px; height:14px; }
+
+  .topbar-right{
+    margin-left:auto;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+
+  .meta{
+    font-size:12.5px;
+    color:var(--muted);
+    white-space:nowrap;
+    font-weight:500;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+  }
+  .meta .pulse{
+    width:6px; height:6px; border-radius:50%;
+    background:var(--success);
+    box-shadow:0 0 0 0 rgba(16,185,129,.6);
+    animation:pulseDot 2.2s infinite;
+  }
+  @keyframes pulseDot{
+    0%{ box-shadow:0 0 0 0 rgba(16,185,129,.55); }
+    70%{ box-shadow:0 0 0 8px rgba(16,185,129,0); }
+    100%{ box-shadow:0 0 0 0 rgba(16,185,129,0); }
+  }
+
+  .refresh-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:6px 13px;
+    font-size:13px;
+    font-weight:600;
+    color:var(--text-2);
+    cursor:pointer;
+    transition:all .2s cubic-bezier(.2,.7,.2,1);
+    box-shadow:var(--shadow-sm);
+  }
+  .refresh-btn:hover{
+    background:#f8fafc;
+    border-color:#cbd5e1;
+    transform:translateY(-1px);
+  }
+  .refresh-btn:hover svg{ animation:spin 1s linear infinite; }
+  .refresh-btn svg{ width:13px; height:13px; transition:.3s; }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+
+  .date-picker{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    background:linear-gradient(135deg, #0b1220 0%, #1e293b 100%);
+    border:1px solid #0b1220;
+    border-radius:999px;
+    padding:7px 16px 7px 14px;
+    font-size:13px;
+    font-weight:600;
+    color:#fff;
+    cursor:pointer;
+    white-space:nowrap;
+    box-shadow:0 8px 20px -6px rgba(11,18,32,.4);
+    transition:all .2s cubic-bezier(.2,.7,.2,1);
+  }
+  .date-picker:hover{
+    transform:translateY(-1px);
+    box-shadow:0 12px 26px -8px rgba(11,18,32,.5);
+  }
+  .date-picker svg{ width:14px; height:14px; color:#c7d2fe; }
+
+  /* ============ TABS ============ */
+  .tabs{
+    display:flex;
+    gap:2px;
+    margin-top:26px;
+    padding:6px;
+    background:rgba(255,255,255,.6);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border:1px solid rgba(255,255,255,.9);
+    border-radius:16px;
+    box-shadow:var(--shadow-sm);
+    overflow-x:auto;
+    scrollbar-width:none;
+    width:fit-content;
+    max-width:100%;
+  }
+  .tabs::-webkit-scrollbar{ display:none; }
+
+  .tab{
+    position:relative;
+    background:none;
+    border:0;
+    font:inherit;
+    font-size:13.5px;
+    font-weight:500;
+    color:var(--muted);
+    padding:9px 18px;
+    cursor:pointer;
+    white-space:nowrap;
+    border-radius:10px;
+    transition:all .25s cubic-bezier(.2,.7,.2,1);
+  }
+  .tab:hover{ color:var(--text); background:rgba(99,102,241,.06); }
+
+  .tab.active{
+    color:#fff;
+    font-weight:600;
+    background:linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+    box-shadow:0 6px 16px -4px rgba(99,102,241,.5);
+  }
+
+  .tab .caret{
+    display:inline-block;
+    margin-left:5px;
+    font-size:9px;
+    vertical-align:middle;
+    transform:translateY(-1px);
+    opacity:.7;
+  }
+
+  /* ============ CARDS ============ */
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:20px;
+    margin-top:28px;
+  }
+
+  .card{
+    position:relative;
+    border-radius:var(--radius);
+    padding:22px 24px 24px;
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(20px) saturate(180%);
+    -webkit-backdrop-filter:blur(20px) saturate(180%);
+    border:1px solid rgba(255,255,255,.9);
+    box-shadow:var(--shadow-md);
+    min-height:118px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    overflow:hidden;
+    transition:all .35s cubic-bezier(.2,.7,.2,1);
+    cursor:pointer;
+  }
+
+  /* Gradient border glow on hover */
+  .card::before{
+    content:"";
+    position:absolute;
+    inset:-1px;
+    border-radius:inherit;
+    padding:1px;
+    background:linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 50%, var(--accent-3) 100%);
+    -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;
+    mask-composite:exclude;
+    opacity:0;
+    transition:opacity .35s ease;
+    pointer-events:none;
+  }
+  .card:hover::before{ opacity:.65; }
+
+  .card:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow-xl);
+    background:rgba(255,255,255,.95);
+  }
+
+  /* Dashed variant — for "connect" prompts */
+  .card.dashed{
+    background:linear-gradient(135deg, rgba(255,255,255,.7) 0%, rgba(248,250,252,.8) 100%);
+    border:1.5px dashed var(--dashed);
+  }
+  .card.dashed:hover{
+    border-color:transparent;
+    border-style:solid;
+  }
+
+  /* Icon pill */
+  .card-icon{
+    width:36px;
+    height:36px;
+    border-radius:11px;
+    display:grid;
+    place-items:center;
+    margin-bottom:2px;
+    background:linear-gradient(135deg, rgba(99,102,241,.12), rgba(139,92,246,.10));
+    border:1px solid rgba(99,102,241,.18);
+    color:var(--accent);
+    transition:all .3s cubic-bezier(.2,.7,.2,1);
+  }
+  .card:hover .card-icon{
+    background:linear-gradient(135deg, var(--accent), var(--accent-2));
+    color:#fff;
+    border-color:transparent;
+    box-shadow:0 8px 18px -6px rgba(99,102,241,.6);
+    transform:scale(1.06);
+  }
+  .card-icon svg{ width:17px; height:17px; }
+
+  .card-label{
+    font-size:11px;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    color:var(--muted);
+    font-weight:700;
+    line-height:1.4;
+  }
+
+  .card-link{
+    color:var(--accent);
+    font-size:14px;
+    font-weight:600;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    width:fit-content;
+    transition:all .25s cubic-bezier(.2,.7,.2,1);
+    margin-top:auto;
+  }
+  .card-link:hover{
+    color:var(--accent-hover);
+    gap:10px;
+  }
+  .card-link .arrow{ font-size:13px; transition:transform .25s ease; }
+  .card-link:hover .arrow{ transform:translateX(3px); }
+
+  .card-text{
+    font-size:13.5px;
+    color:var(--muted);
+    line-height:1.5;
+    margin-top:auto;
+  }
+
+  /* second row */
+  .cards-row-2{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:20px;
+    margin-top:20px;
+  }
+
+  /* ============ PANEL ============ */
+  .panel{
+    margin-top:28px;
+    border-radius:var(--radius);
+    overflow:hidden;
+    background:rgba(255,255,255,.78);
+    backdrop-filter:blur(20px) saturate(180%);
+    -webkit-backdrop-filter:blur(20px) saturate(180%);
+    border:1px solid rgba(255,255,255,.9);
+    box-shadow:var(--shadow-md);
+    transition:box-shadow .35s ease;
+  }
+  .panel:hover{ box-shadow:var(--shadow-lg); }
+
+  .panel-head{
+    padding:18px 24px;
+    border-bottom:1px solid var(--line-2);
+    font-size:14.5px;
+    font-weight:700;
+    color:var(--text);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    letter-spacing:-0.01em;
+  }
+
+  .panel-head .badge{
+    font-size:10.5px;
+    font-weight:700;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    padding:4px 10px;
+    border-radius:999px;
+    background:rgba(148,163,184,.14);
+    color:var(--muted);
+  }
+
+  .panel-body{
+    min-height:260px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--muted-2);
+    font-size:14px;
+    position:relative;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(99,102,241,.05), transparent 55%),
+      radial-gradient(circle at 80% 70%, rgba(236,72,153,.04), transparent 55%);
+  }
+
+  .empty-state{
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:14px;
+    padding:40px;
+  }
+
+  .empty-icon{
+    width:56px;
+    height:56px;
+    border-radius:16px;
+    display:grid;
+    place-items:center;
+    background:linear-gradient(135deg, rgba(99,102,241,.10), rgba(139,92,246,.08));
+    border:1px solid rgba(99,102,241,.16);
+    color:var(--accent);
+    animation:floatIcon 3.5s ease-in-out infinite;
+  }
+  @keyframes floatIcon{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-5px); }
+  }
+  .empty-icon svg{ width:24px; height:24px; }
+
+  .empty-title{
+    font-size:14.5px;
+    font-weight:600;
+    color:var(--text-2);
+  }
+
+  .empty-sub{
+    font-size:12.5px;
+    color:var(--muted-2);
+    max-width:280px;
+    line-height:1.55;
+  }
+
+  /* Shimmer skeleton lines for the empty panel */
+  .skeleton{
+    width:100%;
+    max-width:520px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-top:6px;
+    opacity:.55;
+  }
+  .skeleton-row{
+    display:grid;
+    grid-template-columns:40px 1fr 90px 70px;
+    gap:14px;
+    align-items:center;
+  }
+  .sk-bar{
+    height:10px;
+    border-radius:999px;
+    background:linear-gradient(90deg, #eef2f7 0%, #e2e8f0 50%, #eef2f7 100%);
+    background-size:200% 100%;
+    animation:shimmer 2.4s ease-in-out infinite;
+  }
+  @keyframes shimmer{
+    0%{ background-position:200% 0; }
+    100%{ background-position:-200% 0; }
+  }
+  .sk-circle{
+    width:28px; height:28px; border-radius:50%;
+    background:linear-gradient(90deg, #eef2f7 0%, #e2e8f0 50%, #eef2f7 100%);
+    background-size:200% 100%;
+    animation:shimmer 2.4s ease-in-out infinite;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:1024px){
+    .cards{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .cards-row-2{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+  }
+
+  @media (max-width:720px){
+    .page{ padding:18px 16px 40px; }
+    .cards{ grid-template-columns:1fr; }
+    .cards-row-2{ grid-template-columns:1fr; }
+    .topbar{ padding:14px 16px; gap:12px; }
+    .topbar-right{ margin-left:0; width:100%; }
+    .meta{ font-size:12px; }
+    .title{ font-size:20px; }
+    .title-mark{ width:34px; height:34px; }
+    .date-picker{ font-size:12px; padding:6px 12px; }
+    .skeleton-row{ grid-template-columns:28px 1fr 70px; }
+    .skeleton-row .sk-bar:nth-child(4){ display:none; }
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{
+      animation-duration:.001ms !important;
+      animation-iteration-count:1 !important;
+      transition-duration:.001ms !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ================= TOP BAR ================= -->
+  <div class="topbar">
+    <div class="title-wrap">
+      <div class="title-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="20" x2="18" y2="10"></line>
+          <line x1="12" y1="20" x2="12" y2="4"></line>
+          <line x1="6" y1="20" x2="6" y2="14"></line>
+        </svg>
+      </div>
+      <h1 class="title">Analytics</h1>
+    </div>
+
+    <button class="share-btn" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="18" cy="5" r="3"></circle>
+        <circle cx="6" cy="12" r="3"></circle>
+        <circle cx="18" cy="19" r="3"></circle>
+        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+      </svg>
+      Share
+    </button>
+
+    <div class="topbar-right">
+      <span class="meta"><span class="pulse"></span> Updated 7m ago</span>
+      <span class="meta">Created Sep 24</span>
+
+      <button class="refresh-btn" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="23 4 23 10 17 10"></polyline>
+          <polyline points="1 20 1 14 7 14"></polyline>
+          <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+        </svg>
+        Refresh
+      </button>
+
+      <div class="date-picker">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        Last 30 Days: Sep 7 to Oct 6, 2026
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= TABS ================= -->
+  <nav class="tabs" aria-label="Analytics sections">
+    <button class="tab" type="button">Overview</button>
+    <button class="tab" type="button">Impact</button>
+    <button class="tab" type="button">Acquisition</button>
+    <button class="tab active" type="button">Revenue</button>
+    <button class="tab" type="button">AI Search</button>
+    <button class="tab" type="button">Audits</button>
+    <button class="tab" type="button">Sources <span class="caret">▼</span></button>
+  </nav>
+
+  <!-- ================= CARDS ROW 1 ================= -->
+  <div class="cards">
+
+    <div class="card dashed" role="button" tabindex="0">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="5" width="20" height="14" rx="3"></rect>
+          <line x1="2" y1="10" x2="22" y2="10"></line>
+        </svg>
+      </div>
+      <span class="card-label">Connect Stripe for Revenue.</span>
+      <a class="card-link" href="#">Connect Stripe <span class="arrow">→</span></a>
+    </div>
+
+    <div class="card dashed" role="button" tabindex="0">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 3v18h18"></path>
+          <path d="M7 14l4-4 4 4 6-8"></path>
+        </svg>
+      </div>
+      <span class="card-label">Connect GA4 for Conversions.</span>
+      <a class="card-link" href="#">Connect Google Analytics <span class="arrow">→</span></a>
+    </div>
+
+    <div class="card" role="button" tabindex="0">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"></circle>
+          <path d="M12 7v5l3 3"></path>
+        </svg>
+      </div>
+      <span class="card-label">Blended CAC</span>
+      <span class="card-text">Connect Stripe + ad accounts for CAC</span>
+    </div>
+  </div>
+
+  <!-- ================= CARDS ROW 2 ================= -->
+  <div class="cards-row-2">
+    <div class="card" role="button" tabindex="0">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 17l6-6 4 4 8-8"></path>
+          <path d="M14 7h7v7"></path>
+        </svg>
+      </div>
+      <span class="card-label">ROAS</span>
+      <span class="card-text">Connect Stripe + ad accounts for ROAS</span>
+    </div>
+  </div>
+
+  <!-- ================= PANEL ================= -->
+  <div class="panel">
+    <div class="panel-head">
+      <span>Top campaigns by CPA (last 30d)</span>
+      <span class="badge">No data yet</span>
+    </div>
+    <div class="panel-body">
+      <div class="empty-state">
+        <div class="empty-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 3v18h18"></path>
+            <path d="M7 14l4-4 4 4 6-8"></path>
+          </svg>
+        </div>
+        <div class="empty-title">No data to display</div>
+        <div class="empty-sub">Connect a data source above to start tracking campaign performance.</div>
+
+        <div class="skeleton" aria-hidden="true">
+          <div class="skeleton-row">
+            <div class="sk-circle"></div>
+            <div class="sk-bar"></div>
+            <div class="sk-bar"></div>
+            <div class="sk-bar"></div>
+          </div>
+          <div class="skeleton-row">
+            <div class="sk-circle"></div>
+            <div class="sk-bar" style="width:80%"></div>
+            <div class="sk-bar"></div>
+            <div class="sk-bar" style="width:60%"></div>
+          </div>
+          <div class="skeleton-row">
+            <div class="sk-circle"></div>
+            <div class="sk-bar" style="width:65%"></div>
+            <div class="sk-bar"></div>
+            <div class="sk-bar" style="width:75%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  /* Tab switching — pure visual feedback */
+  document.querySelectorAll('.tab').forEach(function(tab){
+    tab.addEventListener('click', function(){
+      document.querySelectorAll('.tab').forEach(function(t){ t.classList.remove('active'); });
+      tab.classList.add('active');
+    });
+  });
+
+  /* Card keyboard accessibility */
+  document.querySelectorAll('.card').forEach(function(card){
+    card.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        var link = card.querySelector('.card-link');
+        if (link) link.click();
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
