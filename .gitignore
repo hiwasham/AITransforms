@@ -147,3 +147,19 @@ hq-stage3-archive/hq-stage3-username-password.md
 # Raw chat history dumps - do not commit
 marketing-plans/bayan/materials/_raw_do_not_read/
 archive/aitransforms-okldmaybe/
+
+# never commit account/credential files
+nasim-meta-account.json
+*meta-account*.json
+
+# never commit account/credential files
+nasim-meta-account.json
+*meta-account*.json
+
+# never commit account/credential files
+nasim-meta-account.json
+*meta-account*.json
+
+# Nasim Meta account (credential, rotation cleanup 2026-10-06)
+nasim-meta-account.json
+*meta-account*.json
