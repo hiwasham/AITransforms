@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bayan — 30-Day Conversion-First Trial (Revised)</title>
+<style>
+  :root{
+    --ink:#0a0d14;
+    --ink2:#0f131c;
+    --panel:#151b26;
+    --panel2:#1a2230;
+    --line:#232c3b;
+    --txt:#eef2f9;
+    --mut:#8b95a9;
+    --mut2:#5a6477;
+    --bayan:#1a4ff5;
+    --bayan2:#4d7bff;
+    --emerald:#34d399;
+    --amber:#fbbf24;
+    --gold:#eab308;
+    --rose:#f43f5e;
+    --violet:#a78bfa;
+    --cyan:#22d3ee;
+    --slate:#94a3b8;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);
+    color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  main{max-width:1000px;margin:0 auto;padding:0 24px 80px}
+
+  /* ============ TOP NAV ============ */
+  .topnav{
+    position:sticky;top:0;z-index:50;
+    padding:12px 24px;
+    background:linear-gradient(180deg,rgba(10,13,20,.95),rgba(10,13,20,.65) 80%,transparent);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    display:flex;gap:4px;overflow-x:auto;flex-wrap:wrap;
+    border-bottom:1px solid transparent;
+    transition:border-color .3s;
+  }
+  .topnav.scrolled{border-bottom-color:var(--line)}
+  .topnav::-webkit-scrollbar{display:none}
+  .topnav a{
+    all:unset;cursor:pointer;
+    font-size:12px;font-weight:500;
+    color:var(--mut);
+    padding:7px 12px;border-radius:8px;
+    transition:.2s;white-space:nowrap;
+  }
+  .topnav a:hover{color:#c8d2e2;background:rgba(255,255,255,.04)}
+  .topnav a.active{color:#fff;background:rgba(26,79,245,.15)}
+
+  /* ============ HEADER ============ */
+  header{
+    padding:56px 0 40px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:36px;
+  }
+  header .crumbs{
+    display:flex;align-items:center;gap:10px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    color:var(--mut2);
+    margin-bottom:20px;
+    flex-wrap:wrap;
+  }
+  header .crumbs .sep{color:var(--line)}
+  header .crumbs .here{color:var(--bayan2);font-weight:600}
+
+  header .tag{
+    display:inline-block;
+    font-size:11px;font-weight:600;
+    letter-spacing:.1em;text-transform:uppercase;
+    color:var(--amber);
+    background:rgba(251,191,36,.12);
+    border:1px solid rgba(251,191,36,.32);
+    padding:6px 12px;border-radius:8px;
+    margin-bottom:20px;
+  }
+  header h1{
+    font-size:38px;line-height:1.12;
+    letter-spacing:-.028em;font-weight:800;
+    color:#fff;margin-bottom:18px;
+    max-width:22ch;
+  }
+  header .lede{
+    font-size:15.5px;line-height:1.75;
+    color:#b8c2d2;max-width:74ch;
+  }
+  header .lede b{color:#fff;font-weight:600}
+  header .lede code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:5px;
+    color:#dfe7f4;
+  }
+
+  .notice{
+    margin-top:28px;
+    padding:20px 24px;
+    border-radius:var(--radius);
+    background:linear-gradient(135deg,rgba(251,191,36,.06),rgba(251,191,36,.01) 70%,transparent);
+    border:1px solid rgba(251,191,36,.32);
+    position:relative;
+    overflow:hidden;
+  }
+  .notice::before{
+    content:"";position:absolute;
+    left:0;top:0;bottom:0;width:4px;
+    background:var(--amber);
+  }
+  .notice .n-k{
+    font-size:11px;font-weight:700;
+    letter-spacing:.1em;text-transform:uppercase;
+    color:var(--amber);
+    margin-bottom:8px;
+  }
+  .notice p{
+    font-size:13.5px;line-height:1.7;
+    color:#d8d0bd;
+  }
+  .notice p b{color:#fff;font-weight:600}
+
+  header .meta{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:16px 24px;
+    margin-top:24px;padding-top:24px;
+    border-top:1px dashed var(--line);
+  }
+  header .meta .m-item{display:flex;flex-direction:column;gap:3px}
+  header .meta .m-k{
+    font-size:10.5px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;
+    color:var(--mut2);
+  }
+  header .meta .m-v{
+    color:#cfd8e8;font-weight:500;
+    font-size:13.5px;
+  }
+  header .meta .m-v code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+  header .meta .m-v.empty{color:var(--rose);font-weight:700;font-family:ui-monospace,monospace;letter-spacing:.04em}
+
+  /* ============ SECTIONS ============ */
+  section{margin-bottom:56px;scroll-margin-top:80px}
+  section h2{
+    font-size:23px;line-height:1.3;
+    letter-spacing:-.02em;font-weight:700;
+    color:#fff;margin-bottom:10px;
+    display:flex;align-items:baseline;
+    gap:14px;flex-wrap:wrap;
+  }
+  section h2 .num{
+    font-size:12.5px;font-weight:700;
+    color:var(--bayan2);
+    background:rgba(26,79,245,.12);
+    border:1px solid rgba(26,79,245,.28);
+    padding:5px 10px;border-radius:7px;
+    letter-spacing:.04em;
+  }
+  section h2.warn .num{
+    color:var(--amber);
+    background:rgba(251,191,36,.12);
+    border-color:rgba(251,191,36,.3);
+  }
+  section h2.danger .num{
+    color:var(--rose);
+    background:rgba(244,63,94,.12);
+    border-color:rgba(244,63,94,.3);
+  }
+  section .desc{
+    font-size:14.5px;color:var(--mut);
+    margin-bottom:22px;max-width:78ch;
+  }
+  section .desc b{color:#cfd8e8;font-weight:600}
+  section .desc code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ EXECUTIVE CALLOUT ============ */
+  .exec-rec{
+    padding:28px 30px;
+    border-radius:var(--radius);
+    background:linear-gradient(135deg,rgba(26,79,245,.07),rgba(26,79,245,.02) 60%,transparent);
+    border:1px solid rgba(26,79,245,.35);
+    position:relative;
+    overflow:hidden;
+    margin-bottom:22px;
+  }
+  .exec-rec::before{
+    content:"";position:absolute;
+    left:0;top:0;bottom:0;width:4px;
+    background:var(--bayan);
+  }
+  .exec-rec .er-k{
+    font-size:11px;font-weight:700;
+    letter-spacing:.1em;text-transform:uppercase;
+    color:var(--bayan2);
+    margin-bottom:12px;
+  }
+  .exec-rec h3{
+    font-size:22px;line-height:1.3;
+    letter-spacing:-.02em;
+    font-weight:800;
+    color:#fff;
+    margin-bottom:16px;
+    max-width:28ch;
+  }
+  .exec-rec p{
+    font-size:14.5px;line-height:1.75;
+    color:#c4cfe0;
+    margin-bottom:12px;
+  }
+  .exec-rec p:last-child{margin-bottom:0}
+  .exec-rec p b{color:#fff;font-weight:600}
+  .exec-rec p em{font-style:italic;color:#dfe7f4}
+  .exec-rec p code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px;
+    background:rgba(255,255,255,.06);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ HYPOTHESIS TABLE ============ */
+  .table-wrap{
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow-x:auto;
+    background:var(--panel);
+  }
+  table.hyp{
+    width:100%;border-collapse:collapse;
+    min-width:900px;
+  }
+  table.hyp thead th{
+    background:var(--panel2);
+    font-size:10.5px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;
+    padding:14px 16px;
+    text-align:left;
+    border-bottom:1px solid var(--line);
+    white-space:nowrap;
+  }
+  table.hyp thead th.h1{color:var(--cyan)}
+  table.hyp thead th.h2{color:var(--violet)}
+  table.hyp thead th.h3{color:var(--amber)}
+  table.hyp thead th.h4{color:var(--emerald)}
+  table.hyp tbody td{
+    padding:16px;
+    font-size:12.5px;
+    color:#cfd8e8;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+    line-height:1.65;
+  }
+  table.hyp tbody tr:last-child td{border-bottom:none}
+  table.hyp tbody tr:hover{background:rgba(255,255,255,.015)}
+  table.hyp td.hyp-name{
+    font-size:13px;
+    font-weight:600;
+    color:#fff;
+    letter-spacing:-.005em;
+    line-height:1.4;
+  }
+  table.hyp td.hyp-ev{
+    color:var(--mut);
+    font-size:12px;
+  }
+  table.hyp td.hyp-ev code{
+    font-family:ui-monospace,monospace;
+    font-size:11.5px;
+    background:rgba(255,255,255,.05);
+    padding:1px 5px;border-radius:4px;
+    color:#dfe7f4;
+  }
+  table.hyp td.hyp-verify{
+    color:#b8c2d2;
+  }
+  table.hyp td.hyp-safe{
+    color:#c4d4cc;
+    padding-left:22px;
+    position:relative;
+  }
+  table.hyp td.hyp-safe::before{
+    content:"";position:absolute;
+    left:8px;top:18px;bottom:18px;width:2px;
+    background:rgba(52,211,153,.5);
+    border-radius:2px;
+  }
+  table.hyp td.hyp-safe b{color:var(--emerald);font-weight:600}
+  table.hyp td.hyp-safe strong{color:var(--rose);font-weight:600}
+
+  /* ============ COHORT MODEL ============ */
+  .cohort-formula{
+    padding:24px 28px;
+    border-radius:var(--radius);
+    background:linear-gradient(135deg,rgba(26,79,245,.06),rgba(26,79,245,.02) 60%,transparent);
+    border:1px solid rgba(26,79,245,.35);
+    margin-bottom:20px;
+    text-align:center;
+  }
+  .cohort-formula .cf-eq{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:22px;
+    font-weight:800;
+    letter-spacing:-.02em;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+    line-height:1.4;
+  }
+  .cohort-formula .cf-eq .letter{
+    padding:6px 14px;
+    border-radius:9px;
+    font-size:24px;
+  }
+  .cohort-formula .cf-eq .letter.g{background:rgba(244,63,94,.15);color:var(--rose);border:1px solid rgba(244,63,94,.35)}
+  .cohort-formula .cf-eq .letter.f{background:rgba(251,191,36,.15);color:var(--amber);border:1px solid rgba(251,191,36,.35)}
+  .cohort-formula .cf-eq .letter.a{background:rgba(52,211,153,.2);color:var(--emerald);border:1px solid rgba(52,211,153,.5);box-shadow:0 0 20px -6px rgba(52,211,153,.7)}
+  .cohort-formula .cf-eq .letter.u{background:rgba(148,163,184,.12);color:#cbd5e1;border:1px solid rgba(148,163,184,.3)}
+  .cohort-formula .cf-eq .op{color:var(--mut2);font-weight:700}
+  .cohort-formula .cf-eq .total{
+    padding:6px 14px;
+    border-radius:9px;
+    font-size:20px;
+    background:rgba(255,255,255,.05);
+    color:#fff;
+    border:1px solid var(--line);
+  }
+  .cohort-formula .cf-note{
+    font-size:12.5px;
+    line-height:1.6;
+    color:var(--mut);
+    margin-top:14px;
+    font-family:ui-monospace,monospace;
+    letter-spacing:.02em;
+  }
+
+  .buckets{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    margin-bottom:20px;
+  }
+  .bucket{
+    padding:20px 18px 18px;
+    border-radius:12px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+    transition:.25s;
+  }
+  .bucket::before{
+    content:"";position:absolute;
+    top:0;right:0;left:0;height:3px;
+    background:rgb(var(--bc));
+  }
+  .bucket:hover{
+    transform:translateY(-3px);
+    border-color:rgba(var(--bc),.5);
+  }
+  .bucket.b-g{--bc:244,63,94}
+  .bucket.b-f{--bc:251,191,36}
+  .bucket.b-a{--bc:52,211,153;
+    background:linear-gradient(180deg,rgba(52,211,153,.06),var(--panel));
+    border-color:rgba(52,211,153,.4)}
+  .bucket.b-u{--bc:148,163,184}
+
+  .bucket-letter{
+    width:36px;height:36px;
+    border-radius:10px;
+    display:grid;place-items:center;
+    font-family:ui-monospace,monospace;
+    font-size:17px;font-weight:800;
+    background:rgba(var(--bc),.16);
+    color:rgb(var(--bc));
+    border:1px solid rgba(var(--bc),.35);
+    margin-bottom:12px;
+  }
+  .bucket-name{
+    font-size:13px;
+    font-weight:700;
+    color:#fff;
+    letter-spacing:-.005em;
+    line-height:1.35;
+    margin-bottom:8px;
+  }
+  .bucket-desc{
+    font-size:11.5px;
+    line-height:1.6;
+    color:var(--mut);
+  }
+  .bucket-desc b{color:#cfd8e8;font-weight:600}
+
+  .eng-note{
+    padding:18px 22px;
+    border-radius:12px;
+    background:rgba(167,139,250,.05);
+    border:1px dashed rgba(167,139,250,.35);
+    font-size:13.5px;
+    line-height:1.7;
+    color:#c4cfe0;
+    margin-top:16px;
+  }
+  .eng-note::before{
+    content:"cross-tab · ";
+    font-family:ui-monospace,monospace;
+    font-size:10.5px;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--violet);
+    margin-right:2px;
+  }
+  .eng-note b{color:#fff;font-weight:600}
+  .eng-note em{font-style:italic;color:#dfe7f4}
+
+  /* ============ WEEK CARDS ============ */
+  .week{
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+    margin-bottom:16px;
+  }
+  .week::before{
+    content:"";position:absolute;
+    top:0;right:0;left:0;height:4px;
+    background:linear-gradient(90deg,rgb(var(--wc)),rgba(var(--wc),.15));
+  }
+  .week.w1{--wc:26,79,245}
+  .week.w2{--wc:34,211,238}
+  .week.w3{--wc:167,139,250}
+  .week.w4{--wc:52,211,153}
+
+  .week-head{
+    padding:22px 28px 18px;
+    display:flex;align-items:flex-start;
+    gap:18px;flex-wrap:wrap;
+    border-bottom:1px solid var(--line);
+    background:linear-gradient(90deg,rgba(var(--wc),.05),transparent);
+  }
+  .week-num{
+    flex:0 0 52px;
+    width:52px;height:52px;
+    border-radius:14px;
+    display:grid;place-items:center;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:14px;font-weight:800;
+    background:rgba(var(--wc),.16);
+    color:rgb(var(--wc));
+    border:2px solid rgba(var(--wc),.4);
+    letter-spacing:.02em;
+  }
+  .week-meta{flex:1;min-width:220px}
+  .week-kicker{
+    font-size:10.5px;font-weight:700;
+    letter-spacing:.1em;text-transform:uppercase;
+    color:rgb(var(--wc));
+    margin-bottom:6px;
+  }
+  .week-name{
+    font-size:19px;line-height:1.25;
+    letter-spacing:-.015em;font-weight:800;
+    color:#fff;
+    margin-bottom:8px;
+  }
+  .week-sub{
+    font-size:13px;
+    line-height:1.5;
+    color:var(--mut);
+  }
+
+  .week-body{
+    padding:22px 28px 24px;
+  }
+  .week-body p{
+    font-size:14px;
+    line-height:1.75;
+    color:#b8c2d2;
+    margin-bottom:14px;
+  }
+  .week-body p:last-child{margin-bottom:0}
+  .week-body b{color:#fff;font-weight:600}
+  .week-body em{font-style:italic;color:#dfe7f4}
+  .week-body code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px;
+    background:rgba(255,255,255,.06);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* deliverables list */
+  .deliv-list{
+    display:flex;flex-direction:column;
+    gap:12px;
+    margin:14px 0;
+    counter-reset:deliv;
+  }
+  .deliv{
+    counter-increment:deliv;
+    display:flex;gap:14px;align-items:flex-start;
+    padding:16px 18px;
+    border-radius:11px;
+    background:rgba(255,255,255,.02);
+    border:1px solid var(--line);
+    transition:.2s;
+  }
+  .deliv:hover{
+    border-color:rgba(var(--wc),.4);
+    background:rgba(var(--wc),.03);
+  }
+  .deliv::before{
+    content:counter(deliv);
+    flex:0 0 26px;
+    width:26px;height:26px;
+    border-radius:7px;
+    display:grid;place-items:center;
+    font-family:ui-monospace,monospace;
+    font-size:12px;font-weight:800;
+    background:rgba(var(--wc),.14);
+    color:rgb(var(--wc));
+    border:1px solid rgba(var(--wc),.3);
+    margin-top:2px;
+  }
+  .deliv-body{flex:1;min-width:0}
+  .deliv-name{
+    font-size:14px;font-weight:700;
+    color:#fff;
+    letter-spacing:-.005em;
+    margin-bottom:8px;
+    line-height:1.4;
+  }
+  .deliv-desc{
+    font-size:13px;
+    line-height:1.7;
+    color:#b8c2d2;
+  }
+  .deliv-desc b{color:#fff;font-weight:600}
+  .deliv-desc code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+  .deliv-desc .sub{
+    display:block;
+    margin-top:8px;
+    padding-left:18px;
+    position:relative;
+    color:var(--mut);
+  }
+  .deliv-desc .sub::before{
+    content:"—";
+    position:absolute;
+    left:0;
+    color:rgb(var(--wc));
+    font-weight:700;
+  }
+
+  .week-foot{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    padding:18px 28px 22px;
+    border-top:1px dashed var(--line);
+    background:rgba(0,0,0,.15);
+  }
+  .wf-item{
+    padding:12px 16px;
+    border-radius:10px;
+    background:rgba(0,0,0,.25);
+    border:1px solid var(--line);
+  }
+  .wf-k{
+    font-size:10.5px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;
+    color:var(--mut2);
+    margin-bottom:6px;
+  }
+  .wf-v{
+    font-size:12.5px;
+    line-height:1.6;
+    color:#cfd8e8;
+  }
+  .wf-v b{color:#fff;font-weight:600}
+  .wf-v code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:11.5px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+  .wf-v .unfilled{
+    color:var(--rose);
+    font-weight:700;
+    font-family:ui-monospace,monospace;
+  }
+
+  /* ============ CALLOUTS ============ */
+  .callout{
+    padding:20px 24px;
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    margin:16px 0;
+    display:flex;gap:18px;align-items:flex-start;
+    position:relative;
+    overflow:hidden;
+  }
+  .callout::before{
+    content:"";position:absolute;
+    left:0;top:0;bottom:0;width:3px;
+    background:rgb(var(--cc));
+  }
+  .callout-icon{
+    flex:0 0 40px;
+    width:40px;height:40px;
+    border-radius:11px;
+    display:grid;place-items:center;
+    font-size:17px;
+    background:rgba(var(--cc),.15);
+    color:rgb(var(--cc));
+    border:1px solid rgba(var(--cc),.35);
+  }
+  .callout-body{flex:1;min-width:0}
+  .callout-label{
+    font-size:11px;font-weight:700;
+    letter-spacing:.09em;text-transform:uppercase;
+    color:rgb(var(--cc));
+    margin-bottom:10px;
+  }
+  .callout p{
+    font-size:13.5px;
+    line-height:1.7;
+    color:#b8c2d2;
+    margin:0;
+  }
+  .callout p + p{margin-top:10px}
+  .callout p b{color:#fff;font-weight:600}
+  .callout p em{font-style:italic;color:#dfe7f4}
+  .callout p code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+  .callout.info{--cc:26,79,245}
+  .callout.warn{--cc:251,191,36}
+  .callout.danger{--cc:244,63,94}
+  .callout.success{--cc:52,211,153}
+  .callout.violet{--cc:167,139,250}
+
+  /* ============ BULLET LISTS ============ */
+  .bullet-list{
+    list-style:none;
+    display:flex;flex-direction:column;
+    gap:10px;
+    margin:12px 0;
+  }
+  .bullet-list li{
+    display:flex;gap:12px;align-items:flex-start;
+    font-size:13.5px;
+    line-height:1.7;
+    color:#b8c2d2;
+    padding:12px 16px;
+    border-radius:10px;
+    background:rgba(255,255,255,.02);
+    border:1px solid var(--line);
+  }
+  .bullet-list li::before{
+    content:"";flex:0 0 8px;
+    width:8px;height:8px;
+    border-radius:50%;
+    background:var(--bayan2);
+    box-shadow:0 0 10px 0 rgba(77,123,255,.7);
+    margin-top:7px;
+  }
+  .bullet-list li b{color:#fff;font-weight:600}
+  .bullet-list li code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ BUDGET TABLE ============ */
+  .budget-table{
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    overflow:hidden;
+  }
+  .budget-table .brow{
+    display:grid;
+    grid-template-columns:1fr 200px;
+    gap:16px;
+    align-items:flex-start;
+    padding:16px 22px;
+    border-bottom:1px solid var(--line);
+    font-size:13.5px;
+  }
+  .budget-table .brow:last-child{border-bottom:none}
+  .budget-table .brow:hover{background:rgba(255,255,255,.015)}
+  .budget-table .b-line{
+    color:#cfd8e8;
+    line-height:1.6;
+  }
+  .budget-table .b-line b{color:#fff;font-weight:600}
+  .budget-table .b-amt{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13px;
+    font-weight:700;
+    color:#dfe7f4;
+    text-align:right;
+    white-space:nowrap;
+    font-variant-numeric:tabular-nums;
+    letter-spacing:.02em;
+  }
+  .budget-table .b-amt.zero{color:var(--emerald)}
+  .budget-table .b-amt.unfilled{color:var(--rose)}
+  .budget-table .b-amt.tbd{color:var(--amber)}
+
+  /* ============ PROVENANCE ============ */
+  .prov-list{
+    list-style:none;
+    display:flex;flex-direction:column;
+    gap:10px;
+  }
+  .prov-list li{
+    padding:14px 18px;
+    border-radius:10px;
+    background:rgba(255,255,255,.02);
+    border:1px solid var(--line);
+    font-size:13.5px;
+    line-height:1.7;
+    color:#b8c2d2;
+  }
+  .prov-list li::before{
+    content:"◆";
+    color:var(--bayan2);
+    margin-right:10px;
+    font-weight:700;
+    font-size:11px;
+  }
+  .prov-list li b{color:#fff;font-weight:600}
+  .prov-list li code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ FOOTER ============ */
+  footer{
+    padding-top:32px;
+    margin-top:56px;
+    border-top:1px solid var(--line);
+    font-size:12.5px;
+    color:var(--mut2);
+    text-align:center;
+    line-height:1.85;
+  }
+  footer .mark{color:var(--bayan2);font-weight:600}
+  footer code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.04);
+    padding:2px 7px;border-radius:5px;
+    color:#cfd8e8;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:820px){
+    main{padding:0 16px 60px}
+    header{padding:40px 0 30px;margin-bottom:28px}
+    header h1{font-size:26px}
+    header .lede{font-size:14.5px}
+    section{margin-bottom:44px}
+    section h2{font-size:20px}
+
+    .exec-rec{padding:20px 22px}
+    .exec-rec h3{font-size:18px}
+
+    .buckets{grid-template-columns:1fr 1fr;gap:10px}
+    .cohort-formula .cf-eq{font-size:16px;gap:6px}
+    .cohort-formula .cf-eq .letter{font-size:18px;padding:5px 10px}
+    .cohort-formula .cf-eq .total{font-size:16px;padding:5px 10px}
+
+    .week-head{padding:18px 22px 16px;gap:14px}
+    .week-num{flex:0 0 42px;width:42px;height:42px;font-size:12px;border-radius:11px}
+    .week-name{font-size:16px}
+    .week-body{padding:18px 22px 20px}
+    .week-foot{padding:16px 22px 18px;grid-template-columns:1fr;gap:10px}
+
+    .budget-table .brow{grid-template-columns:1fr;gap:6px}
+    .budget-table .b-amt{text-align:left}
+
+    .topnav{padding:10px 16px}
+    .topnav a{font-size:11px;padding:6px 10px}
+  }
+  @media (max-width:480px){
+    header h1{font-size:22px}
+    .buckets{grid-template-columns:1fr}
+    .deliv{padding:12px 14px;gap:12px}
+    .deliv::before{flex:0 0 22px;width:22px;height:22px;font-size:11px}
+    .callout{padding:16px 18px;gap:14px}
+    .callout-icon{flex:0 0 32px;width:32px;height:32px;font-size:15px}
+  }
+</style>
+</head>
+<body>
+
+<nav class="topnav" id="topnav">
+  <a href="#recommendation">Recommendation</a>
+  <a href="#hypotheses">Hypotheses</a>
+  <a href="#cohort">Cohort model</a>
+  <a href="#weeks">Weekly plan</a>
+  <a href="#measurement">Measurement</a>
+  <a href="#budget">Budget</a>
+  <a href="#seogeo">SEO / GEO</a>
+  <a href="#controls">Controls</a>
+  <a href="#provenance">Provenance</a>
+</nav>
+
+<main>
+
+  <!-- ============ HEADER ============ -->
+  <header>
+    <div class="crumbs">
+      <span>Bayan</span>
+      <span class="sep">/</span>
+      <span>Marketing</span>
+      <span class="sep">/</span>
+      <span class="here">30-Day Conversion-First Trial (Revised)</span>
+    </div>
+
+    <span class="tag">Draft for Dr. Abdullah's review only</span>
+    <h1>30-Day Conversion-First Trial</h1>
+    <p class="lede">
+      Lead with the <b>denominator, not a traffic target</b>. The revision
+      basis is the seven CEO-review excerpts plus the analytics-events-spec
+      excerpt. <b>Nothing here authorizes publishing, messaging, entitlement
+      or price changes, product deploys, or ad spend.</b>
+    </p>
+
+    <div class="notice">
+      <div class="n-k">Status · draft only</div>
+      <p>
+        The live canonical marketing plan is <b>not changed</b> by this file.
+        Trial: 30 days after approval — start date <b>[confirm]</b>.
+      </p>
+    </div>
+
+    <div class="meta">
+      <div class="m-item">
+        <span class="m-k">Business objective</span>
+        <span class="m-v">Establish the addressable cohort, convert it before buying more traffic</span>
+      </div>
+      <div class="m-item">
+        <span class="m-k">Scope owner · Nasim</span>
+        <span class="m-v empty">[confirm]</span>
+      </div>
+      <div class="m-item">
+        <span class="m-k">Engineering / data</span>
+        <span class="m-v empty">[confirm]</span>
+      </div>
+      <div class="m-item">
+        <span class="m-k">Clinical reviewer</span>
+        <span class="m-v empty">[confirm]</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ EXECUTIVE RECOMMENDATION ============ -->
+  <section id="recommendation">
+    <h2><span class="num">§</span> Executive recommendation</h2>
+
+    <div class="exec-rec">
+      <div class="er-k">Lead with the denominator</div>
+      <h3>The addressable base is not 1,300 — and its real size is unknown until a deduplicated audit.</h3>
+      <p>
+        The CEO brief reports <b>1,300 registered users</b>, <b>&lt;1%
+        conversion</b>, <b>$277 total revenue</b>. Planning excerpts also
+        report that accounts created before <code>2026-05-01</code> have
+        permanent free access and that 13 countries receive humanitarian free
+        access. <b>If those rules are confirmed, those users should not be
+        treated as ordinary missed purchase opportunities.</b>
+      </p>
+      <p>
+        Keep grandfathered access intact unless the CEO explicitly decides
+        otherwise. Do not include those accounts in the paying-opportunity
+        denominator under current policy. <b>Treat country eligibility the
+        same way.</b> "Inactive" is an engagement state; "wrong segment" is a
+        hypothesis to check — not a reason to silently drop users.
+      </p>
+      <p>
+        <b>Funnel instrumentation:</b> the strategy excerpt says the funnel is
+        uninstrumented, but the project's integration status lists PostHog as
+        connected. Week 1 therefore <b>checks existing PostHog / payment /
+        product events first</b>, and only builds a new <code>track()</code>
+        layer + sink if an inventory shows it's needed. The supplied spec
+        names the work and a 10-event completion criterion — <b>but does not
+        include the actual event schema</b>.
+      </p>
+      <p>
+        Four weekly deliverable sets: <b>(1)</b> cohort + event audit, three
+        landing-page drafts, count reconciliation · <b>(2)</b> draft
+        activation and trial-to-paid concepts · <b>(3)</b> draft reactivation
+        + low-tier proposal + grandfathering memo · <b>(4)</b> measured
+        readout and CEO go/no-go. <b>Deployment, payment changes, access
+        changes, and outbound messages remain approval-gated.</b>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ HYPOTHESES ============ -->
+  <section id="hypotheses">
+    <h2 class="warn"><span class="num">01</span> What the data supports — and what it doesn't</h2>
+    <p class="desc">
+      The supplied materials offer useful <b>working hypotheses</b>. They do
+      not yet rank causes by revenue blocked. <b>Cohort counts and funnel data
+      are needed</b> before claiming which factor is largest.
+    </p>
+
+    <div class="table-wrap">
+      <table class="hyp">
+        <thead>
+          <tr>
+            <th class="h1" style="width:22%">Hypothesis</th>
+            <th class="h2" style="width:22%">Evidence supplied</th>
+            <th class="h3" style="width:28%">Verify before treating as fact</th>
+            <th class="h4" style="width:28%">Safe trial response</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="hyp-name">Pre-2026-05-01 accounts have permanent full free access</td>
+            <td class="hyp-ev">
+              Excerpt cites "App access model, rule #3" and enforcement date
+              <code>2026-05-01</code> · source not in excerpts
+            </td>
+            <td class="hyp-verify">
+              Read exact entitlement rule, scope, cutoff, whether user-visible /
+              contractual, and any exceptions.
+            </td>
+            <td class="hyp-safe">
+              Count and report separately. <strong>Do not sunset, migrate, or
+              message a conversion offer that removes an existing right.</strong>
+              Optional additive offer needs CEO review.
+            </td>
+          </tr>
+          <tr>
+            <td class="hyp-name">13 humanitarian countries get free access; Oman is not on the list</td>
+            <td class="hyp-ev">
+              Excerpt states the count and Oman exclusion · country list itself absent
+            </td>
+            <td class="hyp-verify">
+              Retrieve authoritative country list and country-resolution rule ·
+              verify missing/changed country treatment.
+            </td>
+            <td class="hyp-safe">
+              Exclude policy-free eligible accounts from paid denominator;
+              retain unresolved bucket. <strong>Do not infer residence from
+              nationality or IP.</strong>
+            </td>
+          </tr>
+          <tr>
+            <td class="hyp-name">Some signups don't match a paying profession or available exam</td>
+            <td class="hyp-ev">
+              Narrative hypothesis in pasted material
+            </td>
+            <td class="hyp-verify">
+              Verify user-declared profession / exam interest and live offer
+              coverage · don't infer from demographic proxies.
+            </td>
+            <td class="hyp-safe">
+              Cross-tab segment / intent. <strong>A mismatch is not necessarily
+              ineligible</strong> until product offer fit is checked.
+            </td>
+          </tr>
+          <tr>
+            <td class="hyp-name">30-day trial exists, but no trial-to-paid trigger / paywall prompt</td>
+            <td class="hyp-ev">
+              Excerpt cites pricing config and <code>revenue-integration-strategy.md</code> · source files not in full
+            </td>
+            <td class="hyp-verify">
+              Inspect actual deployed / configured trial, payment state, current
+              prompts, cancellation / expiry behavior.
+            </td>
+            <td class="hyp-safe">
+              Draft trigger and UX; <strong>do not deploy or alter
+              entitlements</strong> before exact approval.
+            </td>
+          </tr>
+          <tr>
+            <td class="hyp-name">No onboarding / nurture; a 5-question daily limit is the first wall</td>
+            <td class="hyp-ev">
+              Excerpt cites <code>growth-engine-design.md</code> · underlying flow and logs not supplied
+            </td>
+            <td class="hyp-verify">
+              Read current app behavior, message history / consent, actual daily
+              limit and its event coverage.
+            </td>
+            <td class="hyp-safe">
+              Draft first-value onboarding and gentle wall prompt;
+              <strong>do not send lifecycle messages</strong> until audience,
+              content, consent basis, timing are approved.
+            </td>
+          </tr>
+          <tr>
+            <td class="hyp-name">Free-to-subscription price jump; no single-exam pass</td>
+            <td class="hyp-ev">
+              Excerpt reports <code>$9.99–29/mo</code> subs and missing exam pass
+            </td>
+            <td class="hyp-verify">
+              Verify current currency, live prices, plan contents, payment
+              completion, purchase mix, refunds.
+            </td>
+            <td class="hyp-safe">
+              Prepare priced-offer brief only after price / contribution data;
+              <strong>no SKU creation before CEO approval.</strong>
+            </td>
+          </tr>
+          <tr>
+            <td class="hyp-name">Eight different question-count values are visible</td>
+            <td class="hyp-ev">
+              Excerpt says 8 values, lists <code>4,000 / 5,000 / 5,589 / 5,610 / 5,760 / 10,000+</code>
+            </td>
+            <td class="hyp-verify">
+              Query authoritative content DB · enumerate all live surfaces,
+              timestamps, definitions (active / reviewed / total).
+            </td>
+            <td class="hyp-safe">
+              Reconcile one approved definition / number; use in new drafts only
+              after clinical / data sign-off. <strong>Do not replace live
+              claims before approval.</strong>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ COHORT MODEL ============ -->
+  <section id="cohort">
+    <h2><span class="num">02</span> Cohort model · two dimensions</h2>
+    <p class="desc">
+      Use two dimensions so the cohort math is valid. First: a <b>mutually
+      exclusive entitlement / eligibility group</b> for a fixed account
+      snapshot. Second: an <b>engagement cross-tab</b> over each group.
+    </p>
+
+    <div class="cohort-formula">
+      <div class="cf-eq">
+        <span class="letter g">G</span>
+        <span class="op">+</span>
+        <span class="letter f">F</span>
+        <span class="op">+</span>
+        <span class="letter a">A</span>
+        <span class="op">+</span>
+        <span class="letter u">U</span>
+        <span class="op">=</span>
+        <span class="total">1,300</span>
+      </div>
+      <div class="cf-note">only if the supplied total is confirmed against the export · report counts, shares, cutoff date, source, and rules</div>
+    </div>
+
+    <div class="buckets">
+
+      <div class="bucket b-g">
+        <div class="bucket-letter">G</div>
+        <div class="bucket-name">Grandfathered</div>
+        <div class="bucket-desc">
+          Under the confirmed policy. <b>Excluded from paid denominator</b>
+          unless the CEO explicitly decides otherwise.
+        </div>
+      </div>
+
+      <div class="bucket b-f">
+        <div class="bucket-letter">F</div>
+        <div class="bucket-name">Free-country</div>
+        <div class="bucket-desc">
+          Eligible for humanitarian free access, excluding <b>G</b> by a
+          documented precedence rule.
+        </div>
+      </div>
+
+      <div class="bucket b-a">
+        <div class="bucket-letter">A</div>
+        <div class="bucket-name">Addressable non-payer</div>
+        <div class="bucket-desc">
+          Unique, non-paying, eligible location / entitlement, and a verified
+          matching paid offer. <b>This is the denominator.</b>
+        </div>
+      </div>
+
+      <div class="bucket b-u">
+        <div class="bucket-letter">U</div>
+        <div class="bucket-name">Unresolved</div>
+        <div class="bucket-desc">
+          Access, country, duplicate, payment, or offer-fit evidence missing
+          or ambiguous. Excluded until resolved.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="eng-note">
+      <b>Engagement state</b> — active / inactive / unknown, defined with an
+      agreed activity window and event. <em>Inactive is not an extra mutually
+      exclusive group</em>; <code>G</code>, <code>F</code>, and <code>A</code>
+      can each include inactive accounts. "Wrong segment" remains a separate
+      declared-intent / offer-fit attribute.
+    </div>
+  </section>
+
+  <!-- ============ WEEKS ============ -->
+  <section id="weeks">
+    <h2><span class="num">03</span> 30-day trial · four weekly deliverable sets</h2>
+    <p class="desc">
+      Each week has its own deliverables, owners, and a "done when" gate.
+      <b>Nothing ships without CEO, clinical, and (where applicable)
+      engineering sign-off.</b>
+    </p>
+
+    <!-- WEEK 1 -->
+    <div class="week w1">
+      <div class="week-head">
+        <div class="week-num">W1</div>
+        <div class="week-meta">
+          <div class="week-kicker">Week 1 · diagnose + draft</div>
+          <div class="week-name">Instrument only the gaps · draft the three paths</div>
+          <div class="week-sub">No deployment, no messaging — audit and drafts only.</div>
+        </div>
+      </div>
+      <div class="week-body">
+        <div class="deliv-list">
+
+          <div class="deliv">
+            <div class="deliv-body">
+              <div class="deliv-name">Non-payer segmentation report</div>
+              <div class="deliv-desc">
+                Reconcile the reported 1,300 accounts into
+                <code>G / F / A / U</code>; cross-tab active / inactive. Show
+                counts and percentages, access rule, snapshot date, evidence
+                source, definition of inactivity, and addressable base
+                <code>A</code>. Include a formula for "$ at stake," not a
+                made-up amount:
+                <code>A × scenario conversion × verified net price/contribution</code>.
+                <b>Do not change grandfathering or free-country policy.</b>
+              </div>
+            </div>
+          </div>
+
+          <div class="deliv">
+            <div class="deliv-body">
+              <div class="deliv-name">Funnel / event inventory</div>
+              <div class="deliv-desc">
+                Inspect existing PostHog data, product / payment events, current
+                trial / paywall config, and the complete
+                <code>analytics-events-spec.md</code>. Determine whether the
+                app already emits usable events. If not, draft the smallest
+                approved implementation plan: <code>track()</code> → one
+                defined sink → the 10 named core events → six funnel rates.
+                The supplied excerpt does <b>not</b> list the 10 event names or
+                six rates — retrieve and approve that schema before coding.
+                Verify rows against test events, not zeros or estimates.
+              </div>
+            </div>
+          </div>
+
+          <div class="deliv">
+            <div class="deliv-body">
+              <div class="deliv-name">Three full-copy landing-page drafts</div>
+              <div class="deliv-desc">
+                <span class="sub"><b>(a) Exam-specific path</b> — selected from verified coverage and highest-volume eligible user intent. OMSB / SMLE are candidates to assess, not selected targets until evidence supports them.</span>
+                <span class="sub"><b>(b) Free readiness-diagnostic opt-in.</b> The suggested "50-question" diagnostic remains a product / content proposal until length, scoring, clinical review, privacy, and delivery are verified.</span>
+                <span class="sub"><b>(c) Upgrade / pricing page</b> using only substantiated evidence of clinician review and content quality. Do not promote the unverified 20-point rubric, dated PMID process, or question count until verified.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="deliv">
+            <div class="deliv-body">
+              <div class="deliv-name">Question-count reconciliation</div>
+              <div class="deliv-desc">
+                Query the source of truth, enumerate conflicting values across
+                live surfaces, propose one defined number (e.g., questions
+                reviewed vs total). Apply only to new drafts pending
+                clinical / CEO approval. <b>Production copy changes require
+                approval.</b>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="week-foot">
+        <div class="wf-item">
+          <div class="wf-k">Owners</div>
+          <div class="wf-v">
+            <b>Nasim</b> drafts the report and copy · data / engineering owner
+            <span class="unfilled">[confirm]</span> supplies access / event
+            evidence · clinical reviewer <span class="unfilled">[confirm]</span>
+            verifies medical / content claims · CEO decides policy and offer
+            questions.
+          </div>
+        </div>
+        <div class="wf-item">
+          <div class="wf-k">Capacity gate</div>
+          <div class="wf-v">
+            Phase 0 estimate: 2–3d event instrumentation · 1–2d dashboard ·
+            1d count reconciliation · 1d grandfathering analysis. <b>5–7
+            estimated workdays before copy work</b> — versus <code>10 hrs/week</code>
+            total planning bandwidth. <b>Do not promise Week 1 completion
+            without confirming engineering capacity.</b>
+          </div>
+        </div>
+      </div>
+      <div class="week-foot" style="grid-template-columns:1fr;padding-top:0">
+        <div class="wf-item">
+          <div class="wf-k">Done when</div>
+          <div class="wf-v">
+            Cohort arithmetic reconciles or the unresolved count is explicit ·
+            usable event coverage is known · all three page drafts are
+            fact-checked or show <code>[confirm]</code> · one question-count
+            definition is proposed with source evidence · <b>nothing is live</b>.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WEEK 2 -->
+    <div class="week w2">
+      <div class="week-head">
+        <div class="week-num">W2</div>
+        <div class="week-meta">
+          <div class="week-kicker">Week 2 · prepare, do not deploy</div>
+          <div class="week-name">Activation and trial-to-paid</div>
+          <div class="week-sub">All outputs are drafts. Nothing sends.</div>
+        </div>
+      </div>
+      <div class="week-body">
+        <div class="deliv-list">
+
+          <div class="deliv">
+            <div class="deliv-body">
+              <div class="deliv-name">Onboarding concept</div>
+              <div class="deliv-desc">
+                First-login diagnostic or first useful practice action → clear
+                feedback → link to the relevant verified question bank.
+                <b>Do not assert the 5-question/day cap</b> until the product
+                behavior is checked. Avoid clinical personalization claims
+                beyond what the product actually measures.
+              </div>
+            </div>
+          </div>
+
+          <div class="deliv">
+            <div class="deliv-body">
+              <div class="deliv-name">Opt-in lifecycle sequence · draft</div>
+              <div class="deliv-desc">
+                For a verified 30-day trial, if the current trial is confirmed:
+                first-day orientation, mid-trial useful content, reminder
+                before expiry, expiry / plan-choice message. <b>Verify trial
+                length, trigger events, audience, consent state, sender system,
+                and suppression / cancellation behavior.</b> Do not send.
+              </div>
+            </div>
+          </div>
+
+          <div class="deliv">
+            <div class="deliv-body">
+              <div class="deliv-name">Non-coercive upgrade prompt · draft</div>
+              <div class="deliv-desc">
+                For any confirmed usage limit. Transparent terms and a clear
+                route to compare plans. <b>No artificial urgency or countdown
+                tied to licensing outcomes.</b>
+              </div>
+            </div>
+          </div>
+
+          <div class="deliv">
+            <div class="deliv-body">
+              <div class="deliv-name">Event + guardrail spec · draft</div>
+              <div class="deliv-desc">
+                Specify events for activation, trial start / expiry, paywall
+                display, plan selection, checkout, successful payment,
+                failure / refund, unsubscribe — <b>only after checking the
+                authoritative event spec</b>. Do not invent event names.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="week-foot" style="grid-template-columns:1fr">
+        <div class="wf-item">
+          <div class="wf-k">Done when</div>
+          <div class="wf-v">
+            Product and lifecycle mockups / copy are review-ready, with
+            current-state facts sourced and <b>deployment / outbound still
+            off</b> pending CEO, clinical, privacy / consent, and engineering
+            sign-off.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WEEK 3 -->
+    <div class="week w3">
+      <div class="week-head">
+        <div class="week-num">W3</div>
+        <div class="week-meta">
+          <div class="week-kicker">Week 3 · reactivation + proposals</div>
+          <div class="week-name">Reactivation, price-ladder, grandfathering memo</div>
+          <div class="week-sub">No sends. No migration. No SKU.</div>
+        </div>
+      </div>
+      <div class="week-body">
+        <div class="deliv-list">
+
+          <div class="deliv">
+            <div class="deliv-body">
+              <div class="deliv-name">Education sequence · draft</div>
+              <div class="deliv-desc">
+                Consent-aware. Only for <b>verified, addressable dormant
+                users</b>. The supplied excerpt suggests the 472 articles +
+                <code>@BayanMedEd</code> Telegram — but <b>article count,
+                rights to contact each account, list membership, and channel
+                operation must be checked</b>. No email, DM, or Telegram send
+                in this phase.
+              </div>
+            </div>
+          </div>
+
+          <div class="deliv">
+            <div class="deliv-body">
+              <div class="deliv-name">Single-exam / exam-window-pass pricing brief</div>
+              <div class="deliv-desc">
+                Candidate audience, proposed entitlement and duration,
+                comparison with verified subscription plans, refund / payment
+                constraints, contribution calculation, and a CEO-set price
+                field. <b>This is a proposal, not a live SKU.</b> Do not price
+                for an assumed IMG persona without research.
+              </div>
+            </div>
+          </div>
+
+          <div class="deliv">
+            <div class="deliv-body">
+              <div class="deliv-name">Grandfathering impact memo</div>
+              <div class="deliv-desc">
+                Eligible count, revenue scenarios under clearly stated
+                assumptions, support / trust / legal risks, and options that
+                preserve existing access. <b>Recommendation: leave permanent
+                access unchanged</b> unless the CEO, after reviewing policy
+                and user impact, chooses otherwise. No migration, sunset, or
+                contact without explicit approved decision.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="week-foot" style="grid-template-columns:1fr">
+        <div class="wf-item">
+          <div class="wf-k">Done when</div>
+          <div class="wf-v">
+            All outputs identify their <b>verified basis and unknowns</b>;
+            outbound and product mutations remain disabled.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WEEK 4 -->
+    <div class="week w4">
+      <div class="week-head">
+        <div class="week-num">W4</div>
+        <div class="week-meta">
+          <div class="week-kicker">Week 4 · readout + decision</div>
+          <div class="week-name">Readout and CEO go/no-go</div>
+          <div class="week-sub">The trial closes with a number and a decision.</div>
+        </div>
+      </div>
+      <div class="week-body">
+        <p>
+          Deliver a one-page scorecard with the fixed-cohort count, six agreed
+          funnel rates (once schema is confirmed), numerator / denominator and
+          closed date windows, first-time paying users, collected receipts,
+          refunds / failures, and instrumentation coverage.
+        </p>
+        <p>
+          <b>Separate observed conversion from incremental effect</b>; use a
+          holdout / control only if feasible and approved. Show <b>total trial
+          cost</b>, including Nasim, engineering, tools, and any authorized
+          media, with the actual period and amounts.
+        </p>
+        <p>
+          Recommend <b>stop / revise / continue</b> for months 2–3. <b>No scale
+          recommendation based on page views, open rates, or a reclassified
+          denominator alone.</b>
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============ MEASUREMENT ============ -->
+  <section id="measurement">
+    <h2 class="warn"><span class="num">04</span> Measurement and target policy</h2>
+
+    <div class="callout warn">
+      <div class="callout-icon">⚠</div>
+      <div class="callout-body">
+        <div class="callout-label">Do not commit 3% / 5% / 7% as targets before Week 1</div>
+        <p>
+          They are <b>scenarios in the CEO-review material</b>, not
+          Bayan-measured rates and not validated by the cited SaaS benchmark.
+          The live addressable denominator, baseline numerator, measurement
+          window, price, and recurring-vs-one-time product mix are
+          <b>unknown</b>. The annex shows the arithmetic both ways and defines
+          the exact data gate for turning a scenario into a target.
+        </p>
+      </div>
+    </div>
+
+    <div class="callout info">
+      <div class="callout-icon">◎</div>
+      <div class="callout-body">
+        <div class="callout-label">Primary metric</div>
+        <p>
+          Unique addressable non-payers at the fixed cutoff who complete a
+          <b>first successful paid transaction</b> within the agreed
+          observation window, <b>divided by fixed <code>A</code></b>. Show
+          numerator and denominator.
+        </p>
+        <p>
+          For a recurring plan, report <b>new MRR from active subscriptions
+          separately</b>; for an exam-window pass, report <b>one-time receipts,
+          not MRR</b>. Adjust for refunds and churn only using verified
+          matched-period data. <b>Do not compare lifetime revenue to monthly
+          revenue.</b>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BUDGET ============ -->
+  <section id="budget">
+    <h2><span class="num">05</span> Budget, staffing, and CAC decision</h2>
+    <p class="desc">
+      The canonical live plan records a <b>$500/month planning cap</b> and
+      10 hrs/week. <b>These do not establish cash authorization, current
+      spending, or who can do engineering.</b> The supplied
+      <code>$0–150/mo</code> and <code>$300–500</code> figures are
+      <b>estimates</b>, not quotes or approved spend.
+    </p>
+
+    <div class="budget-table">
+      <div class="brow">
+        <div class="b-line"><b>M1 default — paid media</b></div>
+        <div class="b-amt zero">$0</div>
+      </div>
+      <div class="brow">
+        <div class="b-line">
+          New email / analytics / engineering / payment-provider cost —
+          use read-only checks of connected PostHog first
+        </div>
+        <div class="b-amt unfilled">[confirm]</div>
+      </div>
+      <div class="brow">
+        <div class="b-line">
+          Later paid test — proposal only, not approved. Fits inside the cap
+          only if non-media costs allow; otherwise requires a separately
+          approved higher cap.
+        </div>
+        <div class="b-amt tbd">$300–500</div>
+      </div>
+      <div class="brow">
+        <div class="b-line">
+          Nasim fee — propose fixed 30-day scope only after Nasim/Hiwa confirm
+          amount, currency, basis, deliverables, and cap relationship
+        </div>
+        <div class="b-amt unfilled">$____</div>
+      </div>
+    </div>
+
+    <div class="callout danger">
+      <div class="callout-icon">$</div>
+      <div class="callout-body">
+        <div class="callout-label">CAC · the real story</div>
+        <p>
+          <b>No-ad media spend is $0; that does not make fully loaded
+          acquisition / program cost $0.</b> Include Nasim, engineering,
+          tooling, content production, transaction costs, and media when
+          dividing by incremental first-time purchasers.
+        </p>
+        <p>
+          <b>LTV:CAC cannot be claimed before retention and margin data
+          exist.</b> Do not spend until an allowable CAC is calculated from
+          verified net contribution and incremental conversions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SEO / GEO ============ -->
+  <section id="seogeo">
+    <h2 class="muted"><span class="num">06</span> SEO / GEO, travel, Second Brain</h2>
+
+    <ul class="bullet-list">
+      <li>
+        <b>SEO / GEO / AI-visibility</b> — <b>compounding, later.</b> Preserve
+        useful drafts and existing trackers, but <b>do not lead with new
+        traffic acquisition</b> until conversion measurement and offer
+        economics are sound. Do not claim they do nothing for current users;
+        their role is longer-term demand, not a substitute for fixing the
+        measured existing-user path.
+      </li>
+      <li>
+        <b>Turkey travel</b> — <b>parked.</b> No documented event / deal,
+        approved business case, or cost / return evidence in the material
+        reviewed.
+      </li>
+      <li>
+        <b>Second Brain</b> — <b>declined.</b> Will not be re-pitched.
+      </li>
+      <li>
+        <b>Question-count reconciliation</b> — retained as a direct
+        conversion-copy quality task, <b>not</b> a new knowledge system or
+        added program.
+      </li>
+    </ul>
+  </section>
+
+  <!-- ============ CONTROLS ============ -->
+  <section id="controls">
+    <h2 class="danger"><span class="num">07</span> Brand, privacy, and release controls</h2>
+
+    <ul class="bullet-list">
+      <li>
+        Use <b>"Gulf Licensing Exam Preparation"</b>, not "Prometric" as a
+        standalone category / brand label. Avoid NCLEX / US framing in
+        Gulf-focused copy unless an independently verified audience / page
+        requires it.
+      </li>
+      <li>
+        <b>No pass, success, or clinical-outcome guarantees.</b> No fake
+        scarcity / countdowns. No unsupported claims about AI functionality.
+        Keep clinician review and human responsibility accurate.
+      </li>
+      <li>
+        <b>Verify all question / article counts, plan prices, entitlements,
+        trial terms, event behavior, and diagnostic scoring</b> before they
+        appear as facts.
+      </li>
+      <li>
+        Use <b>minimum necessary account data</b> for segmentation. Confirm
+        internal access, retention, and applicable privacy / consent basis
+        before exporting or targeting users.
+      </li>
+      <li>
+        All landing pages, onboarding / paywall concepts, lifecycle messages,
+        pricing / SKU changes, user access changes, and campaigns remain
+        <b>drafts</b> until the exact audience, content / mutation, timing,
+        costs, and owner are approved. <b>No email, social message, public
+        page, production deployment, or spend has been authorized by this
+        document.</b>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ============ PROVENANCE ============ -->
+  <section id="provenance">
+    <h2><span class="num">08</span> Evidence and provenance</h2>
+
+    <ul class="prov-list">
+      <li>
+        <b>Project material inspected before this revision:</b>
+        <code>PLAN.md</code> (live plan v6, refreshed 2026-09-28; $500/month
+        planning cap, 10 hrs/week), <code>BRAND.md</code>,
+        <code>audits/2026-09-23-222353-light-audit.md</code>, and
+        <code>resources/workflow-results/seo-site-audit/2026-09-27/seo-audit-report.md</code>.
+        The latter says the site audit did <b>not</b> have conversion-rate or
+        session-recording data. Project integration status lists PostHog as
+        connected and no selected GA4 property.
+      </li>
+      <li>
+        <b>New CEO-review excerpts supplied with this revision:</b>
+        <code>inbox/paste-1-fe13620d.md</code> through
+        <code>inbox/paste-7-fe13620d.md</code> and
+        <code>inbox/analytics-events-spec-fe13620d.md</code>. They report
+        access rules, prices, trial / product behavior, content proof points,
+        event work, and suggested forecasts. <b>The complete underlying app
+        access model, pricing / config, revenue / growth strategy files, event
+        schema, account export, country list, and database content-count query
+        were not supplied.</b> Therefore these are attributed as supplied
+        claims and must be verified before implementation or external use.
+      </li>
+      <li>
+        <b>External context:</b> ChartMogul + ProductLed,
+        <em>The Conversion Report</em>, January 2026, 200 software products;
+        reported 8% median free-to-paid over a six-month definition with broad
+        dispersion. <b>Context only — not a 90-day Bayan forecast.</b> See the
+        annex for detailed calculation notes.
+      </li>
+    </ul>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <p><span class="mark">Bayan</span> · 30-Day Conversion-First Trial (Revised)</p>
+    <p style="margin-top:6px">
+      Draft for Dr. Abdullah's review · companion to the revised numbers annex
+    </p>
+  </footer>
+
+</main>
+
+<script>
+/* ============ Top nav border on scroll ============ */
+const topnav = document.getElementById('topnav');
+window.addEventListener('scroll', () => {
+  topnav.classList.toggle('scrolled', window.scrollY > 20);
+}, {passive:true});
+
+/* ============ Active section highlight ============ */
+const navLinks = document.querySelectorAll('.topnav a');
+const sections = [...navLinks].map(a =>
+  document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+const navIo = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting){
+      const id = '#' + e.target.id;
+      navLinks.forEach(a => a.classList.toggle('active',
+        a.getAttribute('href') === id));
+    }
+  });
+}, {threshold:0.3, rootMargin:'-80px 0px -60% 0px'});
+
+sections.forEach(s => navIo.observe(s));
+
+/* ============ Smooth scroll ============ */
+navLinks.forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    const el = document.querySelector(id);
+    if (!el) return;
+    e.preventDefault();
+    const offset = el.getBoundingClientRect().top + window.scrollY - 70;
+    window.scrollTo({top:offset, behavior:'smooth'});
+  });
+});
+</script>
+
+</body>
+</html>

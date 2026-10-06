@@ -74,16 +74,10 @@ real files. No login, no portal, no per-section access. Ships in half a day.
 
 ## Constraints
 
-- **Privacy: security-by-obscurity, stated plainly.** `marketing-plans/bayan` contains
-  real client data (the real domain `bayan.edu.om`, real figures, the plan, the CEO's
-  name). The v1 posture is **an unguessable URL shared with the CEO + inner circle, plus
-  a host-level password if available** — it is NOT real access control, and we commit to
-  saying so rather than calling a public deployment "private." Concrete measures:
-  `robots.txt` disallow-all + `<meta name="robots" content="noindex">` on every page; the
-  host must support **password protection** (Vercel password protection / Cloudflare
-  Access are preferred over bare GitHub Pages) or we accept the exposure in writing. This
-  is the opposite posture from the *public* anonymized `/work` portfolio on the
-  AITransforms site, and no client file is published without that protection in place.
+- **Privacy is absolute.** `marketing-plans/bayan` contains real client data (the real
+  domain `bayan.edu.om`, real figures, the plan, the CEO's name). The index must not
+  leak this beyond a private, unguessable URL shared with the CEO. This is the opposite
+  posture from the *public* anonymized `/work` portfolio on AITransforms' own site.
 - **No CMS / DB / auth / backend.** Static files only, per the AITransforms site build
   packet constraints and the "no heavy dependencies" rule.
 - **Reuse, don't rebuild.** Existing HTML artifacts already rendered —
@@ -102,24 +96,14 @@ real files. No login, no portal, no per-section access. Ships in half a day.
 - **P1 — Outcome > volume.** The index leads with what changed (numbers, problems fixed),
   not "look how many files I made." *Agreed.* A 155-file gallery that leads with volume
   reads as busywork to a founder who "cares about outcomes, not number of posts."
-  **Curation rule (resolves the P1-vs-full-list tension):** the index enumerates
-  **~15–25 rows total**, one per *deliverable*, not per file. The 71-file product archive
-  collapses to **one row** ("Bayan Product Archive — 71 reference docs"). Folders and
-  batches (content-prometric 11 files, content-days31-60 7 files, geo-fixes 7 files)
-  each get one row. Nothing is silently dropped; low-level files are reachable via their
-  parent row's link.
 - **P2 — Forwardable, no login.** A single unguessable URL shared with the CEO + inner
   circle is the whole access model for v1. Real auth is over-engineering. *Agreed.*
 - **P3 — It fixes Hiwa's prep time.** A living index means "what do I send" becomes a
   two-minute pick from a maintained page, not a 90-minute hunt. *Agreed.*
-- **P4 — Single source of truth (scoped honestly).** The page is generated from one
-  maintained manifest, so it updates in minutes and **the page never drifts from the
-  manifest**. *Agreed.* Scope note: this does NOT mean the manifest is the source of
-  truth for the *work* — a file added to `bayan/` but not to the manifest is invisible.
-  A lightweight reconciliation step (the generator lists tracked-but-unlisted files) is
-  part of v1 so the gap is visible. This is still the live demonstration of the
-  drift-discipline thesis the Product Brain proposal sells to Bayan. **The manifest IS
-  the pitch** — for the page, not for the filesystem.
+- **P4 — Single source of truth.** The page is generated from one maintained manifest, so
+  it updates in minutes and never drifts from reality. *Agreed.* This also makes the
+  artifact a live demonstration of the exact drift-discipline thesis the Product Brain
+  proposal sells to Bayan. **The manifest IS the pitch.**
 
 ## Related Prior Design (build on where it fits)
 
@@ -217,8 +201,10 @@ honest and is the live demo of the thesis.
   editing one manifest file and regenerating.
 - The page reads in one scroll as "this person runs a system," not "this person sent me
   a file."
-- Zero client data leaks beyond the intended recipients (private URL; no public index,
-  no search-engine exposure).
+- Client data is reachable only by the intended recipients: password-protected host +
+  unguessable URL + `noindex`/`robots.txt`; no search-engine exposure; a documented
+  revocation path (rotate password / redeploy) exists for the case where access must be
+  pulled.
 - The index itself demonstrates single-source-of-truth discipline (generated from one
   manifest; a fact lives in exactly one place).
 - It survives a forward: each row is self-explanatory; the outcome strip stands alone.

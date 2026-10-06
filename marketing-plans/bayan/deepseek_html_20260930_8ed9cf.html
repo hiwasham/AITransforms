@@ -1,0 +1,1649 @@
+<!-- ═══════════════════════════════════════════════════════════
+     BAYAN LEARNING — PRODUCT QA & IMPROVEMENT REPORT
+     Interactive dashboard section
+     ═══════════════════════════════════════════════════════════ -->
+<section class="reveal qa-sec" id="product-qa-sec">
+  <div class="sec-head">
+    <span class="sec-num">QA</span>
+    <h2>Product QA — what the product says vs. what it does</h2>
+  </div>
+  <p class="sec-desc">
+    A read-only walkthrough of the authenticated Bayan Learning web app.
+    <strong>Two silent defects are costing money and trust right now</strong> — neither
+    shows as a crash, so both can persist for months without anyone noticing.
+  </p>
+
+  <!-- ══════════ EXECUTIVE SUMMARY PANEL ══════════ -->
+  <div class="qa-panel">
+    <div class="qa-summary">
+
+      <!-- Health ring -->
+      <div class="qa-health">
+        <div class="qa-ring">
+          <svg viewBox="0 0 180 180">
+            <defs>
+              <linearGradient id="qaGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%"  stop-color="#ff6b6b"/>
+                <stop offset="55%" stop-color="#ffb020"/>
+                <stop offset="100%" stop-color="#2DD4BF"/>
+              </linearGradient>
+            </defs>
+            <circle class="qa-track" cx="90" cy="90" r="72"/>
+            <circle class="qa-fill"  cx="90" cy="90" r="72" id="qaRing"/>
+          </svg>
+          <div class="qa-ring-center">
+            <span class="qa-ring-num" id="qaRingNum">0</span>
+            <span class="qa-ring-sub">/ 100</span>
+          </div>
+        </div>
+        <div class="qa-health-meta">
+          <div class="qa-hm-row">
+            <span class="qa-hm-k">Overall health</span>
+            <span class="qa-hm-v amber">72</span>
+          </div>
+          <div class="qa-hm-row">
+            <span class="qa-hm-k">Critical findings</span>
+            <span class="qa-hm-v red">2</span>
+          </div>
+          <div class="qa-hm-row">
+            <span class="qa-hm-k">Fixable in</span>
+            <span class="qa-hm-v teal">hours, not weeks</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Executive headline -->
+      <div class="qa-exec">
+        <div class="qa-exec-tag">
+          <span class="qa-exec-dot"></span>
+          Executive summary · read this if nothing else
+        </div>
+        <p class="qa-exec-lede">
+          The product is <strong>genuinely good where it counts</strong> — the clinical
+          calculators compute correctly against 2024 guidelines, content is
+          human-reviewed, and onboarding leads with a real case instead of a signup wall.
+        </p>
+        <p class="qa-exec-lede">
+          But two silent, high-impact defects are costing money and trust
+          <strong>right now</strong>:
+        </p>
+        <ul class="qa-exec-list">
+          <li>
+            <span class="qa-exec-num">01</span>
+            <span><strong>You are flying blind on marketing data.</strong>
+              Your own Content Security Policy blocks every Google Analytics 4 and
+              Google Ads conversion event before it leaves the browser. Ad spend is
+              being optimized against <em>zero</em> conversion signal.</span>
+          </li>
+          <li>
+            <span class="qa-exec-num">02</span>
+            <span><strong>Core screens show wrong data.</strong>
+              Two authenticated database queries return HTTP 400, so the dashboard
+              reports "no sessions / 0 questions today" to a user who has answered
+              questions, and the OSCE page can't load its real station list.</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════ SEVERITY FILTER STRIP ══════════ -->
+  <div class="qa-filter" id="qaFilter">
+    <span class="qa-filter-label">Filter by severity</span>
+    <button class="qa-chip active" data-qa-filter="all">
+      <span class="qa-chip-d"></span>All findings
+      <span class="qa-chip-n">6</span>
+    </button>
+    <button class="qa-chip active" data-qa-filter="high">
+      <span class="qa-chip-d" style="background:#ff6b6b"></span>Critical
+      <span class="qa-chip-n">2</span>
+    </button>
+    <button class="qa-chip active" data-qa-filter="med">
+      <span class="qa-chip-d" style="background:#ffb020"></span>Medium
+      <span class="qa-chip-n">2</span>
+    </button>
+    <button class="qa-chip active" data-qa-filter="low">
+      <span class="qa-chip-d" style="background:#60A5FA"></span>Low
+      <span class="qa-chip-n">2</span>
+    </button>
+    <button class="qa-chip active" data-qa-filter="strength">
+      <span class="qa-chip-d" style="background:#2ed573"></span>Strength
+      <span class="qa-chip-n">1</span>
+    </button>
+  </div>
+
+  <!-- ══════════ FINDINGS LIST ══════════ -->
+  <div class="qa-findings" id="qaFindings">
+
+    <!-- ── 1 ── -->
+    <article class="qa-finding" data-sev="high">
+      <button class="qa-head" type="button" aria-expanded="false">
+        <span class="qa-id">01</span>
+        <span class="qa-badge high">● CRITICAL</span>
+        <span class="qa-title">CSP silently blocks GA4 and Google Ads conversion tracking</span>
+        <span class="qa-tags">
+          <span class="qa-tag">revenue</span>
+          <span class="qa-tag">marketing</span>
+        </span>
+        <span class="qa-chev" aria-hidden="true">▾</span>
+      </button>
+
+      <div class="qa-body">
+        <div class="qa-body-inner">
+          <div class="qa-block">
+            <div class="qa-block-label">What happens</div>
+            <div class="qa-block-text">
+              The site sends analytics and conversion beacons to Google's real
+              endpoints, but the <code>connect-src</code> Content Security Policy
+              directive doesn't allow them — so the browser refuses every request.
+              Confirmed on both the public landing page and inside the authenticated app.
+            </div>
+          </div>
+
+          <div class="qa-block">
+            <div class="qa-block-label">Endpoints being blocked · observed in console</div>
+            <div class="qa-console">
+              <div class="qa-console-line">
+                <span class="qa-console-x">✕</span>
+                <span class="qa-console-url">region1.analytics.google.com/g/collect</span>
+                <span class="qa-console-note">GA4 page_view · scroll · form_start</span>
+              </div>
+              <div class="qa-console-line">
+                <span class="qa-console-x">✕</span>
+                <span class="qa-console-url">region1.analytics.google.com/measurement/conversion</span>
+                <span class="qa-console-note">Ads conversion · ads_conversion_PAGE_VIEW_1</span>
+              </div>
+              <div class="qa-console-line">
+                <span class="qa-console-x">✕</span>
+                <span class="qa-console-url">stats.g.doubleclick.net/g/collect</span>
+                <span class="qa-console-note">GA4 signals / remarketing</span>
+              </div>
+              <div class="qa-console-line">
+                <span class="qa-console-x">✕</span>
+                <span class="qa-console-url">ad.doubleclick.net/ccm/s/collect</span>
+                <span class="qa-console-note">Google Ads conversion linker · AW-529849606</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="qa-block">
+            <div class="qa-block-label">Why this is happening</div>
+            <div class="qa-block-text">
+              The CSP allows <code>www.google-analytics.com</code>, but GA4 does
+              <strong>not</strong> send there — it sends to the regional
+              <code>region1.analytics.google.com</code> subdomain, which isn't whitelisted.
+            </div>
+          </div>
+
+          <div class="qa-block">
+            <div class="qa-block-label">Business impact</div>
+            <div class="qa-block-text">
+              GA4 reports and Google Ads conversion optimization receive
+              <strong>nothing</strong> from the web app. You're paying for clicks and
+              optimizing bids against empty conversion data.
+            </div>
+          </div>
+
+          <div class="qa-fix">
+            <div class="qa-fix-label">
+              <span class="qa-fix-ic">◆</span> The fix · ~30 minutes
+            </div>
+            <div class="qa-fix-code">
+              <span class="qa-comment">// Add to connect-src in the CSP header</span><br>
+              https://*.analytics.google.com<br>
+              https://*.google-analytics.com<br>
+              https://*.g.doubleclick.net<br>
+              https://*.doubleclick.net
+            </div>
+            <div class="qa-fix-foot">Deploy, then verify in GA4 Realtime that page_view and conversion events arrive.</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── 2 ── -->
+    <article class="qa-finding" data-sev="high">
+      <button class="qa-head" type="button" aria-expanded="false">
+        <span class="qa-id">02</span>
+        <span class="qa-badge high">● CRITICAL</span>
+        <span class="qa-title">Two authenticated database queries return HTTP 400</span>
+        <span class="qa-tags">
+          <span class="qa-tag">data integrity</span>
+          <span class="qa-tag">retention</span>
+        </span>
+        <span class="qa-chev" aria-hidden="true">▾</span>
+      </button>
+
+      <div class="qa-body">
+        <div class="qa-body-inner">
+          <div class="qa-block">
+            <div class="qa-block-label">What happens</div>
+            <div class="qa-block-text">
+              Both are Supabase / PostgREST <code>select=</code> queries that fail with
+              400 on primary screens. They fail <strong>silently</strong> — no crash —
+              so the UI just shows empty or placeholder state.
+            </div>
+          </div>
+
+          <div class="qa-two-col">
+            <div class="qa-subcard">
+              <div class="qa-subcard-head">
+                <span class="qa-subcard-n">2a</span>
+                <span class="qa-subcard-title">Dashboard quiz history</span>
+              </div>
+              <div class="qa-subcard-code">GET /rest/v1/quiz_sessions<br>
+                select=id,started_at,...&amp;user_id=eq.&lt;uid&gt;<br>
+                <span class="qa-fail">→ 400</span>
+              </div>
+              <div class="qa-subcard-text">
+                The dashboard shows <em>"Recent Sessions — No sessions yet"</em> and
+                <em>"0 Questions Today"</em>, while the same dashboard's aggregate
+                panel shows <em>"10 Total Questions, 40% Accuracy."</em>
+                The learner's own history is invisible.
+              </div>
+            </div>
+            <div class="qa-subcard">
+              <div class="qa-subcard-head">
+                <span class="qa-subcard-n">2b</span>
+                <span class="qa-subcard-title">OSCE stations</span>
+              </div>
+              <div class="qa-subcard-code">GET /rest/v1/osce_stations<br>
+                select=...,marking_criteria_count<br>
+                &amp;education_level=eq.undergraduate<br>
+                <span class="qa-fail">→ 400</span>
+              </div>
+              <div class="qa-subcard-text">
+                Two problems: the query 400s, and it filters
+                <code>education_level=undergraduate</code> for a
+                <strong>postgraduate</strong> account — wrong scope. The page falls
+                back to partial content.
+              </div>
+            </div>
+          </div>
+
+          <div class="qa-block">
+            <div class="qa-block-label">Likely root cause · hypothesis pending logs</div>
+            <div class="qa-block-text">
+              PostgREST 400s on explicit column lists usually mean the client is
+              selecting columns the current schema no longer has
+              (<strong>schema drift</strong>). Candidates:
+              <code>session_type</code> / <code>exam_mode</code> on
+              <code>quiz_sessions</code>;
+              <code>marking_criteria_count</code> / <code>scenario_preview</code> on
+              <code>osce_stations</code>.
+            </div>
+          </div>
+
+          <div class="qa-block">
+            <div class="qa-block-label">Business impact</div>
+            <div class="qa-block-text">
+              Learners see a dashboard that says they've done nothing →
+              demotivating, looks broken, undercuts the retention and streak mechanic
+              that drives subscription renewals.
+            </div>
+          </div>
+
+          <div class="qa-fix">
+            <div class="qa-fix-label">
+              <span class="qa-fix-ic">◆</span> The fix · 1–3 hours
+            </div>
+            <div class="qa-fix-foot">
+              Align the client <code>select</code> lists with the live schema (or add
+              the missing columns). Pass the correct <code>education_level</code> for
+              the user's track.
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── 3 ── -->
+    <article class="qa-finding" data-sev="med">
+      <button class="qa-head" type="button" aria-expanded="false">
+        <span class="qa-id">03</span>
+        <span class="qa-badge med">● MEDIUM</span>
+        <span class="qa-title">Nursing data bleeds into an Internal-Medicine board-prep profile</span>
+        <span class="qa-tags">
+          <span class="qa-tag">data model</span>
+          <span class="qa-tag">trust</span>
+        </span>
+        <span class="qa-chev" aria-hidden="true">▾</span>
+      </button>
+
+      <div class="qa-body">
+        <div class="qa-body-inner">
+          <div class="qa-block">
+            <div class="qa-block-label">What happens</div>
+            <div class="qa-block-text">
+              On a Postgrad / <strong>Internal Medicine Board Prep</strong> account
+              (training level <code>intern</code>), the <em>By Specialty</em> breakdown
+              mixes nursing categories into a physician track:
+            </div>
+            <div class="qa-bleed">
+              <span class="qa-bleed-chip">Critical Care 50%</span>
+              <span class="qa-bleed-chip">Neurology 0%</span>
+              <span class="qa-bleed-chip">Nephrology 0%</span>
+              <span class="qa-bleed-chip bad">Adult Health 100%</span>
+              <span class="qa-bleed-chip bad">Mental Health 100%</span>
+              <span class="qa-bleed-chip bad">Principles of Care 100%</span>
+              <span class="qa-bleed-chip">Internal Medicine 0%</span>
+            </div>
+            <div class="qa-block-text" style="margin-top:12px">
+              <em>Adult Health</em>, <em>Mental Health</em>, and <em>Principles of Care</em>
+              are NCLEX/nursing categories — they shouldn't appear inside an IM
+              board-prep dashboard at all.
+            </div>
+          </div>
+
+          <div class="qa-block">
+            <div class="qa-block-label">Also · tiny sample, no context</div>
+            <div class="qa-block-text">
+              Those 100% figures come from a single question each and are shown with
+              no sample-size context — so the learner sees "100%" next to "40% overall"
+              with no way to reconcile them.
+            </div>
+          </div>
+
+          <div class="qa-fix">
+            <div class="qa-fix-label">
+              <span class="qa-fix-ic">◆</span> The fix
+            </div>
+            <div class="qa-fix-foot">
+              Scope specialty stats to the active program's taxonomy. Suppress or
+              annotate percentages below a minimum <code>n</code> (e.g. "1/1").
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── 4 ── -->
+    <article class="qa-finding" data-sev="med">
+      <button class="qa-head" type="button" aria-expanded="false">
+        <span class="qa-id">04</span>
+        <span class="qa-badge med">● MEDIUM</span>
+        <span class="qa-title">"Exam readiness" number contradicts itself between pages</span>
+        <span class="qa-tags">
+          <span class="qa-tag">consistency</span>
+        </span>
+        <span class="qa-chev" aria-hidden="true">▾</span>
+      </button>
+
+      <div class="qa-body">
+        <div class="qa-body-inner">
+          <div class="qa-block">
+            <div class="qa-block-label">Same account · same session</div>
+            <div class="qa-split">
+              <div class="qa-split-card">
+                <div class="qa-split-kicker">Dashboard</div>
+                <div class="qa-split-val">39<span class="qa-split-unit">%</span></div>
+                <div class="qa-split-label">Blueprint Coverage — Ready</div>
+              </div>
+              <div class="qa-split-arrow">≠</div>
+              <div class="qa-split-card">
+                <div class="qa-split-kicker">Analytics</div>
+                <div class="qa-split-val">32<span class="qa-split-unit">%</span></div>
+                <div class="qa-split-label">Exam Readiness</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="qa-block">
+            <div class="qa-block-label">Why it matters</div>
+            <div class="qa-block-text">
+              Two different readiness numbers on two screens is a credibility problem
+              for the metric you position as your core value —
+              <em>"are you ready for the exam?"</em>
+            </div>
+          </div>
+
+          <div class="qa-fix">
+            <div class="qa-fix-label">
+              <span class="qa-fix-ic">◆</span> The fix
+            </div>
+            <div class="qa-fix-foot">
+              Compute it once, server-side, and read it everywhere.
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── 5 ── -->
+    <article class="qa-finding" data-sev="low">
+      <button class="qa-head" type="button" aria-expanded="false">
+        <span class="qa-id">05</span>
+        <span class="qa-badge low">● LOW</span>
+        <span class="qa-title">Drug-monograph count differs on three surfaces</span>
+        <span class="qa-tags">
+          <span class="qa-tag">content</span>
+          <span class="qa-tag">consistency</span>
+        </span>
+        <span class="qa-chev" aria-hidden="true">▾</span>
+      </button>
+
+      <div class="qa-body">
+        <div class="qa-body-inner">
+          <div class="qa-block">
+            <div class="qa-block-label">Three surfaces · three numbers</div>
+            <div class="qa-count-grid">
+              <div class="qa-count-card">
+                <div class="qa-count-k">Landing page</div>
+                <div class="qa-count-v">190+</div>
+              </div>
+              <div class="qa-count-card">
+                <div class="qa-count-k">Dashboard Discover card</div>
+                <div class="qa-count-v">100+</div>
+              </div>
+              <div class="qa-count-card actual">
+                <div class="qa-count-k">Actual /pharma page</div>
+                <div class="qa-count-v">260</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="qa-fix">
+            <div class="qa-fix-label">
+              <span class="qa-fix-ic">◆</span> The fix · ~15 minutes
+            </div>
+            <div class="qa-fix-foot">
+              Single source of truth. Show the real number: <strong>260</strong>.
+              You're under-selling your own corpus.
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── 6 ── -->
+    <article class="qa-finding" data-sev="low">
+      <button class="qa-head" type="button" aria-expanded="false">
+        <span class="qa-id">06</span>
+        <span class="qa-badge low">● LOW</span>
+        <span class="qa-title">Library card polish — "0 sections" + casing inconsistency</span>
+        <span class="qa-tags">
+          <span class="qa-tag">polish</span>
+        </span>
+        <span class="qa-chev" aria-hidden="true">▾</span>
+      </button>
+
+      <div class="qa-body">
+        <div class="qa-body-inner">
+          <div class="qa-block">
+            <div class="qa-block-label">What's visible on /library</div>
+            <div class="qa-block-text">
+              Every article card reads <strong>"0 sections"</strong> — the section
+              count is either broken or shouldn't be shown. Difficulty casing is also
+              inconsistent: <em>"intermediate"</em> vs <em>"Intermediate"</em> across cards.
+            </div>
+          </div>
+
+          <div class="qa-fix">
+            <div class="qa-fix-label">
+              <span class="qa-fix-ic">◆</span> The fix
+            </div>
+            <div class="qa-fix-foot">
+              Cosmetic — but it's the first screen a paying learner browses. Batch it
+              with the next UI pass.
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── STRENGTH ── -->
+    <article class="qa-finding qa-strength" data-sev="strength">
+      <button class="qa-head" type="button" aria-expanded="false">
+        <span class="qa-id">✓</span>
+        <span class="qa-badge strength">● STRENGTH</span>
+        <span class="qa-title">Clinical calculators are accurate and well-built</span>
+        <span class="qa-tags">
+          <span class="qa-tag">differentiator</span>
+          <span class="qa-tag">marketing asset</span>
+        </span>
+        <span class="qa-chev" aria-hidden="true">▾</span>
+      </button>
+
+      <div class="qa-body">
+        <div class="qa-body-inner">
+          <div class="qa-block">
+            <div class="qa-block-label">Verified · CHA₂DS₂-VASc at maximum inputs</div>
+            <div class="qa-calc-result">
+              <div class="qa-calc-row">
+                <span class="qa-calc-k">Score</span>
+                <span class="qa-calc-v">9<span class="qa-calc-unit">/9</span></span>
+                <span class="qa-calc-note">8 excluding sex</span>
+              </div>
+              <div class="qa-calc-row">
+                <span class="qa-calc-k">Annual stroke risk</span>
+                <span class="qa-calc-v">17.4<span class="qa-calc-unit">%</span></span>
+                <span class="qa-calc-note">high-risk pathway</span>
+              </div>
+              <div class="qa-calc-row">
+                <span class="qa-calc-k">Recommendation</span>
+                <span class="qa-calc-v">DOAC</span>
+                <span class="qa-calc-note">2024 ESC AF guideline cited</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="qa-block">
+            <div class="qa-block-label">Also worth showcasing</div>
+            <ul class="qa-strength-list">
+              <li><strong>Content carries a human "Verified" badge</strong> — a trust moat vs. generic AI question banks.</li>
+              <li><strong>Diagnostic-first onboarding</strong> — "Let's see what you know" → inferior-STEMI case. A strong, low-friction hook.</li>
+              <li><strong>No hard crashes.</strong> All primary routes return 200. The app is stable under automation.</li>
+              <li><strong>Performance is acceptable</strong> — ~3.0 s full load, ~2.0 s to interactive, with room to trim.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- ══════════ PRIORITY ORDER ══════════ -->
+  <div class="qa-priority">
+    <div class="qa-priority-head">
+      <span class="qa-priority-tag">◆ Recommended priority order</span>
+      <span class="qa-priority-note">riskiest item first · total ≈ 2–5 hours</span>
+    </div>
+    <ol class="qa-priority-list">
+      <li>
+        <span class="qa-p-n">1</span>
+        <div class="qa-p-body">
+          <div class="qa-p-t">Fix the CSP</div>
+          <div class="qa-p-d">Immediately restores marketing / ads visibility · <strong>~30 min</strong></div>
+        </div>
+        <span class="qa-p-tag now">Do today</span>
+      </li>
+      <li>
+        <span class="qa-p-n">2</span>
+        <div class="qa-p-body">
+          <div class="qa-p-t">Fix the two HTTP 400 queries</div>
+          <div class="qa-p-d">Restores correct history and OSCE data on core screens · <strong>1–3 hrs</strong></div>
+        </div>
+        <span class="qa-p-tag soon">This week</span>
+      </li>
+      <li>
+        <span class="qa-p-n">3</span>
+        <div class="qa-p-body">
+          <div class="qa-p-t">Scope specialty stats · hide tiny-n percentages</div>
+          <div class="qa-p-d">Stops nursing bleed and 1/1 noise in analytics</div>
+        </div>
+        <span class="qa-p-tag soon">This week</span>
+      </li>
+      <li>
+        <span class="qa-p-n">4</span>
+        <div class="qa-p-body">
+          <div class="qa-p-t">Single-source readiness % and drug count</div>
+          <div class="qa-p-d">One number, one place, no contradictions</div>
+        </div>
+        <span class="qa-p-tag next">Next pass</span>
+      </li>
+      <li>
+        <span class="qa-p-n">5</span>
+        <div class="qa-p-body">
+          <div class="qa-p-t">Library card polish</div>
+          <div class="qa-p-d">"0 sections" and casing · batch with next UI pass</div>
+        </div>
+        <span class="qa-p-tag next">Next pass</span>
+      </li>
+    </ol>
+  </div>
+
+  <!-- ══════════ METHOD NOTE ══════════ -->
+  <div class="qa-method">
+    <span class="qa-method-ic">◆</span>
+    <div class="qa-method-text">
+      <strong>Scope &amp; method.</strong> Read-only walkthrough of the authenticated
+      product (Postgrad / Internal Medicine account, reviewer role). No data was
+      submitted, deleted, purchased, or changed. Findings 1, 2, 5, and 6 are directly
+      observed. Finding 2's root cause is a <em>labelled hypothesis</em> pending a look
+      at the Supabase error body. Evidence screenshots:
+      <code>qa-report/screenshots/</code>.
+    </div>
+  </div>
+
+</section>
+
+<style>
+/* ═══════════════════════════════════════════════════════════
+   PRODUCT QA SECTION — namespaced .qa-*
+   ═══════════════════════════════════════════════════════════ */
+.qa-sec{padding:56px 0;border-bottom:1px solid var(--line)}
+.qa-sec:last-of-type{border-bottom:0}
+
+/* ── EXEC SUMMARY PANEL ── */
+.qa-panel{
+  border:1px solid rgba(231,181,68,.28);
+  border-radius:20px;
+  background:
+    radial-gradient(800px 400px at 0% 0%, rgba(231,181,68,.05), transparent 60%),
+    linear-gradient(180deg, #0b1320, #0c1420);
+  padding:32px;
+  position:relative;
+  overflow:hidden;
+  margin-bottom:32px;
+}
+.qa-panel::before{
+  content:"";
+  position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  animation:qa-scan 3s ease-in-out infinite;
+  opacity:.5;
+}
+@keyframes qa-scan{0%,100%{opacity:.3}50%{opacity:.9}}
+
+.qa-summary{
+  display:grid;
+  grid-template-columns:220px 1fr;
+  gap:36px;
+  align-items:start;
+}
+@media(max-width:820px){
+  .qa-summary{grid-template-columns:1fr;gap:24px}
+}
+
+/* Health ring */
+.qa-health{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:14px;
+}
+.qa-ring{
+  position:relative;
+  width:180px;
+  height:180px;
+}
+.qa-ring svg{
+  width:100%;height:100%;
+  transform:rotate(-90deg);
+  overflow:visible;
+}
+.qa-track{
+  fill:none;
+  stroke:#0f1a26;
+  stroke-width:9;
+}
+.qa-fill{
+  fill:none;
+  stroke:url(#qaGrad);
+  stroke-width:9;
+  stroke-linecap:round;
+  stroke-dasharray:452;
+  stroke-dashoffset:452;
+  transition:stroke-dashoffset 1.9s cubic-bezier(.22,1,.36,1) .3s;
+  filter:drop-shadow(0 0 10px rgba(255,176,32,.4));
+}
+.qa-ring-center{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.qa-ring-num{
+  font-family:var(--serif);
+  font-size:52px;
+  font-weight:400;
+  line-height:1;
+  letter-spacing:-.04em;
+  color:#ffb020;
+  text-shadow:0 0 20px rgba(255,176,32,.35);
+  font-variant-numeric:tabular-nums;
+}
+.qa-ring-sub{
+  font-family:var(--mono);
+  font-size:10.5px;
+  letter-spacing:.18em;
+  color:var(--muted);
+  margin-top:6px;
+}
+.qa-health-meta{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  padding-top:14px;
+  border-top:1px dashed var(--line-2);
+}
+.qa-hm-row{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+}
+.qa-hm-k{
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--dim);
+}
+.qa-hm-v{
+  font-family:var(--mono);
+  font-size:12.5px;
+  font-weight:600;
+  color:#c3d0e2;
+}
+.qa-hm-v.amber{color:var(--warn)}
+.qa-hm-v.red{color:var(--fail)}
+.qa-hm-v.teal{color:#2DD4BF}
+
+/* Exec copy */
+.qa-exec-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  font-family:var(--mono);
+  font-size:10.5px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--gold);
+  font-weight:700;
+  margin-bottom:16px;
+}
+.qa-exec-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--gold);
+  box-shadow:0 0 12px -1px var(--gold);
+}
+.qa-exec-lede{
+  font-size:15px;
+  color:#c3d0e2;
+  line-height:1.65;
+  margin:0 0 14px;
+}
+.qa-exec-lede strong{color:#fff;font-weight:650}
+.qa-exec-list{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  padding:0;
+  margin:16px 0 0;
+}
+.qa-exec-list li{
+  display:grid;
+  grid-template-columns:38px 1fr;
+  gap:16px;
+  align-items:flex-start;
+  padding:16px 20px;
+  border-radius:12px;
+  background:rgba(255,107,107,.05);
+  border:1px solid rgba(255,107,107,.22);
+  font-size:14px;
+  color:#dbe4f0;
+  line-height:1.6;
+}
+.qa-exec-list li:nth-child(2){
+  background:rgba(255,176,32,.05);
+  border-color:rgba(255,176,32,.22);
+}
+.qa-exec-list li strong{color:#fff;font-weight:650}
+.qa-exec-list li em{
+  color:#ff9aa4;
+  font-style:normal;
+  font-weight:600;
+  font-family:var(--mono);
+  font-size:13px;
+  padding:0 3px;
+}
+.qa-exec-num{
+  font-family:var(--mono);
+  font-size:14px;
+  font-weight:800;
+  letter-spacing:.06em;
+  color:#ff6b6b;
+  padding-top:2px;
+}
+.qa-exec-list li:nth-child(2) .qa-exec-num{color:var(--warn)}
+
+/* ── SEVERITY FILTER ── */
+.qa-filter{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  align-items:center;
+  margin-bottom:20px;
+  padding:14px 18px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background:linear-gradient(180deg,#0a1220,#0c1420);
+}
+.qa-filter-label{
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--dim);
+  margin-right:6px;
+}
+.qa-chip{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:7px 13px;
+  border-radius:999px;
+  border:1px solid var(--line-2);
+  background:#0a121d;
+  color:var(--dim);
+  font-family:var(--mono);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.04em;
+  cursor:pointer;
+  transition:all .25s;
+}
+.qa-chip:hover{border-color:var(--line-hi);color:#c3d0e2}
+.qa-chip.active{
+  background:rgba(255,255,255,.045);
+  border-color:var(--line-hi);
+  color:#eef4fb;
+}
+.qa-chip-d{
+  width:8px;height:8px;border-radius:2px;
+  background:var(--muted);
+  flex:0 0 auto;
+  transition:box-shadow .25s;
+}
+.qa-chip.active .qa-chip-d{box-shadow:0 0 0 3px rgba(255,255,255,.08)}
+.qa-chip-n{
+  font-size:10px;
+  color:var(--dim);
+  padding-left:7px;
+  border-left:1px solid var(--line-2);
+  margin-left:2px;
+}
+.qa-chip.active .qa-chip-n{color:#c3d0e2}
+
+/* ── FINDINGS ── */
+.qa-findings{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-bottom:32px;
+}
+
+.qa-finding{
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:
+    radial-gradient(600px 200px at 0% 0%, rgba(231,181,68,.03), transparent 70%),
+    linear-gradient(180deg,#0a1220,#0c1420);
+  overflow:hidden;
+  position:relative;
+  transition:border-color .3s, box-shadow .3s;
+  opacity:1;
+  max-height:2000px;
+}
+.qa-finding.qa-hidden{
+  display:none;
+}
+.qa-finding::before{
+  content:"";
+  position:absolute;
+  inset:0 auto 0 0;
+  width:3px;
+  background:var(--accent, var(--gold));
+}
+.qa-finding[data-sev="high"]{--accent:#ff6b6b;border-color:rgba(255,107,107,.24)}
+.qa-finding[data-sev="med"]{--accent:#ffb020;border-color:rgba(255,176,32,.22)}
+.qa-finding[data-sev="low"]{--accent:#60A5FA;border-color:rgba(96,165,250,.22)}
+.qa-finding[data-sev="strength"]{--accent:#2ed573;border-color:rgba(46,213,115,.28)}
+.qa-finding:hover{
+  border-color:color-mix(in srgb,var(--accent) 45%,var(--line));
+}
+.qa-finding.qa-open{
+  border-color:var(--accent);
+  box-shadow:0 0 0 1px color-mix(in srgb,var(--accent) 22%,transparent);
+}
+
+.qa-head{
+  width:100%;
+  display:grid;
+  grid-template-columns:44px auto 1fr auto 24px;
+  gap:14px;
+  align-items:center;
+  padding:20px 24px;
+  background:transparent;
+  border:0;
+  font-family:inherit;
+  text-align:left;
+  cursor:pointer;
+  color:inherit;
+  transition:background .2s;
+}
+.qa-head:hover{background:rgba(255,255,255,.015)}
+.qa-finding.qa-open .qa-head{cursor:default}
+.qa-finding.qa-open .qa-head:hover{background:transparent}
+
+.qa-id{
+  font-family:var(--mono);
+  font-size:15px;
+  font-weight:800;
+  letter-spacing:-.01em;
+  color:var(--accent);
+  text-align:center;
+}
+
+.qa-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-family:var(--mono);
+  font-size:9.5px;
+  letter-spacing:.14em;
+  font-weight:800;
+  padding:4px 9px;
+  border-radius:5px;
+  white-space:nowrap;
+}
+.qa-badge.high{background:rgba(255,107,107,.12);color:#ff9aa4;border:1px solid rgba(255,107,107,.32)}
+.qa-badge.med{background:rgba(255,176,32,.12);color:#ffd08a;border:1px solid rgba(255,176,32,.32)}
+.qa-badge.low{background:rgba(96,165,250,.12);color:#a0c4ff;border:1px solid rgba(96,165,250,.3)}
+.qa-badge.strength{background:rgba(46,213,115,.14);color:#7ee9a8;border:1px solid rgba(46,213,115,.34)}
+
+.qa-title{
+  font-size:14.5px;
+  font-weight:640;
+  color:#eef4fb;
+  line-height:1.35;
+  letter-spacing:-.008em;
+}
+
+.qa-tags{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+}
+.qa-tag{
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:.06em;
+  padding:3px 8px;
+  border-radius:5px;
+  background:#0a121d;
+  border:1px solid var(--line-2);
+  color:var(--dim);
+}
+
+.qa-chev{
+  font-size:12px;
+  color:var(--dim);
+  transition:transform .3s, color .3s;
+  text-align:center;
+}
+.qa-finding.qa-open .qa-chev{
+  transform:rotate(180deg);
+  color:var(--accent);
+}
+
+@media(max-width:760px){
+  .qa-head{
+    grid-template-columns:36px 1fr 20px;
+    gap:10px;
+    padding:16px 18px;
+  }
+  .qa-head .qa-badge{grid-column:2;justify-self:start}
+  .qa-head .qa-title{grid-column:2;font-size:14px}
+  .qa-head .qa-tags{grid-column:1/-1}
+  .qa-head .qa-chev{grid-row:1;grid-column:3}
+}
+
+/* Body (accordion) */
+.qa-body{
+  display:grid;
+  grid-template-rows:0fr;
+  transition:grid-template-rows .45s cubic-bezier(.4,0,.2,1);
+}
+.qa-finding.qa-open .qa-body{grid-template-rows:1fr}
+.qa-body-inner{overflow:hidden;padding:0 24px}
+.qa-finding.qa-open .qa-body-inner{
+  padding:0 24px 24px 82px;
+  border-top:1px solid var(--line-2);
+  padding-top:22px;
+}
+@media(max-width:760px){
+  .qa-finding.qa-open .qa-body-inner{padding-left:20px;padding-right:20px}
+}
+
+.qa-block{margin-bottom:20px}
+.qa-block:last-child{margin-bottom:0}
+.qa-block-label{
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--dim);
+  margin-bottom:10px;
+}
+.qa-block-text{
+  font-size:14px;
+  color:#c3d0e2;
+  line-height:1.65;
+}
+.qa-block-text strong{color:#fff;font-weight:640}
+.qa-block-text em{color:#dbe4f0;font-style:italic}
+.qa-block-text code{
+  font-family:var(--mono);
+  font-size:12.5px;
+  color:#9fd8dd;
+  background:#0a1219;
+  border:1px solid #14252b;
+  border-radius:4px;
+  padding:1px 6px;
+  word-break:break-all;
+}
+
+/* Console snippet */
+.qa-console{
+  padding:16px 18px;
+  border-radius:12px;
+  background:#05080e;
+  border:1px solid #1c2634;
+  font-family:var(--mono);
+  font-size:12px;
+  line-height:1.9;
+  overflow-x:auto;
+}
+.qa-console-line{
+  display:grid;
+  grid-template-columns:22px minmax(280px,1fr) auto;
+  gap:12px;
+  align-items:center;
+  padding:3px 0;
+  white-space:nowrap;
+}
+.qa-console-x{
+  color:#ff6b6b;
+  font-weight:700;
+  font-size:11px;
+}
+.qa-console-url{
+  color:#ff9aa4;
+  font-weight:500;
+  word-break:break-all;
+}
+.qa-console-note{
+  color:var(--dim);
+  font-size:11px;
+  font-style:italic;
+}
+@media(max-width:640px){
+  .qa-console-line{grid-template-columns:20px 1fr;gap:8px}
+  .qa-console-note{grid-column:2;font-size:10.5px;margin-top:-2px}
+}
+
+/* Two-column sub-cards */
+.qa-two-col{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin-bottom:20px;
+}
+@media(max-width:720px){
+  .qa-two-col{grid-template-columns:1fr}
+}
+.qa-subcard{
+  padding:18px 20px;
+  border-radius:12px;
+  background:#0a121d;
+  border:1px solid var(--line-2);
+}
+.qa-subcard-head{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:12px;
+}
+.qa-subcard-n{
+  font-family:var(--mono);
+  font-size:11px;
+  font-weight:800;
+  color:var(--accent);
+  background:color-mix(in srgb,var(--accent) 14%,transparent);
+  border:1px solid color-mix(in srgb,var(--accent) 34%,transparent);
+  padding:3px 8px;
+  border-radius:5px;
+}
+.qa-subcard-title{
+  font-size:13.5px;
+  font-weight:660;
+  color:#eef4fb;
+  letter-spacing:-.005em;
+}
+.qa-subcard-code{
+  font-family:var(--mono);
+  font-size:11px;
+  color:#9fd8dd;
+  background:#05080e;
+  border:1px solid #14252b;
+  border-radius:8px;
+  padding:10px 12px;
+  margin-bottom:12px;
+  line-height:1.7;
+  word-break:break-all;
+  overflow-x:auto;
+}
+.qa-subcard-code .qa-fail{
+  color:#ff6b6b;
+  font-weight:700;
+}
+.qa-subcard-text{
+  font-size:13px;
+  color:#b3c0d2;
+  line-height:1.6;
+}
+.qa-subcard-text strong{color:#fff;font-weight:640}
+.qa-subcard-text em{color:#dbe4f0;font-style:italic}
+.qa-subcard-text code{
+  font-family:var(--mono);
+  font-size:11.5px;
+  color:#9fd8dd;
+  background:#0a1219;
+  border:1px solid #14252b;
+  border-radius:3px;
+  padding:0 5px;
+}
+
+/* Fix card */
+.qa-fix{
+  padding:16px 20px;
+  border-radius:12px;
+  background:
+    linear-gradient(90deg,rgba(46,213,115,.05),rgba(46,213,115,.01));
+  border:1px solid rgba(46,213,115,.24);
+  margin-top:16px;
+}
+.qa-fix-label{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  font-family:var(--mono);
+  font-size:10.5px;
+  font-weight:800;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:#7ee9a8;
+  margin-bottom:12px;
+}
+.qa-fix-ic{
+  color:#2ed573;
+  font-size:11px;
+}
+.qa-fix-code{
+  font-family:var(--mono);
+  font-size:12px;
+  line-height:1.9;
+  color:#9fd8dd;
+  background:#05080e;
+  border:1px solid #14252b;
+  border-radius:8px;
+  padding:12px 14px;
+  margin-bottom:12px;
+  overflow-x:auto;
+}
+.qa-fix-code .qa-comment{
+  color:var(--dim);
+  font-style:italic;
+}
+.qa-fix-foot{
+  font-size:13px;
+  color:#b3c0d2;
+  line-height:1.6;
+}
+.qa-fix-foot code{
+  font-family:var(--mono);
+  font-size:12px;
+  color:#9fd8dd;
+  background:#0a1219;
+  border:1px solid #14252b;
+  border-radius:3px;
+  padding:1px 5px;
+}
+.qa-fix-foot strong{color:#fff;font-weight:640}
+
+/* Bleed chips (finding 3) */
+.qa-bleed{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:4px;
+}
+.qa-bleed-chip{
+  font-family:var(--mono);
+  font-size:12px;
+  padding:6px 11px;
+  border-radius:7px;
+  background:#0a121d;
+  border:1px solid var(--line-2);
+  color:#c3d0e2;
+}
+.qa-bleed-chip.bad{
+  background:rgba(255,107,107,.08);
+  border-color:rgba(255,107,107,.3);
+  color:#ff9aa4;
+  font-weight:600;
+}
+
+/* Split comparison (finding 4) */
+.qa-split{
+  display:grid;
+  grid-template-columns:1fr 40px 1fr;
+  gap:12px;
+  align-items:center;
+  margin-top:12px;
+}
+@media(max-width:560px){
+  .qa-split{grid-template-columns:1fr;gap:8px}
+  .qa-split-arrow{transform:rotate(90deg);justify-self:center}
+}
+.qa-split-card{
+  padding:18px 20px;
+  border-radius:12px;
+  background:#0a121d;
+  border:1px solid var(--line-2);
+  text-align:center;
+}
+.qa-split-kicker{
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--dim);
+  margin-bottom:8px;
+}
+.qa-split-val{
+  font-family:var(--serif);
+  font-size:42px;
+  font-weight:400;
+  line-height:1;
+  letter-spacing:-.03em;
+  color:#ffb020;
+  font-variant-numeric:tabular-nums;
+}
+.qa-split-unit{
+  font-size:22px;
+  color:var(--muted);
+  margin-left:2px;
+}
+.qa-split-label{
+  font-family:var(--mono);
+  font-size:11px;
+  color:var(--muted);
+  margin-top:8px;
+}
+.qa-split-arrow{
+  font-size:22px;
+  color:var(--fail);
+  text-align:center;
+  font-weight:700;
+}
+
+/* Count grid (finding 5) */
+.qa-count-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  margin-top:12px;
+}
+@media(max-width:560px){
+  .qa-count-grid{grid-template-columns:1fr}
+}
+.qa-count-card{
+  padding:16px 18px;
+  border-radius:11px;
+  background:#0a121d;
+  border:1px solid var(--line-2);
+  text-align:center;
+}
+.qa-count-card.actual{
+  background:rgba(46,213,115,.05);
+  border-color:rgba(46,213,115,.3);
+}
+.qa-count-k{
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--dim);
+  margin-bottom:8px;
+}
+.qa-count-v{
+  font-family:var(--mono);
+  font-size:26px;
+  font-weight:700;
+  letter-spacing:-.02em;
+  color:#eef4fb;
+  font-variant-numeric:tabular-nums;
+}
+.qa-count-card.actual .qa-count-v{color:#7ee9a8}
+
+/* Calculator result (strength) */
+.qa-calc-result{
+  border-radius:12px;
+  overflow:hidden;
+  border:1px solid rgba(46,213,115,.24);
+  background:#0a121d;
+}
+.qa-calc-row{
+  display:grid;
+  grid-template-columns:200px 140px 1fr;
+  gap:16px;
+  align-items:center;
+  padding:14px 18px;
+  border-bottom:1px solid rgba(46,213,115,.12);
+}
+.qa-calc-row:last-child{border-bottom:0}
+@media(max-width:680px){
+  .qa-calc-row{grid-template-columns:1fr;gap:4px;text-align:left}
+}
+.qa-calc-k{
+  font-family:var(--mono);
+  font-size:10.5px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--dim);
+}
+.qa-calc-v{
+  font-family:var(--mono);
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:-.02em;
+  color:#7ee9a8;
+  font-variant-numeric:tabular-nums;
+}
+.qa-calc-unit{
+  font-size:14px;
+  color:var(--muted);
+  margin-left:2px;
+}
+.qa-calc-note{
+  font-family:var(--mono);
+  font-size:11.5px;
+  color:var(--muted);
+  font-style:italic;
+}
+
+/* Strength list */
+.qa-strength-list{
+  list-style:none;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  gap:11px;
+  margin-top:4px;
+}
+.qa-strength-list li{
+  font-size:13.5px;
+  color:#b3c0d2;
+  line-height:1.6;
+  padding-left:22px;
+  position:relative;
+}
+.qa-strength-list li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  top:0;
+  color:#2ed573;
+  font-family:var(--mono);
+  font-size:12px;
+  font-weight:800;
+}
+.qa-strength-list li strong{color:#eef4fb;font-weight:640}
+
+/* ── PRIORITY ORDER ── */
+.qa-priority{
+  border:1px solid rgba(231,181,68,.28);
+  border-radius:18px;
+  background:
+    radial-gradient(700px 300px at 0% 0%, rgba(231,181,68,.05), transparent 60%),
+    linear-gradient(180deg,#0a1220,#0c1420);
+  padding:28px 30px;
+  position:relative;
+  overflow:hidden;
+  margin-bottom:32px;
+}
+.qa-priority::before{
+  content:"";
+  position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  animation:qa-scan 3s ease-in-out infinite;
+  opacity:.5;
+}
+.qa-priority-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:16px;
+  flex-wrap:wrap;
+  margin-bottom:22px;
+}
+.qa-priority-tag{
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--gold);
+  font-weight:700;
+}
+.qa-priority-note{
+  font-family:var(--mono);
+  font-size:11px;
+  color:var(--muted);
+}
+.qa-priority-list{
+  list-style:none;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  counter-reset:none;
+}
+.qa-priority-list li{
+  display:grid;
+  grid-template-columns:44px 1fr auto;
+  gap:16px;
+  align-items:center;
+  padding:14px 18px;
+  border-radius:12px;
+  background:rgba(255,255,255,.02);
+  border:1px solid var(--line-2);
+  transition:all .3s;
+}
+.qa-priority-list li:hover{
+  transform:translateX(4px);
+  border-color:rgba(231,181,68,.35);
+  background:rgba(231,181,68,.03);
+}
+@media(max-width:560px){
+  .qa-priority-list li{grid-template-columns:36px 1fr;gap:12px}
+  .qa-p-tag{grid-column:1/-1;justify-self:start}
+}
+.qa-p-n{
+  font-family:var(--mono);
+  font-size:16px;
+  font-weight:800;
+  letter-spacing:-.02em;
+  color:var(--gold);
+  text-align:center;
+}
+.qa-p-body{min-width:0}
+.qa-p-t{
+  font-size:14px;
+  font-weight:660;
+  color:#eef4fb;
+  letter-spacing:-.008em;
+  margin-bottom:4px;
+}
+.qa-p-d{
+  font-size:12.8px;
+  color:#98a9bd;
+  line-height:1.5;
+}
+.qa-p-d strong{color:#dbe4f0;font-weight:640}
+.qa-p-tag{
+  font-family:var(--mono);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  padding:5px 11px;
+  border-radius:999px;
+  white-space:nowrap;
+}
+.qa-p-tag.now{background:rgba(255,107,107,.14);color:#ff9aa4;border:1px solid rgba(255,107,107,.32)}
+.qa-p-tag.soon{background:rgba(255,176,32,.14);color:#ffd08a;border:1px solid rgba(255,176,32,.32)}
+.qa-p-tag.next{background:rgba(96,165,250,.12);color:#a0c4ff;border:1px solid rgba(96,165,250,.28)}
+
+/* ── METHOD NOTE ── */
+.qa-method{
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+  padding:18px 22px;
+  border-radius:14px;
+  background:rgba(92,124,255,.04);
+  border:1px dashed rgba(92,124,255,.26);
+}
+.qa-method-ic{
+  color:var(--bayan-soft);
+  font-size:14px;
+  flex:0 0 auto;
+  padding-top:2px;
+}
+.qa-method-text{
+  font-size:13.3px;
+  color:#b3c0d2;
+  line-height:1.7;
+}
+.qa-method-text strong{color:#fff;font-weight:640}
+.qa-method-text em{color:#dbe4f0;font-style:italic}
+.qa-method-text code{
+  font-family:var(--mono);
+  font-size:12px;
+  color:#9fd8dd;
+  background:#0a1219;
+  border:1px solid #14252b;
+  border-radius:4px;
+  padding:1px 6px;
+}
+</style>
+
+<script>
+/* ═══════════════════════════════════════════════════════════
+   PRODUCT QA — interactive behaviors
+   ═══════════════════════════════════════════════════════════ */
+(function(){
+  "use strict";
+
+  const root = document.getElementById('product-qa-sec');
+  if (!root) return;
+
+  /* ---------- Health ring count-up ---------- */
+  const ring = root.querySelector('#qaRing');
+  const ringNum = root.querySelector('#qaRingNum');
+  if (ring && ringNum) {
+    const DASH = 452;
+    const target = 72;
+    const finalOffset = DASH * (1 - target / 100);
+
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        ring.style.strokeDashoffset = finalOffset;
+        const dur = 1600;
+        const t0 = performance.now();
+        const tick = (now) => {
+          const p = Math.min(1, (now - t0) / dur);
+          const eased = 1 - Math.pow(1 - p, 3);
+          ringNum.textContent = Math.round(target * eased);
+          if (p < 1) requestAnimationFrame(tick);
+          else ringNum.textContent = target;
+        };
+        requestAnimationFrame(tick);
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.3 });
+    obs.observe(ring);
+  }
+
+  /* ---------- Expand / collapse findings ---------- */
+  root.querySelectorAll('.qa-finding').forEach(finding => {
+    const head = finding.querySelector('.qa-head');
+    head.addEventListener('click', () => {
+      const isOpen = finding.classList.contains('qa-open');
+      // exclusive: close others in the same section
+      root.querySelectorAll('.qa-finding').forEach(f => {
+        f.classList.remove('qa-open');
+        const h = f.querySelector('.qa-head');
+        if (h) h.setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        finding.classList.add('qa-open');
+        head.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  /* ---------- Severity filter ---------- */
+  const filterBtns = root.querySelectorAll('.qa-chip');
+  const findings = root.querySelectorAll('.qa-finding');
+  const activeFilters = new Set(['high', 'med', 'low', 'strength']);
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.qaFilter;
+
+      if (filter === 'all') {
+        // Toggle all on
+        if (activeFilters.size === 4) {
+          activeFilters.clear();
+        } else {
+          ['high', 'med', 'low', 'strength'].forEach(f => activeFilters.add(f));
+        }
+      } else {
+        if (activeFilters.has(filter)) {
+          activeFilters.delete(filter);
+        } else {
+          activeFilters.add(filter);
+        }
+      }
+
+      // Update chip active state
+      filterBtns.forEach(b => {
+        const f = b.dataset.qaFilter;
+        if (f === 'all') {
+          b.classList.toggle('active', activeFilters.size === 4);
+        } else {
+          b.classList.toggle('active', activeFilters.has(f));
+        }
+      });
+
+      // Show / hide findings
+      findings.forEach(finding => {
+        const sev = finding.dataset.sev;
+        const shouldShow = activeFilters.has(sev);
+        finding.classList.toggle('qa-hidden', !shouldShow);
+      });
+    });
+  });
+
+  /* ---------- Keyboard: Escape collapses open card ---------- */
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      root.querySelectorAll('.qa-finding.qa-open').forEach(f => {
+        f.classList.remove('qa-open');
+        const h = f.querySelector('.qa-head');
+        if (h) h.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+})();
+</script>

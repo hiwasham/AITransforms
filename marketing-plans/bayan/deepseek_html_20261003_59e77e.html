@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bayan — Marketing Plan Research Record</title>
+<style>
+  :root{
+    --ink:#0a0d14;
+    --ink2:#0f131c;
+    --panel:#151b26;
+    --panel2:#1a2230;
+    --line:#232c3b;
+    --txt:#eef2f9;
+    --mut:#8b95a9;
+    --mut2:#5a6477;
+    --bayan:#1a4ff5;
+    --bayan2:#4d7bff;
+    --gold:#eab308;
+    --emerald:#34d399;
+    --amber:#fbbf24;
+    --rose:#f43f5e;
+    --violet:#a78bfa;
+    --cyan:#22d3ee;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);
+    color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  main{max-width:980px;margin:0 auto;padding:0 24px 80px}
+
+  /* ============ TOP NAV ============ */
+  .topnav{
+    position:sticky;top:0;z-index:50;
+    padding:12px 24px;
+    background:linear-gradient(180deg,rgba(10,13,20,.95),rgba(10,13,20,.65) 80%,transparent);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    display:flex;gap:4px;overflow-x:auto;flex-wrap:wrap;
+    border-bottom:1px solid transparent;
+    transition:border-color .3s;
+  }
+  .topnav.scrolled{border-bottom-color:var(--line)}
+  .topnav::-webkit-scrollbar{display:none}
+  .topnav a{
+    all:unset;cursor:pointer;
+    font-size:12px;font-weight:500;
+    color:var(--mut);
+    padding:7px 12px;border-radius:8px;
+    transition:.2s;white-space:nowrap;
+  }
+  .topnav a:hover{color:#c8d2e2;background:rgba(255,255,255,.04)}
+  .topnav a.active{color:#fff;background:rgba(26,79,245,.15)}
+
+  /* ============ HEADER ============ */
+  header{
+    padding:56px 0 40px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:40px;
+  }
+  header .tag{
+    display:inline-block;
+    font-size:11px;font-weight:600;
+    letter-spacing:.1em;text-transform:uppercase;
+    color:var(--bayan2);
+    background:rgba(26,79,245,.12);
+    border:1px solid rgba(26,79,245,.3);
+    padding:6px 12px;border-radius:8px;
+    margin-bottom:20px;
+  }
+  header h1{
+    font-size:36px;line-height:1.15;
+    letter-spacing:-.025em;font-weight:800;
+    color:#fff;margin-bottom:18px;
+  }
+  header .lede{
+    font-size:15.5px;line-height:1.75;
+    color:#b8c2d2;max-width:70ch;
+  }
+  header .meta{
+    display:flex;gap:24px;flex-wrap:wrap;
+    margin-top:24px;padding-top:24px;
+    border-top:1px dashed var(--line);
+    font-size:13px;color:var(--mut);
+  }
+  header .meta b{color:#cfd8e8;font-weight:600}
+
+  /* ============ AUTHORITY CALLOUT ============ */
+  .authority{
+    margin-top:28px;
+    padding:24px 26px;
+    border-radius:var(--radius);
+    background:linear-gradient(135deg,
+      rgba(244,63,94,.08),
+      rgba(244,63,94,.02) 60%,
+      transparent);
+    border:1px solid rgba(244,63,94,.35);
+    position:relative;overflow:hidden;
+  }
+  .authority::before{
+    content:"";position:absolute;
+    top:0;right:0;left:0;height:3px;
+    background:linear-gradient(90deg,var(--rose),var(--amber));
+  }
+  .authority .label{
+    font-size:11px;font-weight:700;
+    letter-spacing:.1em;text-transform:uppercase;
+    color:var(--rose);margin-bottom:12px;
+  }
+  .authority p{
+    font-size:14px;line-height:1.7;
+    color:#d8c4c8;margin-bottom:10px;
+  }
+  .authority p:last-child{margin-bottom:0}
+  .authority b{color:#fff;font-weight:600}
+  .authority .chain{
+    display:flex;align-items:center;
+    gap:10px;flex-wrap:wrap;
+    margin-top:16px;padding-top:14px;
+    border-top:1px dashed rgba(244,63,94,.25);
+    font-size:13.5px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    color:#cfd8e8;
+  }
+  .authority .chain .step{
+    padding:6px 11px;border-radius:7px;
+    background:rgba(0,0,0,.3);
+    border:1px solid var(--line);
+  }
+  .authority .chain .step.win{
+    background:rgba(244,63,94,.14);
+    color:#fff;font-weight:700;
+    border-color:rgba(244,63,94,.4);
+  }
+
+  /* ============ SECTIONS ============ */
+  section{margin-bottom:52px;scroll-margin-top:80px}
+  section h2{
+    font-size:23px;line-height:1.3;
+    letter-spacing:-.02em;font-weight:700;
+    color:#fff;margin-bottom:10px;
+    display:flex;align-items:baseline;
+    gap:14px;flex-wrap:wrap;
+  }
+  section h2 .num{
+    font-size:12.5px;font-weight:700;
+    color:var(--bayan2);
+    background:rgba(26,79,245,.12);
+    border:1px solid rgba(26,79,245,.28);
+    padding:5px 10px;border-radius:7px;
+    letter-spacing:.04em;
+  }
+  section h2.warn .num{
+    color:var(--rose);background:rgba(244,63,94,.12);
+    border-color:rgba(244,63,94,.28);
+  }
+  section .desc{
+    font-size:14.5px;color:var(--mut);
+    margin-bottom:22px;max-width:75ch;
+  }
+  section .desc b{color:#cfd8e8;font-weight:600}
+
+  /* ============ SNAPSHOT ============ */
+  .snapshot{
+    padding:26px 28px;
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    position:relative;overflow:hidden;
+  }
+  .snapshot::before{
+    content:"";position:absolute;
+    top:0;right:0;left:0;height:3px;
+    background:linear-gradient(90deg,var(--bayan),var(--gold));
+  }
+  .snapshot p{
+    font-size:15.5px;line-height:1.8;
+    color:#d5dde9;margin-bottom:18px;
+  }
+  .snapshot p:last-child{margin-bottom:0}
+  .snapshot b{color:#fff;font-weight:700}
+  .snapshot .kv{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+    gap:16px;margin-top:22px;
+    padding-top:22px;
+    border-top:1px dashed var(--line);
+  }
+  .snapshot .kv .item .k{
+    font-size:11px;font-weight:700;
+    letter-spacing:.09em;text-transform:uppercase;
+    color:var(--mut2);margin-bottom:6px;
+  }
+  .snapshot .kv .item .v{
+    font-size:14px;line-height:1.6;
+    color:#eef2f9;font-weight:500;
+  }
+  .snapshot .kv .item .v .en{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px;color:#cfd8e8;
+  }
+
+  /* ============ TABLES ============ */
+  .table-wrap{
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow-x:auto;
+    background:var(--panel);
+  }
+  table{
+    width:100%;border-collapse:collapse;
+    min-width:640px;
+  }
+  thead th{
+    background:var(--panel2);
+    font-size:11px;font-weight:600;
+    letter-spacing:.06em;text-transform:uppercase;
+    color:var(--mut);padding:14px 18px;
+    text-align:left;border-bottom:1px solid var(--line);
+    white-space:nowrap;
+  }
+  tbody td{
+    padding:16px 18px;
+    font-size:13.5px;
+    color:#cfd8e8;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+    line-height:1.6;
+  }
+  tbody tr:last-child td{border-bottom:none}
+  tbody tr:hover{background:rgba(255,255,255,.015)}
+  tbody td b{color:#fff;font-weight:600}
+  tbody td .product-name{
+    font-size:14.5px;font-weight:700;
+    color:#fff;margin-bottom:4px;
+    display:block;
+  }
+  tbody td .tagline{
+    font-size:11.5px;font-weight:600;
+    color:var(--bayan2);
+    letter-spacing:.02em;
+    font-style:italic;
+    margin-bottom:6px;
+    display:block;
+  }
+  tbody td .status{
+    display:inline-block;
+    font-size:10.5px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;
+    padding:3px 8px;border-radius:6px;
+    margin-bottom:6px;
+  }
+  tbody td .status.live{
+    background:rgba(52,211,153,.14);
+    color:var(--emerald);
+    border:1px solid rgba(52,211,153,.3);
+  }
+  tbody td .status.dev{
+    background:rgba(251,191,36,.14);
+    color:var(--amber);
+    border:1px solid rgba(251,191,36,.3);
+  }
+
+  /* ============ QUOTE CARDS ============ */
+  .quote-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:12px;
+  }
+  .quote{
+    padding:20px 22px;
+    border-radius:12px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+  }
+  .quote::before{
+    content:"";position:absolute;
+    top:0;right:0;bottom:0;width:3px;
+    background:rgb(var(--qc));
+  }
+  .quote .label{
+    font-size:10.5px;font-weight:700;
+    letter-spacing:.09em;text-transform:uppercase;
+    color:rgb(var(--qc));
+    margin-bottom:12px;
+  }
+  .quote .text{
+    font-size:14.5px;line-height:1.7;
+    color:#eef2f9;font-style:italic;
+  }
+  .quote .text::before{content:"“"}
+  .quote .text::after{content:"”"}
+  .quote .who{
+    margin-top:12px;padding-top:12px;
+    border-top:1px dashed var(--line);
+    font-size:11.5px;color:var(--mut2);
+    font-style:normal;font-weight:500;
+  }
+  .quote.c-blue{--qc:26,79,245}
+  .quote.c-emerald{--qc:52,211,153}
+  .quote.c-amber{--qc:251,191,36}
+  .quote.c-violet{--qc:167,139,250}
+  .quote.c-rose{--qc:244,63,94}
+
+  /* ============ PLAN LADDER ============ */
+  .plan-ladder{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    margin-bottom:16px;
+  }
+  .plan{
+    padding:20px 18px;
+    border-radius:12px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+  }
+  .plan::before{
+    content:"";position:absolute;
+    top:0;right:0;left:0;height:3px;
+    background:rgb(var(--pc));
+  }
+  .plan.p1{--pc:148,163,184}
+  .plan.p2{--pc:34,211,238}
+  .plan.p3{--pc:167,139,250;border-color:rgba(167,139,250,.4)}
+  .plan.p4{--pc:26,79,245;border-color:rgba(26,79,245,.5);
+    background:linear-gradient(180deg,rgba(26,79,245,.06),var(--panel))}
+  .plan .n{
+    font-size:11px;font-weight:700;
+    letter-spacing:.1em;text-transform:uppercase;
+    color:rgb(var(--pc));
+    margin-bottom:10px;
+  }
+  .plan .name{
+    font-size:14px;font-weight:700;
+    color:#fff;line-height:1.3;
+    margin-bottom:10px;
+    min-height:36px;
+  }
+  .plan .scope{
+    font-size:11.5px;line-height:1.55;
+    color:var(--mut);
+    margin-bottom:14px;
+    min-height:56px;
+  }
+  .plan .price{
+    padding-top:12px;
+    border-top:1px dashed var(--line);
+    font-size:18px;font-weight:800;
+    color:rgb(var(--pc));
+    letter-spacing:-.02em;
+    font-variant-numeric:tabular-nums;
+  }
+  .plan .price small{
+    font-size:11px;font-weight:500;
+    color:var(--mut2);letter-spacing:0;
+    margin-left:3px;
+  }
+  .plan .status{
+    display:inline-block;
+    margin-top:10px;
+    font-size:10px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;
+    padding:3px 7px;border-radius:5px;
+  }
+  .plan.p1 .status{background:rgba(148,163,184,.14);
+    color:#cbd5e1;border:1px solid rgba(148,163,184,.3)}
+  .plan.p3 .status{background:rgba(167,139,250,.14);
+    color:var(--violet);border:1px solid rgba(167,139,250,.3)}
+
+  /* ============ BRAND GRID ============ */
+  .brand-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:12px;
+  }
+  .brand-item{
+    padding:18px 20px;
+    border-radius:12px;
+    background:var(--panel);
+    border:1px solid var(--line);
+  }
+  .brand-item .k{
+    font-size:10.5px;font-weight:700;
+    letter-spacing:.09em;text-transform:uppercase;
+    color:var(--bayan2);margin-bottom:10px;
+  }
+  .brand-item .v{
+    font-size:14px;line-height:1.65;
+    color:#eef2f9;font-weight:500;
+  }
+  .brand-item .v b{color:#fff;font-weight:700}
+  .brand-item .v code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ CONFLICTS LIST ============ */
+  .conflicts{
+    list-style:none;counter-reset:cf;
+    display:flex;flex-direction:column;gap:10px;
+  }
+  .conflicts li{
+    counter-increment:cf;
+    display:flex;gap:16px;align-items:flex-start;
+    padding:16px 20px;
+    border-radius:12px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    font-size:14px;line-height:1.7;
+    color:#cfd8e8;
+    position:relative;
+    transition:.2s;
+  }
+  .conflicts li:hover{
+    border-color:rgba(251,191,36,.4);
+    background:rgba(251,191,36,.03);
+  }
+  .conflicts li::before{
+    content:counter(cf);
+    flex:0 0 30px;width:30px;height:30px;
+    border-radius:9px;
+    display:grid;place-items:center;
+    font-size:13px;font-weight:800;
+    background:rgba(251,191,36,.15);
+    color:var(--amber);
+    border:1px solid rgba(251,191,36,.32);
+    font-variant-numeric:tabular-nums;
+    margin-top:2px;
+  }
+  .conflicts li b{color:#fff;font-weight:600}
+  .conflicts li.resolved::before{
+    background:rgba(52,211,153,.15);
+    color:var(--emerald);
+    border-color:rgba(52,211,153,.32);
+  }
+  .conflicts li .tag-resolved{
+    display:inline-block;
+    font-size:10px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;
+    padding:3px 8px;border-radius:5px;
+    background:rgba(52,211,153,.14);
+    color:var(--emerald);
+    border:1px solid rgba(52,211,153,.3);
+    margin-right:8px;
+  }
+  .conflicts li .tag-open{
+    display:inline-block;
+    font-size:10px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;
+    padding:3px 8px;border-radius:5px;
+    background:rgba(244,63,94,.14);
+    color:var(--rose);
+    border:1px solid rgba(244,63,94,.3);
+    margin-right:8px;
+  }
+
+  /* ============ CALLOUTS ============ */
+  .callout{
+    padding:20px 24px;
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    margin-top:16px;
+    display:flex;gap:18px;align-items:flex-start;
+  }
+  .callout .icon{
+    flex:0 0 36px;width:36px;height:36px;
+    border-radius:10px;
+    display:grid;place-items:center;
+    font-size:17px;
+  }
+  .callout .body{flex:1;min-width:0}
+  .callout .body .label{
+    font-size:11px;font-weight:700;
+    letter-spacing:.09em;text-transform:uppercase;
+    margin-bottom:8px;
+  }
+  .callout .body p{
+    font-size:13.5px;line-height:1.7;
+    color:#b8c2d2;
+  }
+  .callout .body p + p{margin-top:10px}
+  .callout .body b{color:#fff;font-weight:600}
+  .callout .body code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+  .callout.warn{
+    background:rgba(251,191,36,.05);
+    border-color:rgba(251,191,36,.3);
+  }
+  .callout.warn .icon{
+    background:rgba(251,191,36,.15);
+    color:var(--amber);
+    border:1px solid rgba(251,191,36,.35);
+  }
+  .callout.warn .label{color:var(--amber)}
+  .callout.danger{
+    background:rgba(244,63,94,.05);
+    border-color:rgba(244,63,94,.3);
+  }
+  .callout.danger .icon{
+    background:rgba(244,63,94,.15);
+    color:var(--rose);
+    border:1px solid rgba(244,63,94,.35);
+  }
+  .callout.danger .label{color:var(--rose)}
+  .callout.info .icon{
+    background:rgba(26,79,245,.15);
+    color:var(--bayan2);
+    border:1px solid rgba(26,79,245,.35);
+  }
+  .callout.info .label{color:var(--bayan2)}
+  .callout.emerald .icon{
+    background:rgba(52,211,153,.15);
+    color:var(--emerald);
+    border:1px solid rgba(52,211,153,.35);
+  }
+  .callout.emerald .label{color:var(--emerald)}
+
+  /* ============ LIVE CAPTURE TABLE ============ */
+  .capture-note{
+    padding:16px 20px;
+    border-radius:12px;
+    background:rgba(26,79,245,.05);
+    border:1px solid rgba(26,79,245,.28);
+    font-size:13px;line-height:1.65;
+    color:#b8c2d2;
+    margin-bottom:16px;
+  }
+  .capture-note b{color:#fff;font-weight:600}
+  .capture-table td .num{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13px;color:#dfe7f4;
+    font-variant-numeric:tabular-nums;
+  }
+  .capture-table td.drift{
+    color:var(--rose);
+    font-weight:600;
+  }
+
+  /* ============ PULL QUOTE ============ */
+  .pull-quote{
+    padding:24px 28px;
+    border-radius:var(--radius);
+    background:linear-gradient(135deg,rgba(26,79,245,.06),transparent 70%);
+    border-left:4px solid var(--bayan);
+    margin:20px 0;
+    font-size:17px;line-height:1.6;
+    color:#eef2f9;font-style:italic;
+  }
+  .pull-quote .attr{
+    display:block;margin-top:12px;
+    font-size:12px;font-style:normal;
+    color:var(--mut2);
+    letter-spacing:.04em;
+  }
+
+  /* ============ FOOTER ============ */
+  footer{
+    padding-top:32px;
+    margin-top:56px;
+    border-top:1px solid var(--line);
+    font-size:12.5px;
+    color:var(--mut2);
+    text-align:center;
+    line-height:1.8;
+  }
+  footer .mark{color:var(--bayan2);font-weight:600}
+  footer code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.04);
+    padding:2px 7px;border-radius:5px;
+    color:#cfd8e8;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:720px){
+    main{padding:0 16px 60px}
+    header{padding:40px 0 30px;margin-bottom:32px}
+    header h1{font-size:24px}
+    header .lede{font-size:14.5px}
+    section{margin-bottom:40px}
+    section h2{font-size:19px}
+    .snapshot{padding:20px}
+    .snapshot p{font-size:14.5px}
+    .plan-ladder{
+      grid-template-columns:1fr 1fr;gap:10px;
+    }
+    .plan .name{font-size:13px;min-height:auto}
+    .plan .scope{min-height:auto}
+    .quote-grid{grid-template-columns:1fr}
+    .topnav{padding:10px 16px}
+    .topnav a{font-size:11px;padding:6px 10px}
+  }
+  @media (max-width:480px){
+    .plan-ladder{grid-template-columns:1fr}
+    header h1{font-size:21px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ TOP NAV ============ -->
+<nav class="topnav" id="topnav">
+  <a href="#snapshot">Snapshot</a>
+  <a href="#products">Products</a>
+  <a href="#icp">ICP</a>
+  <a href="#ceo">CEO</a>
+  <a href="#voc">VOC</a>
+  <a href="#ladder">Compensation</a>
+  <a href="#brand">Brand</a>
+  <a href="#capture">Live capture</a>
+  <a href="#conflicts">Conflicts</a>
+</nav>
+
+<main>
+
+  <!-- ============ HEADER ============ -->
+  <header>
+    <span class="tag">Research Record · 2026-09-21</span>
+    <h1>Bayan — Marketing Plan Research Record</h1>
+    <p class="lede">
+      Mined from <b>107 high-signal LLM conversation exports</b> (ChatGPT + Gemini).
+      Every figure quoted verbatim from the exports; <b>conflicts flagged, not
+      resolved silently</b>. This is the material base for the marketing plan.
+    </p>
+    <div class="meta">
+      <span><b>Author:</b> Nasim via Hiwa</span>
+      <span><b>Materials:</b> 367 ChatGPT + 100 Gemini files</span>
+      <span><b>Extracted:</b> 4 parallel agents</span>
+    </div>
+
+    <div class="authority">
+      <div class="label">⚑ Authority rule · CEO-set</div>
+      <p>
+        There are <b>three dated CEO reference points</b>, each superseding the
+        last. The <b>Sept-7 "Final Exhibition Board &amp; Brochure Content"
+        email is the single approved reference</b>. CEO's rule:
+        <b>"if anything on the websites conflicts with this email, this email
+        takes priority."</b>
+      </p>
+      <div class="chain">
+        <span class="step win">Sept-7 email</span>
+        <span>›</span>
+        <span class="step">Sept-5 WhatsApp</span>
+        <span>›</span>
+        <span class="step">Aug-29 brief</span>
+        <span>›</span>
+        <span class="step">Live sites</span>
+      </div>
+      <p style="margin-top:16px">
+        ⚠ <b>Data still churns</b> — the clinical-question count alone appears as
+        <code>3,550 / 4,000 / 5,000 / 5,500 / 5,760</code> across sources.
+        Lock one number + one URL with the CEO before any public copy. This is
+        the <b>#1 pre-print risk</b>.
+      </p>
+    </div>
+  </header>
+
+  <!-- ============ COMPANY SNAPSHOT ============ -->
+  <section id="snapshot">
+    <h2><span class="num">01</span> Company snapshot</h2>
+    <p class="desc">
+      Master brand, stage, and product roster — from the CEO's Sept-7 canonical set.
+    </p>
+
+    <div class="snapshot">
+      <p>
+        <b>Bayan AI Technologies</b> is an Oman-born medical EdTech + AI company —
+        an AI-powered medical education and clinical-decision ecosystem built by
+        physicians and nurse educators, expanding from Oman to the Gulf/MENA and
+        globally.
+      </p>
+      <p>
+        <b>Legal:</b> شركة بيان لتقنيات الذكاء الاصطناعي · reg <b>165873</b>.
+        <b>Built by:</b> MedResearch Academy, Muscat
+        (<span class="en">medresearch-academy.om</span>). <b>Stage:</b> early,
+        &lt;$1M. Has investors; growth is investment-led.
+      </p>
+      <div class="kv">
+        <div class="item">
+          <div class="k">CEO</div>
+          <div class="v">Dr. Abdullah Al-Alawi<br><span class="en">physician-researcher</span></div>
+        </div>
+        <div class="item">
+          <div class="k">Sub-brand tagline formula</div>
+          <div class="v">"Intelligence for Better ___"</div>
+        </div>
+        <div class="item">
+          <div class="k">Master tagline</div>
+          <div class="v">Where Medicine Meets Intelligence</div>
+        </div>
+        <div class="item">
+          <div class="k">Arabic slogan</div>
+          <div class="v">«من عمان للعالم»<br><span class="en">From Oman to the World</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCTS ============ -->
+  <section id="products">
+    <h2><span class="num">02</span> Product family · final 5</h2>
+    <p class="desc">
+      CEO's canonical site list: <b>bayan.edu.om, bayanai.tech, medad.om,
+      Journalready.ai, medresearch-academy.om</b>. OHealth and oLearn removed
+      from exhibition materials.
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:32%">Product</th>
+            <th style="width:12%">Status</th>
+            <th>Key figures</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <span class="product-name">Bayan Learning</span>
+              <span class="tagline">"Intelligence for Better Learning"</span>
+              <b style="color:var(--bayan2)">FLAGSHIP · "our main product"</b>
+            </td>
+            <td><span class="status live">LIVE</span></td>
+            <td>
+              5,500+ questions (actual 5,589) · <b>23 licensing/board exams</b> ·
+              470+ articles · 250+ drug monographs · 30+ countries · 1,200+ pros.
+              Free in Oman; 20% code <code style="font-family:monospace">Oman@2026</code> outside.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="product-name">PreOp</span>
+              <span class="tagline">"Intelligence for Better Preoperative"</span>
+            </td>
+            <td><span class="status live">LIVE</span></td>
+            <td>
+              18 tools · 14 calculators · 39 meds. <b>$7.99/mo · $79.99/yr</b>,
+              free only in Oman. Guideline-based, <b>not AI-invented</b>.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="product-name">JournalReady</span>
+              <span class="tagline">"Intelligence for Better Research"</span>
+            </td>
+            <td><span class="status live">LIVE</span></td>
+            <td>
+              31 AI tools · 6 stages · 55 endpoints. 3 free AI uses (total, not/day).
+              <b>⚠ Pricing unresolved</b> — see conflicts.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="product-name">Medad</span>
+              <span class="tagline">"Intelligence for Better Documentation"</span>
+            </td>
+            <td><span class="status dev">IN DEV</span></td>
+            <td>
+              Arabic ambient clinical documentation. 11,300 hrs corpus ·
+              52 annotators · RIA-funded. <b>Launching Mid 2027.</b>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="product-name">SmartRota</span>
+              <span class="tagline">"Intelligence for Better Scheduling"</span>
+            </td>
+            <td><span class="status live">LIVE</span></td>
+            <td>
+              290+ active residents · OMSB-compliant · multi-hospital.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout warn">
+      <div class="icon">⚠</div>
+      <div class="body">
+        <div class="label">Cut from exhibition roster</div>
+        <p>
+          <b>OHealth — removed.</b> CEO verbatim: <i>"Please REMOVE OHealth from
+          the exhibition materials. We will not include it."</i> Still an in-dev
+          product (98 hospitals / 9,706 beds / 27 diseases), but out of the pitch.
+        </p>
+        <p>
+          <b>oLearn — not a standalone product.</b> Internal education module
+          inside Bayan. Removed from exhibition.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ICP ============ -->
+  <section id="icp">
+    <h2><span class="num">03</span> ICP · Ideal customer profile</h2>
+
+    <div class="quote-grid">
+      <div class="quote c-blue">
+        <div class="label">Primary · who we serve</div>
+        <div class="text">Physicians, residents, medical students, and nurses preparing for Gulf and international licensing + board exams. <b>NOT the general public.</b></div>
+        <div class="who">CEO + Nasim both explicit</div>
+      </div>
+
+      <div class="quote c-violet">
+        <div class="label">Segmented by exam track</div>
+        <div class="text">
+          <b>Doctors</b> → OMSB / DHA / MOH / SCFHS / QCHP / NHRA.
+          <b>Residents</b> → Arab Board / OMSB / MRCP / ABIM.
+          <b>Nurses</b> → OEN / SNLE / DHA / Prometric / NCLEX-RN.
+        </div>
+        <div class="who">Exam catalog (28 entries)</div>
+      </div>
+
+      <div class="quote c-emerald">
+        <div class="label">Secondary · B2B</div>
+        <div class="text">Hospitals, clinics, universities, pharma — Healthcare Tourism Platforms / Digital Medical Ecosystems / Professional Licensing &amp; Training Solutions.</div>
+        <div class="who">Institutional lane</div>
+      </div>
+
+      <div class="quote c-amber">
+        <div class="label">Stated vs real problem</div>
+        <div class="text">Learners say <i>"help me pass the exam"</i> — the real job is <i>"I stopped guessing what to study."</i> Targeted, confidence-building prep.</div>
+        <div class="who">Client-preferred ad line, VOC</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CEO ============ -->
+  <section id="ceo">
+    <h2><span class="num">04</span> CEO — Dr. Abdullah Al-Alawi</h2>
+    <p class="desc">
+      The buyer. Highest-signal section — this is who the plan must convince.
+    </p>
+
+    <div class="snapshot">
+      <p>
+        <b>Biography — the "Nabtat Jinan" documentary:</b> grew up in Wilayat
+        Yanqul, Al-Dhahirah, Oman. Family survived the early-1990s drought and
+        rebuilt their farms. <b>Top graduate, Sultan Qaboos University</b> College
+        of Medicine → SQU Hospital → <b>6 years in Darwin, Australia</b> (internal
+        + acute medicine) + MSc Epidemiology → returned to Oman <b>2018</b>.
+      </p>
+      <p>
+        <b>Signature research:</b> led a magnesium &amp; human health review
+        (~2017) with <b>600+ citations</b>, seeding 13+ international papers across
+        Oman, Australia, Sweden, USA. Founded <b>"Shiryan" (شريان)</b> public-health
+        program.
+      </p>
+      <div class="kv">
+        <div class="item">
+          <div class="k">Degrees</div>
+          <div class="v">B.Sc. · MD (Distinction, SQU) · M.Sc. Clinical Epidemiology (Newcastle) · M.Sc. Health Research (Charles Darwin) · FRACP · FACP</div>
+        </div>
+        <div class="item">
+          <div class="k">Publications</div>
+          <div class="v"><span class="en">88 pubs · 1,777+ citations · H-index 18</span></div>
+        </div>
+        <div class="item">
+          <div class="k">Research grants</div>
+          <div class="v"><span class="en">104,700+ OMR</span> competitive</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout danger" style="margin-top:16px">
+      <div class="icon">⚠</div>
+      <div class="body">
+        <div class="label">Compliance rule · CEO-set</div>
+        <p>
+          <b>Do NOT cite SQUH / OMSB / Sultan Qaboos University or any hospital
+          as his employer</b> (conflict-of-interest). Keep MedResearch Academy a
+          separate brand from Bayan.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VOC ============ -->
+  <section id="voc">
+    <h2><span class="num">05</span> CEO voice · the buyer VOC</h2>
+    <p class="desc">
+      His own words, verbatim. The purest signal in the record — shape the pitch
+      around these.
+    </p>
+
+    <div class="quote-grid">
+      <div class="quote c-blue">
+        <div class="label">Core decision criterion</div>
+        <div class="text">I car about the outcome rather than number of post etc.</div>
+        <div class="who">Lead with business outcomes, not vanity metrics.</div>
+      </div>
+
+      <div class="quote c-emerald">
+        <div class="label">Offered founding-team status</div>
+        <div class="text">you are part of founding team ... you will be part of the gain.</div>
+        <div class="who">Revenue share over high cash.</div>
+      </div>
+
+      <div class="quote c-violet">
+        <div class="label">Management style</div>
+        <div class="text">I like to delegate and I am not micromanaging so I will share objective and you work on them.</div>
+        <div class="who">Low-touch working relationship.</div>
+      </div>
+
+      <div class="quote c-amber">
+        <div class="label">His ideal cadence</div>
+        <div class="text">I have AI engineer she do complex tasks and I call her only twice per week. Maybe max 3 whatsapp message per week.</div>
+        <div class="who">Own the pipeline; single weekly report.</div>
+      </div>
+
+      <div class="quote c-rose">
+        <div class="label">His real frustration</div>
+        <div class="text">I have nothing to say. This is taking a lot of my time honestly.</div>
+        <div class="who">Coordination cycles — not ability — are the pain.</div>
+      </div>
+
+      <div class="quote c-blue">
+        <div class="label">Contract structure</div>
+        <div class="text">The contract is temporary for 3 months as we agreed and then we renegotiate.</div>
+        <div class="who">3-month rolling contracts.</div>
+      </div>
+
+      <div class="quote c-emerald">
+        <div class="label">Pay trigger</div>
+        <div class="text">The moment we break even in expenses and income things will be better for all new members.</div>
+        <div class="who">Break-even unlocks the raise.</div>
+      </div>
+
+      <div class="quote c-violet">
+        <div class="label">Cultural realism</div>
+        <div class="text">Basically I wanted realistic scenarios from own hospitals.</div>
+        <div class="who">Omani people, hijab, local hospitals.</div>
+      </div>
+    </div>
+
+    <div class="pull-quote">
+      I have 0 concern about you ability dear. I am fully reassured. By the way you are very intelligent.
+      <span class="attr">— The CEO has already decided Nasim is good. The pitch converts trust → a defined role, not competence.</span>
+    </div>
+  </section>
+
+  <!-- ============ COMPENSATION LADDER ============ -->
+  <section id="ladder">
+    <h2><span class="num">06</span> Compensation ladder</h2>
+    <p class="desc">
+      Nasim's four plans — fully quoted. This is the spine of the raise. The
+      CEO's stated choice was <b>Plan 1</b>; the plan's job is to move him to
+      Plan 3 or 4.
+    </p>
+
+    <div class="plan-ladder">
+      <div class="plan p1">
+        <div class="n">Plan 1</div>
+        <div class="name">Content Production</div>
+        <div class="scope">Execute scripts and ideas they provide.</div>
+        <div class="price">250–300<small>OMR/mo</small></div>
+        <div class="status">CEO's current choice</div>
+      </div>
+
+      <div class="plan p2">
+        <div class="n">Plan 2</div>
+        <div class="name">Content Strategy + Production</div>
+        <div class="scope">Ideas, scripts, formats, direction.</div>
+        <div class="price">450–500<small>OMR/mo</small></div>
+      </div>
+
+      <div class="plan p3">
+        <div class="n">Plan 3</div>
+        <div class="name">+ Social Media Management</div>
+        <div class="scope">Plan, publish, daily reels, audience, performance.</div>
+        <div class="price">650<small>OMR/mo</small></div>
+        <div class="status">Nasim's ask</div>
+      </div>
+
+      <div class="plan p4">
+        <div class="n">Plan 4</div>
+        <div class="name">+ Marketing &amp; Growth</div>
+        <div class="scope">Ads, acquisition, overall strategy — all 4 layers.</div>
+        <div class="price">900<small>OMR/mo</small></div>
+      </div>
+    </div>
+
+    <div class="callout info">
+      <div class="icon">◆</div>
+      <div class="body">
+        <div class="label">CEO commission · verbatim</div>
+        <p>
+          <b>"If you make any deal in this exhibition you are getting 20% of the
+          total confirmed sale value."</b>
+        </p>
+        <p>
+          Performance upside — sales-linked. Base: <b>"Why we don't start with
+          salary of 300 per month is one month contract you show full potentials
+          and we can renegotiate."</b>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BRAND ============ -->
+  <section id="brand">
+    <h2><span class="num">07</span> Brand system</h2>
+    <p class="desc">
+      Effectively locked, CEO-directed. Two hex systems still appear —
+      confirm the official one before any print.
+    </p>
+
+    <div class="brand-grid">
+      <div class="brand-item">
+        <div class="k">Master tagline</div>
+        <div class="v">Where Medicine Meets Intelligence<br><span style="color:var(--mut);font-size:12.5px">⚠ variant "Where Medical Meets Intelligence" appears — confirm.</span></div>
+      </div>
+
+      <div class="brand-item">
+        <div class="k">Arabic slogan</div>
+        <div class="v">«من عمان للعالم» — From Oman to the World</div>
+      </div>
+
+      <div class="brand-item">
+        <div class="k">Palette · option A</div>
+        <div class="v">Navy <code>#173A67 → #061A33</code> + gold <code>#E7B544 → #A76D13</code></div>
+      </div>
+
+      <div class="brand-item">
+        <div class="k">Palette · option B</div>
+        <div class="v">Navy <code>#0A0F1C</code> + teal <code>#00D4AA</code> + gold, per-product accents PreOp blue <code>#3B82F6</code> / Medad amber <code>#F59E0B</code> / JournalReady purple <code>#8B5CF6</code></div>
+      </div>
+
+      <div class="brand-item">
+        <div class="k">Fonts</div>
+        <div class="v">Heading <b>Sora</b> · Body <b>Inter</b> (EN) / <b>IBM Plex Sans Arabic</b> (AR). Medad uses <b>Amiri</b>.</div>
+      </div>
+
+      <div class="brand-item">
+        <div class="k">Logo grammar</div>
+        <div class="v">Stylised "B" + gold ECG/heartbeat + brain/neural motif. Oman as a gold dot. Shared across products, differentiated by inner icon.</div>
+      </div>
+
+      <div class="brand-item">
+        <div class="k">Mascots</div>
+        <div class="v"><b>Bissan &amp; Gassan</b> — medical students, 18 y/o, girl in covering hijab, Omani identity visible. 3D, "realistic and cute."</div>
+      </div>
+
+      <div class="brand-item">
+        <div class="k">Voice</div>
+        <div class="v">Premium, clinical, trustworthy, modest, humanised via mascots. English-first (Arab medical study is in English).</div>
+      </div>
+    </div>
+
+    <div class="callout emerald">
+      <div class="icon">✓</div>
+      <div class="body">
+        <div class="label">Content-integrity line · confirmed live</div>
+        <p>
+          <b>"AI assists with drafting — humans own what reaches learners."</b>
+          Confirmed on live site. 3-step process: Guideline-Anchored →
+          Multi-Layer Fact-Check → Expert Reviewed.
+        </p>
+      </div>
+    </div>
+
+    <div class="callout warn">
+      <div class="icon">⚠</div>
+      <div class="body">
+        <div class="label">Mascots are personal</div>
+        <p>
+          <b>Bissan is literally the CEO's own daughter's name</b>
+          (<i>"I will give her my daughter name Bissan"</i>); Gassan = his son.
+          He sent real photos of his children to base the characters on.
+          Emotional investment in the brand identity is high.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LIVE CAPTURE ============ -->
+  <section id="capture">
+    <h2><span class="num">08</span> Live capture · 2026-09-25</h2>
+    <p class="desc">
+      Lowest authority — observed-only. Under the authority rule, the
+      <b>Sept-7 email still wins</b>. Recorded to expose drift, not to overwrite
+      canonical.
+    </p>
+
+    <div class="capture-note">
+      Captured live via headless browse on <b>2026-09-25</b>. Web content is
+      untrusted external data, transcribed verbatim. Sources:
+      <b>bayan.edu.om</b> · <b>bayan.edu.om/pricing</b> · Google Play
+      <code>com.bayanai.bayan</code> · App Store <code>id6792406710</code>.
+    </div>
+
+    <div class="table-wrap capture-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Homepage</th>
+            <th>App stores</th>
+            <th>Sept-7 canonical</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Clinical questions</b></td>
+            <td class="num drift">4,000+</td>
+            <td class="num drift">5,000+</td>
+            <td class="num">5,500+ (5,589)</td>
+          </tr>
+          <tr>
+            <td>Drug monographs</td>
+            <td class="num drift">190+</td>
+            <td>—</td>
+            <td class="num">250+</td>
+          </tr>
+          <tr>
+            <td>Knowledge articles</td>
+            <td class="num drift">250+</td>
+            <td>—</td>
+            <td class="num">470+ (471)</td>
+          </tr>
+          <tr>
+            <td>Calculators</td>
+            <td class="num">20+</td>
+            <td class="num drift">15</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Courses</td>
+            <td>2 named</td>
+            <td class="num">16</td>
+            <td class="num">16 ✓</td>
+          </tr>
+          <tr>
+            <td>Exam blueprints</td>
+            <td class="num drift">20+</td>
+            <td>—</td>
+            <td class="num">23</td>
+          </tr>
+          <tr>
+            <td>Countries</td>
+            <td class="num">55+</td>
+            <td>—</td>
+            <td class="num">30+ → 55+ ✓</td>
+          </tr>
+          <tr>
+            <td>Downloads / ratings</td>
+            <td>—</td>
+            <td class="num drift">50+ installs · 0 ratings</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout danger" style="margin-top:16px">
+      <div class="icon">⚑</div>
+      <div class="body">
+        <div class="label">Pre-traction signal · strongest honest pitch angle</div>
+        <p>
+          <b>50+ installs, zero ratings on both stores.</b> Confirms the
+          "instrument the funnel before promising growth" stance. This is the
+          single most useful number in the record for a candid pitch.
+        </p>
+      </div>
+    </div>
+
+    <div class="callout info" style="margin-top:12px">
+      <div class="icon">◆</div>
+      <div class="body">
+        <div class="label">Net-new intel · product pricing</div>
+        <p>
+          Live product pricing is <b>USD subscription, not OMR</b>. Tiers:
+          Physician <b>$199/yr ($29.99/mo)</b> · Nurse <b>$129/yr ($19.99/mo)</b>
+          · Student <b>$59–69/yr ($9.99/mo)</b>. 30-day free trial; free tier
+          5 Q/day, 1 OSCE/day, 5 articles/mo.
+        </p>
+        <p>
+          <b>Institutional:</b> $35 student / $69 nurse / $99 physician per seat,
+          min 20 seats, invoice-based. Contact
+          <code>info@medresearch-academy.om</code>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONFLICTS ============ -->
+  <section id="conflicts">
+    <h2 class="warn"><span class="num">09</span> Conflicts to resolve</h2>
+    <p class="desc">
+      Resolve before any public copy. These are the drift markers that will
+      bite if ignored.
+    </p>
+
+    <ul class="conflicts">
+      <li>
+        <div>
+          <span class="tag-open">Open · highest risk</span>
+          <b>Metric drift on question count.</b>
+          3,550 → 4,000 → 5,000 → 5,500 → 5,760 → 10,000+. Sept-7 says 5,500+
+          (5,589). Live 2026-09-25: homepage 4,000+, stores 5,000+.
+          <b>The 5,500+ figure now appears on ZERO live source</b> — but it is
+          baked into the CEO-demo <code>marketing plan.html</code>. The 10,000+
+          is highest and least-supported. <b>Lock one number.</b>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <span class="tag-open">Open</span>
+          <b>Domains.</b>
+          bayan.edu.om vs bayanai.tech vs www.BayanAi.tech vs old bayan-ai.com.
+          Pick one canonical primary URL.
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <span class="tag-open">Open</span>
+          <b>Tagline.</b>
+          "Where Medicine Meets Intelligence" vs "Where Medical Meets
+          Intelligence." Confirm. Alt candidate: "Achieve Better. With Bayan."
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <span class="tag-open">Open</span>
+          <b>CEO surname spelling.</b>
+          Al-Alawi / Al Alawi / العلوي / Alavi. Standardise.
+        </div>
+      </li>
+
+      <li class="resolved">
+        <div>
+          <span class="tag-resolved">Resolved for exhibition</span>
+          <b>Product roster.</b>
+          Final 5: Bayan Learning, PreOp, JournalReady, Medad, SmartRota.
+          OHealth + oLearn OUT. Get written confirm.
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <span class="tag-open">Open</span>
+          <b>JournalReady pricing.</b>
+          $4.99/$29.99 vs $19/$144 + $39/$288 (opposite directions across two
+          email reads). Confirm from source.
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <span class="tag-open">Open</span>
+          <b>Brand hex.</b>
+          Two systems (navy/gold vs navy/teal/gold). No official guide locked.
+          Request logo files.
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <span class="tag-open">Open</span>
+          <b>Logo subline typo.</b>
+          "AI TECHNOLOGIS" appeared in some generated art.
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <span class="tag-open">Open</span>
+          <b>Drug monographs.</b>
+          Sept-7 canonical 250+ vs live homepage 190+. Reconcile.
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <span class="tag-open">Open</span>
+          <b>Knowledge articles.</b>
+          Sept-7 canonical 470+ vs live homepage 250+. Reconcile.
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <span class="tag-open">Open</span>
+          <b>Calculators.</b>
+          Homepage "20+" vs stores "15." Confirm actual count.
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <span class="tag-open">Open</span>
+          <b>Product currency.</b>
+          Record carries an OMR service ladder; live product pricing is USD
+          ($9.99–$199.99). Confirm which pricing belongs where before any copy
+          quotes a price.
+        </div>
+      </li>
+
+      <li class="resolved">
+        <div>
+          <span class="tag-resolved">Resolved · 55+</span>
+          <b>Countries.</b>
+          Live homepage shows "55+ countries," matching the CEO's WhatsApp
+          "55 countries." Supersedes 30+/32.
+        </div>
+      </li>
+    </ul>
+
+    <div class="callout danger" style="margin-top:16px">
+      <div class="icon">⚠</div>
+      <div class="body">
+        <div class="label">The #1 pre-print risk</div>
+        <p>
+          <b>The clinical-question count.</b> A banner number that contradicts
+          the live app kills credibility. Lock one number + one URL with the CEO
+          before any print or public copy.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <p><span class="mark">Bayan</span> · Marketing Plan Research Record</p>
+    <p style="margin-top:6px">
+      2026-09-21 · <code>research.md</code> ·
+      companion to <code>analytics-events-spec.md</code>
+    </p>
+  </footer>
+
+</main>
+
+<script>
+/* ============ Top nav border on scroll ============ */
+const topnav = document.getElementById('topnav');
+window.addEventListener('scroll', () => {
+  topnav.classList.toggle('scrolled', window.scrollY > 20);
+}, {passive:true});
+
+/* ============ Active section highlight ============ */
+const navLinks = document.querySelectorAll('.topnav a');
+const sections = [...navLinks].map(a =>
+  document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+const navIo = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting){
+      const id = '#' + e.target.id;
+      navLinks.forEach(a => a.classList.toggle('active',
+        a.getAttribute('href') === id));
+    }
+  });
+}, {threshold:0.3, rootMargin:'-80px 0px -60% 0px'});
+
+sections.forEach(s => navIo.observe(s));
+
+/* ============ Smooth scroll ============ */
+navLinks.forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    const el = document.querySelector(id);
+    if (!el) return;
+    e.preventDefault();
+    const offset = el.getBoundingClientRect().top + window.scrollY - 70;
+    window.scrollTo({top:offset, behavior:'smooth'});
+  });
+});
+</script>
+
+</body>
+</html>

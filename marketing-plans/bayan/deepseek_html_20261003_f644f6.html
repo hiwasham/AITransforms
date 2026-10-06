@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>06 — Account &amp; Integrations · Bayan Learning</title>
+<style>
+  :root{
+    --ink:#0a0d14;
+    --ink2:#0f131c;
+    --panel:#151b26;
+    --panel2:#1a2230;
+    --line:#232c3b;
+    --txt:#eef2f9;
+    --mut:#8b95a9;
+    --mut2:#5a6477;
+    --bayan:#1a4ff5;
+    --bayan2:#4d7bff;
+    --emerald:#34d399;
+    --amber:#fbbf24;
+    --rose:#f43f5e;
+    --violet:#a78bfa;
+    --cyan:#22d3ee;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);
+    color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  main{max-width:1000px;margin:0 auto;padding:0 24px 80px}
+
+  /* ============ TOP NAV ============ */
+  .topnav{
+    position:sticky;top:0;z-index:50;
+    padding:12px 24px;
+    background:linear-gradient(180deg,rgba(10,13,20,.95),rgba(10,13,20,.65) 80%,transparent);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    display:flex;gap:4px;overflow-x:auto;flex-wrap:wrap;
+    border-bottom:1px solid transparent;
+    transition:border-color .3s;
+  }
+  .topnav.scrolled{border-bottom-color:var(--line)}
+  .topnav::-webkit-scrollbar{display:none}
+  .topnav a{
+    all:unset;cursor:pointer;
+    font-size:12px;font-weight:500;
+    color:var(--mut);
+    padding:7px 12px;border-radius:8px;
+    transition:.2s;white-space:nowrap;
+  }
+  .topnav a:hover{color:#c8d2e2;background:rgba(255,255,255,.04)}
+  .topnav a.active{color:#fff;background:rgba(26,79,245,.15)}
+
+  /* ============ HEADER ============ */
+  header{
+    padding:56px 0 40px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:40px;
+  }
+  header .crumbs{
+    display:flex;align-items:center;gap:10px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    color:var(--mut2);
+    margin-bottom:20px;
+    flex-wrap:wrap;
+  }
+  header .crumbs .sep{color:var(--line)}
+  header .crumbs .here{color:var(--bayan2);font-weight:600}
+
+  header .tag{
+    display:inline-block;
+    font-size:11px;font-weight:600;
+    letter-spacing:.1em;text-transform:uppercase;
+    color:var(--bayan2);
+    background:rgba(26,79,245,.12);
+    border:1px solid rgba(26,79,245,.3);
+    padding:6px 12px;border-radius:8px;
+    margin-bottom:20px;
+  }
+  header h1{
+    font-size:36px;line-height:1.15;
+    letter-spacing:-.025em;font-weight:800;
+    color:#fff;margin-bottom:18px;
+  }
+  header .lede{
+    font-size:15.5px;line-height:1.75;
+    color:#b8c2d2;max-width:72ch;
+  }
+  header .lede b{color:#fff;font-weight:600}
+  header .lede code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:5px;
+    color:#dfe7f4;
+  }
+  header .meta{
+    display:flex;gap:24px;flex-wrap:wrap;
+    margin-top:24px;padding-top:24px;
+    border-top:1px dashed var(--line);
+    font-size:13px;color:var(--mut);
+  }
+  header .meta b{color:#cfd8e8;font-weight:600}
+  header .meta code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.04);
+    padding:2px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ SECTIONS ============ */
+  section{margin-bottom:56px;scroll-margin-top:80px}
+  section h2{
+    font-size:23px;line-height:1.3;
+    letter-spacing:-.02em;font-weight:700;
+    color:#fff;margin-bottom:10px;
+    display:flex;align-items:baseline;
+    gap:14px;flex-wrap:wrap;
+  }
+  section h2 .num{
+    font-size:12.5px;font-weight:700;
+    color:var(--bayan2);
+    background:rgba(26,79,245,.12);
+    border:1px solid rgba(26,79,245,.28);
+    padding:5px 10px;border-radius:7px;
+    letter-spacing:.04em;
+  }
+  section .desc{
+    font-size:14.5px;color:var(--mut);
+    margin-bottom:22px;max-width:75ch;
+  }
+  section .desc b{color:#cfd8e8;font-weight:600}
+  section .desc code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ SCHEMA BLOCK ============ */
+  .schema{
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+    margin-bottom:16px;
+  }
+  .schema::before{
+    content:"";position:absolute;
+    top:0;right:0;bottom:0;width:3px;
+    background:rgb(var(--sc));
+  }
+  .schema.s-blue{--sc:26,79,245}
+  .schema.s-violet{--sc:167,139,250}
+  .schema.s-emerald{--sc:52,211,153}
+  .schema.s-cyan{--sc:34,211,238}
+  .schema.s-amber{--sc:251,191,36}
+  .schema.s-slate{--sc:148,163,184}
+
+  .schema-head{
+    padding:16px 22px 14px;
+    display:flex;align-items:center;
+    gap:12px;flex-wrap:wrap;
+    border-bottom:1px solid var(--line);
+  }
+  .schema-head .name{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px;
+    font-weight:700;
+    color:rgb(var(--sc));
+    letter-spacing:.03em;
+  }
+  .schema-head .tag-ml{
+    margin-left:auto;
+    font-size:10px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;
+    padding:3px 8px;border-radius:5px;
+  }
+  .tag-ml.pii{
+    background:rgba(244,63,94,.14);
+    color:var(--rose);
+    border:1px solid rgba(244,63,94,.3);
+  }
+  .tag-ml.marketing{
+    background:rgba(52,211,153,.14);
+    color:var(--emerald);
+    border:1px solid rgba(52,211,153,.3);
+  }
+  .tag-ml.b2b{
+    background:rgba(26,79,245,.14);
+    color:var(--bayan2);
+    border:1px solid rgba(26,79,245,.3);
+  }
+
+  .schema-fields{
+    padding:16px 22px 18px;
+    display:flex;flex-wrap:wrap;
+    gap:8px;
+  }
+  .field{
+    display:inline-flex;align-items:center;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:11.5px;
+    padding:5px 10px;
+    border-radius:6px;
+    background:rgba(0,0,0,.35);
+    color:#cfd8e8;
+    border:1px solid var(--line);
+    transition:.15s;
+  }
+  .field:hover{
+    background:rgba(var(--sc),.1);
+    color:#fff;
+    border-color:rgba(var(--sc),.4);
+  }
+  .field.arr::after{
+    content:"[]";color:var(--mut2);
+    margin-left:2px;opacity:.7;
+  }
+  .field.hl{
+    background:rgba(52,211,153,.12);
+    color:#6ee7b7;
+    border-color:rgba(52,211,153,.35);
+    font-weight:600;
+  }
+
+  /* ============ API RESPONSE BOX ============ */
+  .api-box{
+    margin-top:14px;
+    border-radius:11px;
+    background:#050810;
+    border:1px solid var(--line);
+    overflow:hidden;
+  }
+  .api-box .bar{
+    display:flex;align-items:center;
+    gap:8px;padding:10px 16px;
+    border-bottom:1px solid var(--line);
+    background:rgba(255,255,255,.02);
+  }
+  .api-box .bar .method{
+    font-family:ui-monospace,monospace;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:.06em;
+    padding:3px 7px;border-radius:5px;
+    background:rgba(52,211,153,.14);
+    color:var(--emerald);
+    border:1px solid rgba(52,211,153,.3);
+  }
+  .api-box .bar .path{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    color:#cbd5e1;
+    font-weight:600;
+  }
+  .api-box .bar .status{
+    margin-left:auto;
+    font-family:ui-monospace,monospace;
+    font-size:10.5px;
+    font-weight:600;
+    color:var(--mut2);
+    letter-spacing:.04em;
+  }
+  .api-box pre{
+    padding:14px 18px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px;
+    line-height:1.75;
+    color:#a8b3c5;
+    overflow-x:auto;
+    white-space:pre;
+  }
+  .api-box pre::-webkit-scrollbar{height:8px}
+  .api-box pre::-webkit-scrollbar-thumb{
+    background:#1d2531;border-radius:9px;
+  }
+  .api-box pre .k{color:#7ba4ff}
+  .api-box pre .s{color:#5fd39a}
+  .api-box pre .n{color:#f5be3c}
+  .api-box pre .b{color:#c792ea}
+
+  /* ============ CALLOUTS ============ */
+  .callout{
+    padding:20px 24px;
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    margin-top:16px;
+    display:flex;gap:18px;align-items:flex-start;
+  }
+  .callout .icon{
+    flex:0 0 36px;width:36px;height:36px;
+    border-radius:10px;
+    display:grid;place-items:center;
+    font-size:17px;
+  }
+  .callout .body{flex:1;min-width:0}
+  .callout .body .label{
+    font-size:11px;font-weight:700;
+    letter-spacing:.09em;text-transform:uppercase;
+    margin-bottom:10px;
+  }
+  .callout .body p{
+    font-size:13.5px;line-height:1.7;
+    color:#b8c2d2;
+  }
+  .callout .body p + p{margin-top:10px}
+  .callout .body b{color:#fff;font-weight:600}
+  .callout .body code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  .callout.info{
+    background:rgba(26,79,245,.05);
+    border-color:rgba(26,79,245,.3);
+  }
+  .callout.info .icon{
+    background:rgba(26,79,245,.15);
+    color:var(--bayan2);
+    border:1px solid rgba(26,79,245,.35);
+  }
+  .callout.info .label{color:var(--bayan2)}
+
+  .callout.warn{
+    background:rgba(251,191,36,.05);
+    border-color:rgba(251,191,36,.3);
+  }
+  .callout.warn .icon{
+    background:rgba(251,191,36,.15);
+    color:var(--amber);
+    border:1px solid rgba(251,191,36,.35);
+  }
+  .callout.warn .label{color:var(--amber)}
+
+  .callout.emerald{
+    background:rgba(52,211,153,.05);
+    border-color:rgba(52,211,153,.3);
+  }
+  .callout.emerald .icon{
+    background:rgba(52,211,153,.15);
+    color:var(--emerald);
+    border:1px solid rgba(52,211,153,.35);
+  }
+  .callout.emerald .label{color:var(--emerald)}
+
+  /* ============ READ CARDS ============ */
+  .reads{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:12px;
+    margin-top:16px;
+  }
+  .read{
+    padding:20px 22px;
+    border-radius:12px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+    transition:.2s;
+  }
+  .read::before{
+    content:"";position:absolute;
+    top:0;right:0;bottom:0;width:3px;
+    background:rgb(var(--rc));
+  }
+  .read:hover{
+    border-color:rgba(var(--rc),.4);
+    transform:translateY(-2px);
+  }
+  .read.r-blue{--rc:26,79,245}
+  .read.r-emerald{--rc:52,211,153}
+  .read.r-violet{--rc:167,139,250}
+
+  .read .label{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:11px;font-weight:700;
+    letter-spacing:.06em;text-transform:uppercase;
+    color:rgb(var(--rc));
+    margin-bottom:10px;
+  }
+  .read .title{
+    font-size:14.5px;font-weight:700;
+    color:#fff;letter-spacing:-.01em;
+    margin-bottom:10px;
+    line-height:1.4;
+  }
+  .read p{
+    font-size:13px;line-height:1.7;
+    color:#b8c2d2;
+  }
+  .read p b{color:#fff;font-weight:600}
+  .read p code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ TELEGRAM CARD ============ */
+  .tg-card{
+    display:flex;gap:20px;align-items:flex-start;
+    padding:22px 24px;
+    border-radius:var(--radius);
+    background:linear-gradient(135deg,rgba(34,158,217,.08),rgba(26,79,245,.04));
+    border:1px solid rgba(34,158,217,.3);
+    position:relative;
+    overflow:hidden;
+  }
+  .tg-card::before{
+    content:"";position:absolute;
+    top:0;right:0;bottom:0;width:3px;
+    background:#229ed9;
+  }
+  .tg-card .tg-ic{
+    flex:0 0 52px;
+    width:52px;height:52px;
+    border-radius:14px;
+    background:linear-gradient(135deg,#229ed9,#1e88c7);
+    display:grid;place-items:center;
+    color:#fff;font-size:22px;font-weight:700;
+    box-shadow:0 10px 24px -8px rgba(34,158,217,.65);
+  }
+  .tg-card .body{flex:1;min-width:0}
+  .tg-card .label{
+    font-size:11px;font-weight:700;
+    letter-spacing:.09em;text-transform:uppercase;
+    color:#7dceff;
+    margin-bottom:6px;
+  }
+  .tg-card .handle{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:15px;
+    font-weight:700;
+    color:#fff;
+    margin-bottom:10px;
+    letter-spacing:-.01em;
+  }
+  .tg-card p{
+    font-size:13.5px;line-height:1.7;
+    color:#b8c2d2;
+  }
+  .tg-card p b{color:#fff;font-weight:600}
+
+  /* ============ FOOTER ============ */
+  footer{
+    padding-top:32px;
+    margin-top:56px;
+    border-top:1px solid var(--line);
+    font-size:12.5px;
+    color:var(--mut2);
+    text-align:center;
+    line-height:1.85;
+  }
+  footer .mark{color:var(--bayan2);font-weight:600}
+  footer code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.04);
+    padding:2px 7px;border-radius:5px;
+    color:#cfd8e8;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:820px){
+    main{padding:0 16px 60px}
+    header{padding:40px 0 30px;margin-bottom:32px}
+    header h1{font-size:26px}
+    header .lede{font-size:14.5px}
+    section{margin-bottom:44px}
+    section h2{font-size:20px}
+    .reads{grid-template-columns:1fr}
+    .topnav{padding:10px 16px}
+    .topnav a{font-size:11px;padding:6px 10px}
+  }
+  @media (max-width:480px){
+    header h1{font-size:22px}
+    .schema-head{padding:14px 16px 12px}
+    .schema-fields{padding:14px 16px 16px}
+    .field{font-size:11px;padding:4px 8px}
+    .api-box pre{font-size:11.5px;padding:12px 14px}
+    .tg-card{padding:18px 18px;gap:14px}
+    .tg-card .tg-ic{flex:0 0 44px;width:44px;height:44px;font-size:18px;border-radius:12px}
+  }
+</style>
+</head>
+<body>
+
+<nav class="topnav" id="topnav">
+  <a href="#billing">Subscription / billing</a>
+  <a href="#prometric">Prometric bundle</a>
+  <a href="#institutions">Institutions</a>
+  <a href="#inbox">Inbox</a>
+  <a href="#telegram">Telegram</a>
+  <a href="#tools">Tools</a>
+</nav>
+
+<main>
+
+  <!-- ============ HEADER ============ -->
+  <header>
+    <div class="crumbs">
+      <span>Bayan Learning</span>
+      <span class="sep">/</span>
+      <span>Product Archive</span>
+      <span class="sep">/</span>
+      <span class="here">06 — Account &amp; Integrations</span>
+    </div>
+
+    <span class="tag">Doc 06 · authenticated capture</span>
+    <h1>Account &amp; Integrations</h1>
+    <p class="lede">
+      The account layer — subscription billing, the Prometric bundle SKU, the
+      institutional B2B path, and the integration surfaces (inbox, notifications,
+      Telegram, tools). Sourced from <code>api__profile.json</code>,
+      <code>api__prometric__access.json</code>, <code>api__programs.json</code>,
+      and related payloads.
+    </p>
+
+    <div class="meta">
+      <span><b>Captured:</b> 2026-09-25</span>
+      <span><b>Mode:</b> read-only</span>
+      <span><b>Sources:</b> 9 API payloads + dashboard page</span>
+    </div>
+  </header>
+
+  <!-- ============ BILLING ============ -->
+  <section id="billing">
+    <h2><span class="num">01</span> Subscription / billing</h2>
+    <p class="desc">
+      Subscription is a first-class account field. Billing runs through
+      <b>PayPal</b> — a remote-friendly, Gulf/Iran-workable payment method.
+    </p>
+
+    <div class="schema s-blue">
+      <div class="schema-head">
+        <span class="name">subscription_* fields</span>
+        <span class="tag-ml pii">billing · PII</span>
+      </div>
+      <div class="schema-fields">
+        <span class="field">subscription_id</span>
+        <span class="field">subscription_plan</span>
+        <span class="field">subscription_status</span>
+        <span class="field">subscription_source</span>
+        <span class="field">subscription_started_at</span>
+        <span class="field">subscription_updated_at</span>
+        <span class="field">subscription_expires_at</span>
+        <span class="field hl">paypal_email</span>
+      </div>
+    </div>
+
+    <div class="callout info">
+      <div class="icon">◆</div>
+      <div class="body">
+        <div class="label">Two reads</div>
+        <p>
+          <b>Billing via PayPal</b> matches the remote-friendly, Gulf/Iran-workable
+          payments reality — relevant given that the operator works remotely.
+        </p>
+        <p>
+          The subscription is a <b>first-class account field</b>, confirming the
+          product is a paid subscription with plan tiers. Plan names and prices
+          remain <code>[TBD — confirm with team]</code>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROMETRIC BUNDLE ============ -->
+  <section id="prometric">
+    <h2><span class="num">02</span> Prometric bundle · separate SKU</h2>
+    <p class="desc">
+      A purchasable add-on distinct from the base subscription. Marketing note:
+      sell as <b>"Gulf Licensing Exam Preparation"</b> — never as bare
+      "Prometric" per the standing content constraint.
+    </p>
+
+    <div class="api-box">
+      <div class="bar">
+        <span class="method">GET</span>
+        <span class="path">/api/prometric/access</span>
+        <span class="status">200 · redacted</span>
+      </div>
+      <pre>{
+  <span class="k">"active"</span>: <span class="b">false</span>,
+  <span class="k">"purchases_open"</span>: <span class="b">true</span>
+}</pre>
+    </div>
+
+    <div class="schema s-violet" style="margin-top:16px">
+      <div class="schema-head">
+        <span class="name">profile.prometric_bundles</span>
+        <span class="tag-ml marketing">add-on SKU</span>
+      </div>
+      <div class="schema-fields">
+        <span class="field arr">prometric_bundles</span>
+      </div>
+    </div>
+
+    <div class="callout warn">
+      <div class="icon">⚑</div>
+      <div class="body">
+        <div class="label">Content constraint</div>
+        <p>
+          The internal field name uses "prometric," but public copy must say
+          <b>"Gulf Licensing Exam Preparation."</b> OMSB runs through Pearson VUE;
+          the internal ID is not the marketing term.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INSTITUTIONS ============ -->
+  <section id="institutions">
+    <h2><span class="num">03</span> Institutions · the B2B path</h2>
+    <p class="desc">
+      A real institutional layer exists alongside the B2C subscription — a
+      <b>second revenue motion</b>. Empty for this individual test account but
+      live on the platform.
+    </p>
+
+    <div class="api-box">
+      <div class="bar">
+        <span class="method">GET</span>
+        <span class="path">/api/institution-code/auto-detect</span>
+        <span class="status">200 · redacted</span>
+      </div>
+      <pre>{
+  <span class="k">"matched"</span>: <span class="b">false</span>,
+  <span class="k">"reason"</span>: <span class="s">"already_linked"</span>
+}</pre>
+    </div>
+
+    <div class="schema s-emerald" style="margin-top:16px">
+      <div class="schema-head">
+        <span class="name">institutional layer</span>
+        <span class="tag-ml b2b">B2B · second motion</span>
+      </div>
+      <div class="schema-fields">
+        <span class="field">institution</span>
+        <span class="field">institution_code</span>
+        <span class="field arr">enrolled_programs</span>
+        <span class="field">programs</span>
+        <span class="field arr">assignments</span>
+      </div>
+    </div>
+
+    <div class="api-box" style="margin-top:16px">
+      <div class="bar">
+        <span class="method">GET</span>
+        <span class="path">/api/programs · /api/assignments</span>
+        <span class="status">200 · both empty</span>
+      </div>
+      <pre>{
+  <span class="k">"programs"</span>: [],
+  <span class="k">"assignments"</span>: []
+}</pre>
+    </div>
+
+    <div class="reads">
+      <div class="read r-emerald">
+        <div class="label">Read 01</div>
+        <div class="title">Auto-detect by code or email</div>
+        <p>
+          The app auto-detects an institution by <code>code</code> or
+          <code>email</code> and links the account to it. This is the front door
+          for institutional seats.
+        </p>
+      </div>
+
+      <div class="read r-blue">
+        <div class="label">Read 02</div>
+        <div class="title">Programs + assignments exist</div>
+        <p>
+          A real <b>institutional program + assignment layer</b> — teachers
+          assign work to enrolled cohorts. Empty for this individual account but
+          the schema is live.
+        </p>
+      </div>
+
+      <div class="read r-violet">
+        <div class="label">Read 03</div>
+        <div class="title">B2B pilot flow referenced</div>
+        <p>
+          Operator notes also mention a <b>B2B pilot flow</b> — consistent with
+          the institutional path being a real second motion, not an aspiration.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INBOX ============ -->
+  <section id="inbox">
+    <h2><span class="num">04</span> Inbox &amp; notifications</h2>
+    <p class="desc">
+      In-app messaging and notification layers exist. All empty for this
+      individual test account.
+    </p>
+
+    <div class="api-box">
+      <div class="bar">
+        <span class="method">GET</span>
+        <span class="path">/api/messages</span>
+        <span class="status">200 · empty</span>
+      </div>
+      <pre>{
+  <span class="k">"messages"</span>: [],
+  <span class="k">"userRole"</span>: <span class="s">"reviewer"</span>
+}</pre>
+    </div>
+
+    <div class="api-box" style="margin-top:12px">
+      <div class="bar">
+        <span class="method">GET</span>
+        <span class="path">/api/messages/unread-count</span>
+        <span class="status">200</span>
+      </div>
+      <pre>{
+  <span class="k">"count"</span>: <span class="n">0</span>
+}</pre>
+    </div>
+
+    <div class="api-box" style="margin-top:12px">
+      <div class="bar">
+        <span class="method">GET</span>
+        <span class="path">/api/notifications</span>
+        <span class="status">200 · empty</span>
+      </div>
+      <pre>{
+  <span class="k">"notifications"</span>: [],
+  <span class="k">"unread"</span>: <span class="n">0</span>
+}</pre>
+    </div>
+
+    <div class="callout info" style="margin-top:16px">
+      <div class="icon">◆</div>
+      <div class="body">
+        <div class="label">In-app Inbox nav</div>
+        <p>
+          The <b>Inbox</b> nav item exists in the Grow group — a real user-facing
+          messaging surface. The <code>userRole: "reviewer"</code> field here
+          matches the reviewer console access (see doc 01).
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TELEGRAM ============ -->
+  <section id="telegram">
+    <h2><span class="num">05</span> Telegram channel</h2>
+    <p class="desc">
+      The dashboard actively promotes a Telegram channel — an existing
+      top-of-funnel and retention surface.
+    </p>
+
+    <div class="tg-card">
+      <div class="tg-ic">✈</div>
+      <div class="body">
+        <div class="label">Live channel · dashboard-promoted</div>
+        <div class="handle">@BayanMedEd</div>
+        <p>
+          <b>"Daily MCQs on Telegram — interactive quizzes, clinical pearls, and
+          board tips every day."</b>
+        </p>
+        <p style="margin-top:10px">
+          An existing <b>top-of-funnel and retention channel</b> — a live
+          marketing surface to build on.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TOOLS ============ -->
+  <section id="tools">
+    <h2><span class="num">06</span> Tools / calculators</h2>
+    <p class="desc">
+      The nav exposes <b>Calculators</b> and an <b>All Tools</b> hub. No dedicated
+      API — client-side calculators only.
+    </p>
+
+    <div class="schema s-slate">
+      <div class="schema-head">
+        <span class="name">nav surfaces</span>
+        <span class="tag-ml marketing">client-side</span>
+      </div>
+      <div class="schema-fields">
+        <span class="field">Calculators</span>
+        <span class="field">All Tools</span>
+        <span class="field">clinical scoring tools</span>
+      </div>
+    </div>
+
+    <div class="callout warn">
+      <div class="icon">⚠</div>
+      <div class="body">
+        <div class="label">Not deep-captured</div>
+        <p>
+          Client-side only, no API. Not deep-captured in this session — see
+          <code>GAPS.md</code>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <p><span class="mark">Bayan Learning</span> · Product Archive · Doc 06</p>
+    <p style="margin-top:6px">
+      Captured 2026-09-25 · read-only · companion to <code>README.md</code> and <code>GAPS.md</code>
+    </p>
+  </footer>
+
+</main>
+
+<script>
+/* ============ Top nav border on scroll ============ */
+const topnav = document.getElementById('topnav');
+window.addEventListener('scroll', () => {
+  topnav.classList.toggle('scrolled', window.scrollY > 20);
+}, {passive:true});
+
+/* ============ Active section highlight ============ */
+const navLinks = document.querySelectorAll('.topnav a');
+const sections = [...navLinks].map(a =>
+  document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+const navIo = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting){
+      const id = '#' + e.target.id;
+      navLinks.forEach(a => a.classList.toggle('active',
+        a.getAttribute('href') === id));
+    }
+  });
+}, {threshold:0.3, rootMargin:'-80px 0px -60% 0px'});
+
+sections.forEach(s => navIo.observe(s));
+
+/* ============ Smooth scroll ============ */
+navLinks.forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    const el = document.querySelector(id);
+    if (!el) return;
+    e.preventDefault();
+    const offset = el.getBoundingClientRect().top + window.scrollY - 70;
+    window.scrollTo({top:offset, behavior:'smooth'});
+  });
+});
+</script>
+
+</body>
+</html>
