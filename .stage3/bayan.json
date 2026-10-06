@@ -1,0 +1,17 @@
+{
+  "business": "Bayan Learning",
+  "base": "https://hq.stage3.app",
+  "username": "sabzn8n@gmail.com",
+  "creds_file": "/root/projects/AITransforms/hq-stage3-archive/hq-stage3-username-password.md",
+  "password_env": "STAGE3_BAYAN_PASSWORD",
+  "infisical_prefix": "STAGE3_BAYAN",
+  "team": "BLearning",
+  "role": "team_owner",
+  "notes": [
+    "One Stage 3 account per business; this is the BAYAN account.",
+    "Password is NOT stored here. Resolution order: $STAGE3_BAYAN_PASSWORD, then creds_file.",
+    "Intended source of truth is Infisical (STAGE3_BAYAN_PASSWORD). The vault at",
+    "http://100.116.105.2:8080 was OFFLINE on 2026-10-06 (germany Pi, last seen 8d).",
+    "When it is back: python3 ~/.infisical/store-stage3.py  then delete creds_file."
+  ]
+}
