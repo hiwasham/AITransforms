@@ -1,126 +1,236 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bayan · Revenue Growth System — 30-Day Plan + Work Library</title>
-<style>
-  :root{
-    --ink:#080b10;--panel:#0f141d;--panel2:#141b26;--line:#1c2430;
-    --txt:#eef2f9;--mut:#8b95a9;--mut2:#4d5666;
-    --bayan:#1a4ff5;--bayan2:#4d7bff;
-    --emerald:#34d399;--amber:#fbbf24;--rose:#f43f5e;
-    --violet:#a78bfa;--cyan:#22d3ee;
-    --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
-    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,sans-serif;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{background:var(--ink);color:var(--txt);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bayan · Revenue Growth System — 30-Day Plan + Work Library</title>
+  <style>
+    :root{
+      --ink:#080b10;--panel:#0f141d;--panel2:#141b26;--line:#1c2430;
+      --txt:#eef2f9;--mut:#8b95a9;--mut2:#4d5666;
+      --bayan:#1a4ff5;--bayan2:#4d7bff;
+      --emerald:#34d399;--amber:#fbbf24;--rose:#f43f5e;
+      --violet:#a78bfa;--cyan:#22d3ee;
+      --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
+      --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--ink);color:var(--txt);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}
 
-  .nav{position:sticky;top:0;z-index:50;padding:13px 28px;background:linear-gradient(180deg,rgba(8,11,16,.97),rgba(8,11,16,.75) 80%,transparent);backdrop-filter:blur(14px);display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-  .nav .brand{display:flex;align-items:center;gap:10px;margin-right:auto}
-  .nav .mark{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font:800 14px/1 var(--sans);color:#fff;background:linear-gradient(140deg,var(--bayan),var(--violet));box-shadow:0 0 20px -6px rgba(26,79,245,.7)}
-  .nav .name{font:700 12.5px/1.2 var(--sans);color:#fff}
-  .nav .name small{display:block;font:400 9.5px/1.3 var(--mono);color:var(--mut2);letter-spacing:.1em;text-transform:uppercase;margin-top:2px}
-  .nav a{all:unset;cursor:pointer;font:500 11.5px/1 var(--mono);color:var(--mut);padding:7px 11px;border-radius:8px;transition:.2s}
-  .nav a:hover{color:#c8d2e2;background:rgba(255,255,255,.04)}
+    .nav{position:sticky;top:0;z-index:50;padding:13px 28px;background:linear-gradient(180deg,rgba(8,11,16,.97),rgba(8,11,16,.75) 80%,transparent);backdrop-filter:blur(14px);display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+    .nav .brand{display:flex;align-items:center;gap:10px;margin-right:auto}
+    .nav .mark{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font:800 14px/1 var(--sans);color:#fff;background:linear-gradient(140deg,var(--bayan),var(--violet));box-shadow:0 0 20px -6px rgba(26,79,245,.7)}
+    .nav .name{font:700 12.5px/1.2 var(--sans);color:#fff}
+    .nav .name small{display:block;font:400 9.5px/1.3 var(--mono);color:var(--mut2);letter-spacing:.1em;text-transform:uppercase;margin-top:2px}
+    .nav a{all:unset;cursor:pointer;font:500 11.5px/1 var(--mono);color:var(--mut);padding:7px 11px;border-radius:8px;transition:.2s}
+    .nav a:hover{color:#c8d2e2;background:rgba(255,255,255,.04)}
 
-  main{max-width:1080px;margin:0 auto;padding:0 24px 110px}
+    main{max-width:1080px;margin:0 auto;padding:0 24px 110px}
 
-  .hero{padding:66px 0 48px;border-bottom:1px solid var(--line);margin-bottom:52px}
-  .kicker{display:inline-flex;align-items:center;gap:9px;font:600 10.5px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--bayan2);padding:7px 13px;border-radius:8px;background:rgba(26,79,245,.1);border:1px solid rgba(26,79,245,.3);margin-bottom:22px}
-  .kicker::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--emerald);box-shadow:0 0 10px 0 rgba(52,211,153,.9);animation:blip 2.2s ease-in-out infinite}
-  @keyframes blip{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.7)}}
-  h1{font:800 clamp(30px,4.6vw,46px)/1.12 var(--sans);letter-spacing:-.03em;margin-bottom:18px;max-width:780px}
-  h1 em{font-style:normal;background:linear-gradient(120deg,var(--bayan2),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .hero p.lead{color:var(--mut);font-size:15.5px;max-width:680px;margin-bottom:30px}
-  .statrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
-  .stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
-  .stat b{display:block;font:700 21px/1.15 var(--sans);color:#fff}
-  .stat span{font:500 10.5px/1.4 var(--mono);color:var(--mut);letter-spacing:.04em}
-  .stat.bad b{color:var(--rose)} .stat.target b{color:var(--emerald)}
+    .hero{padding:66px 0 48px;border-bottom:1px solid var(--line);margin-bottom:52px}
+    .kicker{display:inline-flex;align-items:center;gap:9px;font:600 10.5px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--bayan2);padding:7px 13px;border-radius:8px;background:rgba(26,79,245,.1);border:1px solid rgba(26,79,245,.3);margin-bottom:22px}
+    .kicker::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--emerald);box-shadow:0 0 10px 0 rgba(52,211,153,.9);animation:blip 2.2s ease-in-out infinite}
+    @keyframes blip{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.7)}}
+    h1{font:800 clamp(30px,4.6vw,46px)/1.12 var(--sans);letter-spacing:-.03em;margin-bottom:18px;max-width:780px}
+    h1 em{font-style:normal;background:linear-gradient(120deg,var(--bayan2),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p.lead{color:var(--mut);font-size:15.5px;max-width:680px;margin-bottom:30px}
+    .statrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+    .stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+    .stat b{display:block;font:700 21px/1.15 var(--sans);color:#fff}
+    .stat span{font:500 10.5px/1.4 var(--mono);color:var(--mut);letter-spacing:.04em}
+    .stat.bad b{color:var(--rose)} .stat.target b{color:var(--emerald)}
 
-  section{margin:0 0 62px}
-  h2{font:700 clamp(20px,2.6vw,27px)/1.25 var(--sans);letter-spacing:-.02em;margin-bottom:6px}
-  h2 .idx{font:600 11px/1 var(--mono);color:var(--bayan2);letter-spacing:.12em;display:block;margin-bottom:10px;text-transform:uppercase}
-  .sub{color:var(--mut);font-size:14px;max-width:680px;margin-bottom:26px}
+    section{margin:0 0 62px}
+    h2{font:700 clamp(20px,2.6vw,27px)/1.25 var(--sans);letter-spacing:-.02em;margin-bottom:6px}
+    h2 .idx{font:600 11px/1 var(--mono);color:var(--bayan2);letter-spacing:.12em;display:block;margin-bottom:10px;text-transform:uppercase}
+    .sub{color:var(--mut);font-size:14px;max-width:680px;margin-bottom:26px}
 
-  .panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
-  .panel + .panel{margin-top:14px}
-  table{width:100%;border-collapse:collapse;font-size:13.5px}
-  th{font:600 10.5px/1.4 var(--mono);color:var(--mut2);text-transform:uppercase;letter-spacing:.08em;text-align:left;padding:8px 12px;border-bottom:1px solid var(--line)}
-  td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top;color:#cfd8e6}
-  tr:last-child td{border-bottom:none}
-  td b,td strong{color:#fff}
-  .ok{color:var(--emerald);font-weight:600}
-  .no{color:var(--rose);font-weight:600}
-  .dec{color:var(--amber);font-weight:600}
+    .panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+    .panel + .panel{margin-top:14px}
+    table{width:100%;border-collapse:collapse;font-size:13.5px}
+    th{font:600 10.5px/1.4 var(--mono);color:var(--mut2);text-transform:uppercase;letter-spacing:.08em;text-align:left;padding:8px 12px;border-bottom:1px solid var(--line)}
+    td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top;color:#cfd8e6}
+    tr:last-child td{border-bottom:none}
+    td b,td strong{color:#fff}
+    .ok{color:var(--emerald);font-weight:600}
+    .no{color:var(--rose);font-weight:600}
+    .dec{color:var(--amber);font-weight:600}
 
-  .fw{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:6px 0 4px}
-  .fw .stage{border-radius:11px;padding:13px 12px;border:1px solid var(--line);background:var(--panel);position:relative}
-  .fw .stage h4{font:600 11.5px/1.3 var(--sans);color:var(--mut);margin-bottom:6px}
-  .fw .stage p{font:500 10px/1.45 var(--mono);color:var(--mut2)}
-  .fw .stage.focus{background:linear-gradient(160deg,rgba(26,79,245,.16),rgba(167,139,250,.08));border-color:rgba(26,79,245,.55)}
-  .fw .stage.focus h4{color:#fff}
-  .fw .stage.focus::after{content:"FOCUS";position:absolute;top:-8px;right:10px;font:700 8.5px/1 var(--mono);letter-spacing:.12em;color:var(--bayan2);background:var(--ink);padding:3px 7px;border-radius:5px;border:1px solid rgba(26,79,245,.5)}
-  .fw .stage.assessed::after{content:"ASSESSED";position:absolute;top:-8px;right:10px;font:700 8.5px/1 var(--mono);letter-spacing:.12em;color:var(--emerald);background:var(--ink);padding:3px 7px;border-radius:5px;border:1px solid rgba(52,211,153,.4)}
+    .fw{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:6px 0 4px}
+    .fw .stage{border-radius:11px;padding:13px 12px;border:1px solid var(--line);background:var(--panel);position:relative}
+    .fw .stage h4{font:600 11.5px/1.3 var(--sans);color:var(--mut);margin-bottom:6px}
+    .fw .stage p{font:500 10px/1.45 var(--mono);color:var(--mut2)}
+    .fw .stage.focus{background:linear-gradient(160deg,rgba(26,79,245,.16),rgba(167,139,250,.08));border-color:rgba(26,79,245,.55)}
+    .fw .stage.focus h4{color:#fff}
+    .fw .stage.focus::after{content:"FOCUS";position:absolute;top:-8px;right:10px;font:700 8.5px/1 var(--mono);letter-spacing:.12em;color:var(--bayan2);background:var(--ink);padding:3px 7px;border-radius:5px;border:1px solid rgba(26,79,245,.5)}
+    .fw .stage.assessed::after{content:"ASSESSED";position:absolute;top:-8px;right:10px;font:700 8.5px/1 var(--mono);letter-spacing:.12em;color:var(--emerald);background:var(--ink);padding:3px 7px;border-radius:5px;border:1px solid rgba(52,211,153,.4)}
 
-  details.acc{background:var(--panel);border:1px solid var(--line);border-radius:13px;margin-bottom:11px;overflow:hidden}
-  details.acc summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:13px;padding:16px 20px;transition:.15s}
-  details.acc summary::-webkit-details-marker{display:none}
-  details.acc summary:hover{background:rgba(255,255,255,.025)}
-  details.acc summary .chev{flex:0 0 auto;width:22px;height:22px;border-radius:7px;display:grid;place-items:center;background:rgba(26,79,245,.14);color:var(--bayan2);font:700 11px/1 var(--mono);transition:.2s}
-  details.acc[open] summary .chev{transform:rotate(90deg)}
-  details.acc summary .ttl{font:600 14px/1.35 var(--sans);color:#e8edf5}
-  details.acc summary .hint{margin-left:auto;font:500 10.5px/1.3 var(--mono);color:var(--mut2);text-align:right;flex:0 0 auto}
-  details.acc .body{padding:4px 20px 20px 55px;border-top:1px solid var(--line);padding-top:16px}
-  details.acc .body p{color:var(--mut);font-size:13.5px;margin-bottom:12px;max-width:700px}
-  details.acc .body ul{margin:0 0 12px 17px;color:#c3ccdb;font-size:13.5px}
-  details.acc .body li{margin-bottom:6px}
-  details.acc .body li::marker{color:var(--bayan2)}
-  .tag{display:inline-block;font:600 9.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border-radius:6px;margin-right:7px;vertical-align:2px}
-  .tag.done{color:var(--emerald);background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.3)}
-  .tag.dec{color:var(--amber);background:rgba(251,191,36,.09);border:1px solid rgba(251,191,36,.3)}
-  .tag.wk{color:var(--bayan2);background:rgba(26,79,245,.1);border:1px solid rgba(26,79,245,.3)}
+    details.acc{background:var(--panel);border:1px solid var(--line);border-radius:13px;margin-bottom:11px;overflow:hidden}
+    details.acc summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:13px;padding:16px 20px;transition:.15s}
+    details.acc summary::-webkit-details-marker{display:none}
+    details.acc summary:hover{background:rgba(255,255,255,.025)}
+    details.acc summary .chev{flex:0 0 auto;width:22px;height:22px;border-radius:7px;display:grid;place-items:center;background:rgba(26,79,245,.14);color:var(--bayan2);font:700 11px/1 var(--mono);transition:.2s}
+    details.acc[open] summary .chev{transform:rotate(90deg)}
+    details.acc summary .ttl{font:600 14px/1.35 var(--sans);color:#e8edf5}
+    details.acc summary .hint{margin-left:auto;font:500 10.5px/1.3 var(--mono);color:var(--mut2);text-align:right;flex:0 0 auto}
+    details.acc .body{padding:4px 20px 20px 55px;border-top:1px solid var(--line);padding-top:16px}
+    details.acc .body p{color:var(--mut);font-size:13.5px;margin-bottom:12px;max-width:700px}
+    details.acc .body ul{margin:0 0 12px 17px;color:#c3ccdb;font-size:13.5px}
+    details.acc .body li{margin-bottom:6px}
+    details.acc .body li::marker{color:var(--bayan2)}
+    .tag{display:inline-block;font:600 9.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border-radius:6px;margin-right:7px;vertical-align:2px}
+    .tag.done{color:var(--emerald);background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.3)}
+    .tag.dec{color:var(--amber);background:rgba(251,191,36,.09);border:1px solid rgba(251,191,36,.3)}
+    .tag.wk{color:var(--bayan2);background:rgba(26,79,245,.1);border:1px solid rgba(26,79,245,.3)}
 
-  /* file library */
-  .lib-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:18px}
-  .lib-count{font:600 11px/1 var(--mono);color:var(--emerald);letter-spacing:.08em;background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.25);border-radius:7px;padding:6px 10px}
-  .cat{background:var(--panel);border:1px solid var(--line);border-radius:13px;margin-bottom:12px;overflow:hidden}
-  .cat summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:12px;padding:14px 18px;transition:.15s}
-  .cat summary::-webkit-details-marker{display:none}
-  .cat summary:hover{background:rgba(255,255,255,.02)}
-  .cat summary .chev{width:20px;height:20px;border-radius:6px;display:grid;place-items:center;background:rgba(52,211,153,.12);color:var(--emerald);font:700 10px/1 var(--mono)}
-  .cat[open] summary .chev{transform:rotate(90deg)}
-  .cat summary .ttl{font:600 13.5px/1.3 var(--sans);color:#e8edf5}
-  .cat summary .n{margin-left:auto;font:600 10px/1 var(--mono);color:var(--mut2)}
-  .cat .files{padding:6px 18px 16px 50px}
-  .file{display:flex;gap:10px;align-items:baseline;padding:6px 0;border-bottom:1px solid rgba(28,36,48,.6)}
-  .file:last-child{border-bottom:none}
-  .file .doc{flex:0 0 16px;color:var(--mut2);font-size:12px}
-  .file a{color:var(--bayan2);text-decoration:none;font:500 12.5px/1.45 var(--mono)}
-  .file a:hover{color:#8fabff;text-decoration:underline}
-  .file .d{color:var(--mut2);font:400 10.5px/1.5 var(--sans);margin-left:4px}
-  .empty-note{color:var(--mut2);font-size:11.5px;font-style:italic}
+    /* file library */
+    .lib-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:18px}
+    .lib-count{font:600 11px/1 var(--mono);color:var(--emerald);letter-spacing:.08em;background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.25);border-radius:7px;padding:6px 10px}
+    .cat{background:var(--panel);border:1px solid var(--line);border-radius:13px;margin-bottom:12px;overflow:hidden}
+    .cat summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:12px;padding:14px 18px;transition:.15s}
+    .cat summary::-webkit-details-marker{display:none}
+    .cat summary:hover{background:rgba(255,255,255,.02)}
+    .cat summary .chev{width:20px;height:20px;border-radius:6px;display:grid;place-items:center;background:rgba(52,211,153,.12);color:var(--emerald);font:700 10px/1 var(--mono)}
+    .cat[open] summary .chev{transform:rotate(90deg)}
+    .cat summary .ttl{font:600 13.5px/1.3 var(--sans);color:#e8edf5}
+    .cat summary .n{margin-left:auto;font:600 10px/1 var(--mono);color:var(--mut2)}
+    .cat .files{padding:6px 18px 16px 50px}
+    .file{display:flex;gap:10px;align-items:baseline;padding:6px 0;border-bottom:1px solid rgba(28,36,48,.6)}
+    .file:last-child{border-bottom:none}
+    .file .doc{flex:0 0 16px;color:var(--mut2);font-size:12px}
+    .file a{color:var(--bayan2);text-decoration:none;font:500 12.5px/1.45 var(--mono)}
+    .file a:hover{color:#8fabff;text-decoration:underline}
+    .file .d{color:var(--mut2);font:400 10.5px/1.5 var(--sans);margin-left:4px}
+    .empty-note{color:var(--mut2);font-size:11.5px;font-style:italic}
 
-  .callout{border-left:3px solid var(--bayan);background:rgba(26,79,245,.07);border-radius:0 11px 11px 0;padding:15px 19px;margin:16px 0;color:#c9d3e2;font-size:13.5px}
-  .callout.amber{border-left-color:var(--amber);background:rgba(251,191,36,.06)}
-  .callout em{font-style:normal;color:#fff;font-weight:600}
+    .callout{border-left:3px solid var(--bayan);background:rgba(26,79,245,.07);border-radius:0 11px 11px 0;padding:15px 19px;margin:16px 0;color:#c9d3e2;font-size:13.5px}
+    .callout.amber{border-left-color:var(--amber);background:rgba(251,191,36,.06)}
+    .callout em{font-style:normal;color:#fff;font-weight:600}
 
-  .wk{border:1px solid var(--line);border-radius:13px;background:var(--panel);margin-bottom:16px;overflow:hidden}
-  .wk .wkhead{display:flex;align-items:baseline;gap:14px;padding:16px 20px;border-bottom:1px solid var(--line);background:linear-gradient(90deg,rgba(26,79,245,.09),transparent)}
-  .wk .wkhead b{font:700 15px/1.2 var(--sans);color:#fff}
-  .wk .wkhead span{font:500 11px/1.4 var(--mono);color:var(--mut)}
-  .wk .wkbody{padding:14px 20px 18px}
+    .wk{border:1px solid var(--line);border-radius:13px;background:var(--panel);margin-bottom:16px;overflow:hidden}
+    .wk .wkhead{display:flex;align-items:baseline;gap:14px;padding:16px 20px;border-bottom:1px solid var(--line);background:linear-gradient(90deg,rgba(26,79,245,.09),transparent)}
+    .wk .wkhead b{font:700 15px/1.2 var(--sans);color:#fff}
+    .wk .wkhead span{font:500 11px/1.4 var(--mono);color:var(--mut)}
+    .wk .wkbody{padding:14px 20px 18px}
 
-  footer{border-top:1px solid var(--line);padding-top:30px;color:var(--mut2);font:500 11px/1.7 var(--mono)}
-  footer a{color:var(--mut)}
-  .tiny{font-size:11.5px;color:var(--mut2)}
+    footer{border-top:1px solid var(--line);padding-top:30px;color:var(--mut2);font:500 11px/1.7 var(--mono)}
+    footer a{color:var(--mut)}
+    .tiny{font-size:11.5px;color:var(--mut2)}
 
-  @media(max-width:760px){.fw{grid-template-columns:repeat(2,1fr)}.nav a{display:none}.cat .files{padding-left:20px}}
-  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-</style>
+    /* --- POPUP STYLES --- */
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(6px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .popup-overlay.active {
+      display: flex;
+    }
+    .popup-box {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      max-width: 800px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 32px 36px;
+      position: relative;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+      animation: popIn 0.25s ease;
+    }
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.95) translateY(10px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    .popup-box .close-btn {
+      position: absolute;
+      top: 14px;
+      right: 18px;
+      background: none;
+      border: none;
+      color: var(--mut);
+      font-size: 26px;
+      line-height: 1;
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 8px;
+      transition: 0.2s;
+    }
+    .popup-box .close-btn:hover {
+      color: #fff;
+      background: rgba(255,255,255,0.06);
+    }
+    .popup-box h3 {
+      font: 700 22px/1.3 var(--sans);
+      color: #fff;
+      margin-bottom: 18px;
+      letter-spacing: -0.02em;
+    }
+    .popup-box p {
+      color: #c3ccdb;
+      font-size: 14.5px;
+      margin-bottom: 14px;
+    }
+    .popup-box p strong, .popup-box p b {
+      color: #fff;
+    }
+    .popup-box ul {
+      margin: 0 0 14px 18px;
+      color: #c3ccdb;
+      font-size: 14px;
+    }
+    .popup-box li {
+      margin-bottom: 8px;
+    }
+    .popup-box li::marker {
+      color: var(--bayan2);
+    }
+    .popup-box .highlight {
+      background: rgba(26,79,245,.12);
+      border-left: 3px solid var(--bayan);
+      padding: 14px 18px;
+      border-radius: 0 10px 10px 0;
+      margin: 18px 0;
+      color: #d0d9e8;
+      font-size: 14px;
+    }
+    .popup-trigger {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(26,79,245,.12);
+      border: 1px solid rgba(26,79,245,.35);
+      color: var(--bayan2);
+      font: 600 12px/1 var(--mono);
+      letter-spacing: .04em;
+      padding: 10px 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: .2s;
+      margin-bottom: 10px;
+    }
+    .popup-trigger:hover {
+      background: rgba(26,79,245,.22);
+      border-color: var(--bayan2);
+      color: #fff;
+    }
+    .popup-trigger::before {
+      content: "📋";
+      font-size: 14px;
+    }
+
+    @media(max-width:760px){.fw{grid-template-columns:repeat(2,1fr)}.nav a{display:none}.cat .files{padding-left:20px}.popup-box{padding:24px 20px}}
+    @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+  </style>
 </head>
 <body>
 
@@ -141,9 +251,9 @@
 <main>
 
 <div class="hero">
-  <div class="kicker">For Dr. Abdullah · 2026-10-05 · ready for your go</div>
-  <h1>Bayan Conversion-First <em>(revenue)</em> <br>Plan (revised for Dr. Abdullah)</h1>
-  <p class="lead">This plan responds to your review of 29 September: conversion before traffic, numbers not promises, execution not frameworks. The surface here is short on purpose — but nothing is hidden: <b>every claim links to the actual finished work</b> (§05 Library, 60 items). Read the boxes only, or open everything. Your pace.</p>
+  <div class="kicker">For Dr. Abdullah · 2026-10-05 </div>
+  <h1>Bayan Conversion-First <em>(revenue)</em> <br>Plan</h1>
+  <p class="lead">This plan responds to your review of 29 September: conversion before traffic, numbers not promises, execution not frameworks. </p><p>The surface here is short on purpose — but nothing is hidden: <b>every claim links to the actual finished work</b>.</p><p> Read the boxes only, or open everything. Your pace.</p>
   <div class="statrow">
     <div class="stat"><b>~1,300</b><span>registered users</span></div>
     <div class="stat bad"><b>&lt;1%</b><span>pay today · $277 lifetime</span></div>
@@ -155,11 +265,81 @@
 
 <!-- ================= 1. ANSWER ================= -->
 <section id="answer">
-  <h2><span class="idx">01 · The one-minute answer</span>You were right — and there is a fact under it that changes the plan.</h2>
+  <h2><span class="idx">01 · The one-minute answer</span>Why the existing users don't pay (the analysis Dr. Abdullah asked for)</h2>
   <p class="sub">Read this box and you know the whole strategy; everything after it is evidence, schedule, and the work library.</p>
   <div class="panel">
     <p style="color:#c3ccdb;font-size:14px;max-width:760px">Paid-access enforcement began <b>1 May 2026</b>. Every account created before that keeps full free access, permanently — plus 13 humanitarian free-access countries. So a large share of the 1,300 <em>cannot</em> pay: they already have everything. The real, convertible base is far smaller, and it has never been measured. So Week 1 is not copywriting — it is <b>segmentation + funnel instrumentation first</b>, then the conversion levers aimed only at users who can actually buy. On the levers themselves: activation (first value in session one), lifecycle nurture (trial→paid sequence), and a mid-tier price rung. Zero ad spend throughout.</p>
   </div>
+  <!-- POPUP TRIGGER -->
+  <button class="popup-trigger" id="openPopup">Open the one-minute answer</button>
+
+  <!-- POPUP OVERLAY -->
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup-box">
+      <button class="close-btn" id="closePopup" aria-label="Close popup">&times;</button>
+      <h3>Bottom line (read this if nothing else)</h3>
+      <p>Dr. Abdullah is right. The 90-day plan led with traffic (SEO/GEO/AI-visibility) for a product whose real problem is that <strong>1,300 users are already in the door and &lt;1% pay.</strong> His arithmetic holds: +500 visits at today's conversion ≈ <strong>+$10–50/mo</strong>; moving the existing base from 1% → 5% ≈ <strong>thousands/mo</strong>. We pivot to conversion first.</p>
+      <p>But there is a structural fact under the 1% that changes what "conversion" even means:</p>
+      <p><strong>A large share of the 1,300 cannot pay — because they already have everything for free.</strong></p>
+      <p>Pricing enforcement began <strong>2026-05-01</strong>. Every account created before that date is <strong>grandfathered to full free access, permanently</strong> (the app's own access model). Add the 13 humanitarian free-access countries. The result: the real <em>addressable</em> base — users who could actually become paying customers — is <strong>far smaller than 1,300</strong>, and we do not yet know its size because <strong>the conversion funnel isn't yet instrumented for trial→paid.</strong> (Week 1 inventories what's already emitting — PostHog is listed as connected in the project's integration status — before building anything new.)</p>
+      <p>So Week 1 is not "write landing pages and hope." Week 1 is: <strong>measure the funnel, count who is actually convertible, and only then aim the conversion work at them.</strong> That is the difference between a plan that produces $50/mo and one that produces real MRR.</p>
+      <div class="highlight">
+        <strong>Key takeaway:</strong> The strategy is segmentation + funnel instrumentation first, then conversion levers (activation, lifecycle nurture, mid-tier price rung) aimed only at users who can actually buy. Zero ad spend throughout.
+      </div>
+    </div>
+  </div>
+
+  <!-- ACCORDION FOR THE FIVE REASONS -->
+  <details class="acc" style="margin-top:14px">
+    <summary>
+      <span class="chev">›</span>
+      <span class="ttl">Five reasons, ranked by how much revenue each one blocks</span>
+      <span class="hint">#1–2 structural, #3–5 fixable — open for the table</span>
+    </summary>
+    <div class="body">
+      <p>#1–2 are structural and no email sequence fixes them; #3–5 are the fixable conversion levers.</p>
+      <table>
+        <tr>
+          <th>#</th>
+          <th>Reason</th>
+          <th>Evidence</th>
+          <th>Fixable by marketing?</th>
+        </tr>
+        <tr>
+          <td><b>1</b></td>
+          <td><b>Grandfathering</b> — pre-May-2026 accounts have full free access forever</td>
+          <td>App access model, rule #3; enforcement date <code>2026-05-01</code></td>
+          <td class="no">❌ CEO decision (sunset/convert) — pull + propose only</td>
+        </tr>
+        <tr>
+          <td><b>2</b></td>
+          <td><b>Free-country + wrong-segment</b> — 13 humanitarian countries free; some users aren't in a paying profession/exam</td>
+          <td>Access model; free-country list (Oman is NOT on it)</td>
+          <td class="no">❌ Removes them from the denominator</td>
+        </tr>
+        <tr>
+          <td><b>3</b></td>
+          <td><b>No trial→paid trigger</b> — 30-day trial exists in config, but there's no paywall moment, no "your trial ends in 3 days," no upgrade nudge</td>
+          <td><code>revenue-integration-strategy.md</code>; empty Sale-to-Delivery process</td>
+          <td class="ok">✅ Core lever</td>
+        </tr>
+        <tr>
+          <td><b>4</b></td>
+          <td><b>No nurture / lifecycle</b> — the 1,300 get no onboarding, no re-engagement, no education drip. They sign up, hit the 5-Q/day wall, and go quiet</td>
+          <td><code>growth-engine-design.md</code>: Delivery-to-Success is empty</td>
+          <td class="ok">✅ Core lever</td>
+        </tr>
+        <tr>
+          <td><b>5</b></td>
+          <td><b>Price-ladder gap</b> — jump is free → $9.99–29/mo full sub. No single-exam / exam-window pass for a candidate who only needs one exam</td>
+          <td>Pricing config; <code>revenue-integration-strategy.md</code></td>
+          <td class="ok">✅ New low SKU</td>
+        </tr>
+      </table>
+      <p style="margin-top:16px;color:#c3ccdb;font-size:13.5px"><strong>The honest headline for the CEO:</strong> <em>we can't fully answer "why don't they pay" until Week 1 instruments the funnel and segments the 1,300.</em> But we already know the two biggest blockers are structural (grandfathering + free-country), and the three fixable levers are activation, lifecycle nurture, and a mid-tier price rung.</p>
+      <p style="color:#c3ccdb;font-size:13.5px"><strong>Bonus finding (on-scope, no extra ask):</strong> the official question count appears as <strong>8 different values</strong> across the live surfaces (4,000 / 5,000 / 5,589 / 5,610 / 5,760 / 10,000+ …). That inconsistency will actively undercut landing-page conversion, so locking one number is part of the Week-1 work — this is the useful core of the "source of truth" idea, folded into marketing at no extra charge.</p>
+    </div>
+  </details>
 </section>
 
 <!-- ================= 2. FRAMEWORK ================= -->
@@ -185,7 +365,7 @@
       <ul>
         <li><b>No measurement</b> — the funnel emits no events; "why don't they pay" is currently unanswerable with data. → <a href="https://github.com/hiwasham/AITransforms/blob/main/marketing-plans/bayan/Sales%20Diagnostic%20%26%20Assessment%20Results.html" style="color:var(--bayan2)">sales diagnostic &amp; assessment</a></li>
         <li><b>Grandfathering + free-country structure</b> — a large share of the 1,300 already has full free access (your decision; we pull numbers and propose only). → <a href="https://github.com/hiwasham/AITransforms/blob/main/marketing-plans/bayan/deepseek_html_20261003_8eb800.html" style="color:var(--bayan2)">CEO decision briefs</a></li>
-                <li><b>Price-ladder gap</b> — free jumps straight to $9.99–29/mo; no single-exam pass. → <a href="https://github.com/hiwasham/AITransforms/blob/main/marketing-plans/bayan/deepseek_html_20261003_8eb800.html" style="color:var(--bayan2)">CEO decision briefs</a></li>
+        <li><b>Price-ladder gap</b> — free jumps straight to $9.99–29/mo; no single-exam pass. → <a href="https://github.com/hiwasham/AITransforms/blob/main/marketing-plans/bayan/deepseek_html_20261003_8eb800.html" style="color:var(--bayan2)">CEO decision briefs</a></li>
         <li><b>No nurture</b> — users sign up, hit the 5-question/day wall, go quiet. → <a href="https://github.com/hiwasham/AITransforms/blob/main/marketing-plans/bayan/deepseek_html_20261003_7fd01e.html" style="color:var(--bayan2)">growth engine design</a></li>
       </ul>
     </div>
@@ -392,6 +572,42 @@
 </footer>
 
 </main>
+
+<!-- POPUP SCRIPT -->
+<script>
+  (function() {
+    const overlay = document.getElementById('popupOverlay');
+    const openBtn = document.getElementById('openPopup');
+    const closeBtn = document.getElementById('closePopup');
+
+    function openPopup() {
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePopup() {
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    openBtn.addEventListener('click', openPopup);
+    closeBtn.addEventListener('click', closePopup);
+
+    // Close on overlay click (outside the box)
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) {
+        closePopup();
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) {
+        closePopup();
+      }
+    });
+  })();
+</script>
 
 </body>
 </html>
