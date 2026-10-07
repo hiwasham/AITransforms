@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Platform-Specific Strategy Guide</title>
+<style>
+  :root{
+    --bg:#f7f8fb;
+    --surface:#ffffff;
+    --surface-2:#f3f4f8;
+    --border:#e5e7ef;
+    --text:#141824;
+    --muted:#6b7280;
+    --accent:#4f46e5;
+    --accent-soft:#eef2ff;
+    --accent-border:#c7d2fe;
+    --accent-deep:#4338ca;
+
+    /* Platform colors */
+    --li:#0a66c2;      --li-soft:#eaf3fc;  --li-border:#b9d9f4;
+    --tw:#0f172a;      --tw-soft:#eef1f6;  --tw-border:#cbd5e1;
+    --ig:#d62976;      --ig-soft:#fdf0f7;  --ig-border:#f6c9e3;
+    --tt:#0d9488;      --tt-soft:#effcf9;  --tt-border:#a7f0e6;
+    --fb:#0866ff;      --fb-soft:#eaf2ff;  --fb-border:#bfd6ff;
+
+    /* Semantic */
+    --works-bg:#ecfdf5;    --works-border:#a7f3d0;  --works-text:#047857;
+    --avoid-bg:#fef2f2;    --avoid-border:#fecaca;  --avoid-text:#991b1b;
+    --warn-bg:#fffbeb;     --warn-border:#fde68a;   --warn-text:#92400e;
+
+    --radius:14px;
+    --shadow:0 1px 2px rgba(20,24,36,.05), 0 10px 30px -18px rgba(20,24,36,.35);
+  }
+  [data-theme="dark"]{
+    --bg:#0a0d18;
+    --surface:#131a2b;
+    --surface-2:#1a2338;
+    --border:#27324c;
+    --text:#e7edf9;
+    --muted:#94a3bf;
+    --accent:#818cf8;
+    --accent-soft:#1a1f3d;
+    --accent-border:#3a3f7a;
+    --accent-deep:#a5b4fc;
+
+    --li:#60a5fa;      --li-soft:#122238;  --li-border:#1e4a75;
+    --tw:#e2e8f0;      --tw-soft:#1c2537;  --tw-border:#35435f;
+    --ig:#f472b6;      --ig-soft:#2c1526;  --ig-border:#6b2a4d;
+    --tt:#2dd4bf;      --tt-soft:#0a2b28;  --tt-border:#155e52;
+    --fb:#60a5fa;      --fb-soft:#122238;  --fb-border:#1e4a75;
+
+    --works-bg:#0c2a20;    --works-border:#14532d;  --works-text:#6ee7b7;
+    --avoid-bg:#2b1414;    --avoid-border:#5e2626;  --avoid-text:#fca5a5;
+    --warn-bg:#2a2110;     --warn-border:#5c4718;   --warn-text:#fcd34d;
+
+    --shadow:0 1px 2px rgba(0,0,0,.5), 0 10px 30px -18px rgba(0,0,0,.9);
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size:15px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ---------- Top bar ---------- */
+  .topbar{
+    position:sticky; top:0; z-index:60;
+    background:var(--surface);
+    border-bottom:1px solid var(--border);
+  }
+  .topbar-inner{
+    max-width:1380px; margin:0 auto; padding:12px 20px;
+    display:flex; align-items:center; gap:16px; flex-wrap:wrap;
+  }
+  .brand{display:flex; align-items:center; gap:12px; min-width:0}
+  .brand-mark{
+    width:36px; height:36px; flex:0 0 36px; border-radius:10px;
+    background:linear-gradient(135deg,#4f46e5,#d62976);
+    color:#fff; font-weight:800; font-size:15px;
+    display:flex; align-items:center; justify-content:center;
+    letter-spacing:-.5px;
+  }
+  .brand-text h1{font-size:15px; margin:0; font-weight:700; letter-spacing:-.2px}
+  .brand-text p{margin:0; font-size:12.5px; color:var(--muted)}
+  .topbar-actions{margin-left:auto; display:flex; align-items:center; gap:8px}
+  .btn{
+    font:inherit; font-size:13px; font-weight:600;
+    padding:7px 13px; border-radius:9px; cursor:pointer;
+    background:var(--surface-2); color:var(--text);
+    border:1px solid var(--border);
+    transition:background .15s, border-color .15s;
+  }
+  .btn:hover{background:var(--accent-soft); border-color:var(--accent-border); color:var(--accent-deep)}
+
+  /* ---------- Layout ---------- */
+  .layout{
+    max-width:1380px; margin:0 auto;
+    padding:28px 20px 90px;
+    display:grid;
+    grid-template-columns:250px minmax(0,1fr);
+    gap:32px;
+    align-items:start;
+  }
+
+  /* ---------- Sidebar ---------- */
+  .sidebar{
+    position:sticky; top:78px;
+    max-height:calc(100vh - 100px);
+    overflow-y:auto;
+    padding-right:4px;
+  }
+  .sidebar h2{
+    font-size:11px; text-transform:uppercase; letter-spacing:.09em;
+    color:var(--muted); margin:0 0 10px 12px; font-weight:700;
+  }
+  .nav{display:flex; flex-direction:column; gap:2px}
+  .nav a{
+    display:flex; align-items:center; gap:9px;
+    padding:7px 12px; border-radius:9px;
+    color:var(--muted); text-decoration:none; font-size:13.5px;
+    border-left:2px solid transparent;
+    transition:background .15s, color .15s;
+  }
+  .nav a:hover{background:var(--surface-2); color:var(--text)}
+  .nav a.active{background:var(--accent-soft); color:var(--accent-deep); font-weight:650}
+  .nav a .nav-dot{
+    width:8px; height:8px; border-radius:3px; flex:0 0 8px;
+    background:var(--muted); opacity:.55;
+  }
+  .nav a.dot-li .nav-dot{background:var(--li); opacity:1}
+  .nav a.dot-tw .nav-dot{background:var(--tw); opacity:1}
+  .nav a.dot-ig .nav-dot{background:var(--ig); opacity:1}
+  .nav a.dot-tt .nav-dot{background:var(--tt); opacity:1}
+  .nav a.dot-fb .nav-dot{background:var(--fb); opacity:1}
+
+  /* ---------- Sections ---------- */
+  main{min-width:0}
+  section{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:26px 28px;
+    margin-bottom:22px;
+    box-shadow:var(--shadow);
+    scroll-margin-top:90px;
+  }
+  section > h2{
+    font-size:19px; margin:0 0 6px; letter-spacing:-.3px;
+    display:flex; align-items:center; gap:12px; flex-wrap:wrap;
+  }
+  .lede{color:var(--muted); font-size:14px; margin:0 0 20px}
+  h3{font-size:15.5px; margin:26px 0 8px; letter-spacing:-.2px}
+  h4{font-size:12px; margin:0 0 10px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em}
+  p{margin:0 0 14px}
+  ul,ol{margin:0; padding-left:20px}
+  li{margin-bottom:6px}
+  li:last-child{margin-bottom:0}
+  a{color:var(--accent-deep); text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  code{
+    font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size:12.6px;
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    border-radius:6px;
+    padding:1.5px 5px;
+    color:var(--text);
+  }
+  strong{font-weight:700}
+
+  /* ---------- Platform pills ---------- */
+  .plat{
+    display:inline-flex; align-items:center; gap:7px;
+    font-size:11.5px; font-weight:800; letter-spacing:.06em;
+    text-transform:uppercase;
+    padding:4px 12px; border-radius:999px;
+    white-space:nowrap;
+    border:1px solid transparent;
+  }
+  .plat::before{
+    content:""; width:7px; height:7px; border-radius:2px;
+    flex:0 0 7px; background:currentColor;
+  }
+  .plat.li{background:var(--li-soft); color:var(--li); border-color:var(--li-border)}
+  .plat.tw{background:var(--tw-soft); color:var(--tw); border-color:var(--tw-border)}
+  .plat.ig{background:var(--ig-soft); color:var(--ig); border-color:var(--ig-border)}
+  .plat.tt{background:var(--tt-soft); color:var(--tt); border-color:var(--tt-border)}
+  .plat.fb{background:var(--fb-soft); color:var(--fb); border-color:var(--fb-border)}
+
+  /* ---------- Meta grid (4-up stat block) ---------- */
+  .meta-grid{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:1px; background:var(--border);
+    border:1px solid var(--border); border-radius:12px; overflow:hidden;
+    margin:0 0 22px;
+  }
+  .meta-item{background:var(--surface); padding:13px 16px}
+  .meta-item dt{
+    font-size:10.5px; text-transform:uppercase; letter-spacing:.08em;
+    color:var(--muted); font-weight:750; margin:0 0 4px;
+  }
+  .meta-item dd{margin:0; font-size:13.5px; font-weight:600; line-height:1.45}
+
+  /* ---------- Works / Doesn't cards ---------- */
+  .ww-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:14px;
+    margin:0 0 18px;
+  }
+  .ww-card{
+    border:1px solid var(--border);
+    border-radius:13px;
+    padding:16px 18px;
+    background:var(--surface-2);
+    border-top:4px solid var(--works-text);
+  }
+  .ww-card.doesnt{border-top-color:var(--avoid-text)}
+  .ww-card h4{
+    margin:0 0 10px; font-size:12px; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--works-text);
+  }
+  .ww-card.doesnt h4{color:var(--avoid-text)}
+  .ww-card ul{list-style:none; padding:0; margin:0}
+  .ww-card li{
+    position:relative; padding:5px 0 5px 24px;
+    font-size:13.6px; line-height:1.55;
+    border-bottom:1px dashed var(--border);
+  }
+  .ww-card li:last-child{border-bottom:0; padding-bottom:0}
+  .ww-card li::before{
+    position:absolute; left:0; top:5px;
+    font-weight:800; font-size:13px; line-height:1.55;
+  }
+  .ww-card.works li::before{content:"✓"; color:var(--works-text)}
+  .ww-card.doesnt li::before{content:"✕"; color:var(--avoid-text)}
+
+  /* ---------- Tips cards ---------- */
+  .tips-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:14px;
+    margin:0;
+  }
+  .tips-card{
+    border:1px solid var(--border);
+    border-radius:13px;
+    padding:16px 18px;
+    background:var(--surface-2);
+    border-left:4px solid var(--accent);
+  }
+  .tips-card.algo{border-left-color:var(--accent-deep)}
+  .tips-card h4{
+    margin:0 0 10px; font-size:12px; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--accent-deep);
+  }
+  .tips-card ul{
+    list-style:none; padding:0; margin:0;
+  }
+  .tips-card li{
+    position:relative; padding:6px 0 6px 20px;
+    font-size:13.6px; line-height:1.55;
+    border-bottom:1px dashed var(--border);
+  }
+  .tips-card li:last-child{border-bottom:0; padding-bottom:0}
+  .tips-card li::before{
+    content:""; position:absolute; left:2px; top:15px;
+    width:6px; height:6px; border-radius:50%;
+    background:var(--accent);
+  }
+  .tips-card.algo li::before{background:var(--accent-deep)}
+
+  /* ---------- Comparison table ---------- */
+  .table-wrap{
+    overflow-x:auto; border:1px solid var(--border);
+    border-radius:12px; margin:0 0 18px;
+    -webkit-overflow-scrolling:touch;
+  }
+  table{width:100%; border-collapse:collapse; font-size:13.6px; min-width:820px}
+  thead th{
+    text-align:left; padding:12px 14px;
+    background:var(--surface-2);
+    font-size:11.5px; text-transform:uppercase; letter-spacing:.07em;
+    color:var(--muted); font-weight:700;
+    border-bottom:1px solid var(--border);
+    white-space:nowrap;
+  }
+  tbody td{padding:12px 14px; border-bottom:1px solid var(--border); vertical-align:top}
+  tbody tr:last-child td{border-bottom:0}
+  tbody tr:nth-child(even){background:color-mix(in srgb, var(--surface-2) 45%, transparent)}
+  td.metric-name{
+    font-weight:750;
+    white-space:nowrap;
+  }
+  td.compact{
+    font-size:13px;
+    line-height:1.5;
+  }
+
+  /* ---------- Callouts / notes ---------- */
+  .callout{
+    border-radius:12px; padding:16px 18px; margin:0 0 18px;
+    border:1px solid var(--accent-border); background:var(--accent-soft);
+    font-size:13.8px;
+  }
+  .callout.warn{
+    border-color:var(--warn-border); background:var(--warn-bg); color:var(--warn-text);
+  }
+  .callout.warn strong{color:var(--warn-text)}
+  .callout h4{margin:0 0 8px; color:inherit; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase}
+  .callout p:last-child{margin-bottom:0}
+
+  .note{
+    font-size:13px; color:var(--muted);
+    border-left:3px solid var(--accent-border);
+    padding:6px 0 6px 14px; margin:0 0 18px;
+  }
+  .note strong{color:var(--text)}
+
+  /* ---------- Platform overview TOC ---------- */
+  .toc-grid{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+    gap:12px; margin:0;
+  }
+  .toc-card{
+    border:1px solid var(--border); border-radius:12px;
+    background:var(--surface-2);
+    padding:15px 17px;
+    text-decoration:none; color:inherit;
+    display:block;
+    border-top:3px solid var(--accent);
+    transition:border-color .15s, transform .15s;
+  }
+  .toc-card:hover{transform:translateY(-2px); text-decoration:none}
+  .toc-card.li{border-top-color:var(--li)}
+  .toc-card.tw{border-top-color:var(--tw)}
+  .toc-card.ig{border-top-color:var(--ig)}
+  .toc-card.tt{border-top-color:var(--tt)}
+  .toc-card.fb{border-top-color:var(--fb)}
+  .toc-card:hover{border-color:var(--accent-border)}
+  .toc-card .tc-title{
+    font-size:14.2px; font-weight:750; letter-spacing:-.1px; margin:0 0 3px;
+  }
+  .toc-card .tc-sub{
+    font-size:12.6px; color:var(--muted); margin:0 0 8px; line-height:1.5;
+  }
+  .toc-card .tc-count{
+    font-size:11.2px; font-weight:800; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--accent-deep);
+  }
+  .toc-card.li .tc-count{color:var(--li)}
+  .toc-card.tw .tc-count{color:var(--tw)}
+  .toc-card.ig .tc-count{color:var(--ig)}
+  .toc-card.tt .tc-count{color:var(--tt)}
+  .toc-card.fb .tc-count{color:var(--fb)}
+
+  /* ---------- Badges ---------- */
+  .badges{display:flex; gap:8px; flex-wrap:wrap; margin:0 0 18px}
+  .badge{
+    font-size:12px; font-weight:650; padding:4px 11px; border-radius:999px;
+    background:var(--surface-2); color:var(--muted); border:1px solid var(--border);
+  }
+  .badge.accent{background:var(--accent-soft); color:var(--accent-deep); border-color:var(--accent-border)}
+
+  footer{
+    max-width:1380px; margin:0 auto; padding:0 20px 60px;
+    color:var(--muted); font-size:12.6px; text-align:center;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:1000px){
+    .layout{grid-template-columns:1fr; gap:20px; padding-top:18px}
+    .sidebar{
+      position:static; max-height:none; overflow:visible;
+      background:var(--surface); border:1px solid var(--border);
+      border-radius:var(--radius); padding:16px; box-shadow:var(--shadow);
+    }
+    .nav{display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:4px}
+  }
+  @media (max-width:720px){
+    .ww-grid{grid-template-columns:1fr}
+    .tips-grid{grid-template-columns:1fr}
+  }
+  @media (max-width:600px){
+    section{padding:20px 17px}
+    .topbar-inner{padding:10px 14px}
+    .brand-text p{display:none}
+    .meta-grid{grid-template-columns:1fr 1fr}
+  }
+
+  /* ---------- Print ---------- */
+  @media print{
+    .topbar,.sidebar,footer{display:none !important}
+    body{background:#fff}
+    .layout{display:block; max-width:none; padding:0}
+    section{box-shadow:none; border-color:#d0d7e2; break-inside:avoid; page-break-inside:avoid}
+    .ww-grid,.tips-grid{grid-template-columns:1fr 1fr}
+    .ww-card,.tips-card,.meta-grid,.toc-card,.callout{break-inside:avoid}
+    .table-wrap{overflow:visible}
+    table{min-width:0}
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-mark">P</div>
+      <div class="brand-text">
+        <h1>Platform-Specific Strategy Guide</h1>
+        <p>LinkedIn · Twitter/X · Instagram · TikTok · Facebook</p>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <button class="btn" id="themeToggle" type="button">Dark mode</button>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar">
+    <h2>Platforms</h2>
+    <nav class="nav" id="nav">
+      <a href="#overview">Overview</a>
+      <a href="#linkedin" class="dot-li"><span class="nav-dot"></span>LinkedIn</a>
+      <a href="#twitter" class="dot-tw"><span class="nav-dot"></span>Twitter / X</a>
+      <a href="#instagram" class="dot-ig"><span class="nav-dot"></span>Instagram</a>
+      <a href="#tiktok" class="dot-tt"><span class="nav-dot"></span>TikTok</a>
+      <a href="#facebook" class="dot-fb"><span class="nav-dot"></span>Facebook</a>
+    </nav>
+  </aside>
+
+  <!-- ================= MAIN ================= -->
+  <main>
+
+    <!-- ---------- OVERVIEW ---------- -->
+    <section id="overview">
+      <h2>Overview</h2>
+      <p class="lede">
+        Detailed strategies for each major social platform. Same structure for every platform:
+        audience, cadence, what works, what doesn't, plus format and algorithm tips.
+      </p>
+
+      <div class="badges">
+        <span class="badge accent">5 platforms</span>
+        <span class="badge">What works / what doesn't</span>
+        <span class="badge">Format + algorithm tips</span>
+      </div>
+
+      <div class="toc-grid">
+        <a class="toc-card li" href="#linkedin">
+          <p class="tc-title">LinkedIn</p>
+          <p class="tc-sub">B2B, thought leadership, recruiting</p>
+          <span class="tc-count">3–5× / week</span>
+        </a>
+        <a class="toc-card tw" href="#twitter">
+          <p class="tc-title">Twitter / X</p>
+          <p class="tc-sub">Tech, media, real-time commentary</p>
+          <span class="tc-count">3–10× / day</span>
+        </a>
+        <a class="toc-card ig" href="#instagram">
+          <p class="tc-title">Instagram</p>
+          <p class="tc-sub">Visual brands, lifestyle, e-commerce</p>
+          <span class="tc-count">1–2 feed / day</span>
+        </a>
+        <a class="toc-card tt" href="#tiktok">
+          <p class="tc-title">TikTok</p>
+          <p class="tc-sub">Awareness, younger audiences, viral</p>
+          <span class="tc-count">1–4× / day</span>
+        </a>
+        <a class="toc-card fb" href="#facebook">
+          <p class="tc-title">Facebook</p>
+          <p class="tc-sub">Communities, local, groups</p>
+          <span class="tc-count">1–2× / day</span>
+        </a>
+      </div>
+
+      <h3 style="margin-top:26px">Quick comparison</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Platform</th>
+              <th>Best for</th>
+              <th>Audience</th>
+              <th>Frequency</th>
+              <th>Best times</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="metric-name"><span class="plat li">LinkedIn</span></td>
+              <td class="compact">B2B, thought leadership, professional networking, recruiting</td>
+              <td class="compact">Professionals, decision-makers, job seekers</td>
+              <td class="compact">3–5× per week</td>
+              <td class="compact">Tue–Thu · 7–8am · 12pm · 5–6pm</td>
+            </tr>
+            <tr>
+              <td class="metric-name"><span class="plat tw">Twitter/X</span></td>
+              <td class="compact">Tech, media, real-time commentary, community building</td>
+              <td class="compact">Tech-savvy, news-oriented, niche communities</td>
+              <td class="compact">3–10× per day <em>(incl. replies)</em></td>
+              <td class="compact">Varies by audience; test and measure</td>
+            </tr>
+            <tr>
+              <td class="metric-name"><span class="plat ig">Instagram</span></td>
+              <td class="compact">Visual brands, lifestyle, e-commerce, younger demographics</td>
+              <td class="compact">18–44, visual-first consumers</td>
+              <td class="compact">1–2 feed / day · 3–10 Stories / day</td>
+              <td class="compact">11am–1pm · 7–9pm</td>
+            </tr>
+            <tr>
+              <td class="metric-name"><span class="plat tt">TikTok</span></td>
+              <td class="compact">Brand awareness, younger audiences, viral potential</td>
+              <td class="compact">16–34, entertainment-focused</td>
+              <td class="compact">1–4× per day</td>
+              <td class="compact">7–9am · 12–3pm · 7–11pm</td>
+            </tr>
+            <tr>
+              <td class="metric-name"><span class="plat fb">Facebook</span></td>
+              <td class="compact">Communities, local businesses, older demographics, groups</td>
+              <td class="compact">25–55+, community-oriented</td>
+              <td class="compact">1–2× per day</td>
+              <td class="compact">1–4pm weekdays</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ---------- LINKEDIN ---------- -->
+    <section id="linkedin">
+      <h2><span class="plat li">LinkedIn</span> Strategy</h2>
+      <p class="lede">B2B, thought leadership, professional networking, recruiting.</p>
+
+      <div class="meta-grid">
+        <dl class="meta-item">
+          <dt>Best for</dt>
+          <dd>B2B, thought leadership, professional networking, recruiting</dd>
+        </dl>
+        <dl class="meta-item">
+          <dt>Audience</dt>
+          <dd>Professionals, decision-makers, job seekers</dd>
+        </dl>
+        <dl class="meta-item">
+          <dt>Posting frequency</dt>
+          <dd>3–5× per week</dd>
+        </dl>
+        <dl class="meta-item">
+          <dt>Best times</dt>
+          <dd>Tue–Thu · 7–8am, 12pm, 5–6pm</dd>
+        </dl>
+      </div>
+
+      <div class="ww-grid">
+        <div class="ww-card works">
+          <h4>What works</h4>
+          <ul>
+            <li>Personal stories with business lessons</li>
+            <li>Contrarian takes on industry topics</li>
+            <li>Behind-the-scenes of building a company</li>
+            <li>Data and original insights</li>
+            <li>Carousel posts (document format)</li>
+            <li>Polls that spark discussion</li>
+          </ul>
+        </div>
+        <div class="ww-card doesnt">
+          <h4>What doesn't</h4>
+          <ul>
+            <li>Overly promotional content</li>
+            <li>Generic motivational quotes</li>
+            <li>Links in the main post (kills reach)</li>
+            <li>Corporate speak without personality</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tips-grid">
+        <div class="tips-card">
+          <h4>Format tips</h4>
+          <ul>
+            <li>First line is everything (hook before "see more")</li>
+            <li>Use line breaks for readability</li>
+            <li>1,200–1,500 characters performs well</li>
+            <li>Put links in comments, not post body</li>
+            <li>Tag people sparingly and genuinely</li>
+          </ul>
+        </div>
+        <div class="tips-card algo">
+          <h4>Algorithm tips</h4>
+          <ul>
+            <li>First hour engagement matters most</li>
+            <li>Comments &gt; reactions &gt; clicks</li>
+            <li>Dwell time (people reading) signals quality</li>
+            <li>No external links in post body</li>
+            <li>Document posts (carousels) get strong reach</li>
+            <li>Polls drive engagement but don't build authority</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- TWITTER ---------- -->
+    <section id="twitter">
+      <h2><span class="plat tw">Twitter / X</span> Strategy</h2>
+      <p class="lede">Tech, media, real-time commentary, community building.</p>
+
+      <div class="meta-grid">
+        <dl class="meta-item">
+          <dt>Best for</dt>
+          <dd>Tech, media, real-time commentary, community building</dd>
+        </dl>
+        <dl class="meta-item">
+          <dt>Audience</dt>
+          <dd>Tech-savvy, news-oriented, niche communities</dd>
+        </dl>
+        <dl class="meta-item">
+          <dt>Posting frequency</dt>
+          <dd>3–10× per day (including replies)</dd>
+        </dl>
+        <dl class="meta-item">
+          <dt>Best times</dt>
+          <dd>Varies by audience; test and measure</dd>
+        </dl>
+      </div>
+
+      <div class="ww-grid">
+        <div class="ww-card works">
+          <h4>What works</h4>
+          <ul>
+            <li>Hot takes and opinions</li>
+            <li>Threads that teach something</li>
+            <li>Behind-the-scenes moments</li>
+            <li>Engaging with others' content</li>
+            <li>Memes and humor (if on-brand)</li>
+            <li>Real-time commentary on events</li>
+          </ul>
+        </div>
+        <div class="ww-card doesnt">
+          <h4>What doesn't</h4>
+          <ul>
+            <li>Pure self-promotion</li>
+            <li>Threads without a strong hook</li>
+            <li>Ignoring replies and mentions</li>
+            <li>Scheduling everything (no real-time presence)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tips-grid">
+        <div class="tips-card">
+          <h4>Format tips</h4>
+          <ul>
+            <li>Tweets under 100 characters get more engagement</li>
+            <li>Threads: Hook in tweet 1, promise value, deliver</li>
+            <li>Quote tweets with added insight beat plain retweets</li>
+            <li>Use visuals to stop the scroll</li>
+          </ul>
+        </div>
+        <div class="tips-card algo">
+          <h4>Algorithm tips</h4>
+          <ul>
+            <li>Replies and quote tweets build authority</li>
+            <li>Threads keep people on platform (rewarded)</li>
+            <li>Images and video get more reach</li>
+            <li>Engagement in first 30 min matters</li>
+            <li>Twitter Blue / Premium may boost reach</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- INSTAGRAM ---------- -->
+    <section id="instagram">
+      <h2><span class="plat ig">Instagram</span> Strategy</h2>
+      <p class="lede">Visual brands, lifestyle, e-commerce, younger demographics.</p>
+
+      <div class="meta-grid">
+        <dl class="meta-item">
+          <dt>Best for</dt>
+          <dd>Visual brands, lifestyle, e-commerce, younger demographics</dd>
+        </dl>
+        <dl class="meta-item">
+          <dt>Audience</dt>
+          <dd>18–44, visual-first consumers</dd>
+        </dl>
+        <dl class="meta-item">
+          <dt>Posting frequency</dt>
+          <dd>1–2 feed posts per day · 3–10 Stories per day</dd>
+        </dl>
+        <dl class="meta-item">
+          <dt>Best times</dt>
+          <dd>11am–1pm · 7–9pm</dd>
+        </dl>
+      </div>
+
+      <div class="ww-grid">
+        <div class="ww-card works">
+          <h4>What works</h4>
+          <ul>
+            <li>High-quality visuals</li>
+            <li>Behind-the-scenes Stories</li>
+            <li>Reels (short-form video)</li>
+            <li>Carousels with value</li>
+            <li>User-generated content</li>
+            <li>Interactive Stories (polls, questions)</li>
+          </ul>
+        </div>
+        <div class="ww-card doesnt">
+          <h4>What doesn't</h4>
+          <ul>
+            <li>Low-quality images</li>
+            <li>Too much text in images</li>
+            <li>Ignoring Stories and Reels</li>
+            <li>Only promotional content</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tips-grid">
+        <div class="tips-card">
+          <h4>Format tips</h4>
+          <ul>
+            <li>Reels get 2× reach of static posts</li>
+            <li>First frame of Reels must hook</li>
+            <li>Carousels: 10 slides with educational content</li>
+            <li>Use all Story features (polls, links, etc.)</li>
+          </ul>
+        </div>
+        <div class="tips-card algo">
+          <h4>Algorithm tips</h4>
+          <ul>
+            <li>Reels heavily prioritized over static posts</li>
+            <li>Saves and shares &gt; likes</li>
+            <li>Stories keep you top of feed</li>
+            <li>Consistency matters more than perfection</li>
+            <li>Use all features (polls, questions, etc.)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- TIKTOK ---------- -->
+    <section id="tiktok">
+      <h2><span class="plat tt">TikTok</span> Strategy</h2>
+      <p class="lede">Brand awareness, younger audiences, viral potential.</p>
+
+      <div class="meta-grid">
+        <dl class="meta-item">
+          <dt>Best for</dt>
+          <dd>Brand awareness, younger audiences, viral potential</dd>
+        </dl>
+        <dl class="meta-item">
+          <dt>Audience</dt>
+          <dd>16–34, entertainment-focused</dd>
+        </dl>
+        <dl class="meta-item">
+          <dt>Posting frequency</dt>
+          <dd>1–4× per day</dd>
+        </dl>
+        <dl class="meta-item">
+          <dt>Best times</dt>
+          <dd>7–9am · 12–3pm · 7–11pm</dd>
+        </dl>
+      </div>
+
+      <div class="ww-grid">
+        <div class="ww-card works">
+          <h4>What works</h4>
+          <ul>
+            <li>Native, unpolished content</li>
+            <li>Trending sounds and formats</li>
+            <li>Educational content in entertaining wrapper</li>
+            <li>POV and day-in-the-life content</li>
+            <li>Responding to comments with videos</li>
+            <li>Duets and stitches</li>
+          </ul>
+        </div>
+        <div class="ww-card doesnt">
+          <h4>What doesn't</h4>
+          <ul>
+            <li>Overly produced content</li>
+            <li>Ignoring trends</li>
+            <li>Hard selling</li>
+            <li>Repurposed horizontal video</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tips-grid">
+        <div class="tips-card">
+          <h4>Format tips</h4>
+          <ul>
+            <li>Hook in first 1–2 seconds</li>
+            <li>Keep it under 30 seconds to start</li>
+            <li>Vertical only (9:16)</li>
+            <li>Use trending sounds</li>
+            <li>Post consistently to train algorithm</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- FACEBOOK ---------- -->
+    <section id="facebook">
+      <h2><span class="plat fb">Facebook</span> Strategy</h2>
+      <p class="lede">Communities, local businesses, older demographics, groups.</p>
+
+      <div class="meta-grid">
+        <dl class="meta-item">
+          <dt>Best for</dt>
+          <dd>Communities, local businesses, older demographics, groups</dd>
+        </dl>
+        <dl class="meta-item">
+          <dt>Audience</dt>
+          <dd>25–55+, community-oriented</dd>
+        </dl>
+        <dl class="meta-item">
+          <dt>Posting frequency</dt>
+          <dd>1–2× per day</dd>
+        </dl>
+        <dl class="meta-item">
+          <dt>Best times</dt>
+          <dd>1–4pm weekdays</dd>
+        </dl>
+      </div>
+
+      <div class="ww-grid">
+        <div class="ww-card works">
+          <h4>What works</h4>
+          <ul>
+            <li>Facebook Groups (community)</li>
+            <li>Native video</li>
+            <li>Live video</li>
+            <li>Local content and events</li>
+            <li>Discussion-prompting questions</li>
+          </ul>
+        </div>
+        <div class="ww-card doesnt">
+          <h4>What doesn't</h4>
+          <ul>
+            <li>Links to external sites (reach killer)</li>
+            <li>Pure promotional content</li>
+            <li>Ignoring comments</li>
+            <li>Cross-posting from other platforms without adaptation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  Platform-Specific Strategy Guide · LinkedIn · Twitter/X · Instagram · TikTok · Facebook
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- Active nav highlighting ---------- */
+  var links = Array.prototype.slice.call(document.querySelectorAll("#nav a"));
+  var linkFor = {};
+  links.forEach(function (a) {
+    var id = a.getAttribute("href").slice(1);
+    var el = document.getElementById(id);
+    if (el) linkFor[id] = a;
+  });
+
+  if ("IntersectionObserver" in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var active = linkFor[entry.target.id];
+        if (!active) return;
+        links.forEach(function (a) { a.classList.remove("active"); });
+        active.classList.add("active");
+      });
+    }, { rootMargin: "-90px 0px -65% 0px", threshold: 0 });
+
+    Object.keys(linkFor).forEach(function (id) {
+      observer.observe(document.getElementById(id));
+    });
+  }
+
+  /* ---------- Theme toggle (persisted) ---------- */
+  var root = document.documentElement;
+  var toggle = document.getElementById("themeToggle");
+
+  function applyTheme(theme) {
+    if (theme === "dark") {
+      root.setAttribute("data-theme", "dark");
+      toggle.textContent = "Light mode";
+    } else {
+      root.removeAttribute("data-theme");
+      toggle.textContent = "Dark mode";
+    }
+  }
+
+  var saved = null;
+  try { saved = localStorage.getItem("bayan-theme"); } catch (e) { /* ignore */ }
+
+  if (!saved && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    saved = "dark";
+  }
+  applyTheme(saved === "dark" ? "dark" : "light");
+
+  toggle.addEventListener("click", function () {
+    var isDark = root.getAttribute("data-theme") === "dark";
+    var next = isDark ? "light" : "dark";
+    applyTheme(next);
+    try { localStorage.setItem("bayan-theme", next); } catch (e) { /* ignore */ }
+  });
+})();
+</script>
+
+</body>
+</html>
