@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Baseline Vitals — Bayan · 2026-09-28</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#04070E; --panel:rgba(12,20,34,.65); --panel-2:rgba(255,255,255,.025);
+  --ink:#EAF0FA; --dim:#8998B0; --faint:#414E63;
+  --line:rgba(137,152,176,.14); --line-hi:rgba(137,152,176,.3);
+  --teal:#2DD4BF; --violet:#A78BFA; --blue:#60A5FA;
+  --amber:#FBBF24; --orange:#FB923C; --red:#F87171; --green:#34D399;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --mono:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--ink);
+  font-family:'Inter',-apple-system,sans-serif;
+  line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+
+.bg-grid{
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(45,212,191,.02) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(45,212,191,.02) 1px,transparent 1px);
+  background-size:120px 120px;
+  mask-image:radial-gradient(ellipse 90% 70% at 50% 35%,#000 25%,transparent 95%);
+}
+.orb{position:fixed;border-radius:50%;filter:blur(120px);opacity:.13;pointer-events:none;z-index:0}
+.orb.a{width:500px;height:500px;background:var(--teal);top:-180px;left:-140px;animation:drift 32s ease-in-out infinite}
+.orb.b{width:440px;height:440px;background:var(--red);bottom:-180px;right:-160px;animation:drift 38s ease-in-out infinite reverse}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,-40px)}}
+
+.wrap{position:relative;z-index:2;max-width:1340px;margin:0 auto;padding:0 32px 100px}
+@media(max-width:640px){.wrap{padding:0 18px 60px}}
+
+/* header */
+header{padding:48px 0 28px}
+.kicker{
+  font-family:var(--mono);font-size:11px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--faint);
+  display:flex;align-items:center;gap:12px;margin-bottom:18px;
+}
+.kicker::before{content:'';width:26px;height:1px;background:var(--faint)}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(45,212,191,.16);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+h1{
+  font-size:clamp(30px,4.6vw,52px);font-weight:900;
+  letter-spacing:-.05em;line-height:1.02;margin-bottom:16px;
+  max-width:22ch;
+}
+h1 em{
+  font-style:normal;
+  background:linear-gradient(100deg,var(--teal) 0%,var(--violet) 55%,var(--red) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  background-size:200% 100%;animation:shift 9s ease-in-out infinite;
+}
+</style>
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="orb a"></div>
+<div class="orb b"></div>
+
+
+
+<script>
+</script>
+</body>
+</html>

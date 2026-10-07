@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bayan — Analytics Events Spec</title>
+<style>
+  :root{
+    --bg:#f5f7fb;
+    --surface:#ffffff;
+    --surface-2:#f1f5f9;
+    --border:#e3e8ef;
+    --text:#0f172a;
+    --muted:#64748b;
+    --accent:#2563eb;
+    --accent-soft:#eff6ff;
+    --accent-border:#bfdbfe;
+    --warn-bg:#fffbeb;
+    --warn-border:#fde68a;
+    --warn-text:#92400e;
+    --code-bg:#0f172a;
+    --code-text:#e2e8f0;
+    --radius:14px;
+    --shadow:0 1px 2px rgba(15,23,42,.05), 0 10px 30px -18px rgba(15,23,42,.35);
+  }
+  [data-theme="dark"]{
+    --bg:#080e1a;
+    --surface:#101a2c;
+    --surface-2:#16223a;
+    --border:#22314c;
+    --text:#e6edf7;
+    --muted:#94a6c0;
+    --accent:#60a5fa;
+    --accent-soft:#152744;
+    --accent-border:#2b4a7d;
+    --warn-bg:#2a2110;
+    --warn-border:#5c4718;
+    --warn-text:#fcd34d;
+    --code-bg:#060c17;
+    --code-text:#dbe6f5;
+    --shadow:0 1px 2px rgba(0,0,0,.5), 0 10px 30px -18px rgba(0,0,0,.9);
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size:15px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ---------- Top bar ---------- */
+  .topbar{
+    position:sticky; top:0; z-index:60;
+    background:var(--surface);
+    border-bottom:1px solid var(--border);
+  }
+  .topbar-inner{
+    max-width:1380px; margin:0 auto; padding:12px 20px;
+    display:flex; align-items:center; gap:16px; flex-wrap:wrap;
+  }
+  .brand{display:flex; align-items:center; gap:12px; min-width:0}
+  .brand-mark{
+    width:36px; height:36px; flex:0 0 36px; border-radius:10px;
+    background:linear-gradient(135deg,#2563eb,#38bdf8);
+    color:#fff; font-weight:800; font-size:16px;
+    display:flex; align-items:center; justify-content:center;
+    letter-spacing:-.5px;
+  }
+  .brand-text h1{font-size:15px; margin:0; font-weight:700; letter-spacing:-.2px}
+  .brand-text p{margin:0; font-size:12.5px; color:var(--muted)}
+  .topbar-actions{margin-left:auto; display:flex; align-items:center; gap:8px}
+  .btn{
+    font:inherit; font-size:13px; font-weight:600;
+    padding:7px 13px; border-radius:9px; cursor:pointer;
+    background:var(--surface-2); color:var(--text);
+    border:1px solid var(--border);
+    transition:background .15s, border-color .15s;
+  }
+  .btn:hover{background:var(--accent-soft); border-color:var(--accent-border); color:var(--accent)}
+
+  /* ---------- Layout ---------- */
+  .layout{
+    max-width:1380px; margin:0 auto;
+    padding:28px 20px 90px;
+    display:grid;
+    grid-template-columns:250px minmax(0,1fr);
+    gap:32px;
+    align-items:start;
+  }
+
+  /* ---------- Sidebar nav ---------- */
+  .sidebar{
+    position:sticky; top:78px;
+    max-height:calc(100vh - 100px);
+    overflow-y:auto;
+    padding-right:4px;
+  }
+  .sidebar h2{
+    font-size:11px; text-transform:uppercase; letter-spacing:.09em;
+    color:var(--muted); margin:0 0 10px 12px; font-weight:700;
+  }
+  .nav{display:flex; flex-direction:column; gap:2px}
+  .nav a{
+    display:block; padding:7px 12px; border-radius:9px;
+    color:var(--muted); text-decoration:none; font-size:13.5px;
+    border-left:2px solid transparent;
+    transition:background .15s, color .15s;
+  }
+  .nav a:hover{background:var(--surface-2); color:var(--text)}
+  .nav a.active{background:var(--accent-soft); color:var(--accent); font-weight:650}
+  .nav a.sub{padding-left:26px; font-size:12.8px}
+  .nav .divider{height:1px; background:var(--border); margin:10px 12px}
+
+  /* ---------- Sections ---------- */
+  main{min-width:0}
+  section{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:26px 28px;
+    margin-bottom:22px;
+    box-shadow:var(--shadow);
+    scroll-margin-top:90px;
+  }
+  section > h2{
+    font-size:19px; margin:0 0 6px; letter-spacing:-.3px;
+    display:flex; align-items:center; gap:10px;
+  }
+  .num{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:26px; height:26px; flex:0 0 26px;
+    border-radius:8px; background:var(--accent-soft); color:var(--accent);
+    font-size:13px; font-weight:800;
+  }
+  .lede{color:var(--muted); font-size:14px; margin:0 0 20px}
+  h3{font-size:15.5px; margin:26px 0 8px; letter-spacing:-.2px}
+  h4{font-size:14px; margin:20px 0 6px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em}
+  p{margin:0 0 14px}
+  ul,ol{margin:0 0 14px; padding-left:22px}
+  li{margin-bottom:6px}
+
+  code{
+    font-family:ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-size:12.6px;
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    border-radius:6px;
+    padding:1.5px 5px;
+    color:var(--text);
+    white-space:nowrap;
+  }
+  .ev{
+    font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size:12.4px; font-weight:600;
+    background:var(--accent-soft); color:var(--accent);
+    border:1px solid var(--accent-border);
+    border-radius:6px; padding:2px 7px; white-space:nowrap;
+  }
+
+  /* ---------- Callouts ---------- */
+  .callout{
+    border-radius:12px; padding:16px 18px; margin:0 0 18px;
+    border:1px solid var(--accent-border); background:var(--accent-soft);
+  }
+  .callout.warn{
+    border-color:var(--warn-border); background:var(--warn-bg); color:var(--warn-text);
+  }
+  .callout.warn strong{color:var(--warn-text)}
+  .callout h4{margin:0 0 8px; color:inherit; font-size:12px; letter-spacing:.08em}
+  .callout p:last-child, .callout ul:last-child, .callout ol:last-child{margin-bottom:0}
+
+  .rules{counter-reset:rule; list-style:none; padding:0; margin:0}
+  .rules li{
+    counter-increment:rule; position:relative;
+    padding:12px 0 12px 46px; margin:0;
+    border-bottom:1px dashed var(--border);
+  }
+  .rules li:last-child{border-bottom:0; padding-bottom:0}
+  .rules li::before{
+    content:counter(rule);
+    position:absolute; left:0; top:12px;
+    width:28px; height:28px; border-radius:50%;
+    background:var(--accent); color:#fff;
+    font-size:13px; font-weight:800;
+    display:flex; align-items:center; justify-content:center;
+  }
+
+  /* ---------- Tables ---------- */
+  .table-wrap{
+    overflow-x:auto; border:1px solid var(--border);
+    border-radius:12px; margin:0 0 18px;
+    -webkit-overflow-scrolling:touch;
+  }
+  table{width:100%; border-collapse:collapse; font-size:13.8px; min-width:620px}
+  thead th{
+    text-align:left; padding:11px 14px;
+    background:var(--surface-2);
+    font-size:11.5px; text-transform:uppercase; letter-spacing:.07em;
+    color:var(--muted); font-weight:700;
+    border-bottom:1px solid var(--border);
+    white-space:nowrap;
+  }
+  tbody td{padding:11px 14px; border-bottom:1px solid var(--border); vertical-align:top}
+  tbody tr:last-child td{border-bottom:0}
+  tbody tr:nth-child(even){background:color-mix(in srgb, var(--surface-2) 45%, transparent)}
+  td.idx{color:var(--muted); font-variant-numeric:tabular-nums; width:38px}
+
+  /* ---------- Code blocks ---------- */
+  .code-wrap{position:relative; margin:0 0 8px}
+  pre{
+    margin:0;
+    background:var(--code-bg);
+    color:var(--code-text);
+    border-radius:12px;
+    padding:18px 20px;
+    overflow-x:auto;
+    font-size:12.7px;
+    line-height:1.62;
+    border:1px solid rgba(255,255,255,.06);
+  }
+  pre code{
+    background:none; border:0; padding:0; color:inherit;
+    font-size:inherit; white-space:pre;
+  }
+  .copy-btn{
+    position:absolute; top:9px; right:9px;
+    font:inherit; font-size:11.5px; font-weight:700;
+    letter-spacing:.03em;
+    padding:5px 11px; border-radius:8px; cursor:pointer;
+    background:rgba(255,255,255,.10);
+    color:#cbd5e1;
+    border:1px solid rgba(255,255,255,.16);
+    backdrop-filter:blur(6px);
+    transition:background .15s, color .15s;
+  }
+  .copy-btn:hover{background:rgba(255,255,255,.22); color:#fff}
+  .copy-btn.done{background:#16a34a; border-color:#16a34a; color:#fff}
+
+  .note{
+    font-size:13px; color:var(--muted);
+    border-left:3px solid var(--accent-border);
+    padding:6px 0 6px 14px; margin:0 0 18px;
+  }
+
+  /* ---------- Rate blocks ---------- */
+  .rate{
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:18px 20px;
+    margin-bottom:18px;
+    background:var(--surface);
+  }
+  .rate-head{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin-bottom:4px}
+  .rate-head h3{margin:0; font-size:15px}
+  .rate-head .tag{
+    font-size:11px; font-weight:700; letter-spacing:.06em;
+    text-transform:uppercase; color:var(--accent);
+    background:var(--accent-soft); border:1px solid var(--accent-border);
+    padding:2px 8px; border-radius:999px;
+  }
+  .rate > p{font-size:13.6px; color:var(--muted); margin:6px 0 14px}
+
+  /* ---------- Badges ---------- */
+  .badges{display:flex; gap:8px; flex-wrap:wrap; margin:0 0 18px}
+  .badge{
+    font-size:12px; font-weight:650; padding:4px 11px; border-radius:999px;
+    background:var(--surface-2); color:var(--muted); border:1px solid var(--border);
+  }
+  .badge.ok{background:#ecfdf5; color:#047857; border-color:#a7f3d0}
+  [data-theme="dark"] .badge.ok{background:#0c2a20; color:#6ee7b7; border-color:#14532d}
+
+  /* ---------- Misc ---------- */
+  .kv{display:grid; grid-template-columns:auto 1fr; gap:4px 14px; font-size:13.6px; margin:0}
+  .kv dt{color:var(--muted); font-weight:600}
+  .kv dd{margin:0}
+  footer{
+    max-width:1380px; margin:0 auto; padding:0 20px 60px;
+    color:var(--muted); font-size:12.6px; text-align:center;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:1000px){
+    .layout{grid-template-columns:1fr; gap:20px; padding-top:18px}
+    .sidebar{
+      position:static; max-height:none; overflow:visible;
+      background:var(--surface); border:1px solid var(--border);
+      border-radius:var(--radius); padding:16px; box-shadow:var(--shadow);
+    }
+    .nav{display:grid; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); gap:4px}
+    .nav .divider{display:none}
+    .nav a.sub{display:none}
+  }
+  @media (max-width:600px){
+    section{padding:20px 17px}
+    .topbar-inner{padding:10px 14px}
+    .brand-text p{display:none}
+  }
+
+  /* ---------- Print ---------- */
+  @media print{
+    .topbar,.sidebar,.copy-btn,footer{display:none !important}
+    body{background:#fff}
+    .layout{display:block; max-width:none; padding:0}
+    section{box-shadow:none; border-color:#d0d7e2; break-inside:avoid; page-break-inside:avoid}
+    .rate{break-inside:avoid}
+    pre{white-space:pre-wrap; word-break:break-word; background:#f5f7fb; color:#0f172a; border:1px solid #d0d7e2}
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-mark">B</div>
+      <div class="brand-text">
+        <h1>Analytics Events Spec</h1>
+        <p>Bayan learner app · Next.js + Supabase</p>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <button class="btn" id="themeToggle" type="button">Dark mode</button>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar">
+    <h2>Contents</h2>
+    <nav class="nav" id="nav">
+      <a href="#overview">Overview</a>
+      <a href="#schema">1 · Table schema</a>
+      <a href="#rules">The three rules</a>
+      <a href="#events">2 · The 12 events</a>
+      <a href="#rates">3 · Dashboard rates</a>
+      <a href="#rate-1" class="sub">① Trial → paid</a>
+      <a href="#rate-2" class="sub">② Activation</a>
+      <a href="#rate-3" class="sub">③ Diagnostic → signup</a>
+      <a href="#rate-4" class="sub">④ MRR / ARPU / tier</a>
+      <a href="#rate-5" class="sub">⑤ D1 / D7 / D30</a>
+      <a href="#rate-6" class="sub">⑥ Monthly churn</a>
+      <a href="#north-star">4 · North-star</a>
+      <a href="#rollup">5 · Volume rollup</a>
+      <a href="#caveats">6 · Caveats</a>
+    </nav>
+  </aside>
+
+  <!-- ================= MAIN ================= -->
+  <main>
+
+    <!-- ---------- OVERVIEW ---------- -->
+    <section id="overview">
+      <h2>Overview</h2>
+      <p class="lede">
+        Vendor-neutral event layer for the Bayan learner app (Next.js + Supabase).
+      </p>
+
+      <div class="badges">
+        <span class="badge ok">Build-ready</span>
+        <span class="badge">Owner: @process-owner</span>
+        <span class="badge">12 events</span>
+        <span class="badge">6 dashboard rates</span>
+      </div>
+
+      <div class="callout">
+        <h4>Purpose</h4>
+        <p>
+          Close Bayan's #1 revenue gap — <strong>no instrumented funnel</strong>. Build the
+          event layer now; connect GA4 later as a config swap, not a rebuild.
+        </p>
+      </div>
+
+      <h3>Design</h3>
+      <p>
+        One <code>track(event, props)</code> wrapper with a GA4 adapter stub, sinking to the
+        Supabase <code>analytics_events</code> table below. Dashboards read via SQL views over
+        that table. When GA4 connects, flip the adapter to <code>gtag</code> — the taxonomy
+        (snake_case names ≤ 40 chars, params in <code>props</code>) drops straight in.
+      </p>
+
+      <dl class="kv">
+        <dt>Owner</dt><dd><code>@process-owner</code> (reassign once real owners exist)</dd>
+      </dl>
+    </section>
+
+    <!-- ---------- SCHEMA ---------- -->
+    <section id="schema">
+      <h2><span class="num">1</span> Table schema</h2>
+      <p class="lede">Single append-only event table. Promoted columns for fast GROUP BY; everything else in <code>props</code>.</p>
+
+      <div class="code-wrap">
+<pre><code>create table public.analytics_events (
+  event_id     uuid primary key default gen_random_uuid(),
+  dedupe_key   text unique,                          -- client-generated; dedupes retries/double-fires
+  event_name   text not null check (event_name in (
+                 'diagnostic_started','diagnostic_completed','email_captured',
+                 'account_created','first_quiz_completed','trial_started',
+                 'paywall_hit','subscribe_clicked','subscription_started',
+                 'trial_expired','subscription_canceled','question_answered')),
+  occurred_at  timestamptz not null,                 -- client event time
+  received_at  timestamptz not null default now(),   -- server ingest time
+  anon_id      text,                                 -- pre-signup id; MUST persist through signup
+  user_id      uuid references auth.users(id),       -- set once the learner is known
+  session_id   text,
+  -- promoted props (also kept in props) for fast GROUP BY:
+  exam_path    text,        -- smle / oen / arab_board / omsb / dha
+  source       text,        -- lead source / utm
+  tier         text,        -- physician / nurse / student / single_exam
+  price_cents  integer,
+  currency     text,        -- ISO 4217; expect 'USD'
+  props        jsonb not null default '{}'::jsonb,   -- everything else (doubles as GA4 params)
+  context      jsonb not null default '{}'::jsonb    -- app_version, country. NO raw IP, NO email.
+);</code></pre>
+      </div>
+
+      <h3>Indexes &amp; row-level security</h3>
+      <div class="code-wrap">
+<pre><code>create index on public.analytics_events (event_name, occurred_at);
+create index on public.analytics_events (user_id);
+create index on public.analytics_events (anon_id);
+create index on public.analytics_events (exam_path);
+create index on public.analytics_events using gin (props);
+
+alter table public.analytics_events enable row level security;
+-- No client RLS policies = browser (anon/auth roles) can neither read nor write.
+-- track() server route INSERTs with the SERVICE ROLE key (bypasses RLS) so events can't be spoofed.
+-- Dashboards read via service role / SQL editor, never from the browser.</code></pre>
+      </div>
+    </section>
+
+    <!-- ---------- RULES ---------- -->
+    <section id="rules">
+      <h2>Three rules that make the funnel stitch</h2>
+      <p class="lede">Enforce these inside <code>track()</code>.</p>
+
+      <div class="callout">
+        <ol class="rules">
+          <li>
+            <code>account_created</code> <strong>must carry both</strong> <code>anon_id</code>
+            (same browser's pre-signup id) <em>and</em> <code>user_id</code> — the only link
+            between anonymous diagnostic events and paid revenue. Without it, rate #3 is blind.
+          </li>
+          <li>
+            <code>subscription_started</code> must set <code>tier</code>,
+            <code>price_cents</code>, <code>currency</code>, and
+            <code>props-&gt;&gt;'interval'</code> (<code>'month'</code> | <code>'year'</code>).
+          </li>
+          <li>
+            Names are snake_case ≤ 40 chars → drop straight into GA4 later;
+            <code>props</code> becomes GA4 params.
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ---------- EVENTS ---------- -->
+    <section id="events">
+      <h2><span class="num">2</span> The 12 events</h2>
+      <p class="lede">Complete taxonomy. Every event name is GA4-safe and ≤ 40 characters.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Event</th>
+              <th>Fires when</th>
+              <th>Key props</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="idx">1</td>
+              <td><span class="ev">diagnostic_started</span></td>
+              <td>Lead opens free diagnostic</td>
+              <td><code>source</code>, <code>exam_path</code></td>
+            </tr>
+            <tr>
+              <td class="idx">2</td>
+              <td><span class="ev">diagnostic_completed</span></td>
+              <td>Sees score</td>
+              <td><code>score</code>, <code>weak_domains</code></td>
+            </tr>
+            <tr>
+              <td class="idx">3</td>
+              <td><span class="ev">email_captured</span></td>
+              <td>Gives contact</td>
+              <td><code>channel</code> (email / WhatsApp)</td>
+            </tr>
+            <tr>
+              <td class="idx">4</td>
+              <td><span class="ev">account_created</span></td>
+              <td>Signup</td>
+              <td><code>exam_path</code>, <code>country</code>, <strong><code>anon_id</code> + <code>user_id</code></strong></td>
+            </tr>
+            <tr>
+              <td class="idx">5</td>
+              <td><span class="ev">first_quiz_completed</span></td>
+              <td>Activation</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td class="idx">6</td>
+              <td><span class="ev">trial_started</span></td>
+              <td>30-day trial begins</td>
+              <td><code>tier</code></td>
+            </tr>
+            <tr>
+              <td class="idx">7</td>
+              <td><span class="ev">paywall_hit</span></td>
+              <td>Hits 5 Q/day or metered wall</td>
+              <td><code>wall_type</code></td>
+            </tr>
+            <tr>
+              <td class="idx">8</td>
+              <td><span class="ev">subscribe_clicked</span></td>
+              <td>Reaches checkout</td>
+              <td><code>tier</code>, <code>price</code></td>
+            </tr>
+            <tr>
+              <td class="idx">9</td>
+              <td><span class="ev">subscription_started</span></td>
+              <td><strong>Paid</strong></td>
+              <td><code>tier</code>, <code>price_cents</code>, <code>currency</code>, <code>interval</code></td>
+            </tr>
+            <tr>
+              <td class="idx">10</td>
+              <td><span class="ev">trial_expired</span></td>
+              <td>Trial ends unconverted</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td class="idx">11</td>
+              <td><span class="ev">subscription_canceled</span></td>
+              <td>Churn</td>
+              <td><code>reason</code> (if available)</td>
+            </tr>
+            <tr>
+              <td class="idx">12</td>
+              <td><span class="ev">question_answered</span></td>
+              <td>One per answered question</td>
+              <td><code>is_correct</code>, <code>question_id</code>, <code>domain</code>, <code>quiz_mode</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout">
+        <h4>Highest-volume event</h4>
+        <p>
+          <code>question_answered</code> is the highest-volume event (one row per question).
+          Keep its <code>props</code> lean. <code>is_correct</code> + <code>domain</code> also
+          power the free diagnostic's weak-area report — same event, two uses.
+        </p>
+      </div>
+    </section>
+
+    <!-- ---------- RATES ---------- -->
+    <section id="rates">
+      <h2><span class="num">3</span> The 6 dashboard rates</h2>
+      <p class="lede">Copy-paste SQL. Run against <code>public.analytics_events</code> with the service role.</p>
+
+      <!-- Rate 1 -->
+      <div class="rate" id="rate-1">
+        <div class="rate-head">
+          <span class="tag">Rate ①</span>
+          <h3>Trial → paid conversion</h3>
+        </div>
+        <p>Cohorted by trial-start month; converted counted only if paid after trial start.</p>
+        <div class="code-wrap">
+<pre><code>with trials as (
+  select distinct on (user_id) user_id, occurred_at as trial_at,
+         date_trunc('month', occurred_at) as cohort
+  from analytics_events where event_name = 'trial_started'
+  order by user_id, occurred_at
+),
+paid as (
+  select user_id, min(occurred_at) as paid_at
+  from analytics_events where event_name = 'subscription_started' group by 1
+)
+select t.cohort,
+       count(*) as trials,
+       count(*) filter (where p.paid_at &gt;= t.trial_at) as converted,
+       round(100.0 * count(*) filter (where p.paid_at &gt;= t.trial_at)
+             / nullif(count(*), 0), 1) as conversion_pct
+from trials t left join paid p using (user_id)
+group by 1 order by 1;</code></pre>
+        </div>
+      </div>
+
+      <!-- Rate 2 -->
+      <div class="rate" id="rate-2">
+        <div class="rate-head">
+          <span class="tag">Rate ②</span>
+          <h3>Activation rate</h3>
+        </div>
+        <p>First quiz ÷ signups, by signup week.</p>
+        <div class="code-wrap">
+<pre><code>with signups as (
+  select user_id, min(occurred_at) as created_at
+  from analytics_events where event_name = 'account_created' group by 1
+),
+activated as (
+  select distinct user_id from analytics_events where event_name = 'first_quiz_completed'
+)
+select date_trunc('week', s.created_at) as week,
+       count(*) as signups,
+       count(a.user_id) as activated,
+       round(100.0 * count(a.user_id) / nullif(count(*), 0), 1) as activation_pct
+from signups s left join activated a using (user_id)
+group by 1 order by 1;</code></pre>
+        </div>
+      </div>
+
+      <!-- Rate 3 -->
+      <div class="rate" id="rate-3">
+        <div class="rate-head">
+          <span class="tag">Rate ③</span>
+          <h3>Diagnostic → signup</h3>
+        </div>
+        <p>Stitched on <code>anon_id</code> — depends on Rule #1 being enforced.</p>
+        <div class="code-wrap">
+<pre><code>with completed as (
+  select distinct anon_id from analytics_events
+  where event_name = 'diagnostic_completed' and anon_id is not null
+),
+signed as (
+  select distinct anon_id from analytics_events
+  where event_name = 'account_created' and anon_id is not null
+)
+select count(*) as diagnostics_completed,
+       count(s.anon_id) as signed_up,
+       round(100.0 * count(s.anon_id) / nullif(count(*), 0), 1) as signup_pct
+from completed c left join signed s using (anon_id);</code></pre>
+        </div>
+      </div>
+
+      <!-- Rate 4 -->
+      <div class="rate" id="rate-4">
+        <div class="rate-head">
+          <span class="tag">Rate ④</span>
+          <h3>MRR / ARPU / tier mix</h3>
+        </div>
+        <p>Latest subscription per user; active = not canceled; yearly normalized to monthly.</p>
+        <div class="code-wrap">
+<pre><code>with latest as (
+  select distinct on (user_id) user_id, tier, currency, price_cents,
+         coalesce(props-&gt;&gt;'interval','month') as interval
+  from analytics_events where event_name = 'subscription_started'
+  order by user_id, occurred_at desc
+),
+canceled as (
+  select distinct user_id from analytics_events where event_name = 'subscription_canceled'
+)
+select tier, currency,
+       count(*) as active_subs,
+       round(sum(case when interval='year' then price_cents/12.0 else price_cents end)/100.0, 2) as mrr,
+       round(avg(case when interval='year' then price_cents/12.0 else price_cents end)/100.0, 2) as arpu
+from latest where user_id not in (select user_id from canceled)
+group by 1, 2 order by mrr desc;</code></pre>
+        </div>
+        <p class="note">
+          <strong>Never SUM across currencies.</strong> Bayan is USD-enforced, so expect one
+          row-group per tier.
+        </p>
+      </div>
+
+      <!-- Rate 5 -->
+      <div class="rate" id="rate-5">
+        <div class="rate-head">
+          <span class="tag">Rate ⑤</span>
+          <h3>D1 / D7 / D30 retention</h3>
+        </div>
+        <p>Exact-day return; any event counts as active.</p>
+        <div class="code-wrap">
+<pre><code>with signups as (
+  select user_id, min(occurred_at)::date as d0
+  from analytics_events where event_name = 'account_created' group by 1
+),
+activity as (
+  select distinct user_id, occurred_at::date as d from analytics_events
+)
+select s.d0 as cohort,
+       count(distinct s.user_id) as cohort_size,
+       round(100.0*count(distinct a.user_id) filter (where a.d = s.d0 + 1) /nullif(count(distinct s.user_id),0),1) as d1_pct,
+       round(100.0*count(distinct a.user_id) filter (where a.d = s.d0 + 7) /nullif(count(distinct s.user_id),0),1) as d7_pct,
+       round(100.0*count(distinct a.user_id) filter (where a.d = s.d0 + 30)/nullif(count(distinct s.user_id),0),1) as d30_pct
+from signups s left join activity a using (user_id)
+group by 1 order by 1;</code></pre>
+        </div>
+        <p class="note">
+          Exact-day. For "returned within N days" swap <code>a.d = s.d0+N</code> to
+          <code>a.d between s.d0+1 and s.d0+N</code>.
+        </p>
+      </div>
+
+      <!-- Rate 6 -->
+      <div class="rate" id="rate-6">
+        <div class="rate-head">
+          <span class="tag">Rate ⑥</span>
+          <h3>Monthly churn</h3>
+        </div>
+        <p>Cancels ÷ active-at-month-start, from a running net-active balance.</p>
+        <div class="code-wrap">
+<pre><code>with monthly as (
+  select date_trunc('month', occurred_at) as m,
+         count(*) filter (where event_name = 'subscription_started')  as starts,
+         count(*) filter (where event_name = 'subscription_canceled') as cancels
+  from analytics_events group by 1
+),
+running as (
+  select m, starts, cancels,
+         sum(starts - cancels) over (order by m) - (starts - cancels) as active_at_month_start
+  from monthly
+)
+select m, cancels, active_at_month_start,
+       round(100.0 * cancels / nullif(active_at_month_start, 0), 1) as churn_pct
+from running order by m;</code></pre>
+        </div>
+        <p class="note">
+          Treats cancel as immediate. If you later add an effective-date prop, switch to that.
+        </p>
+      </div>
+    </section>
+
+    <!-- ---------- NORTH STAR ---------- -->
+    <section id="north-star">
+      <h2><span class="num">4</span> North-star</h2>
+      <p class="lede">Weekly active learners completing ≥ 20 questions.</p>
+
+      <div class="code-wrap">
+<pre><code>with weekly as (
+  select user_id, date_trunc('week', occurred_at) as wk, count(*) as q
+  from analytics_events where event_name = 'question_answered'
+  group by 1, 2
+)
+select wk,
+       count(*) filter (where q &gt;= 20) as north_star_wal,   -- the metric: WAL ≥20 Q
+       count(*)                        as any_active_learners,
+       round(avg(q), 1)                as avg_q_per_active
+from weekly group by 1 order by 1;</code></pre>
+      </div>
+
+      <div class="callout">
+        <h4>Why this metric</h4>
+        <p>
+          The CEO's stated priority is outcome over vanity metrics, so this (learners doing real
+          work) is the north star; <strong>trial → paid conversion (#1)</strong> is the revenue
+          guardrail under it.
+        </p>
+      </div>
+    </section>
+
+    <!-- ---------- ROLLUP ---------- -->
+    <section id="rollup">
+      <h2><span class="num">5</span> Volume rollup</h2>
+      <p class="lede">Add before <code>question_answered</code> gets big.</p>
+
+      <div class="code-wrap">
+<pre><code>create materialized view public.analytics_daily_questions as
+select user_id, occurred_at::date as d, count(*) as questions
+from public.analytics_events
+where event_name = 'question_answered'
+group by 1, 2;
+-- refresh nightly:  refresh materialized view public.analytics_daily_questions;</code></pre>
+      </div>
+
+      <p class="note">
+        Run the north-star off the rollup (group <code>d</code> into weeks) once the raw query
+        slows — not day one.
+      </p>
+    </section>
+
+    <!-- ---------- CAVEATS ---------- -->
+    <section id="caveats">
+      <h2><span class="num">6</span> Two caveats</h2>
+
+      <div class="callout warn">
+        <h4>Cohort ratios, not same-period ratios</h4>
+        <p>
+          Trial → paid (#1) spans a 30-day trial; a fresh month reads low until its cohort
+          matures. Read by cohort age.
+        </p>
+      </div>
+
+      <div class="callout warn">
+        <h4>No raw IP / email in this table</h4>
+        <p>
+          Identity is <code>user_id</code> / <code>anon_id</code>; email lives in auth. Store
+          country (not IP) in <code>context</code>.
+        </p>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  Bayan — Analytics Events Spec · Vendor-neutral event layer · Owner <code>@process-owner</code>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- Copy buttons on every SQL block ---------- */
+  document.querySelectorAll(".code-wrap").forEach(function (wrap) {
+    var pre = wrap.querySelector("pre");
+    if (!pre) return;
+
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "copy-btn";
+    btn.textContent = "Copy";
+
+    btn.addEventListener("click", function () {
+      var codeEl = pre.querySelector("code");
+      var text = codeEl ? codeEl.innerText : pre.innerText;
+
+      function done() {
+        btn.textContent = "Copied";
+        btn.classList.add("done");
+        setTimeout(function () {
+          btn.textContent = "Copy";
+          btn.classList.remove("done");
+        }, 1600);
+      }
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, function () { fallback(text, done); });
+      } else {
+        fallback(text, done);
+      }
+    });
+
+    wrap.appendChild(btn);
+  });
+
+  function fallback(text, done) {
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "fixed";
+    ta.style.top = "-1000px";
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); } catch (e) { /* no-op */ }
+    document.body.removeChild(ta);
+    done();
+  }
+
+  /* ---------- Active nav highlighting ---------- */
+  var links = Array.prototype.slice.call(document.querySelectorAll("#nav a"));
+  var linkFor = {};
+  links.forEach(function (a) {
+    var id = a.getAttribute("href").slice(1);
+    var el = document.getElementById(id);
+    if (el) linkFor[id] = a;
+  });
+
+  if ("IntersectionObserver" in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var active = linkFor[entry.target.id];
+        if (!active) return;
+        links.forEach(function (a) { a.classList.remove("active"); });
+        active.classList.add("active");
+      });
+    }, { rootMargin: "-90px 0px -65% 0px", threshold: 0 });
+
+    Object.keys(linkFor).forEach(function (id) {
+      observer.observe(document.getElementById(id));
+    });
+  }
+
+  /* ---------- Theme toggle (persisted) ---------- */
+  var root = document.documentElement;
+  var toggle = document.getElementById("themeToggle");
+
+  function applyTheme(theme) {
+    if (theme === "dark") {
+      root.setAttribute("data-theme", "dark");
+      toggle.textContent = "Light mode";
+    } else {
+      root.removeAttribute("data-theme");
+      toggle.textContent = "Dark mode";
+    }
+  }
+
+  var saved = null;
+  try { saved = localStorage.getItem("bayan-theme"); } catch (e) { /* ignore */ }
+
+  if (!saved && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    saved = "dark";
+  }
+  applyTheme(saved === "dark" ? "dark" : "light");
+
+  toggle.addEventListener("click", function () {
+    var isDark = root.getAttribute("data-theme") === "dark";
+    var next = isDark ? "light" : "dark";
+    applyTheme(next);
+    try { localStorage.setItem("bayan-theme", next); } catch (e) { /* ignore */ }
+  });
+})();
+</script>
+
+</body>
+</html>
