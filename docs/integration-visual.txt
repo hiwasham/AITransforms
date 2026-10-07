@@ -1,0 +1,205 @@
+# Integration Overview: Jev + Marketing Plan + Empower Framework
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                        AITransforms Integration                      │
+└─────────────────────────────────────────────────────────────────────┘
+
+THREE COMPONENTS TO INTEGRATE:
+
+1. JEV DECISION ENGINE (from /jev project)
+   ├─ decide.py         Core decision logic (Choice, Score, Noul)
+   ├─ jevkit.py         Decision utilities
+   ├─ triage.py         Example: support ticket triage
+   └─ Cost: ~$0.00002 per decision
+
+2. MARKETING PLAN (Bayan work integration)
+   ├─ Lead Qualification    Score buying intent, fit, urgency
+   ├─ Content Routing       Match inquiries to right resources
+   ├─ Campaign Scoring      Evaluate message effectiveness
+   └─ Status: Background agent a6bdfcce handling Bayan commit/wiring
+
+3. EMPOWER FRAMEWORK (4-Level Documentation)
+   ├─ Level 1: Core Process       Strategic overview (Directors)
+   ├─ Level 2: Blueprint           Functional breakdown (Managers)
+   ├─ Level 3: Guide               Step-by-step execution (ICs)
+   └─ Level 4: Forms & Templates   Execution tools (Everyone)
+
+
+INTEGRATION ARCHITECTURE:
+
+┌──────────────────┐
+│ Website Visitor  │
+└────────┬─────────┘
+         │
+         v
+┌──────────────────────────────────┐
+│  Contact Form / Inquiry          │
+│  (message, source, company info) │
+└────────┬─────────────────────────┘
+         │
+         v
+┌──────────────────────────────────┐
+│  Jev Lead Scorer                 │
+│  ├─ buying_intent: Score 0-10    │
+│  ├─ fit_score: Score 0-10        │
+│  ├─ service_interest: Choice     │
+│  ├─ urgency: Noul (yes/no prob)  │
+│  └─ technical_readiness: Choice  │
+└────────┬─────────────────────────┘
+         │
+         v
+┌──────────────────────────────────┐
+│  Routing Decision                │
+│  ├─ Score >7 + Urgent >0.7       │
+│  │   → PRIORITY: 24h response    │
+│  ├─ Score 5-7                    │
+│  │   → STANDARD: 48h nurture     │
+│  └─ Score <5                     │
+│      → AUTO: Educational content │
+└────────┬─────────────────────────┘
+         │
+         v
+┌──────────────────────────────────┐
+│  Marketing Automation            │
+│  ├─ n8n workflow trigger         │
+│  ├─ PostHog event tracking       │
+│  └─ Email sequences              │
+└──────────────────────────────────┘
+
+
+EMPOWER FRAMEWORK APPLIED TO "MARKET TO LEAD":
+
+Level 1: Core Process (Strategic)
+┌─────────────────────────────────────────────────┐
+│ Market to Lead - AITransforms                   │
+│ Owner: Hiwa (Founder/CEO)                       │
+│                                                 │
+│ Attract → Engage → Qualify → Route             │
+│   ↓        ↓         ↓         ↓               │
+│  SEO    Content    Jev      Priority           │
+│ AI vis  Framework  Scorer   Response           │
+│ Social  Education           Nurture            │
+│                                                 │
+│ Metrics: 10-20 qualified leads/mo              │
+│          Lead score avg >7/10                   │
+│          <24h response (priority)               │
+└─────────────────────────────────────────────────┘
+
+Level 2: Blueprint (Functional)
+┌─────────────────────────────────────────────────┐
+│ Inbound Content Strategy                        │
+│ Owner: Hiwa (Content Creator)                   │
+│                                                 │
+│ 1. Topic Research (Weekly)                      │
+│    - Keyword research                           │
+│    - Customer question mining                   │
+│                                                 │
+│ 2. Content Creation (2-3x/week)                 │
+│    - Blog posts (1500-2500 words)               │
+│    - Technical guides                           │
+│    - Framework explainers                       │
+│                                                 │
+│ 3. Publication & Distribution                   │
+│    - SEO optimization                           │
+│    - Multi-language (EN/FA/AR)                  │
+│                                                 │
+│ Goal: 2-3 posts/week, 1 lead per 500 visitors  │
+└─────────────────────────────────────────────────┘
+
+Level 3: Guide (Execution)
+┌─────────────────────────────────────────────────┐
+│ AI-Focused Blog Post Creation                   │
+│ Time: 3-4 hours per post                        │
+│                                                 │
+│ 1. Research (30 min)                            │
+│ 2. Outline (20 min)                             │
+│ 3. First Draft (90 min)                         │
+│ 4. Technical Review (20 min)                    │
+│ 5. SEO Optimization (15 min)                    │
+│ 6. Multi-Language Prep (15 min)                 │
+│ 7. Final Polish (20 min)                        │
+│ 8. Publication (10 min)                         │
+│                                                 │
+│ Checkpoints at each step documented             │
+└─────────────────────────────────────────────────┘
+
+Level 4: Forms & Templates
+┌─────────────────────────────────────────────────┐
+│ Blog Post Template                              │
+│                                                 │
+│ - Title formula                                 │
+│ - Meta description structure                    │
+│ - Section templates (Intro, Problem, etc)       │
+│ - SEO checklist                                 │
+│ - Publication checklist                         │
+│                                                 │
+│ Ready to copy-paste and fill in                 │
+└─────────────────────────────────────────────────┘
+
+
+GSTACK SKILLS (Already Available):
+
+✓ /plan-ceo-review     Strategy/scope review
+✓ /office-hours        Product ideas/brainstorming
+✓ /plan-eng-review     Architecture review
+✓ /design-consultation Design system review
+✓ /autoplan            Full review pipeline
+
+No installation needed—invoke via Skill tool when needed.
+
+
+FILE STRUCTURE AFTER INTEGRATION:
+
+AITransforms/
+├── lib/
+│   └── decisions/              ← NEW: Jev integration
+│       ├── decide.py
+│       ├── jevkit.py
+│       ├── lead_scorer.py
+│       └── requirements.txt
+├── docs/
+│   ├── processes/              ← NEW: Empower framework docs
+│   │   └── 01-market-to-lead/
+│   │       ├── 00-core-process.md
+│   │       ├── 01-blueprint-inbound.md
+│   │       ├── 02-guide-blog-creation.md
+│   │       └── 03-template-blog-post.md
+│   ├── integration-plan.md     ← Created
+│   └── NEXT-STEPS.md          ← Created
+└── .env.example               ← Add TypeSafe API key
+
+
+IMPLEMENTATION OPTIONS:
+
+Option A: Jev First (Immediate Lead Routing Value)
+├─ Copy decision engine from jev project
+├─ Build lead_scorer.py for marketing
+├─ Test with sample lead data
+└─ Wire into contact form (Week 1)
+
+Option B: Empower Docs First (Foundation for All Processes)
+├─ Document Level 1 "Market to Lead" process
+├─ Build Level 2 blueprints
+├─ Create Level 3 guides
+└─ Build Level 4 templates (Week 1-2)
+
+Option C: Parallel Implementation (Fastest to Market)
+├─ Jev integration (technical)
+└─ Empower documentation (process)
+    Running simultaneously
+
+Option D: Strategic Review First
+└─ Use /plan-ceo-review skill to validate approach
+
+
+NEXT DECISION POINT:
+
+Which path do you want to take?
+
+1. Start with Jev integration (build lead scorer now)
+2. Start with Empower docs (document processes first)
+3. Both in parallel (fastest but more context switching)
+4. Run /plan-ceo-review first (strategic validation)
+5. Check on background agent a6bdfcce status first
+```

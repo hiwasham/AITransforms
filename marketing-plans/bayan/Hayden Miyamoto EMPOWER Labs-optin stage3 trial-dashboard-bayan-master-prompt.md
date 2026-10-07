@@ -1,3 +1,7 @@
+      <div class="file"><span class="doc">📄</span><a href="deepseek_html_20261003_7fd01e.html">Growth engine design</a><span class="d">SEO + AI-visibility + social engine, 90-day live plan</span></div>
+
+
+
 https://chatgpt.com/c/6ab5ce51-6608-83ed-8877-fd2aa582d026
 
 Master Prompt: Bayan

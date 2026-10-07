@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bayan · Revenue Growth System — 30-Day Plan + Work Library</title>
+<style>
+  :root{
+    --ink:#080b10;--panel:#0f141d;--panel2:#141b26;--line:#1c2430;
+    --txt:#eef2f9;--mut:#8b95a9;--mut2:#4d5666;
+    --bayan:#1a4ff5;--bayan2:#4d7bff;
+    --emerald:#34d399;--amber:#fbbf24;--rose:#f43f5e;
+    --violet:#a78bfa;--cyan:#22d3ee;
+    --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,sans-serif;
+    --accent:26,79,245;
+    --rigor:52,211,153;
+    --pitch:255,138,61;
+    --gold:245,190,60;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--ink);color:var(--txt);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+  .nav{position:sticky;top:0;z-index:50;padding:13px 28px;background:linear-gradient(180deg,rgba(8,11,16,.97),rgba(8,11,16,.75) 80%,transparent);backdrop-filter:blur(14px);display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .nav .brand{display:flex;align-items:center;gap:10px;margin-right:auto}
+  .nav .mark{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font:800 14px/1 var(--sans);color:#fff;background:linear-gradient(140deg,var(--bayan),var(--violet));box-shadow:0 0 20px -6px rgba(26,79,245,.7)}
+  .nav .name{font:700 12.5px/1.2 var(--sans);color:#fff}
+  .nav .name small{display:block;font:400 9.5px/1.3 var(--mono);color:var(--mut2);letter-spacing:.1em;text-transform:uppercase;margin-top:2px}
+  .nav a{all:unset;cursor:pointer;font:500 11.5px/1 var(--mono);color:var(--mut);padding:7px 11px;border-radius:8px;transition:.2s}
+  .nav a:hover{color:#c8d2e2;background:rgba(255,255,255,.04)}
+
+  main{max-width:1080px;margin:0 auto;padding:0 24px 110px}
+
+  .hero{padding:66px 0 48px;border-bottom:1px solid var(--line);margin-bottom:52px}
+  .kicker{display:inline-flex;align-items:center;gap:9px;font:600 10.5px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--bayan2);padding:7px 13px;border-radius:8px;background:rgba(26,79,245,.1);border:1px solid rgba(26,79,245,.3);margin-bottom:22px}
+  .kicker::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--emerald);box-shadow:0 0 10px 0 rgba(52,211,153,.9);animation:blip 2.2s ease-in-out infinite}
+  @keyframes blip{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.7)}}
+  h1{font:800 clamp(30px,4.6vw,46px)/1.12 var(--sans);letter-spacing:-.03em;margin-bottom:18px;max-width:780px}
+  h1 em{font-style:normal;background:linear-gradient(120deg,var(--bayan2),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p.lead{color:var(--mut);font-size:15.5px;max-width:680px;margin-bottom:30px}
+  .statrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .stat b{display:block;font:700 21px/1.15 var(--sans);color:#fff}
+  .stat span{font:500 10.5px/1.4 var(--mono);color:var(--mut);letter-spacing:.04em}
+  .stat.bad b{color:var(--rose)} .stat.target b{color:var(--emerald)}
+
+  section{margin:0 0 62px}
+  h2{font:700 clamp(20px,2.6vw,27px)/1.25 var(--sans);letter-spacing:-.02em;margin-bottom:6px}
+  h2 .idx{font:600 11px/1 var(--mono);color:var(--bayan2);letter-spacing:.12em;display:block;margin-bottom:10px;text-transform:uppercase}
+  .sub{color:var(--mut);font-size:14px;max-width:680px;margin-bottom:26px}
+
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+  .panel + .panel{margin-top:14px}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th{font:600 10.5px/1.4 var(--mono);color:var(--mut2);text-transform:uppercase;letter-spacing:.08em;text-align:left;padding:8px 12px;border-bottom:1px solid var(--line)}
+  td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top;color:#cfd8e6}
+  tr:last-child td{border-bottom:none}
+  td b,td strong{color:#fff}
+  .ok{color:var(--emerald);font-weight:600}
+  .no{color:var(--rose);font-weight:600}
+  .dec{color:var(--amber);font-weight:600}
+
+  .fw{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:6px 0 4px}
+  .fw .stage{border-radius:11px;padding:13px 12px;border:1px solid var(--line);background:var(--panel);position:relative}
+  .fw .stage h4{font:600 11.5px/1.3 var(--sans);color:var(--mut);margin-bottom:6px}
+  .fw .stage p{font:500 10px/1.45 var(--mono);color:var(--mut2)}
+  .fw .stage.focus{background:linear-gradient(160deg,rgba(26,79,245,.16),rgba(167,139,250,.08));border-color:rgba(26,79,245,.55)}
+  .fw .stage.focus h4{color:#fff}
+  .fw .stage.focus::after{content:"FOCUS";position:absolute;top:-8px;right:10px;font:700 8.5px/1 var(--mono);letter-spacing:.12em;color:var(--bayan2);background:var(--ink);padding:3px 7px;border-radius:5px;border:1px solid rgba(26,79,245,.5)}
+  .fw .stage.assessed::after{content:"ASSESSED";position:absolute;top:-8px;right:10px;font:700 8.5px/1 var(--mono);letter-spacing:.12em;color:var(--emerald);background:var(--ink);padding:3px 7px;border-radius:5px;border:1px solid rgba(52,211,153,.4)}
+
+  details.acc{background:var(--panel);border:1px solid var(--line);border-radius:13px;margin-bottom:11px;overflow:hidden}
+  details.acc summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:13px;padding:16px 20px;transition:.15s}
+  details.acc summary::-webkit-details-marker{display:none}
+  details.acc summary:hover{background:rgba(255,255,255,.025)}
+  details.acc summary .chev{flex:0 0 auto;width:22px;height:22px;border-radius:7px;display:grid;place-items:center;background:rgba(26,79,245,.14);color:var(--bayan2);font:700 11px/1 var(--mono);transition:.2s}
+  details.acc[open] summary .chev{transform:rotate(90deg)}
+  details.acc summary .ttl{font:600 14px/1.35 var(--sans);color:#e8edf5}
+  details.acc summary .hint{margin-left:auto;font:500 10.5px/1.3 var(--mono);color:var(--mut2);text-align:right;flex:0 0 auto}
+  details.acc .body{padding:4px 20px 20px 55px;border-top:1px solid var(--line);padding-top:16px}
+  details.acc .body p{color:var(--mut);font-size:13.5px;margin-bottom:12px;max-width:700px}
+  details.acc .body ul{margin:0 0 12px 17px;color:#c3ccdb;font-size:13.5px}
+  details.acc .body li{margin-bottom:6px}
+  details.acc .body li::marker{color:var(--bayan2)}
+  .tag{display:inline-block;font:600 9.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border-radius:6px;margin-right:7px;vertical-align:2px}
+  .tag.done{color:var(--emerald);background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.3)}
+  .tag.dec{color:var(--amber);background:rgba(251,191,36,.09);border:1px solid rgba(251,191,36,.3)}
+  .tag.wk{color:var(--bayan2);background:rgba(26,79,245,.1);border:1px solid rgba(26,79,245,.3)}
+
+  .lib-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:18px}
+  .lib-count{font:600 11px/1 var(--mono);color:var(--emerald);letter-spacing:.08em;background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.25);border-radius:7px;padding:6px 10px}
+  .cat{background:var(--panel);border:1px solid var(--line);border-radius:13px;margin-bottom:12px;overflow:hidden}
+  .cat summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:12px;padding:14px 18px;transition:.15s}
+  .cat summary::-webkit-details-marker{display:none}
+  .cat summary:hover{background:rgba(255,255,255,.02)}
+  .cat summary .chev{width:20px;height:20px;border-radius:6px;display:grid;place-items:center;background:rgba(52,211,153,.12);color:var(--emerald);font:700 10px/1 var(--mono);transition:.2s}
+  .cat[open] summary .chev{transform:rotate(90deg)}
+  .cat summary .ttl{font:600 13.5px/1.3 var(--sans);color:#e8edf5}
+  .cat summary .n{margin-left:auto;font:600 10px/1 var(--mono);color:var(--mut2)}
+  .cat .files{padding:6px 18px 16px 50px}
+  .file{display:flex;gap:10px;align-items:baseline;padding:6px 0;border-bottom:1px solid rgba(28,36,48,.6)}
+  .file:last-child{border-bottom:none}
+  .file .doc{flex:0 0 16px;color:var(--mut2);font-size:12px}
+  .file a{color:var(--bayan2);text-decoration:none;font:500 12.5px/1.45 var(--mono)}
+  .file a:hover{color:#8fabff;text-decoration:underline}
+  .file .d{color:var(--mut2);font:400 10.5px/1.5 var(--sans);margin-left:4px}
+  .empty-note{color:var(--mut2);font-size:11.5px;font-style:italic}
+
+  .callout{border-left:3px solid var(--bayan);background:rgba(26,79,245,.07);border-radius:0 11px 11px 0;padding:15px 19px;margin:16px 0;color:#c9d3e2;font-size:13.5px}
+  .callout.amber{border-left-color:var(--amber);background:rgba(251,191,36,.06)}
+  .callout em{font-style:normal;color:#fff;font-weight:600}
+
+  .wk{border:1px solid var(--line);border-radius:13px;background:var(--panel);margin-bottom:16px;overflow:hidden}
+  .wk .wkhead{display:flex;align-items:baseline;gap:14px;padding:16px 20px;border-bottom:1px solid var(--line);background:linear-gradient(90deg,rgba(26,79,245,.09),transparent)}
+  .wk .wkhead b{font:700 15px/1.2 var(--sans);color:#fff}
+  .wk .wkhead span{font:500 11px/1.4 var(--mono);color:var(--mut)}
+  .wk .wkbody{padding:14px 20px 18px}
+
+  footer{border-top:1px solid var(--line);padding-top:30px;color:var(--mut2);font:500 11px/1.7 var(--mono)}
+  footer a{color:var(--mut)}
+  .tiny{font-size:11.5px;color:var(--mut2)}
+
+  /* ============ AMBIENT + CHROME ============ */
+  .ambient{position:fixed;inset:0;z-index:0;pointer-events:none;transition:background 1.4s cubic-bezier(.4,0,.2,1)}
+  .ambient::before{
+    content:"";position:absolute;inset:-30%;
+    background:
+      radial-gradient(40% 35% at 15% 10%,rgba(var(--accent),.14),transparent 60%),
+      radial-gradient(38% 38% at 85% 85%,rgba(167,139,250,.05),transparent 62%);
+    filter:blur(40px);
+    transition:background 1.4s cubic-bezier(.4,0,.2,1);
+  }
+  .ambient::after{
+    content:"";position:absolute;inset:0;
+    background-image:linear-gradient(rgba(255,255,255,.012) 1px,transparent 1px),
+                     linear-gradient(90deg,rgba(255,255,255,.012) 1px,transparent 1px);
+    background-size:56px 56px;
+    mask-image:radial-gradient(80% 65% at 50% 40%,#000 15%,transparent 100%);
+    -webkit-mask-image:radial-gradient(80% 65% at 50% 40%,#000 15%,transparent 100%);
+  }
+
+  .chrome{position:fixed;top:0;left:0;right:0;z-index:40;pointer-events:none}
+  .progress{height:2px;width:0%;
+    background:linear-gradient(90deg,rgb(var(--accent)),rgba(var(--accent),.4));
+    box-shadow:0 0 14px 0 rgba(var(--accent),.85);
+    transition:width .1s linear, background .8s ease, box-shadow .8s ease}
+  .brand{position:absolute;top:22px;left:32px;display:flex;align-items:center;gap:11px;
+    pointer-events:auto}
+  .brand .mark{
+    width:32px;height:32px;border-radius:9px;display:grid;place-items:center;
+    font:800 15px/1 var(--sans);color:#05070b;letter-spacing:-.04em;
+    background:linear-gradient(140deg,rgb(var(--accent)),rgba(var(--accent),.6));
+    box-shadow:0 0 22px -6px rgba(var(--accent),.85);
+    transition:background .8s ease, box-shadow .8s ease}
+  .brand .text{display:flex;flex-direction:column;gap:1px}
+  .brand .text b{font:700 12.5px/1.2 var(--sans);color:#fff}
+  .brand .text small{font:500 9.5px/1.3 var(--mono);color:var(--mut2);
+    letter-spacing:.11em;text-transform:uppercase}
+
+  .dots{position:fixed;right:26px;top:50%;translate:0 -50%;z-index:40;
+    display:flex;flex-direction:column;gap:16px;
+    pointer-events:auto}
+  .dot{all:unset;cursor:pointer;display:flex;align-items:center;gap:11px;
+    justify-content:flex-end}
+  .dot .lbl{
+    font:600 9.5px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;
+    color:var(--mut2);
+    opacity:0;translate:6px 0;transition:opacity .3s ease,translate .3s ease,color .3s;
+    white-space:nowrap;text-align:right}
+  .dot .circle{
+    width:9px;height:9px;border-radius:50%;
+    background:#1e2731;border:1px solid #29333f;
+    transition:all .35s cubic-bezier(.2,.7,.3,1);flex:0 0 9px}
+  .dot:hover .lbl{opacity:1;translate:0 0;color:var(--mut)}
+  .dot.active .circle{
+    background:rgb(var(--accent));
+    border-color:rgb(var(--accent));
+    box-shadow:0 0 0 4px rgba(var(--accent),.15),0 0 14px 0 rgba(var(--accent),.9);
+    transform:scale(1.25)}
+  .dot.active .lbl{opacity:1;translate:0 0;color:rgb(var(--accent))}
+
+  /* ============ SCENES ============ */
+  .scene{
+    min-height:100vh;
+    display:flex;align-items:center;justify-content:center;
+    padding:100px 32px;
+    position:relative;
+    scroll-margin-top:0;
+  }
+  .scene.tall{min-height:auto;padding:140px 32px}
+  .scene-inner{max-width:960px;width:100%;position:relative}
+
+  .scene-tag{
+    display:inline-flex;align-items:center;gap:10px;
+    font:700 10px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;
+    color:rgb(var(--accent));padding:7px 13px;border-radius:8px;
+    background:rgba(var(--accent),.09);border:1px solid rgba(var(--accent),.28);
+    margin-bottom:26px;
+    transition:color .8s ease, background .8s ease, border-color .8s ease}
+  .scene-tag::before{
+    content:"";width:5px;height:5px;border-radius:50%;
+    background:rgb(var(--accent));
+    box-shadow:0 0 10px 0 rgba(var(--accent),.95);
+    animation:blip 2s ease-in-out infinite}
+
+  .scene h2{
+    font:800 clamp(28px,4.5vw,46px)/1.1 var(--sans);
+    letter-spacing:-.035em;color:#fff;margin-bottom:20px;
+    max-width:22ch}
+  .scene h2 em{font-style:normal;color:rgb(var(--accent));
+    transition:color .8s ease}
+  .scene p.lede{
+    font-size:16.5px;line-height:1.7;color:#a8b3c5;
+    max-width:62ch;margin-bottom:12px}
+  .scene p.lede b{color:#fff;font-weight:600}
+  .scene p.lede code{
+    font-family:var(--mono);font-size:13.5px;
+    background:rgba(255,255,255,.06);padding:2px 7px;
+    border-radius:5px;color:#dfe7f4}
+
+  .hero-block{display:flex;flex-direction:column;gap:4px;margin-bottom:44px}
+  .hero-number{
+    font:800 clamp(96px,18vw,220px)/0.9 var(--sans);
+    letter-spacing:-.06em;color:#fff;
+    font-variant-numeric:tabular-nums;
+    display:flex;align-items:baseline;gap:0;
+    line-height:.85;
+    animation:heroIn 1.2s cubic-bezier(.2,.7,.3,1) both}
+  @keyframes heroIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+  .hero-number .u{
+    font:600 clamp(20px,3vw,34px)/1 var(--mono);
+    color:var(--mut2);margin-left:10px;letter-spacing:.02em;
+    align-self:flex-end;padding-bottom:1.4vw}
+  .hero-label{
+    font:600 12px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;
+    color:var(--mut2);margin-left:4px;
+    animation:heroIn 1.2s cubic-bezier(.2,.7,.3,1) both;
+    animation-delay:.15s}
+
+  .hero-stats{
+    display:flex;gap:56px;flex-wrap:wrap;
+    padding:28px 0;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    margin-bottom:38px;
+    animation:heroIn 1.2s cubic-bezier(.2,.7,.3,1) both;
+    animation-delay:.3s}
+  .hs{display:flex;flex-direction:column;gap:6px}
+  .hs-num{
+    font:800 clamp(34px,4.5vw,54px)/1 var(--sans);
+    letter-spacing:-.04em;color:rgb(var(--accent));
+    font-variant-numeric:tabular-nums;
+    transition:color .8s ease;
+    display:flex;align-items:baseline;gap:2px}
+  .hs-num .pre{font-size:.65em;color:var(--mut2);font-weight:600;
+    font-family:var(--mono)}
+  .hs-lbl{
+    font:600 10.5px/1.4 var(--mono);letter-spacing:.12em;
+    text-transform:uppercase;color:var(--mut2)}
+
+  .hero-close{
+    font:400 20px/1.5 var(--sans);color:#b8c2d2;
+    max-width:46ch;
+    animation:heroIn 1.2s cubic-bezier(.2,.7,.3,1) both;
+    animation-delay:.55s}
+  .hero-close b{color:#fff;font-weight:600}
+  .hero-close em{font-style:italic;color:rgb(var(--accent))}
+
+  .scroll-hint{
+    position:absolute;bottom:-40px;left:50%;translate:-50% 0;
+    display:flex;flex-direction:column;align-items:center;gap:10px;
+    font:600 9.5px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;
+    color:var(--mut2);
+    animation:heroIn 1.2s cubic-bezier(.2,.7,.3,1) both;
+    animation-delay:.9s}
+  .scroll-hint .line{
+    width:1px;height:36px;
+    background:linear-gradient(180deg,rgb(var(--accent)),transparent);
+    animation:scrollPulse 2s ease-in-out infinite}
+  @keyframes scrollPulse{0%,100%{opacity:.3;transform:scaleY(.6)}50%{opacity:1;transform:scaleY(1)}}
+
+  .partition{margin:44px 0 32px}
+  .part-bar{
+    display:flex;height:96px;
+    border-radius:14px;overflow:hidden;
+    border:1px solid var(--line);
+    background:var(--panel);
+    position:relative}
+  .part{
+    width:0;position:relative;
+    display:grid;place-items:center;
+    transition:width 1.6s cubic-bezier(.35,.9,.3,1);
+    overflow:hidden;
+    border-right:1px solid rgba(255,255,255,.05)}
+  .part:last-child{border-right:none}
+  .part span{
+    font:800 clamp(20px,2.5vw,30px)/1 var(--mono);
+    color:var(--ink);letter-spacing:-.02em;
+    opacity:0;transform:scale(.6);
+    transition:opacity .4s ease .3s, transform .5s cubic-bezier(.2,.7,.3,1) .3s}
+  .part.in span{opacity:1;transform:scale(1)}
+
+  .part.p-g{background:linear-gradient(135deg,#f43f5e,#e11543)}
+  .part.p-f{background:linear-gradient(135deg,#fbbf24,#d97706)}
+  .part.p-a{background:linear-gradient(135deg,#34d399,#059669)}
+  .part.p-u{background:linear-gradient(135deg,#94a3b8,#64748b)}
+  .part.p-a{box-shadow:0 0 60px 0 rgba(52,211,153,.5),inset 0 0 40px 0 rgba(255,255,255,.15)}
+
+  .part-labels{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;margin-top:22px}
+  .pl{
+    padding:18px 18px 16px;border-radius:12px;
+    background:rgba(255,255,255,.02);
+    border:1px solid var(--line);
+    position:relative;
+    opacity:0;transform:translateY(14px);
+    transition:opacity .6s ease, transform .6s cubic-bezier(.2,.7,.3,1), border-color .3s}
+  .pl.in{opacity:1;transform:none}
+  .pl::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    border-radius:12px 12px 0 0}
+  .pl-g::before{background:#f43f5e}
+  .pl-f::before{background:#fbbf24}
+  .pl-a::before{background:#34d399}
+  .pl-u::before{background:#94a3b8}
+  .pl-a{background:linear-gradient(180deg,rgba(52,211,153,.08),transparent);
+    border-color:rgba(52,211,153,.4);
+    box-shadow:0 18px 44px -28px rgba(52,211,153,.85)}
+  .pl-k{
+    font:700 10px/1.3 var(--mono);letter-spacing:.09em;
+    text-transform:uppercase;color:#eef2f9;
+    display:block;margin-bottom:8px}
+  .pl-d{font:400 12.5px/1.55 var(--sans);color:var(--mut)}
+  .pl-a .pl-k{color:#34d399}
+  .pl-a .pl-d{color:#b8c2d2}
+
+  .scene-close{
+    margin-top:32px;font:400 18px/1.6 var(--sans);
+    color:#b8c2d2;max-width:60ch;
+    opacity:0;transform:translateY(10px);
+    transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.3,1)}
+  .scene-close.in{opacity:1;transform:none}
+  .scene-close b{color:#fff;font-weight:600}
+  .scene-close em{font-style:italic;color:rgb(var(--accent));font-weight:600;
+    transition:color .8s ease}
+
+  .reasons{
+    display:flex;flex-direction:column;gap:10px;
+    margin-top:36px}
+  .reason{
+    all:unset;cursor:pointer;display:block;
+    padding:22px 26px;border-radius:14px;
+    background:rgba(255,255,255,.02);
+    border:1px solid var(--line);
+    position:relative;overflow:hidden;
+    transition:background .25s ease,border-color .25s ease,transform .25s;
+    opacity:0;transform:translateY(16px)}
+  .reason.in{opacity:1;transform:none}
+  .reason:hover{border-color:rgba(var(--rc),.5);background:rgba(var(--rc),.03)}
+  .reason[data-r="1"]{--rc:244,63,94;transition-delay:.1s}
+  .reason[data-r="2"]{--rc:244,63,94;transition-delay:.16s}
+  .reason[data-r="3"]{--rc:52,211,153;transition-delay:.22s}
+  .reason[data-r="4"]{--rc:52,211,153;transition-delay:.28s}
+  .reason[data-r="5"]{--rc:52,211,153;transition-delay:.34s}
+  .reason::before{
+    content:"";position:absolute;left:0;top:0;bottom:0;width:4px;
+    background:rgb(var(--rc));opacity:.85}
+  .reason-head{
+    display:flex;align-items:center;gap:16px;
+    flex-wrap:wrap}
+  .reason-num{
+    flex:0 0 auto;
+    font:800 12px/1 var(--mono);letter-spacing:.05em;
+    padding:7px 11px;border-radius:8px;
+    background:rgba(var(--rc),.14);color:rgb(var(--rc));
+    border:1px solid rgba(var(--rc),.35)}
+  .reason-name{
+    flex:1;min-width:0;
+    font:700 16px/1.4 var(--sans);color:#fff;
+    letter-spacing:-.01em}
+  .reason-badge{
+    font:700 9.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;
+    padding:5px 10px;border-radius:7px;
+    background:rgba(var(--rc),.12);color:rgb(var(--rc));
+    border:1px solid rgba(var(--rc),.32)}
+  .reason-detail{
+    max-height:0;overflow:hidden;
+    transition:max-height .5s cubic-bezier(.2,.7,.3,1),opacity .4s ease,padding .35s;
+    opacity:0;padding-top:0}
+  .reason.open .reason-detail{max-height:260px;opacity:1;padding-top:16px}
+  .reason-detail p{
+    font:400 14px/1.7 var(--sans);color:#b8c2d2;
+    padding-top:14px;border-top:1px dashed rgba(255,255,255,.08);
+    margin:0}
+  .reason-detail p b{color:#fff;font-weight:600}
+  .reason-detail p code{
+    font-family:var(--mono);font-size:12.5px;
+    background:rgba(255,255,255,.05);padding:1.5px 6px;
+    border-radius:5px;color:#dfe7f4}
+
+  .timeline{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:14px;
+    margin-top:44px;position:relative}
+  .tl-line{
+    position:absolute;top:44px;left:5%;right:5%;height:1px;
+    background:linear-gradient(90deg,
+      rgba(26,79,245,.4),
+      rgba(34,211,238,.4),
+      rgba(167,139,250,.4),
+      rgba(52,211,153,.5));
+    opacity:0;transition:opacity 1.2s ease;transition-delay:.4s}
+  .tl-line.in{opacity:1}
+
+  .week{
+    padding:0;border-radius:16px;
+    background:rgba(255,255,255,.02);
+    border:1px solid var(--line);
+    position:relative;
+    transition:all .35s cubic-bezier(.2,.7,.3,1);
+    opacity:0;transform:translateY(24px);
+    overflow:hidden}
+  .week.in{opacity:1;transform:none}
+  .week[data-w="1"]{transition-delay:.1s;--wc:26,79,245}
+  .week[data-w="2"]{transition-delay:.2s;--wc:34,211,238}
+  .week[data-w="3"]{transition-delay:.3s;--wc:167,139,250}
+  .week[data-w="4"]{transition-delay:.4s;--wc:52,211,153}
+  .week:hover{transform:translateY(-4px);
+    border-color:rgba(var(--wc),.5);
+    box-shadow:0 26px 60px -30px rgba(var(--wc),.9)}
+  .week-head{
+    padding:22px 22px 18px;
+    border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg,rgba(var(--wc),.08),transparent);
+    position:relative}
+  .week-head::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,rgb(var(--wc)),rgba(var(--wc),.3))}
+  .week-num{
+    display:inline-flex;align-items:center;gap:8px;
+    font:700 10px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;
+    color:rgb(var(--wc));margin-bottom:14px}
+  .week-num::before{
+    content:"";width:24px;height:24px;border-radius:8px;
+    display:grid;place-items:center;
+    background:rgba(var(--wc),.16);
+    border:1px solid rgba(var(--wc),.4);
+    font:800 11px/24px var(--mono);color:rgb(var(--wc));
+    text-align:center}
+  .week[data-w="1"] .week-num::before{content:"1"}
+  .week[data-w="2"] .week-num::before{content:"2"}
+  .week[data-w="3"] .week-num::before{content:"3"}
+  .week[data-w="4"] .week-num::before{content:"4"}
+  .week-title{
+    font:700 16px/1.3 var(--sans);color:#fff;
+    letter-spacing:-.01em;margin-bottom:6px}
+  .week-sub{
+    font:400 12px/1.5 var(--sans);color:var(--mut)}
+  .week-body{
+    padding:16px 22px 20px;
+    display:flex;flex-direction:column;gap:10px}
+  .wd{
+    padding:11px 14px;border-radius:9px;
+    background:rgba(0,0,0,.25);
+    border-left:2px solid rgba(var(--wc),.5);
+    font:400 12px/1.55 var(--sans);color:#b8c2d2}
+  .wd b{color:#fff;font-weight:600;display:block;margin-bottom:3px;
+    font-size:12.5px}
+
+  .built-grid{
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+    gap:10px;margin-top:44px}
+  .bd{
+    padding:20px 18px;
+    border-radius:12px;
+    background:rgba(52,211,153,.03);
+    border:1px solid rgba(52,211,153,.22);
+    position:relative;overflow:hidden;
+    transition:all .3s cubic-bezier(.2,.7,.3,1);
+    opacity:0;transform:scale(.94)}
+  .bd.in{opacity:1;transform:scale(1)}
+  .bd:hover{
+    background:rgba(52,211,153,.07);
+    border-color:rgba(52,211,153,.45);
+    transform:translateY(-3px) scale(1.02);
+    box-shadow:0 20px 40px -24px rgba(52,211,153,.85)}
+  .bd .tick{
+    width:22px;height:22px;border-radius:7px;
+    display:grid;place-items:center;font-size:11px;
+    background:rgba(52,211,153,.16);color:#34d399;
+    border:1px solid rgba(52,211,153,.4);
+    margin-bottom:12px}
+  .bd .name{
+    font:600 12px/1.4 var(--sans);color:#eef2f9;
+    letter-spacing:-.005em}
+
+  .built-foot{
+    display:flex;justify-content:space-between;align-items:center;
+    gap:20px;flex-wrap:wrap;
+    margin-top:26px;padding:18px 22px;
+    border-radius:12px;
+    background:rgba(52,211,153,.06);
+    border:1px solid rgba(52,211,153,.3);
+    opacity:0;transform:translateY(12px);
+    transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
+  .built-foot.in{opacity:1;transform:none}
+  .bf-stat{display:flex;flex-direction:column;gap:4px}
+  .bf-stat .n{
+    font:800 22px/1 var(--sans);color:#34d399;
+    letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+  .bf-stat .l{
+    font:600 9.5px/1 var(--mono);letter-spacing:.1em;
+    text-transform:uppercase;color:var(--mut2)}
+
+  .target-hero{border-radius:18px;border:1px solid var(--line);
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    padding:26px 28px;position:relative;overflow:hidden;
+    animation:fadeUp .55s cubic-bezier(.2,.7,.3,1) both}
+  .target-hero::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,rgb(var(--rose)),rgb(var(--gold)))}
+  .target-hero .k{font:600 10px/1 var(--mono);letter-spacing:.15em;
+    text-transform:uppercase;color:rgb(var(--rose));margin-bottom:12px}
+  .target-hero h2{font:700 26px/1.2 var(--sans);letter-spacing:-.025em;
+    margin-bottom:12px;max-width:26ch}
+  .target-hero p{font-size:13.5px;color:#a5b1c3;max-width:78ch;line-height:1.65}
+  .target-hero p b{color:#dfe7f4;font-weight:600}
+
+  .ladder-wrap{border-radius:16px;border:1px solid var(--line);
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    padding:28px 26px 24px;
+    animation:fadeUp .55s cubic-bezier(.2,.7,.3,1) both .1s}
+  .ladder-head{display:flex;align-items:center;justify-content:space-between;
+    gap:14px;margin-bottom:26px;flex-wrap:wrap}
+  .ladder-title{font:650 15px/1.3 var(--sans);color:#eef3fb;
+    letter-spacing:-.01em}
+  .ladder-title small{display:block;font:400 10.5px/1.4 var(--mono);
+    color:var(--mut2);letter-spacing:.05em;margin-top:4px;
+    font-weight:400}
+  .ladder-legend{display:flex;gap:14px}
+  .ll{display:flex;align-items:center;gap:7px;
+    font:600 10.5px/1 var(--mono);letter-spacing:.08em;
+    text-transform:uppercase;color:var(--mut)}
+  .ll .sw{width:11px;height:11px;border-radius:3px}
+  .ll.rigor .sw{background:rgb(var(--rigor))}
+  .ll.pitch .sw{background:rgb(var(--pitch))}
+
+  .axis{position:relative;padding:32px 0 0}
+  .axis-lines{position:absolute;left:0;right:0;top:32px;bottom:0;
+    pointer-events:none}
+  .axis-line{position:absolute;left:0;right:0;
+    border-top:1px dashed rgba(255,255,255,.05)}
+  .axis-line span{position:absolute;right:0;top:-8px;
+    font:500 9.5px/1 var(--mono);color:var(--mut2);
+    letter-spacing:.06em;background:var(--panel);padding:1px 6px;
+    border-radius:3px}
+  .axis-line.median{border-top-style:solid;
+    border-top-color:rgba(var(--gold),.4)}
+  .axis-line.median span{color:rgb(var(--gold));
+    background:rgba(var(--gold),.1)}
+
+  .bar-groups{display:grid;
+    grid-template-columns:repeat(3,1fr);gap:24px;
+    position:relative;z-index:2}
+  .bar-group{display:flex;flex-direction:column;align-items:center;gap:10px}
+  .bar-pair{display:flex;gap:10px;align-items:flex-end;
+    height:260px;padding-bottom:0}
+  .bar{width:44px;border-radius:7px 7px 0 0;position:relative;
+    transition:height 1.1s cubic-bezier(.22,.75,.3,1);
+    min-height:3px}
+  .bar.rigor{background:linear-gradient(180deg,
+    rgb(var(--rigor)),rgba(var(--rigor),.35));
+    box-shadow:0 0 24px -8px rgba(var(--rigor),.9)}
+  .bar.pitch{background:linear-gradient(180deg,
+    rgb(var(--pitch)),rgba(var(--pitch),.35));
+    box-shadow:0 0 24px -8px rgba(var(--pitch),.9)}
+  .bar .bar-val{position:absolute;top:-22px;left:50%;translate:-50% 0;
+    font:700 12px/1 var(--mono);letter-spacing:-.02em;white-space:nowrap}
+  .bar.rigor .bar-val{color:rgb(var(--rigor))}
+  .bar.pitch .bar-val{color:rgb(var(--pitch))}
+  .bar-label{font:600 10.5px/1 var(--mono);letter-spacing:.12em;
+    text-transform:uppercase;color:var(--mut);
+    padding-top:8px;border-top:1px solid var(--line);width:100%;
+    text-align:center}
+
+  .gap-callout{display:grid;grid-template-columns:repeat(3,1fr);
+    gap:24px;margin-top:20px;padding-top:20px;
+    border-top:1px solid var(--line)}
+  .gap-cell{text-align:center}
+  .gap-cell .gk{font:600 9px/1 var(--mono);letter-spacing:.13em;
+    text-transform:uppercase;color:var(--mut2);margin-bottom:8px}
+  .gap-cell .gv{font:700 15px/1 var(--sans);letter-spacing:-.02em;
+    color:rgb(var(--rose));font-variant-numeric:tabular-nums}
+  .gap-cell .gv small{font-size:11px;color:var(--mut2);font-weight:600;
+    margin-left:2px}
+
+  .target-note{margin-top:20px;padding:14px 16px;border-radius:11px;
+    border:1px dashed rgba(var(--rose),.3);
+    background:rgba(var(--rose),.04);
+    display:flex;gap:12px;align-items:flex-start;
+    font-size:12.5px;line-height:1.6;color:#d8c4c8}
+  .target-note .ic{flex:0 0 22px;width:22px;height:22px;border-radius:7px;
+    display:grid;place-items:center;font-size:11px;
+    background:rgba(var(--rose),.15);color:#ff8a94}
+  .target-note b{color:#fff;font-weight:600}
+
+  @media(max-width:760px){.fw{grid-template-columns:repeat(2,1fr)}.nav a{display:none}.cat .files{padding-left:20px}}
+  @media(max-width:900px){
+    .partition .part-labels{grid-template-columns:1fr 1fr}
+    .model{grid-template-columns:1fr}
+    .timeline{grid-template-columns:1fr}
+    .tl-line{display:none}
+    .ask-grid{grid-template-columns:1fr}
+  }
+  @media(max-width:820px){
+    .scene{padding:80px 22px}
+    .scene.tall{padding:100px 22px}
+    .brand{top:18px;left:20px}
+    .brand .text small{display:none}
+    .dots{right:14px;gap:13px}
+    .dot .lbl{display:none}
+    .hero-number .u{font-size:16px;padding-bottom:2vw;margin-left:6px}
+    .hero-stats{gap:32px;padding:22px 0}
+    .reason-head{gap:12px}
+    .reason-name{font-size:15px;flex-basis:100%}
+  }
+  @media(max-width:560px){
+    .hero h1{font-size:22px}
+    .bar{width:28px}
+    .bar-pair{gap:6px}
+    .gap-callout{gap:12px}
+    .hero-stats{flex-direction:column;gap:20px}
+    .partition .part-labels{grid-template-columns:1fr}
+    .part-bar{height:70px}
+    .dots{right:10px}
+  }
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="ambient" id="ambient"></div>
+
+<div class="chrome">
+  <div class="progress" id="progress"></div>
+  <div class="brand">
+    <div class="mark" id="brandMark">B</div>
+    <div class="text">
+      <b>Bayan · Conversion</b>
+      <small>30-day plan · v2</small>
+    </div>
+  </div>
+</div>
+
+<nav class="dots" id="dots"></nav>
+
+<nav class="nav">
+  <div class="brand">
+    <div class="mark">B</div>
+    <div class="name">Bayan · Revenue Growth System<small>30-day · conversion-first · v3</small></div>
+  </div>
+  <a href="#answer">Answer</a>
+  <a href="#framework">Framework</a>
+  <a href="#calendar">30 Days</a>
+  <a href="#built">Built</a>
+  <a href="#library">Library</a>
+  <a href="#numbers">Numbers</a>
+  <a href="#decisions">Decisions</a>
+</nav>
+
+<main>
+
+<div class="hero">
+  <div class="kicker">For Dr. Abdullah · 2026-10-05 · ready for your go</div>
+  <h1>One system, aimed at <em>revenue</em> —<br>with the whole week of built work one click open.</h1>
+  <p class="lead">This plan responds to your review of 29 September: conversion before traffic, numbers not promises, execution not frameworks. The surface here is short on purpose — but nothing is hidden: <b>every claim links to the actual finished work</b> (§05 Library, 60 items). Read the boxes only, or open everything. Your pace.</p>
+  <div class="statrow">
+    <div class="stat"><b>~1,300</b><span>registered users</span></div>
+    <div class="stat bad"><b>&lt;1%</b><span>pay today · $277 lifetime</span></div>
+    <div class="stat bad"><b>5.0s</b><span>mobile load (target &lt;2.5s)</span></div>
+    <div class="stat target"><b>3→5→7%</b><span>of addressable base, M1–M3</span></div>
+    <div class="stat target"><b>60</b><span>finished work files, linked below</span></div>
+  </div>
+</div>
+
+<!-- ================= 1. ANSWER ================= -->
+<section id="answer">
+  <h2><span class="idx">01 · The one-minute answer</span>You were right — and there is a fact under it that changes the plan.</h2>
+  <p class="sub">Read this box and you know the whole strategy; everything after it is evidence, schedule, and the work library.</p>
+  <div class="panel">
+    <p style="color:#c3ccdb;font-size:14px;max-width:760px">Paid-access enforcement began <b>1 May 2026</b>. Every account created before that keeps full free access, permanently — plus 13 humanitarian free-access countries. So a large share of the 1,300 <em>cannot</em> pay: they already have everything. The real, convertible base is far smaller, and it has never been measured. So Week 1 is not copywriting — it is <b>segmentation + funnel instrumentation first</b>, then the conversion levers aimed only at users who can actually buy. On the levers themselves: activation (first value in session one), lifecycle nurture (trial→paid sequence), and a mid-tier price rung. Zero ad spend throughout.</p>
+  </div>
+</section>
+
+<!-- ==================== SCENE 1 — the problem ==================== -->
+<section class="scene" data-scene="0" data-accent="244,63,94" id="s1">
+  <div class="scene-inner">
+    <div class="scene-tag">01 · the problem</div>
+    <div class="hero-block">
+      <div class="hero-number">
+        <span data-count="1300">0</span>
+        <span class="u">users</span>
+      </div>
+      <div class="hero-label">registered · all time</div>
+    </div>
+
+    <p class="hero-close">
+      <b>Something doesn't add up.</b><br>
+      The math says traffic isn't the problem. <em>Conversion is.</em>
+    </p>
+
+    <div class="scroll-hint">
+      <span>scroll</span>
+      <span class="line"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SCENE 2 — the reveal ==================== -->
+<section class="scene tall" data-scene="1" data-accent="167,139,250" id="s2">
+  <div class="scene-inner">
+    <div class="scene-tag">02 · the reveal</div>
+    <h2>The 1,300 <em>isn't what it looks like.</em></h2>
+    <p class="lede">
+      Pricing enforcement began <b>1 May 2026</b>. Every account created
+      before that date is <b>grandfathered to free access, permanently.</b>
+      Add the 13 humanitarian free countries.
+    </p>
+
+    <div class="partition" id="partition">
+      <div class="part-bar">
+        <div class="part p-g" data-w="38"><span>G</span></div>
+        <div class="part p-f" data-w="14"><span>F</span></div>
+        <div class="part p-a" data-w="12"><span>A</span></div>
+        <div class="part p-u" data-w="36"><span>U</span></div>
+      </div>
+      <div class="part-labels">
+        <div class="pl pl-g" data-l="0">
+          <span class="pl-k">G · grandfathered</span>
+          <span class="pl-d">Free forever. Cannot become paying customers under current policy.</span>
+        </div>
+        <div class="pl pl-f" data-l="1">
+          <span class="pl-k">F · free-country</span>
+          <span class="pl-d">13 humanitarian regions. Access is a policy right.</span>
+        </div>
+        <div class="pl pl-a" data-l="2">
+          <span class="pl-k">A · addressable</span>
+          <span class="pl-d">The only group that can convert. Its size is unknown — until Week 1 measures it.</span>
+        </div>
+        <div class="pl pl-u" data-l="3">
+          <span class="pl-k">U · unresolved</span>
+          <span class="pl-d">Missing or conflicting data. Excluded until audited.</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="scene-close" id="close2">
+      The 1,300 is a vanity number. <b>The real denominator is A</b> —
+      and today, we can't tell you its size. <em>That's what Week 1 fixes.</em>
+    </p>
+  </div>
+</section>
+
+<!-- ==================== SCENE 3 — reasons ==================== -->
+<section class="scene tall" data-scene="2" data-accent="52,211,153" id="s3">
+  <div class="scene-inner">
+    <div class="scene-tag">03 · why they don't pay</div>
+    <h2>Five reasons. <em>Two structural. Three fixable.</em></h2>
+    <p class="lede">
+      Ranked by how much revenue each one blocks. Click any card to open it.
+    </p>
+
+    <div class="reasons" id="reasons">
+      <button class="reason" data-r="1">
+        <div class="reason-head">
+          <span class="reason-num">01</span>
+          <span class="reason-name">Grandfathering — pre-May-2026 accounts stay free forever</span>
+          <span class="reason-badge">structural</span>
+        </div>
+        <div class="reason-detail">
+          <p>
+            Enforcement started <code>2026-05-01</code>. Everything before
+            that date keeps full free access. <b>No email fixes this</b> —
+            it's a policy decision, and it's yours. We pull the numbers and
+            propose options; you sign off.
+          </p>
+        </div>
+      </button>
+
+      <button class="reason" data-r="2">
+        <div class="reason-head">
+          <span class="reason-num">02</span>
+          <span class="reason-name">Free-country access removes them from the denominator</span>
+          <span class="reason-badge">structural</span>
+        </div>
+        <div class="reason-detail">
+          <p>
+            13 humanitarian countries get free access by policy. <b>Oman
+            is not on the list</b> — a fact worth knowing before you write
+            any regional copy. These users cannot become paying customers,
+            and no marketing lever changes that.
+          </p>
+        </div>
+      </button>
+
+      <button class="reason" data-r="3">
+        <div class="reason-head">
+          <span class="reason-num">03</span>
+          <span class="reason-name">No trial → paid trigger exists in the product</span>
+          <span class="reason-badge">fixable</span>
+        </div>
+        <div class="reason-detail">
+          <p>
+            There's a 30-day trial in the config, but <b>no paywall moment,
+            no "your trial ends in 3 days," no upgrade nudge.</b> The Sale-to-Delivery
+            process is empty. Building the trigger is a Week-2 deliverable.
+          </p>
+        </div>
+      </button>
+
+      <button class="reason" data-r="4">
+        <div class="reason-head">
+          <span class="reason-num">04</span>
+          <span class="reason-name">No lifecycle or nurture — signups go quiet at the wall</span>
+          <span class="reason-badge">fixable</span>
+        </div>
+        <div class="reason-detail">
+          <p>
+            The 1,300 get <b>no onboarding, no re-engagement</b>. They
+            sign up, hit the 5-question daily wall, and go silent. This is
+            the single biggest fixable leak — the winback drip in Week 3
+            aims directly at it.
+          </p>
+        </div>
+      </button>
+
+      <button class="reason" data-r="5">
+        <div class="reason-head">
+          <span class="reason-num">05</span>
+          <span class="reason-name">Price-ladder gap — nothing between free and $29/mo</span>
+          <span class="reason-badge">fixable</span>
+        </div>
+        <div class="reason-detail">
+          <p>
+            The ladder jumps from <b>free → $9.99–29/mo</b>. A candidate
+            preparing for one exam doesn't want a subscription — they want
+            a single-exam pass. <b>Building that SKU is a Week-3
+            deliverable.</b>
+          </p>
+        </div>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2. FRAMEWORK ================= -->
+<section id="framework">
+  <h2><span class="idx">02 · The system this plugs into</span>Revenue is a pipeline. We assessed the two stages that decide it.</h2>
+  <p class="sub">Your business runs the same pipeline every company runs — six stages, one flow. We ran a structured assessment of the two stages that directly decide revenue, <b>Lead→Sale</b> and <b>Sale→Delivery</b>. You don't need to learn the framework; you only need to know every task in this plan traces to one of these two stages and to a number. Click either focus stage for what the assessment found. <span class="tiny">(The full strategy stack behind it — the eight strategic planning cores from ICP to partnerships, plus the two enabling gates — is written up here: <a href="Strategic Planning Cores .html" style="color:var(--bayan2)">the strategic+revenue framework</a>.)</span></p>
+
+  <div class="fw">
+    <div class="stage"><h4>Market</h4><p>reach &amp; awareness — compounding track, underneath</p></div>
+    <div class="stage focus"><h4>Lead→Sale</h4><p>the conversion engine — priority #1</p></div>
+    <div class="stage focus"><h4>Sale→Delivery</h4><p>payment → first value — priority #1</p></div>
+    <div class="stage assessed"><h4>Delivery→Success</h4><p>retention &amp; word of mouth — assessed, queued</p></div>
+    <div class="stage"><h4>Success→Referral</h4><p>later phase</p></div>
+    <div class="stage"><h4>Success→Advocacy</h4><p>later phase</p></div>
+  </div>
+
+  <div style="height:14px"></div>
+
+  <details class="acc">
+    <summary><span class="chev">›</span><span class="ttl">Extensive Assessment Reveals Serious Breakdowns in the Lead-to-Sale Process — and How to Fix Them</span><span class="hint">open for detail + links</span></summary>
+    <div class="body">
+      <p><b>What the assessment found</b> (ranked by revenue blocked):</p>
+      <ul>
+        <li><b>No measurement</b> — the funnel emits no events; "why don't they pay" is currently unanswerable with data. → <a href="sales-diagnostic-assessment-results.html" style="color:var(--bayan2)">sales diagnostic &amp; assessment</a></li>
+        <li><b>Grandfathering + free-country structure</b> — a large share of the 1,300 already has full free access (your decision; we pull numbers and propose only). → <a href="Bayan — CEO Decision Briefs.html" style="color:var(--bayan2)">Bayan CEO decision briefs</a></li>
+        <li><b>Price-ladder gap</b> — free jumps straight to $9.99–29/mo; no single-exam pass. → <a href="Bayan — CEO Decision Briefs.html" style="color:var(--bayan2)">Bayan CEO decision briefs</a></li>
+        <li><b>No nurture</b> — users sign up, hit the 5-question/day wall, go quiet. → <a href="BayanRevenueEngine.html" style="color:var(--bayan2)">Bayan growth engine design</a></li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="acc">
+    <summary><span class="chev">›</span><span class="ttl">Three Screens Decide the Revenue — and They're the Weakest in the Flow: Findings and Fixes</span><span class="hint">open for detail + links</span></summary>
+    <div class="body">
+      <p><b>What the assessment found:</b></p>
+      <ul>
+        <li><b>The payment path itself is unverified</b> — no test purchase has ever been recorded end-to-end.</li>
+        <li><b>First value is unmeasured and slow</b> — mobile load is 5.0 seconds; a live QA walkthrough also found two silent product defects (blocked analytics events + two broken authenticated queries). → <a href="Bayan Learning — Product QA.html" style="color:var(--bayan2)">Product QA report (72/100, with screenshots)</a></li>
+        <li><b>Three screens decide most of the revenue</b> — first-login diagnostic, the "your gap" screen, and the paywall — currently the weakest screens in the flow. → <a href="bayan-ux-audit.html" style="color:var(--bayan2)">UX audit — before/after (interactive)</a></li>
+      </ul>
+      <p><b>What the 30 days do about it:</b> a live checkout test purchase (W1), a first-value audit (W2), and a redesign of the three revenue screens — the mockups you have already seen and liked are the direction. If you approve the revenue-flow redesign, we recommend doing the <b>whole product UI as one consistent system</b>, not a patched section, so the app doesn't read as two different products.</p>
+    </div>
+  </details>
+
+  <div class="callout"><em>Build or hand off — your choice.</em> We deliver the designs and the solutions; we can implement them ourselves, or hand them to your existing team ready-to-build. The same established system we used to produce all 60 files in §05 keeps the effort and calendar short either way — it is a repeat of a working machine, not a from-scratch build.</div>
+</section>
+
+<!-- ==================== SCENE 4 — weeks ==================== -->
+<section class="scene tall" data-scene="3" data-accent="34,211,238" id="s4">
+  <div class="scene-inner">
+    <div class="scene-tag">04 · four weeks · concrete</div>
+    <h2>Not a plan. <em>A calendar.</em></h2>
+    <p class="lede">
+      Every week has deliverables. Nothing ships without sign-off.
+      Conversion runs every week; content builds underneath.
+    </p>
+
+    <div class="timeline" id="timeline">
+      <div class="tl-line"></div>
+
+      <div class="week" data-w="1">
+        <div class="week-head">
+          <div class="week-num">week 1</div>
+          <div class="week-title">Diagnose</div>
+          <div class="week-sub">Nothing ships. Drafts only.</div>
+        </div>
+        <div class="week-body">
+          <div class="wd"><b>Segmentation report</b>G / F / A / U, plus active/inactive cross-tab.</div>
+          <div class="wd"><b>Funnel audit</b>PostHog-first. Build only the gaps.</div>
+          <div class="wd"><b>3 landing pages drafted</b>Top exam · free diagnostic · upgrade.</div>
+          <div class="wd"><b>Locked question count</b>One number. Everywhere.</div>
+        </div>
+      </div>
+
+      <div class="week" data-w="2">
+        <div class="week-head">
+          <div class="week-num">week 2</div>
+          <div class="week-title">Activate</div>
+          <div class="week-sub">The moment of first value.</div>
+        </div>
+        <div class="week-body">
+          <div class="wd"><b>Onboarding flow</b>First-login diagnostic → your gap → routed bank.</div>
+          <div class="wd"><b>Trial → paid SOP</b>Day 1, mid-trial, day −3, expiry.</div>
+          <div class="wd"><b>Paywall moment</b>Clear, non-aggressive. Tracked events.</div>
+        </div>
+      </div>
+
+      <div class="week" data-w="3">
+        <div class="week-head">
+          <div class="week-num">week 3</div>
+          <div class="week-title">Reactivate</div>
+          <div class="week-sub">Reach the dormant base.</div>
+        </div>
+        <div class="week-body">
+          <div class="wd"><b>Winback drip</b>Education-based. Email + Telegram.</div>
+          <div class="wd"><b>Mid-tier SKU</b>Single-exam pass. You sign the price.</div>
+          <div class="wd"><b>Grandfathering proposal</b>Count + risk + gentle options.</div>
+          <div class="wd"><b>Instagram engine — first cohort</b>Exam-specific rhythm, first 2 weeks scheduled.</div>
+        </div>
+      </div>
+
+      <div class="week" data-w="4">
+        <div class="week-head">
+          <div class="week-num">week 4</div>
+          <div class="week-title">Decide</div>
+          <div class="week-sub">Numbers in. Decision out.</div>
+        </div>
+        <div class="week-body">
+          <div class="wd"><b>30-day readout</b>6 funnel rates before/after. New paid. MRR added.</div>
+          <div class="wd"><b>Go / no-go on months 2–3</b>What worked. What to double down on.</div>
+          <div class="wd"><b>Instagram scale decision</b>Which exam path pulled best.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3. CALENDAR ================= -->
+<section id="calendar">
+  <h2><span class="idx">03 · The 30 days</span>Weekly deliverables, each tied to a business metric.</h2>
+  <p class="sub">Conversion and revenue (Lead→Sale) run every week. Market-to-Lead <a href="Platform-Specific Strategy Guide
+.html" style="color:var(--bayan2)">content</a>, social and Instagram build underneath it. Items marked <span class="tag dec">decision</span> need you — but never to start; only for the two structural calls in Week 3.</p>
+
+  <div class="wk">
+    <div class="wkhead"><b>Week 1</b><span>Diagnose + first landing pages</span></div>
+    <div class="wkbody">
+      <table>
+        <tr><th>Deliverable</th><th>Business-metric impact</th></tr>
+        <tr><td><b>Non-payer segmentation report</b> — grandfathered / free-country / addressable / dormant, cross-tabbed by activity</td><td>Defines the true denominator A — every later number stands on it</td></tr>
+        <tr><td><b>Funnel instrumentation live</b> — 10 core events, 6-rate baseline dashboard <span class="tiny">(<a href="Bayan — Analytics Events Spec (build-ready).html" style="color:var(--bayan2)">spec already written</a> </span></td><td>"Why don't they pay" becomes answerable with data</td></tr>
+        <tr><td><b>3 landing pages drafted</b> — top winnable exam page · free diagnostic opt-in · upgrade/pricing page <span class="tiny">(style reference: <a href="" style="color:var(--bayan2)">11-section site, already drafted trilingually</a>)</span></td><td>The conversion surfaces themselves; compliance-passed</td></tr>
+        <tr><td><b>One locked question count</b> across all surfaces</td><td>Removes the credibility leak under every page</td></tr>
+        <tr><td><b>Checkout test purchase</b>, end-to-end</td><td>Proves the payment path works before any campaign</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="wk">
+    <div class="wkhead"><b>Week 2</b><span>Activation + the trial→paid trigger</span></div>
+    <div class="wkbody">
+      <table>
+        <tr><th>Deliverable</th><th>Business-metric impact</th></tr>
+        <tr><td><b>Onboarding flow</b> — first-login diagnostic → "your gap" screen → matching question bank</td><td>Activation rate; first value in session one</td></tr>
+        <tr><td><b>Trial→paid SOP live</b> — day-1 value, mid-trial, 3-days-before-expiry, expiry offer</td><td>Direct trial→paid conversion lever</td></tr>
+        <tr><td><b>Paywall moment</b> at the 5-Q/day wall — clear, non-aggressive</td><td>The single highest-leverage screen; tracked</td></tr>
+        <tr><td><b>First-value audit</b> — documented path + blocker list <span class="tiny">(baseline: <a href="Bayan Learning — Product QA.html" style="color:var(--bayan2)">QA report</a>)</span></td><td>Time-to-first-answer, the strongest paid predictor</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="wk">
+    <div class="wkhead"><b>Week 3</b><span>Reactivate the base + mid-tier + the social engine</span></div>
+    <div class="wkbody">
+      <table>
+        <tr><th>Deliverable</th><th>Business-metric impact</th></tr>
+        <tr><td><b>Winback drip</b> to the addressable dormant cohort — education-based, email + Telegram</td><td>Revives users who can pay, at zero media cost</td></tr>
+        <tr><td><b>Single-exam / exam-window pass SKU</b> <span class="tag dec">price = your call</span></td><td>Opens the ladder to one-exam candidates; timed to the next sitting</td></tr>
+        <tr><td><b>Grandfathering proposal</b> <span class="tag dec">decision</span> — count + $ at risk + gentle options</td><td>The largest single structural lever; pull + propose only</td></tr>
+        <tr><td><b>Instagram engine, first cohort</b> — exam-path content rhythm, first two weeks scheduled <span class="tiny"></span></td><td>Market-to-Lead pipeline feeding the landing pages</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="wk">
+    <div class="wkhead"><b>Week 4</b><span>Measure, report, decide</span></div>
+    <div class="wkbody">
+      <table>
+        <tr><th>Deliverable</th><th>Business-metric impact</th></tr>
+        <tr><td><b>30-day scorecard</b> — 6 funnel rates before/after, new paid count, MRR added, cost</td><td>The go/no-go evidence for months 2–3</td></tr>
+        <tr><td><b>Lever attribution</b> — which lever (activation / nurture / price) moved what</td><td>Where to double down</td></tr>
+        <tr><td><b>Written recommendation</b> for months 2–3, incl. whether to unlock a small paid test <span class="tiny">(<a href="bayan-paid-test-draft.html" style="color:var(--bayan2)">paid-test draft already written</a></span></td><td>Next 60 days decided on data, not opinion</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SCENE 5 — built ==================== -->
+<section class="scene tall" data-scene="4" data-accent="52,211,153" id="s5"></section>
+
+<section id="built">
+  <h2><span class="idx">04 · Already built while you waited</span>The week of delay was build time — the inventory is in the Library.</h2>
+  <p class="sub">These are finished drafts, waiting only on your go. None required new headcount or paid spend. </p>
+  <div class="scene-inner">
+    <div class="built-grid" id="builtGrid"></div>
+  </div>
+  <p class="sub">     Each item below links to the actual files in <a href="#library" style="color:var(--bayan2)">§05 — the Work Library</a> (60 items); we kept this surface short on purpose so nothing overwhelms — the depth is one click away.</p>
+
+  <details class="acc">
+    <summary><span class="chev">›</span><span class="ttl">The full marketing site — 11 sections, three languages</span><span class="tag done">drafted</span><span class="hint">see the files →</span></summary>
+    <div class="body"><p>Header, hero, problem, framework, services, AI-assistant spotlight, example work, founder, resources, CTA, footer — every section written and reviewed against Bayan's content locks, in English, Persian and Arabic with correct RTL. Open <a href="" style="color:var(--bayan2)">the full trilingual site draft</a> to read all 11 sections with their text.</p></div>
+  </details>
+
+  <details class="acc">
+    <summary><span class="chev">›</span><span class="ttl">UX &amp; product audit of the live app</span><span class="tag done">done</span><span class="hint">2 linked reports</span></summary>
+    <div class="body">
+      <p>A live, logged-in QA walkthrough of the product — health scored 72/100, two silent defects found (blocked analytics events, two broken authenticated queries), every surface ranked by conversion impact, and the three revenue screens deep-dived with before/after directions. The mockups you saw and liked are this direction.</p>
+      <ul>
+        <li><a href="Bayan Learning — Product QA.html" style="color:var(--bayan2)">Product QA report</a> — with screenshots of the four key screens</li>
+        <li><a href="bayan-ux-audit.html" style="color:var(--bayan2)">UX audit — before/after</a> — interactive HTML, drag to compare</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="acc">
+    <summary><span class="chev">›</span><span class="ttl">Search &amp; AI-visibility work</span><span class="tag done">done</span><span class="hint">audit + 10 pages + 6 fixes</span></summary>
+    <div class="body">
+      <ul>
+        <li><b> Bayan </b>  → <a href="bayan6channels.html" style="color:var(--bayan2)">traffic analysis</a></li>
+        <li><b>Full site SEO audit</b> — scored, with the prioritized fix list. → <a href="Bayan SEO Audit · 2026-09-27.html" style="color:var(--bayan2)">seo-site-audit</a></li>
+        <li><b>AI-visibility audit</b> — 14 prompts × 5 engines; Bayan scores 4–7 on un-branded category questions today.</li>
+        <li><b>6 technical GEO fixes drafted</b> with a deploy runbook. → <a href="geo-fixes" style="color:var(--bayan2)">geo-fixes/ folder (7 files)</a></li>
+        <li><b>10 exam pages drafted</b> (Prometric hub + 9 exams). → <a href="Content Prometric Long-Tail Cluster — Bayan_map.html" style="color:var(--bayan2)">content-prometric/ folder (11 files)</a></li>
+        <li><b>Keyword map</b> — including one search Bayan already ranks #28 for at zero difficulty.</li>
+        <li><b>Days 31–60 content, 7 pieces</b> (MRCP, ABG, SMLE-vs-OMSB, OMSB). → <a href="content-days31-60" style="color:var(--bayan2)">content-days31-60/ folder (7 files)</a></li>
+      </ul>
+      <p class="tiny">These run as the compounding track underneath the conversion sprint — trackers live, not leading.</p>
+    </div>
+  </details>
+
+  <details class="acc">
+    <summary><span class="chev">›</span><span class="ttl">Nasim's Instagram &amp; social system</span><span class="tag done">ready</span><span class="hint">see her proposals →</span></summary>
+    <div class="body">
+      <p>A per-exam-path content system (SMLE, OMSB, nursing each get their own rhythm), built on proven carousel and <a href="bayan-video.html" style="color:var(--bayan2)">short-form-video architectures</a> : every post has one job and a reason to keep swiping; slide 1 is the thumbnail that earns the tap; one visual template per series so the <a href="Bayan — Brand System.html" style="color:var(--bayan2)">Brand</a> compounds. Mascots Bissan &amp; Gassan carry the personality. Months 1–3 each end in one data decision; Nasim runs production, publishing, monitoring and reporting, with competitor analysis alongside.</p>
+      <ul>
+      </ul>
+    </div>
+  </details>
+
+  <details class="acc">
+    <summary><span class="chev">›</span><span class="ttl">B2B / institutional track</span><span class="tag done">sized + SOP</span><span class="hint">open for the sizing →</span></summary>
+    <div class="body">
+      <p>B2C conversion is priority #1 and stays that way. B2B runs alongside as a warm-book lane owned by Nasim — no cold outreach (it replies at 0.2% and would waste the month). The sizing is done and honest: seat revenue alone is small; the track pays as credibility and distribution — anchor logos, free institutional seats feeding the B2C funnel, and the one number that flips the verdict: average negotiated contract value per institution.</p>
+      <ul>
+        <li><a href="bayan-b2b-sizing-memo.html" style="color:var(--bayan2)">B2B market-sizing memo</a> — TAM/SAM/SOM with sources and confidence tags</li>
+        <li><a href="bayan-b2b-track.html" style="color:var(--bayan2)">B2B operating track</a> — warm-book moves + the repeatable <a href="salessop.html" style="color:var(--bayan2)">SOP</a></li>
+        <li><b>Needs from you when you're ready:</b> the institute-negotiation details you mentioned to Nasim, and the commission/percentage expectations and calculation method for <a href="4modules.html" style="color:var(--bayan2)">B2B sales so proposals</a> are written correctly the first time.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="acc">
+    <summary><span class="chev">›</span><span class="ttl">Measurement &amp; consistency layer</span><span class="tag done">spec'd</span><span class="hint">see the spec →</span></summary>
+    <div class="body">
+      <p>The 10 core trial→paid events and 6-rate funnel dashboard spec (vendor-neutral, PostHog-first) — the layer Week 1 implements. Plus one approved source of truth for Bayan's facts: the question count currently appears as 8 different values across live surfaces, and the two sites name two different companies. You approve the official numbers once; after that an automatic check flags any page that disagrees. It reads public pages only and changes nothing without your sign-off.</p>
+      <ul>
+        <li><a href="Bayan — Analytics Events Spec (build-ready).html" style="color:var(--bayan2)">Analytics events spec</a></li>
+        <li><a href="The%20Bayan%20Product%20Brain.html" style="color:var(--bayan2)">The facts source-of-truth proposal</a> — with the live drift report as of 29 Sep</li>
+      </ul>
+    </div>
+  </details>
+
+  <div class="callout"><em>The same system, proven elsewhere.</em> All of the above was produced with an established, repeatable working system — the same one behind multilingual marketing and site builds we have delivered for other clients (e.g. the IranFluent/tprsbooks ecosystem). That is why the volume above took days, not months, and why months 2–3 stay fast.</div>
+</section>
+
+<!-- ================= 5. LIBRARY ================= -->
+<section id="library">
+  <h2><span class="idx">05 · The work library</span>Every finished file from the last week — 60 items, clickable.</h2>
+  <p class="sub">This is the proof behind every claim in this plan. Each link opens the actual file — no summaries in between. Click a category to expand it. (Files open on GitHub; use the <b>download</b> button there to open any HTML page in your browser.)</p>
+  <div class="lib-head">
+    <div class="lib-count">60 finished work files · one week · zero paid spend</div>
+  </div>
+
+  <details class="cat" open>
+    <summary><span class="chev">›</span><span class="ttl">Strategy &amp; revenue system</span><span class="n">10 files</span></summary>
+    <div class="files">
+      <div class="file"><span class="doc">📄</span><a href="bayan-b2b-sizing-memo.html">B2B market-sizing memo</a><span class="d">Gulf institutional TAM/SAM/SOM, sources + confidence — markdown, opens on GitHub</span></div>
+      <div class="file"><span class="doc">📄</span><a href="bayan-b2b-track.html">B2B institutional track</a><span class="d">the warm-book B2B track + repeatable SOP</span></div>
+      <div class="file"><span class="doc">📄</span><a href="Bayan — CEO Decision Briefs.html">CEO decision briefs</a><span class="d">grandfathering options + mid-tier SKU pricing briefs</span></div>
+      <div class="file"><span class="doc">📄</span><a href="Conversion numbers annex.html">Conversion numbers annex</a><span class="d">the conversion model, inputs shown</span></div>
+      <div class="file"><span class="doc">📄</span><a href="Bayan — Analytics Events Spec (build-ready).html">Analytics events spec</a><span class="d">vendor-neutral event taxonomy, 10 core trial→paid events</span></div>
+    </div>
+  </details>
+
+  <details class="cat">
+    <summary><span class="chev">›</span><span class="ttl">The marketing site — 11 sections, trilingual</span><span class="n">1 master + 10 draft folders</span></summary>
+    <div class="files">
+      <div class="file"><span class="doc">🌐</span><a href="">The 11-section site, trilingual</a><span class="d">all 11 sections (header → footer), EN / FA / AR (RTL)</span></div>
+      <div class="file"><span class="doc">📁</span><a href="work-2026-10-04">work-2026-10-04/</a><span class="d">10 fresh drafts: SEO page map &amp; briefs, Gulf licensing guide, ABG answer page, FAQ schema, BLUF+meta fixes, llms files, paid test, social calendar</span></div>
+    </div>
+  </details>
+
+  <details class="cat">
+    <summary><span class="chev">›</span><span class="ttl">UX &amp; product QA</span><span class="n">2 reports + 4 screenshots</span></summary>
+    <div class="files">
+      <div class="file"><span class="doc">🌐</span><a href="Bayan Learning — Product QA.html">Product QA &amp; improvement report</a><span class="d">live logged-in product QA — 72/100, two silent defects, fix list</span></div>
+      <div class="file"><span class="doc">🖼</span><a href="qa-report/screenshots">QA screenshots</a><span class="d">landing · dashboard · analytics · OSCE</span></div>
+      <div class="file"><span class="doc">🌐</span><a href="bayan-ux-audit.html">UX audit — before/after</a><span class="d">three revenue screens, drag to compare</span></div>
+    </div>
+  </details>
+
+  <details class="cat">
+    <summary><span class="chev">›</span><span class="ttl">SEO / AI-visibility / GEO</span><span class="n">2 audits + 7 fix files</span></summary>
+    <div class="files">
+      <div class="file"><span class="doc">🌐</span><a href="Bayan%20SEO%20Audit%20%C2%B7%202026-09-27.html">Bayan SEO Audit (interactive HTML)</a><span class="d">the same audit, browsable</span></div>
+      <div class="file"><span class="doc">📁</span><a href="geo-fixes">geo-fixes/</a><span class="d">llms.txt · llms-full.txt · FAQ schema · BLUF homepage rewrite · meta description · noscript fallback · DEPLOY runbook</span></div>
+    </div>
+  </details>
+
+  <details class="cat">
+    <summary><span class="chev">›</span><span class="ttl">Exam pages &amp; content</span><span class="n">11 + 7 files</span></summary>
+    <div class="files">
+      <div class="file"><span class="doc">📁</span><a href="content-prometric">content-prometric/</a><span class="d">HUB + DHA · SMLE · QCHP · nursing · Oman MOH · NHRA · pharmacist · physiotherapist · lab-technician pages</span></div>
+      <div class="file"><span class="doc">📁</span><a href="content-days31-60">content-days31-60/</a><span class="d">MRCP Part 1 samples · ABG interpretation · SMLE-vs-OMSB · OMSB prep · why-Bayan · social cadence starter</span></div>
+    </div>
+  </details>
+
+  <details class="cat">
+    <summary><span class="chev">›</span><span class="ttl">Nasim's Instagram &amp; AI design system</span><span class="n">3 proposals</span></summary>
+    <div class="files">
+      <div class="file"><span class="doc">📕</span><a href="">Instagram Management &amp; AI Design Proposal — EN v2</a><span class="d">the full 3-month system, per exam path</span></div>
+      <div class="file"><span class="doc">📁</span><a href="bayan-insta.html">Instagram review /</a> </div>
+    </div>
+  </details>
+
+  <details class="cat">
+    <summary><span class="chev">›</span><span class="ttl">Product research &amp; archive</span><span class="n">the deep evidence base</span></summary>
+    <div class="files">
+      <div class="file"><span class="doc">🌐</span><a href="Bayan — Marketing Plan Research Record.html">Marketing research record</a><span class="d">the full Bayan market/product research base</span></div>
+      <div class="file"><span class="doc">📁</span><a href="product-archive">product-archive/</a><span class="d">15 documented product areas — pricing model, QA pipeline, <a href="Signup & Onboarding Journey
+.html">Onboarding</a> journey, gamification, study plans, flashcards + GAPS.md</span></div>
+      <div class="file"><span class="doc">📁</span><a href="work-archive">work-archive/</a><span class="d">the working archive: audits, workspace docs, brand and plan records</span></div>
+    </div>
+  </details>
+
+  <div class="callout"><em>How to read this library:</em> you never have to. This section exists so the work is <b>verifiable</b>, not required reading. If you want one file only, open <a href="Bayan Learning — Product QA.html" style="color:var(--bayan2)">the product QA report</a> — it is the one that found the two silent defects.</div>
+</section>
+
+<!-- ================= 6. NUMBERS ================= -->
+<section id="numbers">
+  <h2><span class="idx">06 · The numbers</span>Specific, with inputs shown — re-baselined against real data in Week 1.</h2>
+  <p class="sub">Targets sit on the <b>addressable base A</b> (Week 1 pins it down), not the vanity 1,300. Freemium free→paid benchmarks: ~2.6% EdTech average, 3.7% SaaS, 4–5% good, 6–8% best-in-class. Bayan is under 1% today — the headroom is real. Full model: <a href="Conversion numbers annex.html" style="color:var(--bayan2)">the numbers annex</a>.</p>
+  <div class="panel">
+    <table>
+      <tr><th></th><th>Month 1</th><th>Month 2</th><th>Month 3</th></tr>
+      <tr><td><b>Cumulative conversion of A</b></td><td>3%</td><td>5%</td><td>7%</td></tr>
+      <tr><td><b>If A = 400 → cumulative paid</b></td><td>12</td><td>20</td><td>28</td></tr>
+      <tr><td><b>New buyers each month</b></td><td>12</td><td>8</td><td>8</td></tr>
+      <tr><td><b>MRR run-rate @ $16/mo</b></td><td>$192</td><td>$320</td><td>$448</td></tr>
+      <tr><td><b>Incremental MRR</b></td><td>+$192</td><td>+$128</td><td>+$128</td></tr>
+    </table>
+    <p class="tiny" style="margin-top:12px">12/20/28 are cumulative; only 12/8/8 are new each month. Recurring → run-rate; a one-time exam pass is receipts, not MRR. A, price, and sub-vs-pass mix are [confirm in Week 1]. CAC on the existing base ≈ $0 media; fully-loaded cost reported separately. Paid acquisition stays $0 until the funnel proves organic conversion (EdTech benchmarks: ~$10–150/signup, ~$50–300/paying customer — enter only at LTV:CAC ≥ 3:1). Sprint budget: $0 ads; tooling ~$0–150/mo; a $300–500 paid test only if Week-4 data justifies it.</p>
+  </div>
+</section>
+
+<!-- ==================== TARGET LADDER (fixed chart) ==================== -->
+<section class="stage" id="stage">
+  <div class="target-hero">
+    <div class="k">Target ladder · the 3× divergence</div>
+    <h2>Rigor's 1/2/3 versus Pitch's 3/5/7.</h2>
+    <p>Both ladders sit below the 8% cross-company median — but the gap between
+      them is <b>3× at every step</b>. If M2 = 2% (rigor) lands, the rigor reads
+      as success. If the pitch is the contract and 2% lands, it reads as a miss.
+      <b>Which ladder is the contract decides what 'working' means.</b></p>
+  </div>
+  <div class="ladder-wrap">
+    <div class="ladder-head">
+      <div class="ladder-title">
+        Cumulative conversion targets
+        <small>% of addressable cohort · M1 / M2 / M3</small>
+      </div>
+      <div class="ladder-legend">
+        <span class="ll rigor"><span class="sw"></span>Rigor 1/2/3</span>
+        <span class="ll pitch"><span class="sw"></span>Pitch 3/5/7</span>
+      </div>
+    </div>
+
+    <div class="axis">
+      <div class="axis-lines">
+        <div class="axis-line" style="top:0%"><span>8%</span></div>
+        <div class="axis-line" style="top:25%"><span>6%</span></div>
+        <div class="axis-line" style="top:50%"><span>4%</span></div>
+        <div class="axis-line" style="top:75%"><span>2%</span></div>
+        <div class="axis-line median" style="top:0%">
+          <span style="right:auto;left:0">8% median</span>
+        </div>
+      </div>
+
+      <div class="bar-groups">
+        <div class="bar-group">
+          <div class="bar-pair">
+            <div class="bar rigor" style="height:27.5px">
+              <span class="bar-val">1%</span>
+            </div>
+            <div class="bar pitch" style="height:82.5px">
+              <span class="bar-val">3%</span>
+            </div>
+          </div>
+          <div class="bar-label">M1</div>
+        </div>
+        <div class="bar-group">
+          <div class="bar-pair">
+            <div class="bar rigor" style="height:55px">
+              <span class="bar-val">2%</span>
+            </div>
+            <div class="bar pitch" style="height:137.5px">
+              <span class="bar-val">5%</span>
+            </div>
+          </div>
+          <div class="bar-label">M2</div>
+        </div>
+        <div class="bar-group">
+          <div class="bar-pair">
+            <div class="bar rigor" style="height:82.5px">
+              <span class="bar-val">3%</span>
+            </div>
+            <div class="bar pitch" style="height:192.5px">
+              <span class="bar-val">7%</span>
+            </div>
+          </div>
+          <div class="bar-label">M3</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gap-callout">
+      <div class="gap-cell">
+        <div class="gk">M1 gap</div>
+        <div class="gv">3.0×<small>delta</small></div>
+      </div>
+      <div class="gap-cell">
+        <div class="gk">M2 gap</div>
+        <div class="gv">2.5×<small>delta</small></div>
+      </div>
+      <div class="gap-cell">
+        <div class="gk">M3 gap</div>
+        <div class="gv">2.3×<small>delta</small></div>
+      </div>
+    </div>
+
+    <div class="target-note">
+      <span class="ic">⚑</span>
+      <div><b>Neither ladder is a forecast.</b> The rigor explicitly frames its
+        1/2/3 as "decision thresholds, not purported benchmarks." The pitch frames
+        its 3/5/7 as "planning hypotheses" — but presents them with worked dollar
+        outputs. The pitch's ladder is 3× more ambitious at every step with the
+        same underlying uncertainty about A, r, and P.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 7. DECISIONS ================= -->
+<section id="decisions">
+  <h2><span class="idx">07 · What we need from you</span>One go to start. Five items, later, at your pace.</h2>
+  <p class="sub">Nothing below blocks Week 1. The first item is the only one needed this week.</p>
+  <div class="panel">
+    <table>
+      <tr><th style="width:38%">Item</th><th>When needed</th></tr>
+      <tr><td><b>1. The go</b> — Week 1 ships immediately: segmentation, instrumentation, first 3 landing pages in your hands by end of week</td><td><span class="dec">This week</span></td></tr>
+      <tr><td><b>2. Grandfathering decision</b> — count + $ at risk + convert/sunset options on your desk; no migration without sign-off. <span class="tiny">(<a href="Bayan — CEO Decision Briefs.html" style="color:var(--bayan2)">decision briefs ready</a>)</span></td><td>Week 3</td></tr>
+      <tr><td><b>3. Mid-tier SKU price</b> — the single-exam pass, timed to the next sitting</td><td>Week 3</td></tr>
+      <tr><td><b>4. B2B context</b> — institute-negotiation details you mentioned to Nasim; commission/percentage expectations and calculation method</td><td>When ready</td></tr>
+      <tr><td><b>5. Email list + any ongoing activities</b> — existing list size/source/tooling so campaigns and launches are planned on reality; and anything already in motion we should stay consistent with</td><td>When ready</td></tr>
+    </table>
+  </div>
+  <div class="callout amber"><em>Not in this sprint:</em> the wider "knowledge brain" build you declined — only the locked-facts core the marketing genuinely needs, folded in at no extra cost. Turkey: parked, brought back only with a specific event or partner that pays for the trip; Nasim will walk you through the trip's tickets, receipts and documents separately.</div>
+</section>
+
+<!-- ================= 8. GUARDRAILS ================= -->
+<section>
+  <h2><span class="idx">08 · Guardrails</span>Non-negotiable for a medical brand.</h2>
+  <div class="panel">
+    <ul style="margin-left:17px;color:#c3ccdb;font-size:13.5px">
+      <li style="margin-bottom:6px">No pass or outcome guarantees, ever — "on the first attempt" is banned.</li>
+      <li style="margin-bottom:6px">Never bare "AI-powered" — always "AI assists with drafting; humans own what reaches learners."</li>
+      <li style="margin-bottom:6px">"Gulf Licensing Exam Preparation," not bare "Prometric"; no NCLEX/US framing in Gulf copy.</li>
+      <li style="margin-bottom:6px">Verified counts only — one locked question number; nothing invented; no fake scarcity around a licensing career.</li>
+      <li style="margin-bottom:6px">Grandfathering touches real users — pull + propose only.</li>
+      <li>Draft-first: no page goes live, no email sends, no ad money spent without your sign-off.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  Bayan AI Technologies · Revenue Growth System v3 · 2026-10-05 · prepared by Nasim &amp; Hiwa (AITransforms)<br>
+  Attach this file with the email, or open it in any browser — it is fully self-contained, and every link opens the real work file on GitHub.<br>
+  60 work files · 15 accordions · 7 library categories — short by design; deep by demand.
+</footer>
+
+</main>
+
+<script>
+/* =========================================================
+   BUILD NAV DOTS
+   ========================================================= */
+const SCENE_LABELS = [
+  "The problem",
+  "The reveal",
+  "The reasons",
+  "Four weeks",
+  "Already built",
+  "The numbers",
+  "The ask"
+];
+const SCENES = [...document.querySelectorAll('.scene')];
+const dotsEl = document.getElementById('dots');
+
+SCENES.forEach((s, i) => {
+  const b = document.createElement('button');
+  b.className = 'dot';
+  b.innerHTML = `<span class="lbl">${SCENE_LABELS[i]||''}</span><span class="circle"></span>`;
+  b.dataset.i = i;
+  b.addEventListener('click', () => {
+    SCENES[i].scrollIntoView({behavior:'smooth', block:'start'});
+  });
+  dotsEl.appendChild(b);
+});
+
+/* =========================================================
+   PROGRESS BAR + SCENE ACCENT
+   ========================================================= */
+const progress = document.getElementById('progress');
+const ambient = document.getElementById('ambient');
+const root = document.documentElement;
+
+function setAccent(rgb){
+  root.style.setProperty('--accent', rgb);
+  if (ambient) {
+    ambient.style.background = `radial-gradient(40% 35% at 15% 10%,rgba(${rgb},.14),transparent 60%), radial-gradient(38% 38% at 85% 85%,rgba(167,139,250,.05),transparent 62%)`;
+  }
+}
+
+function updateProgress(){
+  const h = document.documentElement.scrollHeight - window.innerHeight;
+  const p = h > 0 ? (window.scrollY / h) * 100 : 0;
+  progress.style.width = p + '%';
+}
+window.addEventListener('scroll', updateProgress, {passive:true});
+updateProgress();
+
+/* =========================================================
+   ACTIVE SCENE (dot + accent)
+   ========================================================= */
+const sceneIo = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting && e.intersectionRatio > 0.4){
+      const i = parseInt(e.target.dataset.scene);
+      document.querySelectorAll('.dot').forEach(d =>
+        d.classList.toggle('active', parseInt(d.dataset.i) === i));
+      setAccent(e.target.dataset.accent);
+    }
+  });
+}, {threshold:[0.4, 0.6], rootMargin:'-20% 0px -20% 0px'});
+
+SCENES.forEach(s => sceneIo.observe(s));
+
+/* =========================================================
+   HERO COUNTERS
+   ========================================================= */
+function animateCount(el, target, duration = 1600, decimals = 0){
+  const start = performance.now();
+  function frame(now){
+    const p = Math.min(1, (now - start) / duration);
+    const e = 1 - Math.pow(1 - p, 3);
+    const val = target * e;
+    el.textContent = decimals > 0
+      ? val.toFixed(decimals)
+      : Math.round(val).toLocaleString();
+    if (p < 1) requestAnimationFrame(frame);
+    else el.textContent = decimals > 0
+      ? target.toFixed(decimals)
+      : target.toLocaleString();
+  }
+  requestAnimationFrame(frame);
+}
+
+let heroFired = false;
+const heroIo = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting && !heroFired){
+      heroFired = true;
+      document.querySelectorAll('#s1 [data-count]').forEach(el => {
+        const target = parseFloat(el.dataset.count);
+        const dec = parseInt(el.dataset.dec || 0);
+        animateCount(el, target, 1800, dec);
+      });
+    }
+  });
+}, {threshold:0.5});
+const s1el = document.getElementById('s1');
+if (s1el) heroIo.observe(s1el);
+
+/* =========================================================
+   PARTITION — animate widths when scene 2 enters
+   ========================================================= */
+const partitionIo = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting){
+      document.querySelectorAll('.part').forEach((p, i) => {
+        setTimeout(() => {
+          p.style.width = p.dataset.w + '%';
+          p.classList.add('in');
+        }, i * 220);
+      });
+      document.querySelectorAll('.pl').forEach((pl, i) => {
+        setTimeout(() => pl.classList.add('in'), 500 + i * 140);
+      });
+      setTimeout(() => {
+        const c = document.getElementById('close2');
+        if (c) c.classList.add('in');
+      }, 1200);
+      partitionIo.disconnect();
+    }
+  });
+}, {threshold:0.3});
+const partEl = document.getElementById('partition');
+if (partEl) partitionIo.observe(partEl);
+
+/* =========================================================
+   REASON CARDS — reveal on scroll + toggle on click
+   ========================================================= */
+const reasonIo = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting){
+      e.target.classList.add('in');
+      reasonIo.unobserve(e.target);
+    }
+  });
+}, {threshold:0.2});
+document.querySelectorAll('.reason').forEach(r => {
+  reasonIo.observe(r);
+  r.addEventListener('click', () => r.classList.toggle('open'));
+});
+
+/* =========================================================
+   TIMELINE — reveal
+   ========================================================= */
+const timelineIo = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting){
+      e.target.querySelectorAll('.week, .tl-line').forEach(el => el.classList.add('in'));
+      timelineIo.disconnect();
+    }
+  });
+}, {threshold:0.2});
+const timelineEl = document.getElementById('timeline');
+if (timelineEl) timelineIo.observe(timelineEl);
+
+/* =========================================================
+   BUILT GRID — populate + stagger
+   ========================================================= */
+const BUILT = [
+  "Brand profile + site audit",
+  "AI-visibility audit · 14×5",
+  "Live 90-day plan",
+  "AEO audit · score 71",
+  "Keyword research",
+  "6 GEO fixes drafted",
+  "10 exam pages drafted",
+  "7 content pieces drafted",
+  "Social calendar",
+  "Conversion plan + annex",
+  "Analytics event spec",
+  "CEO decision briefs"
+];
+
+const grid = document.getElementById('builtGrid');
+if (grid){
+  BUILT.forEach(name => {
+    const el = document.createElement('div');
+    el.className = 'bd';
+    el.innerHTML = `
+      <div class="tick">✓</div>
+      <div class="name">${name}</div>`;
+    grid.appendChild(el);
+  });
+
+  const builtIo = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting){
+        grid.querySelectorAll('.bd').forEach((el, i) => {
+          setTimeout(() => el.classList.add('in'), i * 55);
+        });
+        builtIo.disconnect();
+      }
+    });
+  }, {threshold:0.15});
+  builtIo.observe(grid);
+}
+
+/* =========================================================
+   KEYBOARD NAV (arrow keys jump scenes)
+   ========================================================= */
+document.addEventListener('keydown', e => {
+  if (e.target.matches('input,textarea')) return;
+  if (!SCENES.length) return;
+  const current = SCENES.findIndex(s => {
+    const r = s.getBoundingClientRect();
+    return r.top <= window.innerHeight * 0.4 && r.bottom >= window.innerHeight * 0.4;
+  });
+  if (e.key === 'ArrowDown' || e.key === 'ArrowRight'){
+    e.preventDefault();
+    const next = Math.min(SCENES.length - 1, current + 1);
+    SCENES[next].scrollIntoView({behavior:'smooth'});
+  } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft'){
+    e.preventDefault();
+    const prev = Math.max(0, current - 1);
+    SCENES[prev].scrollIntoView({behavior:'smooth'});
+  }
+});
+
+/* =========================================================
+   BOOT
+   ========================================================= */
+</script>
+
+</body>
+</html>

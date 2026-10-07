@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bayan — Gulf Institutional (B2B Motion B) · Sizing Memo</title>
+<style>
+  :root{
+    --ink:#0a0d14;
+    --ink2:#0f131c;
+    --panel:#151b26;
+    --panel2:#1a2230;
+    --line:#232c3b;
+    --txt:#eef2f9;
+    --mut:#8b95a9;
+    --mut2:#5a6477;
+    --bayan:#1a4ff5;
+    --bayan2:#4d7bff;
+    --emerald:#34d399;
+    --amber:#fbbf24;
+    --rose:#f43f5e;
+    --violet:#a78bfa;
+    --cyan:#22d3ee;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);
+    color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  main{max-width:1000px;margin:0 auto;padding:0 24px 80px}
+
+  /* ============ TOP NAV ============ */
+  .topnav{
+    position:sticky;top:0;z-index:50;
+    padding:12px 24px;
+    background:linear-gradient(180deg,rgba(10,13,20,.95),rgba(10,13,20,.65) 80%,transparent);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    display:flex;gap:4px;overflow-x:auto;flex-wrap:wrap;
+    border-bottom:1px solid transparent;
+    transition:border-color .3s;
+  }
+  .topnav.scrolled{border-bottom-color:var(--line)}
+  .topnav::-webkit-scrollbar{display:none}
+  .topnav a{
+    all:unset;cursor:pointer;
+    font-size:12px;font-weight:500;
+    color:var(--mut);
+    padding:7px 12px;border-radius:8px;
+    transition:.2s;white-space:nowrap;
+  }
+  .topnav a:hover{color:#c8d2e2;background:rgba(255,255,255,.04)}
+  .topnav a.active{color:#fff;background:rgba(26,79,245,.15)}
+
+  /* ============ HEADER ============ */
+  header{
+    padding:56px 0 40px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:36px;
+  }
+  header .crumbs{
+    display:flex;align-items:center;gap:10px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    color:var(--mut2);
+    margin-bottom:20px;
+    flex-wrap:wrap;
+  }
+  header .crumbs .sep{color:var(--line)}
+  header .crumbs .here{color:var(--bayan2);font-weight:600}
+
+  header .tag{
+    display:inline-flex;align-items:center;gap:9px;
+    font-size:11px;font-weight:600;
+    letter-spacing:.1em;text-transform:uppercase;
+    color:var(--rose);
+    background:rgba(244,63,94,.12);
+    border:1px solid rgba(244,63,94,.32);
+    padding:6px 12px;border-radius:8px;
+    margin-bottom:20px;
+  }
+  header .tag::before{
+    content:"◆";
+    font-size:11px;
+  }
+  header h1{
+    font-size:38px;line-height:1.12;
+    letter-spacing:-.028em;font-weight:800;
+    color:#fff;margin-bottom:18px;
+    max-width:24ch;
+  }
+  header .lede{
+    font-size:15.5px;line-height:1.75;
+    color:#b8c2d2;max-width:74ch;
+  }
+  header .lede b{color:#fff;font-weight:600}
+  header .lede code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:5px;
+    color:#dfe7f4;
+  }
+
+  .meta-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:16px 24px;
+    margin-top:24px;padding-top:24px;
+    border-top:1px dashed var(--line);
+  }
+  .meta-grid .m-item{display:flex;flex-direction:column;gap:3px}
+  .meta-grid .m-k{
+    font-size:10.5px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;
+    color:var(--mut2);
+  }
+  .meta-grid .m-v{
+    color:#cfd8e8;font-weight:500;
+    font-size:13.5px;
+  }
+  .meta-grid .m-v code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  .rule-strip{
+    margin-top:24px;
+    padding:18px 24px;
+    border-radius:12px;
+    background:rgba(52,211,153,.05);
+    border:1px dashed rgba(52,211,153,.35);
+    display:flex;gap:16px;align-items:flex-start;
+  }
+  .rule-strip .rs-ic{
+    flex:0 0 32px;
+    width:32px;height:32px;
+    border-radius:9px;
+    display:grid;place-items:center;
+    font-size:14px;font-weight:800;
+    background:rgba(52,211,153,.15);
+    color:var(--emerald);
+    border:1px solid rgba(52,211,153,.35);
+  }
+  .rule-strip .rs-body{flex:1;min-width:0}
+  .rule-strip .rs-k{
+    font-size:11px;font-weight:700;
+    letter-spacing:.09em;text-transform:uppercase;
+    color:var(--emerald);
+    margin-bottom:6px;
+  }
+  .rule-strip p{
+    font-size:13px;line-height:1.65;
+    color:#c4d4cc;
+  }
+  .rule-strip p b{color:#fff;font-weight:600}
+  .rule-strip p em{font-style:italic;color:#dfe7f4}
+
+  /* ============ SECTIONS ============ */
+  section{margin-bottom:56px;scroll-margin-top:80px}
+  section h2{
+    font-size:23px;line-height:1.3;
+    letter-spacing:-.02em;font-weight:700;
+    color:#fff;margin-bottom:10px;
+    display:flex;align-items:baseline;
+    gap:14px;flex-wrap:wrap;
+  }
+  section h2 .num{
+    font-size:12.5px;font-weight:700;
+    color:var(--bayan2);
+    background:rgba(26,79,245,.12);
+    border:1px solid rgba(26,79,245,.28);
+    padding:5px 10px;border-radius:7px;
+    letter-spacing:.04em;
+  }
+  section h2.danger .num{
+    color:var(--rose);
+    background:rgba(244,63,94,.12);
+    border-color:rgba(244,63,94,.3);
+  }
+  section h2.muted .num{
+    color:var(--mut);
+    background:rgba(255,255,255,.04);
+    border-color:var(--line);
+  }
+  section .desc{
+    font-size:14.5px;color:var(--mut);
+    margin-bottom:22px;max-width:78ch;
+  }
+  section .desc b{color:#cfd8e8;font-weight:600}
+  section .desc em{font-style:italic;color:#dfe7f4}
+  section .desc code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ VERDICT CARD ============ */
+  .verdict-card{
+    padding:22px 26px;
+    border-radius:var(--radius);
+    background:linear-gradient(135deg,rgba(244,63,94,.06),rgba(244,63,94,.01) 70%,transparent);
+    border:1px solid rgba(244,63,94,.32);
+    display:flex;gap:18px;align-items:flex-start;
+    position:relative;
+    overflow:hidden;
+    margin-bottom:20px;
+  }
+  .verdict-card::before{
+    content:"";position:absolute;
+    left:0;top:0;bottom:0;width:4px;
+    background:var(--rose);
+  }
+  .vc-ic{
+    flex:0 0 42px;
+    width:42px;height:42px;
+    border-radius:12px;
+    display:grid;place-items:center;
+    font-size:18px;
+    background:rgba(244,63,94,.15);
+    color:var(--rose);
+    border:1px solid rgba(244,63,94,.35);
+  }
+  .vc-body{flex:1;min-width:0}
+  .vc-k{
+    font-size:11px;font-weight:700;
+    letter-spacing:.09em;text-transform:uppercase;
+    color:var(--rose);
+    margin-bottom:8px;
+  }
+  .vc-body p{
+    font-size:13.5px;
+    line-height:1.7;
+    color:#d8c4c8;
+    margin:0;
+  }
+  .vc-body p + p{margin-top:10px}
+  .vc-body p b{color:#fff;font-weight:600}
+  .vc-body p em{font-style:italic;color:#dfe7f4;}
+  .vc-body p code{
+    font-family:ui-monospace,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ METRIC CARDS ============ */
+  .metric-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:14px;
+  }
+  .metric-card{
+    padding:22px 22px 20px;
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+    transition:.25s;
+  }
+  .metric-card::before{
+    content:"";position:absolute;
+    top:0;right:0;left:0;height:3px;
+    background:rgb(var(--mc));
+  }
+  .metric-card:hover{
+    border-color:rgba(var(--mc),.45);
+    transform:translateY(-3px);
+    box-shadow:0 20px 44px -28px rgba(var(--mc),.85);
+  }
+  .metric-card.m1{--mc:26,79,245}
+  .metric-card.m2{--mc:52,211,153}
+  .metric-card.m3{--mc:167,139,250}
+  .metric-card.m4{--mc:251,191,36}
+
+  .metric-num{
+    font-family:ui-monospace,monospace;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.08em;
+    padding:4px 9px;
+    border-radius:6px;
+    background:rgba(var(--mc),.15);
+    color:rgb(var(--mc));
+    border:1px solid rgba(var(--mc),.34);
+    display:inline-block;
+    margin-bottom:14px;
+  }
+  .metric-name{
+    font-size:15px;
+    font-weight:700;
+    color:#fff;
+    letter-spacing:-.01em;
+    line-height:1.35;
+    margin-bottom:10px;
+  }
+  .metric-desc{
+    font-size:12.5px;
+    line-height:1.65;
+    color:#b8c2d2;
+  }
+  .metric-desc b{color:#fff;font-weight:600}
+  .metric-desc em{font-style:italic;color:#dfe7f4;}
+
+  /* ============ TABLES ============ */
+  .data-table{
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    overflow-x:auto;
+    margin-bottom:20px;
+  }
+  table{
+    width:100%;border-collapse:collapse;
+    min-width:700px;
+  }
+  table thead th{
+    background:var(--panel2);
+    font-size:10.5px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;
+    color:var(--mut);
+    padding:14px 18px;
+    text-align:left;
+    border-bottom:1px solid var(--line);
+    white-space:nowrap;
+  }
+  table tbody td{
+    padding:16px 18px;
+    font-size:13px;
+    color:#cfd8e8;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+    line-height:1.6;
+  }
+  table tbody tr:last-child td{border-bottom:none}
+  table tbody tr:hover{background:rgba(255,255,255,.015)}
+  table td b{color:#fff;font-weight:600}
+  table td code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+  table .num-cell{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px;
+    color:var(--cyan);
+    font-weight:600;
+    text-align:right;
+    white-space:nowrap;
+  }
+  table .tag-cell{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:.04em;
+    padding:3px 8px;
+    border-radius:5px;
+    display:inline-block;
+    white-space:nowrap;
+  }
+  table .tag-verified{background:rgba(52,211,153,.14);color:var(--emerald);border:1px solid rgba(52,211,153,.3)}
+  table .tag-confirm{background:rgba(251,191,36,.14);color:var(--amber);border:1px solid rgba(251,191,36,.3)}
+  table .tag-unverified{background:rgba(244,63,94,.14);color:var(--rose);border:1px solid rgba(244,63,94,.3)}
+
+  /* ============ CALLOUT BOXES ============ */
+  .callout{
+    padding:20px 24px;
+    border-radius:var(--radius);
+    display:flex;gap:18px;align-items:flex-start;
+    position:relative;
+    overflow:hidden;
+    margin-bottom:20px;
+  }
+  .callout::before{
+    content:"";position:absolute;
+    left:0;top:0;bottom:0;width:4px;
+  }
+  .callout.emerald::before{background:var(--emerald)}
+  .callout.amber::before{background:var(--amber)}
+  .callout.rose::before{background:var(--rose)}
+  .callout.violet::before{background:var(--violet)}
+  .callout.bayan::before{background:var(--bayan)}
+
+  .callout.emerald{background:linear-gradient(135deg,rgba(52,211,153,.06),rgba(52,211,153,.01) 70%,transparent);border:1px solid rgba(52,211,153,.32)}
+  .callout.amber{background:linear-gradient(135deg,rgba(251,191,36,.06),rgba(251,191,36,.01) 70%,transparent);border:1px solid rgba(251,191,36,.32)}
+  .callout.rose{background:linear-gradient(135deg,rgba(244,63,94,.06),rgba(244,63,94,.01) 70%,transparent);border:1px solid rgba(244,63,94,.32)}
+  .callout.violet{background:linear-gradient(135deg,rgba(167,139,250,.06),rgba(167,139,250,.01) 70%,transparent);border:1px solid rgba(167,139,250,.32)}
+  .callout.bayan{background:linear-gradient(135deg,rgba(26,79,245,.05),rgba(26,79,245,.01) 70%,transparent);border:1px solid rgba(26,79,245,.3)}
+
+  .callout .c-ic{
+    flex:0 0 40px;
+    width:40px;height:40px;
+    border-radius:11px;
+    display:grid;place-items:center;
+    font-size:18px;
+  }
+  .callout.emerald .c-ic{background:rgba(52,211,153,.15);color:var(--emerald);border:1px solid rgba(52,211,153,.35)}
+  .callout.amber .c-ic{background:rgba(251,191,36,.15);color:var(--amber);border:1px solid rgba(251,191,36,.35)}
+  .callout.rose .c-ic{background:rgba(244,63,94,.15);color:var(--rose);border:1px solid rgba(244,63,94,.35)}
+  .callout.violet .c-ic{background:rgba(167,139,250,.15);color:var(--violet);border:1px solid rgba(167,139,250,.35)}
+  .callout.bayan .c-ic{background:rgba(26,79,245,.15);color:var(--bayan2);border:1px solid rgba(26,79,245,.35)}
+
+  .callout .c-body{flex:1;min-width:0}
+  .callout .c-k{
+    font-size:11px;font-weight:700;
+    letter-spacing:.09em;text-transform:uppercase;
+    margin-bottom:8px;
+  }
+  .callout.emerald .c-k{color:var(--emerald)}
+  .callout.amber .c-k{color:var(--amber)}
+  .callout.rose .c-k{color:var(--rose)}
+  .callout.violet .c-k{color:var(--violet)}
+  .callout.bayan .c-k{color:var(--bayan2)}
+
+  .callout .c-body p{
+    font-size:13.5px;
+    line-height:1.7;
+    margin:0;
+  }
+  .callout .c-body p + p{margin-top:10px}
+  .callout .c-body p b{color:#fff;font-weight:600}
+  .callout .c-body p em{font-style:italic;color:#dfe7f4;}
+  .callout .c-body p code{
+    font-family:ui-monospace,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ UNKNOWN LIST ============ */
+  .unknown-list{
+    list-style:none;
+    display:flex;flex-direction:column;
+    gap:12px;
+    margin-bottom:20px;
+  }
+  .unknown-list li{
+    padding:16px 20px 16px 56px;
+    border-radius:10px;
+    background:rgba(244,63,94,.04);
+    border:1px solid rgba(244,63,94,.2);
+    font-size:13.5px;
+    line-height:1.65;
+    color:#cfd8e8;
+    position:relative;
+  }
+  .unknown-list li::before{
+    content:attr(data-num);
+    position:absolute;
+    left:16px;top:16px;
+    font-family:ui-monospace,monospace;
+    font-size:13px;
+    font-weight:800;
+    color:var(--rose);
+  }
+  .unknown-list li b{color:#fff;font-weight:600}
+  .unknown-list li em{font-style:italic;color:#dfe7f4;}
+  .unknown-list li code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+  .unknown-list li .vflip{
+    display:inline-block;
+    font-family:ui-monospace,monospace;
+    font-size:10.5px;
+    font-weight:700;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    padding:2px 8px;
+    border-radius:5px;
+    background:rgba(251,191,36,.14);
+    color:var(--amber);
+    border:1px solid rgba(251,191,36,.3);
+    margin-left:8px;
+    vertical-align:middle;
+  }
+
+  /* ============ RECOMMENDATION ============ */
+  .rec-card{
+    padding:24px 28px;
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-left:4px solid var(--bayan);
+    position:relative;
+    margin-bottom:20px;
+  }
+  .rec-card .rc-k{
+    font-size:11px;font-weight:700;
+    letter-spacing:.1em;text-transform:uppercase;
+    color:var(--bayan2);
+    margin-bottom:10px;
+  }
+  .rec-card h3{
+    font-size:19px;font-weight:700;
+    color:#fff;
+    letter-spacing:-.015em;
+    margin-bottom:14px;
+    line-height:1.35;
+  }
+  .rec-card p{
+    font-size:14px;
+    line-height:1.75;
+    color:#b8c2d2;
+    margin-bottom:12px;
+  }
+  .rec-card p:last-child{margin-bottom:0}
+  .rec-card p b{color:#fff;font-weight:600}
+  .rec-card p em{font-style:italic;color:#dfe7f4;}
+  .rec-card p code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ MOVES TABLE ============ */
+  .moves-table{
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    overflow:hidden;
+  }
+  .moves-table .mrow{
+    display:grid;
+    grid-template-columns:48px 1fr 240px;
+    gap:16px;
+    align-items:flex-start;
+    padding:20px 24px;
+    border-bottom:1px solid var(--line);
+    font-size:13.5px;
+    transition:.2s;
+  }
+  .moves-table .mrow:last-child{border-bottom:none}
+  .moves-table .mrow:hover{background:rgba(255,255,255,.015)}
+  .moves-table .mnum{
+    font-family:ui-monospace,monospace;
+    font-size:14px;
+    font-weight:800;
+    padding:6px 0;
+    color:var(--bayan2);
+    letter-spacing:.02em;
+  }
+  .moves-table .mname{
+    color:#cfd8e8;
+    line-height:1.65;
+    font-weight:500;
+  }
+  .moves-table .mname b{color:#fff;font-weight:600}
+  .moves-table .mname code{
+    font-family:ui-monospace,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+  .moves-table .mdone{
+    font-family:ui-monospace,monospace;
+    font-size:11.5px;
+    line-height:1.6;
+    color:var(--mut);
+    text-align:right;
+  }
+  .moves-table .mdone::before{
+    content:"target · ";
+    color:var(--emerald);
+    font-weight:700;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    font-size:10.5px;
+    display:block;
+    margin-bottom:4px;
+  }
+
+  /* ============ PROVENANCE ============ */
+  .provenance{
+    padding:18px 24px;
+    border-radius:var(--radius);
+    background:rgba(0,0,0,.25);
+    border:1px dashed var(--line);
+    font-size:12.5px;
+    line-height:1.7;
+    color:var(--mut);
+    margin-top:20px;
+  }
+  .provenance b{color:#cfd8e8;font-weight:600}
+  .provenance code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ FOOTER ============ */
+  footer{
+    padding-top:32px;
+    margin-top:56px;
+    border-top:1px solid var(--line);
+    font-size:12.5px;
+    color:var(--mut2);
+    text-align:center;
+    line-height:1.85;
+  }
+  footer .mark{color:var(--bayan2);font-weight:600}
+  footer code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.04);
+    padding:2px 7px;border-radius:5px;
+    color:#cfd8e8;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:820px){
+    main{padding:0 16px 60px}
+    header{padding:40px 0 30px;margin-bottom:28px}
+    header h1{font-size:26px}
+    header .lede{font-size:14.5px}
+    section{margin-bottom:44px}
+    section h2{font-size:20px}
+
+    .metric-grid{grid-template-columns:1fr}
+
+    .moves-table .mrow{grid-template-columns:36px 1fr;gap:12px;padding:16px 18px}
+    .moves-table .mdone{grid-column:2;text-align:left;padding-top:8px}
+
+    .callout{padding:16px 18px;gap:14px}
+    .callout .c-ic{flex:0 0 36px;width:36px;height:36px;font-size:16px}
+    .verdict-card{padding:18px 20px;gap:14px}
+    .vc-ic{flex:0 0 36px;width:36px;height:36px;font-size:16px}
+
+    table{min-width:640px}
+    table thead th,table tbody td{padding:12px 14px;font-size:12.5px}
+
+    .rec-card{padding:20px 22px}
+
+    .topnav{padding:10px 16px}
+    .topnav a{font-size:11px;padding:6px 10px}
+  }
+  @media (max-width:480px){
+    header h1{font-size:22px}
+    .rule-strip{padding:14px 18px;gap:12px}
+    .rule-strip .rs-ic{flex:0 0 28px;width:28px;height:28px;font-size:12px}
+    .metric-card{padding:18px 18px 16px}
+    .unknown-list li{padding:14px 16px;padding-left:48px;font-size:13px}
+    .unknown-list li::before{left:14px;top:14px;font-size:12px}
+    .callout{padding:14px 16px}
+    .verdict-card{padding:16px 18px}
+  }
+</style>
+</head>
+<body>
+
+<nav class="topnav" id="topnav">
+  <a href="#verdict">Verdict</a>
+  <a href="#sizing">TAM/SAM/SOM</a>
+  <a href="#institutions">Institutions</a>
+  <a href="#competitors">Competitors</a>
+  <a href="#economics">Unit economics</a>
+  <a href="#unknowns">Unknowns</a>
+  <a href="#recommendation">Recommendation</a>
+</nav>
+
+<main>
+
+  <!-- ============ HEADER ============ -->
+  <header>
+    <div class="crumbs">
+      <span>Bayan</span>
+      <span class="sep">/</span>
+      <span>B2B Track</span>
+      <span class="sep">/</span>
+      <span class="here">Sizing Memo</span>
+    </div>
+
+    <span class="tag">Internal draft · not a CEO deliverable</span>
+    <h1>Bayan Gulf Institutional · Market-Sizing Memo</h1>
+    <p class="lede">
+      <b>Status:</b> Internal draft for Hiwa/Nasim — NOT a CEO deliverable yet.
+      Sizing exercise only; authorizes <b>no spend, no outreach</b>.
+      <br><b>Context:</b> CEO Dr. Abdullah has ranked B2B/institutional as
+      priority #1 (above B2C), start now.
+      <br><b>Discipline:</b> Prices/terms = Bayan's own documented figures
+      (file:line). External market figures carry source + date; every estimate
+      tagged <code>[unverified]</code> or <code>[confirm]</code>. Web figures
+      = untrusted-source data.
+    </p>
+
+    <div class="meta-grid">
+      <div class="m-item">
+        <span class="m-k">Prepared</span>
+        <span class="m-v">2026-10-01</span>
+      </div>
+      <div class="m-item">
+        <span class="m-k">Context</span>
+        <span class="m-v">B2B priority #1 (CEO)</span>
+      </div>
+      <div class="m-item">
+        <span class="m-k">Discipline</span>
+        <span class="m-v">Internal prices confirmed · external estimates tagged</span>
+      </div>
+      <div class="m-item">
+        <span class="m-k">Status</span>
+        <span class="m-v">Sizing only · no spend, no outreach</span>
+      </div>
+    </div>
+
+    <div class="rule-strip">
+      <div class="rs-ic">◆</div>
+      <div class="rs-body">
+        <div class="rs-k">Verdict preview</div>
+        <p>
+          The Gulf institutional prize, measured in Bayan's own documented seat
+          revenue, is <b>small</b> — SOM ≈ <b>$5k–$86k/yr ARR</b>, with
+          <b>~$0 year-1 cash</b> because Bayan gives free 1-year institutional
+          trials. Defensible as priority #1 <em>only if valued as a
+          credibility / distribution / moat play</em>. The one number that
+          flips the verdict: <b>average negotiated contract value per
+          institution</b>.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ VERDICT ============ -->
+  <section id="verdict">
+    <h2><span class="num">01</span> Exec verdict (sized)</h2>
+
+    <div class="verdict-card">
+      <div class="vc-ic">⚠</div>
+      <div class="vc-body">
+        <div class="vc-k">Seat revenue alone does not pay for a dedicated track</div>
+        <p>
+          Full-GCC TAM ≈ <b>$7.6M–$12.5M/yr at 100% penetration</b> (fantasy
+          ceiling), serviceable SAM ≈ <b>$1.1M–$3.0M/yr</b>, and realistically
+          obtainable by a 10 hr/week team in 12–24 months (SOM) ≈
+          <b>$5k–$86k/yr ARR</b> — with <b>~$0 year-1 cash</b> because Bayan
+          currently gives free 1-year institutional trials. A single landed
+          pilot nets roughly <b>$1,200–$7,200/yr gross</b> (20–120 seats ×
+          ~$60 blended), <b>minus the CEO's 20% commission</b>.
+        </p>
+        <p>
+          So on seat revenue alone, B2B does not pay for a dedicated near-term
+          cash track. It is defensible as <b>priority #1 only if valued as a
+          credibility / distribution / moat play</b> — anchor logos, bulk
+          free-seat user acquisition that feeds the B2C funnel, co-marketing
+          with named institutions, and a springboard to <b>negotiated
+          site-license / CME contracts priced far above the per-seat
+          list</b> (the list price is a floor, not a ceiling).
+        </p>
+        <p>
+          The single number that flips the verdict from "strategic, small" to
+          "material revenue" is <b>average negotiated contract value per
+          institution</b> — if that is a flat site/CME deal in the tens of
+          thousands rather than 40 seats × $60, the prize is <b>10–50×
+          larger</b>. That number is unknown today and is the thing to go get.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SIZING ============ -->
+  <section id="sizing">
+    <h2><span class="num">02</span> TAM / SAM / SOM · inputs, arithmetic, sources</h2>
+
+    <p class="desc">
+      <b>Bayan documented institutional seat prices</b>
+      (<code>product-archive/08-pricing-exam-catalog-and-access-model.md</code>
+      L36-42; corroborated <code>research.md</code> L390-392):
+    </p>
+
+    <div class="data-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Segment</th>
+            <th>Price/seat/yr</th>
+            <th>Low</th>
+            <th>Base</th>
+            <th>High</th>
+            <th>Source / confidence</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Medical students</td>
+            <td class="num-cell">$35</td>
+            <td class="num-cell">45,000</td>
+            <td class="num-cell">60,000</td>
+            <td class="num-cell">75,000</td>
+            <td>Scaled from GCC medical-college counts (§3); Saudi ~27–34 schools <span class="tag-cell tag-confirm">[confirm]</span></td>
+          </tr>
+          <tr>
+            <td>Nursing students / early-career</td>
+            <td class="num-cell">$69</td>
+            <td class="num-cell">40,000</td>
+            <td class="num-cell">55,000</td>
+            <td class="num-cell">70,000</td>
+            <td>Saudi nurse workforce 243,336 (2024, verified) is upper bound; exam-active subset <span class="tag-cell tag-unverified">[unverified]</span></td>
+          </tr>
+          <tr>
+            <td>Residents / trainees</td>
+            <td class="num-cell">$99</td>
+            <td class="num-cell">30,000</td>
+            <td class="num-cell">37,000</td>
+            <td class="num-cell">45,000</td>
+            <td>Anchored on <b>verified</b> Saudi SCFHS 25,880 trainees; GCC scale-up <span class="tag-cell tag-confirm">[confirm]</span></td>
+          </tr>
+          <tr>
+            <td>Pharmacy students</td>
+            <td class="num-cell">$35</td>
+            <td class="num-cell">8,000</td>
+            <td class="num-cell">12,000</td>
+            <td class="num-cell">16,000</td>
+            <td><span class="tag-cell tag-unverified">[unverified]</span> scaled estimate</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="desc" style="margin-bottom:12px">
+      <b>Terms:</b> min 20 seats, up to 100 trial seats, 1-year institutional
+      trial, 50% off individual, invoice-based; currently <b>free 1-yr trials
+      to selected institutions</b>. (No prices invented.)
+    </p>
+
+    <div class="metric-grid" style="margin-bottom:20px">
+      <div class="metric-card m1">
+        <div class="metric-num">TAM · low</div>
+        <div class="metric-name">$7,585,000/yr</div>
+        <div class="metric-desc">123,000 seats at 100% penetration</div>
+      </div>
+      <div class="metric-card m2">
+        <div class="metric-num">TAM · base</div>
+        <div class="metric-name">$9,978,000/yr</div>
+        <div class="metric-desc">164,000 seats · blended <b>$60.8/seat</b></div>
+      </div>
+      <div class="metric-card m3">
+        <div class="metric-num">TAM · high</div>
+        <div class="metric-name">$12,470,000/yr</div>
+        <div class="metric-desc">206,000 seats at 100% penetration</div>
+      </div>
+    </div>
+
+    <p class="desc" style="margin-bottom:12px">
+      <b>SAM</b> = TAM × exam-active fraction (~30% <code>[confirm]</code>) ×
+      institution-licensable fraction (~50% <code>[confirm]</code>):
+    </p>
+
+    <div class="metric-grid" style="margin-bottom:20px">
+      <div class="metric-card m1">
+        <div class="metric-num">SAM · low</div>
+        <div class="metric-name">$1,137,750/yr</div>
+        <div class="metric-desc">30% exam-active × 50% licensable</div>
+      </div>
+      <div class="metric-card m2">
+        <div class="metric-num">SAM · base</div>
+        <div class="metric-name">$1,496,700/yr</div>
+        <div class="metric-desc">30% exam-active × 50% licensable</div>
+      </div>
+      <div class="metric-card m3">
+        <div class="metric-num">SAM · high</div>
+        <div class="metric-name">$1,870,500/yr</div>
+        <div class="metric-desc">30% exam-active × 50% licensable</div>
+      </div>
+      <div class="metric-card m4">
+        <div class="metric-num">SAM · loose sensitivity</div>
+        <div class="metric-name">$2,992,800/yr</div>
+        <div class="metric-desc">40% exam-active × 60% licensable</div>
+      </div>
+    </div>
+
+    <p class="desc" style="margin-bottom:12px">
+      <b>SOM</b> = pilots landed × avg paid seats × ~$60 blended
+      (10 hr/week team, min-20-seat 1-yr pilots, 12–24 mo):
+    </p>
+
+    <div class="metric-grid" style="margin-bottom:20px">
+      <div class="metric-card m1">
+        <div class="metric-num">SOM · low</div>
+        <div class="metric-name">$5,400/yr ARR</div>
+        <div class="metric-desc">3 pilots × 30 seats = 90</div>
+      </div>
+      <div class="metric-card m2">
+        <div class="metric-num">SOM · base</div>
+        <div class="metric-name">$21,600/yr ARR</div>
+        <div class="metric-desc">6 pilots × 60 seats = 360</div>
+      </div>
+      <div class="metric-card m3">
+        <div class="metric-num">SOM · high</div>
+        <div class="metric-name">$86,400/yr ARR</div>
+        <div class="metric-desc">12 pilots × 120 seats = 1,440</div>
+      </div>
+    </div>
+
+    <div class="callout rose">
+      <div class="c-ic">⚠</div>
+      <div class="c-body">
+        <div class="c-k">Critical</div>
+        <p>
+          Bayan's free 1-yr trial means <b>year-1 cash from pilots ≈ $0</b>;
+          ARR only lands at renewal (month 12–24), only for pilots that
+          convert.
+        </p>
+      </div>
+    </div>
+
+    <div class="provenance">
+      <b>Confidence:</b> seat <em>prices</em> = <b>confirmed (internal)</b>.
+      Seat <em>counts</em> = <b>low confidence</b>
+      (<code>[confirm]</code>/<code>[unverified]</code>); directional, not
+      precise. TAM/SAM swing ±40% on seat-pool assumptions; SOM is the most
+      robust conclusion (small under any assumption — tiny team, free pilots).
+    </div>
+  </section>
+
+  <!-- ============ INSTITUTIONS ============ -->
+  <section id="institutions">
+    <h2><span class="num">03</span> Institution + exam-volume data</h2>
+
+    <div class="data-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Figure</th>
+            <th>Value</th>
+            <th>Year</th>
+            <th>Source</th>
+            <th>Confidence</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>GCC medical colleges</td>
+            <td>27 (KSA 16, UAE 5, Bahrain 2, Oman 2, +Kuwait/Qatar)</td>
+            <td>2010</td>
+            <td>Medical Teacher multi-country study, PubMed 20218836 / 20353324</td>
+            <td>Dated — likely undercounts today</td>
+          </tr>
+          <tr>
+            <td>GCC health-professional education schools</td>
+            <td><b>139</b></td>
+            <td>2019</td>
+            <td>Al-Shamsi, PubMed 30871521</td>
+            <td><span class="tag-cell tag-confirm">[confirm]</span></td>
+          </tr>
+          <tr>
+            <td>Saudi medical schools</td>
+            <td>~27–34</td>
+            <td>2026 / 2015</td>
+            <td>edurank.org/medicine/sar; ResearchGate 283498405</td>
+            <td><span class="tag-cell tag-confirm">[confirm]</span> (ranking lists, not registry)</td>
+          </tr>
+          <tr>
+            <td>Saudi workforce (2021)</td>
+            <td>99,617 physicians · 196,795 nurses · 30,840 pharmacists</td>
+            <td>2021</td>
+            <td>Tandfonline 10.1080/28338073.2024.2378617</td>
+            <td>Verified (workforce, not exam-active)</td>
+          </tr>
+          <tr>
+            <td>Saudi nursing workforce</td>
+            <td><b>243,336</b> (106,145 Saudi)</td>
+            <td>2024</td>
+            <td>Frontiers Public Health 2026; Springer s12912-026-05438-6</td>
+            <td>Verified</td>
+          </tr>
+          <tr>
+            <td>Saudi SCFHS trainees enrolled</td>
+            <td><b>25,880</b>; >9,200 training positions</td>
+            <td>2024–25</td>
+            <td>ETHRWorld/economictimes; scfhs.org.sa</td>
+            <td>Verified</td>
+          </tr>
+          <tr>
+            <td><b>SMLE annual candidate volume</b></td>
+            <td><b>not found</b></td>
+            <td>—</td>
+            <td>SCFHS "SMLE Comprehensive Report 2025" is a ranking-methodology doc; no raw annual N</td>
+            <td><span class="tag-cell tag-unverified">[unverified]</span> — key gap</td>
+          </tr>
+          <tr>
+            <td>DHA/DOH/MOHAP (UAE), QCHP, NHRA, Kuwait MOH candidate volumes</td>
+            <td>not found</td>
+            <td>—</td>
+            <td>Authority manuals exist but no public annual counts</td>
+            <td><span class="tag-cell tag-unverified">[unverified]</span> — key gap</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout bayan">
+      <div class="c-ic">◈</div>
+      <div class="c-body">
+        <div class="c-k">Exam coverage</div>
+        <p>
+          Bayan's content covers exams spanning <b>all 6 GCC states</b>:
+          SMLE (Saudi), OEGP/OMSB (Oman), DHA GP (Dubai), DOH Abu Dhabi GP,
+          MOHAP UAE GP, DHP/QCHP Qatar GP, NHRA/BLE (Bahrain), MOH Kuwait GP;
+          nursing equivalents (OEN, SNLE, DHA, MOHAP, QCHP, BNLE); pharmacy
+          (DHA, SPLE, OMSB, MOH); postgrad boards (Arab Board, SCFHS, OMSB
+          P1/P2, MRCP(UK), ABIM).
+          <b>Coverage is broad enough that exam-fit does not constrain
+          SAM</b> — the constraint is seat price and buyer willingness, not
+          exam catalog.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPETITORS ============ -->
+  <section id="competitors">
+    <h2><span class="num">04</span> Competitors — who sells B2B med exam prep in the Gulf</h2>
+
+    <div class="data-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>Gulf exam prep?</th>
+            <th>B2B / institutional?</th>
+            <th>Public price</th>
+            <th>Source (2026 unless noted)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>GulfMedExams</b></td>
+            <td>Yes — 10–15k recall MCQs; all GCC exams</td>
+            <td><b>No public B2B</b> — B2C subs</td>
+            <td>Individual</td>
+            <td>gulfmedexams.com</td>
+          </tr>
+          <tr>
+            <td><b>StudyPrometric</b></td>
+            <td>Yes — AI Gulf-licensing prep</td>
+            <td>No public B2B</td>
+            <td>B2C</td>
+            <td>studyprometric.com</td>
+          </tr>
+          <tr>
+            <td><b>prometricmcq / SMLEREVISE / ExamCure / CanadaQBank / Academically</b></td>
+            <td>Yes — Gulf licensing</td>
+            <td>No public B2B</td>
+            <td>B2C (CanadaQBank ~$370/12mo; prometricmcq ~$79)</td>
+            <td>respective sites</td>
+          </tr>
+          <tr>
+            <td><b>AMBOSS</b></td>
+            <td>Partial — SMLE Qbank, UAEU logo</td>
+            <td><b>Yes — med-school/residency</b></td>
+            <td><b>Contact-sales, no public price</b></td>
+            <td>amboss.com/int/institutions</td>
+          </tr>
+          <tr>
+            <td><b>Lecturio / Osmosis / Medmastery</b></td>
+            <td>Generic med-ed, not Gulf-specific</td>
+            <td>Yes — institutional site licenses</td>
+            <td>Contact-sales</td>
+            <td>global players</td>
+          </tr>
+          <tr>
+            <td><b>Creaton</b></td>
+            <td>Clinical assessment/training</td>
+            <td>B2B-oriented</td>
+            <td>Not public</td>
+            <td>creaton.cc</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout amber">
+      <div class="c-ic">◆</div>
+      <div class="c-body">
+        <div class="c-k">Key competitive finding</div>
+        <p>
+          Regional incumbents are <b>B2C-only</b> — none publishes an
+          institutional/seat price. The institutional lane is <b>largely
+          uncontested regionally</b>, but that may be because <b>Gulf
+          institutions don't currently buy seat licenses</b>, not because no
+          one sells to them. The only credible institutional sellers (AMBOSS,
+          Lecturio, Osmosis) are <b>global, not Gulf-exam-specific, priced by
+          negotiation</b>. Bayan's wedge (internal positioning):
+          <b>Oman-built, Gulf-exam-specific, clinician-reviewed</b> vs foreign
+          tools that "don't fit Gulf exams."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ECONOMICS ============ -->
+  <section id="economics">
+    <h2 class="danger"><span class="num">05</span> Unit economics · seat revenue vs effort to land one institution</h2>
+
+    <div class="metric-grid" style="margin-bottom:20px">
+      <div class="metric-card m1">
+        <div class="metric-num">20 seats × $60</div>
+        <div class="metric-name">$1,200/yr gross</div>
+        <div class="metric-desc">Per pilot gross revenue</div>
+      </div>
+      <div class="metric-card m2">
+        <div class="metric-num">40 seats × $60</div>
+        <div class="metric-name">$2,400/yr gross</div>
+        <div class="metric-desc">Per pilot gross revenue</div>
+      </div>
+      <div class="metric-card m3">
+        <div class="metric-num">60 seats × $60</div>
+        <div class="metric-name">$3,600/yr gross</div>
+        <div class="metric-desc">Per pilot gross revenue</div>
+      </div>
+      <div class="metric-card m4">
+        <div class="metric-num">120 seats × $60</div>
+        <div class="metric-name">$7,200/yr gross</div>
+        <div class="metric-desc">Per pilot gross revenue</div>
+      </div>
+    </div>
+
+    <div class="callout rose">
+      <div class="c-ic">⚠</div>
+      <div class="c-body">
+        <div class="c-k">Net of CEO's 20% commission</div>
+        <p>
+          A 40–60-seat pilot nets <b>$1,920–$2,880/yr</b>
+          (<code>growth-engine-design.md</code> L62-63).
+        </p>
+      </div>
+    </div>
+
+    <div class="callout amber">
+      <div class="c-ic">⏱</div>
+      <div class="c-body">
+        <div class="c-k">Sales motion is high-touch and slow</div>
+        <p>
+          CEO-endorsed B2B motion is relationship-first — <em>"visit the
+          exhibition... make friendship first, then prepare a tailored
+          proposal for each and personally approach them"</em>
+          (<code>research.md</code> L219-222). Weeks of effort per account.
+        </p>
+      </div>
+    </div>
+
+    <div class="callout rose">
+      <div class="c-ic">⏱</div>
+      <div class="c-body">
+        <div class="c-k">Payback</div>
+        <p>
+          Free 1-yr trials → cash payback on selling effort is <b>&gt;12
+          months at best</b>, only if the pilot converts at renewal. On seat
+          revenue alone, the effort-to-revenue ratio is poor.
+        </p>
+      </div>
+    </div>
+
+    <div class="callout emerald">
+      <div class="c-ic">◆</div>
+      <div class="c-body">
+        <div class="c-k">Where the economics could work</div>
+        <p>
+          <b>(a)</b> A pilot's free seats are a <b>bulk B2C acquisition
+          channel</b> — convert even 10–20% of trial users to $69–$199/yr
+          individual subs and the pilot is worth 3–10× the seat fee;
+          <b>(b)</b> <b>negotiated flat site/CME contracts</b> above list;
+          <b>(c)</b> <b>anchor logos</b> that lower B2C CAC. None captured in
+          the seat-price model.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ UNKNOWNS ============ -->
+  <section id="unknowns">
+    <h2><span class="num">06</span> Key unknowns / <code>[confirm]</code> list</h2>
+
+    <p class="desc" style="margin-bottom:16px">
+      Ranked by impact.
+    </p>
+
+    <ul class="unknown-list">
+      <li data-num="01">
+        <b>Average negotiated contract value per institution</b>
+        <code>[confirm]</code> — the verdict-flipping number. 40 seats × $60,
+        or a flat site/CME license in the tens of thousands?
+        <span class="vflip">verdict-flipping</span>
+      </li>
+      <li data-num="02">
+        <b>Annual candidate volume per Gulf licensing exam</b>
+        <code>[unverified]</code> — not publicly published; drives the
+        exam-active fraction in SAM.
+      </li>
+      <li data-num="03">
+        <b>GCC seat pools</b> <code>[confirm]</code> — only Saudi residents
+        (25,880) and Saudi nurse workforce (243,336) are verified; the rest is
+        scaled.
+      </li>
+      <li data-num="04">
+        <b>Do Gulf institutions actually procure seat-licensed exam prep at
+        all?</b> <code>[confirm]</code> — zero regional incumbent sells B2B
+        publicly; may signal no demand.
+      </li>
+      <li data-num="05">
+        <b>Trial→paid institutional conversion rate</b>
+        <code>[unverified]</code> — Bayan has zero funnel data; every renewal
+        assumption is a guess.
+      </li>
+      <li data-num="06">
+        <b>Current count of institutions already on free trials</b>
+        <code>[confirm]</code> — internal; warm renewal targets, fastest first
+        revenue.
+      </li>
+    </ul>
+  </section>
+
+  <!-- ============ RECOMMENDATION ============ -->
+  <section id="recommendation">
+    <h2><span class="num">07</span> Recommendation · the prize + first moves</h2>
+
+    <div class="rec-card">
+      <div class="rc-k">How big is the prize</div>
+      <h3>B2B is priority #1 — the justification must be strategic, not seat cash</h3>
+      <p>
+        Direct seat revenue is <b>modest</b> — SAM ~$1–3M/yr, obtainable SOM
+        &lt;$90k/yr ARR for a 10 hr/week team, ~$0 year-1 cash. If the CEO
+        ranks B2B above B2C, the justification is <b>not</b> near-term seat
+        cash; it must be <b>strategic</b>: anchor logos + clinician/institutional
+        relationships (match the CEO's and Nasim's network and selling style),
+        <b>bulk free-seat user acquisition feeding the B2C funnel</b>, and a
+        path to <b>negotiated site-license/CME contracts</b> the per-seat list
+        floors but does not cap. Framed that way, B2B-first is coherent —
+        provided success is measured in <b>logos, converted trial-users, and
+        one lighthouse contract</b>, not seat-fee revenue.
+      </p>
+    </div>
+
+    <p class="desc" style="margin-bottom:14px">
+      <b>First 1–2 moves</b> (fits 10 hr/week, min-20-seat 1-yr pilots):
+    </p>
+
+    <div class="moves-table">
+
+      <div class="mrow">
+        <div class="mnum">#1</div>
+        <div class="mname">
+          <b>Convert the warm book first — do not prospect cold.</b> Pull the
+          list of institutions <b>already on free 1-yr trials</b> (unknown #6)
+          + the Oman/MedResearch Academy relationships, and run a
+          <b>renewal/expansion conversation</b> on the two or three warmest.
+          Only motion that produces revenue (or a real contract-value data
+          point — unknown #1) inside 12 months with near-zero selling hours.
+        </div>
+        <div class="mdone">
+          One signed lighthouse contract with a named Gulf institution.
+        </div>
+      </div>
+
+      <div class="mrow">
+        <div class="mnum">#2</div>
+        <div class="mname">
+          <b>Instrument trial-seat → B2C conversion.</b> Before scaling pilots,
+          track free institutional seats so you can prove the real payoff (B2C
+          conversions + usage), per the funnel-instrumentation gate in
+          <code>revenue-integration-strategy.md</code>. Turns the free-trial
+          model from a cost into a measurable acquisition channel and produces
+          the contract-value/conversion numbers that currently make the prize
+          unknowable.
+        </div>
+        <div class="mdone">
+          Tracked funnel + conversion data.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="callout violet" style="margin-top:20px">
+      <div class="c-ic">◆</div>
+      <div class="c-body">
+        <div class="c-k">The one piece of data that changes the answer</div>
+        <p>
+          Average <b>negotiated contract value per institution</b>
+          (unknown #1). If lighthouse deals land as flat site/CME licenses in
+          the tens of thousands rather than ~$2k seat bundles, the prize is
+          <b>10–50× the seat model</b> and B2B-first is justified on revenue
+          alone — go get that number from move #1.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROVENANCE ============ -->
+  <section id="provenance">
+    <h2 class="muted"><span class="num">08</span> Provenance</h2>
+
+    <div class="provenance">
+      Sized by a research subagent (2026-10-01) from these internal files:
+      <code>product-archive/08-pricing-exam-catalog-and-access-model.md</code>,
+      <code>research.md</code>, <code>growth-engine-design.md</code>,
+      <code>revenue-integration-strategy.md</code>,
+      <code>master-prompt2.md</code>,
+      <code>product marketing.html</code>. Skipped per guardrail:
+      <code>materials/_raw_do_not_read/</code> and all credentials files.
+      Seat <em>prices</em> confirmed from Bayan's files; all external seat-count
+      and per-exam candidate volumes are low-confidence
+      (<code>[confirm]</code>/<code>[unverified]</code>) — SMLE/Gulf annual
+      candidate N could not be sourced and is the key data gap.
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <p><span class="mark">Bayan</span> · Gulf Institutional (B2B Motion B) · Market-Sizing Memo</p>
+    <p style="margin-top:6px">
+      Internal draft · 2026-10-01 · for Hiwa/Nasim · not a CEO deliverable
+    </p>
+  </footer>
+
+</main>
+
+<script>
+/* ============ Top nav border on scroll ============ */
+const topnav = document.getElementById('topnav');
+window.addEventListener('scroll', () => {
+  topnav.classList.toggle('scrolled', window.scrollY > 20);
+}, {passive:true});
+
+/* ============ Active section highlight ============ */
+const navLinks = document.querySelectorAll('.topnav a');
+const sections = [...navLinks].map(a =>
+  document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+const navIo = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting){
+      const id = '#' + e.target.id;
+      navLinks.forEach(a => a.classList.toggle('active',
+        a.getAttribute('href') === id));
+    }
+  });
+}, {threshold:0.3, rootMargin:'-80px 0px -60% 0px'});
+
+sections.forEach(s => navIo.observe(s));
+
+/* ============ Smooth scroll ============ */
+navLinks.forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    const el = document.querySelector(id);
+    if (!el) return;
+    e.preventDefault();
+    const offset = el.getBoundingClientRect().top + window.scrollY - 70;
+    window.scrollTo({top:offset, behavior:'smooth'});
+  });
+});
+</script>
+
+</body>
+</html>

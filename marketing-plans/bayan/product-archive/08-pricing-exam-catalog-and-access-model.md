@@ -1,5 +1,3 @@
-![[deepseek_html_20261003_5a041f.html]]
-
 # 08 — Pricing, Exam Catalog & Access Model
 
 Source: **public client JS bundle** of bayan.edu.om (Next.js `_next/static/chunks`,

@@ -1,4 +1,5 @@
 ![[deepseek_html_20261003_3d3af4.html]]
+
 # Bayan — B2B / Institutional Track ("Motion B")
 
 **Status:** Internal operating doc for Hiwa + Nasim — **NOT a CEO deliverable.** Authorizes no spend, no outreach, no entitlement change. Built on `bayan-b2b-sizing-memo.md` (the sizing) and the EMPOWER Lead-to-Sale method (Session 7).

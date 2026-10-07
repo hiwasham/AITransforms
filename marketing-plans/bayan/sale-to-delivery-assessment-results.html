@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sale to Delivery — Assessment Results · Bayan Learning</title>
+<style>
+  :root{
+    --ink:#0a0d14;
+    --ink2:#0f131c;
+    --panel:#151b26;
+    --panel2:#1a2230;
+    --line:#232c3b;
+    --txt:#eef2f9;
+    --mut:#8b95a9;
+    --mut2:#5a6477;
+    --bayan:#1a4ff5;
+    --bayan2:#4d7bff;
+    --emerald:#34d399;
+    --amber:#fbbf24;
+    --gold:#eab308;
+    --rose:#f43f5e;
+    --violet:#a78bfa;
+    --cyan:#22d3ee;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);
+    color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  main{max-width:1040px;margin:0 auto;padding:0 24px 80px}
+
+  /* ============ TOP NAV ============ */
+  .topnav{
+    position:sticky;top:0;z-index:50;
+    padding:12px 24px;
+    background:linear-gradient(180deg,rgba(10,13,20,.95),rgba(10,13,20,.65) 80%,transparent);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    display:flex;gap:4px;overflow-x:auto;flex-wrap:wrap;
+    border-bottom:1px solid transparent;
+    transition:border-color .3s;
+  }
+  .topnav.scrolled{border-bottom-color:var(--line)}
+  .topnav::-webkit-scrollbar{display:none}
+  .topnav a{
+    all:unset;cursor:pointer;
+    font-size:12px;font-weight:500;
+    color:var(--mut);
+    padding:7px 12px;border-radius:8px;
+    transition:.2s;white-space:nowrap;
+  }
+  .topnav a:hover{color:#c8d2e2;background:rgba(255,255,255,.04)}
+  .topnav a.active{color:#fff;background:rgba(26,79,245,.15)}
+
+  /* ============ HEADER ============ */
+  header{
+    padding:56px 0 40px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:36px;
+  }
+  header .crumbs{
+    display:flex;align-items:center;gap:10px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    color:var(--mut2);
+    margin-bottom:20px;
+    flex-wrap:wrap;
+  }
+  header .crumbs .sep{color:var(--line)}
+  header .crumbs .here{color:var(--bayan2);font-weight:600}
+
+  header .tag{
+    display:inline-block;
+    font-size:11px;font-weight:600;
+    letter-spacing:.1em;text-transform:uppercase;
+    color:var(--rose);
+    background:rgba(244,63,94,.12);
+    border:1px solid rgba(244,63,94,.32);
+    padding:6px 12px;border-radius:8px;
+    margin-bottom:20px;
+  }
+  header h1{
+    font-size:38px;line-height:1.12;
+    letter-spacing:-.028em;font-weight:800;
+    color:#fff;margin-bottom:18px;
+    max-width:24ch;
+  }
+  header .lede{
+    font-size:15.5px;line-height:1.75;
+    color:#b8c2d2;max-width:74ch;
+  }
+  header .lede b{color:#fff;font-weight:600}
+  header .lede code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:5px;
+    color:#dfe7f4;
+  }
+
+  header .meta{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:16px 24px;
+    margin-top:28px;padding-top:24px;
+    border-top:1px dashed var(--line);
+  }
+  header .meta .m-item{display:flex;flex-direction:column;gap:3px}
+  header .meta .m-k{
+    font-size:10.5px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;
+    color:var(--mut2);
+  }
+  header .meta .m-v{
+    color:#cfd8e8;font-weight:500;
+    font-size:13.5px;
+  }
+  header .meta .m-v code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ SECTIONS ============ */
+  section{margin-bottom:56px;scroll-margin-top:80px}
+  section h2{
+    font-size:23px;line-height:1.3;
+    letter-spacing:-.02em;font-weight:700;
+    color:#fff;margin-bottom:10px;
+    display:flex;align-items:baseline;
+    gap:14px;flex-wrap:wrap;
+  }
+  section h2 .num{
+    font-size:12.5px;font-weight:700;
+    color:var(--bayan2);
+    background:rgba(26,79,245,.12);
+    border:1px solid rgba(26,79,245,.28);
+    padding:5px 10px;border-radius:7px;
+    letter-spacing:.04em;
+  }
+  section h2.danger .num{
+    color:var(--rose);
+    background:rgba(244,63,94,.12);
+    border-color:rgba(244,63,94,.3);
+  }
+  section .desc{
+    font-size:14.5px;color:var(--mut);
+    margin-bottom:22px;max-width:78ch;
+  }
+  section .desc b{color:#cfd8e8;font-weight:600}
+  section .desc code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ EXECUTIVE HEADLINE CALLOUT ============ */
+  .exec-headline{
+    padding:28px 30px;
+    border-radius:var(--radius);
+    background:linear-gradient(135deg,rgba(244,63,94,.07),rgba(251,191,36,.03) 60%,transparent);
+    border:1px solid rgba(244,63,94,.35);
+    position:relative;
+    overflow:hidden;
+    margin-bottom:22px;
+  }
+  .exec-headline::before{
+    content:"";position:absolute;
+    left:0;top:0;bottom:0;width:4px;
+    background:linear-gradient(180deg,var(--rose),var(--amber));
+  }
+  .exec-headline .eh-k{
+    font-size:11px;font-weight:700;
+    letter-spacing:.1em;text-transform:uppercase;
+    color:var(--rose);
+    margin-bottom:12px;
+  }
+  .exec-headline h3{
+    font-size:22px;line-height:1.3;
+    letter-spacing:-.02em;
+    font-weight:800;
+    color:#fff;
+    margin-bottom:16px;
+    max-width:28ch;
+  }
+  .exec-headline p{
+    font-size:14.5px;line-height:1.75;
+    color:#d8c4c8;
+    margin-bottom:12px;
+  }
+  .exec-headline p:last-child{margin-bottom:0}
+  .exec-headline p b{color:#fff;font-weight:600}
+  .exec-headline p em{font-style:italic;color:#fff}
+
+  /* ============ SCORING GAUGES ============ */
+  .gauge-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+    margin-bottom:20px;
+  }
+  .gauge{
+    padding:28px 26px 24px;
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+  }
+  .gauge::before{
+    content:"";position:absolute;
+    top:0;right:0;left:0;height:4px;
+    background:rgb(var(--gc));
+  }
+  .gauge.critical{--gc:244,63,94}
+  .gauge.warning{--gc:251,191,36}
+
+  .gauge-head{
+    display:flex;align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    margin-bottom:18px;
+    flex-wrap:wrap;
+  }
+  .gauge-label{
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--mut);
+  }
+  .gauge-rating{
+    font-family:ui-monospace,monospace;
+    font-size:10.5px;
+    font-weight:800;
+    letter-spacing:.06em;
+    padding:4px 10px;
+    border-radius:6px;
+    text-transform:uppercase;
+    background:rgba(var(--gc),.16);
+    color:rgb(var(--gc));
+    border:1px solid rgba(var(--gc),.4);
+  }
+  .gauge-value{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:52px;
+    font-weight:800;
+    letter-spacing:-.05em;
+    line-height:1;
+    color:rgb(var(--gc));
+    font-variant-numeric:tabular-nums;
+    display:flex;
+    align-items:baseline;
+    gap:6px;
+    margin-bottom:14px;
+  }
+  .gauge-value small{
+    font-size:20px;
+    color:var(--mut2);
+    font-weight:600;
+    letter-spacing:0;
+  }
+  .gauge-value .pct{
+    font-size:15px;
+    color:var(--mut2);
+    font-weight:600;
+    margin-left:4px;
+  }
+  .gauge-bar{
+    height:8px;
+    border-radius:99px;
+    background:rgba(0,0,0,.4);
+    overflow:hidden;
+    position:relative;
+    margin-bottom:14px;
+  }
+  .gauge-bar i{
+    display:block;
+    height:100%;
+    background:linear-gradient(90deg,rgba(var(--gc),.5),rgb(var(--gc)));
+    border-radius:99px;
+    box-shadow:0 0 14px -2px rgba(var(--gc),.9);
+    width:0;
+    transition:width 1.4s cubic-bezier(.2,.7,.3,1);
+  }
+  .gauge-note{
+    font-size:12.5px;
+    line-height:1.65;
+    color:var(--mut);
+  }
+  .gauge-note b{color:#fff;font-weight:600}
+
+  /* ============ TABLE ============ */
+  .table-wrap{
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow-x:auto;
+    background:var(--panel);
+  }
+  table{
+    width:100%;border-collapse:collapse;
+    min-width:560px;
+  }
+  thead th{
+    background:var(--panel2);
+    font-size:10.5px;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--mut);
+    padding:14px 18px;
+    text-align:left;
+    border-bottom:1px solid var(--line);
+    white-space:nowrap;
+  }
+  tbody td{
+    padding:14px 18px;
+    font-size:13px;
+    color:#cfd8e8;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+    line-height:1.6;
+  }
+  tbody tr:last-child td{border-bottom:none}
+  tbody tr:hover{background:rgba(255,255,255,.015)}
+  tbody td b{color:#fff;font-weight:600}
+  tbody td .num-cell{
+    font-family:ui-monospace,monospace;
+    font-size:12px;
+    font-weight:700;
+    color:var(--mut2);
+  }
+  tbody td .score-cell{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13px;
+    font-weight:700;
+    font-variant-numeric:tabular-nums;
+    white-space:nowrap;
+  }
+  tbody td .score-cell.critical{color:var(--rose)}
+  tbody td .score-cell.warning{color:var(--amber)}
+  tbody td .status-pill{
+    display:inline-block;
+    font-family:ui-monospace,monospace;
+    font-size:10.5px;
+    font-weight:700;
+    letter-spacing:.05em;
+    padding:3px 9px;
+    border-radius:6px;
+    white-space:nowrap;
+  }
+  .status-pill.critical{
+    background:rgba(244,63,94,.14);
+    color:var(--rose);
+    border:1px solid rgba(244,63,94,.32);
+  }
+  .status-pill.warning{
+    background:rgba(251,191,36,.14);
+    color:var(--amber);
+    border:1px solid rgba(251,191,36,.32);
+  }
+  .status-pill.owner{
+    background:rgba(244,63,94,.14);
+    color:var(--rose);
+    border:1px solid rgba(244,63,94,.32);
+  }
+  tbody tr.total-row td{
+    background:linear-gradient(90deg,rgba(244,63,94,.06),transparent);
+    font-weight:700;
+    border-top:2px solid rgba(244,63,94,.3);
+  }
+  tbody tr.total-row td b{color:#fff}
+
+  /* ============ STRENGTHS CALLOUT ============ */
+  .strengths-note{
+    padding:20px 24px;
+    border-radius:var(--radius);
+    background:rgba(0,0,0,.25);
+    border:1px dashed var(--line);
+    font-size:14px;
+    line-height:1.7;
+    color:var(--mut);
+    margin-top:16px;
+    position:relative;
+  }
+  .strengths-note::before{
+    content:"⊗  ";
+    color:var(--mut2);
+    font-weight:800;
+    font-size:15px;
+  }
+  .strengths-note b{color:#cfd8e8;font-weight:600}
+  .strengths-note em{font-style:italic;color:#dfe7f4}
+
+  /* ============ IMPROVEMENT CARDS ============ */
+  .improve-list{
+    display:flex;flex-direction:column;
+    gap:16px;
+  }
+  .improve{
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+  }
+  .improve::before{
+    content:"";position:absolute;
+    top:0;right:0;left:0;height:3px;
+    background:rgb(var(--ic));
+  }
+  .improve.i1{--ic:26,79,245}
+  .improve.i2{--ic:167,139,250}
+  .improve.i3{--ic:52,211,153}
+
+  .improve-head{
+    padding:20px 26px 16px;
+    display:flex;align-items:flex-start;
+    gap:16px;flex-wrap:wrap;
+    border-bottom:1px solid var(--line);
+    background:linear-gradient(90deg,rgba(var(--ic),.05),transparent);
+  }
+  .improve-num{
+    flex:0 0 42px;
+    width:42px;height:42px;
+    border-radius:11px;
+    display:grid;place-items:center;
+    font-family:ui-monospace,monospace;
+    font-size:16px;
+    font-weight:800;
+    background:rgba(var(--ic),.16);
+    color:rgb(var(--ic));
+    border:2px solid rgba(var(--ic),.4);
+  }
+  .improve-title-wrap{flex:1;min-width:200px}
+  .improve-name{
+    font-size:16px;
+    font-weight:700;
+    color:#fff;
+    letter-spacing:-.01em;
+    line-height:1.35;
+    margin-bottom:6px;
+  }
+  .improve-score{
+    font-family:ui-monospace,monospace;
+    font-size:11.5px;
+    color:rgb(var(--ic));
+    letter-spacing:.04em;
+    font-weight:600;
+  }
+  .improve-score::before{
+    content:"score · ";
+    color:var(--mut2);
+    font-weight:500;
+  }
+
+  .improve-body{
+    padding:20px 26px 22px;
+    display:flex;flex-direction:column;
+    gap:16px;
+  }
+  .improve-section .is-k{
+    font-size:10.5px;
+    font-weight:700;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    color:var(--mut2);
+    margin-bottom:8px;
+  }
+  .improve-section p{
+    font-size:13.5px;
+    line-height:1.7;
+    color:#b8c2d2;
+  }
+  .improve-section p b{color:#fff;font-weight:600}
+  .improve-section.improve-opp .is-k{color:var(--emerald)}
+  .improve-section.improve-impact .is-k{color:var(--amber)}
+
+  .opp-list{
+    list-style:none;
+    display:flex;flex-direction:column;
+    gap:8px;
+    margin-top:6px;
+  }
+  .opp-list li{
+    display:flex;gap:10px;align-items:flex-start;
+    padding:10px 14px;
+    border-radius:9px;
+    background:rgba(52,211,153,.05);
+    border:1px solid rgba(52,211,153,.2);
+    font-size:13px;
+    line-height:1.6;
+    color:#c4d4cc;
+  }
+  .opp-list li::before{
+    content:"→";
+    color:var(--emerald);
+    font-weight:700;
+    flex:0 0 auto;
+    line-height:1.6;
+  }
+
+  /* ============ OWNER DEPENDENCY ============ */
+  .owner-card{
+    padding:26px 28px 24px;
+    border-radius:var(--radius);
+    background:linear-gradient(135deg,rgba(244,63,94,.06),rgba(244,63,94,.01) 70%,transparent);
+    border:1px solid rgba(244,63,94,.3);
+    position:relative;
+    overflow:hidden;
+  }
+  .owner-card::before{
+    content:"";position:absolute;
+    left:0;top:0;bottom:0;width:4px;
+    background:var(--rose);
+  }
+  .owner-card .oc-head{
+    display:flex;align-items:center;
+    gap:12px;
+    margin-bottom:14px;
+    flex-wrap:wrap;
+  }
+  .owner-card .oc-k{
+    font-size:11px;font-weight:700;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    color:var(--rose);
+  }
+  .owner-card .oc-score{
+    font-family:ui-monospace,monospace;
+    font-size:12px;
+    font-weight:700;
+    padding:4px 10px;
+    border-radius:6px;
+    background:rgba(244,63,94,.16);
+    color:var(--rose);
+    border:1px solid rgba(244,63,94,.35);
+    letter-spacing:.02em;
+  }
+  .owner-card h4{
+    font-size:17px;
+    font-weight:700;
+    color:#fff;
+    letter-spacing:-.005em;
+    margin-bottom:10px;
+    line-height:1.4;
+  }
+  .owner-card .oc-p{
+    font-size:13.5px;
+    line-height:1.75;
+    color:#d8c4c8;
+    margin-bottom:16px;
+  }
+  .owner-card .oc-p b{color:#fff;font-weight:600}
+  .mit-k{
+    font-size:10.5px;font-weight:700;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    color:var(--emerald);
+    margin-bottom:10px;
+  }
+  .mit-list{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+  .mit-list li{
+    display:flex;gap:10px;align-items:flex-start;
+    padding:10px 14px;
+    border-radius:9px;
+    background:rgba(52,211,153,.05);
+    border:1px solid rgba(52,211,153,.2);
+    font-size:13px;
+    line-height:1.65;
+    color:#c4d4cc;
+  }
+  .mit-list li::before{
+    content:"◆";
+    color:var(--emerald);
+    font-weight:700;
+    flex:0 0 auto;
+    font-size:10px;
+    line-height:1.9;
+  }
+  .mit-list li b{color:#fff;font-weight:600}
+
+  /* ============ RECOMMENDATIONS ============ */
+  .rec-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+  }
+  .rec-card{
+    padding:26px 28px 24px;
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+  }
+  .rec-card::before{
+    content:"";position:absolute;
+    top:0;right:0;left:0;height:3px;
+    background:rgb(var(--rc));
+  }
+  .rec-card.r-high{--rc:244,63,94}
+  .rec-card.r-med{--rc:251,191,36}
+
+  .rec-k{
+    display:inline-block;
+    font-family:ui-monospace,monospace;
+    font-size:10.5px;
+    font-weight:800;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    padding:4px 10px;
+    border-radius:6px;
+    margin-bottom:14px;
+  }
+  .rec-card.r-high .rec-k{
+    background:rgba(244,63,94,.16);
+    color:var(--rose);
+    border:1px solid rgba(244,63,94,.4);
+  }
+  .rec-card.r-med .rec-k{
+    background:rgba(251,191,36,.16);
+    color:var(--amber);
+    border:1px solid rgba(251,191,36,.4);
+  }
+  .rec-name{
+    font-size:17px;
+    font-weight:700;
+    color:#fff;
+    letter-spacing:-.01em;
+    line-height:1.35;
+    margin-bottom:12px;
+  }
+  .rec-card p{
+    font-size:13.5px;
+    line-height:1.7;
+    color:#b8c2d2;
+  }
+  .rec-card p b{color:#fff;font-weight:600}
+  .rec-card ul{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    margin-top:12px;
+  }
+  .rec-card ul li{
+    font-size:13px;
+    line-height:1.65;
+    color:#b8c2d2;
+    padding-left:18px;
+    position:relative;
+  }
+  .rec-card ul li::before{
+    content:"·";
+    position:absolute;
+    left:4px;
+    top:0;
+    color:rgb(var(--rc));
+    font-weight:800;
+    font-size:16px;
+  }
+  .rec-card ul li b{color:#fff;font-weight:600}
+
+  /* ============ AI PROMPTS ============ */
+  .ai-prompts{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+  }
+  .ai-card{
+    padding:24px 26px 22px;
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+  }
+  .ai-card::before{
+    content:"";position:absolute;
+    top:0;right:0;left:0;height:3px;
+    background:rgb(var(--ac));
+  }
+  .ai-card.a-blue{--ac:26,79,245}
+  .ai-card.a-violet{--ac:167,139,250}
+
+  .ai-k{
+    display:flex;align-items:center;gap:8px;
+    font-family:ui-monospace,monospace;
+    font-size:10.5px;
+    font-weight:800;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:rgb(var(--ac));
+    margin-bottom:14px;
+  }
+  .ai-k::before{
+    content:"◆";
+    font-size:11px;
+  }
+  .ai-title{
+    font-size:16px;
+    font-weight:700;
+    color:#fff;
+    letter-spacing:-.005em;
+    line-height:1.4;
+    margin-bottom:14px;
+  }
+  .ai-body{
+    font-size:13.5px;
+    line-height:1.75;
+    color:#b8c2d2;
+  }
+  .ai-body b{color:#fff;font-weight:600}
+  .ai-body em{font-style:italic;color:#dfe7f4}
+  .ai-body code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;
+    border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ METHODOLOGY ============ */
+  .method-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+  }
+  .method-card{
+    padding:22px 24px 20px;
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+  }
+  .method-card::before{
+    content:"";position:absolute;
+    top:0;right:0;left:0;height:3px;
+    background:rgb(var(--mc));
+  }
+  .method-card.m-process{--mc:26,79,245}
+  .method-card.m-owner{--mc:167,139,250}
+
+  .method-k{
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    color:rgb(var(--mc));
+    margin-bottom:14px;
+  }
+  .method-list{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+  .method-list li{
+    display:flex;gap:12px;align-items:baseline;
+    font-size:13px;
+    line-height:1.6;
+    color:#cfd8e8;
+    padding:8px 0;
+    border-bottom:1px dashed var(--line);
+  }
+  .method-list li:last-child{border-bottom:none}
+  .method-list li .score{
+    font-family:ui-monospace,monospace;
+    font-size:14px;
+    font-weight:800;
+    color:rgb(var(--mc));
+    flex:0 0 24px;
+    text-align:center;
+    font-variant-numeric:tabular-nums;
+  }
+  .method-list li .text{
+    flex:1;
+    min-width:0;
+    color:var(--mut);
+  }
+  .method-list li .text b{color:#cfd8e8;font-weight:600}
+
+  /* ============ FOOTER ============ */
+  footer{
+    padding-top:32px;
+    margin-top:56px;
+    border-top:1px solid var(--line);
+    font-size:12.5px;
+    color:var(--mut2);
+    text-align:center;
+    line-height:1.85;
+  }
+  footer .mark{color:var(--bayan2);font-weight:600}
+  footer code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.04);
+    padding:2px 7px;
+    border-radius:5px;
+    color:#cfd8e8;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:900px){
+    .gauge-grid,
+    .rec-grid,
+    .ai-prompts,
+    .method-grid{grid-template-columns:1fr}
+  }
+  @media (max-width:820px){
+    main{padding:0 16px 60px}
+    header{padding:40px 0 30px;margin-bottom:28px}
+    header h1{font-size:26px}
+    header .lede{font-size:14.5px}
+    section{margin-bottom:44px}
+    section h2{font-size:20px}
+    .exec-headline{padding:20px 22px}
+    .exec-headline h3{font-size:18px}
+    .gauge{padding:22px 20px 20px}
+    .gauge-value{font-size:42px}
+    .gauge-value small{font-size:16px}
+    .improve-head{padding:16px 20px 14px;gap:12px}
+    .improve-num{flex:0 0 36px;width:36px;height:36px;font-size:14px}
+    .improve-name{font-size:15px}
+    .improve-body{padding:18px 20px 20px}
+    .rec-card,
+    .ai-card,
+    .method-card{padding:20px 22px 18px}
+    .topnav{padding:10px 16px}
+    .topnav a{font-size:11px;padding:6px 10px}
+  }
+  @media (max-width:480px){
+    header h1{font-size:22px}
+    .gauge-value{font-size:34px}
+    .gauge-value small{font-size:14px}
+    table{min-width:0;font-size:12px}
+    thead th,tbody td{padding:11px 12px;font-size:12px}
+    .improve-body{padding:16px 18px 18px}
+    .owner-card{padding:20px 22px 20px}
+  }
+</style>
+</head>
+<body>
+
+<nav class="topnav" id="topnav">
+  <a href="#scores">Scores</a>
+  <a href="#detailed">Detailed</a>
+  <a href="#improve">Areas</a>
+  <a href="#owner">Owner dependency</a>
+  <a href="#recs">Recommendations</a>
+  <a href="#prompts">AI prompts</a>
+  <a href="#method">Method</a>
+</nav>
+
+<main>
+
+  <!-- ============ HEADER ============ -->
+  <header>
+    <div class="crumbs">
+      <span>Bayan Learning</span>
+      <span class="sep">/</span>
+      <span>Sale-to-Delivery Assessment</span>
+      <span class="sep">/</span>
+      <span class="here">2026-10-03</span>
+    </div>
+
+    <span class="tag">Assessment results · both scores Critical</span>
+    <h1>Sale to Delivery — Assessment Results</h1>
+    <p class="lede">
+      The bridge between a signed deal and a live pilot. <b>Process Maturity
+      lands at 21%</b> and <b>Owner Independence at 0%</b>. The B2B motion is
+      currently a <b>"Concierge" model disguised as a SaaS</b> — effective for
+      learning during pilots, but not yet a scalable system.
+    </p>
+
+    <div class="meta">
+      <div class="m-item">
+        <span class="m-k">Date</span>
+        <span class="m-v">October 3, 2026</span>
+      </div>
+      <div class="m-item">
+        <span class="m-k">Product assessed</span>
+        <span class="m-v">Flagship Question Bank / Exam Prep Subscription</span>
+      </div>
+      <div class="m-item">
+        <span class="m-k">Product type</span>
+        <span class="m-v">Adaptive B2B/B2C SaaS · Medical Licensing</span>
+      </div>
+      <div class="m-item">
+        <span class="m-k">Annual revenue</span>
+        <span class="m-v">Pre-revenue · B2B pilots · $277 lifetime B2C</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ EXECUTIVE SUMMARY ============ -->
+  <section id="scores">
+    <h2 class="danger"><span class="num">01</span> Executive summary</h2>
+    <p class="desc">
+      Two headline numbers. Both land in the <b>Critical</b> band. This is
+      expected for a company with live pilots but no delivery system — the
+      point is to name the risk honestly.
+    </p>
+
+    <div class="gauge-grid">
+
+      <div class="gauge critical">
+        <div class="gauge-head">
+          <span class="gauge-label">Process Maturity</span>
+          <span class="gauge-rating">Critical gap</span>
+        </div>
+        <div class="gauge-value">
+          13<small>/63</small><span class="pct">· 21%</span>
+        </div>
+        <div class="gauge-bar"><i data-w="21"></i></div>
+        <div class="gauge-note">
+          Processes are largely <b>ad-hoc and reactive</b>. Only Contract
+          &amp; Payment Processing and Technology Integration reach a
+          mid-range score.
+        </div>
+      </div>
+
+      <div class="gauge critical">
+        <div class="gauge-head">
+          <span class="gauge-label">Owner Independence</span>
+          <span class="gauge-rating">High dependency</span>
+        </div>
+        <div class="gauge-value">
+          0<small>/45</small><span class="pct">· 0%</span>
+        </div>
+        <div class="gauge-bar"><i data-w="0"></i></div>
+        <div class="gauge-note">
+          Every step <b>requires direct CEO action</b>. Capacity caps at the
+          CEO's ~10 hr/week — not a staffing issue, a system one.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="exec-headline">
+      <div class="eh-k">⚠ The key finding</div>
+      <h3>Your B2B motion is a "Concierge" model disguised as a SaaS.</h3>
+      <p>
+        While effective for learning during pilots, the total lack of
+        automation and delegation in the <b>Sale-to-Delivery bridge</b> means
+        that scaling beyond the current handful of pilots will likely lead to a
+        <em>"Success Tax"</em> — where every new institutional win creates an
+        <b>unsustainable administrative burden on the CEO</b>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ DETAILED SCORES ============ -->
+  <section id="detailed">
+    <h2 class="danger"><span class="num">02</span> Detailed scores</h2>
+    <p class="desc">
+      Nine areas, scored 0–7 for process maturity and 0–5 for owner
+      involvement. <b>Every owner score is 0/5</b> — the CEO is responsible for
+      every step of the bridge.
+    </p>
+
+    <p class="desc" style="margin-bottom:12px"><b>Process scores</b> · 0–7 each.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:44px">#</th>
+            <th>Area</th>
+            <th style="width:80px">Score</th>
+            <th style="width:60px">Max</th>
+            <th style="width:230px">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num-cell">1</td>
+            <td><b>Contract &amp; Payment Processing</b></td>
+            <td><span class="score-cell warning">3</span></td>
+            <td class="num-cell">7</td>
+            <td><span class="status-pill warning">⚠ Needs significant improvement</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">2</td>
+            <td><b>Internal Handoff</b></td>
+            <td><span class="score-cell critical">1</span></td>
+            <td class="num-cell">7</td>
+            <td><span class="status-pill critical">● Critical gap</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">3</td>
+            <td><b>Customer Onboarding</b></td>
+            <td><span class="score-cell critical">1</span></td>
+            <td class="num-cell">7</td>
+            <td><span class="status-pill critical">● Critical gap</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">4</td>
+            <td><b>Asset &amp; Information Collection</b></td>
+            <td><span class="score-cell critical">1</span></td>
+            <td class="num-cell">7</td>
+            <td><span class="status-pill critical">● Critical gap</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">5</td>
+            <td><b>Customer Readiness Validation</b></td>
+            <td><span class="score-cell critical">1</span></td>
+            <td class="num-cell">7</td>
+            <td><span class="status-pill critical">● Critical gap</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">6</td>
+            <td><b>Expectation Setting &amp; Success Metrics</b></td>
+            <td><span class="score-cell critical">1</span></td>
+            <td class="num-cell">7</td>
+            <td><span class="status-pill critical">● Critical gap</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">7</td>
+            <td><b>Scheduling &amp; Resource Allocation</b></td>
+            <td><span class="score-cell critical">1</span></td>
+            <td class="num-cell">7</td>
+            <td><span class="status-pill critical">● Critical gap</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">8</td>
+            <td><b>Customer Communication Plan</b></td>
+            <td><span class="score-cell critical">1</span></td>
+            <td class="num-cell">7</td>
+            <td><span class="status-pill critical">● Critical gap</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">9</td>
+            <td><b>Technology &amp; Tools Integration</b></td>
+            <td><span class="score-cell warning">3</span></td>
+            <td class="num-cell">7</td>
+            <td><span class="status-pill warning">⚠ Needs significant improvement</span></td>
+          </tr>
+          <tr class="total-row">
+            <td></td>
+            <td><b>Total · applicable</b></td>
+            <td><span class="score-cell critical">13</span></td>
+            <td class="num-cell">63</td>
+            <td><span class="status-pill critical">● 21% · Critical</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="desc" style="margin-top:32px;margin-bottom:12px"><b>Owner involvement</b> · 0–5 each · lower = more owner-executed.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:44px">#</th>
+            <th>Area</th>
+            <th style="width:80px">Score</th>
+            <th style="width:60px">Max</th>
+            <th style="width:230px">Interpretation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num-cell">1</td>
+            <td><b>Contract &amp; Payment Processing</b></td>
+            <td><span class="score-cell critical">0</span></td>
+            <td class="num-cell">5</td>
+            <td><span class="status-pill owner">● Owner is responsible</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">2</td>
+            <td><b>Internal Handoff</b></td>
+            <td><span class="score-cell critical">0</span></td>
+            <td class="num-cell">5</td>
+            <td><span class="status-pill owner">● Owner is responsible</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">3</td>
+            <td><b>Customer Onboarding</b></td>
+            <td><span class="score-cell critical">0</span></td>
+            <td class="num-cell">5</td>
+            <td><span class="status-pill owner">● Owner is responsible</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">4</td>
+            <td><b>Asset &amp; Information Collection</b></td>
+            <td><span class="score-cell critical">0</span></td>
+            <td class="num-cell">5</td>
+            <td><span class="status-pill owner">● Owner is responsible</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">5</td>
+            <td><b>Customer Readiness Validation</b></td>
+            <td><span class="score-cell critical">0</span></td>
+            <td class="num-cell">5</td>
+            <td><span class="status-pill owner">● Owner is responsible</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">6</td>
+            <td><b>Expectation Setting &amp; Success Metrics</b></td>
+            <td><span class="score-cell critical">0</span></td>
+            <td class="num-cell">5</td>
+            <td><span class="status-pill owner">● Owner is responsible</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">7</td>
+            <td><b>Scheduling &amp; Resource Allocation</b></td>
+            <td><span class="score-cell critical">0</span></td>
+            <td class="num-cell">5</td>
+            <td><span class="status-pill owner">● Owner is responsible</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">8</td>
+            <td><b>Customer Communication Plan</b></td>
+            <td><span class="score-cell critical">0</span></td>
+            <td class="num-cell">5</td>
+            <td><span class="status-pill owner">● Owner is responsible</span></td>
+          </tr>
+          <tr>
+            <td class="num-cell">9</td>
+            <td><b>Technology &amp; Tools Integration</b></td>
+            <td><span class="score-cell critical">0</span></td>
+            <td class="num-cell">5</td>
+            <td><span class="status-pill owner">● Owner is responsible</span></td>
+          </tr>
+          <tr class="total-row">
+            <td></td>
+            <td><b>Total</b></td>
+            <td><span class="score-cell critical">0</span></td>
+            <td class="num-cell">45</td>
+            <td><span class="status-pill critical">● 0% · Critical</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="strengths-note">
+      <b>No areas currently score in the 5–7 range</b> for the B2B scaling
+      priority. Contract &amp; Payment Processing and Technology Integration sit
+      at <em>3/7</em> — the two highest, both amber.
+    </div>
+  </section>
+
+  <!-- ============ AREAS FOR IMPROVEMENT ============ -->
+  <section id="improve">
+    <h2><span class="num">03</span> Areas for improvement</h2>
+    <p class="desc">
+      Three highlighted areas — chosen for immediate revenue impact. Each
+      carries its own colour accent and structured improvement opportunities.
+    </p>
+
+    <div class="improve-list">
+
+      <!-- Improvement 3 -->
+      <div class="improve i1">
+        <div class="improve-head">
+          <div class="improve-num">3</div>
+          <div class="improve-title-wrap">
+            <div class="improve-name">Customer Onboarding</div>
+            <div class="improve-score">1/7</div>
+          </div>
+        </div>
+        <div class="improve-body">
+
+          <div class="improve-section">
+            <div class="is-k">Current state</div>
+            <p>
+              B2B pilots have <b>no documented sequence</b>; orientation and
+              handoff are reactive via ad-hoc emails / calls.
+            </p>
+          </div>
+
+          <div class="improve-section improve-impact">
+            <div class="is-k">Impact on business</div>
+            <p>
+              <b>High friction for institutional admins and clinicians</b>,
+              potentially leading to low engagement during the free trial —
+              which jeopardizes the conversion to paid seats.
+            </p>
+          </div>
+
+          <div class="improve-section improve-opp">
+            <div class="is-k">Improvement opportunities</div>
+            <ul class="opp-list">
+              <li>Create a <b>Pilot Welcome Kit</b> PDF or Notion page.</li>
+              <li>Standardize a <b>30-minute Orientation Webinar</b> recording to replace live calls.</li>
+              <li>Implement a simple <b>3-email automated sequence</b> for new B2B admins.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Improvement 4 -->
+      <div class="improve i2">
+        <div class="improve-head">
+          <div class="improve-num">4</div>
+          <div class="improve-title-wrap">
+            <div class="improve-name">Asset &amp; Information Collection</div>
+            <div class="improve-score">1/7</div>
+          </div>
+        </div>
+        <div class="improve-body">
+
+          <div class="improve-section">
+            <div class="is-k">Current state</div>
+            <p>
+              <b>No standardized forms.</b> Clinician lists and logos are
+              requested ad-hoc via email.
+            </p>
+          </div>
+
+          <div class="improve-section improve-impact">
+            <div class="is-k">Impact on business</div>
+            <p>
+              <b>Significant time waste in manual follow-ups</b> and increased
+              risk of data entry errors when provisioning seats.
+            </p>
+          </div>
+
+          <div class="improve-section improve-opp">
+            <div class="is-k">Improvement opportunities</div>
+            <ul class="opp-list">
+              <li>Implement a single <b>Institutional Setup Form</b> (Tally or Typeform).</li>
+              <li>Require a <b>CSV upload</b> for clinician emails to eliminate manual list handling.</li>
+              <li>Automate a <b>"Missing Info" reminder</b> for pilot participants.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Improvement 6 -->
+      <div class="improve i3">
+        <div class="improve-head">
+          <div class="improve-num">6</div>
+          <div class="improve-title-wrap">
+            <div class="improve-name">Expectation Setting &amp; Success Metrics</div>
+            <div class="improve-score">1/7</div>
+          </div>
+        </div>
+        <div class="improve-body">
+
+          <div class="improve-section">
+            <div class="is-k">Current state</div>
+            <p>
+              <b>Informal communication</b> of engagement targets. No shared
+              dashboard or milestone document.
+            </p>
+          </div>
+
+          <div class="improve-section improve-impact">
+            <div class="is-k">Impact on business</div>
+            <p>
+              Without clear, documented success criteria, the institution may
+              not <b>realize the value of the pilot</b> — making the
+              "conversion" conversation difficult at the 1-year mark.
+            </p>
+          </div>
+
+          <div class="improve-section improve-opp">
+            <div class="is-k">Improvement opportunities</div>
+            <ul class="opp-list">
+              <li>Define <b>3 key "Success Signals"</b> (e.g., 50 questions/week per user).</li>
+              <li>Create a <b>Pilot Roadmap one-pager</b> showing key dates and review points.</li>
+              <li>Send a monthly <b>Engagement Snapshot</b> to the institutional admin.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ OWNER DEPENDENCY ============ -->
+  <section id="owner">
+    <h2 class="danger"><span class="num">04</span> Owner dependency analysis</h2>
+
+    <div class="owner-card">
+      <div class="oc-head">
+        <span class="oc-k">All areas · 0/5</span>
+        <span class="oc-score">Critical dependency</span>
+      </div>
+      <h4>The CEO is the primary operator for every B2B delivery task.</h4>
+      <p class="oc-p">
+        From invoicing to manual seat provisioning in Supabase.
+        <b>Scalability is capped by the CEO's available 10 hours/week.</b>
+        If three large institutions sign pilots at once, delivery will fail
+        — or B2C growth will stall.
+      </p>
+
+      <div class="mit-k">Mitigation strategies</div>
+      <ul class="mit-list">
+        <li>
+          <b>Productize the onboarding</b> — turn the manual orientation into
+          a self-serve video / guide.
+        </li>
+        <li>
+          <b>Delegate provisioning</b> — train a VA or team member (like
+          Nasim) to handle seat setup using a documented SOP.
+        </li>
+        <li>
+          <b>Automate reporting</b> — use a basic dashboard tool to pull the
+          Supabase queries currently run manually.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ RECOMMENDATIONS ============ -->
+  <section id="recs">
+    <h2><span class="num">05</span> Strategic recommendations</h2>
+    <p class="desc">
+      Two horizons. High-priority items are immediate-impact; medium-priority
+      items protect retention and reduce future drag.
+    </p>
+
+    <div class="rec-grid">
+
+      <div class="rec-card r-high">
+        <span class="rec-k">High priority · immediate impact</span>
+        <div class="rec-name">Standardized Intake &amp; Provisioning</div>
+        <p>
+          Move from email requests to a <b>structured form</b>. This prevents
+          "chasing" information and allows you to <b>delegate the actual
+          setup</b>.
+        </p>
+      </div>
+
+      <div class="rec-card r-med">
+        <span class="rec-k">Medium priority · retention &amp; efficiency</span>
+        <div class="rec-name">B2B Success Roadmap + Automated Cadence</div>
+        <ul>
+          <li>
+            <b>B2B Success Roadmap</b> — document what "success" looks like
+            for these pilots. It turns a "free trial" into a professional
+            "partnership."
+          </li>
+          <li>
+            <b>Automated Communication Cadence</b> — set up a simple monthly
+            check-in email to admins to keep the pilot top-of-mind without
+            manual effort.
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ AI PROMPT SUGGESTIONS ============ -->
+  <section id="prompts">
+    <h2><span class="num">06</span> AI prompt suggestions</h2>
+    <p class="desc">
+      Prompts for the assistant (Maya) to prompt proactively in future
+      conversations — one per critical gap.
+    </p>
+
+    <div class="ai-prompts">
+
+      <div class="ai-card a-blue">
+        <div class="ai-k">Prompt · B2B onboarding</div>
+        <div class="ai-title">Suggest onboarding frameworks proactively</div>
+        <div class="ai-body">
+          The business currently uses reactive approaches for institutional
+          pilots. In future conversations, <b>Maya should proactively suggest
+          onboarding frameworks</b>, specifically focusing on
+          <em>"Pilot-to-Paid" conversion triggers</em>. When the user mentions
+          a new B2B lead, Maya should offer a <b>"Welcome Kit" template</b> and
+          a <b>standardized clinician orientation checklist</b>.
+        </div>
+      </div>
+
+      <div class="ai-card a-violet">
+        <div class="ai-k">Prompt · asset collection</div>
+        <div class="ai-title">Prompt for a Master Intake Form</div>
+        <div class="ai-body">
+          Current collection is manual and email-based. <b>Maya should suggest
+          building a "Master Intake Form"</b> that captures clinician lists,
+          logos, and exam targets in one go. If the user discusses pilot setup,
+          Maya should prompt them to define the <b>mandatory fields</b> needed
+          to eliminate back-and-forth communication.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ METHODOLOGY ============ -->
+  <section id="method">
+    <h2><span class="num">07</span> Scoring methodology</h2>
+    <p class="desc">
+      The reference bands behind every score in this assessment. Kept visible
+      so the numbers can be checked, not taken on faith.
+    </p>
+
+    <div class="method-grid">
+
+      <div class="method-card m-process">
+        <div class="method-k">Process scores · 0–7</div>
+        <ul class="method-list">
+          <li><span class="score">7</span><span class="text"><b>Excellent</b> — systems and processes in place</span></li>
+          <li><span class="score">5</span><span class="text"><b>Good</b> — systems that need minor improvements</span></li>
+          <li><span class="score">3</span><span class="text"><b>Basic</b> — systems exist but need significant improvement</span></li>
+          <li><span class="score">1</span><span class="text"><b>Minimal</b> — or ad-hoc approach</span></li>
+          <li><span class="score">0</span><span class="text"><b>None</b> — no systems exist, or not applicable</span></li>
+        </ul>
+      </div>
+
+      <div class="method-card m-owner">
+        <div class="method-k">Owner involvement · 0–5</div>
+        <ul class="method-list">
+          <li><span class="score">5</span><span class="text"><b>Not at all</b> — informed only</span></li>
+          <li><span class="score">3</span><span class="text"><b>Consulted</b> — provides input but not execution</span></li>
+          <li><span class="score">1</span><span class="text"><b>Accountable</b> — oversees and ensures standards</span></li>
+          <li><span class="score">0</span><span class="text"><b>Responsible</b> — personally executes</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <p><span class="mark">Bayan Learning</span> · Sale to Delivery — Assessment Results</p>
+    <p style="margin-top:6px">
+      Conducted 2026-10-03 · framework: Sale to Delivery Assessment v1.0
+    </p>
+  </footer>
+
+</main>
+
+<script>
+/* ============ Top nav border on scroll ============ */
+const topnav = document.getElementById('topnav');
+window.addEventListener('scroll', () => {
+  topnav.classList.toggle('scrolled', window.scrollY > 20);
+}, {passive:true});
+
+/* ============ Active section highlight ============ */
+const navLinks = document.querySelectorAll('.topnav a');
+const sections = [...navLinks].map(a =>
+  document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+const navIo = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting){
+      const id = '#' + e.target.id;
+      navLinks.forEach(a => a.classList.toggle('active',
+        a.getAttribute('href') === id));
+    }
+  });
+}, {threshold:0.3, rootMargin:'-80px 0px -60% 0px'});
+
+sections.forEach(s => navIo.observe(s));
+
+/* ============ Smooth scroll ============ */
+navLinks.forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    const el = document.querySelector(id);
+    if (!el) return;
+    e.preventDefault();
+    const offset = el.getBoundingClientRect().top + window.scrollY - 70;
+    window.scrollTo({top:offset, behavior:'smooth'});
+  });
+});
+
+/* ============ Animate bars when in view ============ */
+const barIo = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting){
+      e.target.style.width = e.target.dataset.w + '%';
+      barIo.unobserve(e.target);
+    }
+  });
+}, {threshold:0.3});
+
+document.querySelectorAll('.gauge-bar i').forEach(el => {
+  barIo.observe(el);
+});
+</script>
+
+</body>
+</html>

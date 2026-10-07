@@ -1,4 +1,3 @@
-![[deepseek_html_20261003_6ccf12.html]]
 # 09 — Clinical Tools, Calculators & Drug Reference
 
 Source: live learner-app UI (`/tools`, `/tools/calculator`), captured

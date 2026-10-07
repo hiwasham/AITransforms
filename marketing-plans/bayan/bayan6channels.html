@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Magister Marketing — Autonomous AI Marketing Team</title>
+<style>
+  :root{
+    --ink:#0a0d14;
+    --ink2:#0f131c;
+    --panel:#151b26;
+    --panel2:#1a2230;
+    --line:#232c3b;
+    --txt:#eef2f9;
+    --mut:#8b95a9;
+    --mut2:#5a6477;
+    --bayan:#1a4ff5;
+    --bayan2:#4d7bff;
+    --emerald:#34d399;
+    --amber:#fbbf24;
+    --rose:#f43f5e;
+    --violet:#a78bfa;
+    --cyan:#22d3ee;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);
+    color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ============ LAYOUT ============ */
+  .app-shell{
+    display:flex;
+    min-height:100vh;
+    width:100%;
+    overflow:hidden;
+  }
+
+  /* ============ SIDEBAR ============ */
+  .sidebar{
+    width:220px;
+    flex-shrink:0;
+    background:var(--ink2);
+    border-right:1px solid var(--line);
+    display:flex;
+    flex-direction:column;
+    padding:20px 0;
+  }
+  .sidebar .brand{
+    display:flex;align-items:center;gap:10px;
+    padding:0 20px 20px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:20px;
+  }
+  .sidebar .brand .logo{
+    width:28px;height:28px;
+    border-radius:8px;
+    background:linear-gradient(135deg,var(--bayan),var(--violet));
+    display:grid;place-items:center;
+    font-weight:800;font-size:13px;color:#fff;
+  }
+  .sidebar .brand .name{
+    font-size:14px;font-weight:700;
+    color:#fff;letter-spacing:.04em;
+    text-transform:uppercase;
+  }
+  .sidebar .nav-item{
+    display:flex;align-items:center;gap:12px;
+    padding:10px 20px;
+    font-size:13px;font-weight:500;
+    color:var(--mut);
+    cursor:pointer;
+    transition:.2s;
+    border-left:3px solid transparent;
+  }
+  .sidebar .nav-item:hover{
+    color:#c8d2e2;
+    background:rgba(255,255,255,.03);
+  }
+  .sidebar .nav-item.active{
+    color:#fff;
+    background:rgba(26,79,245,.1);
+    border-left-color:var(--bayan2);
+  }
+  .sidebar .nav-item .ic{
+    width:18px;height:18px;
+    flex-shrink:0;
+    opacity:.7;
+  }
+  .sidebar .nav-spacer{flex:1}
+
+  /* ============ MAIN ============ */
+  .main-area{
+    flex:1;
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+  }
+  .main-scroll{
+    flex:1;
+    overflow-y:auto;
+    padding:32px 40px 80px;
+  }
+  .main-scroll::-webkit-scrollbar{width:8px}
+  .main-scroll::-webkit-scrollbar-track{background:transparent}
+  .main-scroll::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
+
+  /* ============ HEADER ============ */
+  .page-header{
+    margin-bottom:36px;
+    padding-bottom:28px;
+    border-bottom:1px solid var(--line);
+  }
+  .page-header .crumbs{
+    display:flex;align-items:center;gap:10px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    color:var(--mut2);
+    margin-bottom:16px;
+    flex-wrap:wrap;
+  }
+  .page-header .crumbs .sep{color:var(--line)}
+  .page-header .crumbs .here{color:var(--bayan2);font-weight:600}
+
+  .page-header .tag{
+    display:inline-flex;align-items:center;gap:9px;
+    font-size:11px;font-weight:600;
+    letter-spacing:.1em;text-transform:uppercase;
+    color:var(--emerald);
+    background:rgba(52,211,153,.12);
+    border:1px solid rgba(52,211,153,.32);
+    padding:6px 12px;border-radius:8px;
+    margin-bottom:18px;
+  }
+  .page-header .tag::before{content:"◆";font-size:11px}
+
+  .page-header h1{
+    font-size:30px;line-height:1.15;
+    letter-spacing:-.028em;font-weight:800;
+    color:#fff;margin-bottom:14px;
+  }
+  .page-header .lede{
+    font-size:14.5px;line-height:1.75;
+    color:#b8c2d2;max-width:74ch;
+  }
+  .page-header .lede b{color:#fff;font-weight:600}
+  .page-header .lede code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:5px;
+    color:#dfe7f4;
+  }
+
+  /* ============ SECTION ============ */
+  .section{
+    margin-bottom:44px;
+    scroll-margin-top:80px;
+  }
+  .section h2{
+    font-size:20px;line-height:1.3;
+    letter-spacing:-.02em;font-weight:700;
+    color:#fff;margin-bottom:10px;
+    display:flex;align-items:baseline;
+    gap:14px;flex-wrap:wrap;
+  }
+  .section h2 .num{
+    font-size:12px;font-weight:700;
+    color:var(--bayan2);
+    background:rgba(26,79,245,.12);
+    border:1px solid rgba(26,79,245,.28);
+    padding:4px 9px;border-radius:7px;
+    letter-spacing:.04em;
+  }
+  .section .desc{
+    font-size:14px;color:var(--mut);
+    margin-bottom:20px;max-width:78ch;
+  }
+  .section .desc b{color:#cfd8e8;font-weight:600}
+  .section .desc em{font-style:italic;color:#dfe7f4}
+  .section .desc code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ AUDIT CHANNEL CARDS ============ */
+  .channel-list{
+    display:flex;flex-direction:column;
+    gap:10px;
+  }
+  .channel-card{
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    overflow:hidden;
+    transition:.25s;
+  }
+  .channel-card:hover{
+    border-color:rgba(26,79,245,.4);
+  }
+  .channel-card.agent-highlight{
+    border-color:rgba(26,79,245,.5);
+    background:linear-gradient(135deg,rgba(26,79,245,.05),transparent 60%);
+  }
+  .channel-card .ch-head{
+    display:flex;align-items:center;gap:10px;
+    padding:14px 18px;
+    cursor:pointer;
+    transition:.2s;
+  }
+  .channel-card .ch-head:hover{
+    background:rgba(255,255,255,.02);
+  }
+  .channel-card .ch-chev{
+    width:14px;height:14px;
+    flex-shrink:0;
+    color:var(--mut);
+    transition:transform .2s;
+  }
+  .channel-card .ch-name{
+    flex:1;
+    font-size:14px;font-weight:600;
+    color:#fff;
+  }
+  .channel-card .ch-score{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    color:var(--mut);
+    display:flex;align-items:center;gap:4px;
+  }
+  .channel-card .ch-score .arrow{color:var(--mut2)}
+  .channel-card .ch-score .target{color:var(--bayan2);font-weight:700}
+  .channel-card .ch-bar{
+    height:6px;
+    background:var(--ink);
+    border-radius:3px;
+    margin:0 18px 12px;
+    overflow:hidden;
+    position:relative;
+  }
+  .channel-card .ch-bar .fill-bg{
+    position:absolute;inset:0 auto 0 0;
+    background:rgba(26,79,245,.2);
+    border-radius:3px;
+    transition:width .5s;
+  }
+  .channel-card .ch-bar .fill{
+    position:absolute;inset:0 auto 0 0;
+    background:linear-gradient(90deg,var(--bayan),var(--bayan2));
+    border-radius:3px;
+    transition:width .5s;
+  }
+  .channel-card .ch-note{
+    padding:0 18px 14px;
+    font-size:12.5px;
+    line-height:1.55;
+    color:var(--mut);
+  }
+  .channel-card .ch-body{
+    padding:0 18px 18px;
+    border-top:1px solid var(--line);
+    margin-top:0;
+  }
+  .channel-card .ch-body-inner{
+    padding-top:16px;
+  }
+
+  /* ============ CALLOUTS ============ */
+  .callout{
+    padding:16px 20px;
+    border-radius:11px;
+    display:flex;gap:14px;align-items:flex-start;
+    position:relative;
+    overflow:hidden;
+    margin-bottom:14px;
+  }
+  .callout::before{
+    content:"";position:absolute;
+    left:0;top:0;bottom:0;width:3px;
+  }
+  .callout.emerald{background:rgba(52,211,153,.05);border:1px solid rgba(52,211,153,.3)}
+  .callout.emerald::before{background:var(--emerald)}
+  .callout.amber{background:rgba(251,191,36,.05);border:1px solid rgba(251,191,36,.3)}
+  .callout.amber::before{background:var(--amber)}
+  .callout.rose{background:rgba(244,63,94,.05);border:1px solid rgba(244,63,94,.3)}
+  .callout.rose::before{background:var(--rose)}
+  .callout.bayan{background:rgba(26,79,245,.05);border:1px solid rgba(26,79,245,.3)}
+  .callout.bayan::before{background:var(--bayan2)}
+  .callout.violet{background:rgba(167,139,250,.05);border:1px solid rgba(167,139,250,.3)}
+  .callout.violet::before{background:var(--violet)}
+
+  .callout .c-ic{
+    flex:0 0 32px;width:32px;height:32px;
+    border-radius:9px;
+    display:grid;place-items:center;
+    font-size:14px;font-weight:800;
+  }
+  .callout.emerald .c-ic{background:rgba(52,211,153,.15);color:var(--emerald);border:1px solid rgba(52,211,153,.35)}
+  .callout.amber .c-ic{background:rgba(251,191,36,.15);color:var(--amber);border:1px solid rgba(251,191,36,.35)}
+  .callout.rose .c-ic{background:rgba(244,63,94,.15);color:var(--rose);border:1px solid rgba(244,63,94,.35)}
+  .callout.bayan .c-ic{background:rgba(26,79,245,.15);color:var(--bayan2);border:1px solid rgba(26,79,245,.35)}
+  .callout.violet .c-ic{background:rgba(167,139,250,.15);color:var(--violet);border:1px solid rgba(167,139,250,.35)}
+
+  .callout .c-body{flex:1;min-width:0}
+  .callout .c-k{
+    font-size:10.5px;font-weight:700;
+    letter-spacing:.09em;text-transform:uppercase;
+    margin-bottom:6px;
+  }
+  .callout.emerald .c-k{color:var(--emerald)}
+  .callout.amber .c-k{color:var(--amber)}
+  .callout.rose .c-k{color:var(--rose)}
+  .callout.bayan .c-k{color:var(--bayan2)}
+  .callout.violet .c-k{color:var(--violet)}
+  .callout .c-body p{
+    font-size:12.5px;
+    line-height:1.6;
+    color:#c4d4cc;
+    margin:0;
+  }
+  .callout .c-body p + p{margin-top:8px}
+  .callout .c-body p b{color:#fff;font-weight:600}
+  .callout .c-body p em{font-style:italic;color:#dfe7f4;}
+  .callout .c-body p code{
+    font-family:ui-monospace,monospace;
+    font-size:11.5px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ METRIC GRID ============ */
+  .metric-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:12px;
+  }
+  .metric-card{
+    padding:18px 18px 16px;
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+    transition:.25s;
+  }
+  .metric-card::before{
+    content:"";position:absolute;
+    top:0;right:0;left:0;height:3px;
+    background:rgb(var(--mc));
+  }
+  .metric-card:hover{
+    border-color:rgba(var(--mc),.45);
+    transform:translateY(-2px);
+  }
+  .metric-card.m1{--mc:26,79,245}
+  .metric-card.m2{--mc:52,211,153}
+  .metric-card.m3{--mc:167,139,250}
+  .metric-card.m4{--mc:251,191,36}
+  .metric-card.m5{--mc:34,211,238}
+  .metric-card.m6{--mc:244,63,94}
+
+  .metric-num{
+    font-family:ui-monospace,monospace;
+    font-size:10.5px;
+    font-weight:800;
+    letter-spacing:.08em;
+    padding:3px 8px;
+    border-radius:5px;
+    background:rgba(var(--mc),.15);
+    color:rgb(var(--mc));
+    border:1px solid rgba(var(--mc),.34);
+    display:inline-block;
+    margin-bottom:12px;
+  }
+  .metric-name{
+    font-size:14px;
+    font-weight:700;
+    color:#fff;
+    letter-spacing:-.01em;
+    line-height:1.3;
+    margin-bottom:8px;
+  }
+  .metric-desc{
+    font-size:12px;
+    line-height:1.6;
+    color:#b8c2d2;
+  }
+  .metric-desc b{color:#fff;font-weight:600}
+  .metric-desc em{font-style:italic;color:#dfe7f4;}
+
+  /* ============ DATA TABLE ============ */
+  .data-table{
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    overflow-x:auto;
+    margin-bottom:16px;
+  }
+  table{
+    width:100%;border-collapse:collapse;
+    min-width:600px;
+  }
+  table thead th{
+    background:var(--panel2);
+    font-size:10.5px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;
+    color:var(--mut);
+    padding:12px 16px;
+    text-align:left;
+    border-bottom:1px solid var(--line);
+    white-space:nowrap;
+  }
+  table tbody td{
+    padding:14px 16px;
+    font-size:12.5px;
+    color:#cfd8e8;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+    line-height:1.55;
+  }
+  table tbody tr:last-child td{border-bottom:none}
+  table tbody tr:hover{background:rgba(255,255,255,.015)}
+  table td b{color:#fff;font-weight:600}
+  table td code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:11.5px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+  table .num-cell{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    color:var(--cyan);
+    font-weight:600;
+    text-align:right;
+    white-space:nowrap;
+  }
+  table .tag-cell{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:10.5px;
+    font-weight:600;
+    letter-spacing:.04em;
+    padding:3px 8px;
+    border-radius:5px;
+    display:inline-block;
+    white-space:nowrap;
+  }
+  table .tag-verified{background:rgba(52,211,153,.14);color:var(--emerald);border:1px solid rgba(52,211,153,.3)}
+  table .tag-confirm{background:rgba(251,191,36,.14);color:var(--amber);border:1px solid rgba(251,191,36,.3)}
+  table .tag-unverified{background:rgba(244,63,94,.14);color:var(--rose);border:1px solid rgba(244,63,94,.3)}
+
+  /* ============ STATUS PILLS ============ */
+  .status-pill{
+    display:inline-flex;align-items:center;gap:4px;
+    padding:3px 9px;
+    border-radius:999px;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.03em;
+    white-space:nowrap;
+  }
+  .status-pass{background:rgba(52,211,153,.15);color:var(--emerald);border:1px solid rgba(52,211,153,.3)}
+  .status-fail{background:rgba(244,63,94,.15);color:var(--rose);border:1px solid rgba(244,63,94,.3)}
+  .status-warn{background:rgba(251,191,36,.15);color:var(--amber);border:1px solid rgba(251,191,36,.3)}
+  .status-agent{background:rgba(26,79,245,.15);color:var(--bayan2);border:1px solid rgba(26,79,245,.3)}
+  .status-good{background:rgba(52,211,153,.15);color:var(--emerald)}
+  .status-poor{background:rgba(244,63,94,.15);color:var(--rose)}
+
+  /* ============ CHECKLIST ============ */
+  .checklist{
+    display:flex;flex-direction:column;
+  }
+  .checklist .check-row{
+    display:flex;align-items:center;gap:10px;
+    padding:8px 0;
+    border-bottom:1px solid rgba(255,255,255,.05);
+    font-size:12.5px;
+  }
+  .checklist .check-row:last-child{border-bottom:none}
+  .checklist .check-label{flex:1;color:#cfd8e8}
+
+  /* ============ OPPORTUNITY LIST ============ */
+  .opp-list{
+    list-style:none;
+    display:flex;flex-direction:column;
+    gap:8px;
+    margin-top:6px;
+  }
+  .opp-list li{
+    display:flex;gap:10px;
+    font-size:12.5px;
+    line-height:1.5;
+    color:#cfd8e8;
+  }
+  .opp-list li .x{
+    color:var(--rose);
+    font-weight:700;
+    flex-shrink:0;
+    margin-top:1px;
+  }
+
+  /* ============ DASHED CARD ============ */
+  .dashed-card{
+    padding:16px 18px;
+    border-radius:11px;
+    border:1px dashed rgba(255,255,255,.15);
+    background:rgba(0,0,0,.2);
+    margin-bottom:12px;
+  }
+  .dashed-card .dc-t{
+    font-size:13.5px;
+    font-weight:700;
+    color:#fff;
+    margin-bottom:6px;
+  }
+  .dashed-card .dc-d{
+    font-size:12.5px;
+    line-height:1.55;
+    color:var(--mut);
+  }
+
+  /* ============ SOCIAL ACCOUNT CARD ============ */
+  .social-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:10px;
+    margin-bottom:14px;
+  }
+  .social-card{
+    display:flex;align-items:center;gap:12px;
+    padding:12px 14px;
+    border-radius:11px;
+    background:var(--panel);
+    border:1px solid rgba(26,79,245,.4);
+    transition:.2s;
+  }
+  .social-card:hover{
+    transform:translateY(-2px);
+    border-color:rgba(26,79,245,.6);
+  }
+  .social-card .sc-ic{
+    width:32px;height:32px;
+    border-radius:8px;
+    background:var(--ink);
+    border:1px solid var(--line);
+    display:grid;place-items:center;
+    font-size:13px;font-weight:700;
+    color:var(--mut);
+    flex-shrink:0;
+  }
+  .social-card .sc-body{flex:1;min-width:0}
+  .social-card .sc-name{
+    display:flex;align-items:center;justify-content:space-between;gap:8px;
+  }
+  .social-card .sc-name span:first-child{
+    font-size:13px;font-weight:600;color:#fff;
+    truncate:ellipsis;overflow:hidden;white-space:nowrap;
+  }
+  .social-card .sc-name .found{
+    font-size:10px;font-weight:700;
+    color:var(--bayan2);
+    text-transform:uppercase;
+    letter-spacing:.05em;
+    flex-shrink:0;
+  }
+  .social-card .sc-sub{
+    font-size:11.5px;
+    color:var(--mut);
+    margin-top:2px;
+    truncate:ellipsis;overflow:hidden;white-space:nowrap;
+  }
+
+  /* ============ WORKFLOW TAGS ============ */
+  .workflow-tags{
+    display:flex;flex-wrap:wrap;gap:8px;
+    margin-top:10px;
+  }
+  .workflow-tag{
+    display:inline-flex;align-items:center;gap:6px;
+    padding:6px 11px;
+    border-radius:8px;
+    background:#f4f3ef;
+    border:1px solid rgba(0,0,0,.06);
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:11.5px;
+    color:#44423a;
+    position:relative;
+    cursor:default;
+  }
+  .workflow-tag .dot{
+    width:6px;height:6px;border-radius:50%;
+    background:var(--emerald);
+    flex-shrink:0;
+  }
+
+  /* ============ SCORE HEADER ============ */
+  .score-header{
+    display:flex;flex-wrap:wrap;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:12px;
+    padding:14px 18px;
+    border-radius:11px;
+    background:var(--panel2);
+    border:1px solid var(--line);
+    margin-bottom:14px;
+  }
+  .score-header .big-score{
+    display:flex;align-items:baseline;gap:8px;
+  }
+  .score-header .big-score .num{
+    font-size:28px;font-weight:800;
+    color:#fff;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    letter-spacing:-.02em;
+  }
+  .score-header .big-score .den{
+    font-size:13px;color:var(--mut);
+  }
+  .score-header .pass-fail{
+    font-size:12px;color:var(--mut);
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+
+  /* ============ SUB SECTION LABEL ============ */
+  .sub-label{
+    font-size:10.5px;font-weight:700;
+    letter-spacing:.14em;text-transform:uppercase;
+    color:var(--mut2);
+    margin-bottom:8px;
+    margin-top:16px;
+  }
+  .sub-label.emerald{color:var(--emerald)}
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:1000px){
+    .sidebar{width:64px;padding:16px 0}
+    .sidebar .brand{padding:0 0 16px;justify-content:center}
+    .sidebar .brand .name{display:none}
+    .sidebar .nav-item{padding:10px 0;justify-content:center}
+    .sidebar .nav-item .label{display:none}
+    .main-scroll{padding:24px 20px 60px}
+  }
+  @media (max-width:640px){
+    .main-scroll{padding:20px 14px 50px}
+    .page-header h1{font-size:22px}
+    .page-header .lede{font-size:13.5px}
+    .section h2{font-size:18px}
+    .metric-grid{grid-template-columns:1fr}
+    table{min-width:520px}
+    table thead th,table tbody td{padding:10px 12px;font-size:12px}
+    .channel-card .ch-head{padding:12px 14px}
+    .channel-card .ch-note{padding:0 14px 12px}
+    .channel-card .ch-body{padding:0 14px 14px}
+    .social-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="app-shell">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">M</div>
+      <div class="name">Magister</div>
+    </div>
+    <div class="nav-item active">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2"></path></svg>
+      <span class="label">Assets</span>
+    </div>
+    <div class="nav-item">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-5"></path><path d="M15 8V2"></path><path d="M17 8a1 1 0 0 1 1 1v4a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1z"></path><path d="M9 8V2"></path></svg>
+      <span class="label">Integrations</span>
+    </div>
+    <div class="nav-item">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="8" x="3" y="3" rx="2"></rect><path d="M7 11v4a2 2 0 0 0 2 2h4"></path><rect width="8" height="8" x="13" y="13" rx="2"></rect></svg>
+      <span class="label">Workflows</span>
+    </div>
+    <div class="nav-item">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+      <span class="label">Permissions</span>
+    </div>
+    <div class="nav-item">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
+      <span class="label">Skills</span>
+    </div>
+    <div class="nav-item">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+      <span class="label">Email</span>
+    </div>
+    <div class="nav-item">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+      <span class="label">Browser</span>
+    </div>
+    <div class="nav-spacer"></div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <div class="main-area">
+    <div class="main-scroll">
+
+      <!-- ============ HEADER ============ -->
+      <header class="page-header">
+        <div class="crumbs">
+          <span>Magister</span>
+          <span class="sep">/</span>
+          <span>Audit</span>
+          <span class="sep">/</span>
+          <span class="here">Bayan</span>
+        </div>
+        <span class="tag">Free AI marketing audit</span>
+        <h1>Magister Marketing — Your Autonomous AI Marketing Agent</h1>
+        <p class="lede">
+          Enter your website and Magister starts with a <b>free AI marketing
+          audit</b>, then a dedicated agent writes, audits, and ships your
+          marketing across SEO, content, ads, and social.
+        </p>
+      </header>
+
+      <!-- ============ CHANNEL LIST ============ -->
+      <section class="section">
+        <h2><span class="num">01</span> Audit channels</h2>
+        <p class="desc">
+          Each channel is scored, gaps are identified, and Magister shows
+          how it closes them.
+        </p>
+
+        <div class="channel-list">
+
+          <!-- ===== AI Visibility ===== -->
+          <div class="channel-card agent-highlight">
+            <div class="ch-head">
+              <svg class="ch-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+              <span class="ch-name">AI Visibility</span>
+              <span class="ch-score">10 <span class="arrow">→</span> <span class="target">42</span></span>
+            </div>
+            <div class="ch-bar">
+              <span class="fill-bg" style="width:42%"></span>
+              <span class="fill" style="width:10%"></span>
+            </div>
+            <p class="ch-note">Claude did not mention Edu in any of three searches about ABG courses, Gulf question banks, or Bayan's OMSB preparation.</p>
+            <div class="ch-body">
+              <div class="ch-body-inner">
+                <div class="callout bayan">
+                  <div class="c-ic">?</div>
+                  <div class="c-body">
+                    <div class="c-k">This audit needs to be rerun to attach AI visibility data.</div>
+                  </div>
+                </div>
+                <div class="sub-label emerald">How Magister closes the gap</div>
+                <p class="desc" style="margin-bottom:12px;font-size:12.5px;color:#c4d4cc">
+                  Create clear pages answering each question directly, with course details, exam coverage, and learner evidence. This helps doctors, nurses, and students find and trust Edu before choosing exam preparation.
+                </p>
+                <div class="sub-label" style="margin-top:12px">Workflows we'll run</div>
+                <div class="workflow-tags">
+                  <span class="workflow-tag"><span class="dot"></span>AI Search Optimization</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== SEO ===== -->
+          <div class="channel-card">
+            <div class="ch-head">
+              <svg class="ch-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+              <span class="ch-name">SEO</span>
+              <span class="ch-score">0 <span class="arrow">→</span> <span class="target">28</span></span>
+            </div>
+            <div class="ch-bar">
+              <span class="fill-bg" style="width:28%"></span>
+              <span class="fill" style="width:0%"></span>
+            </div>
+            <p class="ch-note">Edu ranks in the top 100 for 0 of 10 target searches, including terms with up to 170 monthly searches.</p>
+            <div class="ch-body">
+              <div class="ch-body-inner">
+
+                <div class="sub-label">Page speed · Core Web Vitals</div>
+                <div class="metric-grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:12px">
+                  <div class="metric-card m6" style="padding:14px">
+                    <div class="metric-num">LCP · load</div>
+                    <div class="metric-name" style="font-size:20px">5.0s</div>
+                    <div class="metric-desc"><span class="status-pill status-poor">poor</span></div>
+                  </div>
+                  <div class="metric-card m2" style="padding:14px">
+                    <div class="metric-num">CLS · shift</div>
+                    <div class="metric-name" style="font-size:20px">0</div>
+                    <div class="metric-desc"><span class="status-pill status-good">good</span></div>
+                  </div>
+                  <div class="metric-card m4" style="padding:14px">
+                    <div class="metric-num">Lighthouse</div>
+                    <div class="metric-name" style="font-size:20px">71/100</div>
+                    <div class="metric-desc"><span class="status-pill status-warn">needs work</span></div>
+                  </div>
+                </div>
+                <p style="font-size:11px;color:var(--mut2);margin-bottom:14px">
+                  Lab test only — site has too little traffic for real-user Chrome data
+                </p>
+
+                <div class="sub-label">High-intent keywords · your position</div>
+                <div class="data-table">
+                  <table>
+                    <thead>
+                      <tr><th>Keyword</th><th style="text-align:right">Position</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>medical board exam prep</td><td style="text-align:right"><span class="status-pill status-poor">not ranking</span></td></tr>
+                      <tr><td>medical exam question bank</td><td style="text-align:right"><span class="status-pill status-poor">not ranking</span></td></tr>
+                      <tr><td>abim question bank</td><td style="text-align:right"><span class="status-pill status-poor">not ranking</span></td></tr>
+                      <tr><td>usmle question bank</td><td style="text-align:right"><span class="status-pill status-poor">not ranking</span></td></tr>
+                      <tr><td>arab board exam questions</td><td style="text-align:right"><span class="status-pill status-poor">not ranking</span></td></tr>
+                      <tr><td>arab board internal medicine mcq</td><td style="text-align:right"><span class="status-pill status-poor">not ranking</span></td></tr>
+                      <tr><td>mrcp part 1 sample questions</td><td style="text-align:right"><span class="status-pill status-poor">not ranking</span></td></tr>
+                      <tr><td>dha exam preparation</td><td style="text-align:right"><span class="status-pill status-poor">not ranking</span></td></tr>
+                      <tr><td>oen exam practice questions</td><td style="text-align:right"><span class="status-pill status-poor">not ranking</span></td></tr>
+                      <tr><td>snle exam preparation</td><td style="text-align:right"><span class="status-pill status-poor">not ranking</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="sub-label emerald" style="margin-top:14px">How Magister closes the gap</div>
+                <p class="desc" style="margin-bottom:0;font-size:12.5px;color:#c4d4cc">
+                  Build or strengthen pages for each exam and question-bank search, using the wording students use. This helps Edu reach motivated learners before they choose another prep provider.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== Website & Content ===== -->
+          <div class="channel-card">
+            <div class="ch-head">
+              <svg class="ch-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+              <span class="ch-name">Website &amp; Content</span>
+              <span class="ch-score">73 <span class="arrow">→</span> <span class="target">100</span></span>
+            </div>
+            <div class="ch-bar">
+              <span class="fill-bg" style="width:100%"></span>
+              <span class="fill" style="width:73%"></span>
+            </div>
+            <p class="ch-note">Bayan has strong educational depth across 60 discovered pages, but slow mobile loading and broad homepage messaging may weaken sign-ups.</p>
+            <div class="ch-body">
+              <div class="ch-body-inner">
+                <div class="sub-label">Biggest opportunities</div>
+                <ul class="opp-list">
+                  <li><span class="x">✕</span>Homepage serves many audiences and exams, making the best starting point unclear.</li>
+                  <li><span class="x">✕</span>Mobile performance is 71/100; redirects add 780ms and unused code adds 600ms.</li>
+                  <li><span class="x">✕</span>Only 10 of 60 discovered pages were reviewed for content and next steps.</li>
+                </ul>
+                <div class="sub-label emerald" style="margin-top:14px">How Magister closes the gap</div>
+                <p class="desc" style="margin-bottom:0;font-size:12.5px;color:#c4d4cc">
+                  Speed up mobile pages and give each learner a clearer route to the right exam plan. This can reduce drop-offs and make Bayan easier to choose.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== GEO ===== -->
+          <div class="channel-card">
+            <div class="ch-head">
+              <svg class="ch-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+              <span class="ch-name">GEO</span>
+              <span class="ch-score">71 <span class="arrow">→</span> <span class="target">90</span></span>
+            </div>
+            <div class="ch-bar">
+              <span class="fill-bg" style="width:90%"></span>
+              <span class="fill" style="width:71%"></span>
+            </div>
+            <p class="ch-note">Edu is crawlable across 655 URLs, but missing AI guidance, FAQs, and direct answers limits how confidently tools recommend it.</p>
+            <div class="ch-body">
+              <div class="ch-body-inner">
+
+                <div class="score-header">
+                  <div class="big-score">
+                    <span class="num">71</span>
+                    <span class="den">/100 GEO readiness</span>
+                  </div>
+                  <span class="pass-fail">15 pass - 7 fail</span>
+                </div>
+
+                <div class="sub-label">What we'll change for generative search</div>
+
+                <div class="data-table">
+                  <table>
+                    <thead>
+                      <tr><th>Site checklist</th><th style="text-align:right">Status</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Clear call to action</td><td style="text-align:right"><span class="status-pill status-pass">pass</span></td></tr>
+                      <tr><td>Schema markup</td><td style="text-align:right"><span class="status-pill status-pass">pass</span></td></tr>
+                      <tr><td>Content hierarchy</td><td style="text-align:right"><span class="status-pill status-pass">pass</span></td></tr>
+                      <tr><td>Hero section</td><td style="text-align:right"><span class="status-pill status-pass">pass</span></td></tr>
+                      <tr><td>Mobile optimised</td><td style="text-align:right"><span class="status-pill status-pass">pass</span></td></tr>
+                      <tr><td>Meta tags</td><td style="text-align:right"><span class="status-pill status-pass">pass</span></td></tr>
+                      <tr><td>llms.txt</td><td style="text-align:right"><span class="status-pill status-fail">fail</span></td></tr>
+                      <tr><td>llms-full.txt</td><td style="text-align:right"><span class="status-pill status-fail">fail</span></td></tr>
+                      <tr><td>Search crawl policy (robots.txt)</td><td style="text-align:right"><span class="status-pill status-pass">pass</span></td></tr>
+                      <tr><td>XML Sitemap</td><td style="text-align:right"><span class="status-pill status-pass">pass</span></td></tr>
+                      <tr><td>JSON-LD Structured Data</td><td style="text-align:right"><span class="status-pill status-pass">pass</span></td></tr>
+                      <tr><td>FAQ / Q&amp;A Schema</td><td style="text-align:right"><span class="status-pill status-fail">fail</span></td></tr>
+                      <tr><td>Open Graph Tags</td><td style="text-align:right"><span class="status-pill status-pass">pass</span></td></tr>
+                      <tr><td>Meta Description</td><td style="text-align:right"><span class="status-pill status-fail">fail</span></td></tr>
+                      <tr><td>Canonical Tag</td><td style="text-align:right"><span class="status-pill status-pass">pass</span></td></tr>
+                      <tr><td>BLUF / Direct-Answer Style</td><td style="text-align:right"><span class="status-pill status-fail">fail</span></td></tr>
+                      <tr><td>Heading Hierarchy</td><td style="text-align:right"><span class="status-pill status-pass">pass</span></td></tr>
+                      <tr><td>Content Depth</td><td style="text-align:right"><span class="status-pill status-pass">pass</span></td></tr>
+                      <tr><td>Internal Links</td><td style="text-align:right"><span class="status-pill status-pass">pass</span></td></tr>
+                      <tr><td>HTTPS</td><td style="text-align:right"><span class="status-pill status-pass">pass</span></td></tr>
+                      <tr><td>Page Size</td><td style="text-align:right"><span class="status-pill status-pass">pass</span></td></tr>
+                      <tr><td>Language Attribute</td><td style="text-align:right"><span class="status-pill status-pass">pass</span></td></tr>
+                      <tr><td>Client-Side Rendering</td><td style="text-align:right"><span class="status-pill status-pass">pass</span></td></tr>
+                      <tr><td>Noscript Fallback</td><td style="text-align:right"><span class="status-pill status-fail">fail</span></td></tr>
+                      <tr><td>JavaScript Weight</td><td style="text-align:right"><span class="status-pill status-pass">pass</span></td></tr>
+                      <tr><td>Server-Rendered Content Quality</td><td style="text-align:right"><span class="status-pill status-pass">pass</span></td></tr>
+                      <tr><td>MCP Manifest</td><td style="text-align:right"><span class="status-pill status-fail">fail</span></td></tr>
+                      <tr><td>Observed crawler HTTP access</td><td style="text-align:right"><span class="status-pill status-pass">pass</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="sub-label">What we'll add</div>
+                <ul class="opp-list">
+                  <li><span class="x">✕</span>No llms.txt file found. This file tells AI models about your site's purpose and preferred content.</li>
+                  <li><span class="x">✕</span>No llms-full.txt found. This extended file provides detailed context for AI models.</li>
+                  <li><span class="x">✕</span>No FAQ content or schema detected. FAQ schema dramatically improves AI answer citations.</li>
+                  <li><span class="x">✕</span>Length 301 chars — too long. Aim for 50–160 characters.</li>
+                  <li><span class="x">✕</span>Content doesn't lead with a clear direct answer. Start with a BLUF (Bottom Line Up Front) statement.</li>
+                  <li><span class="x">✕</span>No &lt;noscript&gt; tag found. Add one with fallback content — LLM bots and crawlers that don't run JS will benefit from this.</li>
+                  <li><span class="x">✕</span>No MCP manifest at /.well-known/mcp.json. Informational only — adoption is early and this does not affect the score yet.</li>
+                </ul>
+
+                <div class="sub-label emerald" style="margin-top:14px">How Magister closes the gap</div>
+                <p class="desc" style="margin-bottom:0;font-size:12.5px;color:#c4d4cc">
+                  Add concise AI-readable guidance, customer FAQs, and direct answers, then shorten the description. This helps physicians, nurses, and students find trusted answers and choose Edu sooner.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== Paid Ads ===== -->
+          <div class="channel-card">
+            <div class="ch-head">
+              <svg class="ch-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+              <span class="ch-name">Paid Ads</span>
+              <span class="ch-score">14 <span class="arrow">→</span> <span class="target">60</span></span>
+            </div>
+            <div class="ch-bar">
+              <span class="fill-bg" style="width:60%"></span>
+              <span class="fill" style="width:14%"></span>
+            </div>
+            <p class="ch-note">Edu has X and Telegram profiles, while its site promotes preparation for 20+ medical exams worldwide.</p>
+            <div class="ch-body">
+              <div class="ch-body-inner">
+
+                <div class="sub-label">Footer accounts</div>
+                <div class="social-grid">
+                  <a href="https://x.com/Medresearch_om" target="_blank" rel="noreferrer noopener" class="social-card" style="text-decoration:none">
+                    <div class="sc-ic">𝕏</div>
+                    <div class="sc-body">
+                      <div class="sc-name"><span>X (Twitter)</span><span class="found">Found</span></div>
+                      <div class="sc-sub">Found in footer</div>
+                    </div>
+                  </a>
+                  <a href="https://t.me/BayanMedEd" target="_blank" rel="noreferrer noopener" class="social-card" style="text-decoration:none">
+                    <div class="sc-ic">T</div>
+                    <div class="sc-body">
+                      <div class="sc-name"><span>Telegram</span><span class="found">Found</span></div>
+                      <div class="sc-sub">Found in footer</div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="dashed-card">
+                  <div class="dc-t">Exam-specific campaigns</div>
+                  <div class="dc-d">Create separate ads for ABIM, USMLE, OEN, SNLE, and Prometric, using each exam's name and a matching page to reach people actively preparing.</div>
+                </div>
+                <div class="dashed-card">
+                  <div class="dc-t">Audience and country targeting</div>
+                  <div class="dc-d">Use Bayan's X and Telegram profiles as audience clues, then test ads aimed at physicians, nurses, and students by exam and country.</div>
+                </div>
+
+                <div class="sub-label emerald" style="margin-top:14px">How Magister closes the gap</div>
+                <p class="desc" style="margin-bottom:0;font-size:12.5px;color:#c4d4cc">
+                  Launch separate campaigns for each exam and audience, sending people to matching pages with sample questions, course details, and clear trial or purchase options. This makes Bayan's broad offer easier to understand and act on.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== Social Media ===== -->
+          <div class="channel-card">
+            <div class="ch-head">
+              <svg class="ch-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+              <span class="ch-name">Social Media</span>
+              <span class="ch-score">44 <span class="arrow">→</span> <span class="target">69</span></span>
+            </div>
+            <div class="ch-bar">
+              <span class="fill-bg" style="width:69%"></span>
+              <span class="fill" style="width:44%"></span>
+            </div>
+            <p class="ch-note">Bayan visibly links to X (@Medresearch_om) and Telegram (BayanMedEd), with no stated posting rhythm or exam-specific social offer.</p>
+            <div class="ch-body">
+              <div class="ch-body-inner">
+
+                <div class="sub-label">Footer accounts</div>
+                <div class="social-grid">
+                  <a href="https://x.com/Medresearch_om" target="_blank" rel="noreferrer noopener" class="social-card" style="text-decoration:none">
+                    <div class="sc-ic">𝕏</div>
+                    <div class="sc-body">
+                      <div class="sc-name"><span>X (Twitter)</span><span class="found">Found</span></div>
+                      <div class="sc-sub">Found in footer</div>
+                    </div>
+                  </a>
+                  <a href="https://t.me/BayanMedEd" target="_blank" rel="noreferrer noopener" class="social-card" style="text-decoration:none">
+                    <div class="sc-ic">T</div>
+                    <div class="sc-body">
+                      <div class="sc-name"><span>Telegram</span><span class="found">Found</span></div>
+                      <div class="sc-sub">Found in footer</div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="dashed-card">
+                  <div class="dc-t">Question-of-the-day series</div>
+                  <div class="dc-d">Post one board-style question with the answer and a short explanation on X, covering ABIM, USMLE, OEN, SNLE, and Prometric topics.</div>
+                </div>
+                <div class="dashed-card">
+                  <div class="dc-t">Exam-based Telegram study tracks</div>
+                  <div class="dc-d">Create separate Telegram study tracks with weekly question sets, revision reminders, and links to the matching Bayan course or practice subscription.</div>
+                </div>
+
+                <div class="sub-label emerald" style="margin-top:14px">How Magister closes the gap</div>
+                <p class="desc" style="margin-bottom:0;font-size:12.5px;color:#c4d4cc">
+                  Create recurring, exam-specific posts from Bayan's physician-reviewed questions, then send learners to Telegram for practice plans and course trials. This makes the brand useful before purchase and gives each audience a clear next step.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
