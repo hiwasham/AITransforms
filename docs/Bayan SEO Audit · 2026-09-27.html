@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bayan SEO Audit · 2026-09-27</title>
+<style>
+  :root{
+    --bg:#050810;
+    --panel:#0c1420;
+    --panel-2:#101a28;
+    --line:#1a2638;
+    --line-2:#14202f;
+    --text:#eaf0f8;
+    --muted:#7e8fa6;
+    --dim:#4e5d73;
+    --critical:#ff4d5e;
+    --warning:#ffb020;
+    --info:#5c7cff;
+    --pass:#2ed573;
+    --bayan:#1a4ff5;
+    --bayan-soft:#5c7cff;
+    --cyan:#22d3ee;
+    --violet:#a06bff;
+    --orange:#ff8a5c;
+    --pink:#ff5c8a;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+    --serif:"Instrument Serif","Iowan Old Style",Georgia,serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:
+      radial-gradient(1200px 700px at 12% -8%, #0e1a2e 0%, transparent 55%),
+      radial-gradient(1000px 600px at 95% 0%, #2a0e1a 0%, transparent 52%),
+      var(--bg);
+    color:var(--text);font-family:var(--sans);line-height:1.55;
+    -webkit-font-smoothing:antialiased;padding:0 22px 90px;overflow-x:hidden;
+  }
+  .wrap{max-width:1160px;margin:0 auto}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ============ HERO ============ */
+  .hero{padding:58px 0 42px;border-bottom:1px solid var(--line)}
+  .hero-grid{display:grid;grid-template-columns:1fr 320px;gap:34px;align-items:start}
+  @media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:24px}}
+
+  .eyebrow{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:18px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--critical);display:inline-block}
+  .eyebrow .url{
+    font-size:10.5px;letter-spacing:.04em;
+    padding:3px 10px;border-radius:6px;
+    background:rgba(34,211,238,.08);color:var(--cyan);
+    border:1px solid rgba(34,211,238,.24);
+    text-transform:none;
+  }
+  .eyebrow .date{
+    font-size:10.5px;letter-spacing:.06em;
+    color:var(--dim);
+  }
+
+  h1{
+    font-family:var(--serif);font-weight:400;letter-spacing:-.02em;
+    font-size:clamp(30px,5.2vw,52px);line-height:1.05;max-width:18ch;
+  }
+  h1 .hl{
+    background:linear-gradient(92deg,var(--critical),var(--warning));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .lede{color:#a9b8cb;font-size:clamp(14.5px,1.7vw,17px);max-width:60ch;margin-top:20px}
+  .lede strong{color:#fff;font-weight:650}
+
+  /* verdict card */
+  .verdict{
+    border:1px solid var(--line);border-radius:18px;
+    background:linear-gradient(180deg,var(--panel),var(--panel-2));
+    padding:24px 26px;position:relative;overflow:hidden;
+  }
+  .verdict::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:2px;
+    background:linear-gradient(90deg,transparent,var(--pass),transparent);
+    animation:scan 3s ease-in-out infinite;
+  }
+  @keyframes scan{0%,100%{opacity:.5}50%{opacity:1}}
+  .vc-label{
+    font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--pass);margin-bottom:12px;display:flex;align-items:center;gap:8px;
+  }
+  .vc-label .dot{width:7px;height:7px;border-radius:50%;background:var(--pass);box-shadow:0 0 12px -1px var(--pass)}
+  .vc-verdict{
+    font-family:var(--serif);font-size:20px;font-weight:400;line-height:1.25;color:#fff;
+    margin-bottom:12px;letter-spacing:-.01em;
+  }
+  .vc-sub{font-size:13.5px;color:#a9b8cb;line-height:1.55}
+  .vc-sub strong{color:#fff;font-weight:640}
+
+  /* severity pills */
+  .severity-strip{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:32px;
+  }
+  @media(max-width:820px){.severity-strip{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:460px){.severity-strip{grid-template-columns:1fr}}
+  .sev{
+    padding:16px 18px;border-radius:13px;
+    background:linear-gradient(180deg,var(--panel),var(--panel-2));
+    border:1px solid var(--line);position:relative;overflow:hidden;
+    cursor:pointer;transition:transform .3s,border-color .3s,box-shadow .3s;
+  }
+  .sev::after{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--sc)}
+  .sev:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--sc) 40%,var(--line))}
+  .sev.active{border-color:var(--sc);box-shadow:0 0 0 1px var(--sc),0 12px 32px -20px var(--sc)}
+  .sev.active::before{
+    content:"";position:absolute;top:8px;right:8px;width:6px;height:6px;border-radius:50%;
+    background:var(--sc);box-shadow:0 0 10px -1px var(--sc);
+  }
+  .sev .sk{
+    font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:10px;
+  }
+  .sev .sv{
+    font-family:var(--mono);font-size:28px;font-weight:800;letter-spacing:-.03em;
+    color:var(--sc);line-height:1;font-variant-numeric:tabular-nums;
+  }
+  .sev .ss{font-family:var(--mono);font-size:10.5px;color:var(--dim);margin-top:5px}
+
+  /* ============ SECTION ============ */
+  section{padding:52px 0;border-bottom:1px solid var(--line)}
+  section:last-of-type{border-bottom:0}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:10px;flex-wrap:wrap}
+  .sec-num{font-family:var(--mono);font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:3px 8px}
+  h2{font-family:var(--serif);font-weight:400;font-size:clamp(22px,3vw,30px);letter-spacing:-.02em}
+  .sec-desc{color:var(--muted);font-size:14.5px;max-width:68ch;margin-bottom:26px}
+  .sec-desc strong{color:#c3d0e2;font-weight:640}
+
+  /* ============ FINDINGS ============ */
+  .findings{display:flex;flex-direction:column;gap:10px}
+  .findings.hide-warning .finding.warning{display:none}
+  .findings.hide-info .finding.info{display:none}
+
+  .finding{
+    border:1px solid var(--line);border-radius:14px;
+    background:linear-gradient(180deg,var(--panel),var(--panel-2));
+    overflow:hidden;position:relative;
+    transition:border-color .3s,transform .3s;
+  }
+  .finding::before{
+    content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--fc);
+  }
+  .finding:hover{
+    border-color:color-mix(in srgb,var(--fc) 42%,var(--line));
+    transform:translateX(3px);
+  }
+  .finding.critical{border-color:rgba(255,77,94,.24)}
+  .finding.critical:hover{border-color:rgba(255,77,94,.55)}
+  .finding.warning{border-color:rgba(255,176,32,.2)}
+  .finding.info{border-color:rgba(92,124,255,.18)}
+  .finding.pass{border-color:rgba(46,213,115,.22)}
+
+  .finding-head{
+    width:100%;background:transparent;border:0;font-family:inherit;color:inherit;
+    padding:18px 22px 18px 24px;text-align:left;cursor:pointer;display:block;
+    transition:background .2s;
+  }
+  .finding-head:hover{background:rgba(255,255,255,.012)}
+  .finding.open .finding-head{cursor:default}
+  .finding.open .finding-head:hover{background:transparent}
+
+  .finding-top{
+    display:flex;align-items:flex-start;gap:14px;
+  }
+  .sev-badge{
+    font-family:var(--mono);font-size:9.5px;font-weight:800;letter-spacing:.12em;
+    text-transform:uppercase;padding:4px 9px;border-radius:5px;
+    flex:0 0 auto;white-space:nowrap;margin-top:2px;
+  }
+  .sev-badge.critical{background:rgba(255,77,94,.14);color:#ff9aa4;border:1px solid rgba(255,77,94,.35)}
+  .sev-badge.warning{background:rgba(255,176,32,.14);color:#ffd08a;border:1px solid rgba(255,176,32,.32)}
+  .sev-badge.info{background:rgba(92,124,255,.12);color:#8fb4ff;border:1px solid rgba(92,124,255,.3)}
+  .sev-badge.pass{background:rgba(46,213,115,.14);color:#7ee9a8;border:1px solid rgba(46,213,115,.32)}
+
+  .finding-title{
+    font-size:15px;font-weight:660;color:#eef4fb;line-height:1.4;flex:1;
+    letter-spacing:-.005em;
+  }
+  .finding-chev{
+    flex:0 0 auto;color:var(--dim);font-size:12px;margin-top:5px;
+    transition:transform .35s;
+  }
+  .finding.open .finding-chev{transform:rotate(90deg);color:var(--fc)}
+
+  .finding-tags{
+    display:flex;flex-wrap:wrap;gap:6px;margin-top:11px;
+  }
+  .ftag{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.03em;
+    padding:3px 10px;border-radius:6px;
+    background:#0a121d;border:1px solid var(--line-2);color:#8fa0b6;
+  }
+  .ftag.area{color:var(--fc);border-color:color-mix(in srgb,var(--fc) 30%,transparent);background:color-mix(in srgb,var(--fc) 8%,transparent)}
+
+  .finding-body{
+    display:grid;grid-template-rows:0fr;
+    transition:grid-template-rows .45s cubic-bezier(.4,0,.2,1);
+  }
+  .finding.open .finding-body{grid-template-rows:1fr}
+  .finding-body-inner{overflow:hidden}
+  .finding-body-content{
+    padding:0 24px 22px;border-top:1px solid var(--line-2);padding-top:18px;margin-top:2px;
+  }
+
+  .body-block + .body-block{margin-top:16px;padding-top:16px;border-top:1px dashed var(--line-2)}
+  .bl{
+    font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--dim);margin-bottom:8px;display:flex;align-items:center;gap:8px;
+  }
+  .bl.evidence{color:var(--info)}
+  .bl.impact{color:var(--critical)}
+  .bl.rec{color:var(--pass)}
+  .bl .dot{width:6px;height:6px;border-radius:50%;background:currentColor;box-shadow:0 0 8px -1px currentColor}
+  .body-text{font-size:13.5px;color:#b3c0d2;line-height:1.65}
+  .body-text code{
+    font-family:var(--mono);font-size:12px;color:#9fd8dd;
+    background:#0a1219;border:1px solid #14252b;border-radius:4px;padding:1px 6px;
+    word-break:break-word;
+  }
+  .body-text strong{color:#e2eaf4;font-weight:640}
+  .body-text em{color:#dbe4f0;font-style:italic}
+
+  .code-block{
+    display:block;padding:12px 14px;border-radius:8px;
+    background:#080f18;border:1px solid var(--line-2);
+    font-family:var(--mono);font-size:12px;color:#9fd8dd;
+    overflow-x:auto;white-space:pre;line-height:1.55;margin-top:8px;
+  }
+
+  /* ============ PLAN ============ */
+  .plan-timeline{position:relative;padding-left:34px}
+  .plan-timeline::before{
+    content:"";position:absolute;left:12px;top:14px;bottom:14px;width:2px;
+    background:linear-gradient(180deg,var(--critical),var(--warning),var(--info),var(--violet));
+    opacity:.24;border-radius:2px;
+  }
+  .priority-group{margin-bottom:8px}
+  .priority-label{
+    display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--muted);margin:24px 0 14px;position:relative;
+  }
+  .priority-label:first-child{margin-top:0}
+  .priority-label::before{
+    content:"";position:absolute;left:-34px;top:50%;transform:translateY(-50%);
+    width:12px;height:12px;border-radius:50%;
+    background:var(--bg);border:2px solid var(--plc);
+  }
+  .priority-label .pl-name{color:var(--plc);font-weight:600}
+  .priority-label .pl-line{flex:1;height:1px;background:var(--line);min-width:20px}
+  .priority-label .pl-count{
+    font-family:var(--mono);font-size:10px;color:var(--dim);
+    padding:2px 8px;border-radius:5px;background:var(--panel);border:1px solid var(--line);
+  }
+
+  .task{
+    display:grid;grid-template-columns:44px 1fr;gap:16px;
+    border:1px solid var(--line);border-radius:13px;
+    background:linear-gradient(180deg,var(--panel),var(--panel-2));
+    margin-bottom:8px;padding:18px 20px;
+    position:relative;overflow:hidden;
+    transition:transform .3s,border-color .3s;
+  }
+  .task::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--tc)}
+  .task:hover{border-color:color-mix(in srgb,var(--tc) 42%,var(--line));transform:translateX(3px)}
+  .task .tnum{
+    font-family:var(--mono);font-size:16px;font-weight:800;letter-spacing:-.02em;
+    color:var(--tc);text-align:center;line-height:1;padding-top:3px;
+    font-variant-numeric:tabular-nums;
+  }
+  .task .ttext{flex:1;min-width:0}
+  .task h4{
+    font-size:14.5px;font-weight:660;color:#eef4fb;line-height:1.4;
+    margin-bottom:8px;letter-spacing:-.005em;
+  }
+  .task p{font-size:13.3px;color:#98a9bd;line-height:1.55}
+  .task p code{
+    font-family:var(--mono);font-size:11.5px;color:#9fd8dd;
+    background:#0a1219;border:1px solid #14252b;border-radius:3px;padding:1px 5px;
+  }
+  .task .tmeta{
+    display:flex;flex-wrap:wrap;gap:6px;margin-top:11px;
+  }
+  .ttag{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.02em;
+    padding:3px 9px;border-radius:5px;
+    background:#0a121d;border:1px solid var(--line-2);color:#8fa0b6;
+  }
+  .ttag.owner{color:#ffd08a;border-color:rgba(255,176,32,.26);background:rgba(255,176,32,.06)}
+
+  /* ============ REGISTER ============ */
+  .register{
+    border:1px solid var(--line);border-radius:14px;
+    overflow:hidden;background:var(--panel);
+  }
+  .reg-head{
+    display:grid;grid-template-columns:150px 1fr 180px 220px;
+    gap:16px;padding:14px 22px;
+    background:#080f18;border-bottom:1px solid var(--line);
+    font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--dim);
+  }
+  @media(max-width:1000px){.reg-head{display:none}}
+  .reg-row{
+    display:grid;grid-template-columns:150px 1fr 180px 220px;
+    gap:16px;padding:14px 22px;
+    border-bottom:1px solid var(--line-2);
+    align-items:start;
+    transition:background .2s;
+  }
+  @media(max-width:1000px){
+    .reg-row{grid-template-columns:1fr;gap:8px}
+  }
+  .reg-row:last-child{border-bottom:0}
+  .reg-row:hover{background:rgba(255,255,255,.015)}
+  .reg-sev{
+    font-family:var(--mono);font-size:9.5px;font-weight:800;letter-spacing:.1em;
+    text-transform:uppercase;padding:4px 9px;border-radius:5px;
+    display:inline-block;white-space:nowrap;
+  }
+  .reg-sev.critical{background:rgba(255,77,94,.14);color:#ff9aa4;border:1px solid rgba(255,77,94,.35)}
+  .reg-sev.warning{background:rgba(255,176,32,.14);color:#ffd08a;border:1px solid rgba(255,176,32,.32)}
+  .reg-sev.info{background:rgba(92,124,255,.12);color:#8fb4ff;border:1px solid rgba(92,124,255,.3)}
+  .reg-finding{font-size:13.5px;color:#c3d0e2;line-height:1.5}
+  .reg-area{font-family:var(--mono);font-size:11.5px;color:#93a4b8}
+  .reg-urls{
+    font-family:var(--mono);font-size:11px;color:#5c7cff;
+    word-break:break-all;line-height:1.5;
+  }
+
+  /* ============ SUCCESS CRITERIA ============ */
+  .criteria{display:flex;flex-direction:column;gap:9px}
+  .criterion{
+    display:flex;gap:14px;align-items:flex-start;
+    padding:16px 20px;border-radius:12px;
+    background:linear-gradient(180deg,var(--panel),var(--panel-2));
+    border:1px solid var(--line);
+    border-left:3px solid var(--cc);
+    transition:transform .25s,border-color .25s;
+  }
+  .criterion:hover{transform:translateX(3px)}
+  .criterion .cicon{
+    width:22px;height:22px;border-radius:6px;flex:0 0 auto;
+    display:grid;place-items:center;
+    background:color-mix(in srgb,var(--cc) 14%,transparent);
+    border:1px solid color-mix(in srgb,var(--cc) 34%,transparent);
+    color:var(--cc);font-family:var(--mono);font-size:11px;font-weight:800;
+  }
+  .criterion .ctext{flex:1;font-size:13.8px;color:#c3d0e2;line-height:1.55}
+  .criterion .ctext code{
+    font-family:var(--mono);font-size:11.5px;color:#9fd8dd;
+    background:#0a1219;border:1px solid #14252b;border-radius:3px;padding:1px 5px;
+  }
+
+  /* ============ EVIDENCE NOTE ============ */
+  .evidence-note{
+    border:1px dashed #2a3548;border-radius:13px;
+    background:linear-gradient(180deg,rgba(92,124,255,.05),transparent 70%),var(--panel);
+    padding:20px 24px;display:flex;gap:16px;align-items:flex-start;
+    margin-bottom:26px;
+  }
+  .evidence-note .enic{
+    width:32px;height:32px;border-radius:9px;flex:0 0 auto;
+    display:grid;place-items:center;
+    background:rgba(92,124,255,.12);border:1px solid rgba(92,124,255,.3);
+    color:var(--info);font-family:var(--mono);font-size:15px;font-weight:700;
+  }
+  .evidence-note .entext{flex:1;font-size:13.5px;color:#a9b8cb;line-height:1.6}
+  .evidence-note .entext strong{color:#dbe4f0;font-weight:640}
+
+  /* ============ FOOTER ============ */
+  footer{
+    margin-top:52px;padding-top:26px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+    font-family:var(--mono);font-size:11px;color:#5b6b80;
+  }
+
+  /* ============ SKIM ============ */
+  .skim{
+    position:sticky;top:0;z-index:40;
+    background:rgba(5,8,16,.9);backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+    margin:0 -22px;padding:12px 22px;
+    overflow-x:auto;white-space:nowrap;
+    scrollbar-width:none;
+  }
+  .skim::-webkit-scrollbar{display:none}
+  .skim-inner{display:inline-flex;gap:6px;align-items:center;min-width:100%}
+  .skim-chip{
+    display:inline-flex;align-items:center;gap:7px;
+    font-family:var(--mono);font-size:11px;letter-spacing:.03em;
+    padding:7px 12px;border-radius:8px;border:1px solid var(--line);
+    background:var(--panel);color:#8fa0b6;cursor:pointer;
+    transition:all .2s;flex:0 0 auto;
+  }
+  .skim-chip:hover{border-color:#33445c;color:#c3d0e2;transform:translateY(-1px)}
+  .skim-chip .d{width:6px;height:6px;border-radius:50%;background:currentColor;flex:0 0 auto}
+  .skim-chip[data-t="findings"] .d{background:var(--warning)}
+  .skim-chip[data-t="plan"] .d{background:var(--critical)}
+  .skim-chip[data-t="register"] .d{background:var(--info)}
+  .skim-chip[data-t="criteria"] .d{background:var(--pass)}
+  .skim-sep{width:1px;height:18px;background:var(--line);flex:0 0 auto;margin:0 4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">
+          SEO Audit · Complete Finding Report
+          <span class="url">bayan.edu.om</span>
+          <span class="date">2026-09-27</span>
+        </div>
+        <h1>Good foundations. <span class="hl">Material cleanup pending.</span></h1>
+        <p class="lede">
+          A focused priority-page audit of <strong>10 key pages</strong> across metadata,
+          heading hierarchy, canonicals, crawlability, internal linking, and mobile
+          performance. Crawlable and structurally sound — the biggest wins are
+          <strong>duplicate metadata, a possible canonical defect, and a sitemap that
+          advertises non-indexable pages.</strong>
+        </p>
+      </div>
+
+      <div class="verdict">
+        <div class="vc-label"><span class="dot"></span>Overall verdict</div>
+        <div class="vc-verdict">Good foundations with material cleanup opportunities.</div>
+        <div class="vc-sub">
+          HTTPS, robots.txt, sitemap.xml, responsive viewport, and HTTP 200 on all
+          priority pages. <strong>Mobile Performance sits at 63/100</strong> — an
+          opportunity, not yet a defect. Real-user Core Web Vitals were
+          <strong>unavailable from CrUX</strong> at audit time.
+        </div>
+      </div>
+    </div>
+
+    <div class="severity-strip" id="severityStrip">
+      <div class="sev active" data-sev="critical" style="--sc:var(--critical)">
+        <div class="sk">Critical</div>
+        <div class="sv" data-count="2">0</div>
+        <div class="ss">validate and fix first</div>
+      </div>
+      <div class="sev active" data-sev="warning" style="--sc:var(--warning)">
+        <div class="sk">Warning</div>
+        <div class="sv" data-count="8">0</div>
+        <div class="ss">visibility or CTR risk</div>
+      </div>
+      <div class="sev active" data-sev="info" style="--sc:var(--info)">
+        <div class="sk">Info</div>
+        <div class="sv" data-count="9">0</div>
+        <div class="ss">hygiene and opportunity</div>
+      </div>
+      <div class="sev active" data-sev="pass" style="--sc:var(--pass)">
+        <div class="sk">Pass</div>
+        <div class="sv" data-count="3">0</div>
+        <div class="ss">confirmed healthy</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ SKIM NAV ============ -->
+  <nav class="skim" aria-label="Quick jump">
+    <div class="skim-inner" id="skimNav"></div>
+  </nav>
+
+  <!-- ============ 01 · FINDINGS ============ -->
+  <section class="reveal" id="findings-sec">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <h2>All findings</h2>
+    </div>
+    <p class="sec-desc">
+      Twenty-two findings across structure, on-page, and technical areas.
+      <strong>Filter with the severity cards above</strong> or click any finding
+      to expand its evidence, impact, and recommendation.
+    </p>
+
+    <div class="evidence-note">
+      <div class="enic">i</div>
+      <div class="entext">
+        <strong>Evidence note.</strong> Findings are based on JavaScript-rendered
+        Firecrawl crawls and targeted page reads, plus PageSpeed Insights and CrUX
+        checks. This is a <em>focused priority-page audit</em>, not a complete
+        crawl-level duplicate-title, broken-link, image, or canonical inventory.
+        Where tool responses conflicted, the report labels the item for
+        source-level verification rather than treating it as confirmed.
+      </div>
+    </div>
+
+    <div class="findings" id="findings"></div>
+  </section>
+
+  <!-- ============ 02 · PRIORITIZED PLAN ============ -->
+  <section class="reveal" id="plan-sec">
+    <div class="sec-head">
+      <span class="sec-num">02</span>
+      <h2>The prioritized action plan</h2>
+    </div>
+    <p class="sec-desc">
+      Fifteen actions across four priority tiers — from critical validation through
+      ongoing governance.
+    </p>
+
+    <div class="plan-timeline" id="plan"></div>
+  </section>
+
+  <!-- ============ 03 · SEVERITY REGISTER ============ -->
+  <section class="reveal" id="register-sec">
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <h2>Consolidated severity register</h2>
+    </div>
+    <p class="sec-desc">
+      Every finding in one table — severity, finding, area, and affected URLs.
+    </p>
+
+    <div class="register">
+      <div class="reg-head">
+        <span>Severity</span>
+        <span>Finding</span>
+        <span>Area</span>
+        <span>Primary URLs</span>
+      </div>
+      <div id="register"></div>
+    </div>
+  </section>
+
+  <!-- ============ 04 · SUCCESS CRITERIA ============ -->
+  <section class="reveal" id="criteria-sec">
+    <div class="sec-head">
+      <span class="sec-num">04</span>
+      <h2>Recommended success criteria</h2>
+    </div>
+    <p class="sec-desc">
+      The audit can be considered materially improved when all nine of these are true.
+    </p>
+
+    <div class="criteria" id="criteria"></div>
+  </section>
+
+  <footer>
+    <span>Bayan SEO Audit · 2026-09-27</span>
+    <span>22 findings · 15 actions · 9 success criteria</span>
+  </footer>
+
+</div>
+
+<script>
+/* ============================================================
+   REVEAL
+   ============================================================ */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, {threshold: 0.06});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* ============================================================
+   COUNT-UP
+   ============================================================ */
+document.querySelectorAll('[data-count]').forEach(el => {
+  const target = parseInt(el.dataset.count, 10);
+  let started = false;
+  const start = () => {
+    if(started) return; started = true;
+    const dur = 900; const t0 = performance.now();
+    const tick = (now) => {
+      const p = Math.min(1,(now-t0)/dur);
+      const eased = 1 - Math.pow(1-p,3);
+      el.textContent = Math.round(target*eased);
+      if(p<1) requestAnimationFrame(tick);
+      else el.textContent = target;
+    };
+    requestAnimationFrame(tick);
+  };
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ start(); obs.unobserve(el); } });
+  },{threshold:0.4});
+  obs.observe(el);
+});
+
+/* ============================================================
+   FINDINGS DATA
+   ============================================================ */
+const FINDINGS = [
+  // --- CRITICAL ---
+  {
+    sev:'critical',
+    title:'`/courses` may canonicalize to the homepage',
+    area:'Canonicalization',
+    tag:'verify in deployed HTML',
+    evidence:'Sampled canonical results: `/`, `/prometric`, `/pricing`, `/sample-quiz`, `/omsb-exam` all return self-canonical — pass. One structured rendered-head read of `/courses` returned `https://www.bayan.edu.om/` as the canonical. Other Firecrawl metadata identified the source URL as `/courses`. This may be an extraction or cache inconsistency — not safe to call a confirmed production defect without literal source verification.',
+    impact:'If present in deployed HTML, this suppresses `/courses` from ranking and misdirects search intent to the homepage.',
+    rec:'Inspect deployed HTML and require a self-referencing canonical. Then sample course details, modules, blog articles, library records, calculators, and parameterized activation/checkout pages. Clean pages should self-canonicalize; parameterized transaction variants should canonicalize to the clean parent or be noindexed by purpose.',
+    code:'<link rel="canonical" href="https://www.bayan.edu.om/courses" />'
+  },
+  {
+    sev:'critical',
+    title:'Sitemap and robots / indexation policy may conflict for auth and utility URLs',
+    area:'Crawlability',
+    tag:'indexation control',
+    evidence:'Robots blocks slash-prefixed patterns such as `/osce/`, `/flashcards/`, `/challenge/`, `/quiz/`, `/register/`, and `/signup/`, while the crawl map and sitemap expose corresponding non-slash URLs. The sitemap includes `/login`, `/signup`, `/register`, `/reset-password`, and `/quiz`.',
+    impact:'Redirect or trailing-slash behavior could unintentionally block intended public pages, or the sitemap may advertise pages search engines should not crawl — wasting crawl budget and creating inconsistent indexation signals.',
+    rec:'Test each final URL after redirects and choose one of two clear policies: (1) public product page — allow crawl, include in sitemap; (2) authenticated/utility page — block or noindex, exclude from sitemap. Remove all auth/utility URLs from the sitemap unless explicitly intended.',
+    urls:['/login','/signup','/register','/reset-password','/quiz','/osce','/flashcards','/challenge']
+  },
+
+  // --- WARNING ---
+  {
+    sev:'warning',
+    title:'Pricing duplicates homepage title and meta description',
+    area:'Metadata',
+    tag:'/pricing, /',
+    evidence:'Pricing returned the same broad homepage title and approximately 297-character homepage meta description in the rendered metadata read.',
+    impact:'Weakens the Pricing page’s relevance for plan, trial, price, and institutional-access searches, and creates duplicate snippet signals.',
+    rec:'Give Pricing unique metadata focused on plans, free access/trial terms, audience tracks, and institutional pricing. Example — Title: "Bayan Medical Exam Prep Plans & Pricing". Description: "Compare Bayan plans for physicians, nurses, and medical students, including free access, premium features, and institutional options." Verify all pricing and trial claims before publishing.'
+  },
+  {
+    sev:'warning',
+    title:'Sample Quiz has no detected H1',
+    area:'On-page',
+    tag:'/sample-quiz',
+    evidence:'Structured extraction returned an empty H1 array on a page with indexable question content.',
+    impact:'Weakens the document’s primary topic signal and accessibility / semantic structure.',
+    rec:'Add one visible H1 such as "Try a Free Board-Style Medical Quiz". Keep the question prompt and category as supporting content.'
+  },
+  {
+    sev:'warning',
+    title:'Homepage and Gulf Licensing page have multiple H1s',
+    area:'On-page',
+    tag:'/, /prometric',
+    evidence:'Homepage returned seven H1s; Prometric returned five H1s.',
+    impact:'Makes primary page topic and section hierarchy less clear to search engines and assistive technologies.',
+    rec:'Keep one primary H1 per page. Convert section headings to H2s and nested headings to H3s.'
+  },
+  {
+    sev:'warning',
+    title:'Nursing exam cards route to the OEN quiz destination',
+    area:'Internal linking',
+    tag:'/nursing',
+    evidence:'Seven visible cards for OEN, DHA, SNLE, QCHP, DOH, Prometric, and NCLEX-RN all point to the same OEN parameterized quiz URL.',
+    impact:'Users can land on the wrong experience; search engines receive weak relevance signals; exam-specific link equity is not distributed to matching pages.',
+    rec:'Create or use distinct exam-matched destinations. Each card should link to a URL whose title, H1, content, and CTA match the visible exam. If all cards intentionally share one question pool, explain that clearly while still providing exam-specific informational pages.'
+  },
+  {
+    sev:'warning',
+    title:'Homepage and OMSB meta descriptions are too long',
+    area:'Metadata',
+    tag:'/, /omsb-exam',
+    evidence:'Homepage description is approximately 297 characters; OMSB description approximately 241 characters.',
+    impact:'Likely truncation and diluted click-through message.',
+    rec:'Rewrite around 150–160 characters, emphasizing one audience, one core benefit, and one clear next step. Avoid unsupported superlatives such as "definitive" or "most comprehensive" unless documented.'
+  },
+  {
+    sev:'warning',
+    title:'Mobile homepage Performance score is 63/100',
+    area:'Performance',
+    tag:'/',
+    evidence:'PageSpeed Insights mobile lab run: Performance 63/100, SEO 92/100, Best Practices 88/100. Run at 2026-09-27T08:32:56.497Z.',
+    impact:'A 63 mobile Performance score suggests that loading and interaction costs may affect mobile experience and conversion, even though the score alone does not identify the cause.',
+    rec:'Run a full Lighthouse opportunity report and prioritize measured savings in this order: (1) largest above-the-fold image and responsive image delivery, (2) JavaScript execution and unused JavaScript, (3) render-blocking CSS/fonts, (4) third-party scripts, (5) server response and caching, (6) layout stability and interaction responsiveness. Do not claim specific LCP/FCP/CLS/TBT causes until the detailed audit values are captured.'
+  },
+  {
+    sev:'warning',
+    title:'Title tags are broadly too long across all 10 priority pages',
+    area:'Metadata',
+    tag:'all priority pages',
+    evidence:'Observed titles range from approximately 65 to 131 characters; common SERP display guidance is often around 50–60 characters, though Google truncation is pixel-based rather than a strict character limit.',
+    impact:'Search snippets may truncate the primary value proposition or place important query terms beyond the visible area.',
+    rec:'Shorten titles, remove redundant brand suffixes, and keep the primary intent near the beginning. Preserve uniqueness across pages. Working examples (not approved production copy): Homepage — "Medical Exam Prep for Doctors, Nurses & Students | Bayan". Gulf Licensing — "Gulf Licensing Exam Prep: DHA, OMSB & SCFHS | Bayan". Courses — "Clinical Medical Courses & Certificates | Bayan".'
+  },
+  {
+    sev:'warning',
+    title:'Sitemap and robots may conflict for auth/utility URLs',
+    area:'Crawlability',
+    tag:'duplicate of critical',
+    evidence:'See the Critical finding above — this is the same issue surfaced under Warning in the source register.',
+    impact:'Duplicate registration; not separately actionable.',
+    rec:'Action the Critical item. No separate work needed.',
+    hidden:true // fold into the critical
+  },
+  {
+    sev:'warning',
+    title:'Deep URL inventory needs crawl and indexation controls',
+    area:'Architecture',
+    tag:'sitemap scope',
+    evidence:'The site map includes many course modules, library records, calculators, and parameterized activation/checkout routes.',
+    impact:'Deep pages can produce duplicate metadata, weak canonical signals, thin content, or crawl budget dilution if every URL is treated as a standalone SEO landing page.',
+    rec:'Classify URLs into: indexable SEO landing pages, indexable supporting content, authenticated/product routes, transactional parameterized routes, utility/legal pages. Then enforce canonical, robots, and sitemap rules by class.'
+  },
+
+  // --- INFO ---
+  {
+    sev:'info',
+    title:'Clear top-level hub structure',
+    area:'Architecture',
+    tag:'/', 
+    evidence:'The homepage routes to audience tracks, courses, calculators, OSCE, virtual patients, flashcards, pricing, sample quiz, and signup.',
+    impact:'Strong foundation for discovery and internal-link modelling.',
+    rec:'Preserve this architecture. Use it as the basis for a consistent internal-linking model: audience page → exam/product pages → supporting articles → conversion page.'
+  },
+  {
+    sev:'info',
+    title:'Potential topic overlap and cannibalization',
+    area:'Architecture',
+    tag:'exam pages',
+    evidence:'Exam-specific pages, Prometric pathways, and blog articles cover overlapping OMSB, DHA, nursing, Arab Board, MRCP, and Gulf licensing topics.',
+    impact:'Multiple pages may compete for the same query, splitting ranking signals.',
+    rec:'Build a keyword-to-URL map. Assign one primary intent to each exam landing page, keep the hub as a category page, and link supporting articles to the canonical destination rather than allowing several pages to compete for the same query.'
+  },
+  {
+    sev:'info',
+    title:'International SEO signals require a dedicated validation pass',
+    area:'Architecture',
+    tag:'hreflang',
+    evidence:'Rendered metadata exposes English content and alternate locale values such as `ar_OM`, `ar_SA`, `ar_AE`, and `en_GB`.',
+    impact:'Metadata fields alone do not confirm a valid hreflang implementation.',
+    rec:'Validate actual hreflang tags, reciprocal return links, locale URLs, self-referencing canonicals, and sitemap alternates.'
+  },
+  {
+    sev:'info',
+    title:'Repeated broad keyword metadata across templates',
+    area:'Metadata',
+    tag:'multiple pages',
+    evidence:'Several templates expose broad repeated `keywords` lists spanning many exams and products.',
+    impact:'The `keywords` meta tag is not a meaningful Google ranking signal; repeated lists add maintenance overhead and can signal unfocused page targeting.',
+    rec:'Prioritize unique title, description, visible content, headings, structured data, and internal links. Keep keyword metadata only if required by another system.'
+  },
+  {
+    sev:'info',
+    title:'Several H1s are generic or motivational',
+    area:'On-page',
+    tag:'pricing, courses, student, postgrad, prometric',
+    evidence:'Examples include `Choose Your Track`, `Courses`, `Medical Student Track`, and `Master Internal Medicine Board Exams.`',
+    impact:'Generic H1s reduce topical clarity and may miss the primary search intent.',
+    rec:'Use descriptive H1s that combine audience/topic and intent, while retaining motivational copy as a subheading. Examples — Pricing: "Medical Exam Preparation Plans for Physicians, Nurses & Students". Courses: "Clinical Medical Courses, Cases & Certificates". Student: "Medical Student Exam Preparation". Postgraduate: "Internal Medicine Board Exam Preparation". Prometric: "Gulf Healthcare Licensing Exam Preparation".'
+  },
+  {
+    sev:'info',
+    title:'Empty alt attributes need intentional review',
+    area:'Accessibility',
+    tag:'/, /pricing',
+    evidence:'Structured extraction returned empty alt values for the homepage hero background, homepage feature-network image, and Pricing sample image.',
+    impact:'None if the images are purely decorative; accessibility and image search impact if they communicate meaningful content.',
+    rec:'Confirm each image’s role. Keep `alt=""` for decorative assets; add concise descriptive alt for meaningful imagery. Avoid keyword stuffing.'
+  },
+  {
+    sev:'info',
+    title:'Nursing logo alt is compressed',
+    area:'Accessibility',
+    tag:'/nursing',
+    evidence:'Logo alt returned as `BayanNursing`.',
+    impact:'Minor — should read as natural brand text, not a concatenated token.',
+    rec:'Use natural brand text such as "Bayan Nursing" if that matches the visual identity; do not add exam keywords to a logo alt.'
+  },
+  {
+    sev:'info',
+    title:'Good alt coverage on key visual pages',
+    area:'Accessibility',
+    tag:'pass on /prometric, /',
+    evidence:'Prometric returned descriptive alt text for hero, process, and feature images; homepage audience cards also had descriptive labels.',
+    impact:'Positive — this is the standard to preserve.',
+    rec:'Preserve this standard on new course, exam, and campaign pages.'
+  },
+  {
+    sev:'info',
+    title:'Audience pages are under-linked to core products and content',
+    area:'Internal linking',
+    tag:'/student, /postgrad, /omsb-exam, /sample-quiz',
+    evidence:'Extracted links show core account and library routes but limited direct links to Courses, OSCE, Virtual Patients, Flashcards, calculators, exam guides, and relevant supporting articles.',
+    impact:'Reduces discovery of conversion-adjacent pages and weakens topical clustering.',
+    rec:'Use contextual internal links, not just navigation links: audience page → relevant products; exam guide → sample quiz, relevant course, pathway access, related articles; blog article → exam hub, course, and Pricing where appropriate.'
+  },
+  {
+    sev:'info',
+    title:'Prometric uses many parameterized conversion links',
+    area:'Internal linking',
+    tag:'/prometric',
+    evidence:'Exam and plan links use `/prometric/activate?...` and `/prometric/checkout?...` URLs.',
+    impact:'Parameterized variants can dilute crawl equity if treated as standalone.',
+    rec:'Keep these links for conversion, but establish clean crawlable exam information pages and define canonical/noindex handling for transaction variants.'
+  },
+  {
+    sev:'info',
+    title:'Courses contains a placeholder `#` link',
+    area:'Internal linking',
+    tag:'/courses',
+    evidence:'`Radiology Basics Coming Soon` links to `https://www.bayan.edu.om/courses#`.',
+    impact:'A placeholder link signals unfinished content and can confuse both users and crawlers.',
+    rec:'Use a non-link "Coming soon" card or a valid waitlist/detail page.'
+  },
+  {
+    sev:'info',
+    title:'Blog is a strong content hub but library URLs are numeric',
+    area:'Architecture',
+    tag:'/blog, /library/{id}',
+    evidence:'Blog links extensively to library records with numeric URLs.',
+    impact:'Numeric URLs reduce information scent and topical clarity for search engines.',
+    rec:'Add breadcrumbs, topic clusters, related-content links, and clear contextual links to exam/course pages. Consider descriptive slugs for future library content; do not migrate existing URLs without a redirect and canonical plan.'
+  },
+  {
+    sev:'info',
+    title:'Sitemaps appear to use a common last-modified timestamp',
+    area:'Crawl hygiene',
+    tag:'sitemap.xml',
+    evidence:'Many visible entries shared `2026-09-27T03:32:03.423Z`.',
+    impact:'A global generation timestamp cannot signal true page freshness.',
+    rec:'Generate `lastmod` from actual content or template changes. A global generation timestamp should not be used as a proxy for page freshness.'
+  },
+  {
+    sev:'info',
+    title:'No CrUX field data was available',
+    area:'Measurement',
+    tag:'site origin',
+    evidence:'Mobile origin query for `https://www.bayan.edu.om` returned `404 — chrome ux report data not found`.',
+    impact:'Not evidence of poor performance — it means field data was unavailable from the queried dataset at audit time.',
+    rec:'Keep collecting real-user Web Vitals through site instrumentation and repeat the CrUX check later. Use field data over lab data for judging whether changes improved real user experience.'
+  },
+
+  // --- PASS ---
+  {
+    sev:'pass',
+    title:'robots.txt is present and broadly sensible',
+    area:'Crawlability',
+    tag:'HTTP 200',
+    evidence:'`User-agent: *`, `Allow: /`, private/authenticated route disallows, sitemap declaration `Sitemap: https://www.bayan.edu.om/sitemap.xml`.',
+    impact:'Positive — the base policy is correct.',
+    rec:'Keep the base policy. Reconcile the specific route blocks against sitemap contents (see Critical finding).'
+  },
+  {
+    sev:'pass',
+    title:'Sitemap exists and is broadly comprehensive',
+    area:'Crawlability',
+    tag:'HTTP 200 · application/xml',
+    evidence:'Includes major public hubs, exam pages, blog articles, course pages/modules, tools, calculators, and other routes.',
+    impact:'Positive — public coverage is broad.',
+    rec:'Keep the sitemap, but remove auth/utility URLs (see Critical finding).'
+  },
+  {
+    sev:'pass',
+    title:'Responsive viewport present on sampled priority pages',
+    area:'Technical',
+    tag:'5 pages checked',
+    evidence:'Homepage, Prometric, Pricing, Courses, Sample Quiz, and OMSB all returned responsive viewport tags. Sampled pages returned `<html lang="en">` where extracted. Site is served over HTTPS and sampled priority pages returned HTTP 200.',
+    impact:'Positive — mobile baseline is correct.',
+    rec:'Retain the responsive viewport and confirm no template introduces horizontal overflow, intrusive interstitials, or materially different mobile content.'
+  }
+];
+
+const findingsEl = document.getElementById('findings');
+
+FINDINGS.forEach((f, i) => {
+  if(f.hidden) return; // fold duplicates
+
+  const el = document.createElement('div');
+  el.className = 'finding ' + f.sev;
+  el.dataset.sev = f.sev;
+
+  const fc = f.sev === 'critical' ? 'var(--critical)'
+            : f.sev === 'warning' ? 'var(--warning)'
+            : f.sev === 'info' ? 'var(--info)'
+            : 'var(--pass)';
+  el.style.setProperty('--fc', fc);
+
+  const badgeLabel = f.sev === 'critical' ? 'critical'
+                    : f.sev === 'warning' ? 'warning'
+                    : f.sev === 'info' ? 'info'
+                    : 'pass';
+
+  const tagHTML = f.area
+    ? `<span class="ftag area">${f.area}</span>` + (f.tag ? `<span class="ftag">${f.tag}</span>` : '')
+    : '';
+
+  const urlsHTML = f.urls
+    ? `<div class="body-block"><div class="bl">Affected URLs</div><div class="body-text" style="font-family:var(--mono);font-size:12px;color:#8fb4ff">${f.urls.join(' · ')}</div></div>`
+    : '';
+
+  const codeHTML = f.code
+    ? `<span class="code-block">${f.code}</span>`
+    : '';
+
+  el.innerHTML = `
+    <button class="finding-head" type="button">
+      <div class="finding-top">
+        <span class="sev-badge ${f.sev}">${badgeLabel}</span>
+        <span class="finding-title">${f.title}</span>
+        <span class="finding-chev">▶</span>
+      </div>
+      <div class="finding-tags">${tagHTML}</div>
+    </button>
+    <div class="finding-body">
+      <div class="finding-body-inner">
+        <div class="finding-body-content">
+          <div class="body-block">
+            <div class="bl evidence"><span class="dot"></span>Evidence</div>
+            <div class="body-text">${f.evidence}</div>
+          </div>
+          <div class="body-block">
+            <div class="bl impact"><span class="dot"></span>Impact</div>
+            <div class="body-text">${f.impact}</div>
+          </div>
+          <div class="body-block">
+            <div class="bl rec"><span class="dot"></span>Recommendation</div>
+            <div class="body-text">${f.rec}${codeHTML}</div>
+          </div>
+          ${urlsHTML}
+        </div>
+      </div>
+    </div>
+  `;
+
+  el.querySelector('.finding-head').addEventListener('click', () => {
+    const isOpen = el.classList.contains('open');
+    findingsEl.querySelectorAll('.finding').forEach(x => x.classList.remove('open'));
+    if(!isOpen) el.classList.add('open');
+  });
+
+  findingsEl.appendChild(el);
+});
+
+/* open the first critical finding by default */
+setTimeout(() => {
+  const first = findingsEl.querySelector('.finding.critical');
+  if(first) first.classList.add('open');
+}, 900);
+
+/* ============================================================
+   SEVERITY FILTER
+   ============================================================ */
+const activeSevs = new Set(['critical','warning','info','pass']);
+const sevChips = document.querySelectorAll('#severityStrip .sev');
+
+sevChips.forEach(chip => {
+  chip.addEventListener('click', () => {
+    const sev = chip.dataset.sev;
+    if(activeSevs.has(sev)){
+      activeSevs.delete(sev);
+      chip.classList.remove('active');
+    } else {
+      activeSevs.add(sev);
+      chip.classList.add('active');
+    }
+    findingsEl.querySelectorAll('.finding').forEach(f => {
+      if(activeSevs.has(f.dataset.sev)){
+        f.style.display = '';
+      } else {
+        f.style.display = 'none';
+      }
+    });
+  });
+});
+
+/* ============================================================
+   PRIORITIZED PLAN
+   ============================================================ */
+const PLAN = [
+  {
+    priority:'Priority 1',
+    label:'Critical validation and indexation controls',
+    color:'var(--critical)',
+    tasks:[
+      {
+        title:'Verify the literal `/courses` canonical in deployed HTML',
+        body:'Inspect the deployed source and confirm a self-referencing canonical.',
+        meta:['owner · engineering/SEO','done when — /courses returns a self-referencing canonical'],
+      },
+      {
+        title:'Reconcile robots.txt and sitemap.xml',
+        body:'Remove login, registration, password reset, authenticated quiz, checkout, and other non-indexable routes from the sitemap unless explicitly intended. Confirm final trailing-slash behavior for public product pages.',
+        meta:['owner · engineering/SEO','done when — every sitemap URL is crawlable, returns 200, is indexable, and has the intended canonical'],
+      },
+      {
+        title:'Create a URL classification table',
+        body:'Classify pages as SEO landing, supporting content, product/authenticated, transaction, utility, or legal. Apply consistent canonical, robots, and sitemap rules by class.',
+        meta:['owner · SEO','deliverable — URL classification doc'],
+      }
+    ]
+  },
+  {
+    priority:'Priority 2',
+    label:'High-impact on-page fixes',
+    color:'var(--warning)',
+    tasks:[
+      {
+        title:'Rewrite unique titles and meta descriptions for the 10 priority pages',
+        body:'Start with Homepage, Pricing, Prometric, OMSB, Nursing, and the audience hubs. Remove redundant brand repetition and keep the primary intent near the front.',
+        meta:['owner · content/SEO','scope — 10 pages'],
+      },
+      {
+        title:'Fix H1 hierarchy',
+        body:'Add one H1 to Sample Quiz. Retain one H1 on Homepage and Prometric; demote section headings. Make generic H1s more descriptive on Pricing, Courses, Student, and Postgrad.',
+        meta:['owner · engineering/content','scope — 6 pages'],
+      },
+      {
+        title:'Fix Nursing pathway relevance',
+        body:'Map each exam card to its correct informational and/or quiz destination. Ensure destination title, H1, copy, canonical, and CTA match the exam.',
+        meta:['owner · engineering/content','scope — /nursing'],
+      },
+      {
+        title:'Strengthen contextual internal links',
+        body:'Connect audience pages to products. Connect exam guides to sample quiz, relevant courses, supporting articles, and the appropriate access page. Add breadcrumbs and related-content modules to blog/library content.',
+        meta:['owner · content/SEO','scope — sitewide'],
+      }
+    ]
+  },
+  {
+    priority:'Priority 3',
+    label:'Performance and accessibility hygiene',
+    color:'var(--info)',
+    tasks:[
+      {
+        title:'Run a complete mobile Lighthouse opportunity review',
+        body:'Capture LCP, FCP, CLS, INP/TBT, TTFB, and opportunity savings. Optimize based on measured evidence rather than generic assumptions.',
+        meta:['owner · engineering','deliverable — full Lighthouse report'],
+      },
+      {
+        title:'Review image alt attributes',
+        body:'Confirm empty values are decorative. Add descriptive alt to meaningful imagery.',
+        meta:['owner · content/engineering','scope — homepage, pricing'],
+      },
+      {
+        title:'Replace the `/courses#` placeholder link',
+        body:'Use a non-link "Coming soon" state or a valid future course/waitlist URL.',
+        meta:['owner · engineering','scope — /courses'],
+      },
+      {
+        title:'Improve library information scent over time',
+        body:'Use descriptive slugs for new library content. Preserve redirects and canonicals if existing numeric URLs are migrated.',
+        meta:['owner · content/engineering','ongoing'],
+      }
+    ]
+  },
+  {
+    priority:'Priority 4',
+    label:'Measurement and ongoing governance',
+    color:'var(--violet)',
+    tasks:[
+      {
+        title:'Establish a recurring technical SEO check',
+        body:'Monitor sitemap/robots consistency, canonical drift, status codes, duplicate titles/descriptions, and redirect behavior.',
+        meta:['owner · SEO','cadence — recurring'],
+      },
+      {
+        title:'Track real-user Web Vitals',
+        body:'Recheck CrUX when data becomes available and compare against RUM measurements.',
+        meta:['owner · engineering','cadence — ongoing'],
+      },
+      {
+        title:'Create a keyword-to-URL map',
+        body:'Prevent cannibalization among Prometric, exam pages, blog posts, and library content.',
+        meta:['owner · SEO/content','deliverable — keyword map'],
+      },
+      {
+        title:'Review date-sensitive exam content',
+        body:'Update OMSB year references and factual exam details on a defined schedule, with citations or source verification for high-stakes claims.',
+        meta:['owner · content','cadence — scheduled'],
+      }
+    ]
+  }
+];
+
+const planEl = document.getElementById('plan');
+
+PLAN.forEach(group => {
+  const g = document.createElement('div');
+  g.className = 'priority-group';
+  g.innerHTML = `
+    <div class="priority-label" style="--plc:${group.color}">
+      <span class="pl-name">${group.priority} — ${group.label}</span>
+      <span class="pl-line"></span>
+      <span class="pl-count">${group.tasks.length} tasks</span>
+    </div>
+  `;
+
+  let counter = 1;
+  group.tasks.forEach(t => {
+    const el = document.createElement('div');
+    el.className = 'task';
+    el.style.setProperty('--tc', group.color);
+    el.innerHTML = `
+      <div class="tnum">${String(counter).padStart(2,'0')}</div>
+      <div class="ttext">
+        <h4>${t.title}</h4>
+        <p>${t.body}</p>
+        <div class="tmeta">
+          ${t.meta.map(m => `<span class="ttag${m.startsWith('owner')?' owner':''}">${m}</span>`).join('')}
+        </div>
+      </div>
+    `;
+    g.appendChild(el);
+    counter++;
+  });
+
+  planEl.appendChild(g);
+});
+
+/* Global numbering across groups */
+(function(){
+  let n = 1;
+  planEl.querySelectorAll('.task .tnum').forEach(el => {
+    el.textContent = String(n).padStart(2,'0');
+    n++;
+  });
+})();
+
+/* ============================================================
+   SEVERITY REGISTER
+   ============================================================ */
+const REGISTER = [
+  { sev:'critical', finding:'`/courses` may have a homepage canonical', area:'Canonicalization', urls:'/courses' },
+  { sev:'critical', finding:'Sitemap and robots/indexation policy may conflict for auth/utility URLs', area:'Crawlability', urls:'/login, /signup, /register, /reset-password, /quiz, /osce, /flashcards, /challenge' },
+  { sev:'warning', finding:'Pricing duplicates homepage title and description', area:'Metadata', urls:'/pricing, /' },
+  { sev:'warning', finding:'Sample Quiz has no H1', area:'On-page', urls:'/sample-quiz' },
+  { sev:'warning', finding:'Homepage and Prometric have multiple H1s', area:'On-page', urls:'/, /prometric' },
+  { sev:'warning', finding:'Nursing exam cards route to the OEN quiz destination', area:'Internal linking', urls:'/nursing' },
+  { sev:'warning', finding:'Mobile homepage Performance score is 63/100', area:'Performance', urls:'/' },
+  { sev:'warning', finding:'Titles are too long across priority pages', area:'Metadata', urls:'All 10 priority pages' },
+  { sev:'warning', finding:'Homepage and OMSB descriptions are too long', area:'Metadata', urls:'/, /omsb-exam' },
+  { sev:'info', finding:'Audience/exam pages under-link to products and supporting content', area:'Internal linking', urls:'/student, /postgrad, /omsb-exam, /sample-quiz' },
+  { sev:'info', finding:'Empty alt attributes require decorative/meaningful confirmation', area:'Accessibility/on-page', urls:'/, /pricing' },
+  { sev:'info', finding:'Placeholder `#` course link', area:'Internal linking', urls:'/courses' },
+  { sev:'info', finding:'Numeric library URLs reduce information scent', area:'Architecture', urls:'/library/{id}' },
+  { sev:'info', finding:'CrUX field data unavailable', area:'Measurement', urls:'Site origin' },
+  { sev:'info', finding:'Uniform sitemap `lastmod` values may be synthetic', area:'Crawl hygiene', urls:'Sitemap' }
+];
+
+const registerEl = document.getElementById('register');
+REGISTER.forEach(r => {
+  const el = document.createElement('div');
+  el.className = 'reg-row';
+  el.innerHTML = `
+    <div><span class="reg-sev ${r.sev}">${r.sev}</span></div>
+    <div class="reg-finding">${r.finding}</div>
+    <div class="reg-area">${r.area}</div>
+    <div class="reg-urls">${r.urls}</div>
+  `;
+  registerEl.appendChild(el);
+});
+
+/* ============================================================
+   SUCCESS CRITERIA
+   ============================================================ */
+const CRITERIA = [
+  { color:'var(--critical)', text:'`/courses` and all important public pages self-canonicalize correctly.' },
+  { color:'var(--critical)', text:'The sitemap contains only intended indexable URLs and has no robots conflicts.' },
+  { color:'var(--warning)',  text:'Each priority page has a unique, focused title and meta description.' },
+  { color:'var(--warning)',  text:'Every indexable priority page has exactly one primary H1.' },
+  { color:'var(--warning)',  text:'Nursing exam cards route to matching destinations.' },
+  { color:'var(--info)',     text:'The homepage and audience pages link contextually to core products and exam content.' },
+  { color:'var(--info)',     text:'The `/courses#` placeholder is removed.' },
+  { color:'var(--violet)',   text:'Mobile PageSpeed Performance improves from the observed `63/100` baseline, with detailed LCP/CLS/interaction evidence captured.' },
+  { color:'var(--violet)',   text:'Real-user Web Vitals are measured through RUM or become available in CrUX.' }
+];
+
+const criteriaEl = document.getElementById('criteria');
+CRITERIA.forEach((c, i) => {
+  const el = document.createElement('div');
+  el.className = 'criterion';
+  el.style.setProperty('--cc', c.color);
+  el.innerHTML = `
+    <div class="cicon">${i+1}</div>
+    <div class="ctext">${c.text}</div>
+  `;
+  criteriaEl.appendChild(el);
+});
+
+/* ============================================================
+   SKIM NAV
+   ============================================================ */
+const skimNav = document.getElementById('skimNav');
+const anchors = [
+  { t:'findings', label:'Findings', target:'findings-sec' },
+  { t:'plan',     label:'Action plan', target:'plan-sec' },
+  { t:'register', label:'Register', target:'register-sec' },
+  { t:'criteria', label:'Success criteria', target:'criteria-sec' }
+];
+
+anchors.forEach((a, i) => {
+  const chip = document.createElement('button');
+  chip.className = 'skim-chip';
+  chip.dataset.t = a.t;
+  chip.innerHTML = `<span class="d"></span>${a.label}`;
+  chip.addEventListener('click', () => {
+    const el = document.getElementById(a.target);
+    if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+  skimNav.appendChild(chip);
+});
+</script>
+</body>
+</html>

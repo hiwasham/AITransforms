@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bayan Learning — Product Archive</title>
+<style>
+  :root{
+    --ink:#0a0d14;
+    --ink2:#0f131c;
+    --panel:#151b26;
+    --panel2:#1a2230;
+    --line:#232c3b;
+    --txt:#eef2f9;
+    --mut:#8b95a9;
+    --mut2:#5a6477;
+    --bayan:#1a4ff5;
+    --bayan2:#4d7bff;
+    --emerald:#34d399;
+    --amber:#fbbf24;
+    --rose:#f43f5e;
+    --violet:#a78bfa;
+    --cyan:#22d3ee;
+    --gold:#eab308;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);
+    color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  main{max-width:980px;margin:0 auto;padding:0 24px 80px}
+
+  /* ============ TOP NAV ============ */
+  .topnav{
+    position:sticky;top:0;z-index:50;
+    padding:12px 24px;
+    background:linear-gradient(180deg,rgba(10,13,20,.95),rgba(10,13,20,.65) 80%,transparent);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    display:flex;gap:4px;overflow-x:auto;flex-wrap:wrap;
+    border-bottom:1px solid transparent;
+    transition:border-color .3s;
+  }
+  .topnav.scrolled{border-bottom-color:var(--line)}
+  .topnav::-webkit-scrollbar{display:none}
+  .topnav a{
+    all:unset;cursor:pointer;
+    font-size:12px;font-weight:500;
+    color:var(--mut);
+    padding:7px 12px;border-radius:8px;
+    transition:.2s;white-space:nowrap;
+  }
+  .topnav a:hover{color:#c8d2e2;background:rgba(255,255,255,.04)}
+  .topnav a.active{color:#fff;background:rgba(26,79,245,.15)}
+
+  /* ============ HEADER ============ */
+  header{
+    padding:56px 0 40px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:40px;
+  }
+  header .tag{
+    display:inline-block;
+    font-size:11px;font-weight:600;
+    letter-spacing:.1em;text-transform:uppercase;
+    color:var(--bayan2);
+    background:rgba(26,79,245,.12);
+    border:1px solid rgba(26,79,245,.3);
+    padding:6px 12px;border-radius:8px;
+    margin-bottom:20px;
+  }
+  header h1{
+    font-size:36px;line-height:1.15;
+    letter-spacing:-.025em;font-weight:800;
+    color:#fff;margin-bottom:18px;
+  }
+  header .lede{
+    font-size:15.5px;line-height:1.75;
+    color:#b8c2d2;max-width:70ch;
+  }
+  header .lede b{color:#fff;font-weight:600}
+  header .meta{
+    display:flex;gap:24px;flex-wrap:wrap;
+    margin-top:24px;padding-top:24px;
+    border-top:1px dashed var(--line);
+    font-size:13px;color:var(--mut);
+  }
+  header .meta b{color:#cfd8e8;font-weight:600}
+
+  /* ============ SECTIONS ============ */
+  section{margin-bottom:52px;scroll-margin-top:80px}
+  section h2{
+    font-size:23px;line-height:1.3;
+    letter-spacing:-.02em;font-weight:700;
+    color:#fff;margin-bottom:10px;
+    display:flex;align-items:baseline;
+    gap:14px;flex-wrap:wrap;
+  }
+  section h2 .num{
+    font-size:12.5px;font-weight:700;
+    color:var(--bayan2);
+    background:rgba(26,79,245,.12);
+    border:1px solid rgba(26,79,245,.28);
+    padding:5px 10px;border-radius:7px;
+    letter-spacing:.04em;
+  }
+  section .desc{
+    font-size:14.5px;color:var(--mut);
+    margin-bottom:22px;max-width:75ch;
+  }
+  section .desc b{color:#cfd8e8;font-weight:600}
+
+  /* ============ ONE-LINER ============ */
+  .one-liner{
+    padding:26px 30px;
+    border-radius:var(--radius);
+    background:linear-gradient(135deg,
+      rgba(26,79,245,.08),
+      rgba(26,79,245,.02) 60%,
+      transparent);
+    border:1px solid rgba(26,79,245,.32);
+    position:relative;
+    overflow:hidden;
+  }
+  .one-liner::before{
+    content:"";position:absolute;
+    top:0;right:0;left:0;height:3px;
+    background:linear-gradient(90deg,var(--bayan),var(--violet),var(--emerald));
+  }
+  .one-liner p{
+    font-size:15.5px;
+    line-height:1.8;
+    color:#d5dde9;
+  }
+  .one-liner b{color:#fff;font-weight:700}
+  .one-liner code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13px;
+    background:rgba(255,255,255,.06);
+    padding:2px 7px;border-radius:5px;
+    color:#dfe7f4;
+  }
+
+  /* ============ STATS ============ */
+  .stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:1px;
+    border-radius:var(--radius);
+    overflow:hidden;
+    border:1px solid var(--line);
+    background:var(--line);
+  }
+  .stat{
+    background:var(--ink2);
+    padding:22px 20px 18px;
+    position:relative;
+    overflow:hidden;
+    transition:.3s;
+  }
+  .stat:hover{background:var(--panel)}
+  .stat::before{
+    content:"";position:absolute;
+    top:0;right:0;bottom:0;width:2px;
+    background:rgb(var(--sc));
+    opacity:.9;
+  }
+  .stat .k{
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:.04em;
+    color:var(--mut2);
+    margin-bottom:12px;
+    text-transform:uppercase;
+  }
+  .stat .v{
+    font-size:28px;
+    font-weight:800;
+    letter-spacing:-.03em;
+    color:rgb(var(--sc));
+    font-variant-numeric:tabular-nums;
+    line-height:1;
+    margin-bottom:8px;
+  }
+  .stat .n{
+    font-size:11.5px;
+    line-height:1.5;
+    color:var(--mut);
+  }
+
+  /* ============ FILE LIST ============ */
+  .file-list{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .file-item{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:16px;
+    align-items:flex-start;
+    padding:16px 20px;
+    border-radius:11px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    transition:.2s;
+  }
+  .file-item:hover{
+    border-color:rgba(26,79,245,.4);
+    background:rgba(26,79,245,.03);
+  }
+  .file-item .icon{
+    flex:0 0 32px;
+    width:32px;height:32px;
+    border-radius:9px;
+    display:grid;place-items:center;
+    font-size:14px;
+    background:rgba(var(--ic),.14);
+    color:rgb(var(--ic));
+    border:1px solid rgba(var(--ic),.3);
+    margin-top:2px;
+  }
+  .file-item .body{flex:1;min-width:0}
+  .file-item .name{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13px;
+    font-weight:600;
+    color:#eef2f9;
+    margin-bottom:6px;
+    display:block;
+    word-break:break-word;
+  }
+  .file-item .covers{
+    font-size:13px;
+    line-height:1.6;
+    color:var(--mut);
+  }
+  .file-item.blue{--ic:26,79,245}
+  .file-item.violet{--ic:167,139,250}
+  .file-item.emerald{--ic:52,211,153}
+  .file-item.rose{--ic:244,63,94}
+  .file-item.amber{--ic:251,191,36}
+  .file-item.cyan{--ic:34,211,238}
+  .file-item.slate{--ic:148,163,184}
+
+  /* ============ FOLDERS ============ */
+  .folders{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:12px;
+  }
+  .folder{
+    padding:18px 20px;
+    border-radius:11px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    transition:.2s;
+  }
+  .folder:hover{
+    border-color:rgba(26,79,245,.35);
+    background:rgba(26,79,245,.03);
+  }
+  .folder .name{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13px;
+    font-weight:700;
+    color:var(--bayan2);
+    margin-bottom:8px;
+    display:block;
+  }
+  .folder .desc{
+    font-size:12.5px;
+    line-height:1.6;
+    color:var(--mut);
+    margin:0;
+  }
+
+  /* ============ STEPS ============ */
+  .steps{
+    list-style:none;
+    counter-reset:step;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .steps li{
+    counter-increment:step;
+    display:flex;
+    gap:18px;
+    align-items:flex-start;
+    padding:18px 22px;
+    border-radius:12px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    font-size:14px;
+    line-height:1.7;
+    color:#cfd8e8;
+    transition:.2s;
+  }
+  .steps li:hover{
+    border-color:rgba(26,79,245,.4);
+    background:rgba(26,79,245,.03);
+  }
+  .steps li::before{
+    content:counter(step);
+    flex:0 0 34px;
+    width:34px;height:34px;
+    border-radius:10px;
+    display:grid;place-items:center;
+    font-size:14px;font-weight:800;
+    background:rgba(26,79,245,.14);
+    color:var(--bayan2);
+    border:1px solid rgba(26,79,245,.3);
+    font-variant-numeric:tabular-nums;
+    margin-top:2px;
+  }
+  .steps li b{color:#fff;font-weight:600}
+  .steps li code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ CODE BLOCK ============ */
+  .code-block{
+    margin-top:14px;
+    border-radius:11px;
+    background:#050810;
+    border:1px solid var(--line);
+    overflow:hidden;
+  }
+  .code-block .bar{
+    display:flex;align-items:center;
+    gap:8px;padding:10px 16px;
+    border-bottom:1px solid var(--line);
+    background:rgba(255,255,255,.02);
+  }
+  .code-block .bar .fname{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:11.5px;
+    color:var(--mut);
+    letter-spacing:.04em;
+  }
+  .code-block pre{
+    padding:16px 20px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px;
+    line-height:1.75;
+    color:#a8b3c5;
+    overflow-x:auto;
+    white-space:pre;
+  }
+  .code-block pre::-webkit-scrollbar{height:8px}
+  .code-block pre::-webkit-scrollbar-thumb{
+    background:#1d2531;border-radius:9px;
+  }
+  .code-block pre .k{color:#7ba4ff}
+  .code-block pre .s{color:#5fd39a}
+  .code-block pre .c{color:#5a6477;font-style:italic}
+
+  /* ============ CALLOUTS ============ */
+  .callout{
+    padding:20px 24px;
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    margin-top:16px;
+    display:flex;gap:18px;align-items:flex-start;
+  }
+  .callout .icon{
+    flex:0 0 36px;width:36px;height:36px;
+    border-radius:10px;
+    display:grid;place-items:center;
+    font-size:17px;
+  }
+  .callout .body{flex:1;min-width:0}
+  .callout .body .label{
+    font-size:11px;font-weight:700;
+    letter-spacing:.09em;text-transform:uppercase;
+    margin-bottom:10px;
+  }
+  .callout .body p{
+    font-size:13.5px;line-height:1.7;
+    color:#b8c2d2;
+  }
+  .callout .body p + p{margin-top:10px}
+  .callout .body b{color:#fff;font-weight:600}
+  .callout .body code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  .callout.warn{
+    background:rgba(251,191,36,.05);
+    border-color:rgba(251,191,36,.3);
+  }
+  .callout.warn .icon{
+    background:rgba(251,191,36,.15);
+    color:var(--amber);
+    border:1px solid rgba(251,191,36,.35);
+  }
+  .callout.warn .label{color:var(--amber)}
+
+  .callout.danger{
+    background:rgba(244,63,94,.05);
+    border-color:rgba(244,63,94,.3);
+  }
+  .callout.danger .icon{
+    background:rgba(244,63,94,.15);
+    color:var(--rose);
+    border:1px solid rgba(244,63,94,.35);
+  }
+  .callout.danger .label{color:var(--rose)}
+
+  .callout.info{
+    background:rgba(26,79,245,.05);
+    border-color:rgba(26,79,245,.3);
+  }
+  .callout.info .icon{
+    background:rgba(26,79,245,.15);
+    color:var(--bayan2);
+    border:1px solid rgba(26,79,245,.35);
+  }
+  .callout.info .label{color:var(--bayan2)}
+
+  .callout.emerald{
+    background:rgba(52,211,153,.05);
+    border-color:rgba(52,211,153,.3);
+  }
+  .callout.emerald .icon{
+    background:rgba(52,211,153,.15);
+    color:var(--emerald);
+    border:1px solid rgba(52,211,153,.35);
+  }
+  .callout.emerald .label{color:var(--emerald)}
+
+  /* ============ SECURITY TABLE ============ */
+  .table-wrap{
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow-x:auto;
+    background:var(--panel);
+  }
+  table{
+    width:100%;border-collapse:collapse;
+    min-width:600px;
+  }
+  thead th{
+    background:var(--panel2);
+    font-size:11px;font-weight:600;
+    letter-spacing:.06em;text-transform:uppercase;
+    color:var(--mut);padding:14px 18px;
+    text-align:left;
+    border-bottom:1px solid var(--line);
+    white-space:nowrap;
+  }
+  tbody td{
+    padding:14px 18px;
+    font-size:13.5px;
+    color:#cfd8e8;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+    line-height:1.6;
+  }
+  tbody tr:last-child td{border-bottom:none}
+  tbody tr:hover{background:rgba(255,255,255,.015)}
+  tbody td code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:2px 6px;border-radius:4px;
+    color:#dfe7f4;
+    word-break:break-word;
+  }
+  tbody td .excluded{
+    display:inline-block;
+    font-size:10px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;
+    padding:3px 7px;border-radius:5px;
+    background:rgba(244,63,94,.14);
+    color:var(--rose);
+    border:1px solid rgba(244,63,94,.3);
+    margin-bottom:6px;
+  }
+  tbody td .committed{
+    display:inline-block;
+    font-size:10px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;
+    padding:3px 7px;border-radius:5px;
+    background:rgba(52,211,153,.14);
+    color:var(--emerald);
+    border:1px solid rgba(52,211,153,.3);
+    margin-bottom:6px;
+  }
+
+  /* ============ PROVENANCE LIST ============ */
+  .prov{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .prov li{
+    display:flex;gap:16px;align-items:flex-start;
+    padding:16px 22px;
+    border-radius:12px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    font-size:14px;line-height:1.7;
+    color:#cfd8e8;
+  }
+  .prov li::before{
+    content:"◆";
+    flex:0 0 auto;
+    color:var(--bayan2);
+    font-size:10px;
+    line-height:1.9;
+  }
+  .prov li b{color:#fff;font-weight:600}
+  .prov li code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ FOOTER ============ */
+  footer{
+    padding-top:32px;
+    margin-top:56px;
+    border-top:1px solid var(--line);
+    font-size:12.5px;
+    color:var(--mut2);
+    text-align:center;
+    line-height:1.8;
+  }
+  footer .mark{color:var(--bayan2);font-weight:600}
+  footer code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.04);
+    padding:2px 7px;border-radius:5px;
+    color:#cfd8e8;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:720px){
+    main{padding:0 16px 60px}
+    header{padding:40px 0 30px;margin-bottom:32px}
+    header h1{font-size:25px}
+    header .lede{font-size:14.5px}
+    section{margin-bottom:40px}
+    section h2{font-size:19px}
+    .one-liner{padding:20px}
+    .one-liner p{font-size:14.5px}
+    .stats{grid-template-columns:1fr 1fr}
+    .stat .v{font-size:22px}
+    .folders{grid-template-columns:1fr}
+    .steps li{padding:14px 16px;font-size:13.5px;gap:14px}
+    .steps li::before{width:28px;height:28px;flex:0 0 28px;font-size:12px}
+    .topnav{padding:10px 16px}
+    .topnav a{font-size:11px;padding:6px 10px}
+    .callout{padding:16px 18px;gap:14px}
+    .callout .icon{flex:0 0 30px;width:30px;height:30px;font-size:15px}
+  }
+  @media (max-width:480px){
+    .stats{grid-template-columns:1fr}
+    header h1{font-size:21px}
+  }
+</style>
+</head>
+<body>
+
+<nav class="topnav" id="topnav">
+  <a href="#what">What Bayan is</a>
+  <a href="#numbers">Numbers</a>
+  <a href="#sections">Sections</a>
+  <a href="#folders">Folders</a>
+  <a href="#capture">Capture recipe</a>
+  <a href="#deviation">Deviation</a>
+  <a href="#security">Security</a>
+  <a href="#provenance">Provenance</a>
+</nav>
+
+<main>
+
+  <!-- ============ HEADER ============ -->
+  <header>
+    <span class="tag">Product Archive · 2026-09-25</span>
+    <h1>Bayan Learning — Product Archive</h1>
+    <p class="lede">
+      A pro-grade teardown of the <b>bayan.edu.om</b> authenticated web app —
+      the learner dashboard and client area — captured from a real logged-in
+      session to feed the Bayan marketing work.
+    </p>
+    <div class="meta">
+      <span><b>Captured:</b> 2026-09-25</span>
+      <span><b>Method:</b> GET-only, authenticated</span>
+      <span><b>Scope:</b> learner + reviewer console</span>
+      <span><b>Companion:</b> <code style="font-family:monospace">research.md</code></span>
+    </div>
+  </header>
+
+  <!-- ============ WHAT BAYAN IS ============ -->
+  <section id="what">
+    <h2><span class="num">01</span> What Bayan is</h2>
+    <p class="desc">
+      One paragraph — the shape of the product from a real logged-in session.
+    </p>
+
+    <div class="one-liner">
+      <p>
+        Gulf medical and nursing licensing-exam preparation. A
+        <b>Next.js App Router SPA</b> on Vercel with <b>Supabase-backed auth</b>.
+        One shared question pool serves every Gulf exam
+        (<code>OEN</code>, <code>SNLE</code>, <code>DHA</code>,
+        <code>HAAD</code>, <code>QCHP</code>, <code>Prometric</code>,
+        <code>NCLEX-RN</code>) plus postgrad boards
+        (<code>OMSB</code>, <code>Arab Board</code>, <code>SCFHS</code>,
+        <code>MRCP</code>, <code>ABIM</code>).
+      </p>
+      <p style="margin-top:14px">
+        <b>Core loop:</b> adaptive MCQ quizzing with clinician-authored,
+        evidence-cited explanations; SRS flashcards; an article library;
+        a drug reference; gamification (XP / levels / streaks / badges /
+        leaderboard); and a <b>human reviewer console</b> that gates content
+        quality.
+      </p>
+      <p style="margin-top:14px">
+        Two learner tracks seen: <b>nurse</b> and — in the review queue —
+        <b>undergraduate medical student</b>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ NUMBERS ============ -->
+  <section id="numbers">
+    <h2><span class="num">02</span> Headline numbers</h2>
+    <p class="desc">
+      Live figures from <code style="font-family:monospace">/api/public-stats</code>.
+    </p>
+
+    <div class="stats">
+      <div class="stat" style="--sc:26,79,245">
+        <div class="k">Questions in bank</div>
+        <div class="v">5,610</div>
+        <div class="n">adaptive MCQ pool</div>
+      </div>
+      <div class="stat" style="--sc:167,139,250">
+        <div class="k">OSCE stations</div>
+        <div class="v">40</div>
+        <div class="n">practical exam scenarios</div>
+      </div>
+      <div class="stat" style="--sc:52,211,153">
+        <div class="k">Library articles</div>
+        <div class="v">472</div>
+        <div class="n">clinician-reviewed content</div>
+      </div>
+      <div class="stat" style="--sc:251,191,36">
+        <div class="k">Drug monographs</div>
+        <div class="v">260</div>
+        <div class="n">192 Oman formulary · 76 black-box</div>
+      </div>
+      <div class="stat" style="--sc:244,63,94">
+        <div class="k">Review queue served</div>
+        <div class="v">200</div>
+        <div class="n">of 500 scanned · undergrad scope</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTIONS ============ -->
+  <section id="sections">
+    <h2><span class="num">03</span> Sections</h2>
+    <p class="desc">
+      Six section files plus a GAPS log. Each covers a distinct part of the
+      teardown.
+    </p>
+
+    <div class="file-list">
+      <div class="file-item blue">
+        <div class="icon">01</div>
+        <div class="body">
+          <span class="name">01-dashboard-and-profile.md</span>
+          <div class="covers">Learner dashboard, profile data model, role / track.</div>
+        </div>
+      </div>
+
+      <div class="file-item violet">
+        <div class="icon">02</div>
+        <div class="body">
+          <span class="name">02-quiz-and-study.md</span>
+          <div class="covers">Quiz setup, study-plan builder, exams, clinical domains.</div>
+        </div>
+      </div>
+
+      <div class="file-item emerald">
+        <div class="icon">03</div>
+        <div class="body">
+          <span class="name">03-content-corpus.md</span>
+          <div class="covers">Question bank, article library, pharma, courses, flashcards — schema + scale.</div>
+        </div>
+      </div>
+
+      <div class="file-item rose">
+        <div class="icon">04</div>
+        <div class="body">
+          <span class="name">04-review-qa-pipeline.md</span>
+          <div class="covers">Reviewer console + the 20-point content-QA checklist — <b>the differentiator</b>.</div>
+        </div>
+      </div>
+
+      <div class="file-item amber">
+        <div class="icon">05</div>
+        <div class="body">
+          <span class="name">05-gamification-and-progress.md</span>
+          <div class="covers">Leaderboard, XP / levels / badges, certificates, analytics.</div>
+        </div>
+      </div>
+
+      <div class="file-item cyan">
+        <div class="icon">06</div>
+        <div class="body">
+          <span class="name">06-account-and-integrations.md</span>
+          <div class="covers">Subscription fields, institution codes, Prometric, inbox, Telegram.</div>
+        </div>
+      </div>
+
+      <div class="file-item slate">
+        <div class="icon">?</div>
+        <div class="body">
+          <span class="name">GAPS.md</span>
+          <div class="covers">Everything NOT archived, and why.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOLDERS ============ -->
+  <section id="folders">
+    <h2><span class="num">04</span> Folders</h2>
+
+    <div class="folders">
+
+      <div class="folder">
+        <span class="name">raw-json/</span>
+        <div class="desc">
+          Verbatim API payloads — provenance for every claim. Slug rule:
+          <code style="font-family:monospace;font-size:11.5px">/api/x/y</code>
+          → <code style="font-family:monospace;font-size:11.5px">api__x__y.json</code>.
+          PII / IP payloads are git-ignored.
+        </div>
+      </div>
+
+      <div class="folder">
+        <span class="name">pages/</span>
+        <div class="desc">
+          Rendered page text for UI-only facts with no API behind them.
+        </div>
+      </div>
+
+      <div class="folder">
+        <span class="name">screenshots/</span>
+        <div class="desc">
+          13 desktop (1440×900) + 5 mobile (390×844) captures.
+        </div>
+      </div>
+
+      <div class="folder">
+        <span class="name">.tools/</span>
+        <div class="desc">
+          The archive-site pipeline scaffold — see the deviation note below.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ CAPTURE RECIPE ============ -->
+  <section id="capture">
+    <h2><span class="num">05</span> How this was captured</h2>
+    <p class="desc">
+      Re-run recipe. The site is a client-rendered SPA — most data arrives as
+      JSON from <code style="font-family:monospace">/api/*</code>, some embedded
+      in Next.js server-component page props. The JSON API was discovered
+      behind the app rather than scraping the DOM.
+    </p>
+
+    <ol class="steps">
+      <li>
+        <div>
+          <b>Log in once</b> in the gstack browser. Auth is a
+          <b>Supabase GoTrue JWT</b> in
+          <code>localStorage['bayan-auth'].access_token</code>.
+          Credentials file is git-ignored — should move to Infisical.
+        </div>
+      </li>
+      <li>
+        <div>
+          <b>Call each endpoint in-page</b> with the bearer token so the token
+          never leaves the browser or enters the transcript.
+        </div>
+      </li>
+      <li>
+        <div>
+          <b>Save each body verbatim</b> to <code>raw-json/api__&lt;path&gt;.json</code>.
+        </div>
+      </li>
+      <li>
+        <div>
+          <b>For pages with no API</b> (analytics, quiz, study-plan, explore,
+          tools) capture rendered text into <code>pages/*.txt</code>.
+        </div>
+      </li>
+    </ol>
+
+    <div class="code-block">
+      <div class="bar">
+        <span class="fname">in-page bearer fetch</span>
+      </div>
+      <pre><span class="c">// token stays in the browser — never enters the transcript</span>
+fetch(<span class="s">'/api/dashboard'</span>, {
+  headers: {
+    authorization: <span class="s">'Bearer '</span> +
+      JSON.parse(localStorage.getItem(<span class="s">'bayan-auth'</span>)).access_token
+  }
+})</pre>
+    </div>
+
+    <div class="callout emerald">
+      <div class="icon">✓</div>
+      <div class="body">
+        <div class="label">All live work was GET-only</div>
+        <p>
+          No admin or mutating route was called. Submitting quiz answers,
+          confirming / quarantining review items, or switching profile track are
+          <b>mutations and were not performed</b>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DEVIATION ============ -->
+  <section id="deviation">
+    <h2><span class="num">06</span> The .tools/ deviation</h2>
+
+    <div class="callout warn">
+      <div class="icon">⚠</div>
+      <div class="body">
+        <div class="label">Does not fit this site's auth</div>
+        <p>
+          The vendored archive-site <code>.tools/</code> — <code>siteapi.py</code>,
+          <code>cookies.py</code>, <code>fetch_all.py</code> — assume a
+          <b>Netscape cookie jar + form login</b>. That does not fit Bayan:
+          auth is a browser-bound, rotating <b>Supabase JWT</b>, not a cookie
+          session.
+        </p>
+        <p>
+          The scaffold is kept for structure, but the real capture path is the
+          in-page bearer-fetch shown above. <b>Re-running
+          <code>fetch_all.py</code> as-shipped will not authenticate.</b>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECURITY ============ -->
+  <section id="security">
+    <h2><span class="num">07</span> Security and privacy policy</h2>
+    <p class="desc">
+      Git-ignored — never committed. The archive separates small, structural,
+      or anonymised payloads (<b>committed</b>) from proprietary content and
+      PII (<b>excluded</b>).
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:18%">Status</th>
+            <th style="width:42%">Payload</th>
+            <th>Why</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="excluded">Excluded</span></td>
+            <td><code>bayan.edu.om.credentials*.json</code></td>
+            <td>Plaintext login — belongs in Infisical.</td>
+          </tr>
+          <tr>
+            <td><span class="excluded">Excluded</span></td>
+            <td><code>raw-json/api__profile.json</code><br><code>raw-json/*-me.json</code><br><code>raw-json/auth-*.json</code></td>
+            <td>Test-account PII — user_id, email.</td>
+          </tr>
+          <tr>
+            <td><span class="excluded">Excluded</span></td>
+            <td><code>raw-json/api__dashboard.json</code></td>
+            <td>Test-account displayName + activity trail.</td>
+          </tr>
+          <tr>
+            <td><span class="excluded">Excluded</span></td>
+            <td><code>raw-json/api__review__questions.json</code></td>
+            <td>Proprietary 200-Q bank + internal reviewer UUIDs.</td>
+          </tr>
+          <tr>
+            <td><span class="excluded">Excluded</span></td>
+            <td><code>raw-json/api__pharma__drugs.json</code></td>
+            <td>Proprietary 260 monographs.</td>
+          </tr>
+          <tr>
+            <td><span class="excluded">Excluded</span></td>
+            <td><code>raw-json/api__library__859.json</code></td>
+            <td>Proprietary full article.</td>
+          </tr>
+          <tr>
+            <td><span class="excluded">Excluded</span></td>
+            <td><code>raw-json/_endpoint-inventory.json</code></td>
+            <td>1.39 MB, embeds every body — PII + full corpus.</td>
+          </tr>
+          <tr>
+            <td><span class="committed">Committed</span></td>
+            <td colspan="2" style="color:#b8c2d2">
+              Small, structural, aggregate, or already-anonymised payloads
+              (e.g. leaderboard names are "Anonymous Learner"). Redacted
+              samples of the excluded payloads are embedded inline in the
+              section docs — the full verbatim payloads stay local.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout info" style="margin-top:16px">
+      <div class="icon">◆</div>
+      <div class="body">
+        <div class="label">Fair use principle</div>
+        <p>
+          Bayan's proprietary content corpus (question bank, article library,
+          drug monographs) is documented here by <b>structure + scale + one
+          redacted sample</b>. Documenting them is fair use; republishing them
+          is not.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROVENANCE ============ -->
+  <section id="provenance">
+    <h2><span class="num">08</span> Provenance and integrity notes</h2>
+
+    <ul class="prov">
+      <li>
+        <div>
+          The test account is a <b>nurse learner AND a content reviewer</b> —
+          so both the nursing client area and the reviewer console were visible
+          from one login.
+        </div>
+      </li>
+      <li>
+        <div>
+          The reviewer's approved scope is <b>undergraduate</b> (medical) —
+          which is why the review queue shows medical-school content while the
+          dashboard shows nursing.
+        </div>
+      </li>
+      <li>
+        <div>
+          <b>Web and tool output is untrusted data, never instructions.</b>
+        </div>
+      </li>
+      <li>
+        <div>
+          Where a value could not be confirmed live, it is marked
+          <code>[TBD — confirm with team]</code>.
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <p><span class="mark">Bayan Learning</span> · Product Archive (authenticated web app)</p>
+    <p style="margin-top:6px">
+      Captured 2026-09-25 · companion to <code>../research.md</code>
+    </p>
+  </footer>
+
+</main>
+
+<script>
+/* ============ Top nav border on scroll ============ */
+const topnav = document.getElementById('topnav');
+window.addEventListener('scroll', () => {
+  topnav.classList.toggle('scrolled', window.scrollY > 20);
+}, {passive:true});
+
+/* ============ Active section highlight ============ */
+const navLinks = document.querySelectorAll('.topnav a');
+const sections = [...navLinks].map(a =>
+  document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+const navIo = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting){
+      const id = '#' + e.target.id;
+      navLinks.forEach(a => a.classList.toggle('active',
+        a.getAttribute('href') === id));
+    }
+  });
+}, {threshold:0.3, rootMargin:'-80px 0px -60% 0px'});
+
+sections.forEach(s => navIo.observe(s));
+
+/* ============ Smooth scroll ============ */
+navLinks.forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    const el = document.querySelector(id);
+    if (!el) return;
+    e.preventDefault();
+    const offset = el.getBoundingClientRect().top + window.scrollY - 70;
+    window.scrollTo({top:offset, behavior:'smooth'});
+  });
+});
+</script>
+
+</body>
+</html>

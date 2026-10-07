@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ABG Answer Page — Review Checklist | Bayan Editorial</title>
+<meta name="description" content="Internal editorial review checklist for the ABG &amp; Acid-Base answer page — approval status, verified facts and publication gate.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0c5c66">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   BAYAN — Design tokens (shared brand system)
+   ============================================================ */
+:root{
+  --font-sans:'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-display:'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-mono:'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --bg:#f5f9fa;
+  --surface:#ffffff;
+  --surface-2:#eef4f5;
+  --ink:#10222e;
+  --ink-soft:#3d5566;
+  --muted:#6b8496;
+  --line:#dde7ea;
+
+  --brand:#0c5c66;
+  --brand-600:#0a4a53;
+  --brand-700:#083a41;
+  --brand-100:#e3f1f2;
+  --accent:#b8862b;
+  --accent-soft:#fdf6e7;
+  --accent-line:#e8d3a4;
+
+  --ok:#12796a;
+  --ok-soft:#e6f4f1;
+  --warn:#9a6b12;
+  --warn-soft:#fdf6e7;
+
+  --radius-sm:10px;
+  --radius:16px;
+  --radius-lg:26px;
+  --shadow-sm:0 1px 2px rgba(16,34,46,.06), 0 4px 14px rgba(16,34,46,.05);
+  --shadow:0 10px 30px rgba(16,34,46,.08);
+  --shadow-lg:0 24px 60px rgba(8,58,65,.18);
+  --maxw:1040px;
+  --header-h:66px;
+}
+
+[data-theme="dark"]{
+  --bg:#0a1317;
+  --surface:#101d23;
+  --surface-2:#16262d;
+  --ink:#e9f2f4;
+  --ink-soft:#b9ccd2;
+  --muted:#8ba3ab;
+  --line:#21363d;
+  --brand:#43bcc8;
+  --brand-600:#2ea4b1;
+  --brand-700:#1d7d89;
+  --brand-100:#0f2529;
+  --accent:#e0b45f;
+  --accent-soft:#241d0f;
+  --accent-line:#4a3a1c;
+  --ok:#4fd1b5;
+  --ok-soft:#0e2723;
+  --warn:#e0b45f;
+  --warn-soft:#241d0f;
+  --shadow-sm:0 1px 2px rgba(0,0,0,.4);
+  --shadow:0 10px 30px rgba(0,0,0,.45);
+  --shadow-lg:0 24px 60px rgba(0,0,0,.55);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+
+body{
+  margin:0;
+  font-family:var(--font-sans);
+  background:var(--bg);
+  color:var(--ink);
+  font-size:17px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  transition:background .3s ease, color .3s ease;
+}
+
+img,svg{max-width:100%;display:block}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+
+h1,h2,h3,h4{
+  font-family:var(--font-display);
+  line-height:1.18;letter-spacing:-.015em;
+  margin:0 0 .6em;color:var(--ink);font-weight:700;
+}
+h1{font-size:clamp(1.9rem,4.2vw,2.9rem)}
+h2{font-size:clamp(1.35rem,2.6vw,1.85rem)}
+h3{font-size:clamp(1.05rem,1.8vw,1.2rem)}
+p{margin:0 0 1.1em}
+ul,ol{margin:0 0 1.1em;padding-left:1.15em}
+li::marker{color:var(--brand)}
+
+.wrap{width:min(100% - 2.5rem, var(--maxw));margin-inline:auto}
+.sr-only{
+  position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
+}
+
+.skip-link{
+  position:absolute;left:-9999px;top:0;z-index:999;
+  background:var(--brand);color:#fff;padding:.7rem 1.1rem;border-radius:0 0 10px 0;
+}
+.skip-link:focus{left:0}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:6px}
+
+/* ============================================================
+   Header
+   ============================================================ */
+.site-header{
+  position:sticky;top:0;z-index:80;
+  background:color-mix(in srgb, var(--surface) 88%, transparent);
+  backdrop-filter:saturate(180%) blur(14px);
+  -webkit-backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{height:var(--header-h);display:flex;align-items:center;gap:1.25rem}
+
+.brand{
+  display:flex;align-items:center;gap:.6rem;
+  font-weight:700;color:var(--ink);text-decoration:none;
+  letter-spacing:-.02em;flex-shrink:0;
+}
+.brand:hover{text-decoration:none}
+.brand-mark{
+  width:34px;height:34px;border-radius:10px;flex:0 0 auto;
+  background:linear-gradient(140deg,var(--brand),#14919f);
+  display:grid;place-items:center;color:#fff;font-family:var(--font-display);
+  font-size:1.05rem;box-shadow:0 6px 16px rgba(12,92,102,.32);
+}
+.brand-text{display:flex;flex-direction:column;line-height:1.05}
+.brand-name{font-size:1.02rem}
+.brand-sub{font-size:.68rem;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--muted)}
+
+.header-nav{display:flex;gap:1.35rem;margin-left:auto;font-size:.88rem;font-weight:500}
+.header-nav a{
+  color:var(--ink-soft);text-decoration:none;padding:.25rem 0;
+  border-bottom:2px solid transparent;transition:.2s;
+}
+.header-nav a:hover{color:var(--brand);border-bottom-color:var(--brand)}
+
+.header-actions{display:flex;align-items:center;gap:.6rem;margin-left:auto}
+.header-nav + .header-actions{margin-left:0}
+
+.icon-btn{
+  width:38px;height:38px;border-radius:11px;border:1px solid var(--line);
+  background:var(--surface);color:var(--ink-soft);cursor:pointer;
+  display:grid;place-items:center;transition:.2s;font-size:1rem;padding:0;
+}
+.icon-btn:hover{border-color:var(--brand);color:var(--brand);transform:translateY(-1px)}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  font:inherit;font-weight:600;font-size:.9rem;
+  padding:.65rem 1.15rem;border-radius:12px;border:1px solid transparent;
+  cursor:pointer;text-decoration:none;white-space:nowrap;
+  transition:transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease, color .18s ease;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 8px 20px rgba(12,92,102,.28)}
+.btn-primary:hover{background:var(--brand-600)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--brand);color:var(--brand)}
+.btn-sm{padding:.5rem .9rem;font-size:.83rem}
+
+/* ============================================================
+   Hero
+   ============================================================ */
+.hero{padding:2.5rem 0 1rem}
+.hero-panel{
+  position:relative;overflow:hidden;
+  border-radius:var(--radius-lg);
+  padding:clamp(1.9rem,4.4vw,3.1rem);
+  background:
+    radial-gradient(900px 420px at 88% -10%, rgba(47,182,196,.5), transparent 60%),
+    radial-gradient(700px 400px at 5% 110%, rgba(184,134,43,.3), transparent 62%),
+    linear-gradient(135deg,#083a41 0%, #0c5c66 48%, #0f7d8a 100%);
+  color:#eaf6f7;
+  box-shadow:var(--shadow-lg);
+}
+.hero-panel::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,.14) 1px, transparent 1px);
+  background-size:22px 22px;opacity:.4;
+  mask-image:linear-gradient(to bottom, rgba(0,0,0,.7), transparent 75%);
+  -webkit-mask-image:linear-gradient(to bottom, rgba(0,0,0,.7), transparent 75%);
+}
+.hero-grid{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.6fr);
+  gap:clamp(1.6rem,4vw,2.8rem);align-items:center;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.55rem;
+  background:rgba(255,255,255,.13);
+  border:1px solid rgba(255,255,255,.28);
+  padding:.4rem .9rem;border-radius:999px;
+  font-size:.74rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+  color:#d8f1f4;margin-bottom:1.15rem;
+}
+.eyebrow .dot{
+  width:7px;height:7px;border-radius:50%;background:#5fe0c4;
+  box-shadow:0 0 0 4px rgba(95,224,196,.22);
+  animation:pulse 2.4s ease-in-out infinite;
+}
+@keyframes pulse{
+  0%,100%{box-shadow:0 0 0 4px rgba(95,224,196,.22)}
+  50%{box-shadow:0 0 0 8px rgba(95,224,196,.06)}
+}
+.hero h1{color:#fff;margin-bottom:.65rem;text-wrap:balance}
+.hero-lead{
+  font-size:clamp(.98rem,1.5vw,1.08rem);
+  color:#cfebee;max-width:58ch;margin-bottom:1.5rem;
+}
+.hero-meta{
+  display:flex;flex-wrap:wrap;gap:.5rem .9rem;
+  font-size:.79rem;color:#a9d6db;font-weight:500;
+}
+.hero-meta span{display:inline-flex;align-items:center;gap:.4rem}
+
+/* Progress dial */
+.dial-card{
+  background:rgba(255,255,255,.11);
+  border:1px solid rgba(255,255,255,.26);
+  border-radius:20px;
+  padding:1.5rem 1.4rem 1.3rem;
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  box-shadow:0 18px 40px rgba(0,0,0,.2);
+  text-align:center;
+}
+.dial{
+  position:relative;width:132px;height:132px;margin:0 auto .9rem;
+}
+.dial svg{transform:rotate(-90deg);width:100%;height:100%}
+.dial-track{fill:none;stroke:rgba(255,255,255,.2);stroke-width:9}
+.dial-fill{
+  fill:none;stroke:#5fe0c4;stroke-width:9;stroke-linecap:round;
+  stroke-dasharray:213.6;stroke-dashoffset:213.6;
+  transition:stroke-dashoffset .6s cubic-bezier(.4,0,.2,1), stroke .3s ease;
+}
+.dial-fill.complete{stroke:#7ff0d4}
+.dial-value{
+  position:absolute;inset:0;display:grid;place-content:center;
+  font-family:var(--font-display);line-height:1;
+}
+.dial-value b{font-size:1.85rem;color:#fff;font-weight:700}
+.dial-value small{display:block;font-family:var(--font-sans);font-size:.68rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#9fd9de;margin-top:.35rem}
+.dial-label{font-size:.82rem;color:#cfebee;margin:0;font-weight:500}
+.dial-status{
+  display:inline-flex;align-items:center;gap:.4rem;
+  margin-top:.75rem;padding:.32rem .8rem;border-radius:999px;
+  font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+  background:rgba(95,224,196,.18);color:#8ff3da;
+  border:1px solid rgba(95,224,196,.35);
+}
+.dial-status.pending{background:rgba(224,180,95,.16);color:#f0cf8d;border-color:rgba(224,180,95,.4)}
+
+/* ============================================================
+   Sections
+   ============================================================ */
+.article{padding:2.4rem 0 1rem}
+
+.panel{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:var(--radius-lg);
+  padding:clamp(1.5rem,3.2vw,2.3rem);
+  box-shadow:var(--shadow-sm);
+  margin-bottom:1.6rem;
+}
+
+.section-head{max-width:70ch;margin-bottom:1.4rem}
+.section-kicker{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-size:.71rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--brand);margin-bottom:.6rem;
+}
+.section-kicker::before{
+  content:"";width:22px;height:2px;border-radius:2px;background:var(--brand);
+}
+.section-head h2{margin-bottom:.35rem}
+.section-sub{color:var(--muted);font-size:.94rem;margin:0}
+
+/* Toolbar */
+.toolbar{
+  display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;
+  justify-content:space-between;
+  padding-bottom:1.1rem;margin-bottom:1.1rem;
+  border-bottom:1px solid var(--line);
+}
+.toolbar-count{
+  font-size:.85rem;color:var(--ink-soft);font-weight:500;
+  display:inline-flex;align-items:center;gap:.55rem;
+}
+.toolbar-count b{color:var(--ink);font-weight:700}
+.chip-mini{
+  display:inline-flex;align-items:center;gap:.35rem;
+  background:var(--ok-soft);color:var(--ok);
+  border:1px solid color-mix(in srgb,var(--ok) 26%, transparent);
+  font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  padding:.24rem .62rem;border-radius:999px;
+}
+.chip-mini.pending{
+  background:var(--warn-soft);color:var(--warn);
+  border-color:color-mix(in srgb,var(--warn) 30%, transparent);
+}
+.toolbar-actions{display:flex;flex-wrap:wrap;gap:.45rem}
+
+/* ============================================================
+   Checklist
+   ============================================================ */
+.checklist{list-style:none;margin:0;padding:0;display:grid;gap:.65rem}
+
+.check-item{
+  position:relative;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:var(--surface);
+  transition:border-color .2s ease, background .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+.check-item:hover{border-color:color-mix(in srgb,var(--brand) 32%, var(--line));box-shadow:var(--shadow-sm)}
+
+.check-item.is-done{
+  background:color-mix(in srgb,var(--ok) 5%, var(--surface));
+  border-color:color-mix(in srgb,var(--ok) 26%, var(--line));
+}
+
+.check-item input[type="checkbox"]{
+  position:absolute;opacity:0;width:1px;height:1px;margin:0;
+}
+
+.check-item label{
+  display:grid;
+  grid-template-columns:34px minmax(0,1fr) auto;
+  gap:.95rem;
+  align-items:start;
+  padding:1.05rem 1.2rem;
+  cursor:pointer;
+  border-radius:var(--radius);
+  margin:0;
+}
+
+.box{
+  width:26px;height:26px;border-radius:8px;
+  border:2px solid color-mix(in srgb,var(--muted) 55%, transparent);
+  background:var(--surface);
+  display:grid;place-items:center;
+  transition:.22s cubic-bezier(.4,0,.2,1);
+  margin-top:.1rem;
+  flex:0 0 auto;
+}
+.box svg{width:14px;height:14px;stroke:#fff;stroke-width:3.2;fill:none;stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:22;stroke-dashoffset:22;transition:stroke-dashoffset .28s ease .05s}
+
+.check-item input:checked + label .box{
+  background:var(--ok);
+  border-color:var(--ok);
+  transform:scale(1.04);
+}
+.check-item input:checked + label .box svg{stroke-dashoffset:0}
+
+.check-item input:focus-visible + label .box{
+  outline:3px solid var(--brand);outline-offset:3px;
+}
+
+.check-body{min-width:0}
+.check-text{
+  font-size:.97rem;color:var(--ink);font-weight:500;line-height:1.55;
+  transition:color .2s ease;
+  margin:0;
+}
+.check-item input:checked + label .check-text{color:var(--ink)}
+.check-item:not(.is-done) .check-text{color:var(--ink-soft)}
+
+.check-note{
+  font-size:.83rem;color:var(--muted);margin:.35rem 0 0;line-height:1.5;
+}
+
+.check-tag{
+  font-family:var(--font-sans);
+  font-size:.66rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
+  padding:.26rem .6rem;border-radius:7px;
+  background:var(--brand-100);color:var(--brand);
+  white-space:nowrap;margin-top:.15rem;
+}
+[data-theme="dark"] .check-tag{color:var(--brand)}
+
+.check-item.is-done .check-tag{
+  background:var(--ok-soft);color:var(--ok);
+}
+
+/* Strikethrough-free completion accent */
+.check-item.is-done::before{
+  content:"";position:absolute;left:0;top:14px;bottom:14px;width:3px;
+  border-radius:0 3px 3px 0;background:var(--ok);
+}
+
+/* ============================================================
+   Status summary grid
+   ============================================================ */
+.stat-grid{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:.8rem;margin-top:1.4rem;
+}
+.stat{
+  background:var(--surface-2);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:1.05rem 1.15rem;
+}
+.stat-label{
+  font-size:.68rem;font-weight:800;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:.35rem;
+}
+.stat-value{
+  font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--ink);
+  line-height:1.15;
+}
+.stat-value.ok{color:var(--ok)}
+.stat-value.warn{color:var(--warn)}
+.stat-hint{font-size:.79rem;color:var(--muted);margin:.25rem 0 0}
+
+/* ============================================================
+   Files
+   ============================================================ */
+.file-list{list-style:none;margin:0;padding:0;display:grid;gap:.6rem}
+.file-item{
+  display:flex;align-items:center;gap:.85rem;
+  border:1px solid var(--line);border-radius:var(--radius);
+  background:var(--surface);padding:.85rem 1.1rem;
+  transition:.2s ease;
+}
+.file-item:hover{border-color:color-mix(in srgb,var(--brand) 34%, var(--line));transform:translateX(3px);box-shadow:var(--shadow-sm)}
+.file-icon{
+  flex:0 0 auto;width:36px;height:36px;border-radius:10px;
+  display:grid;place-items:center;font-size:.68rem;font-weight:800;
+  font-family:var(--font-sans);letter-spacing:.04em;
+  background:var(--brand-100);color:var(--brand);
+}
+[data-theme="dark"] .file-icon{color:var(--brand)}
+.file-name{
+  font-family:var(--font-mono);font-size:.82rem;color:var(--ink);
+  word-break:break-all;line-height:1.4;
+}
+.file-meta{font-size:.76rem;color:var(--muted);margin-top:.15rem}
+
+/* ============================================================
+   Callouts
+   ============================================================ */
+.callout{
+  display:flex;gap:1rem;
+  border-radius:var(--radius);
+  padding:1.15rem 1.35rem;
+  margin:1.4rem 0 0;
+  border:1px solid var(--line);
+  background:var(--surface);
+}
+.callout-icon{
+  flex:0 0 auto;width:38px;height:38px;border-radius:11px;
+  display:grid;place-items:center;font-size:1.05rem;
+}
+.callout-body{font-size:.93rem;color:var(--ink-soft);min-width:0}
+.callout-body p:last-child{margin-bottom:0}
+.callout-body strong{color:var(--ink)}
+
+.callout.gate{
+  background:var(--accent-soft);
+  border-color:var(--accent-line);
+  border-left:4px solid var(--accent);
+}
+.callout.gate .callout-icon{
+  background:color-mix(in srgb,var(--accent) 18%, transparent);
+  color:var(--accent);
+}
+
+.callout.good{
+  background:var(--ok-soft);
+  border-color:color-mix(in srgb,var(--ok) 26%, var(--line));
+  border-left:4px solid var(--ok);
+}
+.callout.good .callout-icon{
+  background:color-mix(in srgb,var(--ok) 16%, transparent);
+  color:var(--ok);
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.site-footer{
+  background:var(--surface);
+  border-top:1px solid var(--line);
+  padding:2.2rem 0 1.8rem;margin-top:2.4rem;
+  font-size:.86rem;color:var(--muted);
+}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:2rem}
+.footer-grid h4{
+  font-family:var(--font-sans);font-size:.72rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink);margin-bottom:.85rem;font-weight:700;
+}
+.footer-links{list-style:none;padding:0;margin:0}
+.footer-links li{margin-bottom:.45rem}
+.footer-links a{color:var(--ink-soft);font-size:.85rem}
+.footer-links a:hover{color:var(--brand)}
+.footer-bottom{
+  margin-top:1.8rem;padding-top:1.3rem;border-top:1px solid var(--line);
+  display:flex;flex-wrap:wrap;gap:.8rem;justify-content:space-between;
+  font-size:.78rem;
+}
+
+/* Back to top */
+.to-top{
+  position:fixed;right:1.2rem;bottom:1.2rem;z-index:90;
+  width:44px;height:44px;border-radius:50%;
+  background:var(--brand);color:#fff;border:0;cursor:pointer;
+  display:grid;place-items:center;font-size:1rem;
+  box-shadow:0 12px 28px rgba(12,92,102,.35);
+  opacity:0;visibility:hidden;transform:translateY(10px);
+  transition:.28s ease;
+}
+.to-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+.to-top:hover{background:var(--brand-600);transform:translateY(-3px)}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .dial-card{max-width:340px;margin-inline:auto}
+  .header-nav{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:680px){
+  body{font-size:16px}
+  .stat-grid{grid-template-columns:1fr}
+  .check-item label{grid-template-columns:28px minmax(0,1fr);padding:.95rem 1rem}
+  .check-tag{grid-column:2;justify-self:start;margin-top:.3rem}
+  .footer-grid{grid-template-columns:1fr}
+  .toolbar{flex-direction:column;align-items:flex-start}
+}
+
+@media print{
+  .site-header,.to-top,.toolbar-actions{display:none!important}
+  body{background:#fff;font-size:11pt}
+  .hero-panel{background:#0c5c66!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .panel{break-inside:avoid;box-shadow:none;border:1px solid #ccc}
+  .check-item{break-inside:avoid}
+  a{color:#000;text-decoration:underline}
+}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="https://www.bayan.edu.om/" aria-label="Bayan home">
+      <span class="brand-mark" aria-hidden="true">B</span>
+      <span class="brand-text">
+        <span class="brand-name">Bayan</span>
+        <span class="brand-sub">Editorial Review</span>
+      </span>
+    </a>
+
+    <nav class="header-nav" aria-label="Primary">
+      <a href="#checklist">Checklist</a>
+      <a href="#summary">Summary</a>
+      <a href="#files">Files</a>
+      <a href="#gate">Publication gate</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch colour theme" title="Switch theme">
+        <span id="themeIcon" aria-hidden="true">◐</span>
+      </button>
+      <button class="icon-btn" id="printBtn" type="button" aria-label="Print this checklist" title="Print">
+        <span aria-hidden="true">⎙</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-panel">
+        <div class="hero-grid">
+          <div>
+            <span class="eyebrow"><span class="dot" aria-hidden="true"></span> Internal · Approval required</span>
+            <h1>ABG Answer Page — Review Checklist</h1>
+            <p class="hero-lead">
+              Seven editorial checks covering answer structure, verified facts, content gaps,
+              claim safety, linking and publication governance for the ABG &amp; Acid-Base answer page.
+            </p>
+            <div class="hero-meta">
+              <span>📄 1 answer page</span>
+              <span>🔍 7 review items</span>
+              <span>🛡️ 0 unverified claims</span>
+            </div>
+          </div>
+
+          <div class="dial-card">
+            <div class="dial" role="img" aria-labelledby="dialAria">
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <circle class="dial-track" cx="60" cy="60" r="34"></circle>
+                <circle class="dial-fill" id="dialFill" cx="60" cy="60" r="34"></circle>
+              </svg>
+              <div class="dial-value">
+                <b id="dialCount">7/7</b>
+                <small>Checks</small>
+              </div>
+            </div>
+            <p class="dial-label" id="dialAria">All review items complete</p>
+            <span class="dial-status" id="dialStatus">✓ Ready for approval</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <article class="article">
+    <div class="wrap">
+
+      <!-- ================= CHECKLIST ================= -->
+      <section class="panel" id="checklist">
+        <div class="section-head">
+          <span class="section-kicker">Review items</span>
+          <h2>Editorial checklist</h2>
+          <p class="section-sub">
+            Each item below was verified against the draft answer page and the evidence gap list.
+            Toggle an item to re-run the approval status.
+          </p>
+        </div>
+
+        <div class="toolbar">
+          <span class="toolbar-count">
+            <b id="toolbarDone">7</b> of <b>7</b> complete
+            <span class="chip-mini" id="toolbarChip">All passed</span>
+          </span>
+          <div class="toolbar-actions">
+            <button class="btn btn-ghost btn-sm" type="button" id="checkAll">Mark all complete</button>
+            <button class="btn btn-ghost btn-sm" type="button" id="clearAll">Reset</button>
+          </div>
+        </div>
+
+        <ul class="checklist" id="checklistList">
+
+          <li class="check-item is-done">
+            <input type="checkbox" id="item-1" checked>
+            <label for="item-1">
+              <span class="box" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="4,12.5 9.5,18 20,6.5"/></svg>
+              </span>
+              <span class="check-body">
+                <span class="check-text">Leads with a direct answer to the tested ABG course question.</span>
+                <span class="check-note">The page opens with a plain-language answer before any supporting detail or caveats.</span>
+              </span>
+              <span class="check-tag">Structure</span>
+            </label>
+          </li>
+
+          <li class="check-item is-done">
+            <input type="checkbox" id="item-2" checked>
+            <label for="item-2">
+              <span class="box" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="4,12.5 9.5,18 20,6.5"/></svg>
+              </span>
+              <span class="check-body">
+                <span class="check-text">Covers certificate, clinical cases, intended learners, format, and post-course capability.</span>
+                <span class="check-note">All five question areas are addressed as separate, clearly headed sections.</span>
+              </span>
+              <span class="check-tag">Coverage</span>
+            </label>
+          </li>
+
+          <li class="check-item is-done">
+            <input type="checkbox" id="item-3" checked>
+            <label for="item-3">
+              <span class="box" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="4,12.5 9.5,18 20,6.5"/></svg>
+              </span>
+              <span class="check-body">
+                <span class="check-text">States verified facts: free course title, 5 modules, 10 cases, certificate on completion, reading modules and clinical cases, QR-verified certificate language on the homepage.</span>
+                <span class="check-note">Each fact is traceable to the public course listing, the course catalogue, or the Bayan homepage.</span>
+              </span>
+              <span class="check-tag">Accuracy</span>
+            </label>
+          </li>
+
+          <li class="check-item is-done">
+            <input type="checkbox" id="item-4" checked>
+            <label for="item-4">
+              <span class="box" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="4,12.5 9.5,18 20,6.5"/></svg>
+              </span>
+              <span class="check-body">
+                <span class="check-text">Marks unavailable or unverified details as content gaps.</span>
+                <span class="check-note">Learner profile, delivery mode, time commitment and learning outcomes are flagged as unconfirmed — not implied.</span>
+              </span>
+              <span class="check-tag">Transparency</span>
+            </label>
+          </li>
+
+          <li class="check-item is-done">
+            <input type="checkbox" id="item-5" checked>
+            <label for="item-5">
+              <span class="box" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="4,12.5 9.5,18 20,6.5"/></svg>
+              </span>
+              <span class="check-body">
+                <span class="check-text">Avoids unsupported claims about accreditation, competence, exam outcomes, delivery mode, or learner eligibility.</span>
+                <span class="check-note">No CPD, licensing, pass-rate, patient-management or exam-alignment language appears anywhere on the page.</span>
+              </span>
+              <span class="check-tag">Compliance</span>
+            </label>
+          </li>
+
+          <li class="check-item is-done">
+            <input type="checkbox" id="item-6" checked>
+            <label for="item-6">
+              <span class="box" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="4,12.5 9.5,18 20,6.5"/></svg>
+              </span>
+              <span class="check-body">
+                <span class="check-text">Links to the existing public ABG course page.</span>
+                <span class="check-note">The primary call to action points to the live <code>/courses/abg-analysis</code> URL.</span>
+              </span>
+              <span class="check-tag">Linking</span>
+            </label>
+          </li>
+
+          <li class="check-item is-done">
+            <input type="checkbox" id="item-7" checked>
+            <label for="item-7">
+              <span class="box" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="4,12.5 9.5,18 20,6.5"/></svg>
+              </span>
+              <span class="check-body">
+                <span class="check-text">Publication remains approval-gated; no site or production change was made.</span>
+                <span class="check-note">This checklist confirms editorial readiness only. Publishing requires sign-off from the course owner.</span>
+              </span>
+              <span class="check-tag">Governance</span>
+            </label>
+          </li>
+
+        </ul>
+
+        <!-- Summary -->
+        <div class="stat-grid" id="summary">
+          <div class="stat">
+            <div class="stat-label">Items complete</div>
+            <div class="stat-value ok" id="statComplete">7 / 7</div>
+            <p class="stat-hint">Editorial review finished</p>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Verified sources</div>
+            <div class="stat-value">5</div>
+            <p class="stat-hint">Course page, catalogue, homepage, sitemap, robots.txt</p>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Claims excluded</div>
+            <div class="stat-value">7</div>
+            <p class="stat-hint">No accreditation, competence or outcome promises</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= FILES ================= -->
+      <section class="panel" id="files">
+        <div class="section-head">
+          <span class="section-kicker">Attachments</span>
+          <h2>Files for review</h2>
+          <p class="section-sub">Two documents support this checklist. Both sit outside production and require no deployment to read.</p>
+        </div>
+
+        <ul class="file-list">
+          <li class="file-item">
+            <span class="file-icon" aria-hidden="true">MD</span>
+            <span>
+              <span class="file-name">resources/abg-course-answer-page-draft.md</span>
+              <span class="file-meta">Draft answer page · unpublished · pending fact confirmation</span>
+            </span>
+          </li>
+          <li class="file-item">
+            <span class="file-icon" aria-hidden="true">MD</span>
+            <span>
+              <span class="file-name">resources/abg-course-evidence-gaps.md</span>
+              <span class="file-meta">Evidence gap list · five open confirmation areas</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="callout good">
+          <div class="callout-icon" aria-hidden="true">✓</div>
+          <div class="callout-body">
+            <p><strong>No production impact.</strong> Neither file is published, indexed or referenced from the live site.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= GATE ================= -->
+      <section class="panel" id="gate">
+        <div class="section-head">
+          <span class="section-kicker">Governance</span>
+          <h2>Publication gate</h2>
+          <p class="section-sub">Editorial review is complete. Publication is still blocked on course-owner confirmation.</p>
+        </div>
+
+        <div class="callout gate">
+          <div class="callout-icon" aria-hidden="true">⚠</div>
+          <div class="callout-body">
+            <p><strong>Do not publish until the course owner confirms the five gap areas</strong> — especially intended learners and post-course outcomes.</p>
+            <p style="margin-bottom:0">
+              The current draft is suitable for editorial review and fact confirmation only.
+              Once those confirmations are received, the answer page can move to publication review
+              with the verified facts already in place.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Print summary block -->
+      <div class="callout" style="margin-top:0">
+        <div class="callout-icon" aria-hidden="true" style="background:var(--brand-100);color:var(--brand)">🖨</div>
+        <div class="callout-body">
+          <p style="margin-bottom:0">
+            <strong>Need a signed copy?</strong> Use the print button in the header to generate a clean,
+            print-optimised version of this checklist with the completion count included.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </article>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="https://www.bayan.edu.om/" style="margin-bottom:.85rem">
+          <span class="brand-mark" aria-hidden="true">B</span>
+          <span class="brand-text">
+            <span class="brand-name">Bayan</span>
+            <span class="brand-sub">Editorial Review</span>
+          </span>
+        </a>
+        <p style="font-size:.85rem;max-width:38ch;margin-bottom:0">
+          Internal review artefact for the ABG &amp; Acid-Base answer page.
+          Not for publication or indexing.
+        </p>
+      </div>
+
+      <div>
+        <h4>On this page</h4>
+        <ul class="footer-links">
+          <li><a href="#checklist">Editorial checklist</a></li>
+          <li><a href="#summary">Status summary</a></li>
+          <li><a href="#files">Files for review</a></li>
+          <li><a href="#gate">Publication gate</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Related</h4>
+        <ul class="footer-links">
+          <li><a href="https://www.bayan.edu.om/courses/abg-analysis">ABG &amp; Acid-Base course</a></li>
+          <li><a href="https://www.bayan.edu.om/courses">Course catalogue</a></li>
+          <li><a href="https://www.bayan.edu.om/">Bayan homepage</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Bayan. Internal document — do not distribute.</span>
+      <span id="stamp">Checked 26 September 2026 · Approval pending</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Back to top">↑</button>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- Theme toggle (persisted) ---------- */
+  var root = document.documentElement;
+  var toggle = document.getElementById('themeToggle');
+  var icon = document.getElementById('themeIcon');
+
+  function applyTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    if (icon) icon.textContent = theme === 'dark' ? '☀' : '◐';
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', theme === 'dark' ? '#0a1317' : '#0c5c66');
+  }
+
+  var stored = null;
+  try { stored = localStorage.getItem('bayan-theme'); } catch (e) {}
+  var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(stored || (prefersDark ? 'dark' : 'light'));
+
+  if (toggle) {
+    toggle.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+      try { localStorage.setItem('bayan-theme', next); } catch (e) {}
+    });
+  }
+
+  /* ---------- Checklist state ---------- */
+  var CIRC = 2 * Math.PI * 34; // ≈ 213.6
+  var items = Array.prototype.slice.call(document.querySelectorAll('.check-item'));
+  var total = items.length;
+
+  var dialFill = document.getElementById('dialFill');
+  var dialCount = document.getElementById('dialCount');
+  var dialStatus = document.getElementById('dialStatus');
+  var dialAria = document.getElementById('dialAria');
+  var toolbarDone = document.getElementById('toolbarDone');
+  var toolbarChip = document.getElementById('toolbarChip');
+  var statComplete = document.getElementById('statComplete');
+  var stamp = document.getElementById('stamp');
+
+  function render() {
+    var done = items.filter(function (li) {
+      var cb = li.querySelector('input[type="checkbox"]');
+      return cb && cb.checked;
+    }).length;
+
+    /* Row styling */
+    items.forEach(function (li) {
+      var cb = li.querySelector('input[type="checkbox"]');
+      li.classList.toggle('is-done', !!(cb && cb.checked));
+    });
+
+    /* Dial */
+    if (dialFill) {
+      var offset = CIRC - (done / total) * CIRC;
+      dialFill.style.strokeDashoffset = offset.toFixed(2);
+      dialFill.classList.toggle('complete', done === total);
+    }
+    if (dialCount) dialCount.textContent = done + '/' + total;
+
+    /* Status pill */
+    if (dialStatus) {
+      var ready = done === total;
+      dialStatus.textContent = ready ? '✓ Ready for approval' : '⚠ ' + (total - done) + ' item(s) outstanding';
+      dialStatus.classList.toggle('pending', !ready);
+    }
+    if (dialAria) {
+      dialAria.textContent = done === total
+        ? 'All review items complete'
+        : done + ' of ' + total + ' review items complete';
+    }
+
+    /* Toolbar */
+    if (toolbarDone) toolbarDone.textContent = done;
+    if (toolbarChip) {
+      var ready2 = done === total;
+      toolbarChip.textContent = ready2 ? 'All passed' : 'In review';
+      toolbarChip.classList.toggle('pending', !ready2);
+    }
+
+    /* Summary */
+    if (statComplete) {
+      statComplete.textContent = done + ' / ' + total;
+      statComplete.classList.toggle('ok', done === total);
+      statComplete.classList.toggle('warn', done !== total);
+    }
+
+    /* Footer stamp */
+    if (stamp) {
+      stamp.textContent = done === total
+        ? 'Checked 26 September 2026 · Ready for approval'
+        : 'Checked 26 September 2026 · ' + (total - done) + ' item(s) outstanding';
+    }
+  }
+
+  items.forEach(function (li) {
+    var cb = li.querySelector('input[type="checkbox"]');
+    if (cb) cb.addEventListener('change', render);
+  });
+
+  var checkAll = document.getElementById('checkAll');
+  if (checkAll) {
+    checkAll.addEventListener('click', function () {
+      items.forEach(function (li) {
+        var cb = li.querySelector('input[type="checkbox"]');
+        if (cb) cb.checked = true;
+      });
+      render();
+    });
+  }
+
+  var clearAll = document.getElementById('clearAll');
+  if (clearAll) {
+    clearAll.addEventListener('click', function () {
+      items.forEach(function (li) {
+        var cb = li.querySelector('input[type="checkbox"]');
+        if (cb) cb.checked = false;
+      });
+      render();
+    });
+  }
+
+  render();
+
+  /* ---------- Print ---------- */
+  var printBtn = document.getElementById('printBtn');
+  if (printBtn) {
+    printBtn.addEventListener('click', function () { window.print(); });
+  }
+
+  /* ---------- Back to top ---------- */
+  var toTop = document.getElementById('toTop');
+  function onScroll() {
+    if (toTop) toTop.classList.toggle('show', window.scrollY > 500);
+  }
+  var ticking = false;
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      ticking = true;
+      window.requestAnimationFrame(function () { onScroll(); ticking = false; });
+    }
+  }, { passive: true });
+  onScroll();
+
+  if (toTop) {
+    toTop.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- Year ---------- */
+  var y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

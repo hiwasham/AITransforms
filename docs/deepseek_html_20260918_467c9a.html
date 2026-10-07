@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The 13-Section Marketing Plan · Template &amp; Reference</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+
+  :root{
+    --bg:#0a0d14;
+    --panel:#0f131c;
+    --panel-2:#131824;
+    --paper:#151b28;
+    --txt:#e8edf7;
+    --muted:#8b97ad;
+    --faint:#5b6679;
+    --line:rgba(255,255,255,.08);
+    --line-2:rgba(255,255,255,.16);
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    --sidebar-w:264px;
+    --topbar-h:58px;
+  }
+
+  html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+
+  body{
+    font-family:var(--sans);
+    background:var(--bg);
+    color:var(--txt);
+    line-height:1.6;
+    min-height:100vh;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  body::before{
+    content:'';
+    position:fixed; inset:0; z-index:0; pointer-events:none;
+    background:
+      radial-gradient(1000px 620px at 22% -12%, rgba(96,165,250,.13), transparent 68%),
+      radial-gradient(760px 520px at 92% 8%, rgba(167,139,250,.09), transparent 68%),
+      radial-gradient(700px 480px at 50% 108%, rgba(52,211,153,.06), transparent 68%);
+  }
+
+  /* ───────────── TOP BAR ───────────── */
+
+  .topbar{
+    position:sticky; top:0; z-index:60;
+    height:var(--topbar-h);
+    display:flex; align-items:center; gap:14px;
+    padding:0 22px;
+    background:rgba(10,13,20,.82);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+
+  .brand{
+    display:flex; align-items:center; gap:10px;
+    font-size:13px; font-weight:650; letter-spacing:-.01em;
+    white-space:nowrap;
+  }
+  .brand-mark{
+    width:22px; height:22px; border-radius:6px;
+    background:linear-gradient(135deg,#60a5fa,#a78bfa 55%,#22d3ee);
+    box-shadow:0 0 16px rgba(96,165,250,.5);
+    flex:none;
+  }
+  .brand-sub{
+    font-family:var(--mono); font-size:10.5px;
+    color:var(--faint); letter-spacing:.04em;
+    padding-left:10px; margin-left:2px;
+    border-left:1px solid var(--line);
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  }
+
+  .topbar-spacer{flex:1}
+
+  .view-toggle{
+    display:flex; align-items:center; gap:2px;
+    padding:3px; border-radius:10px;
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.03);
+    font-size:11.5px;
+  }
+  .view-btn{
+    all:unset;
+    padding:5px 12px; border-radius:7px;
+    color:var(--muted); cursor:pointer;
+    transition:background .18s, color .18s;
+    white-space:nowrap;
+  }
+  .view-btn:hover{color:#fff}
+  .view-btn.is-active{
+    background:rgba(255,255,255,.09);
+    color:#fff;
+    box-shadow:0 1px 0 rgba(255,255,255,.06) inset;
+  }
+
+  .print-btn{
+    all:unset;
+    display:flex; align-items:center; gap:6px;
+    padding:6px 12px; border-radius:8px;
+    font-size:11.5px; color:var(--muted);
+    border:1px solid var(--line);
+    cursor:pointer;
+    transition:background .18s, color .18s, border-color .18s;
+    white-space:nowrap;
+  }
+  .print-btn:hover{background:rgba(255,255,255,.05); color:#fff; border-color:var(--line-2)}
+  .print-btn svg{width:13px; height:13px}
+
+  /* ───────────── LAYOUT ───────────── */
+
+  .layout{
+    position:relative; z-index:1;
+    display:grid;
+    grid-template-columns:var(--sidebar-w) 1fr;
+    max-width:1420px;
+    margin:0 auto;
+  }
+
+  /* ───────────── SIDEBAR ───────────── */
+
+  .sidebar{
+    position:sticky;
+    top:var(--topbar-h);
+    height:calc(100vh - var(--topbar-h));
+    overflow-y:auto;
+    padding:26px 14px 60px 22px;
+    border-right:1px solid var(--line);
+  }
+  .sidebar::-webkit-scrollbar{width:6px}
+  .sidebar::-webkit-scrollbar-thumb{background:rgba(255,255,255,.08); border-radius:3px}
+
+  .side-label{
+    font-size:9.5px; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--faint); font-weight:600;
+    padding:0 10px 12px;
+  }
+
+  .side-nav{display:flex; flex-direction:column; gap:1px}
+
+  .side-item{
+    all:unset;
+    display:flex; align-items:center; gap:11px;
+    padding:7px 10px; border-radius:8px;
+    font-size:12.5px; color:var(--muted);
+    cursor:pointer;
+    transition:background .15s, color .15s;
+    position:relative;
+    line-height:1.3;
+  }
+  .side-item:hover{background:rgba(255,255,255,.04); color:#dbe4f2}
+  .side-item.is-active{background:rgba(255,255,255,.055); color:#fff}
+  .side-item.is-active::before{
+    content:'';
+    position:absolute; left:-22px; top:50%;
+    width:2px; height:14px; border-radius:2px;
+    transform:translateY(-50%);
+    background:var(--sc);
+    box-shadow:0 0 10px var(--sc);
+  }
+
+  .side-num{
+    font-family:var(--mono); font-size:10px;
+    color:var(--faint); font-weight:600;
+    flex:none; width:16px;
+    font-variant-numeric:tabular-nums;
+  }
+  .side-item.is-active .side-num{color:var(--sc)}
+
+  .side-title{flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+
+  /* ───────────── MAIN ───────────── */
+
+  main{
+    padding:44px 56px 120px;
+    max-width:900px;
+    min-width:0;
+  }
+
+  /* ───────────── HERO ───────────── */
+
+  .hero{
+    padding-bottom:36px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:14px;
+  }
+
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:10.5px; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--muted); padding:5px 13px; border-radius:999px;
+    border:1px solid var(--line); background:rgba(255,255,255,.03);
+  }
+  .eyebrow i{
+    width:6px; height:6px; border-radius:50%;
+    background:#34d399; box-shadow:0 0 10px #34d399;
+  }
+
+  .hero h1{
+    font-size:clamp(28px,4.4vw,44px);
+    font-weight:700; letter-spacing:-.035em; line-height:1.08;
+    margin:18px 0 0;
+    max-width:760px;
+  }
+  .hero h1 .grad{
+    background:linear-gradient(100deg,#60a5fa,#a78bfa 42%,#22d3ee 78%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+
+  .hero p.lede{
+    color:var(--muted); font-size:15px; max-width:620px;
+    margin-top:16px; line-height:1.6;
+  }
+
+  /* metadata block */
+  .meta{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:0;
+    margin-top:26px;
+    border:1px solid var(--line);
+    border-radius:13px;
+    overflow:hidden;
+    background:rgba(255,255,255,.02);
+  }
+  .meta-cell{
+    padding:13px 16px;
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .meta-cell:last-child{border-right:none}
+  .meta-key{
+    font-size:9.5px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--faint); font-weight:600;
+    margin-bottom:5px;
+  }
+  .meta-val{
+    font-family:var(--mono); font-size:12.5px;
+    color:#dbe4f2; letter-spacing:-.005em;
+  }
+  .meta-val.empty{color:var(--faint); font-style:italic}
+
+  /* stat band */
+  .stats{
+    display:flex; flex-wrap:wrap; gap:10px;
+    margin-top:24px;
+  }
+  .stat{
+    display:flex; align-items:baseline; gap:8px;
+    border:1px solid var(--line); background:rgba(255,255,255,.025);
+    border-radius:11px; padding:9px 15px;
+  }
+  .stat b{
+    font-size:17px; font-weight:700;
+    font-variant-numeric:tabular-nums; letter-spacing:-.02em;
+  }
+  .stat span{
+    font-size:10px; color:var(--muted);
+    letter-spacing:.1em; text-transform:uppercase;
+  }
+
+  /* ───────────── SECTION CARDS ───────────── */
+
+  .sections{display:flex; flex-direction:column; gap:14px; margin-top:34px}
+
+  .section{
+    position:relative;
+    border-radius:16px;
+    border:1px solid var(--line);
+    background:linear-gradient(180deg, rgba(255,255,255,.026), rgba(255,255,255,.006));
+    overflow:hidden;
+    scroll-margin-top:calc(var(--topbar-h) + 20px);
+    transition:border-color .25s, background .25s;
+  }
+  .section::before{
+    content:'';
+    position:absolute; top:0; left:0; right:0; height:2px;
+    background:linear-gradient(90deg, transparent, var(--sc), transparent);
+    opacity:.55;
+  }
+  .section:hover{
+    border-color:var(--line-2);
+    background:linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.01));
+  }
+
+  .section-head{
+    display:flex; align-items:flex-start; gap:14px;
+    padding:22px 26px 16px;
+    cursor:pointer;
+    user-select:none;
+  }
+
+  .sec-num{
+    font-family:var(--mono); font-size:11px; font-weight:700;
+    color:var(--sc);
+    padding:4px 9px; border-radius:7px;
+    background:color-mix(in srgb, var(--sc) 14%, transparent);
+    border:1px solid color-mix(in srgb, var(--sc) 32%, transparent);
+    flex:none; margin-top:2px;
+    font-variant-numeric:tabular-nums;
+    letter-spacing:.02em;
+  }
+
+  .sec-head-text{flex:1; min-width:0}
+  .sec-title{
+    font-size:16.5px; font-weight:650; letter-spacing:-.015em;
+    color:#eef3fb; line-height:1.25;
+  }
+  .sec-purpose{
+    font-size:12.5px; color:var(--muted);
+    margin-top:6px; line-height:1.5;
+  }
+
+  .sec-toggle{
+    flex:none;
+    width:26px; height:26px; border-radius:7px;
+    display:flex; align-items:center; justify-content:center;
+    border:1px solid var(--line);
+    color:var(--faint);
+    background:rgba(255,255,255,.02);
+    transition:transform .25s, color .2s, border-color .2s, background .2s;
+    margin-top:2px;
+  }
+  .section.is-open .sec-toggle{
+    transform:rotate(180deg);
+    color:var(--sc);
+    border-color:color-mix(in srgb, var(--sc) 40%, transparent);
+    background:color-mix(in srgb, var(--sc) 8%, transparent);
+  }
+  .section:hover .sec-toggle{color:#fff}
+
+  .sec-body{
+    padding:0 26px 24px;
+    display:none;
+  }
+  .section.is-open .sec-body{display:block; animation:fadeIn .28s ease backwards}
+
+  @keyframes fadeIn{
+    from{opacity:0; transform:translateY(-4px)}
+    to{opacity:1; transform:translateY(0)}
+  }
+
+  /* purpose / length pill row */
+  .sec-meta{
+    display:flex; flex-wrap:wrap; gap:8px;
+    margin-bottom:18px;
+  }
+  .pill{
+    display:inline-flex; align-items:center; gap:7px;
+    padding:5px 11px; border-radius:8px;
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.025);
+    font-family:var(--mono); font-size:10.5px;
+    color:var(--muted);
+    letter-spacing:.02em;
+  }
+  .pill svg{width:11px; height:11px; flex:none; opacity:.6}
+  .pill strong{
+    color:#dbe4f2; font-weight:600;
+    text-transform:uppercase; letter-spacing:.06em; font-size:9.5px;
+  }
+
+  /* structure block */
+  .sec-block{margin-bottom:16px}
+  .sec-block:last-child{margin-bottom:0}
+
+  .block-label{
+    font-size:10px; letter-spacing:.15em; text-transform:uppercase;
+    color:var(--sc); font-weight:700;
+    margin-bottom:9px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .block-label::after{
+    content:'';
+    flex:1; height:1px;
+    background:linear-gradient(90deg, color-mix(in srgb, var(--sc) 30%, transparent), transparent);
+  }
+
+  .struct-list{
+    list-style:none;
+    display:flex; flex-direction:column; gap:8px;
+  }
+  .struct-list li{
+    position:relative;
+    padding-left:18px;
+    font-size:13px; color:#c4cfe0;
+    line-height:1.55;
+  }
+  .struct-list li::before{
+    content:'';
+    position:absolute; left:2px; top:9px;
+    width:5px; height:5px; border-radius:50%;
+    background:var(--sc); opacity:.7;
+  }
+  .struct-list li em{
+    color:var(--muted); font-style:normal;
+    font-family:var(--mono); font-size:11.5px;
+  }
+  .struct-list li code{
+    font-family:var(--mono); font-size:11px;
+    background:rgba(255,255,255,.055);
+    border:1px solid var(--line);
+    padding:1px 5px; border-radius:4px;
+    color:#c9d4e6;
+  }
+
+  .struct-list li ul{
+    margin-top:6px; padding-left:0;
+    list-style:none;
+    display:flex; flex-direction:column; gap:5px;
+  }
+  .struct-list li ul li{
+    padding-left:14px;
+    font-size:12px;
+  }
+  .struct-list li ul li::before{
+    content:'·';
+    position:absolute; left:3px; top:-2px;
+    width:auto; height:auto; border-radius:0;
+    background:none; color:var(--faint); font-size:14px;
+    opacity:1;
+  }
+
+  /* voice notes */
+  .voice-notes{
+    padding:14px 16px;
+    border-radius:11px;
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.018);
+    position:relative;
+  }
+  .voice-notes .block-label{margin-bottom:10px; color:#fbbf24}
+  .voice-notes .block-label::after{
+    background:linear-gradient(90deg, rgba(251,191,36,.3), transparent);
+  }
+  .voice-notes ul{
+    list-style:none;
+    display:flex; flex-direction:column; gap:7px;
+  }
+  .voice-notes li{
+    position:relative; padding-left:16px;
+    font-size:12.5px; color:#b3c0d4; line-height:1.5;
+  }
+  .voice-notes li::before{
+    content:'';
+    position:absolute; left:0; top:8px;
+    width:4px; height:4px; border-radius:50%;
+    background:#fbbf24; opacity:.75;
+  }
+
+  /* reference example */
+  .example{
+    margin-top:16px;
+    border-radius:11px;
+    border:1px dashed color-mix(in srgb, var(--sc) 30%, transparent);
+    background:color-mix(in srgb, var(--sc) 4%, transparent);
+    overflow:hidden;
+    display:none;
+  }
+  body.show-examples .example{display:block; animation:fadeIn .25s ease backwards}
+  .example.is-open{display:block !important; animation:fadeIn .25s ease backwards}
+
+  .example-head{
+    display:flex; align-items:center; gap:9px;
+    padding:11px 15px;
+    cursor:pointer;
+    font-family:var(--mono); font-size:10.5px;
+    color:color-mix(in srgb, var(--sc) 75%, #fff);
+    letter-spacing:.04em;
+    user-select:none;
+  }
+  .example-head .arrow{
+    font-size:10px;
+    transition:transform .22s;
+    color:color-mix(in srgb, var(--sc) 70%, transparent);
+  }
+  .example.is-open .example-head .arrow{transform:rotate(90deg)}
+  .example-head .tag{
+    margin-left:auto;
+    font-size:9px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--faint);
+  }
+
+  .example-body{
+    padding:0 15px 15px;
+    font-size:12.5px; color:#b8c5d8;
+    line-height:1.6;
+    display:none;
+  }
+  .example.is-open .example-body{display:block}
+
+  .example-body p{margin-bottom:9px}
+  .example-body p:last-child{margin-bottom:0}
+  .example-body strong{color:#fff; font-weight:600}
+  .example-body em{color:var(--muted); font-style:italic}
+
+  .example-body table{
+    width:100%; border-collapse:collapse;
+    font-size:11.5px; margin:8px 0;
+  }
+  .example-body table th,
+  .example-body table td{
+    padding:6px 9px; text-align:left;
+    border-bottom:1px solid var(--line);
+  }
+  .example-body table th{
+    font-size:9.5px; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--faint); font-weight:600;
+    background:rgba(255,255,255,.02);
+  }
+  .example-body table td:first-child{
+    font-family:var(--mono); font-size:10.5px;
+    color:var(--muted);
+  }
+
+  /* ───────────── HEURISTICS ───────────── */
+
+  .heuristics{
+    margin-top:44px;
+    padding:26px 30px 28px;
+    border-radius:16px;
+    border:1px solid var(--line);
+    background:linear-gradient(180deg,rgba(96,165,250,.05),rgba(167,139,250,.02));
+    position:relative;
+    overflow:hidden;
+  }
+  .heuristics::before{
+    content:'';
+    position:absolute; top:0; left:0; right:0; height:2px;
+    background:linear-gradient(90deg, transparent, #60a5fa, #a78bfa, transparent);
+    opacity:.5;
+  }
+
+  .heur-head{
+    display:flex; align-items:center; gap:11px;
+    margin-bottom:18px;
+  }
+  .heur-badge{
+    font-family:var(--mono); font-size:9.5px; font-weight:700;
+    letter-spacing:.1em;
+    color:#9fb6ff;
+    padding:3px 8px; border-radius:6px;
+    background:rgba(96,165,250,.12);
+    border:1px solid rgba(96,165,250,.3);
+  }
+  .heur-title{
+    font-size:15px; font-weight:650;
+    color:#eef3fb; letter-spacing:-.01em;
+  }
+  .heur-sub{
+    font-size:12px; color:var(--muted);
+    margin-left:auto; max-width:280px;
+    text-align:right; line-height:1.4;
+  }
+
+  .heur-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:10px;
+  }
+  .heur-item{
+    padding:13px 15px;
+    border-radius:11px;
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.02);
+    transition:border-color .2s, background .2s, transform .2s;
+  }
+  .heur-item:hover{
+    border-color:var(--line-2);
+    background:rgba(255,255,255,.04);
+    transform:translateY(-1px);
+  }
+  .heur-item .hn{
+    font-family:var(--mono); font-size:9.5px; font-weight:700;
+    color:#9fb6ff;
+    letter-spacing:.06em;
+    margin-bottom:6px;
+  }
+  .heur-item .ht{
+    font-size:12px; color:#c4cfe0;
+    line-height:1.5;
+  }
+  .heur-item .ht em{
+    color:#e2e9f5; font-style:normal; font-weight:600;
+  }
+
+  /* ───────────── FOOTER ───────────── */
+
+  .doc-footer{
+    margin-top:44px;
+    padding-top:26px;
+    border-top:1px solid var(--line);
+    text-align:center;
+  }
+  .doc-footer p{
+    font-size:11.5px; color:var(--faint);
+    line-height:1.9; letter-spacing:.01em;
+  }
+  .doc-footer code{
+    font-family:var(--mono); font-size:10.5px;
+    background:rgba(255,255,255,.05);
+    border:1px solid var(--line);
+    padding:1px 6px; border-radius:4px;
+    color:#c9d4e6;
+  }
+
+  /* ───────────── RESPONSIVE ───────────── */
+
+  @media (max-width:1100px){
+    :root{--sidebar-w:220px}
+    main{padding:40px 40px 100px}
+    .heur-sub{display:none}
+  }
+  @media (max-width:860px){
+    .layout{grid-template-columns:1fr}
+    .sidebar{
+      position:static; height:auto;
+      padding:18px 22px;
+      border-right:none; border-bottom:1px solid var(--line);
+      overflow-x:auto; overflow-y:hidden;
+    }
+    .side-nav{flex-direction:row; gap:6px; flex-wrap:nowrap}
+    .side-item{flex:none}
+    .side-item.is-active::before{display:none}
+    .side-label{display:none}
+    main{padding:34px 22px 90px; max-width:100%}
+    .brand-sub{display:none}
+    .print-btn span{display:none}
+    .print-btn{padding:6px 9px}
+  }
+  @media (max-width:560px){
+    .topbar{padding:0 14px; gap:10px}
+    .view-toggle{font-size:10.5px}
+    .view-btn{padding:5px 9px}
+    .meta-cell{padding:11px 13px}
+    .section-head{padding:18px 18px 13px; gap:11px}
+    .sec-body{padding:0 18px 20px}
+    .sec-title{font-size:15px}
+    .sec-purpose{font-size:12px}
+    .heuristics{padding:20px 18px 22px}
+  }
+
+  /* ───────────── PRINT ───────────── */
+
+  @media print{
+    :root{
+      --bg:#fff; --panel:#fff; --paper:#fff;
+      --txt:#0a0d14; --muted:#4b5563; --faint:#9ca3af;
+      --line:#e5e7eb; --line-2:#d1d5db;
+    }
+    body{background:#fff; color:#0a0d14}
+    body::before{display:none}
+    .topbar,.sidebar,.sec-toggle,.view-toggle,.print-btn,.example-head{display:none}
+    .layout{display:block; max-width:100%; margin:0}
+    main{padding:0; max-width:100%}
+    .section{
+      break-inside:avoid;
+      border:1px solid #e5e7eb;
+      background:#fff;
+      margin-bottom:16px;
+    }
+    .section.is-open .sec-body{display:block}
+    .sec-body{display:block !important}
+    .example{display:block !important; border-style:solid; background:#f9fafb}
+    .example-body{display:block !important}
+    .section::before,.heuristics::before{display:none}
+    .sec-num{border-color:#d1d5db; background:#f3f4f6; color:#374151}
+    .block-label{color:#374151}
+    .block-label::after{background:#d1d5db}
+    .heur-item,.pill,.meta,.stat{background:#f9fafb}
+    .struct-list li::before{background:#6b7280}
+    .voice-notes li::before{background:#d97706}
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ TOP BAR ═══════════ -->
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark"></span>
+    <span>Marketing Plan</span>
+    <span class="brand-sub">/ the 13-section structure</span>
+  </div>
+
+  <div class="topbar-spacer"></div>
+
+  <div class="view-toggle" role="tablist" aria-label="View mode">
+    <button class="view-btn is-active" data-view="structure" role="tab">Structure</button>
+    <button class="view-btn" data-view="reference" role="tab">Reference plan</button>
+  </div>
+
+  <button class="print-btn" onclick="window.print()" title="Print or export as PDF">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 6 2 18 2 18 9"/>
+      <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+      <rect x="6" y="14" width="12" height="8"/>
+    </svg>
+    <span>Export</span>
+  </button>
+</header>
+
+<!-- ═══════════ LAYOUT ═══════════ -->
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="side-label">Sections</div>
+    <nav class="side-nav" id="side-nav"></nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <span class="eyebrow"><i></i>Canonical template</span>
+      <h1>The <span class="grad">13-section</span> marketing plan</h1>
+      <p class="lede">
+        Every plan generated by this skill follows the same structure. Each section has a
+        purpose, a length, a shape, and inline prompts for what to draft. The
+        <strong style="color:#dbe4f2">Quietude plan</strong> is the canonical reference
+        implementation — switch to <em>Reference plan</em> above to see it in context.
+      </p>
+
+      <!-- Title block -->
+      <div class="meta" aria-label="Plan metadata">
+        <div class="meta-cell">
+          <div class="meta-key">Client</div>
+          <div class="meta-val empty">{Client}</div>
+        </div>
+        <div class="meta-cell">
+          <div class="meta-key">Prepared by</div>
+          <div class="meta-val empty">{Author / fCMO}</div>
+        </div>
+        <div class="meta-cell">
+          <div class="meta-key">For</div>
+          <div class="meta-val empty">{Founders / leadership}</div>
+        </div>
+        <div class="meta-cell">
+          <div class="meta-key">Date</div>
+          <div class="meta-val empty">YYYY-MM-DD</div>
+        </div>
+        <div class="meta-cell">
+          <div class="meta-key">Status</div>
+          <div class="meta-val">Draft v1 — for review</div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats">
+        <div class="stat"><b>13</b><span>Sections</span></div>
+        <div class="stat"><b>~11k</b><span>Words</span></div>
+        <div class="stat"><b>5</b><span>AARRR stages</span></div>
+        <div class="stat"><b>139</b><span>Ideas mapped</span></div>
+        <div class="stat"><b>85</b><span>Audit points</span></div>
+      </div>
+    </section>
+
+    <!-- SECTIONS -->
+    <div class="sections" id="sections"></div>
+
+    <!-- HEURISTICS -->
+    <section class="heuristics" id="heuristics">
+      <div class="heur-head">
+        <span class="heur-badge">Quality bar</span>
+        <span class="heur-title">Per-section heuristics — is this section done?</span>
+        <span class="heur-sub">If any of these fail, the section isn't ready to ship.</span>
+      </div>
+      <div class="heur-list" id="heur-list"></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="doc-footer">
+      <p>
+        <code>{Client} — Marketing Plan v1</code> &nbsp;·&nbsp;
+        Prepared by <code>{Author}</code>, <code>{Date}</code> &nbsp;·&nbsp;
+        For team review and discussion.
+      </p>
+      <p style="margin-top:8px">
+        Source of truth: <code>references/plan-template.md</code> &nbsp;·&nbsp;
+        Canonical example: <code>references/example-quietude.md</code>
+      </p>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+/* ═══════════════════════════════════════════════════════════════
+   THE 13 SECTIONS
+   ═══════════════════════════════════════════════════════════════ */
+
+const SECTIONS = [
+  {
+    n: 0, label: 'Title block', title: 'Title block',
+    color: '#94a3b8',
+    purpose: 'The header every plan carries. Client name, author, audience, date, status.',
+    length: '1 block',
+    structure: [
+      '<code># {Client} — Marketing Plan v1</code>',
+      '<strong>Prepared by:</strong> {Author / fCMO name}',
+      '<strong>For:</strong> {Founders / leadership team}',
+      '<strong>Date:</strong> YYYY-MM-DD',
+      '<strong>Status:</strong> Draft v1 — for team review'
+    ],
+    voice: [
+      'Plain. No flourish. This is the cover of a working document, not a pitch.'
+    ]
+  },
+  {
+    n: 1, label: 'Executive summary', title: 'Executive summary',
+    color: '#60a5fa',
+    purpose: 'Lift-and-share. A founder should be able to paste this into a board update or investor email without editing.',
+    length: '400–700 words. Tight.',
+    structure: [
+      '<strong>One-sentence frame.</strong> What does this plan optimize for? Not "more revenue" — something specific to this client at this stage.',
+      '<strong>Three big bets, ranked by leverage.</strong> Each is a paragraph. Bet = a high-conviction thesis about where the team should focus capital and attention.',
+      '<strong>What twelve months looks like, plausibly.</strong> Bullet list. The plausible outcome state at end of plan horizon. Investor-readable.',
+      '<strong>90-day priorities.</strong> Numbered list. The six (give or take) moves that ship in the first quarter.'
+    ],
+    voice: [
+      'Match the client\'s voice.',
+      'Direct, founder-readable, no marketing-speak.',
+      'Use names and numbers (specific channels, specific metrics) — not abstractions.',
+      'Tradeoffs named explicitly when they matter.'
+    ],
+    example: `<p><strong>Quietude has built something rare:</strong> a clinically validated, brand-coherent, founder-led product in a category that doesn't yet have a name. The opportunity in the next twelve months is not to invent a marketing engine from scratch — it's to <strong>convert the existing organic gravity into a measurable, repeatable funnel</strong>, then layer paid acquisition on top of that funnel once the seed round closes.</p>
+      <p><strong>Three big bets, ranked by leverage:</strong></p>
+      <ol style="padding-left:20px;margin:6px 0 10px;font-size:12.5px;line-height:1.6;color:#b8c5d8">
+        <li style="margin-bottom:6px"><strong>Fix the leak before pouring water in.</strong> The Day 1 → Day 35 funnel shape (1.34% → 5.46%) tells us the product converts given time and contact. The onboarding rebuild and Customer.io flows are the unlock.</li>
+        <li style="margin-bottom:6px"><strong>Compound the moats Quietude already has.</strong> Peer-reviewed clinical study, longevity-influencer PR, 15K live event participants, founder voice — under-leveraged.</li>
+        <li><strong>Build the founder-and-fCMO operating system</strong> that lets a 4-person team market like a 20-person one.</li>
+      </ol>
+      <p><em>What twelve months looks like, plausibly:</em> App goes GA. 4 SEO pillars staked. Full lifecycle live. Ambassador program with 15–25 hosts. Paid firing post-seed-close at $5–10K/mo.</p>`
+  },
+  {
+    n: 2, label: 'Strategic frame', title: 'Strategic frame',
+    color: '#a78bfa',
+    purpose: 'Distill positioning, ICP, business-model logic, and brand voice into a single page that any team member or new hire can read to orient.',
+    length: '800–1500 words.',
+    structure: [
+      '<strong>What {Company} is, in one sentence.</strong> Pulled from positioning doc / seed deck / founder language.',
+      '<strong>The category we\'re claiming.</strong> Is the company creating a new category, redefining an existing one, or competing in a defined category? Name it. State the category-defining frame in 2–3 sentences.',
+      '<strong>Who we\'re for (ICP, distilled).</strong> Demographics / firmographics + stated problem vs. real problem + what they\'re actually buying. Tight, 4–6 bullets.',
+      '<strong>The business model logic.</strong> How does the company make money? What\'s the acquisition unit-economics theory? What\'s the compounding channel thesis?',
+      '<strong>Brand voice (the non-negotiable).</strong> YES / NO vocabulary. CTA rules. Tone. Core method. Every other section of the plan must respect these.'
+    ],
+    voice: [
+      'Most "lift from existing materials" — don\'t invent positioning. Surface what\'s there.',
+      'If positioning is unclear or contradicted across materials, flag it in Section 13\'s open decisions.'
+    ],
+    example: `<p><strong>What Quietude is:</strong> A nervous system intelligence platform — clinically validated spatial audio + AI reflection companion (Mira) + hardware + venue installations + practitioner network.</p>
+      <p><strong>The category we're claiming:</strong> Not meditation, not focus audio, not sleep tech. <strong>Bottom-up nervous system regulation through spatial audio</strong>, with clinical evidence as proof and somatic credibility as defense. <em>"Meditation is top-down. Quietude is bottom-up."</em></p>
+      <p><strong>Brand voice — YES:</strong> aliveness, inner life, nervous system, spatial sound, resonance, somatic safety, embodied clarity. <strong>NO:</strong> Zen, chill, vibes, meditation clichés, didactic language. <strong>CTA rule:</strong> never pressure. "We do not remind. We invite."</p>`
+  },
+  {
+    n: 3, label: 'Current state', title: 'Current state',
+    color: '#22d3ee',
+    purpose: 'Anchor the plan in reality. What\'s the team, budget, in-flight work, and stuck work today?',
+    length: '1000–2000 words.',
+    structure: [
+      '<strong>Team composition.</strong> Table of every person with marketing surface area: Person | Role | Marketing surface area. Be honest about gaps.',
+      '<strong>Marketing budget (current).</strong> Paid acquisition, tooling stack, retainers, headcount, blended CAC, spend as % of ARR. State the funding-stage tier this maps to.',
+      '<strong>Phase of SaaS growth.</strong> $0–10K ARR / $10K–100K / $100K–1M / $1M–$10M / $10M+. Each phase has its own binding constraint.',
+      '<strong>What\'s already done.</strong> Table: Asset | Status | Marketing leverage. Don\'t ignore work the team is proud of.',
+      '<strong>What\'s in-flight.</strong> Table: Item | Status | Blocker. Be honest about blockers.',
+      '<strong>What\'s stuck.</strong> Table: Issue | Cost of inaction | Action. Stuck things are the highest-leverage places to focus the first weeks.',
+      '<strong>Audit rubric snapshot.</strong> 17-section scored snapshot, 0–5 each. Note the <em>shape</em> of strength and weakness — that shape is the gap the plan closes.'
+    ],
+    voice: [
+      'Honest > polished. If the client\'s metrics are bad, name them.',
+      'Founders read past sugar-coating.'
+    ],
+    example: `<p><strong>Audit snapshot:</strong> 36 / 85 (42%). Shape matters more than score.</p>
+      <table>
+        <thead><tr><th>#</th><th>Section</th><th>Score</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Positioning</td><td><strong>4</strong></td><td>Clear, original category claim</td></tr>
+          <tr><td>11</td><td>Messaging</td><td><strong>5</strong></td><td>Most distinctive voice in the category — a moat</td></tr>
+          <tr><td>16</td><td>SEO</td><td><strong>1</strong></td><td>7 organic visits/mo. Plan exists; execution not started</td></tr>
+          <tr><td>15</td><td>Ads</td><td><strong>0</strong></td><td>No paid layer. Reflects organic strategy</td></tr>
+        </tbody>
+      </table>
+      <p><em>Shape:</em> high in Positioning + Messaging, low in Conversion + Email + SEO + Ads. That's the gap this plan closes.</p>`
+  },
+  {
+    n: 4, label: 'Acquisition', title: 'Acquisition',
+    color: '#38bdf8',
+    purpose: 'Answer "how do strangers become aware of us?" Map every channel: current state, planned moves, skipped (with reason).',
+    length: '1000–1800 words.',
+    structure: [
+      '<strong>Current state.</strong> Brief. What\'s working today, what\'s not, what the data shows about channel mix.',
+      '<strong>The plan.</strong> Numbered "Moves." Each move is a paragraph describing the channel, the thesis, and the specific work.',
+      '&nbsp;&nbsp;&nbsp;Common moves: SEO &amp; content · App Store optimization · Founder-led channels · PR amplification · Events · Commerce surface · B2B sales support · Paid layer (when budget unlocks).',
+      '<strong>90-day acquisition moves.</strong> Week-by-week breakdown of the ships in the first quarter.',
+      '<strong>12-month acquisition outlook.</strong> Quarter-by-quarter outcome state.',
+      '<strong>Skills + tools.</strong> List relevant marketing-skills repo skills and MCPs / APIs.'
+    ],
+    voice: [
+      'Every move names a specific skill and a specific tool.',
+      'The "what we\'re not doing" is as important as the "what we are."'
+    ],
+    example: `<p><strong>Current state:</strong> 100% organic. Four real channels: founder LinkedIn, live events, WOM, organic App Store discovery.</p>
+      <p><strong>Channel 1 — SEO (primary 90-day investment).</strong> Consolidate to a single domain, target three asymmetric clusters, publish 4 content pillars. 90-day target: 500–1,500 organic visits/mo.</p>
+      <p><strong>Channel 8 — Paid layer (unlocked post-seed close).</strong> Held until seed lands. Initial test budget $5–10K/mo. Don't fire until (a) onboarding bedrock fix ships, (b) at least one pillar page is in voice. <em>Premature paid amplifies what's broken.</em></p>`
+  },
+  {
+    n: 5, label: 'Activation', title: 'Activation',
+    color: '#34d399',
+    purpose: 'Answer "once someone tries us, do they have an experience that converts?"',
+    length: '800–1500 words.',
+    structure: [
+      'Same shape as Acquisition: Current state / The plan / 90-day / 12-month / Skills + tools.',
+      '&nbsp;&nbsp;&nbsp;Common moves: Bedrock fixes (broken signup, broken gates) · Onboarding tests / rebuild · App Store listing rewrite · Lifecycle flow ship order · Paywall + pricing review.'
+    ],
+    voice: [
+      'If the funnel shape is "lift over time," onboarding and lifecycle are the two levers.',
+      'Bedrock fixes always precede tests.'
+    ],
+    example: `<p><strong>Current state:</strong> Day 1 → paid: 1.34%. Day 7 → paid: 3.73%. Day 35 → paid: 5.46%. <em>The funnel shape is the signal.</em></p>
+      <p><strong>Move 1 — Kill the headphones hard-gate (bedrock, this week).</strong> Confirmed conversion drop after the gate shipped. The fix isn't better copy — it's removing the gate.</p>
+      <p><strong>Move 2 — Three-variant onboarding test.</strong> Each variant is a pure expression of one belief: Trust First, Seen First, Felt First. Sequential reads over ~7 weeks.</p>`
+  },
+  {
+    n: 6, label: 'Retention', title: 'Retention',
+    color: '#2dd4bf',
+    purpose: 'Answer "once someone converts, do they stay and deepen?"',
+    length: '800–1500 words.',
+    structure: [
+      'Same shape as above.',
+      '&nbsp;&nbsp;&nbsp;Common moves: Lifecycle email flows · Subscription / preference centers · Churn reconciliation · Hardware → software activation paths · Annual plan default tests.'
+    ],
+    voice: [
+      'If the metric definitions don\'t match across surfaces, that\'s the first thing to fix.',
+      'Ship the ship-ready flows. Hold the ones that will need rewriting.'
+    ],
+    example: `<p><strong>Current state:</strong> 38% 12-month retention (nearly double category avg ~20%). But App Store snapshot shows ~29% monthly churn. <em>Definition mismatch — reconcile.</em></p>
+      <p><strong>Ship order:</strong> Flow 6 (eye mask post-purchase) first — ship-ready, doesn't reference in-app screens. Flow 4 (lapsed re-engagement) second. Flow 2 (onboarding) held until UI stabilizes.</p>`
+  },
+  {
+    n: 7, label: 'Referral', title: 'Referral',
+    color: '#c084fc',
+    purpose: 'Answer "do retained users bring more users, and at what cost?"',
+    length: '500–1200 words.',
+    structure: [
+      'Same shape as above.',
+      '&nbsp;&nbsp;&nbsp;Common moves: Ambassador / affiliate program launch (if inbound interest exists, lead with it) · Share-after-value moments built into product · Founder amplification · Expert / certified-host network · Gifting flows.'
+    ],
+    voice: [
+      'If inbound interest already exists, launch v1 with it — don\'t wait for a polished program.',
+      'Referral is program-driven, not tactic-driven.'
+    ],
+    example: `<p><strong>Current state:</strong> ~5 inbound ambassadors waiting. Attribution tool set up. No formal program yet.</p>
+      <p><em>This is one of the strongest leading indicators in the business:</em> five unaffiliated people raised their hand before any program exists. That signal doesn't show up in apps with weaker PMF.</p>
+      <p><strong>Move 1 — Launch v1 with the 5 inbound.</strong> Treat as pilot cohort. Refine before opening applications.</p>`
+  },
+  {
+    n: 8, label: 'Revenue', title: 'Revenue',
+    color: '#fbbf24',
+    purpose: 'Answer "what do we charge, who pays, and how does it compound?"',
+    length: '500–1200 words.',
+    structure: [
+      'Same shape as above.',
+      '&nbsp;&nbsp;&nbsp;Common moves: Pricing audit · Annual plan default tests · Hardware → software bundling · Storefront optimization · B2B case studies · Long-term value pools (flagged not executed).',
+      '<strong>Unit economics.</strong> Required table: ARPC · Blended CAC · Annual retention rate · LTV (rough) · LTV / CAC. Health benchmark: &gt; 3.',
+      'These feed the budget math in Section 10. If any are unknown, flag in Section 13 as top open decision.'
+    ],
+    voice: [
+      'Most revenue work is pricing strategy, not tactical tricks.',
+      'Ground truth before recommendations. What\'s actually charged today vs. listed?'
+    ],
+    example: `<p><strong>Products:</strong> App ~$30/mo · Eye mask ~$45 · Speakers ~$7,500 · B2B install $50–200K.</p>
+      <p><strong>Revenue to date:</strong> ~$500K on ~$250K raised. Capital-efficient. Hardware + B2B + app subs all contributing.</p>
+      <p><strong>Move 1 — Pricing audit.</strong> The implied ~$4/sub/mo against $30 list suggests heavy annual plan adoption or promotional pricing — needs ground truth before recommending changes.</p>`
+  },
+  {
+    n: 9, label: '90-day roadmap', title: '90-day roadmap',
+    color: '#fb923c',
+    purpose: 'The tactical execution layer. Every move ships within a named week, with an owner.',
+    length: 'Tables, not prose. One printed page if possible.',
+    structure: [
+      '<strong>Weeks 1–2 — Unblock.</strong> Highest-confidence, lowest-cost changes. Removing things that are broken. <em>Columns: Move | Stage | Owner.</em>',
+      '<strong>Weeks 3–4 — Foundation.</strong> Pillar/foundational work. Domain consolidation. First content. First flows shipping.',
+      '<strong>Weeks 5–8 — Velocity.</strong> Compounding work begins. Content cadence. Repeat tests. Channel scaling.',
+      '<strong>Weeks 9–12 — Compound.</strong> Second-order moves. Layered tactics. 90-day review prep.'
+    ],
+    voice: [
+      'Every row has an owner. No owner = not a real move.',
+      'AARRR-tag every row so priority is visible at a glance.'
+    ],
+    example: `<p><strong>Weeks 1–2 — Unblock:</strong></p>
+      <table>
+        <thead><tr><th>Move</th><th>Stage</th><th>Owner</th></tr></thead>
+        <tbody>
+          <tr><td>Kill the headphones hard-gate</td><td>Activation</td><td>Casey + Devon</td></tr>
+          <tr><td>Domain consolidation decision</td><td>Acquisition</td><td>Casey + Alex</td></tr>
+          <tr><td>Flow 6 (eye mask) ships</td><td>Retention</td><td>Casey</td></tr>
+        </tbody>
+      </table>`
+  },
+  {
+    n: 10, label: '12-month outlook', title: '12-month outlook',
+    color: '#fb7185',
+    purpose: 'Quarterly milestones with explicit funding-stage capability unlocks named, anchored against a defensible growth pattern.',
+    length: 'Four sub-sections, ~250–400 words each.',
+    structure: [
+      '<strong>Framing (top of Section 10).</strong> State explicitly: budget method used (Revenue-Based 5–40% of ARR, or Goal-Based formula) · annual budget total + experimental buffer · resulting end-of-year ARR goal · growth pattern expected (linear / step-function / layered S-curves).',
+      '<strong>Per quarter:</strong> Q{N} — Months {X}–{Y}.',
+      '&nbsp;&nbsp;&nbsp;<em>Funding state:</em> which tier per funding-stage unlocks.',
+      '&nbsp;&nbsp;&nbsp;<em>Focus:</em> one-sentence focus theme.',
+      '&nbsp;&nbsp;&nbsp;<em>Outcomes by end of Q{N}:</em> 5–8 bullets.',
+      '&nbsp;&nbsp;&nbsp;<em>KPI targets:</em> 3–5 numerical targets.',
+      '&nbsp;&nbsp;&nbsp;<em>Channel/Product/Market S-curve position:</em> which curves are growing, which plateauing, which is next.'
+    ],
+    voice: [
+      'Honest forecast, not a guarantee.',
+      'Name the funding stage explicitly in every quarter.'
+    ],
+    example: `<p><strong>Q1 — Months 1–3.</strong> Funding state: pre-seed-close. Paid budget = $0.</p>
+      <p><strong>Focus:</strong> Foundation. Plug the leaks. Stake the SEO ground. Get lifecycle firing.</p>
+      <p><strong>KPI targets:</strong> Onboarding Day 1 → paid lift of 25–50%. Organic traffic 500–1,500/mo. App Store conversion rate +20%.</p>
+      <p><strong>Q2 — Months 4–6.</strong> Funding state: seed close. First paid budget unlock: $5–10K/mo test. <strong>Focus:</strong> Validate paid. Scale winning onboarding. Add Flow 2.</p>`
+  },
+  {
+    n: 11, label: 'Operations stack', title: 'Marketing operations stack',
+    color: '#818cf8',
+    purpose: 'The fCMO differentiator. Show how a small team + agentic tooling executes the plan without hiring at every channel.',
+    length: 'Tables + brief explanation.',
+    structure: [
+      '<strong>The thesis.</strong> 1–2 paragraphs: small team + marketing-skills library + MCP integrations = output of a larger team.',
+      '<strong>Skills mapped to AARRR stages.</strong> Table: Stage | Primary skills | Supporting skills.',
+      '<strong>MCPs / APIs mapped to stages.</strong> Table: Stage | Existing connections | fCMO tooling layer.',
+      '<strong>A concrete example.</strong> Pick one operational moment that proves the stack works. Anchor the abstract claim in a specific event.',
+      '<strong>Capability unlocks by funding stage.</strong> Table: Stage | Headcount | Tooling | Channels live.',
+      '<strong>Team and agency model (RACI).</strong> Strategy in-house, execution often outsourced. If the team is missing a strategic owner, the first 90-day move is the hire — Manager or Lead title, π-shaped, not VP/CMO.'
+    ],
+    voice: [
+      'At least one concrete operational example proves the stack thesis.',
+      'Name the contractor or niche agency in the right cell rather than a vague "TBD."'
+    ],
+    example: `<p><strong>The Customer.io MCP unlock (concrete example):</strong> Per kickoff call — <em>"Built live on call — abandoned-cart flow drafted using Customer.io's Claude MCP. Validated that non-technical team can use the skill pattern independently."</em></p>
+      <p>Alex, who is not a developer, drafted a working lifecycle flow with Claude + Customer.io MCP in real time on a kickoff call. The fCMO's role becomes orchestration + brand-voice QA, not hand-cranking each email.</p>`
+  },
+  {
+    n: 12, label: 'Idea bank', title: 'Tactical idea bank — 139-idea cross-reference',
+    color: '#a3e635',
+    purpose: 'Cross-reference all 139 ideas from the marketing-ideas skill against AARRR stages, with client-specific status.',
+    length: 'Long — tables can easily total 150+ rows.',
+    structure: [
+      '<strong>Intro paragraph.</strong> Sections 4–8 prescribe what\'s being done. This section maps what\'s possible.',
+      '<strong>Status legend.</strong> Now (Q1) · Q2 · Q3+ · Q4+ · Skip / off-brand.',
+      '<strong>12.1 Acquisition ideas</strong> — by status, tables of relevant ideas by number: # | Idea | Client note.',
+      '<strong>12.2 Activation ideas</strong> · <strong>12.3 Retention ideas</strong> · <strong>12.4 Referral ideas</strong> · <strong>12.5 Revenue ideas</strong> · <strong>12.6 Cross-cutting ideas</strong>.',
+      '<strong>Idea-bank summary.</strong> Counts per AARRR stage · counts skipped, with rationale · what the plan covers as a % of the available tactical surface area · what this proves about the client\'s stage.'
+    ],
+    voice: [
+      'Skip list has rationale, not just absence.',
+      'The cross-reference is the inventory to scale activity without losing strategic coherence.'
+    ],
+    example: `<p><strong>Idea-bank summary:</strong> 88 ideas applicable to Acquisition · 7 to Activation · 8 to Retention · 5 to Referral · 3 to Revenue · 2 cross-cutting · 23 skipped for brand / business-model fit.</p>
+      <p><strong>What this proves:</strong> the plan is roughly 30% of the available tactical surface area, not 100%. That's appropriate at this stage and budget. As capacity unlocks across Q2 → Q3 → Series A, the cross-reference becomes the inventory we pull from.</p>`
+  },
+  {
+    n: 13, label: 'Measurement & RACI', title: 'Measurement, RACI, open decisions, appendix',
+    color: '#94a3b8',
+    purpose: 'Operational close. Define how the plan gets measured, who owns what, what\'s still TBD, and where to find the deeper docs.',
+    length: 'Tables + ranked list.',
+    structure: [
+      '<strong>North star (proposed).</strong> One metric that captures the business-model thesis. Make it specific to the company — not generic "ARR growth."',
+      '<strong>Leading indicators by AARRR stage.</strong> Table: Stage | Leading indicators.',
+      '<strong>Review cadence.</strong> Weekly · Monthly · Quarterly. Who syncs with whom, on what, and when recalibration triggers.',
+      '<strong>RACI.</strong> Table: Domain | Responsible | Accountable | Consulted | Informed. Common domains: strategic plan, brand voice, app implementation, lifecycle, SEO content, App Store, founder-led social, events, ambassadors, B2B sales, pricing, investor narrative, future hires.',
+      '<strong>Open decisions blocking the plan.</strong> Ranked by impact. Each is: name + impact + what\'s blocked.',
+      '<strong>Appendix — deep-dive links.</strong> Published in repo · Founder-authored strategic context · fCMO working drafts.'
+    ],
+    voice: [
+      'North star is specific to this company.',
+      'Open decisions are ranked, not listed.'
+    ],
+    example: `<p><strong>North star:</strong> Blended-LTV-to-blended-CAC ratio per acquired user. Combines app subscription + hardware + cross-sells, against paid + content + ambassador + tool spend.</p>
+      <p><strong>Top open decisions:</strong></p>
+      <ol style="padding-left:20px;font-size:12px;color:#b8c5d8;line-height:1.6">
+        <li>Canonical domain — blocks SEO foundation</li>
+        <li>Retention metric definition — blocks clean dashboards</li>
+        <li>Mira post-session reflection scope — blocks onboarding Variants 1 and 2</li>
+        <li>App UI stability timeline — blocks Flow 2, full lifecycle</li>
+      </ol>`
+  }
+];
+
+/* ═══════════════════════════════════════════════════════════════
+   HEURISTICS
+   ═══════════════════════════════════════════════════════════════ */
+
+const HEURISTICS = [
+  ['Section 1', 'A non-expert reader could understand the company\'s growth thesis from this alone.'],
+  ['Section 2', 'Brand voice rules are explicit enough that any new copywriter could follow them.'],
+  ['Section 3', 'All "in-flight" items have an owner and a blocker named.'],
+  ['Sections 4–8', 'Each move names a <em>skill</em> (<code>some-skill</code>) and a <em>tool</em> (Customer.io MCP / Stripe MCP / Ahrefs / etc.).'],
+  ['Section 9', 'Every row has an owner.'],
+  ['Section 10', 'Each quarter names the funding stage explicitly.'],
+  ['Section 11', 'At least one concrete operational example proves the stack thesis.'],
+  ['Section 12', 'Skip list has rationale, not just absence.'],
+  ['Section 13', 'North star is specific to this company (not generic "ARR growth").']
+];
+
+/* ═══════════════════════════════════════════════════════════════
+   RENDER · SIDEBAR
+   ═══════════════════════════════════════════════════════════════ */
+
+function renderSidebar(){
+  const nav = document.getElementById('side-nav');
+  nav.innerHTML = SECTIONS.map(s => `
+    <a class="side-item" href="#sec-${s.n}" data-n="${s.n}" style="--sc:${s.color}">
+      <span class="side-num">${s.n === 0 ? '—' : String(s.n).padStart(2,'0')}</span>
+      <span class="side-title">${s.label}</span>
+    </a>
+  `).join('');
+
+  nav.querySelectorAll('.side-item').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.getElementById('sec-' + a.dataset.n);
+      if (target) target.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  });
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RENDER · SECTIONS
+   ═══════════════════════════════════════════════════════════════ */
+
+function renderSections(){
+  const wrap = document.getElementById('sections');
+
+  wrap.innerHTML = SECTIONS.map(s => {
+    const structHTML = s.structure.map(item => `<li>${item}</li>`).join('');
+    const voiceHTML = s.voice.map(item => `<li>${item}</li>`).join('');
+
+    const lengthPill = s.length
+      ? `<span class="pill">
+           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+             <path d="M4 7h16M4 12h16M4 17h10"/>
+           </svg>
+           <strong>Length</strong> ${s.length}
+         </span>` : '';
+
+    const exampleHTML = s.example
+      ? `<div class="example" data-example="${s.n}">
+           <div class="example-head">
+             <span class="arrow">▶</span>
+             Reference example
+             <span class="tag">Quietude plan</span>
+           </div>
+           <div class="example-body">${s.example}</div>
+         </div>` : '';
+
+    return `
+      <article class="section" id="sec-${s.n}" data-n="${s.n}" style="--sc:${s.color}">
+        <div class="section-head">
+          <span class="sec-num">${s.n === 0 ? '00' : String(s.n).padStart(2,'0')}</span>
+          <div class="sec-head-text">
+            <h2 class="sec-title">${s.title}</h2>
+            <p class="sec-purpose">${s.purpose}</p>
+          </div>
+          <span class="sec-toggle" aria-hidden="true">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </div>
+
+        <div class="sec-body">
+          <div class="sec-meta">${lengthPill}</div>
+
+          <div class="sec-block">
+            <div class="block-label">Structure</div>
+            <ul class="struct-list">${structHTML}</ul>
+          </div>
+
+          <div class="sec-block voice-notes">
+            <div class="block-label">Voice notes</div>
+            <ul>${voiceHTML}</ul>
+          </div>
+
+          ${exampleHTML}
+        </div>
+      </article>`;
+  }).join('');
+
+  /* ── open / close ── */
+  wrap.querySelectorAll('.section').forEach(sec => {
+    const head = sec.querySelector('.section-head');
+    head.addEventListener('click', () => {
+      sec.classList.toggle('is-open');
+    });
+
+    /* default: open the first three */
+    const n = parseInt(sec.dataset.n, 10);
+    if (n <= 2) sec.classList.add('is-open');
+  });
+
+  /* ── example toggles ── */
+  wrap.querySelectorAll('.example-head').forEach(h => {
+    h.addEventListener('click', e => {
+      e.stopPropagation();
+      h.parentElement.classList.toggle('is-open');
+    });
+  });
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RENDER · HEURISTICS
+   ═══════════════════════════════════════════════════════════════ */
+
+function renderHeuristics(){
+  const el = document.getElementById('heur-list');
+  el.innerHTML = HEURISTICS.map(([n, t]) => `
+    <div class="heur-item">
+      <div class="hn">${n}</div>
+      <div class="ht">${t}</div>
+    </div>
+  `).join('');
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   VIEW TOGGLE
+   ═══════════════════════════════════════════════════════════════ */
+
+function initViewToggle(){
+  const btns = document.querySelectorAll('.view-btn');
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+
+      const view = btn.dataset.view;
+
+      if (view === 'reference'){
+        document.body.classList.add('show-examples');
+        /* open all sections so examples are visible */
+        document.querySelectorAll('.section').forEach(s => s.classList.add('is-open'));
+      } else {
+        document.body.classList.remove('show-examples');
+      }
+    });
+  });
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SCROLL SPY
+   ═══════════════════════════════════════════════════════════════ */
+
+function initScrollSpy(){
+  const sections = document.querySelectorAll('.section');
+  const navItems = document.querySelectorAll('.side-item');
+  const topbarH = 58;
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting){
+        const n = entry.target.dataset.n;
+        navItems.forEach(a => {
+          a.classList.toggle('is-active', a.dataset.n === n);
+        });
+      }
+    });
+  }, {
+    rootMargin: `-${topbarH + 40}px 0px -70% 0px`,
+    threshold: 0
+  });
+
+  sections.forEach(s => io.observe(s));
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   KEYBOARD · collapse / expand all with [ and ]
+   ═══════════════════════════════════════════════════════════════ */
+
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+  if (e.key === '['){
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('is-open'));
+  }
+  if (e.key === ']'){
+    document.querySelectorAll('.section').forEach(s => s.classList.add('is-open'));
+  }
+});
+
+/* ═══════════════════════════════════════════════════════════════
+   INIT
+   ═══════════════════════════════════════════════════════════════ */
+
+renderSidebar();
+renderSections();
+renderHeuristics();
+initViewToggle();
+initScrollSpy();
+</script>
+</body>
+</html>

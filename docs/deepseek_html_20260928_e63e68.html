@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Channel System Map — Edu / Bayan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#060B14;
+    --ink:#E6EEF8;
+    --dim:#7C8DA6;
+    --faint:#3D4C63;
+    --line:rgba(120,160,200,.14);
+    --teal:#2DD4BF;
+    --violet:#A78BFA;
+    --blue:#60A5FA;
+    --amber:#FBBF24;
+    --red:#F87171;
+    --pink:#F472B6;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body {
+    background:var(--bg); color:var(--ink);
+    font-family:'Inter',-apple-system,sans-serif;
+    line-height:1.6; overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ── blueprint background ─────────────────────────────── */
+  .blueprint {
+    position:fixed; inset:0; z-index:0; pointer-events:none;
+    background-image:
+      linear-gradient(rgba(45,212,191,.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(45,212,191,.045) 1px, transparent 1px),
+      linear-gradient(rgba(45,212,191,.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(45,212,191,.02) 1px, transparent 1px);
+    background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    mask-image:radial-gradient(ellipse 90% 80% at 50% 40%, #000 30%, transparent 100%);
+  }
+  .vignette {
+    position:fixed; inset:0; z-index:1; pointer-events:none;
+    background:radial-gradient(ellipse 80% 70% at 50% 45%, transparent 40%, var(--bg) 100%);
+  }
+  /* scan sweep */
+  .scan {
+    position:fixed; top:0; left:0; right:0; height:120px; z-index:2;
+    pointer-events:none; opacity:.5;
+    background:linear-gradient(180deg, transparent, rgba(45,212,191,.06), transparent);
+    animation:scan 9s linear infinite;
+  }
+  @keyframes scan { 0%{transform:translateY(-120px);} 100%{transform:translateY(100vh);} }
+
+  /* ── header ───────────────────────────────────────────── */
+  header {
+    position:relative; z-index:10; padding:28px 32px 0;
+    max-width:1400px; margin:0 auto;
+  }
+  .top {
+    display:flex; align-items:center; gap:16px;
+    font-family:'JetBrains Mono',monospace; font-size:11px;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--faint);
+  }
+  .top .dot {
+    width:7px;height:7px;border-radius:50%;background:var(--teal);
+    box-shadow:0 0 0 4px rgba(45,212,191,.15);
+    animation:pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:.4;} }
+  .top .sep { flex:1; height:1px; background:var(--line); }
+
+  /* ── hero ─────────────────────────────────────────────── */
+  .hero {
+    position:relative; z-index:10;
+    max-width:1400px; margin:0 auto; padding:40px 32px 8px;
+    display:grid; grid-template-columns:1.1fr 1fr; gap:60px; align-items:end;
+  }
+  @media(max-width:900px){ .hero{grid-template-columns:1fr;gap:24px;} }
+  .hero h1 {
+    font-size:clamp(32px,5vw,58px); font-weight:800;
+    letter-spacing:-.045em; line-height:1.02;
+  }
+  .hero h1 em {
+    font-style:normal;
+    background:linear-gradient(100deg,var(--teal),var(--violet) 55%,var(--amber));
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    background-size:200% 100%; animation:shift 8s ease-in-out infinite;
+  }
+  @keyframes shift { 0%,100%{background-position:0% 50%;} 50%{background-position:100% 50%;} }
+  .hero p { color:var(--dim); font-size:15px; max-width:46ch; }
+  .hero p b { color:var(--ink); font-weight:600; }
+
+  /* ── map section ──────────────────────────────────────── */
+  .map-section {
+    position:relative; z-index:10;
+    max-width:1400px; margin:0 auto; padding:48px 32px 0;
+    display:grid; grid-template-columns:1.45fr 1fr; gap:40px;
+    align-items:start;
+  }
+  @media(max-width:1000px){ .map-section{grid-template-columns:1fr;} }
+
+  .map-stage {
+    position:relative; border-radius:20px;
+    border:1px solid var(--line);
+    background:rgba(8,16,28,.5);
+    backdrop-filter:blur(4px);
+    overflow:hidden;
+  }
+  .map-stage::before {
+    content:'fig. 01 — channel system';
+    position:absolute; top:14px; left:18px;
+    font-family:'Caveat',cursive; font-size:18px; color:var(--teal);
+    opacity:.75; z-index:3; pointer-events:none;
+  }
+  .map-stage::after {
+    content:'scale · schematic';
+    position:absolute; bottom:12px; right:18px;
+    font-family:'JetBrains Mono',monospace; font-size:10px;
+    letter-spacing:.1em; color:var(--faint); z-index:3; pointer-events:none;
+  }
+  svg#map { display:block; width:100%; height:auto; }
+
+  /* svg interactive bits */
+  .mod { cursor:pointer; transition:opacity .35s ease; }
+  .mod .halo { transition:opacity .35s ease, r .35s cubic-bezier(.16,1,.3,1); }
+  .mod .ring-track { fill:none; stroke:rgba(255,255,255,.07); stroke-width:3; }
+  .mod .ring-fill { fill:none; stroke-width:3; stroke-linecap:round; transition:stroke-dashoffset 1s cubic-bezier(.16,1,.3,1); }
+  .mod .node-bg { transition:fill .3s ease, stroke .3s ease, r .35s cubic-bezier(.16,1,.3,1); }
+  .mod .label { font-family:'Inter',sans-serif; font-weight:600; font-size:15px; fill:var(--ink); text-anchor:middle; }
+  .mod .sub { font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:.1em; fill:var(--faint); text-anchor:middle; text-transform:uppercase; }
+  .mod:hover .node-bg { r:54; }
+  .mod.dim { opacity:.22; }
+  .mod.selected .node-bg { r:56; }
+
+  .edge { fill:none; stroke-width:1.6; stroke-linecap:round; transition:opacity .35s, stroke-width .35s; opacity:.4; }
+  .edge.hot { opacity:1; stroke-width:2.4; }
+  .edge.dim { opacity:.08; }
+
+  .core-ring { fill:none; stroke:rgba(45,212,191,.25); stroke-width:1; stroke-dasharray:3 6; }
+  .core-pulse { fill:none; stroke:var(--teal); stroke-width:1; opacity:0; }
+  @keyframes corePulse { 0%{r:34;opacity:.7;} 100%{r:150;opacity:0;} }
+
+  /* ── detail panel ─────────────────────────────────────── */
+  .detail {
+    position:sticky; top:24px;
+    border-radius:20px; border:1px solid var(--line);
+    background:linear-gradient(180deg, rgba(12,22,38,.85), rgba(8,14,24,.7));
+    backdrop-filter:blur(10px);
+    padding:26px; min-height:520px;
+    transition:border-color .4s ease;
+  }
+  .detail-top { display:flex; align-items:flex-start; gap:14px; margin-bottom:20px; }
+  .detail-icon {
+    width:52px;height:52px;border-radius:14px; flex-shrink:0;
+    display:grid; place-items:center;
+    background:rgba(255,255,255,.04);
+    border:1px solid var(--line);
+    transition:.4s;
+  }
+  .detail-icon svg { width:26px;height:26px; }
+  .detail h2 { font-size:22px; font-weight:800; letter-spacing:-.03em; line-height:1.15; }
+  .detail .tag { font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--dim); margin-top:4px; }
+  .detail .def { font-size:14px; color:var(--dim); margin-bottom:22px; }
+  .detail .def b { color:var(--ink); font-weight:500; }
+
+  .block { margin-bottom:20px; }
+  .block-label {
+    font-family:'JetBrains Mono',monospace; font-size:10px;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--faint);
+    margin-bottom:10px; display:flex; align-items:center; gap:8px;
+  }
+  .block-label::after { content:''; flex:1; height:1px; background:var(--line); }
+
+  .chips { display:flex; flex-wrap:wrap; gap:6px; }
+  .chip {
+    font-family:'JetBrains Mono',monospace; font-size:11px;
+    padding:4px 10px; border-radius:6px;
+    background:rgba(255,255,255,.04); border:1px solid var(--line);
+    color:var(--dim); transition:.25s;
+  }
+  .chip:hover { color:var(--ink); border-color:var(--faint); }
+
+  .gauge { display:flex; align-items:center; gap:14px; margin-bottom:6px; }
+  .gauge-bar { flex:1; height:6px; border-radius:3px; background:rgba(255,255,255,.06); position:relative; overflow:hidden; }
+  .gauge-fill { position:absolute; inset:0 auto 0 0; border-radius:3px; transition:width 1s cubic-bezier(.16,1,.3,1); }
+  .gauge-target { position:absolute; top:-3px; bottom:-3px; width:2px; background:var(--ink); opacity:.5; }
+  .gauge-num { font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:500; }
+  .gauge-num .t { color:var(--faint); }
+
+  .signals { list-style:none; display:grid; gap:7px; }
+  .signals li {
+    font-size:13px; color:var(--dim); padding-left:18px; position:relative;
+  }
+  .signals li::before {
+    content:''; position:absolute; left:0; top:8px;
+    width:5px;height:5px;border-radius:50%; background:var(--faint);
+  }
+  .signals li.warn::before { background:var(--amber); }
+  .signals li.bad::before { background:var(--red); }
+
+  .flow-row { display:flex; flex-wrap:wrap; gap:6px; align-items:center; font-size:12px; color:var(--dim); }
+  .flow-tag {
+    font-family:'JetBrains Mono',monospace; font-size:11px;
+    padding:3px 9px; border-radius:6px;
+    background:rgba(255,255,255,.04); border:1px solid var(--line);
+  }
+  .flow-arrow { color:var(--faint); }
+
+  /* ── health strip ─────────────────────────────────────── */
+  .strip-section {
+    position:relative; z-index:10;
+    max-width:1400px; margin:0 auto; padding:64px 32px 0;
+  }
+  .sec-head { display:flex; align-items:baseline; gap:16px; margin-bottom:24px; }
+  .sec-head h2 { font-size:clamp(20px,2.6vw,28px); font-weight:800; letter-spacing:-.03em; }
+  .sec-head span {
+    font-family:'Caveat',cursive; font-size:19px; color:var(--teal); opacity:.7;
+  }
+  .strip { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; }
+  .strip-card {
+    border-radius:14px; border:1px solid var(--line);
+    background:rgba(255,255,255,.02); padding:16px;
+    transition:.35s cubic-bezier(.16,1,.3,1); cursor:pointer;
+  }
+  .strip-card:hover { transform:translateY(-4px); background:rgba(255,255,255,.045); border-color:var(--faint); }
+  .strip-card .sc-top { display:flex; align-items:center; gap:9px; margin-bottom:12px; }
+  .strip-card .sc-dot { width:8px;height:8px;border-radius:50%; flex-shrink:0; }
+  .strip-card .sc-name { font-size:13px; font-weight:600; letter-spacing:-.01em; }
+  .strip-card .sc-bar { height:4px; border-radius:2px; background:rgba(255,255,255,.07); overflow:hidden; margin-bottom:8px; }
+  .strip-card .sc-fill { height:100%; border-radius:2px; width:0; transition:width 1.1s cubic-bezier(.16,1,.3,1); }
+  .strip-card .sc-meta { display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--faint); }
+  .strip-card .sc-meta b { color:var(--dim); font-weight:500; }
+
+  /* ── flow diagram ─────────────────────────────────────── */
+  .flow-section {
+    position:relative; z-index:10;
+    max-width:1400px; margin:0 auto; padding:64px 32px 120px;
+  }
+  .flow-diagram {
+    border-radius:20px; border:1px solid var(--line);
+    background:rgba(8,16,28,.4); backdrop-filter:blur(4px);
+    padding:40px 32px; display:flex; align-items:center;
+    gap:20px; flex-wrap:wrap; justify-content:center;
+  }
+  .fnode {
+    border-radius:14px; padding:14px 20px; text-align:center;
+    border:1px solid var(--line); background:rgba(255,255,255,.03);
+    transition:.35s cubic-bezier(.16,1,.3,1); min-width:130px;
+  }
+  .fnode:hover { transform:translateY(-4px); border-color:var(--faint); }
+  .fnode .fn-t { font-size:13.5px; font-weight:700; letter-spacing:-.01em; }
+  .fnode .fn-s { font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); margin-top:4px; }
+  .fnode.src { border-color:rgba(45,212,191,.4); }
+  .fnode.src .fn-t { color:var(--teal); }
+  .farrow { color:var(--faint); font-size:18px; }
+  .fbracket { display:flex; flex-direction:column; gap:10px; }
+  .fcol { display:flex; flex-direction:column; gap:12px; }
+
+  footer {
+    position:relative; z-index:10;
+    max-width:1400px; margin:0 auto; padding:0 32px 40px;
+    display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;
+    font-family:'JetBrains Mono',monospace; font-size:10.5px;
+    color:var(--faint); letter-spacing:.06em;
+  }
+
+  @media(max-width:640px){
+    header,.hero,.map-section,.strip-section,.flow-section,footer { padding-left:18px; padding-right:18px; }
+    .detail { position:relative; top:0; }
+    .flow-diagram { padding:24px 18px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="blueprint"></div>
+<div class="vignette"></div>
+<div class="scan"></div>
+
+<header>
+  <div class="top">
+    <span class="dot"></span>
+    <span>Edu / Bayan</span>
+    <span>·</span>
+    <span>Channel System Map</span>
+    <span class="sep"></span>
+    <span>rev. 2026-09</span>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Six channels,<br><em>one system.</em></h1>
+  <p>
+    Not a list — a circuit. <b>Website &amp; Content</b> is the owned source.
+    <b>GEO</b> and <b>SEO</b> structure it for machines. <b>AI Visibility</b> and
+    <b>Social</b> distribute it. <b>Paid Ads</b> amplifies it. Click any node.
+  </p>
+</section>
+
+<!-- MAP + DETAIL -->
+<section class="map-section">
+  <div class="map-stage">
+    <svg id="map" viewBox="0 0 1000 1000" role="img" aria-label="Channel system map">
+      <defs>
+        <radialGradient id="coreGlow">
+          <stop offset="0%" stop-color="rgba(45,212,191,.35)"/>
+          <stop offset="100%" stop-color="rgba(45,212,191,0)"/>
+        </radialGradient>
+        <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+          <feGaussianBlur stdDeviation="6" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5"
+                markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"/>
+        </marker>
+      </defs>
+
+      <!-- construction rings -->
+      <circle class="core-ring" cx="500" cy="500" r="300"/>
+      <circle class="core-ring" cx="500" cy="500" r="380" style="opacity:.4"/>
+      <circle class="core-ring" cx="500" cy="500" r="120" style="opacity:.5"/>
+
+      <!-- compass ticks -->
+      <g id="ticks" stroke="rgba(120,160,200,.2)" stroke-width="1"></g>
+
+      <!-- edges -->
+      <g id="edges"></g>
+
+      <!-- core -->
+      <g id="core">
+        <circle class="core-pulse" cx="500" cy="500" r="34"></circle>
+        <circle cx="500" cy="500" r="70" fill="url(#coreGlow)"/>
+        <circle cx="500" cy="500" r="34" fill="rgba(45,212,191,.08)" stroke="rgba(45,212,191,.5)" stroke-width="1.5"/>
+        <circle cx="500" cy="500" r="7" fill="#2DD4BF" filter="url(#softGlow)"/>
+        <text x="500" y="558" text-anchor="middle"
+              font-family="Caveat, cursive" font-size="22" fill="#2DD4BF" opacity=".9">
+          brand core
+        </text>
+      </g>
+
+      <!-- modules injected -->
+      <g id="modules"></g>
+    </svg>
+  </div>
+
+  <aside class="detail" id="detail"></aside>
+</section>
+
+<!-- HEALTH STRIP -->
+<section class="strip-section">
+  <div class="sec-head">
+    <h2>Channel health</h2>
+    <span>measured against audit baseline</span>
+  </div>
+  <div class="strip" id="strip"></div>
+</section>
+
+<!-- FLOW -->
+<section class="flow-section">
+  <div class="sec-head">
+    <h2>The flow</h2>
+    <span>how value moves through the system</span>
+  </div>
+  <div class="flow-diagram">
+    <div class="fnode src">
+      <div class="fn-t">Website &amp; Content</div>
+      <div class="fn-s">owned source</div>
+    </div>
+    <span class="farrow">→</span>
+    <div class="fcol">
+      <div class="fnode">
+        <div class="fn-t">GEO</div>
+        <div class="fn-s">structures</div>
+      </div>
+      <div class="fnode">
+        <div class="fn-t">SEO</div>
+        <div class="fn-s">ranks</div>
+      </div>
+    </div>
+    <span class="farrow">→</span>
+    <div class="fcol">
+      <div class="fnode">
+        <div class="fn-t">AI Visibility</div>
+        <div class="fn-s">cited by machines</div>
+      </div>
+      <div class="fnode">
+        <div class="fn-t">Social Media</div>
+        <div class="fn-s">shared by humans</div>
+      </div>
+    </div>
+    <span class="farrow">←</span>
+    <div class="fnode">
+      <div class="fn-t">Paid Ads</div>
+      <div class="fn-s">amplifier · dormant</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>fig. 01 — channel system map · Edu / Bayan</span>
+  <span>owned → structured → distributed · paid amplifies</span>
+</footer>
+
+<script>
+/* ── channel data ─────────────────────────────────────── */
+const channels = {
+  ai: {
+    name:'AI Visibility', tagline:'being cited by machines', color:'#A78BFA',
+    angle:-90, icon:'radar',
+    def:'Whether AI models <b>mention and cite</b> the brand when answering buyer questions.',
+    concepts:['Mentions','Citations','Probes','Answer pages','Retrieval'],
+    health:{ score:10, target:42, label:'Critical' },
+    signals:[
+      { t:'0 / 3 probe mentions', k:'bad' },
+      { t:'0 citations across Claude probes', k:'bad' },
+      { t:'No indexed direct-answer pages', k:'warn' }
+    ],
+    feeds:['—'], fedBy:['geo','seo','social','web']
+  },
+  seo: {
+    name:'SEO', tagline:'owning the query', color:'#60A5FA',
+    angle:-30, icon:'search',
+    def:'Ranking in <b>classic search results</b> for the terms buyers actually type.',
+    concepts:['Keywords','Rankings','Crawl','Sitemap','Top-100'],
+    health:{ score:0, target:30, label:'Invisible' },
+    signals:[
+      { t:'0 / 10 target queries in top-100', k:'bad' },
+      { t:'Best keyword: usmle question bank · 170/mo', k:'warn' },
+      { t:'No ranking pages yet', k:'bad' }
+    ],
+    feeds:['ai'], fedBy:['web']
+  },
+  web: {
+    name:'Website & Content', tagline:'the owned source of truth', color:'#2DD4BF',
+    angle:30, icon:'page',
+    def:'The site itself — pages, messaging, speed, structure. <b>Everything else points here.</b>',
+    concepts:['Pages','Messaging','CTA','Speed','Structure'],
+    health:{ score:71, target:90, label:'Solid, slow' },
+    signals:[
+      { t:'60 discovered pages', k:'' },
+      { t:'Mobile Lighthouse 71/100', k:'warn' },
+      { t:'Broad homepage messaging', k:'warn' },
+      { t:'655 crawlable URLs', k:'' }
+    ],
+    feeds:['seo','geo','ai','paid'], fedBy:[]
+  },
+  geo: {
+    name:'GEO', tagline:'structuring for machines', color:'#FBBF24',
+    angle:90, icon:'chip',
+    def:'Generative Engine Optimization — making the site <b>readable and quotable</b> by AI.',
+    concepts:['llms.txt','FAQ schema','BLUF','Noscript','Meta'],
+    health:{ score:71, target:90, label:'Improving' },
+    signals:[
+      { t:'No llms.txt or llms-full.txt', k:'warn' },
+      { t:'No FAQ / Q&A schema', k:'warn' },
+      { t:'301-char meta description', k:'warn' }
+    ],
+    feeds:['ai'], fedBy:['web']
+  },
+  paid: {
+    name:'Paid Ads', tagline:'buying attention', color:'#F87171',
+    angle:150, icon:'megaphone',
+    def:'Paid distribution across search, social, and display. <b>Amplifies</b> proven content.',
+    concepts:['Budget','Audience','Creative','Spend cap','ROAS'],
+    health:{ score:0, target:null, label:'Dormant' },
+    signals:[
+      { t:'Monthly budget: 0¢', k:'warn' },
+      { t:'Not active — policy blocks spend', k:'warn' },
+      { t:'No campaigns live', k:'bad' }
+    ],
+    feeds:['web','social'], fedBy:[]
+  },
+  social: {
+    name:'Social Media', tagline:'earning the share', color:'#F472B6',
+    angle:210, icon:'network',
+    def:'Organic presence and <b>referral distribution</b> on social platforms.',
+    concepts:['X','Telegram','Rhythm','Snippets','Referral'],
+    health:{ score:44, target:69, label:'Quiet' },
+    signals:[
+      { t:'X + Telegram profiles linked', k:'' },
+      { t:'No stated posting rhythm', k:'warn' },
+      { t:'No exam-specific social offer', k:'warn' }
+    ],
+    feeds:['ai'], fedBy:['web']
+  }
+};
+
+const edges = [
+  { from:'web', to:'seo',    label:'feeds' },
+  { from:'web', to:'geo',    label:'feeds' },
+  { from:'web', to:'ai',     label:'publishes' },
+  { from:'web', to:'paid',   label:'targets' },
+  { from:'geo', to:'ai',     label:'optimizes' },
+  { from:'seo', to:'ai',     label:'ranks' },
+  { from:'social', to:'ai',  label:'mentions' }
+];
+
+/* ── geometry ─────────────────────────────────────────── */
+const CX = 500, CY = 500, R = 300;
+const pos = {};
+Object.entries(channels).forEach(([id, c]) => {
+  const a = c.angle * Math.PI / 180;
+  pos[id] = { x: CX + R * Math.cos(a), y: CY + R * Math.sin(a) };
+});
+
+/* ── icon paths (centered at 0,0, ~28px) ──────────────── */
+const icons = {
+  radar: `<circle cx="0" cy="0" r="11" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".45"/>
+          <circle cx="0" cy="0" r="6" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".7"/>
+          <circle cx="0" cy="0" r="1.8" fill="currentColor"/>
+          <line x1="0" y1="0" x2="9" y2="-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>`,
+  search: `<circle cx="-3" cy="-3" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+           <line x1="3" y1="3" x2="10" y2="10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+  page:  `<rect x="-8" y="-11" width="16" height="22" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <line x1="-4" y1="-5" x2="4" y2="-5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <line x1="-4" y1="0" x2="4" y2="0" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <line x1="-4" y1="5" x2="1" y2="5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>`,
+  chip:  `<rect x="-8" y="-8" width="16" height="16" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <rect x="-3.5" y="-3.5" width="7" height="7" rx="1" fill="currentColor" opacity=".8"/>
+          <line x1="-11" y1="-4" x2="-8" y2="-4" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="-11" y1="4" x2="-8" y2="4" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="8" y1="-4" x2="11" y2="-4" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="8" y1="4" x2="11" y2="4" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="-4" y1="-11" x2="-4" y2="-8" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="4" y1="-11" x2="4" y2="-8" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="-4" y1="8" x2="-4" y2="11" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="4" y1="8" x2="4" y2="11" stroke="currentColor" stroke-width="1.4"/>`,
+  megaphone: `<path d="M -9 -3 L 2 -8 L 2 8 L -9 3 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              <path d="M 4 -6 L 4 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              <path d="M 7 -3 A 5 5 0 0 1 7 3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              <path d="M 10 -1 A 9 9 0 0 1 10 1" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".6"/>`,
+  network: `<circle cx="-7" cy="-6" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="7" cy="-6" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="0" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="-4.8" y1="-4.8" x2="-1.5" y2="6" stroke="currentColor" stroke-width="1.2" opacity=".6"/>
+            <line x1="4.8" y1="-4.8" x2="1.5" y2="6" stroke="currentColor" stroke-width="1.2" opacity=".6"/>
+            <line x1="-4" y1="-6" x2="4" y2="-6" stroke="currentColor" stroke-width="1.2" opacity=".6"/>`
+};
+
+/* ── build compass ticks ──────────────────────────────── */
+const ticksG = document.getElementById('ticks');
+for (let i = 0; i < 72; i++) {
+  const a = i * 5 * Math.PI / 180;
+  const r1 = 388, r2 = i % 6 === 0 ? 380 : 384;
+  const line = document.createElementNS('http://www.w3.org/2000/svg','line');
+  line.setAttribute('x1', CX + r1 * Math.cos(a));
+  line.setAttribute('y1', CY + r1 * Math.sin(a));
+  line.setAttribute('x2', CX + r2 * Math.cos(a));
+  line.setAttribute('y2', CY + r2 * Math.sin(a));
+  ticksG.appendChild(line);
+}
+
+/* ── build edges ──────────────────────────────────────── */
+const edgesG = document.getElementById('edges');
+edges.forEach(e => {
+  const a = pos[e.from], b = pos[e.to];
+  const mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2;
+  const cx = mx + (CX - mx) * 0.42;
+  const cy = my + (CY - my) * 0.42;
+  // trim endpoints to node radius
+  const nr = 58;
+  const d1 = Math.hypot(a.x - b.x, a.y - b.y);
+  const ux = (b.x - a.x) / d1, uy = (b.y - a.y) / d1;
+  const x1 = a.x + ux * nr, y1 = a.y + uy * nr;
+  const x2 = b.x - ux * nr, y2 = b.y - uy * nr;
+
+  const p = document.createElementNS('http://www.w3.org/2000/svg','path');
+  p.setAttribute('d', `M ${x1} ${y1} Q ${cx} ${cy} ${x2} ${y2}`);
+  p.setAttribute('class','edge');
+  p.setAttribute('stroke', channels[e.to].color);
+  p.setAttribute('marker-end','url(#arrow)');
+  p.style.color = channels[e.to].color;
+  p.dataset.from = e.from;
+  p.dataset.to = e.to;
+  edgesG.appendChild(p);
+});
+
+/* ── build modules ────────────────────────────────────── */
+const modsG = document.getElementById('modules');
+const CIRC = 2 * Math.PI * 58;
+Object.entries(channels).forEach(([id, c]) => {
+  const p = pos[id];
+  const g = document.createElementNS('http://www.w3.org/2000/svg','g');
+  g.setAttribute('class','mod');
+  g.dataset.id = id;
+
+  const fill = (c.health.score / 100) * CIRC;
+
+  g.innerHTML = `
+    <circle class="halo" cx="${p.x}" cy="${p.y}" r="90" fill="${c.color}" opacity="0"/>
+    <circle class="ring-track" cx="${p.x}" cy="${p.y}" r="58"/>
+    <circle class="ring-fill" cx="${p.x}" cy="${p.y}" r="58"
+            stroke="${c.color}"
+            stroke-dasharray="${CIRC}"
+            stroke-dashoffset="${CIRC}"
+            transform="rotate(-90 ${p.x} ${p.y})"/>
+    <circle class="node-bg" cx="${p.x}" cy="${p.y}" r="48"
+            fill="rgba(8,14,24,.92)" stroke="${c.color}" stroke-width="1.5"/>
+    <g transform="translate(${p.x} ${p.y})" style="color:${c.color}">
+      ${icons[c.icon]}
+    </g>
+    <text class="label" x="${p.x}" y="${p.y + 78}">${c.name}</text>
+    <text class="sub" x="${p.x}" y="${p.y + 95}">${c.tagline}</text>`;
+  modsG.appendChild(g);
+
+  // animate health ring in
+  requestAnimationFrame(() => {
+    setTimeout(() => {
+      g.querySelector('.ring-fill').style.strokeDashoffset = CIRC - fill;
+    }, 400);
+  });
+});
+
+/* ── interaction ──────────────────────────────────────── */
+const modEls = [...document.querySelectorAll('.mod')];
+const edgeEls = [...document.querySelectorAll('.edge')];
+const detail = document.getElementById('detail');
+let selected = 'web';
+
+function neighbors(id) {
+  const s = new Set([id]);
+  edges.forEach(e => {
+    if (e.from === id) s.add(e.to);
+    if (e.to === id) s.add(e.from);
+  });
+  return s;
+}
+
+function highlight(id) {
+  const near = neighbors(id);
+  modEls.forEach(m => m.classList.toggle('dim', !near.has(m.dataset.id)));
+  edgeEls.forEach(e => {
+    const hot = e.dataset.from === id || e.dataset.to === id;
+    e.classList.toggle('hot', hot);
+    e.classList.toggle('dim', !hot);
+  });
+}
+
+function renderDetail(id) {
+  const c = channels[id];
+  const pct = c.health.score;
+  const tgt = c.health.target;
+  const delta = tgt !== null ? tgt - pct : null;
+
+  const signals = c.signals.map(s =>
+    `<li class="${s.k}">${s.t}</li>`).join('');
+
+  const feeds = c.feeds.map(f =>
+    f === '—' ? '<span class="flow-tag">nothing</span>'
+              : `<span class="flow-tag">${channels[f]?.name || f}</span>`
+  ).join('<span class="flow-arrow">·</span>');
+  const fedBy = c.fedBy.length
+    ? c.fedBy.map(f => `<span class="flow-tag">${channels[f].name}</span>`).join('<span class="flow-arrow">·</span>')
+    : '<span class="flow-tag">nothing — it is the source</span>';
+
+  detail.style.borderColor = c.color + '55';
+  detail.innerHTML = `
+    <div class="detail-top">
+      <div class="detail-icon" style="color:${c.color}; border-color:${c.color}55; background:${c.color}12">
+        <svg viewBox="-14 -14 28 28">${icons[c.icon]}</svg>
+      </div>
+      <div>
+        <h2>${c.name}</h2>
+        <div class="tag">${c.tagline}</div>
+      </div>
+    </div>
+
+    <p class="def">${c.def}</p>
+
+    <div class="block">
+      <div class="block-label">Core concepts</div>
+      <div class="chips">${c.concepts.map(x => `<span class="chip">${x}</span>`).join('')}</div>
+    </div>
+
+    <div class="block">
+      <div class="block-label">Health</div>
+      <div class="gauge">
+        <span class="gauge-num" style="color:${c.color}">${pct}</span>
+        <div class="gauge-bar">
+          <div class="gauge-fill" style="background:${c.color}; width:0%"></div>
+          ${tgt !== null ? `<div class="gauge-target" style="left:${tgt}%"></div>` : ''}
+        </div>
+        <span class="gauge-num t">${tgt !== null ? '→ ' + tgt : 'dormant'}</span>
+      </div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--faint); margin-top:6px">
+        ${delta !== null ? `+${delta} projected · ${c.health.label}` : c.health.label}
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="block-label">Evidence signals</div>
+      <ul class="signals">${signals}</ul>
+    </div>
+
+    <div class="block">
+      <div class="block-label">Feeds</div>
+      <div class="flow-row">${feeds}</div>
+    </div>
+
+    <div class="block" style="margin-bottom:0">
+      <div class="block-label">Fed by</div>
+      <div class="flow-row">${fedBy}</div>
+    </div>`;
+
+  // animate gauge fill
+  requestAnimationFrame(() => {
+    const f = detail.querySelector('.gauge-fill');
+    if (f) setTimeout(() => f.style.width = pct + '%', 60);
+  });
+}
+
+function select(id) {
+  selected = id;
+  modEls.forEach(m => m.classList.toggle('selected', m.dataset.id === id));
+  highlight(id);
+  renderDetail(id);
+}
+
+modEls.forEach(m => {
+  m.addEventListener('mouseenter', () => highlight(m.dataset.id));
+  m.addEventListener('mouseleave', () => highlight(selected));
+  m.addEventListener('click', () => select(m.dataset.id));
+});
+
+// init
+select('web');
+
+/* ── health strip ─────────────────────────────────────── */
+const strip = document.getElementById('strip');
+Object.entries(channels).forEach(([id, c]) => {
+  const el = document.createElement('div');
+  el.className = 'strip-card';
+  el.innerHTML = `
+    <div class="sc-top">
+      <span class="sc-dot" style="background:${c.color}; box-shadow:0 0 10px ${c.color}80"></span>
+      <span class="sc-name">${c.name}</span>
+    </div>
+    <div class="sc-bar">
+      <div class="sc-fill" style="background:${c.color}"></div>
+    </div>
+    <div class="sc-meta">
+      <span>${c.health.label}</span>
+      <span><b>${c.health.score}</b>${c.health.target !== null ? ' → ' + c.health.target : ''}</span>
+    </div>`;
+  el.addEventListener('click', () => {
+    select(id);
+    document.querySelector('.map-section').scrollIntoView({ behavior:'smooth', block:'center' });
+  });
+  strip.appendChild(el);
+
+  // animate bar
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => {
+      if (e.isIntersecting) {
+        setTimeout(() => {
+          el.querySelector('.sc-fill').style.width = c.health.score + '%';
+        }, 100);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold:.3 });
+  io.observe(el);
+});
+
+/* ── core pulse loop ──────────────────────────────────── */
+const pulse = document.querySelector('.core-pulse');
+let t0 = performance.now();
+function animatePulse(t) {
+  const p = ((t - t0) % 3000) / 3000;
+  pulse.style.r = 34 + p * 116;
+  pulse.style.opacity = 0.55 * (1 - p);
+  requestAnimationFrame(animatePulse);
+}
+requestAnimationFrame(animatePulse);
+</script>
+</body>
+</html>

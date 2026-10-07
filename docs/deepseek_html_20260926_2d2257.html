@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sales Diagnostic — The Mental Model</title>
+<style>
+  :root{
+    --bg:#080b11;
+    --card:#10161f;
+    --card-2:#141c27;
+    --line:#1f2b3a;
+    --text:#e7eef7;
+    --muted:#7f90a6;
+    --c1:#22d3ee; /* foundation */
+    --c2:#4f7cff; /* process */
+    --c3:#a06bff; /* tools */
+    --c4:#ffb020; /* competitive */
+    --c5:#2ed573; /* scoring */
+    --c6:#ff4d7e; /* synthesis */
+    --red:#ff4d5e;
+    --green:#2ed573;
+    --amber:#ffb020;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:
+      radial-gradient(1000px 600px at 8% -5%, #16202f 0%, transparent 55%),
+      radial-gradient(900px 500px at 100% 0%, #1c1526 0%, transparent 50%),
+      var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    padding:0 22px 90px;
+  }
+  .wrap{max-width:1160px;margin:0 auto}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- HERO ---------- */
+  .hero{padding:70px 0 46px;border-bottom:1px solid var(--line)}
+  .eyebrow{
+    font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:20px;display:flex;align-items:center;gap:10px;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--c3);display:inline-block}
+  h1{
+    font-size:clamp(30px,5.2vw,54px);line-height:1.06;letter-spacing:-.035em;
+    font-weight:800;max-width:20ch;
+  }
+  h1 .hl{
+    background:linear-gradient(92deg,var(--c3),var(--c1));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .lede{color:#a9b8cb;font-size:clamp(15px,1.7vw,18px);max-width:64ch;margin-top:22px}
+  .lede strong{color:#fff;font-weight:650}
+
+  /* ---------- METRICS ---------- */
+  .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:38px}
+  @media(max-width:880px){.metrics{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:480px){.metrics{grid-template-columns:1fr}}
+  .metric{
+    background:linear-gradient(180deg,var(--card),var(--card-2));
+    border:1px solid var(--line);border-radius:14px;padding:18px 20px;
+    position:relative;overflow:hidden;
+  }
+  .metric::after{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--c3)}
+  .metric.m1::after{background:var(--c1)}
+  .metric.m2::after{background:var(--c2)}
+  .metric.m5::after{background:var(--c5)}
+  .metric .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+  .metric .v{font-family:var(--mono);font-size:27px;font-weight:750;letter-spacing:-.02em;color:#fff;font-variant-numeric:tabular-nums}
+  .metric .sub{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-top:6px}
+
+  /* ---------- SECTION ---------- */
+  section{padding:56px 0;border-bottom:1px solid var(--line)}
+  section:last-of-type{border-bottom:0}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:10px;flex-wrap:wrap}
+  .sec-num{font-family:var(--mono);font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:3px 8px}
+  h2{font-size:clamp(21px,2.9vw,30px);letter-spacing:-.03em;font-weight:760}
+  .sec-desc{color:var(--muted);font-size:15px;max-width:64ch;margin-bottom:28px}
+
+  /* ---------- PIPELINE ---------- */
+  .pipeline{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+  @media(max-width:1000px){.pipeline{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:640px){.pipeline{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:420px){.pipeline{grid-template-columns:1fr}}
+  .phase{
+    border:1px solid var(--line);border-radius:14px;padding:18px 16px;
+    background:linear-gradient(180deg,var(--card),var(--card-2));
+    cursor:pointer;position:relative;overflow:hidden;
+    transition:transform .3s cubic-bezier(.22,1,.36,1),border-color .3s;
+  }
+  .phase:hover{transform:translateY(-4px)}
+  .phase::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--pc)}
+  .phase .pn{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;color:var(--pc);margin-bottom:12px}
+  .phase .pname{font-size:14px;font-weight:680;color:#fff;line-height:1.3;margin-bottom:10px;min-height:2.6em}
+  .phase .pmeta{font-family:var(--mono);font-size:11px;color:var(--muted);display:flex;flex-direction:column;gap:3px}
+  .phase .pmeta b{color:#c3d0e2;font-weight:600}
+  .phase .expand{
+    margin-top:14px;font-family:var(--mono);font-size:10.5px;color:var(--muted);
+    display:flex;align-items:center;gap:6px;transition:color .2s;
+  }
+  .phase:hover .expand{color:var(--pc)}
+  .phase .arrow{transition:transform .3s;display:inline-block}
+  .phase.open .arrow{transform:rotate(90deg)}
+
+  .phase-detail{
+    grid-column:1/-1;max-height:0;overflow:hidden;
+    transition:max-height .5s cubic-bezier(.22,1,.36,1),opacity .3s,margin .3s;
+    opacity:0;
+  }
+  .phase-detail.open{max-height:1400px;opacity:1;margin-top:4px}
+  .detail-inner{
+    border:1px solid var(--line);border-left:3px solid var(--pc);border-radius:12px;
+    background:#0d131b;padding:22px 24px;
+  }
+  .detail-inner h4{font-size:15px;font-weight:680;color:#fff;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+  .detail-inner h4 .tag{font-family:var(--mono);font-size:10px;letter-spacing:.1em;padding:3px 8px;border-radius:5px;background:color-mix(in srgb,var(--pc) 15%,transparent);color:var(--pc);border:1px solid color-mix(in srgb,var(--pc) 35%,transparent)}
+  .q-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  @media(max-width:720px){.q-list{grid-template-columns:1fr}}
+  .q-list li{
+    font-size:13.5px;color:#b3c0d2;line-height:1.5;
+    padding:11px 14px 11px 34px;position:relative;
+    background:#121a24;border:1px solid #1a2433;border-radius:9px;
+  }
+  .q-list li::before{
+    content:attr(data-n);position:absolute;left:11px;top:11px;
+    font-family:var(--mono);font-size:11px;font-weight:700;color:var(--pc);
+  }
+  .detail-purpose{
+    margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);
+    font-size:13.5px;color:var(--muted);line-height:1.6;
+  }
+  .detail-purpose strong{color:#dbe4f0}
+
+  /* ---------- MICRO LOOP ---------- */
+  .loop-wrap{margin-top:8px}
+  .loop{
+    display:grid;grid-template-columns:repeat(5,1fr);gap:0;align-items:stretch;
+    border:1px solid var(--line);border-radius:16px;overflow:hidden;
+    background:linear-gradient(180deg,var(--card),var(--card-2));
+  }
+  @media(max-width:860px){.loop{grid-template-columns:1fr}}
+  .step{
+    padding:24px 18px;position:relative;
+    border-right:1px solid var(--line);
+    transition:background .4s;
+  }
+  @media(max-width:860px){.step{border-right:0;border-bottom:1px solid var(--line)}}
+  .step:last-child{border-right:0;border-bottom:0}
+  .step .sn{
+    width:32px;height:32px;border-radius:9px;display:grid;place-items:center;
+    font-family:var(--mono);font-size:13px;font-weight:700;margin-bottom:14px;
+    background:#161f2b;border:1px solid #26313f;color:var(--muted);
+    transition:all .4s;
+  }
+  .step .stitle{font-size:14px;font-weight:680;color:#e7eef7;margin-bottom:8px;line-height:1.3}
+  .step .sdesc{font-size:12.8px;color:var(--muted);line-height:1.5}
+  .step .who{
+    font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
+    margin-top:12px;color:#5b6b82;transition:color .4s;
+  }
+  .step .who.claude{color:var(--c3)}
+  .step .who.you{color:var(--c1)}
+  .step .who.both{color:var(--c5)}
+  .step .bar{
+    position:absolute;top:0;left:0;right:0;height:2px;background:transparent;
+    transition:background .4s;
+  }
+  /* animated cycling highlight */
+  .step .sn{animation:stepCycle 6s infinite}
+  .step:nth-child(1) .sn{animation-delay:0s}
+  .step:nth-child(2) .sn{animation-delay:1.2s}
+  .step:nth-child(3) .sn{animation-delay:2.4s}
+  .step:nth-child(4) .sn{animation-delay:3.6s}
+  .step:nth-child(5) .sn{animation-delay:4.8s}
+  @keyframes stepCycle{
+    0%,14%{background:var(--c3);border-color:var(--c3);color:#0b0f16;box-shadow:0 0 18px -4px var(--c3)}
+    20%,100%{background:#161f2b;border-color:#26313f;color:var(--muted);box-shadow:none}
+  }
+  .loop-repeat{
+    margin-top:16px;display:flex;align-items:center;justify-content:center;gap:10px;
+    font-family:var(--mono);font-size:12px;color:var(--muted);
+  }
+  .loop-repeat .ic{
+    width:26px;height:26px;border-radius:50%;border:1px solid var(--line);
+    display:grid;place-items:center;color:var(--c3);font-size:14px;
+    animation:spin 4s linear infinite;
+  }
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  /* ---------- MATRIX ---------- */
+  .matrix-layout{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:start}
+  @media(max-width:900px){.matrix-layout{grid-template-columns:1fr}}
+  .matrix{
+    position:relative;aspect-ratio:1;max-width:560px;width:100%;margin:0 auto;
+    border:1px solid var(--line);border-radius:16px;overflow:hidden;
+    background:#0b1018;
+  }
+  .quad{
+    position:absolute;width:50%;height:50%;padding:18px 20px;
+    display:flex;flex-direction:column;justify-content:flex-start;
+    transition:background .35s,transform .35s;cursor:pointer;
+  }
+  .quad .qlabel{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+  .quad .qname{font-size:15px;font-weight:720;color:#fff;margin-bottom:6px;line-height:1.2}
+  .quad .qdesc{font-size:11.8px;color:#96a6ba;line-height:1.45}
+  .quad.tl{top:0;left:0;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .quad.tr{top:0;right:0;border-bottom:1px solid var(--line)}
+  .quad.bl{bottom:0;left:0;border-right:1px solid var(--line)}
+  .quad.br{bottom:0;right:0}
+  .quad.tl .qlabel,.quad.tl .qname{color:#ffb0bb}
+  .quad.tr .qlabel,.quad.tr .qname{color:#7ee9a8}
+  .quad.bl .qlabel,.quad.bl .qname{color:#ffd08a}
+  .quad.br .qlabel,.quad.br .qname{color:#a0c4ff}
+  .quad:hover{background:rgba(255,255,255,.03)}
+  .quad.tl:hover{background:rgba(255,77,94,.07)}
+  .quad.tr:hover{background:rgba(46,213,115,.07)}
+  .quad.bl:hover{background:rgba(255,176,32,.07)}
+  .quad.br:hover{background:rgba(79,124,255,.07)}
+  .quad.active{transform:scale(1.02)}
+  .matrix .axis-x,.matrix .axis-y{
+    position:absolute;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;
+    text-transform:uppercase;color:#7f90a6;z-index:5;pointer-events:none;
+  }
+  .matrix .axis-x{bottom:8px;left:50%;transform:translateX(-50%)}
+  .matrix .axis-y{top:50%;left:8px;transform:translateY(-50%) rotate(-90deg);transform-origin:left center}
+  .matrix .arrow-goal{
+    position:absolute;top:12px;right:12px;z-index:6;
+    font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:#7ee9a8;
+    background:#0d1c15;border:1px solid #1e4631;border-radius:6px;padding:4px 9px;
+    display:flex;align-items:center;gap:6px;
+  }
+  .matrix .arrow-goal .a{font-size:13px}
+
+  .quad-info{
+    border:1px solid var(--line);border-radius:14px;padding:22px 24px;
+    background:linear-gradient(180deg,var(--card),var(--card-2));min-height:220px;
+  }
+  .quad-info .tag{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px}
+  .quad-info h3{font-size:19px;font-weight:740;color:#fff;margin-bottom:10px;letter-spacing:-.02em}
+  .quad-info p{font-size:14px;color:#a9b8cb;line-height:1.6}
+  .quad-info .sig{
+    margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);
+    font-size:13px;color:var(--muted);
+  }
+  .quad-info .sig strong{color:#dbe4f0}
+
+  /* ---------- FLYWHEEL ---------- */
+  .flywheel-layout{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+  @media(max-width:860px){.flywheel-layout{grid-template-columns:1fr;gap:24px}}
+  .wheel{position:relative;aspect-ratio:1;max-width:420px;width:100%;margin:0 auto}
+  .wheel-core{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    width:44%;height:44%;border-radius:50%;
+    background:radial-gradient(circle at 40% 35%,#1d2942,#0e141d);
+    border:1px solid #2a3a52;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:12px;
+  }
+  .wheel-core .k{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  .wheel-core .v{font-size:15px;font-weight:740;color:#fff;line-height:1.2;letter-spacing:-.02em}
+  .wheel-core .v span{background:linear-gradient(92deg,var(--c3),var(--c1));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .wheel-ring{
+    position:absolute;inset:8%;border-radius:50%;
+    border:1px dashed #253247;
+  }
+  .wheel-node{
+    position:absolute;width:88px;height:88px;border-radius:50%;
+    background:linear-gradient(180deg,var(--card),var(--card-2));
+    border:1px solid var(--line);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:8px;transform:translate(-50%,-50%);
+    transition:border-color .35s,transform .35s,box-shadow .35s;
+    cursor:default;
+  }
+  .wheel-node .wn{font-family:var(--mono);font-size:9px;letter-spacing:.1em;color:var(--muted);margin-bottom:4px}
+  .wheel-node .wt{font-size:11px;font-weight:680;color:#e7eef7;line-height:1.2}
+  .wheel-node.n1{top:8%;left:50%}
+  .wheel-node.n2{top:31%;left:88%}
+  .wheel-node.n3{top:78%;left:82%}
+  .wheel-node.n4{top:92%;left:50%}
+  .wheel-node.n5{top:64%;left:12%}
+  .wheel-node.n1{border-color:#4f7cff55}
+  .wheel-node.n2{border-color:#a06bff55}
+  .wheel-node.n3{border-color:#22d3ee55}
+  .wheel-node.n4{border-color:#2ed57355}
+  .wheel-node.n5{border-color:#ffb02055}
+  .wheel-node:hover{transform:translate(-50%,-50%) scale(1.08);box-shadow:0 8px 30px -10px rgba(0,0,0,.7)}
+  .wheel-arrows{
+    position:absolute;inset:8%;border-radius:50%;
+    animation:spin 60s linear infinite;
+  }
+  .wheel-arrows::before{
+    content:"";position:absolute;inset:-4px;border-radius:50%;
+    border:1px solid transparent;
+    border-top-color:var(--c3);
+    opacity:.35;
+  }
+  .flywheel-copy h3{font-size:clamp(19px,2.6vw,26px);font-weight:760;letter-spacing:-.025em;margin-bottom:14px;line-height:1.2}
+  .flywheel-copy p{font-size:15px;color:#a9b8cb;line-height:1.65;margin-bottom:14px}
+  .flywheel-copy p strong{color:#fff;font-weight:650}
+  .flywheel-copy .chain{
+    margin-top:20px;display:flex;flex-direction:column;gap:8px;
+  }
+  .chain-item{
+    display:flex;align-items:center;gap:12px;font-size:13.5px;color:#b3c0d2;
+    padding:10px 14px;border:1px solid var(--line);border-radius:10px;
+    background:#0d131b;
+  }
+  .chain-item .num{
+    font-family:var(--mono);font-size:11px;color:var(--c3);flex:0 0 auto;font-weight:700;
+  }
+  .chain-item .res{font-family:var(--mono);font-size:11px;color:var(--muted);margin-left:auto;flex:0 0 auto}
+
+  /* ---------- OUTPUTS ---------- */
+  .outputs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:760px){.outputs{grid-template-columns:1fr}}
+  .artifact{
+    border:1px solid var(--line);border-radius:16px;padding:26px 26px 24px;
+    background:linear-gradient(180deg,var(--card),var(--card-2));position:relative;overflow:hidden;
+  }
+  .artifact::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--ac)}
+  .artifact .atag{
+    font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--ac);margin-bottom:14px;
+  }
+  .artifact h3{font-size:19px;font-weight:740;color:#fff;margin-bottom:12px;letter-spacing:-.02em;line-height:1.25}
+  .artifact p{font-size:14px;color:#a9b8cb;line-height:1.6;margin-bottom:16px}
+  .artifact ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+  .artifact li{
+    font-size:13.5px;color:#b3c0d2;padding-left:22px;position:relative;line-height:1.5;
+  }
+  .artifact li::before{
+    content:"";position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:2px;
+    background:var(--ac);
+  }
+
+  /* ---------- PRINCIPLES ---------- */
+  .principles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  @media(max-width:860px){.principles{grid-template-columns:1fr}}
+  .principle{
+    border:1px solid var(--line);border-radius:14px;padding:22px 22px;
+    background:linear-gradient(180deg,var(--card),var(--card-2));
+  }
+  .principle .pn{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;color:var(--c3);
+    margin-bottom:12px;
+  }
+  .principle h4{font-size:15px;font-weight:700;color:#fff;margin-bottom:9px;line-height:1.3}
+  .principle p{font-size:13.5px;color:#98a9bd;line-height:1.6}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    margin-top:56px;padding-top:26px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+    font-family:var(--mono);font-size:11px;color:#5b6b80;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="eyebrow">Sales Diagnostic &amp; Assessment · Lead to Sale</div>
+    <h1>The mental model behind the <span class="hl">sales diagnostic</span>.</h1>
+    <p class="lede">
+      A structured, AI-guided assessment that turns your Master Prompt into a self-upgrading
+      sales engine. <strong>21 questions</strong> across <strong>6 phases</strong>, two scores,
+      two artifacts — and one loop that repeats until the picture is complete.
+    </p>
+
+    <div class="metrics">
+      <div class="metric m1">
+        <div class="k">Phases</div>
+        <div class="v">6</div>
+        <div class="sub">foundation → synthesis</div>
+      </div>
+      <div class="metric m2">
+        <div class="k">Questions</div>
+        <div class="v">21</div>
+        <div class="sub">one at a time</div>
+      </div>
+      <div class="metric m5">
+        <div class="k">Time to complete</div>
+        <div class="v">75–90</div>
+        <div class="sub">minutes</div>
+      </div>
+      <div class="metric">
+        <div class="k">Artifacts produced</div>
+        <div class="v">2</div>
+        <div class="sub">results + prompt amendment</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ 01 · THE ARC ============ -->
+  <section class="reveal">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <h2>The arc: six phases, one story</h2>
+    </div>
+    <p class="sec-desc">
+      The phases aren't a random checklist — they follow a narrative from
+      <strong>facts</strong> to <strong>process</strong> to <strong>tools</strong> to
+      <strong>context</strong> to <strong>score</strong> to <strong>action</strong>.
+      Click any phase to see what it asks and what it produces.
+    </p>
+
+    <div class="pipeline" id="pipeline">
+
+      <div class="phase" style="--pc:var(--c1)" data-phase="0">
+        <div class="pn">PHASE 01</div>
+        <div class="pname">Sales Foundation &amp; Current Performance</div>
+        <div class="pmeta">
+          <span><b>6</b> questions</span>
+          <span><b>~25</b> min</span>
+        </div>
+        <div class="expand"><span class="arrow">▶</span> see questions</div>
+      </div>
+
+      <div class="phase" style="--pc:var(--c2)" data-phase="1">
+        <div class="pn">PHASE 02</div>
+        <div class="pname">Sales Process Effectiveness &amp; Documentation</div>
+        <div class="pmeta">
+          <span><b>6</b> questions</span>
+          <span><b>~25</b> min</span>
+        </div>
+        <div class="expand"><span class="arrow">▶</span> see questions</div>
+      </div>
+
+      <div class="phase" style="--pc:var(--c3)" data-phase="2">
+        <div class="pn">PHASE 03</div>
+        <div class="pname">Technology, Training &amp; Team Development</div>
+        <div class="pmeta">
+          <span><b>5</b> questions</span>
+          <span><b>~15</b> min</span>
+        </div>
+        <div class="expand"><span class="arrow">▶</span> see questions</div>
+      </div>
+
+      <div class="phase" style="--pc:var(--c4)" data-phase="3">
+        <div class="pn">PHASE 04</div>
+        <div class="pname">Competitive Position &amp; Strategic Context</div>
+        <div class="pmeta">
+          <span><b>4</b> questions</span>
+          <span><b>~12</b> min</span>
+        </div>
+        <div class="expand"><span class="arrow">▶</span> see questions</div>
+      </div>
+
+      <div class="phase" style="--pc:var(--c5)" data-phase="4">
+        <div class="pn">PHASE 05</div>
+        <div class="pname">Process Maturity Scoring &amp; Priorities</div>
+        <div class="pmeta">
+          <span><b>10</b> categories</span>
+          <span><b>~10</b> min</span>
+        </div>
+        <div class="expand"><span class="arrow">▶</span> see scoring</div>
+      </div>
+
+      <div class="phase" style="--pc:var(--c6)" data-phase="5">
+        <div class="pn">PHASE 06</div>
+        <div class="pname">Optimization Priorities &amp; Prompt Amendment</div>
+        <div class="pmeta">
+          <span><b>2</b> artifacts</span>
+          <span><b>~5</b> min</span>
+        </div>
+        <div class="expand"><span class="arrow">▶</span> see outputs</div>
+      </div>
+
+      <!-- detail panels injected here by JS -->
+    </div>
+  </section>
+
+  <!-- ============ 02 · THE MICRO LOOP ============ -->
+  <section class="reveal">
+    <div class="sec-head">
+      <span class="sec-num">02</span>
+      <h2>The atomic unit: one question, five moves</h2>
+    </div>
+    <p class="sec-desc">
+      Every question in Phases 1–4 runs the same five-step loop. This is the
+      <strong>interview mechanic</strong> — not an interrogation, but a confirmation dialog
+      that Claude drives. The loop repeats 21 times.
+    </p>
+
+    <div class="loop-wrap">
+      <div class="loop">
+        <div class="step">
+          <div class="sn">1</div>
+          <div class="stitle">Claude drafts the answer</div>
+          <div class="sdesc">Based on what it already knows from your Master Prompt. No blank-page interrogation.</div>
+          <div class="who claude">Claude</div>
+        </div>
+        <div class="step">
+          <div class="sn">2</div>
+          <div class="stitle">You confirm, edit, or replace</div>
+          <div class="sdesc">The draft is a starting point. You correct it against reality — specificity is the value.</div>
+          <div class="who you">You</div>
+        </div>
+        <div class="step">
+          <div class="sn">3</div>
+          <div class="stitle">Immediate insight delivered</div>
+          <div class="sdesc">What the answer reveals about sales health, compared against industry benchmarks.</div>
+          <div class="who claude">Claude</div>
+        </div>
+        <div class="step">
+          <div class="sn">4</div>
+          <div class="stitle">New discovery logged</div>
+          <div class="sdesc">Anything new gets added to a running list for the Phase 6 Master Prompt amendment.</div>
+          <div class="who both">Both</div>
+        </div>
+        <div class="step">
+          <div class="sn">5</div>
+          <div class="stitle">Wait, then advance</div>
+          <div class="sdesc">Claude waits for your response before moving to the next question. No pile-on.</div>
+          <div class="who claude">Claude</div>
+        </div>
+      </div>
+      <div class="loop-repeat">
+        <span class="ic">↻</span>
+        <span>This loop runs once per question — 21 times across the assessment.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 · THE TWO-AXIS MODEL ============ -->
+  <section class="reveal">
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <h2>The core diagnostic: two axes, four states</h2>
+    </div>
+    <p class="sec-desc">
+      The entire assessment resolves into a single 2D picture.
+      <strong>Process Maturity</strong> (0–70) on the horizontal axis.
+      <strong>Owner Independence</strong> (0–50) on the vertical axis.
+      Where you land tells you what kind of business you're actually running.
+    </p>
+
+    <div class="matrix-layout">
+      <div class="matrix" id="matrix">
+        <div class="axis-x">Process Maturity →</div>
+        <div class="axis-y">Owner Independence →</div>
+        <div class="arrow-goal"><span class="a">↗</span> goal</div>
+
+        <div class="quad tl" data-quad="tl">
+          <div class="qlabel">low maturity · high independence</div>
+          <div class="qname">The Vacuum</div>
+          <div class="qdesc">Owner is detached, but there's no system holding it together. Chaos by default.</div>
+        </div>
+        <div class="quad tr" data-quad="tr">
+          <div class="qlabel">high maturity · high independence</div>
+          <div class="qname">The Machine</div>
+          <div class="qdesc">System runs without the owner. Scalable, predictable, sellable. The goal state.</div>
+        </div>
+        <div class="quad bl" data-quad="bl">
+          <div class="qlabel">low maturity · low independence</div>
+          <div class="qname">The Founder Trap</div>
+          <div class="qdesc">Owner does everything, no system. Burnout ceiling. Can't scale past the owner's hours.</div>
+        </div>
+        <div class="quad br" data-quad="br">
+          <div class="qlabel">high maturity · low independence</div>
+          <div class="qname">The Operator</div>
+          <div class="qdesc">System exists, but the owner is still in the weeds. Works — until it doesn't.</div>
+        </div>
+      </div>
+
+      <div class="quad-info" id="quadInfo">
+        <div class="tag" style="color:var(--muted)">Hover a quadrant</div>
+        <h3>The two scores are the whole point</h3>
+        <p>
+          Most sales diagnostics only measure process. This one measures the
+          <strong>second axis</strong> — how much of the business still depends on the owner
+          personally executing. A mature process with a fully-involved owner is still a
+          fragile business.
+        </p>
+        <div class="sig">
+          <strong>Process Maturity:</strong> max 70 pts · 10 categories × 0–7<br>
+          <strong>Owner Independence:</strong> max 50 pts · 10 areas × 0–5
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 · THE FLYWHEEL ============ -->
+  <section class="reveal">
+    <div class="sec-head">
+      <span class="sec-num">04</span>
+      <h2>Why it compounds: the Master Prompt flywheel</h2>
+    </div>
+    <p class="sec-desc">
+      This isn't a one-off audit. Every answer feeds back into the Master Prompt, which makes
+      the AI smarter about your business, which makes the next diagnostic sharper. The output
+      becomes the input.
+    </p>
+
+    <div class="flywheel-layout">
+      <div class="wheel">
+        <div class="wheel-ring"></div>
+        <div class="wheel-arrows"></div>
+        <div class="wheel-core">
+          <div class="k">Compounds into</div>
+          <div class="v"><span>Master Prompt</span></div>
+        </div>
+        <div class="wheel-node n1"><div class="wn">01</div><div class="wt">You answer<br>21 questions</div></div>
+        <div class="wheel-node n2"><div class="wn">02</div><div class="wt">Discoveries<br>get logged</div></div>
+        <div class="wheel-node n3"><div class="wn">03</div><div class="wt">Two artifacts<br>are produced</div></div>
+        <div class="wheel-node n4"><div class="wn">04</div><div class="wt">Prompt gets<br>amended</div></div>
+        <div class="wheel-node n5"><div class="wn">05</div><div class="wt">AI gives<br>sharper advice</div></div>
+      </div>
+
+      <div class="flywheel-copy">
+        <h3>The output becomes the input.</h3>
+        <p>
+          Most assessments end in a PDF that nobody reads. This one ends in a
+          <strong>living prompt amendment</strong> — a structured block of your actual
+          metrics, constraints, and priorities that gets injected back into the system.
+        </p>
+        <p>
+          From that point on, every conversation about sales strategy is grounded in
+          <strong>your real numbers</strong>, not generic advice.
+        </p>
+        <div class="chain">
+          <div class="chain-item"><span class="num">01</span> Answers captured <span class="res">raw input</span></div>
+          <div class="chain-item"><span class="num">02</span> Discoveries isolated <span class="res">amendment list</span></div>
+          <div class="chain-item"><span class="num">03</span> Artifacts generated <span class="res">results + amendment</span></div>
+          <div class="chain-item"><span class="num">04</span> Master Prompt upgraded <span class="res">persistent context</span></div>
+          <div class="chain-item"><span class="num">05</span> Future advice improves <span class="res">compounding</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 · OUTPUTS ============ -->
+  <section class="reveal">
+    <div class="sec-head">
+      <span class="sec-num">05</span>
+      <h2>What comes out the other end</h2>
+    </div>
+    <p class="sec-desc">
+      Phase 6 produces two artifacts. One is a report you read. The other is a prompt block
+      you keep.
+    </p>
+
+    <div class="outputs">
+      <div class="artifact" style="--ac:var(--c5)">
+        <div class="atag">Artifact 1</div>
+        <h3>Sales Diagnostic &amp; Assessment Results</h3>
+        <p>The full picture — scores, profile, priorities, roadmap. A standalone report dated to the day it was run.</p>
+        <ul>
+          <li>Scoring summary — both axes, with rating bands</li>
+          <li>Current sales performance profile — deal size, cycle, win rate, pipeline</li>
+          <li>Process maturity by area — all 10 categories scored</li>
+          <li>Owner involvement analysis — delegation opportunities</li>
+          <li>Top 5 improvement opportunities ranked by impact vs. effort</li>
+          <li>Competitive position + capacity &amp; constraints analysis</li>
+          <li>Phased implementation roadmap — quick wins → long-term</li>
+        </ul>
+      </div>
+
+      <div class="artifact" style="--ac:var(--c1)">
+        <div class="atag">Artifact 2</div>
+        <h3>Master Prompt Sales Amendment</h3>
+        <p>A structured block formatted for direct addition to your Master Prompt. This is the compounding piece.</p>
+        <ul>
+          <li>Current sales structure — team, flow, cycle length</li>
+          <li>Performance metrics — conversion rates vs. benchmarks</li>
+          <li>Process effectiveness — documentation, discovery, objections</li>
+          <li>Offer strategy, training, competitive position</li>
+          <li>Both scores + maturity by category</li>
+          <li>Top 3 opportunities with first steps</li>
+          <li>AI guidance instructions — how to talk about sales going forward</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 06 · DESIGN PRINCIPLES ============ -->
+  <section class="reveal">
+    <div class="sec-head">
+      <span class="sec-num">06</span>
+      <h2>The design decisions that make it work</h2>
+    </div>
+    <p class="sec-desc">
+      Every choice in the prompt is load-bearing. These are the four that matter most.
+    </p>
+
+    <div class="principles">
+      <div class="principle">
+        <div class="pn">PRINCIPLE 01</div>
+        <h4>Answer first, ask second</h4>
+        <p>
+          Claude answers each question from the Master Prompt before asking you. This
+          eliminates the blank-page problem — you're correcting, not composing. It also
+          surfaces gaps in the Master Prompt itself.
+        </p>
+      </div>
+      <div class="principle">
+        <div class="pn">PRINCIPLE 02</div>
+        <h4>One question at a time</h4>
+        <p>
+          No question dumps. Each question gets its own turn, its own insight, its own
+          confirmation. This is slower but produces far more specific answers — and prevents
+          the "I'll answer the easy ones" failure mode.
+        </p>
+      </div>
+      <div class="principle">
+        <div class="pn">PRINCIPLE 03</div>
+        <h4>Benchmarks after every answer</h4>
+        <p>
+          Raw numbers mean nothing without context. Each answer is immediately compared to
+          industry benchmarks (lead-to-qualified 13–20%, proposal-to-close 20–30%, etc.) so
+          you know whether you're behind, average, or ahead.
+        </p>
+      </div>
+      <div class="principle">
+        <div class="pn">PRINCIPLE 04</div>
+        <h4>The output feeds the input</h4>
+        <p>
+          Discoveries are logged during the interview and become a formal amendment to the
+          Master Prompt. The assessment doesn't just produce a report — it makes the AI
+          permanently smarter about your business.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Sales Diagnostic &amp; Assessment · mental model</span>
+    <span>6 phases · 21 questions · 2 scores · 2 artifacts</span>
+  </footer>
+
+</div>
+
+<script>
+  /* ---------- REVEAL ON SCROLL ---------- */
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold: 0.12});
+  reveals.forEach(el => io.observe(el));
+
+  /* ---------- PHASE DATA ---------- */
+  const phases = [
+    {
+      color: 'var(--c1)',
+      name: 'Sales Foundation & Current Performance',
+      purpose: 'Establish the <strong>factual baseline</strong> — who sells, what the process looks like, what the numbers are. This phase is about <strong>what is</strong>, not what should be. Everything later is built on these answers.',
+      questions: [
+        'Sales team structure & capacity — who does what, and what\'s the max deals per month?',
+        'Sales process flow — steps from lead to close, and average cycle length',
+        'Conversion rates by stage — lead→qualified, qualified→proposal, proposal→close, overall',
+        'Pipeline health & forecasting — active opportunities, pipeline value, win rate, forecast accuracy',
+        'Lead sources & qualification — where leads come from, and how you qualify them',
+        'Owner sales involvement — hours/week, % of deals, involvement by stage',
+      ]
+    },
+    {
+      color: 'var(--c2)',
+      name: 'Sales Process Effectiveness & Documentation',
+      purpose: 'Move from <strong>what happens</strong> to <strong>how it\'s done</strong>. This is where you find out whether the sales process is a repeatable system or a collection of individual habits.',
+      questions: [
+        'Sales process documentation & scripts — what exists, and is it actually used?',
+        'Discovery & needs assessment — is there a structured questioning framework?',
+        'Objection handling & sales methodology — top 3 objections, documented responses, systematic approach',
+        'Proposal development & pricing — templates, turnaround time, proposal-to-close rate',
+        'CRM implementation & pipeline management — what CRM, how consistently used, what reports',
+        'Sales performance measurement — individual vs. team metrics, review cadence, analytics',
+      ]
+    },
+    {
+      color: 'var(--c3)',
+      name: 'Technology, Training & Team Development',
+      purpose: 'Examine the <strong>enablers</strong> — the tools, training, and offer architecture that either accelerate or bottleneck the process. This phase asks: what\'s supporting the humans doing the selling?',
+      questions: [
+        'Sales technology stack & integration — beyond CRM, what tools, and how well do they connect?',
+        'Sales training & development — formal programs, onboarding, ongoing skill-building',
+        'Offer strategy & performance — which offers win, which lose, is it tracked systematically?',
+        'Promotions, guarantees & risk reversal — frequency, lift, refund rate, brand impact',
+        'Automation & process efficiency — what should be automated, where are the manual bottlenecks?',
+      ]
+    },
+    {
+      color: 'var(--c4)',
+      name: 'Competitive Position & Strategic Context',
+      purpose: 'Zoom out to the <strong>market context</strong>. A sales process doesn\'t exist in a vacuum — it competes. This phase reveals differentiation, pricing power, and structural risk.',
+      questions: [
+        'Competitive sales comparison — how do competitors sell, and what\'s different about their approach?',
+        'Objection patterns & value proposition — price objection frequency, why prospects choose you',
+        'Sales capacity & scaling constraints — what limits volume, when would you need to hire?',
+        'Customer concentration & revenue mix — top customer %, LTV, CAC, repeat vs. new',
+      ]
+    },
+    {
+      color: 'var(--c5)',
+      name: 'Process Maturity Scoring & Priorities',
+      purpose: 'Convert the qualitative interview into <strong>two hard scores</strong>. Ten categories scored 0–7 for process maturity. Ten areas scored 0–5 for owner independence. This is where the picture crystallizes.',
+      questions: [
+        'Lead qualification & scoring systems (0–7)',
+        'Sales process documentation & systematization (0–7)',
+        'CRM implementation & pipeline management (0–7)',
+        'Discovery & needs assessment processes (0–7)',
+        'Objection handling & sales methodology (0–7)',
+        'Proposal development & pricing processes (0–7)',
+        'Sales performance tracking & analytics (0–7)',
+        'Sales team training & development (0–7)',
+        'Sales technology & tool integration (0–7)',
+        'Sales forecasting & revenue planning (0–7)',
+        'Owner independence — 10 areas scored 0–5 (responsible → accountable → consulted → informed)',
+      ]
+    },
+    {
+      color: 'var(--c6)',
+      name: 'Optimization Priorities & Master Prompt Amendment',
+      purpose: 'Synthesize everything into <strong>two artifacts</strong>. One report for you to read and act on. One prompt block that permanently upgrades how the AI understands your business.',
+      questions: [
+        'Artifact 1: Sales Diagnostic & Assessment Results — full report with scores, priorities, roadmap',
+        'Artifact 2: Master Prompt Sales Amendment — structured block for direct prompt injection',
+        'Top 5 improvement opportunities ranked by impact vs. effort, with next steps',
+        'Implementation roadmap — quick wins, medium-term improvements, long-term transformations',
+      ]
+    },
+  ];
+
+  /* ---------- BUILD DETAIL PANELS ---------- */
+  const pipeline = document.getElementById('pipeline');
+  const phaseEls = pipeline.querySelectorAll('.phase');
+
+  phases.forEach((p, i) => {
+    const detail = document.createElement('div');
+    detail.className = 'phase-detail';
+    detail.dataset.detail = i;
+    detail.innerHTML = `
+      <div class="detail-inner" style="--pc:${p.color}">
+        <h4>${p.name} <span class="tag">${p.questions.length} items</span></h4>
+        <ul class="q-list">
+          ${p.questions.map((q, qi) => `<li data-n="${String(qi+1).padStart(2,'0')}">${q}</li>`).join('')}
+        </ul>
+        <div class="detail-purpose"><strong>Purpose:</strong> ${p.purpose}</div>
+      </div>
+    `;
+    pipeline.appendChild(detail);
+  });
+
+  /* ---------- TOGGLE PHASES ---------- */
+  phaseEls.forEach(el => {
+    el.addEventListener('click', () => {
+      const idx = el.dataset.phase;
+      const detail = pipeline.querySelector(`[data-detail="${idx}"]`);
+      const isOpen = el.classList.contains('open');
+
+      // close all
+      phaseEls.forEach(p => p.classList.remove('open'));
+      pipeline.querySelectorAll('.phase-detail').forEach(d => d.classList.remove('open'));
+
+      if (!isOpen) {
+        el.classList.add('open');
+        detail.classList.add('open');
+      }
+    });
+  });
+
+  /* ---------- MATRIX INTERACTION ---------- */
+  const quadData = {
+    tl: {
+      color: '#ffb0bb',
+      tag: 'low maturity · high independence',
+      title: 'The Vacuum',
+      desc: 'The owner has stepped away, but no system has replaced them. Deals happen by accident or not at all. This state often looks like "freedom" from the outside and feels like drift from the inside.',
+      sig: '<strong>Diagnosis:</strong> You need to build process before you can afford to step back further. Independence without maturity is abandonment.'
+    },
+    tr: {
+      color: '#7ee9a8',
+      tag: 'high maturity · high independence',
+      title: 'The Machine',
+      desc: 'Documented process, consistent execution, and the owner is not required for day-to-day selling. This is the state that makes a business scalable, sellable, and less stressful to run.',
+      sig: '<strong>Diagnosis:</strong> Protect this. Your job is to keep the system sharp, not to re-insert yourself into it.'
+    },
+    bl: {
+      color: '#ffd08a',
+      tag: 'low maturity · low independence',
+      title: 'The Founder Trap',
+      desc: 'The owner is personally responsible for most of the sales process, and there is no system underneath them. Revenue is capped by the owner\'s hours, and growth means burnout.',
+      sig: '<strong>Diagnosis:</strong> This is the most common state for owner-led businesses. The priority is documentation and delegation — in that order.'
+    },
+    br: {
+      color: '#a0c4ff',
+      tag: 'high maturity · low independence',
+      title: 'The Operator',
+      desc: 'A real system exists — scripts, CRM, documented stages — but the owner is still personally executing in the critical moments. It works, but it\'s fragile: one vacation and the pipeline stalls.',
+      sig: '<strong>Diagnosis:</strong> You\'re closer than you think. The work is targeted delegation, not rebuilding from scratch.'
+    }
+  };
+
+  const quadInfo = document.getElementById('quadInfo');
+  const defaultQuadHTML = quadInfo.innerHTML;
+
+  document.querySelectorAll('.quad').forEach(q => {
+    q.addEventListener('mouseenter', () => {
+      const d = quadData[q.dataset.quad];
+      if (!d) return;
+      document.querySelectorAll('.quad').forEach(x => x.classList.remove('active'));
+      q.classList.add('active');
+      quadInfo.innerHTML = `
+        <div class="tag" style="color:${d.color}">${d.tag}</div>
+        <h3 style="color:${d.color}">${d.title}</h3>
+        <p>${d.desc}</p>
+        <div class="sig">${d.sig}</div>
+      `;
+    });
+    q.addEventListener('mouseleave', () => {
+      q.classList.remove('active');
+      quadInfo.innerHTML = defaultQuadHTML;
+    });
+  });
+
+  /* ---------- FLYWHEEL NODE PULSE ---------- */
+  const nodes = document.querySelectorAll('.wheel-node');
+  let activeNode = 0;
+  setInterval(() => {
+    nodes.forEach(n => n.style.boxShadow = 'none');
+    nodes[activeNode % nodes.length].style.boxShadow = '0 0 0 3px rgba(160,107,255,.25)';
+    activeNode++;
+  }, 1200);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Product Marketing · Funnel Decision Tree</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+
+  :root{
+    --bg:#06080d;
+    --txt:#e8edf7;
+    --muted:#8b97ad;
+    --faint:#5b6679;
+    --line:rgba(255,255,255,.09);
+    --line-2:rgba(255,255,255,.18);
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --accent:#60a5fa;
+  }
+
+  html{-webkit-text-size-adjust:100%}
+
+  body{
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--txt);
+    line-height:1.5;
+    min-height:100vh;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  body::before{
+    content:'';
+    position:fixed; inset:0; z-index:0; pointer-events:none;
+    background:
+      radial-gradient(900px 520px at 50% -10%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 70%),
+      radial-gradient(700px 500px at 8% 30%, rgba(167,139,250,.07), transparent 70%),
+      radial-gradient(700px 500px at 92% 40%, rgba(52,211,153,.06), transparent 70%);
+    transition:background .6s ease;
+  }
+
+  .page{
+    position:relative; z-index:1;
+    max-width:1320px; margin:0 auto;
+    padding:60px 28px 100px;
+  }
+
+  /* ───────────── HEADER ───────────── */
+
+  header{text-align:center; display:flex; flex-direction:column; align-items:center}
+
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:10.5px; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--muted); padding:5px 13px; border-radius:999px;
+    border:1px solid var(--line); background:rgba(255,255,255,.03);
+  }
+  .eyebrow i{
+    width:6px; height:6px; border-radius:50%;
+    background:var(--accent); box-shadow:0 0 10px var(--accent);
+    transition:background .4s, box-shadow .4s;
+  }
+
+  h1{
+    font-size:clamp(28px,4.6vw,52px);
+    font-weight:700; letter-spacing:-.035em; line-height:1.05;
+    margin:20px 0 0;
+  }
+  h1 .grad{
+    background:linear-gradient(100deg,#60a5fa,#a78bfa 42%,#22d3ee);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+
+  .sub{
+    color:var(--muted); font-size:14.5px; max-width:560px;
+    margin-top:16px;
+  }
+
+  /* ───────────── BREADCRUMB ───────────── */
+
+  .breadcrumb{
+    display:flex; flex-wrap:wrap; align-items:center; gap:6px;
+    justify-content:center;
+    margin-top:30px;
+    font-family:var(--mono); font-size:11px;
+    min-height:26px;
+  }
+  .bc-item{
+    all:unset;
+    padding:4px 10px; border-radius:7px;
+    background:rgba(255,255,255,.05);
+    border:1px solid var(--line);
+    color:var(--muted);
+    cursor:pointer;
+    transition:background .2s, color .2s, border-color .2s;
+    white-space:nowrap;
+  }
+  .bc-item:hover, .bc-item:focus-visible{
+    background:rgba(255,255,255,.09);
+    color:#fff;
+    border-color:var(--line-2);
+  }
+  .bc-item.root{
+    color:#c9d4e6;
+    border-color:rgba(140,170,255,.35);
+    background:rgba(96,165,250,.08);
+  }
+  .bc-item.current{
+    color:#fff;
+    border-color:color-mix(in srgb, var(--accent) 50%, transparent);
+    background:color-mix(in srgb, var(--accent) 12%, transparent);
+  }
+  .bc-sep{color:var(--faint); font-size:10px; user-select:none}
+
+  /* ───────────── ROOT BANNER ───────────── */
+
+  .root-banner{
+    display:flex; align-items:center; gap:14px;
+    max-width:560px; margin:36px auto 0;
+    padding:16px 22px;
+    border-radius:16px;
+    background:linear-gradient(180deg,rgba(96,165,250,.14),rgba(167,139,250,.05));
+    border:1px solid rgba(140,170,255,.28);
+    box-shadow:
+      0 0 0 1px rgba(96,165,250,.06),
+      0 30px 80px -34px rgba(96,165,250,.55),
+      inset 0 1px 0 rgba(255,255,255,.08);
+    position:relative;
+  }
+  .root-badge{
+    flex:none;
+    font-size:9px; letter-spacing:.16em; text-transform:uppercase;
+    color:#9fb6ff; font-weight:700;
+    padding:4px 8px; border-radius:6px;
+    background:rgba(96,165,250,.15);
+    border:1px solid rgba(96,165,250,.3);
+  }
+  .root-body{text-align:left; min-width:0}
+  .root-name{
+    font-family:var(--mono); font-size:15px; font-weight:600;
+    color:#fff; letter-spacing:-.01em;
+  }
+  .root-desc{font-size:12px; color:#93a1b8; margin-top:2px}
+
+  /* ───────────── FUNNEL ───────────── */
+
+  .funnel{
+    margin-top:0;
+    display:flex; flex-direction:column; align-items:center;
+  }
+
+  .stage{
+    width:100%;
+    margin:0 auto;
+    transition:max-width .45s cubic-bezier(.2,.7,.3,1);
+  }
+  .stage[data-stage="1"]{max-width:1180px}
+  .stage[data-stage="2"]{max-width:860px}
+  .stage[data-stage="3"]{max-width:620px}
+
+  .stage-head{
+    display:flex; align-items:center; gap:12px;
+    margin-bottom:16px;
+    padding-left:4px;
+  }
+  .stage-num{
+    flex:none;
+    font-family:var(--mono); font-size:10px; font-weight:600;
+    color:var(--accent);
+    padding:3px 8px; border-radius:6px;
+    background:color-mix(in srgb, var(--accent) 12%, transparent);
+    border:1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+    transition:color .4s, background .4s, border-color .4s;
+  }
+  .stage-title{
+    font-size:14px; font-weight:650; letter-spacing:-.005em;
+    color:#dbe4f2;
+  }
+  .stage-hint{
+    font-size:11.5px; color:var(--faint);
+    margin-left:auto;
+  }
+
+  .stage-body{
+    display:grid; gap:12px;
+  }
+
+  .stage-body > *{
+    animation:fadeUp .45s cubic-bezier(.2,.7,.3,1) backwards;
+  }
+  .stage-body > *:nth-child(1){animation-delay:0s}
+  .stage-body > *:nth-child(2){animation-delay:.05s}
+  .stage-body > *:nth-child(3){animation-delay:.1s}
+  .stage-body > *:nth-child(4){animation-delay:.15s}
+  .stage-body > *:nth-child(5){animation-delay:.2s}
+  .stage-body > *:nth-child(6){animation-delay:.25s}
+  .stage-body > *:nth-child(7){animation-delay:.3s}
+  .stage-body > *:nth-child(8){animation-delay:.35s}
+
+  @keyframes fadeUp{
+    from{opacity:0; transform:translateY(8px)}
+    to{opacity:1; transform:translateY(0)}
+  }
+
+  /* ───────────── CONNECTORS ───────────── */
+
+  .connector{
+    height:64px;
+    width:100%;
+    margin:0 auto;
+    position:relative;
+    pointer-events:none;
+  }
+  .connector-1{max-width:1180px}
+  .connector-2{max-width:860px}
+
+  .connector::before{
+    content:'';
+    position:absolute; inset:0;
+    background:linear-gradient(180deg,
+      color-mix(in srgb, var(--accent) 20%, transparent),
+      color-mix(in srgb, var(--accent) 2%, transparent));
+    clip-path:polygon(0 0, 100% 0, 87% 100%, 13% 100%);
+    opacity:.6;
+    transition:background .4s;
+  }
+  .connector::after{
+    content:'';
+    position:absolute;
+    top:50%; left:50%;
+    width:1px; height:42%;
+    transform:translate(-50%,-50%);
+    background:linear-gradient(180deg,
+      color-mix(in srgb, var(--accent) 60%, transparent),
+      transparent);
+    opacity:.7;
+  }
+
+  /* ───────────── OBJECTIVE CARDS ───────────── */
+
+  .objectives{
+    grid-template-columns:repeat(6,1fr);
+  }
+
+  .obj-card{
+    all:unset;
+    position:relative;
+    display:flex; flex-direction:column; gap:6px;
+    padding:15px 14px 14px;
+    border-radius:14px;
+    border:1px solid var(--line);
+    background:linear-gradient(180deg,rgba(255,255,255,.038),rgba(255,255,255,.012));
+    cursor:pointer;
+    overflow:hidden;
+    transition:transform .22s cubic-bezier(.2,.7,.3,1),
+               border-color .22s, background .22s, box-shadow .22s;
+    text-align:left;
+  }
+  .obj-card::before{
+    content:'';
+    position:absolute; top:0; left:0; right:0; height:2px;
+    background:linear-gradient(90deg, transparent, var(--c), transparent);
+    opacity:.55; transition:opacity .22s;
+  }
+  .obj-card:hover, .obj-card:focus-visible{
+    transform:translateY(-3px);
+    border-color:var(--line-2);
+    background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.018));
+  }
+  .obj-card.is-active{
+    border-color:color-mix(in srgb, var(--c) 55%, transparent);
+    background:linear-gradient(180deg,color-mix(in srgb, var(--c) 14%, transparent),color-mix(in srgb, var(--c) 3%, transparent));
+    box-shadow:0 20px 55px -26px var(--c), 0 0 0 1px color-mix(in srgb, var(--c) 25%, transparent);
+  }
+  .obj-card.is-active::before{opacity:1}
+
+  .obj-dot{
+    width:8px; height:8px; border-radius:50%;
+    background:var(--c); box-shadow:0 0 12px var(--c);
+    margin-bottom:2px;
+  }
+  .obj-name{
+    font-size:12.5px; font-weight:650; letter-spacing:-.005em;
+    color:#e2e9f5; line-height:1.2;
+  }
+  .obj-desc{
+    font-size:10.5px; color:var(--muted); line-height:1.35;
+    flex:1;
+  }
+  .obj-meta{
+    font-family:var(--mono); font-size:9.5px;
+    color:var(--faint); letter-spacing:.02em;
+    margin-top:4px;
+  }
+  .obj-card.is-active .obj-meta{color:color-mix(in srgb, var(--c) 70%, #fff)}
+
+  /* ───────────── APPROACH CARDS ───────────── */
+
+  .approaches{
+    grid-template-columns:repeat(auto-fit, minmax(200px, 260px));
+    justify-content:center;
+  }
+
+  .app-card{
+    all:unset;
+    position:relative;
+    display:flex; flex-direction:column; gap:5px;
+    padding:15px 16px 14px;
+    border-radius:13px;
+    border:1px solid var(--line);
+    background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01));
+    cursor:pointer;
+    transition:transform .22s cubic-bezier(.2,.7,.3,1),
+               border-color .22s, background .22s, box-shadow .22s;
+    text-align:left;
+  }
+  .app-card:hover, .app-card:focus-visible{
+    transform:translateY(-2px);
+    border-color:var(--line-2);
+    background:rgba(255,255,255,.055);
+  }
+  .app-card.is-active{
+    border-color:color-mix(in srgb, var(--accent) 55%, transparent);
+    background:color-mix(in srgb, var(--accent) 10%, transparent);
+    box-shadow:0 18px 50px -26px var(--accent), 0 0 0 1px color-mix(in srgb, var(--accent) 22%, transparent);
+  }
+  .app-name{
+    font-size:13px; font-weight:650; letter-spacing:-.005em;
+    color:#e2e9f5; line-height:1.2;
+  }
+  .app-desc{
+    font-size:11px; color:var(--muted); line-height:1.35;
+  }
+  .app-meta{
+    font-family:var(--mono); font-size:9.5px;
+    color:var(--faint); letter-spacing:.02em;
+    margin-top:3px;
+  }
+  .app-card.is-active .app-meta{color:color-mix(in srgb, var(--accent) 70%, #fff)}
+
+  /* ───────────── SKILLS ───────────── */
+
+  .skills-wrap{
+    display:flex; flex-wrap:wrap; gap:8px; justify-content:center;
+  }
+
+  .skill-chip{
+    all:unset;
+    font-family:var(--mono); font-size:11.5px;
+    padding:7px 12px; border-radius:9px;
+    background:rgba(255,255,255,.05);
+    border:1px solid var(--line);
+    color:#c4cfe0;
+    cursor:pointer;
+    transition:background .18s, border-color .18s, color .18s, transform .18s, box-shadow .18s;
+    white-space:nowrap;
+  }
+  .skill-chip:hover, .skill-chip:focus-visible{
+    background:color-mix(in srgb, var(--accent) 16%, transparent);
+    border-color:color-mix(in srgb, var(--accent) 45%, transparent);
+    color:#fff;
+    transform:translateY(-2px);
+    box-shadow:0 10px 30px -14px var(--accent);
+  }
+  .skill-chip::before{
+    content:'';
+    display:inline-block; vertical-align:middle;
+    width:4px; height:4px; border-radius:50%;
+    background:var(--faint); margin-right:7px;
+    transition:background .18s, box-shadow .18s;
+  }
+  .skill-chip:hover::before, .skill-chip:focus-visible::before{
+    background:var(--accent); box-shadow:0 0 8px var(--accent);
+  }
+
+  /* ───────────── DETAIL BAR ───────────── */
+
+  .skill-detail{
+    margin-top:18px;
+    min-height:34px;
+    display:flex; align-items:center; justify-content:center; gap:8px;
+    font-family:var(--mono); font-size:11px;
+    color:var(--faint);
+    padding:6px 14px; border-radius:10px;
+    border:1px dashed var(--line);
+    background:rgba(255,255,255,.015);
+    transition:border-color .25s, background .25s, color .25s;
+    text-align:center;
+  }
+  .skill-detail.is-active{
+    border-style:solid;
+    border-color:color-mix(in srgb, var(--accent) 30%, transparent);
+    background:color-mix(in srgb, var(--accent) 6%, transparent);
+    color:#c9d4e6;
+  }
+  .sd-skill{color:#fff; font-weight:600}
+  .sd-arrow{color:var(--accent); font-size:12px}
+  .sd-related{color:#aab6c9}
+  .sd-note{color:var(--faint); font-style:italic}
+
+  /* ───────────── EMPTY STATE ───────────── */
+
+  .empty{
+    grid-column:1/-1;
+    text-align:center;
+    padding:26px 20px;
+    border-radius:13px;
+    border:1px dashed var(--line);
+    background:rgba(255,255,255,.012);
+    color:var(--faint);
+    font-size:12.5px;
+    letter-spacing:.01em;
+  }
+  .empty b{color:var(--muted); font-weight:600}
+
+  /* ───────────── FOOTER ───────────── */
+
+  footer{
+    margin-top:80px;
+    text-align:center;
+    padding-top:26px;
+    border-top:1px solid var(--line);
+  }
+  .cross-refs{
+    display:flex; flex-wrap:wrap; gap:8px; justify-content:center;
+    max-width:700px; margin:0 auto;
+  }
+  .cr-pill{
+    font-family:var(--mono); font-size:10px;
+    padding:4px 10px; border-radius:7px;
+    background:rgba(255,255,255,.04);
+    border:1px solid var(--line);
+    color:var(--muted);
+    white-space:nowrap;
+  }
+  .cr-pill b{color:#c9d4e6; font-weight:500}
+  .cr-label{
+    width:100%; text-align:center;
+    font-size:10.5px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--faint); margin-bottom:14px;
+  }
+  .foot-hint{
+    margin-top:22px;
+    font-size:11px; color:var(--faint); letter-spacing:.02em;
+  }
+  .foot-hint b{color:var(--muted); font-weight:600}
+
+  /* ───────────── RESPONSIVE ───────────── */
+
+  @media (max-width:1180px){
+    .objectives{grid-template-columns:repeat(3,1fr)}
+  }
+  @media (max-width:1100px){
+    .connector{display:none}
+    .stage{max-width:100% !important}
+    .funnel{margin-top:8px}
+    .stage + .stage{margin-top:34px}
+  }
+  @media (max-width:820px){
+    .page{padding:44px 18px 80px}
+    .objectives{grid-template-columns:repeat(2,1fr)}
+    .stage-hint{display:none}
+  }
+  @media (max-width:520px){
+    .objectives{grid-template-columns:1fr}
+    .approaches{grid-template-columns:1fr}
+    .root-banner{flex-direction:column; align-items:flex-start; gap:10px}
+    .breadcrumb{font-size:10px}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none !important; animation:none !important}
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <header>
+    <span class="eyebrow"><i></i>Decision Funnel</span>
+    <h1>The Product Marketing<br><span class="grad">Funnel Decision Tree</span></h1>
+    <p class="sub">
+      Start broad. Narrow down. Land on the exact skill to run.
+      Every path begins with <b>product-marketing</b>.
+    </p>
+
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb" id="breadcrumb" aria-label="Decision path"></nav>
+  </header>
+
+  <!-- ROOT -->
+  <div class="root-banner">
+    <span class="root-badge">Root</span>
+    <div class="root-body">
+      <div class="root-name">product-marketing</div>
+      <div class="root-desc">Read by every skill before it runs — positioning, ICP &amp; messaging.</div>
+    </div>
+  </div>
+
+  <!-- FUNNEL -->
+  <div class="funnel">
+
+    <!-- STAGE 1 -->
+    <section class="stage" data-stage="1" aria-labelledby="s1-title">
+      <div class="stage-head">
+        <span class="stage-num">01</span>
+        <span class="stage-title" id="s1-title">What's your goal?</span>
+        <span class="stage-hint">Pick the outcome you're driving</span>
+      </div>
+      <div class="stage-body objectives" id="objectives"></div>
+    </section>
+
+    <div class="connector connector-1" aria-hidden="true"></div>
+
+    <!-- STAGE 2 -->
+    <section class="stage" data-stage="2" aria-labelledby="s2-title">
+      <div class="stage-head">
+        <span class="stage-num">02</span>
+        <span class="stage-title" id="s2-title">Which approach?</span>
+        <span class="stage-hint">The lever you'll pull</span>
+      </div>
+      <div class="stage-body approaches" id="approaches"></div>
+    </section>
+
+    <div class="connector connector-2" aria-hidden="true"></div>
+
+    <!-- STAGE 3 -->
+    <section class="stage" data-stage="3" aria-labelledby="s3-title">
+      <div class="stage-head">
+        <span class="stage-num">03</span>
+        <span class="stage-title" id="s3-title">Run these skills</span>
+        <span class="stage-hint">Click to explore</span>
+      </div>
+      <div class="stage-body" style="display:block">
+        <div class="skills-wrap" id="skills"></div>
+        <div class="skill-detail" id="skill-detail">Hover a skill to see what it cross-references</div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- FOOTER / CROSS REFS -->
+  <footer>
+    <div class="cross-refs" id="cross-refs"></div>
+    <p class="foot-hint">
+      <b>Click</b> a goal to narrow &nbsp;·&nbsp;
+      <b>Click</b> an approach to reveal skills &nbsp;·&nbsp;
+      <b>Esc</b> to reset
+    </p>
+  </footer>
+
+</div>
+
+<script>
+/* ───────────────────────── DATA ───────────────────────── */
+
+const FUNNEL = [
+  {
+    id:'discover', label:'Get discovered',
+    desc:'Earn attention in search, feeds & stores',
+    color:'#22d3ee',
+    approaches:[
+      { id:'tech-seo', label:'Technical SEO', desc:'Crawl, structure & markup', skills:['seo-audit','site-arch','schema'] },
+      { id:'content-engine', label:'Content engine', desc:'Publish at scale', skills:['content','programmatic','social','video','image'] },
+      { id:'ai-app', label:'AI & app search', desc:'Answer engines & stores', skills:['ai-seo','aso'] }
+    ]
+  },
+  {
+    id:'convert', label:'Convert visitors',
+    desc:'Turn traffic into signups & activation',
+    color:'#fbbf24',
+    approaches:[
+      { id:'page-offer', label:'Page & offer', desc:'Landing, signup & paywall', skills:['cro','signup','popups','paywalls'] },
+      { id:'onboarding', label:'Onboarding', desc:'First-run experience', skills:['onboarding'] },
+      { id:'copy-email', label:'Copy & email', desc:'Words that move people', skills:['copywriting','copy-edit','emails','sms'] }
+    ]
+  },
+  {
+    id:'revenue', label:'Win revenue',
+    desc:'Pipeline, pricing & launches',
+    color:'#60a5fa',
+    approaches:[
+      { id:'pipeline', label:'Pipeline', desc:'Ops, outbound & enablement', skills:['revops','sales-enablement','prospecting','cold-email'] },
+      { id:'launch-price', label:'Launch & price', desc:'Go-to-market & packaging', skills:['launch','pricing'] },
+      { id:'market-intel', label:'Market intel', desc:'Competitors & directories', skills:['competitors','comp-profile','directory'] }
+    ]
+  },
+  {
+    id:'retain', label:'Keep & grow',
+    desc:'Retention, referral & community',
+    color:'#34d399',
+    approaches:[
+      { id:'loops', label:'Referral & loops', desc:'Built-in growth', skills:['referrals','free-tools','lead-magnets'] },
+      { id:'retention', label:'Retention & community', desc:'Keep them around', skills:['churn-prevention','community'] }
+    ]
+  },
+  {
+    id:'measure', label:'Prove & scale',
+    desc:'Paid media & experiments',
+    color:'#fb7185',
+    approaches:[
+      { id:'paid', label:'Paid media', desc:'Buy attention', skills:['ads','ad-creative'] },
+      { id:'experiment', label:'Experimentation', desc:'Test & learn', skills:['ab-testing','analytics'] }
+    ]
+  },
+  {
+    id:'strategy', label:'Position & decide',
+    desc:'Research, messaging & strategy',
+    color:'#a78bfa',
+    approaches:[
+      { id:'research', label:'Research', desc:'Understand the customer', skills:['customer-research','mktg-psych'] },
+      { id:'ideation', label:'Ideation', desc:'Find the angle', skills:['mktg-ideas'] }
+    ]
+  }
+];
+
+const LINKS = [
+  ['copywriting','cro','ab-testing'],
+  ['revops','sales-enablement','cold-email'],
+  ['seo-audit','schema','ai-seo'],
+  ['customer-research','copywriting','cro','competitors']
+];
+
+/* ───────────────────────── STATE ───────────────────────── */
+
+const state = {
+  objective: null,
+  approach: null
+};
+
+/* ───────────────────────── HELPERS ───────────────────────── */
+
+function getObjective(id){ return FUNNEL.find(o => o.id === id); }
+
+function getApproach(objId, appId){
+  const obj = getObjective(objId);
+  return obj ? obj.approaches.find(a => a.id === appId) : null;
+}
+
+function getRelated(skill){
+  const group = LINKS.find(g => g.includes(skill));
+  return group ? group.filter(s => s !== skill) : [];
+}
+
+/* ───────────────────────── RENDER: BREADCRUMB ───────────────────────── */
+
+function renderBreadcrumb(){
+  const el = document.getElementById('breadcrumb');
+  const parts = [];
+
+  // root
+  parts.push({ label:'product-marketing', cls:'root', action:() => resetAll() });
+
+  if (state.objective){
+    const obj = getObjective(state.objective);
+    parts.push({ label:obj.label, cls:'', action:() => selectObjective(obj.id) });
+  }
+
+  if (state.approach){
+    const app = getApproach(state.objective, state.approach);
+    parts.push({ label:app.label, cls:'current', action:() => selectApproach(app.id) });
+    parts.push({ label:`${app.skills.length} skills`, cls:'current', action:null });
+  }
+
+  el.innerHTML = parts.map((p, i) => {
+    const sep = i > 0 ? '<span class="bc-sep">→</span>' : '';
+    const tag = p.action ? 'button' : 'span';
+    const attr = p.action ? `type="button"` : '';
+    return `${sep}<${tag} ${attr} class="bc-item ${p.cls}" data-idx="${i}">${p.label}</${tag}>`;
+  }).join('');
+
+  // bind
+  el.querySelectorAll('button.bc-item').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const idx = parseInt(btn.dataset.idx, 10);
+      parts[idx].action && parts[idx].action();
+    });
+  });
+}
+
+/* ───────────────────────── RENDER: OBJECTIVES ───────────────────────── */
+
+function renderObjectives(){
+  const el = document.getElementById('objectives');
+  el.innerHTML = FUNNEL.map(o => `
+    <button type="button"
+            class="obj-card ${state.objective === o.id ? 'is-active' : ''}"
+            data-id="${o.id}"
+            style="--c:${o.color}">
+      <span class="obj-dot"></span>
+      <span class="obj-name">${o.label}</span>
+      <span class="obj-desc">${o.desc}</span>
+      <span class="obj-meta">${o.approaches.length} approaches</span>
+    </button>
+  `).join('');
+
+  el.querySelectorAll('.obj-card').forEach(btn => {
+    btn.addEventListener('click', () => selectObjective(btn.dataset.id));
+  });
+}
+
+/* ───────────────────────── RENDER: APPROACHES ───────────────────────── */
+
+function renderApproaches(){
+  const el = document.getElementById('approaches');
+  const obj = getObjective(state.objective);
+
+  if (!obj){
+    el.innerHTML = `<div class="empty">Pick a <b>goal</b> above to narrow the funnel</div>`;
+    return;
+  }
+
+  el.innerHTML = obj.approaches.map(a => `
+    <button type="button"
+            class="app-card ${state.approach === a.id ? 'is-active' : ''}"
+            data-id="${a.id}">
+      <span class="app-name">${a.label}</span>
+      <span class="app-desc">${a.desc}</span>
+      <span class="app-meta">${a.skills.length} skill${a.skills.length > 1 ? 's' : ''}</span>
+    </button>
+  `).join('');
+
+  el.querySelectorAll('.app-card').forEach(btn => {
+    btn.addEventListener('click', () => selectApproach(btn.dataset.id));
+  });
+}
+
+/* ───────────────────────── RENDER: SKILLS ───────────────────────── */
+
+function renderSkills(){
+  const wrap = document.getElementById('skills');
+  const detail = document.getElementById('skill-detail');
+
+  if (!state.objective){
+    wrap.innerHTML = `<div class="empty">Waiting for a goal…</div>`;
+    detail.textContent = 'Hover a skill to see what it cross-references';
+    detail.classList.remove('is-active');
+    return;
+  }
+
+  const app = getApproach(state.objective, state.approach);
+
+  if (!app){
+    wrap.innerHTML = `<div class="empty">Pick an <b>approach</b> to see the skills</div>`;
+    detail.textContent = 'Hover a skill to see what it cross-references';
+    detail.classList.remove('is-active');
+    return;
+  }
+
+  wrap.innerHTML = app.skills.map(s => `
+    <button type="button" class="skill-chip" data-skill="${s}">${s}</button>
+  `).join('');
+
+  wrap.querySelectorAll('.skill-chip').forEach(chip => {
+    const skill = chip.dataset.skill;
+    chip.addEventListener('mouseenter', () => showDetail(skill));
+    chip.addEventListener('focus', () => showDetail(skill));
+    chip.addEventListener('mouseleave', hideDetail);
+    chip.addEventListener('blur', hideDetail);
+  });
+
+  hideDetail();
+}
+
+function showDetail(skill){
+  const el = document.getElementById('skill-detail');
+  const related = getRelated(skill);
+
+  if (related.length){
+    el.innerHTML = `<span class="sd-skill">${skill}</span>
+      <span class="sd-arrow">⇄</span>
+      <span class="sd-related">${related.join(' · ')}</span>`;
+  } else {
+    el.innerHTML = `<span class="sd-skill">${skill}</span>
+      <span class="sd-note">standalone skill</span>`;
+  }
+  el.classList.add('is-active');
+}
+
+function hideDetail(){
+  const el = document.getElementById('skill-detail');
+  el.textContent = 'Hover a skill to see what it cross-references';
+  el.classList.remove('is-active');
+}
+
+/* ───────────────────────── RENDER: CROSS REFS ───────────────────────── */
+
+function renderCrossRefs(){
+  const el = document.getElementById('cross-refs');
+  el.innerHTML = `<div class="cr-label">Skills cross-reference each other</div>` +
+    LINKS.map(g => `<span class="cr-pill">${g.map(s => `<b>${s}</b>`).join(' ↔ ')}</span>`).join('');
+}
+
+/* ───────────────────────── ACCENT ───────────────────────── */
+
+function updateAccent(){
+  const obj = getObjective(state.objective);
+  document.documentElement.style.setProperty('--accent', obj ? obj.color : '#60a5fa');
+}
+
+/* ───────────────────────── ACTIONS ───────────────────────── */
+
+function selectObjective(id){
+  if (state.objective === id){
+    state.objective = null;
+    state.approach = null;
+  } else {
+    state.objective = id;
+    state.approach = null;
+  }
+  render();
+}
+
+function selectApproach(id){
+  state.approach = state.approach === id ? null : id;
+  render();
+}
+
+function resetAll(){
+  state.objective = null;
+  state.approach = null;
+  render();
+}
+
+/* ───────────────────────── MASTER RENDER ───────────────────────── */
+
+function render(){
+  updateAccent();
+  renderBreadcrumb();
+  renderObjectives();
+  renderApproaches();
+  renderSkills();
+}
+
+/* ───────────────────────── INIT ───────────────────────── */
+
+renderCrossRefs();
+render();
+
+/* ESC to reset */
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') resetAll();
+});
+</script>
+</body>
+</html>
