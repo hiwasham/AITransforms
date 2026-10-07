@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Task Plan — Visual</title>
+<style>
+  :root{
+    --bg:#0e1016; --panel:#161a23; --panel2:#1c212c; --line:#262c39;
+    --text:#e6e9f0; --muted:#8b93a7;
+    --setup:#3b82f6; --found:#f59e0b; --us1:#10b981;
+    --us2:#8b5cf6; --us3:#ec4899; --polish:#64748b;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; min-height:100vh; color:var(--text);
+    font:15px/1.5 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    background:radial-gradient(1200px 600px at 50% -10%, #1b2130, #0e1016 60%) fixed;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:34px 20px 90px}
+
+  header h1{font-size:clamp(22px,3vw,32px);margin:0 0 6px;letter-spacing:-.02em}
+  header p{margin:0;color:var(--muted);font-size:14px}
+  .kbd{font:600 11px ui-monospace,monospace;background:#20263400;border:1px solid var(--line);
+       background:#1b202b;padding:2px 6px;border-radius:6px;color:var(--muted)}
+
+  /* ---------- Pipeline ---------- */
+  .flow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:26px 0 20px}
+  .node{
+    background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    padding:10px 14px;min-width:118px;text-align:center;transition:.25s;
+  }
+  .node .n-title{font-weight:600;font-size:13px}
+  .node .n-sub{font-size:11px;color:var(--muted);margin-top:1px}
+  .node .bar{height:4px;border-radius:99px;background:#2a3140;margin-top:8px;overflow:hidden}
+  .node .bar > i{display:block;height:100%;width:0;background:var(--c);transition:width .35s}
+  .node.full{border-color:var(--c);box-shadow:0 0 0 1px var(--c) inset}
+  .arrow{color:#3a4356;font-size:18px;font-weight:700}
+  .stack{display:flex;flex-direction:column;gap:8px}
+  .stack .node{min-width:150px;padding:7px 12px}
+
+  /* ---------- Toolbar ---------- */
+  .toolbar{
+    position:sticky;top:12px;z-index:9;
+    display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+    background:rgba(22,26,35,.9);backdrop-filter:blur(10px);
+    border:1px solid var(--line);border-radius:14px;padding:13px 16px;margin-bottom:20px;
+  }
+  .overall{flex:1;min-width:180px}
+  .overall .lbl{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:6px}
+  .track{height:8px;border-radius:99px;background:#232937;overflow:hidden}
+  .track > i{display:block;height:100%;width:0;border-radius:99px;
+    background:linear-gradient(90deg,var(--setup),var(--us1));transition:width .35s}
+  .btn{
+    font:inherit;font-size:13px;color:var(--text);background:#1e2431;
+    border:1px solid var(--line);border-radius:9px;padding:7px 12px;cursor:pointer;transition:.15s;
+  }
+  .btn:hover{background:#262d3c}
+  .btn.on{background:#1d3a5c;border-color:#2f5f95;color:#a9d3ff}
+
+  /* ---------- Phase cards ---------- */
+  .phase{
+    background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--c);
+    border-radius:14px;margin-bottom:13px;overflow:hidden;transition:.2s;
+  }
+  .phase:hover{border-color:#31394a;border-left-color:var(--c)}
+  .p-head{
+    display:flex;align-items:center;gap:12px;width:100%;text-align:left;
+    padding:14px 16px;background:none;border:0;color:inherit;font:inherit;cursor:pointer;
+  }
+  .p-num{
+    flex:none;width:28px;height:28px;border-radius:9px;display:grid;place-items:center;
+    font:700 13px ui-monospace,monospace;background:color-mix(in srgb,var(--c) 20%,transparent);
+    color:var(--c);border:1px solid color-mix(in srgb,var(--c) 40%,transparent);
+  }
+  .p-title{font-weight:600;flex:1;min-width:140px}
+  .p-title small{display:block;font-weight:400;font-size:12px;color:var(--muted);margin-top:1px}
+  .pill{
+    font:600 10.5px ui-monospace,monospace;letter-spacing:.03em;text-transform:uppercase;
+    padding:3px 8px;border-radius:99px;border:1px solid;
+  }
+  .pill.p1{color:#34d399;border-color:#1f6f52;background:#0f2a21}
+  .pill.p2{color:#a78bfa;border-color:#4c3a8a;background:#1d1834}
+  .pill.p3{color:#f472b6;border-color:#8a3563;background:#2e1224}
+  .pill.block{color:#fbbf24;border-color:#8a6412;background:#2c2210}
+  .pill.done{color:#9aa3b8;border-color:#38405a;background:#1b202b}
+  .p-count{font:600 12px ui-monospace,monospace;color:var(--muted);flex:none}
+  .caret{color:var(--muted);transition:transform .2s;flex:none}
+  .phase.collapsed .caret{transform:rotate(-90deg)}
+  .phase.collapsed .tasks{display:none}
+
+  .p-goal{padding:0 16px 10px 56px;font-size:13px;color:var(--muted);margin-top:-6px}
+
+  .tasks{padding:0 12px 12px}
+  .task{display:flex;gap:10px;align-items:flex-start;padding:8px 10px;border-radius:9px;transition:.12s}
+  .task:hover{background:var(--panel2)}
+  .task input{
+    margin-top:3px;width:16px;height:16px;flex:none;cursor:pointer;
+    accent-color:var(--c);
+  }
+  .t-body{flex:1;min-width:0}
+  .t-line{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+  .tid{font:600 11px ui-monospace,monospace;color:var(--muted);background:#202634;
+       border:1px solid #2b3242;padding:1px 6px;border-radius:6px;flex:none}
+  .t-text{font-size:14px}
+  .t-detail{font-size:12.5px;color:var(--muted);margin-top:2px}
+  .chip{font:600 10px ui-monospace,monospace;padding:1px 6px;border-radius:5px;letter-spacing:.04em}
+  .chip.par{color:#7cc0ff;background:#16283c;border:1px solid #24425f}
+  .chip.test{color:#fbbf24;background:#2c2210;border:1px solid #5c4715}
+  .task.done .t-text{text-decoration:line-through;color:var(--muted)}
+  .task.done .tid{opacity:.5}
+
+  body.hide-details .t-detail{display:none}
+  body.hide-details .p-goal{display:none}
+
+  footer{margin-top:34px;color:var(--muted);font-size:12.5px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Task Plan — Visual</h1>
+    <p>A simplified, clickable version of the spec-kit <span class="kbd">tasks.md</span> template.
+       Tick tasks to track progress — your state is saved locally.</p>
+  </header>
+
+  <div class="flow" id="flow"></div>
+
+  <div class="toolbar">
+    <div class="overall">
+      <div class="lbl"><span>Overall progress</span><span id="pctTxt">0 / 0</span></div>
+      <div class="track"><i id="overallBar"></i></div>
+    </div>
+    <button class="btn" id="toggleDetails">Hide details</button>
+    <button class="btn" id="expandAll">Expand all</button>
+    <button class="btn" id="reset">Reset</button>
+  </div>
+
+  <div id="phases"></div>
+
+  <footer>Click a phase header to collapse it · <span class="kbd">[P]</span> = can run in parallel</footer>
+</div>
+
+<script>
+/* ============================================================
+   DATA — simplified from the tasks.md template
+   ============================================================ */
+const PHASES = [
+  {
+    id:'setup', num:1, color:'var(--setup)', title:'Setup',
+    sub:'Get the project ready',
+    goal:'Project folders, dependencies and code-style tools.',
+    tasks:[
+      {id:'T001', text:'Create the project folders', detail:'src/ and tests/ at the repo root, as described in the plan.'},
+      {id:'T002', text:'Start the project & install libraries', detail:'Initialize the language + framework of choice.'},
+      {id:'T003', text:'Add linting & formatting', par:true, detail:'So every file follows the same style automatically.'}
+    ]
+  },
+  {
+    id:'found', num:2, color:'var(--found)', title:'Foundation',
+    sub:'Must be finished before any story',
+    goal:'Shared plumbing every user story relies on.',
+    blocking:true,
+    tasks:[
+      {id:'T004', text:'Set up the database', detail:'Schema plus a migrations framework.'},
+      {id:'T005', text:'Add login & permissions', par:true, detail:'Authentication / authorization framework.'},
+      {id:'T006', text:'Set up API routes', par:true, detail:'Routing structure and middleware.'},
+      {id:'T007', text:'Create shared base models', detail:'The entities all stories depend on.'},
+      {id:'T008', text:'Add error handling & logging', detail:'One consistent way to fail and to log.'},
+      {id:'T009', text:'Manage configuration', detail:'Environment variables and settings.'}
+    ]
+  },
+  {
+    id:'us1', num:3, color:'var(--us1)', title:'User Story 1', sub:'The MVP — build this first',
+    prio:'P1', goal:'Deliver the smallest end-to-end slice of value.',
+    tasks:[
+      {id:'T010', text:'Contract test for the endpoint', test:true, par:true, detail:'Write it first — it should fail.'},
+      {id:'T011', text:'Integration test for the main journey', test:true, par:true, detail:'Write it first — it should fail.'},
+      {id:'T012', text:'Create Entity 1 model', par:true},
+      {id:'T013', text:'Create Entity 2 model', par:true},
+      {id:'T014', text:'Build the service layer', detail:'Depends on T012 + T013.'},
+      {id:'T015', text:'Build the endpoint / feature'},
+      {id:'T016', text:'Add validation & error handling'},
+      {id:'T017', text:'Add logging for this story'}
+    ]
+  },
+  {
+    id:'us2', num:4, color:'var(--us2)', title:'User Story 2', sub:'Second slice of value',
+    prio:'P2', goal:'A second story that works on its own.',
+    tasks:[
+      {id:'T018', text:'Contract test for the endpoint', test:true, par:true},
+      {id:'T019', text:'Integration test for the journey', test:true, par:true},
+      {id:'T020', text:'Create the model', par:true},
+      {id:'T021', text:'Build the service layer'},
+      {id:'T022', text:'Build the endpoint / feature'},
+      {id:'T023', text:'Integrate with User Story 1', detail:'Only if the two need to talk to each other.'}
+    ]
+  },
+  {
+    id:'us3', num:5, color:'var(--us3)', title:'User Story 3', sub:'Nice to have',
+    prio:'P3', goal:'A third independent story.',
+    tasks:[
+      {id:'T024', text:'Contract test for the endpoint', test:true, par:true},
+      {id:'T025', text:'Integration test for the journey', test:true, par:true},
+      {id:'T026', text:'Create the model', par:true},
+      {id:'T027', text:'Build the service layer'},
+      {id:'T028', text:'Build the endpoint / feature'}
+    ]
+  },
+  {
+    id:'polish', num:6, color:'var(--polish)', title:'Polish', sub:'Cross-cutting cleanup',
+    goal:'Improvements that touch every story.',
+    tasks:[
+      {id:'T029', text:'Update the documentation', par:true},
+      {id:'T030', text:'Clean up & refactor'},
+      {id:'T031', text:'Optimize performance'},
+      {id:'T032', text:'Add extra unit tests', par:true},
+      {id:'T033', text:'Harden security'},
+      {id:'T034', text:'Run the quickstart validation', detail:'Follow quickstart.md end-to-end and confirm it works.'}
+    ]
+  }
+];
+
+/* ============================================================
+   STATE
+   ============================================================ */
+const KEY = 'taskviz.v1';
+let done = new Set();
+let collapsed = new Set();
+let hideDetails = false;
+
+try { done = new Set(JSON.parse(localStorage.getItem(KEY) || '[]')); } catch(e) {}
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify([...done])); } catch(e) {} };
+
+const ALL = PHASES.flatMap(p => p.tasks);
+const countDone = list => list.filter(t => done.has(t.id)).length;
+const pctOf = list => list.length ? Math.round(countDone(list) / list.length * 100) : 0;
+
+/* ============================================================
+   RENDER — pipeline
+   ============================================================ */
+function renderFlow(){
+  const node = (id, title, sub, color) => {
+    const p = PHASES.find(x => x.id === id);
+    const pct = pctOf(p.tasks);
+    return `<div class="node ${pct === 100 ? 'full' : ''}" style="--c:${color}">
+        <div class="n-title">${title}</div>
+        <div class="n-sub">${sub}</div>
+        <div class="bar"><i style="width:${pct}%"></i></div>
+      </div>`;
+  };
+  document.getElementById('flow').innerHTML = `
+    ${node('setup','Setup','phase 1','var(--setup)')}
+    <span class="arrow">→</span>
+    ${node('found','Foundation','blocks everything','var(--found)')}
+    <span class="arrow">→</span>
+    <div class="stack">
+      ${node('us1','US1 · MVP','P1','var(--us1)')}
+      ${node('us2','US2','P2','var(--us2)')}
+      ${node('us3','US3','P3','var(--us3)')}
+    </div>
+    <span class="arrow">→</span>
+    ${node('polish','Polish','final pass','var(--polish)')}
+  `;
+}
+
+/* ============================================================
+   RENDER — phase cards
+   ============================================================ */
+function renderPhases(){
+  const html = PHASES.map(p => {
+    const d = countDone(p.tasks);
+    const total = p.tasks.length;
+    const allDone = d === total;
+
+    const pill = p.blocking
+      ? '<span class="pill block">Blocks all</span>'
+      : (p.prio ? `<span class="pill ${p.prio.toLowerCase()}">${p.prio}</span>` : '');
+
+    const tasks = p.tasks.map(t => `
+      <label class="task ${done.has(t.id) ? 'done' : ''}">
+        <input type="checkbox" data-id="${t.id}" ${done.has(t.id) ? 'checked' : ''} />
+        <span class="t-body">
+          <span class="t-line">
+            <span class="tid">${t.id}</span>
+            <span class="t-text">${t.text}</span>
+            ${t.par ? '<span class="chip par">[P] parallel</span>' : ''}
+            ${t.test ? '<span class="chip test">TEST</span>' : ''}
+          </span>
+          ${t.detail ? `<span class="t-detail">${t.detail}</span>` : ''}
+        </span>
+      </label>`).join('');
+
+    return `
+      <section class="phase ${collapsed.has(p.id) ? 'collapsed' : ''}" style="--c:${p.color}">
+        <button class="p-head" data-phase="${p.id}">
+          <span class="p-num">${p.num}</span>
+          <span class="p-title">${p.title}<small>${p.sub}</small></span>
+          ${pill}
+          ${allDone ? '<span class="pill done">✓ done</span>' : ''}
+          <span class="p-count">${d}/${total}</span>
+          <span class="caret">▾</span>
+        </button>
+        <div class="p-goal">${p.goal}</div>
+        <div class="tasks">${tasks}</div>
+      </section>`;
+  }).join('');
+
+  document.getElementById('phases').innerHTML = html;
+}
+
+/* ============================================================
+   RENDER — toolbar
+   ============================================================ */
+function renderToolbar(){
+  const d = countDone(ALL);
+  document.getElementById('pctTxt').textContent = `${d} / ${ALL.length}`;
+  document.getElementById('overallBar').style.width = pctOf(ALL) + '%';
+}
+
+function renderAll(){
+  renderFlow();
+  renderPhases();
+  renderToolbar();
+  document.body.classList.toggle('hide-details', hideDetails);
+}
+
+/* ============================================================
+   EVENTS
+   ============================================================ */
+document.getElementById('phases').addEventListener('change', e => {
+  const cb = e.target.closest('input[type=checkbox]');
+  if (!cb) return;
+  cb.checked ? done.add(cb.dataset.id) : done.delete(cb.dataset.id);
+  save();
+  renderAll();
+});
+
+document.getElementById('phases').addEventListener('click', e => {
+  const head = e.target.closest('.p-head');
+  if (!head) return;
+  const id = head.dataset.phase;
+  collapsed.has(id) ? collapsed.delete(id) : collapsed.add(id);
+  head.closest('.phase').classList.toggle('collapsed', collapsed.has(id));
+});
+
+document.getElementById('toggleDetails').addEventListener('click', e => {
+  hideDetails = !hideDetails;
+  e.target.textContent = hideDetails ? 'Show details' : 'Hide details';
+  e.target.classList.toggle('on', hideDetails);
+  document.body.classList.toggle('hide-details', hideDetails);
+});
+
+document.getElementById('expandAll').addEventListener('click', () => {
+  collapsed.clear();
+  renderPhases();
+});
+
+document.getElementById('reset').addEventListener('click', () => {
+  if (!confirm('Clear all ticked tasks?')) return;
+  done.clear(); save(); renderAll();
+});
+
+/* boot */
+renderAll();
+</script>
+</body>
+</html>

@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strategic Planning Cores · proc 4 + Enabling Cores</title>
+<style>
+  :root{
+    --ink:#0a0d14;
+    --ink2:#0f131c;
+    --panel:#151b26;
+    --panel2:#1a2230;
+    --line:#232c3b;
+    --txt:#eef2f9;
+    --mut:#8b95a9;
+    --mut2:#5a6477;
+    --bayan:#1a4ff5;
+    --bayan2:#4d7bff;
+    --emerald:#34d399;
+    --amber:#fbbf24;
+    --rose:#f43f5e;
+    --violet:#a78bfa;
+    --cyan:#22d3ee;
+    --gold:#eab308;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);
+    color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  main{max-width:1040px;margin:0 auto;padding:0 24px 80px}
+
+  /* ============ TOP NAV ============ */
+  .topnav{
+    position:sticky;top:0;z-index:50;
+    padding:12px 24px;
+    background:linear-gradient(180deg,rgba(10,13,20,.95),rgba(10,13,20,.65) 80%,transparent);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    display:flex;gap:4px;overflow-x:auto;flex-wrap:wrap;
+    border-bottom:1px solid transparent;
+    transition:border-color .3s;
+  }
+  .topnav.scrolled{border-bottom-color:var(--line)}
+  .topnav::-webkit-scrollbar{display:none}
+  .topnav a{
+    all:unset;cursor:pointer;
+    font-size:12px;font-weight:500;
+    color:var(--mut);
+    padding:7px 12px;border-radius:8px;
+    transition:.2s;white-space:nowrap;
+  }
+  .topnav a:hover{color:#c8d2e2;background:rgba(255,255,255,.04)}
+  .topnav a.active{color:#fff;background:rgba(26,79,245,.15)}
+
+  /* ============ HEADER ============ */
+  header{
+    padding:56px 0 40px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:36px;
+  }
+  header .crumbs{
+    display:flex;align-items:center;gap:10px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    color:var(--mut2);
+    margin-bottom:20px;
+    flex-wrap:wrap;
+  }
+  header .crumbs .sep{color:var(--line)}
+  header .crumbs .here{color:var(--bayan2);font-weight:600}
+
+  header .tag{
+    display:inline-block;
+    font-size:11px;font-weight:600;
+    letter-spacing:.1em;text-transform:uppercase;
+    color:var(--bayan2);
+    background:rgba(26,79,245,.12);
+    border:1px solid rgba(26,79,245,.3);
+    padding:6px 12px;border-radius:8px;
+    margin-bottom:20px;
+  }
+  header h1{
+    font-size:38px;line-height:1.12;
+    letter-spacing:-.028em;font-weight:800;
+    color:#fff;margin-bottom:18px;
+    max-width:24ch;
+  }
+  header .lede{
+    font-size:15.5px;line-height:1.75;
+    color:#b8c2d2;max-width:74ch;
+  }
+  header .lede b{color:#fff;font-weight:600}
+  header .lede code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:5px;
+    color:#dfe7f4;
+  }
+  header .meta{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+    gap:16px 24px;
+    margin-top:28px;padding-top:24px;
+    border-top:1px dashed var(--line);
+  }
+  header .meta .m-item{
+    display:flex;flex-direction:column;gap:3px;
+  }
+  header .meta .m-k{
+    font-size:10.5px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;
+    color:var(--mut2);
+  }
+  header .meta .m-v{
+    color:#cfd8e8;font-weight:500;
+    font-size:13.5px;
+  }
+  header .meta .m-v code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ SECTIONS ============ */
+  section{margin-bottom:56px;scroll-margin-top:80px}
+  .sec-head{
+    display:flex;align-items:baseline;
+    gap:14px;flex-wrap:wrap;
+    margin-bottom:24px;
+  }
+  .sec-head .num{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px;font-weight:700;
+    color:var(--bayan2);
+    background:rgba(26,79,245,.12);
+    border:1px solid rgba(26,79,245,.28);
+    padding:5px 10px;border-radius:7px;
+    letter-spacing:.04em;
+  }
+  .sec-head h2{
+    font-size:26px;line-height:1.25;
+    letter-spacing:-.02em;font-weight:800;
+    color:#fff;
+  }
+  .sec-head .count{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;font-weight:700;
+    padding:4px 10px;border-radius:7px;
+    background:rgba(255,255,255,.04);
+    color:#cfd8e8;
+    border:1px solid var(--line);
+  }
+  .sec-desc{
+    font-size:14.5px;color:var(--mut);
+    margin-bottom:26px;max-width:78ch;
+  }
+  .sec-desc b{color:#cfd8e8;font-weight:600}
+  .sec-desc code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ CORE CARD ============ */
+  .core{
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+    margin-bottom:20px;
+    transition:.25s;
+  }
+  .core::before{
+    content:"";position:absolute;
+    top:0;right:0;bottom:0;width:4px;
+    background:rgb(var(--cc));
+  }
+  .core:hover{
+    border-color:rgba(var(--cc),.4);
+    background:rgba(var(--cc),.015);
+  }
+  .core.c-blue{--cc:26,79,245}
+  .core.c-violet{--cc:167,139,250}
+  .core.c-cyan{--cc:34,211,238}
+  .core.c-emerald{--cc:52,211,153}
+  .core.c-amber{--cc:251,191,36}
+  .core.c-rose{--cc:244,63,94}
+  .core.c-gold{--cc:234,179,8}
+  .core.c-slate{--cc:148,163,184}
+
+  /* build-first emphasis */
+  .core.primary{
+    background:linear-gradient(180deg,rgba(52,211,153,.05),var(--panel));
+    border-color:rgba(52,211,153,.4);
+    box-shadow:0 20px 50px -30px rgba(52,211,153,.5);
+  }
+
+  .core-head{
+    padding:20px 26px 16px 30px;
+    display:flex;align-items:flex-start;
+    gap:16px;flex-wrap:wrap;
+    border-bottom:1px solid var(--line);
+    background:linear-gradient(90deg,rgba(var(--cc),.06),transparent);
+  }
+  .core-num{
+    flex:0 0 auto;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13px;
+    font-weight:800;
+    padding:6px 11px;border-radius:8px;
+    background:rgba(var(--cc),.16);
+    color:rgb(var(--cc));
+    border:1px solid rgba(var(--cc),.4);
+    letter-spacing:.02em;
+    height:fit-content;
+    margin-top:2px;
+  }
+  .core-title-wrap{flex:1;min-width:0}
+  .core-kicker{
+    font-size:10.5px;font-weight:700;
+    letter-spacing:.1em;text-transform:uppercase;
+    color:rgb(var(--cc));
+    margin-bottom:6px;
+  }
+  .core-title{
+    font-size:18px;
+    line-height:1.3;
+    letter-spacing:-.015em;
+    font-weight:700;
+    color:#fff;
+  }
+  .core-badges{
+    display:flex;gap:6px;flex-wrap:wrap;
+    margin-top:10px;
+  }
+  .badge{
+    display:inline-flex;align-items:center;gap:5px;
+    font-size:10.5px;font-weight:700;
+    letter-spacing:.06em;text-transform:uppercase;
+    padding:3px 8px;border-radius:5px;
+  }
+  .badge.build{
+    background:rgba(52,211,153,.16);
+    color:var(--emerald);
+    border:1px solid rgba(52,211,153,.4);
+  }
+  .badge.cut{
+    background:rgba(244,63,94,.14);
+    color:var(--rose);
+    border:1px solid rgba(244,63,94,.35);
+  }
+  .badge.confirm{
+    background:rgba(251,191,36,.14);
+    color:var(--amber);
+    border:1px solid rgba(251,191,36,.35);
+  }
+  .badge.tbd{
+    background:rgba(255,255,255,.05);
+    color:var(--mut);
+    border:1px solid var(--line);
+  }
+  .badge.block{
+    background:rgba(167,139,250,.14);
+    color:var(--violet);
+    border:1px solid rgba(167,139,250,.35);
+  }
+
+  .core-body{
+    padding:22px 26px 22px 30px;
+  }
+  .core-body > p{
+    font-size:14px;
+    line-height:1.75;
+    color:#b8c2d2;
+    margin-bottom:14px;
+  }
+  .core-body > p:last-child{margin-bottom:0}
+  .core-body b{color:#fff;font-weight:600}
+  .core-body strong{color:#fff;font-weight:700}
+  .core-body em{font-style:italic;color:#dfe7f4}
+  .core-body code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px;
+    background:rgba(255,255,255,.06);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ PERSONA GRID ============ */
+  .persona-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    margin:14px 0;
+  }
+  .persona{
+    padding:20px 22px;
+    border-radius:12px;
+    background:linear-gradient(180deg,rgba(255,255,255,.02),transparent);
+    border:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+  }
+  .persona::before{
+    content:"";position:absolute;
+    top:0;right:0;left:0;height:3px;
+    background:rgb(var(--pc));
+  }
+  .persona.pa{--pc:26,79,245}
+  .persona.pb{--pc:167,139,250}
+  .persona-label{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:11px;font-weight:700;
+    letter-spacing:.08em;
+    color:rgb(var(--pc));
+    text-transform:uppercase;
+    margin-bottom:10px;
+  }
+  .persona-name{
+    font-size:15px;font-weight:700;
+    color:#fff;
+    letter-spacing:-.01em;
+    margin-bottom:10px;
+    line-height:1.35;
+  }
+  .persona p{
+    font-size:13px;
+    line-height:1.7;
+    color:#b8c2d2;
+    margin-bottom:10px;
+  }
+  .persona p:last-child{margin-bottom:0}
+  .persona p b{color:#fff;font-weight:600}
+  .voc-quote{
+    font-style:italic;
+    font-size:13.5px;
+    line-height:1.65;
+    color:#dfe7f4;
+    padding:10px 14px;
+    border-left:3px solid rgb(var(--pc));
+    background:rgba(var(--pc),.05);
+    border-radius:0 8px 8px 0;
+    margin-top:10px;
+  }
+  .voc-quote::before{content:"“";opacity:.5;margin-right:2px}
+  .voc-quote::after{content:"”";opacity:.5;margin-left:2px}
+
+  /* ============ SEGMENT CHIPS ============ */
+  .seg-chips{
+    display:flex;flex-direction:column;
+    gap:10px;
+    margin:14px 0 4px;
+  }
+  .seg-row{
+    display:flex;gap:12px;align-items:flex-start;
+    padding:12px 16px;
+    border-radius:10px;
+    background:rgba(255,255,255,.02);
+    border:1px solid var(--line);
+  }
+  .seg-label{
+    flex:0 0 110px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:11.5px;
+    font-weight:700;
+    color:rgb(var(--cc));
+    letter-spacing:.04em;
+    padding-top:2px;
+    text-transform:uppercase;
+  }
+  .seg-values{
+    flex:1;display:flex;gap:6px;flex-wrap:wrap;
+  }
+  .seg-chip{
+    display:inline-block;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:11.5px;
+    font-weight:600;
+    padding:4px 10px;
+    border-radius:6px;
+    background:rgba(var(--cc),.1);
+    color:rgb(var(--cc));
+    border:1px solid rgba(var(--cc),.28);
+    letter-spacing:.01em;
+  }
+
+  /* ============ MATRIX ============ */
+  .matrix{
+    border-radius:12px;
+    background:rgba(0,0,0,.25);
+    border:1px solid var(--line);
+    overflow-x:auto;
+    margin:14px 0;
+  }
+  .matrix table{
+    width:100%;border-collapse:collapse;
+    min-width:520px;
+  }
+  .matrix thead th{
+    background:rgba(255,255,255,.03);
+    font-size:10.5px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;
+    color:var(--mut);
+    padding:12px 16px;
+    text-align:left;
+    border-bottom:1px solid var(--line);
+  }
+  .matrix tbody td{
+    padding:14px 16px;
+    font-size:13px;
+    color:#cfd8e8;
+    border-bottom:1px solid var(--line);
+    line-height:1.55;
+    vertical-align:top;
+  }
+  .matrix tbody tr:last-child td{border-bottom:none}
+  .matrix tbody tr:hover{background:rgba(255,255,255,.015)}
+  .matrix .seg-name{
+    font-weight:600;
+    color:#fff;
+  }
+  .matrix .seg-exams{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    color:#dfe7f4;
+    line-height:1.7;
+  }
+  .matrix .seg-geo .geo-tag{
+    display:inline-block;
+    font-size:10.5px;
+    font-weight:700;
+    letter-spacing:.05em;
+    padding:3px 8px;
+    border-radius:5px;
+    text-transform:uppercase;
+  }
+  .geo-tag.free{
+    background:rgba(52,211,153,.14);
+    color:var(--emerald);
+    border:1px solid rgba(52,211,153,.3);
+  }
+  .geo-tag.paid{
+    background:rgba(251,191,36,.14);
+    color:var(--amber);
+    border:1px solid rgba(251,191,36,.3);
+  }
+
+  /* ============ CALLOUTS ============ */
+  .callout{
+    padding:16px 20px;
+    border-radius:11px;
+    display:flex;gap:14px;align-items:flex-start;
+    margin:14px 0;
+  }
+  .callout .cico{
+    flex:0 0 32px;
+    width:32px;height:32px;
+    border-radius:9px;
+    display:grid;place-items:center;
+    font-size:15px;
+    font-weight:800;
+  }
+  .callout .cbody{flex:1;min-width:0}
+  .callout .clabel{
+    font-size:10.5px;font-weight:700;
+    letter-spacing:.09em;text-transform:uppercase;
+    margin-bottom:6px;
+  }
+  .callout p{
+    font-size:13.5px;
+    line-height:1.7;
+    color:#b8c2d2;
+    margin:0;
+  }
+  .callout p b{color:#fff;font-weight:600}
+  .callout p code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  .callout.emerald{
+    background:linear-gradient(135deg,rgba(52,211,153,.06),transparent 70%);
+    border:1px solid rgba(52,211,153,.32);
+  }
+  .callout.emerald .cico{
+    background:rgba(52,211,153,.15);
+    color:var(--emerald);
+    border:1px solid rgba(52,211,153,.35);
+  }
+  .callout.emerald .clabel{color:var(--emerald)}
+
+  .callout.amber{
+    background:linear-gradient(135deg,rgba(251,191,36,.06),transparent 70%);
+    border:1px solid rgba(251,191,36,.32);
+  }
+  .callout.amber .cico{
+    background:rgba(251,191,36,.15);
+    color:var(--amber);
+    border:1px solid rgba(251,191,36,.35);
+  }
+  .callout.amber .clabel{color:var(--amber)}
+
+  .callout.rose{
+    background:linear-gradient(135deg,rgba(244,63,94,.06),transparent 70%);
+    border:1px solid rgba(244,63,94,.32);
+  }
+  .callout.rose .cico{
+    background:rgba(244,63,94,.15);
+    color:var(--rose);
+    border:1px solid rgba(244,63,94,.35);
+  }
+  .callout.rose .clabel{color:var(--rose)}
+
+  .callout.info{
+    background:linear-gradient(135deg,rgba(26,79,245,.06),transparent 70%);
+    border:1px solid rgba(26,79,245,.32);
+  }
+  .callout.info .cico{
+    background:rgba(26,79,245,.15);
+    color:var(--bayan2);
+    border:1px solid rgba(26,79,245,.35);
+  }
+  .callout.info .clabel{color:var(--bayan2)}
+
+  /* ============ LIST PATTERN ============ */
+  .bullet-list{
+    list-style:none;
+    display:flex;flex-direction:column;
+    gap:10px;
+    margin:12px 0;
+  }
+  .bullet-list li{
+    display:flex;gap:12px;align-items:flex-start;
+    font-size:13.5px;
+    line-height:1.7;
+    color:#b8c2d2;
+    padding:12px 16px;
+    border-radius:10px;
+    background:rgba(255,255,255,.02);
+    border:1px solid var(--line);
+    transition:.2s;
+  }
+  .bullet-list li:hover{
+    border-color:rgba(var(--cc),.35);
+    background:rgba(var(--cc),.03);
+  }
+  .bullet-list li::before{
+    content:"";flex:0 0 8px;
+    width:8px;height:8px;
+    border-radius:50%;
+    background:rgb(var(--cc));
+    box-shadow:0 0 10px 0 rgba(var(--cc),.7);
+    margin-top:7px;
+  }
+  .bullet-list li b{color:#fff;font-weight:600}
+  .bullet-list li code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ POSITIONING STATEMENT ============ */
+  .positioning{
+    padding:22px 26px;
+    border-radius:12px;
+    background:linear-gradient(135deg,rgba(26,79,245,.08),rgba(167,139,250,.04) 60%,transparent);
+    border:1px solid rgba(26,79,245,.35);
+    margin:14px 0;
+    position:relative;
+    overflow:hidden;
+  }
+  .positioning::before{
+    content:"";position:absolute;
+    left:0;top:0;bottom:0;width:4px;
+    background:linear-gradient(180deg,var(--bayan),var(--violet));
+  }
+  .positioning .pos-label{
+    font-size:10.5px;font-weight:700;
+    letter-spacing:.1em;text-transform:uppercase;
+    color:var(--bayan2);
+    margin-bottom:10px;
+  }
+  .positioning .pos-text{
+    font-size:16px;
+    line-height:1.55;
+    letter-spacing:-.01em;
+    font-weight:600;
+    color:#fff;
+  }
+
+  /* ============ CUSTOMER JOURNEY FLOW ============ */
+  .journey{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:6px;
+    margin:18px 0;
+    padding:20px 0;
+  }
+  .jstep{
+    padding:14px 8px;
+    border-radius:10px;
+    background:linear-gradient(180deg,rgba(var(--jc),.1),rgba(var(--jc),.02));
+    border:1px solid rgba(var(--jc),.3);
+    text-align:center;
+    position:relative;
+    transition:.2s;
+  }
+  .jstep:hover{
+    border-color:rgba(var(--jc),.55);
+    transform:translateY(-2px);
+    box-shadow:0 12px 24px -14px rgba(var(--jc),.75);
+  }
+  .jstep::after{
+    content:"→";
+    position:absolute;
+    right:-8px;top:50%;
+    translate:0 -50%;
+    color:var(--mut2);
+    font-size:12px;
+    background:var(--panel);
+    padding:2px 4px;
+    z-index:2;
+    line-height:1;
+  }
+  .jstep:last-child::after{display:none}
+  .jstep .js-num{
+    font-family:ui-monospace,monospace;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:.06em;
+    color:rgb(var(--jc));
+    margin-bottom:4px;
+  }
+  .jstep .js-name{
+    font-size:12px;
+    font-weight:700;
+    color:#fff;
+    letter-spacing:-.005em;
+    line-height:1.3;
+  }
+  .jstep.s1{--jc:26,79,245}
+  .jstep.s2{--jc:34,211,238}
+  .jstep.s3{--jc:52,211,153}
+  .jstep.s4{--jc:167,139,250}
+  .jstep.s5{--jc:251,191,36}
+  .jstep.s6{--jc:244,63,94}
+  .jstep.s7{--jc:234,179,8}
+
+  /* ============ CHANNEL GRID ============ */
+  .channel-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    gap:12px;
+    margin:16px 0;
+  }
+  .channel{
+    padding:18px 20px;
+    border-radius:11px;
+    background:rgba(255,255,255,.02);
+    border:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+    transition:.2s;
+  }
+  .channel::before{
+    content:"";position:absolute;
+    top:0;right:0;left:0;height:3px;
+    background:rgb(var(--chc));
+  }
+  .channel:hover{
+    border-color:rgba(var(--chc),.4);
+    transform:translateY(-2px);
+    background:rgba(var(--chc),.03);
+  }
+  .channel .ch-k{
+    font-size:10px;font-weight:700;
+    letter-spacing:.09em;text-transform:uppercase;
+    color:rgb(var(--chc));
+    margin-bottom:8px;
+  }
+  .channel .ch-t{
+    font-size:14px;
+    font-weight:700;
+    color:#fff;
+    letter-spacing:-.005em;
+    margin-bottom:6px;
+    line-height:1.35;
+  }
+  .channel .ch-d{
+    font-size:12.5px;
+    line-height:1.6;
+    color:var(--mut);
+  }
+  .channel.organic{--chc:34,211,238}
+  .channel.event{--chc:167,139,250}
+  .channel.store{--chc:52,211,153}
+  .channel.campaign{--chc:251,191,36}
+  .channel.inst{--chc:26,79,245}
+
+  /* ============ PRICING TABLE ============ */
+  .pricing-table{
+    border-radius:12px;
+    background:rgba(0,0,0,.25);
+    border:1px solid var(--line);
+    overflow:hidden;
+    margin:14px 0;
+  }
+  .pricing-table table{
+    width:100%;border-collapse:collapse;
+    min-width:520px;
+  }
+  .pricing-table thead th{
+    background:rgba(255,255,255,.03);
+    font-size:10.5px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;
+    color:var(--mut);
+    padding:12px 16px;
+    text-align:left;
+    border-bottom:1px solid var(--line);
+  }
+  .pricing-table tbody td{
+    padding:13px 16px;
+    font-size:13px;
+    color:#cfd8e8;
+    border-bottom:1px solid var(--line);
+    line-height:1.55;
+  }
+  .pricing-table tbody tr:last-child td{border-bottom:none}
+  .pricing-table tbody tr:hover{background:rgba(255,255,255,.015)}
+  .pricing-table .pt-product{
+    font-weight:600;
+    color:#fff;
+  }
+  .pricing-table .pt-price{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px;
+    color:#dfe7f4;
+  }
+  .pricing-table .pt-status .status-pill{
+    display:inline-block;
+    font-size:10.5px;
+    font-weight:700;
+    letter-spacing:.06em;
+    padding:3px 8px;
+    border-radius:5px;
+    text-transform:uppercase;
+  }
+  .status-pill.live{
+    background:rgba(52,211,153,.14);
+    color:var(--emerald);
+    border:1px solid rgba(52,211,153,.3);
+  }
+  .status-pill.confirm{
+    background:rgba(251,191,36,.14);
+    color:var(--amber);
+    border:1px solid rgba(251,191,36,.3);
+  }
+
+  /* ============ LEVER LIST ============ */
+  .levers{
+    display:flex;flex-direction:column;
+    gap:10px;
+    margin:14px 0;
+    counter-reset:lever;
+  }
+  .lever{
+    counter-increment:lever;
+    display:flex;gap:14px;align-items:flex-start;
+    padding:14px 18px;
+    border-radius:10px;
+    background:rgba(255,255,255,.02);
+    border:1px solid var(--line);
+    font-size:13.5px;
+    line-height:1.7;
+    color:#b8c2d2;
+    transition:.2s;
+  }
+  .lever:hover{
+    border-color:rgba(251,191,36,.4);
+    background:rgba(251,191,36,.03);
+  }
+  .lever::before{
+    content:counter(lever);
+    flex:0 0 28px;
+    width:28px;height:28px;
+    border-radius:8px;
+    display:grid;place-items:center;
+    font-family:ui-monospace,monospace;
+    font-size:12px;font-weight:800;
+    background:rgba(251,191,36,.14);
+    color:var(--amber);
+    border:1px solid rgba(251,191,36,.3);
+    margin-top:1px;
+  }
+  .lever b{color:#fff;font-weight:600}
+  .lever code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ EVENT LIST ============ */
+  .events{
+    display:flex;flex-wrap:wrap;gap:6px;
+    margin:14px 0;
+    padding:16px 18px;
+    border-radius:11px;
+    background:rgba(0,0,0,.25);
+    border:1px solid var(--line);
+  }
+  .event-chip{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:11.5px;
+    font-weight:600;
+    padding:5px 10px;
+    border-radius:6px;
+    background:rgba(52,211,153,.1);
+    color:var(--emerald);
+    border:1px solid rgba(52,211,153,.28);
+    letter-spacing:.01em;
+  }
+
+  /* ============ RACI ============ */
+  .raci{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:8px;
+    margin:14px 0;
+    padding:16px 18px;
+    border-radius:11px;
+    background:linear-gradient(135deg,rgba(26,79,245,.05),transparent 70%);
+    border:1px solid rgba(26,79,245,.28);
+  }
+  .raci-item{
+    display:flex;flex-direction:column;
+    gap:4px;
+    padding:10px 12px;
+    border-radius:9px;
+    background:rgba(0,0,0,.25);
+    border:1px solid var(--line);
+  }
+  .raci-item .ri-k{
+    font-family:ui-monospace,monospace;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.06em;
+    padding:2px 7px;border-radius:5px;
+    align-self:flex-start;
+  }
+  .ri-r{
+    background:rgba(26,79,245,.15);
+    color:var(--bayan2);
+    border:1px solid rgba(26,79,245,.35);
+  }
+  .ri-a{
+    background:rgba(52,211,153,.15);
+    color:var(--emerald);
+    border:1px solid rgba(52,211,153,.35);
+  }
+  .ri-c{
+    background:rgba(167,139,250,.15);
+    color:var(--violet);
+    border:1px solid rgba(167,139,250,.35);
+  }
+  .ri-i{
+    background:rgba(255,255,255,.05);
+    color:var(--mut);
+    border:1px solid var(--line);
+  }
+  .raci-item .ri-v{
+    font-size:12px;
+    line-height:1.5;
+    color:#cfd8e8;
+    font-weight:500;
+  }
+
+  /* ============ SECTION DIVIDER ============ */
+  .divider{
+    display:flex;align-items:center;
+    gap:16px;
+    margin:64px 0 40px;
+  }
+  .divider::before,.divider::after{
+    content:"";flex:1;height:1px;
+    background:linear-gradient(90deg,transparent,var(--line),transparent);
+  }
+  .divider .d-label{
+    font-family:ui-monospace,monospace;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--mut2);
+    padding:6px 14px;
+    border-radius:8px;
+    background:var(--panel);
+    border:1px solid var(--line);
+  }
+
+  /* ============ FOOTER ============ */
+  footer{
+    padding-top:32px;
+    margin-top:56px;
+    border-top:1px solid var(--line);
+    font-size:12.5px;
+    color:var(--mut2);
+    text-align:center;
+    line-height:1.85;
+  }
+  footer .mark{color:var(--bayan2);font-weight:600}
+  footer code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.04);
+    padding:2px 7px;border-radius:5px;
+    color:#cfd8e8;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:900px){
+    .persona-grid{grid-template-columns:1fr}
+    .journey{grid-template-columns:repeat(4,1fr);padding:12px 0}
+    .jstep:nth-child(4)::after{display:none}
+    .raci{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:820px){
+    main{padding:0 16px 60px}
+    header{padding:40px 0 30px;margin-bottom:28px}
+    header h1{font-size:26px}
+    header .lede{font-size:14.5px}
+    section{margin-bottom:44px}
+    .sec-head h2{font-size:21px}
+    .sec-head .num{font-size:11.5px;padding:4px 8px}
+    .core-head{padding:16px 20px 14px 22px;gap:12px}
+    .core-body{padding:18px 20px 18px 22px}
+    .core-title{font-size:16px}
+    .core-num{font-size:12px;padding:5px 9px}
+    .matrix tbody td,.matrix thead th{padding:11px 14px;font-size:12.5px}
+    .pricing-table tbody td,.pricing-table thead th{padding:11px 14px;font-size:12.5px}
+    .bullet-list li{padding:11px 14px;font-size:13px}
+    .lever{padding:12px 14px;font-size:13px}
+    .divider{margin:44px 0 32px}
+    .topnav{padding:10px 16px}
+    .topnav a{font-size:11px;padding:6px 10px}
+  }
+  @media (max-width:480px){
+    header h1{font-size:22px}
+    .sec-head h2{font-size:18px}
+    .core-title{font-size:15px}
+    .core-num{font-size:11px}
+    .journey{grid-template-columns:repeat(2,1fr);gap:4px;padding:8px 0}
+    .jstep::after{display:none}
+    .jstep{padding:10px 6px}
+    .jstep .js-name{font-size:11px}
+    .raci{grid-template-columns:1fr;gap:6px;padding:12px 14px}
+    .raci-item{padding:8px 10px}
+    .channel-grid{grid-template-columns:1fr}
+    .events{padding:12px 14px}
+    .event-chip{font-size:11px;padding:4px 8px}
+    .divider{margin:36px 0 26px}
+    .divider .d-label{font-size:10px;padding:5px 10px}
+  }
+</style>
+</head>
+<body>
+
+<nav class="topnav" id="topnav">
+  <a href="#overview">Overview</a>
+  <a href="#c215">215 · ICP</a>
+  <a href="#c216">216 · Segmentation</a>
+  <a href="#c217">217 · Competitive</a>
+  <a href="#c218">218 · Positioning</a>
+  <a href="#c219">219 · Journey</a>
+  <a href="#c220">220 · GTM</a>
+  <a href="#c221">221 · Pricing</a>
+  <a href="#c222">222 · Partnerships</a>
+  <a href="#enabling">Enabling cores</a>
+</nav>
+
+<main>
+
+  <!-- ============ HEADER ============ -->
+  <header>
+    <div class="crumbs">
+      <span>Bayan</span>
+      <span class="sep">/</span>
+      <span>Strategic Planning</span>
+      <span class="sep">/</span>
+      <span class="here">proc 4 · 8 cores + 2 enabling</span>
+    </div>
+
+    <span class="tag">Strategic planning · core definitions</span>
+    <h1>Strategic Planning Cores — proc 4 &amp; Enabling</h1>
+    <p class="lede">
+      The eight strategic planning cores that fill the blank scaffolds, plus
+      two enabling cores — the <b>measurement gate</b> that must be built first
+      and the <b>medical-integrity gate</b> that anchors the brand. Each core
+      lists its segments, positioning, and the levers that drive revenue.
+    </p>
+
+    <div class="meta">
+      <div class="m-item">
+        <span class="m-k">Strategic cores</span>
+        <span class="m-v">8 · ICP → Partnership</span>
+      </div>
+      <div class="m-item">
+        <span class="m-k">Enabling cores</span>
+        <span class="m-v">2 · measurement + integrity</span>
+      </div>
+      <div class="m-item">
+        <span class="m-k">Status</span>
+        <span class="m-v">Filling scaffolds from research</span>
+      </div>
+      <div class="m-item">
+        <span class="m-k">Reference</span>
+        <span class="m-v"><code>research.md</code></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ OVERVIEW ============ -->
+  <section id="overview">
+    <div class="sec-head">
+      <span class="num">§</span>
+      <h2>How to read these cores</h2>
+    </div>
+    <p class="sec-desc">
+      Each core below matches one blank scaffold in <code>proc 4 — Vision,
+      Mission &amp; Values Definition</code>. The content is drafted from
+      <code>research.md</code> — nothing here is invented. Every number carries
+      a status marker: <b>[confirm]</b> for figures that need team verification,
+      <b>[TBD]</b> for values that can't exist until the funnel is instrumented.
+      The two enabling cores at the bottom are the ones the whole engine waits on.
+    </p>
+  </section>
+
+  <!-- ============ 215 — ICP & PERSONA ============ -->
+  <section id="c215">
+    <div class="sec-head">
+      <span class="num">Core</span>
+      <h2>215 · ICP &amp; Persona</h2>
+      <span class="count">proc 4</span>
+    </div>
+
+    <div class="core c-blue">
+      <div class="core-head">
+        <span class="core-num">215</span>
+        <div class="core-title-wrap">
+          <div class="core-kicker">Who we serve</div>
+          <div class="core-title">ICP &amp; Persona</div>
+        </div>
+      </div>
+      <div class="core-body">
+
+        <p>
+          <b>Primary ICP:</b> physicians, residents, medical students, and nurses
+          preparing for Gulf / international licensing + board exams.
+          <strong>NOT the general public</strong> — CEO + Nasim both explicit.
+        </p>
+
+        <div class="persona-grid">
+
+          <div class="persona pa">
+            <div class="persona-label">Persona A</div>
+            <div class="persona-name">The IMG self-funder</div>
+            <p>
+              A doctor / nurse targeting a Gulf Prometric or licensing exam
+              (SCFHS, DHA, OMSB, QCHP, NHRA), paying out of pocket,
+              exam-date-driven, anxious about <em>what</em> to study,
+              comfortable studying in English.
+            </p>
+            <div class="voc-quote">I stopped guessing what to study.</div>
+            <p style="margin-top:10px; font-size:12px; color:var(--mut2);">
+              Flagship revenue — <b style="color:#fff">Motion A</b>.
+            </p>
+          </div>
+
+          <div class="persona pb">
+            <div class="persona-label">Persona B</div>
+            <div class="persona-name">The institutional buyer</div>
+            <p>
+              A hospital / university / training-board L&amp;D lead who licenses
+              seats for cohorts of residents or nurses.
+            </p>
+            <p style="margin-top:10px;">
+              <b>Relationship-led sale.</b> Feeds Motion B.
+            </p>
+          </div>
+
+        </div>
+
+        <p style="margin-top:18px;">
+          <b>Segment by exam track:</b>
+        </p>
+
+        <div class="seg-chips" style="--cc:26,79,245">
+          <div class="seg-row">
+            <div class="seg-label">Doctors →</div>
+            <div class="seg-values">
+              <span class="seg-chip">OMSB</span>
+              <span class="seg-chip">DHA</span>
+              <span class="seg-chip">MOH</span>
+              <span class="seg-chip">SCFHS</span>
+              <span class="seg-chip">QCHP</span>
+              <span class="seg-chip">NHRA</span>
+            </div>
+          </div>
+          <div class="seg-row">
+            <div class="seg-label">Residents →</div>
+            <div class="seg-values">
+              <span class="seg-chip">Arab Board</span>
+              <span class="seg-chip">OMSB</span>
+              <span class="seg-chip">MRCP</span>
+              <span class="seg-chip">ABIM</span>
+            </div>
+          </div>
+          <div class="seg-row">
+            <div class="seg-label">Nurses →</div>
+            <div class="seg-values">
+              <span class="seg-chip">OEN</span>
+              <span class="seg-chip">SNLE</span>
+              <span class="seg-chip">DHA</span>
+              <span class="seg-chip">Prometric</span>
+              <span class="seg-chip">NCLEX-RN</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 216 — SEGMENTATION ============ -->
+  <section id="c216">
+    <div class="sec-head">
+      <span class="num">Core</span>
+      <h2>216 · Segmentation &amp; Targeting</h2>
+      <span class="count">proc 4</span>
+    </div>
+
+    <div class="core c-violet">
+      <div class="core-head">
+        <span class="core-num">216</span>
+        <div class="core-title-wrap">
+          <div class="core-kicker">Where we play</div>
+          <div class="core-title">Segmentation &amp; Targeting</div>
+        </div>
+      </div>
+      <div class="core-body">
+
+        <p>
+          <b>Matrix:</b> {Doctor, Resident, Med Student, Nurse} × exam track ×
+          geography. Oman is free; International is paid.
+        </p>
+
+        <div class="matrix">
+          <table>
+            <thead>
+              <tr>
+                <th>Segment</th>
+                <th>Exam tracks</th>
+                <th>Geography</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="seg-name">Doctors</td>
+                <td class="seg-exams">OMSB · DHA · MOH · SCFHS · QCHP · NHRA</td>
+                <td class="seg-geo">
+                  <span class="geo-tag free">Oman · free</span>
+                  <span class="geo-tag paid">Intl · paid</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="seg-name">Residents</td>
+                <td class="seg-exams">Arab Board · OMSB · MRCP · ABIM</td>
+                <td class="seg-geo">
+                  <span class="geo-tag free">Oman · free</span>
+                  <span class="geo-tag paid">Intl · paid</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="seg-name">Med Students</td>
+                <td class="seg-exams">Undergraduate · preclinical + clinical</td>
+                <td class="seg-geo">
+                  <span class="geo-tag free">Oman · free</span>
+                  <span class="geo-tag paid">Intl · paid</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="seg-name">Nurses</td>
+                <td class="seg-exams">OEN · SNLE · DHA · QCHP · NHRA</td>
+                <td class="seg-geo">
+                  <span class="geo-tag free">Oman · free</span>
+                  <span class="geo-tag paid">Intl · paid</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout info">
+          <div class="cico">◆</div>
+          <div class="cbody">
+            <div class="clabel">Beachhead</div>
+            <p>
+              IMG self-funders sitting Gulf Prometric exams — the CEO's own
+              best-performing line is <em>"Gulf exam preparation."</em>
+            </p>
+          </div>
+        </div>
+
+        <div class="callout amber">
+          <div class="cico">$</div>
+          <div class="cbody">
+            <div class="clabel">Revenue prioritization</div>
+            <p>
+              Lead with <b>international paid segments</b> — Oman access is
+              free, so it builds adoption and proof, not MRR.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 217 — COMPETITIVE ============ -->
+  <section id="c217">
+    <div class="sec-head">
+      <span class="num">Core</span>
+      <h2>217 · Competitive &amp; Market Intelligence</h2>
+      <span class="count">proc 4</span>
+    </div>
+
+    <div class="core c-cyan">
+      <div class="core-head">
+        <span class="core-num">217</span>
+        <div class="core-title-wrap">
+          <div class="core-kicker">Who we compete with</div>
+          <div class="core-title">Competitive &amp; Market Intelligence</div>
+        </div>
+      </div>
+      <div class="core-body">
+
+        <p>
+          <b>Competitors:</b> UWorld, AMBOSS, and generic Prometric-prep vendors.
+        </p>
+
+        <p><b>Bayan's wedge:</b></p>
+
+        <ul class="bullet-list">
+          <li>Gulf / regional exam alignment — <b>23 licensing / board exams</b>, incl. 7 Gulf Prometric</li>
+          <li>Clinician-reviewed content <b>(human gate)</b></li>
+          <li>Adaptive <b>SM-2 spaced-repetition</b> engine</li>
+          <li>Regional pricing — below global benchmark anchors</li>
+          <li>Omani / Arab cultural fit</li>
+        </ul>
+
+        <div class="callout amber">
+          <div class="cico">⚠</div>
+          <div class="cbody">
+            <div class="clabel">Market · country count conflict</div>
+            <p>
+              Gulf / MENA medical licensing prep, expanding globally —
+              <code>30+</code> countries per Sept-7 email; CEO also said
+              <code>55</code>. Marked <b>[confirm]</b> — lock one number before
+              any public copy.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 218 — POSITIONING ============ -->
+  <section id="c218">
+    <div class="sec-head">
+      <span class="num">Core</span>
+      <h2>218 · Value Proposition &amp; Positioning</h2>
+      <span class="count">proc 4</span>
+    </div>
+
+    <div class="core c-emerald">
+      <div class="core-head">
+        <span class="core-num">218</span>
+        <div class="core-title-wrap">
+          <div class="core-kicker">The promise</div>
+          <div class="core-title">Value Proposition &amp; Positioning</div>
+        </div>
+      </div>
+      <div class="core-body">
+
+        <div class="positioning">
+          <div class="pos-label">Positioning statement</div>
+          <div class="pos-text">
+            Clinician-reviewed, exam-aligned, adaptive medical exam prep for
+            the Gulf and beyond.
+          </div>
+        </div>
+
+        <p><b>Proof points:</b></p>
+
+        <ul class="bullet-list">
+          <li><b>5,500+ clinical questions</b> (5,589) <span class="badge confirm" style="margin-left:6px">confirm</span> — count drifts across surfaces</li>
+          <li><b>23 licensing / board exams</b></li>
+          <li><b>470+ articles</b> · <b>250+ drug monographs</b></li>
+          <li>OSCE + 20+ calculators + virtual patients + flashcards</li>
+          <li>SM-2 adaptive engine</li>
+          <li><b>Falling Walls Lab Oman 2026</b> (1st place)</li>
+          <li><b>Ejada Innovation Award 2026</b></li>
+        </ul>
+
+        <div class="callout emerald">
+          <div class="cico">◆</div>
+          <div class="cbody">
+            <div class="clabel">Integrity line · the differentiator</div>
+            <p>
+              <em>"AI assists with drafting — humans own what reaches learners."</em>
+            </p>
+          </div>
+        </div>
+
+        <div class="callout info">
+          <div class="cico">✎</div>
+          <div class="cbody">
+            <div class="clabel">Message</div>
+            <p><em>"I stopped guessing what to study."</em></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 219 — CUSTOMER JOURNEY ============ -->
+  <section id="c219">
+    <div class="sec-head">
+      <span class="num">Core</span>
+      <h2>219 · Customer Journey &amp; Experience</h2>
+      <span class="count">proc 4</span>
+    </div>
+
+    <div class="core c-gold">
+      <div class="core-head">
+        <span class="core-num">219</span>
+        <div class="core-title-wrap">
+          <div class="core-kicker">How the learner moves through</div>
+          <div class="core-title">Customer Journey &amp; Experience</div>
+        </div>
+      </div>
+      <div class="core-body">
+
+        <p>
+          <b>Stages (per segment):</b> Awareness → Register → First value
+          (weak-area diagnostic) → Trial → Paid → Retained → Refer.
+        </p>
+
+        <div class="journey">
+          <div class="jstep s1"><div class="js-num">01</div><div class="js-name">Awareness</div></div>
+          <div class="jstep s2"><div class="js-num">02</div><div class="js-name">Register</div></div>
+          <div class="jstep s3"><div class="js-num">03</div><div class="js-name">First value</div></div>
+          <div class="jstep s4"><div class="js-num">04</div><div class="js-name">Trial</div></div>
+          <div class="jstep s5"><div class="js-num">05</div><div class="js-name">Paid</div></div>
+          <div class="jstep s6"><div class="js-num">06</div><div class="js-name">Retained</div></div>
+          <div class="jstep s7"><div class="js-num">07</div><div class="js-name">Refer</div></div>
+        </div>
+
+        <p>
+          This core defines the transitions the Customer-Lifecycle processes
+          (<code>proc 13–17</code>) must serve.
+        </p>
+
+        <div class="callout amber">
+          <div class="cico">⚠</div>
+          <div class="cbody">
+            <div class="clabel">Current reality</div>
+            <p>
+              App onboarding exists · 30-day trial (card required) on Bayan
+              Learning · free-in-Oman on PreOp — but <b>no funnel data on any
+              transition</b>. This is what proc 22 fixes first.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 220 — GO-TO-MARKET ============ -->
+  <section id="c220">
+    <div class="sec-head">
+      <span class="num">Core</span>
+      <h2>220 · Go-to-Market</h2>
+      <span class="count">proc 4</span>
+    </div>
+
+    <div class="core c-rose">
+      <div class="core-head">
+        <span class="core-num">220</span>
+        <div class="core-title-wrap">
+          <div class="core-kicker">How we reach them</div>
+          <div class="core-title">Go-to-Market</div>
+        </div>
+      </div>
+      <div class="core-body">
+
+        <p>
+          <b>Posture:</b> Oman-first free (adoption + proof) /
+          international paid (revenue).
+        </p>
+
+        <p><b>Channels:</b></p>
+
+        <div class="channel-grid">
+
+          <div class="channel organic">
+            <div class="ch-k">Organic · social</div>
+            <div class="ch-t">Mascot-led reels</div>
+            <div class="ch-d">Dr-Dolphin-quality animated medical content.</div>
+          </div>
+
+          <div class="channel event">
+            <div class="ch-k">Event</div>
+            <div class="ch-t">Oman Health 2026</div>
+            <div class="ch-d">Booth, artwork, live demos on tablets.</div>
+          </div>
+
+          <div class="channel store">
+            <div class="ch-k">App stores</div>
+            <div class="ch-t">iOS + Android listings</div>
+            <div class="ch-d">Live listings, ratings to build.</div>
+          </div>
+
+          <div class="channel campaign">
+            <div class="ch-k">Campaign</div>
+            <div class="ch-t">Prometric / Gulf campaign</div>
+            <div class="ch-d">"Your Gulf Dream Job is One Exam Away" — 7-day free trial, no card.</div>
+          </div>
+
+          <div class="channel inst" style="grid-column:1/-1">
+            <div class="ch-k">Motion B · institutional</div>
+            <div class="ch-t">Relationship-first, per-account tailored proposals</div>
+            <div class="ch-d">Hospitals, universities, training boards.</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 221 — PRICING ============ -->
+  <section id="c221">
+    <div class="sec-head">
+      <span class="num">Core</span>
+      <h2>221 · Pricing &amp; Monetization</h2>
+      <span class="count">proc 4</span>
+    </div>
+
+    <div class="core c-amber">
+      <div class="core-head">
+        <span class="core-num">221</span>
+        <div class="core-title-wrap">
+          <div class="core-kicker">How we get paid</div>
+          <div class="core-title">Pricing &amp; Monetization</div>
+        </div>
+      </div>
+      <div class="core-body">
+
+        <p><b>Current (CEO-approved):</b></p>
+
+        <div class="pricing-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th style="width:180px">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="pt-product">Bayan Learning</td>
+                <td class="pt-price">Free-in-Oman · 20% code <code>Oman@2026</code> international</td>
+                <td class="pt-status"><span class="status-pill live">Live</span></td>
+              </tr>
+              <tr>
+                <td class="pt-product">PreOp</td>
+                <td class="pt-price">$7.99/mo · $79.99/yr — free only in Oman</td>
+                <td class="pt-status"><span class="status-pill live">Live</span></td>
+              </tr>
+              <tr>
+                <td class="pt-product">JournalReady</td>
+                <td class="pt-price">Pricing unresolved — two reads in conflict</td>
+                <td class="pt-status"><span class="status-pill confirm">Confirm</span></td>
+              </tr>
+              <tr>
+                <td class="pt-product">30-day trial</td>
+                <td class="pt-price">Card required on Bayan Learning</td>
+                <td class="pt-status"><span class="status-pill live">Live</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="margin-top:18px;"><b>Levers for more revenue:</b></p>
+
+        <div class="levers">
+          <div class="lever">
+            <div>
+              <b>Time-boxed Founder's Offer</b> to a slice of the free base —
+              first real conversion + price-sensitivity data.
+            </div>
+          </div>
+          <div class="lever">
+            <div>
+              Focus <b>paid acquisition on international segments</b> —
+              Oman is free and builds adoption, not MRR.
+            </div>
+          </div>
+          <div class="lever">
+            <div>
+              <b>Institutional seat licensing</b> (Motion B) — cohort-scale
+              B2B revenue.
+            </div>
+          </div>
+        </div>
+
+        <div class="callout info">
+          <div class="cico">◆</div>
+          <div class="cbody">
+            <div class="clabel">[TBD] — needs funnel data</div>
+            <p>
+              Plan-mix · ARPU · price elasticity. None of these can be
+              computed until <b>proc 22 (funnel instrumentation)</b> ships.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 222 — PARTNERSHIP ============ -->
+  <section id="c222">
+    <div class="sec-head">
+      <span class="num">Core</span>
+      <h2>222 · Channel &amp; Partnership</h2>
+      <span class="count">proc 4</span>
+    </div>
+
+    <div class="core c-slate">
+      <div class="core-head">
+        <span class="core-num">222</span>
+        <div class="core-title-wrap">
+          <div class="core-kicker">Who we partner with</div>
+          <div class="core-title">Channel &amp; Partnership</div>
+          <div class="core-badges">
+            <span class="badge cut">Cut candidate if time is short</span>
+          </div>
+        </div>
+      </div>
+      <div class="core-body">
+
+        <p><b>Partners and channels:</b></p>
+
+        <ul class="bullet-list">
+          <li>Institutional / board partnerships — <b>OMSB</b>, universities, hospitals</li>
+          <li>App stores — iOS + Android</li>
+          <li>Med influencers — 20k-follower tier</li>
+          <li>Exhibitions — Oman Health 2026, regional events</li>
+        </ul>
+
+        <div class="callout rose">
+          <div class="cico">✕</div>
+          <div class="cbody">
+            <div class="clabel">Priority</div>
+            <p>
+              Feeds Motion B (institutional). <b>Lowest revenue urgency of the
+              eight</b> — cut this core first if time runs short.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DIVIDER ============ -->
+  <div class="divider">
+    <span class="d-label">Enabling cores · build these first</span>
+  </div>
+
+  <!-- ============ ENABLING — PROC 22 ============ -->
+  <section id="enabling">
+    <div class="sec-head">
+      <span class="num">Enabling</span>
+      <h2>proc 22 · Measurement Gate</h2>
+      <span class="count">build first</span>
+    </div>
+
+    <div class="core c-emerald primary">
+      <div class="core-head">
+        <span class="core-num">22</span>
+        <div class="core-title-wrap">
+          <div class="core-kicker">Process 0 · the gate</div>
+          <div class="core-title">Funnel Instrumentation &amp; Unit Economics</div>
+          <div class="core-badges">
+            <span class="badge build">Build first</span>
+          </div>
+        </div>
+      </div>
+      <div class="core-body">
+
+        <p>
+          <b>Objective:</b> establish the baseline the whole engine is blind
+          without. Install analytics + attribution across every journey
+          transition — <b>Register → First-value → Trial → Paid → Retained →
+          Refer</b> — define the event schema, stand up one dashboard, and
+          publish a single weekly funnel report (matches the CEO's low-touch,
+          outcome-over-vanity preference).
+        </p>
+
+        <div class="raci">
+          <div class="raci-item">
+            <span class="ri-k ri-r">R</span>
+            <span class="ri-v">Growth</span>
+          </div>
+          <div class="raci-item">
+            <span class="ri-k ri-a">A</span>
+            <span class="ri-v">Founder</span>
+          </div>
+          <div class="raci-item">
+            <span class="ri-k ri-c">C</span>
+            <span class="ri-v">AI / product team</span>
+          </div>
+          <div class="raci-item">
+            <span class="ri-k ri-i">I</span>
+            <span class="ri-v">CEO (weekly report)</span>
+          </div>
+        </div>
+
+        <p><b>Events to define:</b></p>
+
+        <div class="events">
+          <span class="event-chip">register</span>
+          <span class="event-chip">first-value-reached</span>
+          <span class="event-chip">trial-start</span>
+          <span class="event-chip">trial→paid</span>
+          <span class="event-chip">monthly-active</span>
+          <span class="event-chip">resubscribe</span>
+          <span class="event-chip">churn</span>
+          <span class="event-chip">invite-sent</span>
+          <span class="event-chip">invite-converted</span>
+        </div>
+
+        <p style="font-size:13px; color:var(--mut); margin-top:8px;">
+          Segmented <b>Oman</b> vs <b>international</b> at every event.
+        </p>
+
+        <p style="margin-top:18px;">
+          <b>KPIs:</b> every stage rate <code>[TBD until instrumented]</code>;
+          then LTV, CAC, LTV/CAC, payback.
+        </p>
+
+        <div class="callout emerald">
+          <div class="cico">◆</div>
+          <div class="cbody">
+            <div class="clabel">Why first</div>
+            <p>
+              Every other core's KPI target stays <b>[TBD]</b> until this
+              ships. Process 0 — the gate that unblocks the entire revenue
+              measurement layer.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ENABLING — PROC 20 ============ -->
+  <section id="enabling-20">
+    <div class="sec-head">
+      <span class="num">Enabling</span>
+      <h2>proc 20 · Medical-Integrity Gate</h2>
+      <span class="count">positioning asset</span>
+    </div>
+
+    <div class="core c-violet">
+      <div class="core-head">
+        <span class="core-num">20</span>
+        <div class="core-title-wrap">
+          <div class="core-kicker">Knowledge management · the trust rail</div>
+          <div class="core-title">Medical-Integrity Gate</div>
+        </div>
+      </div>
+      <div class="core-body">
+
+        <p>
+          Document the existing CEO + nurse double-check as a <b>real core,
+          not overhead</b>: <em>"AI assists with drafting — humans own what
+          reaches learners."</em> Every learner-facing item passes clinician
+          review before publish.
+        </p>
+
+        <p>
+          This is a <strong>positioning asset</strong> (see Core 218), so make
+          it an <b>auditable SOP</b> — not a claim, a documented process.
+        </p>
+
+        <div class="raci">
+          <div class="raci-item">
+            <span class="ri-k ri-r">R</span>
+            <span class="ri-v">Content author (AI-assisted draft)</span>
+          </div>
+          <div class="raci-item">
+            <span class="ri-k ri-a">A</span>
+            <span class="ri-v">CEO</span>
+          </div>
+          <div class="raci-item">
+            <span class="ri-k ri-c">C</span>
+            <span class="ri-v">Nurse reviewer</span>
+          </div>
+          <div class="raci-item">
+            <span class="ri-k ri-i">I</span>
+            <span class="ri-v">Growth</span>
+          </div>
+        </div>
+
+        <div class="callout info">
+          <div class="cico">◆</div>
+          <div class="cbody">
+            <div class="clabel">Why this is a core, not overhead</div>
+            <p>
+              The human gate is Bayan's single strongest differentiator
+              against generic AI question banks. Making it auditable turns a
+              claim into proof — and unlocks every aggressive tactic without
+              becoming a guru-scam.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <p><span class="mark">Bayan</span> · Strategic Planning Cores</p>
+    <p style="margin-top:6px">
+      proc 4 · 8 strategic cores + 2 enabling cores · drafted from <code>research.md</code>
+    </p>
+  </footer>
+
+</main>
+
+<script>
+/* ============ Top nav border on scroll ============ */
+const topnav = document.getElementById('topnav');
+window.addEventListener('scroll', () => {
+  topnav.classList.toggle('scrolled', window.scrollY > 20);
+}, {passive:true});
+
+/* ============ Active section highlight ============ */
+const navLinks = document.querySelectorAll('.topnav a');
+const sections = [...navLinks].map(a =>
+  document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+const navIo = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting){
+      const id = '#' + e.target.id;
+      navLinks.forEach(a => a.classList.toggle('active',
+        a.getAttribute('href') === id));
+    }
+  });
+}, {threshold:0.3, rootMargin:'-80px 0px -60% 0px'});
+
+sections.forEach(s => navIo.observe(s));
+
+/* ============ Smooth scroll ============ */
+navLinks.forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    const el = document.querySelector(id);
+    if (!el) return;
+    e.preventDefault();
+    const offset = el.getBoundingClientRect().top + window.scrollY - 70;
+    window.scrollTo({top:offset, behavior:'smooth'});
+  });
+});
+</script>
+
+</body>
+</html>

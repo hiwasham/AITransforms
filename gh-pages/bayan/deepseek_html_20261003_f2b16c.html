@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bayan — Master Prompt (Working Reference)</title>
+<style>
+  :root{
+    --ink:#0a0d14;
+    --ink2:#0f131c;
+    --panel:#151b26;
+    --panel2:#1a2230;
+    --line:#232c3b;
+    --txt:#eef2f9;
+    --mut:#8b95a9;
+    --mut2:#5a6477;
+    --bayan:#1a4ff5;
+    --bayan2:#4d7bff;
+    --emerald:#34d399;
+    --amber:#fbbf24;
+    --rose:#f43f5e;
+    --violet:#a78bfa;
+    --cyan:#22d3ee;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);
+    color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  main{max-width:980px;margin:0 auto;padding:0 24px 80px}
+
+  /* ============ TOP NAV ============ */
+  .topnav{
+    position:sticky;top:0;z-index:50;
+    padding:12px 24px;
+    background:linear-gradient(180deg,rgba(10,13,20,.95),rgba(10,13,20,.65) 80%,transparent);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    display:flex;gap:4px;overflow-x:auto;flex-wrap:wrap;
+    border-bottom:1px solid transparent;
+    transition:border-color .3s;
+  }
+  .topnav.scrolled{border-bottom-color:var(--line)}
+  .topnav::-webkit-scrollbar{display:none}
+  .topnav a{
+    all:unset;cursor:pointer;
+    font-size:12px;font-weight:500;
+    color:var(--mut);
+    padding:7px 12px;border-radius:8px;
+    transition:.2s;white-space:nowrap;
+  }
+  .topnav a:hover{color:#c8d2e2;background:rgba(255,255,255,.04)}
+  .topnav a.active{color:#fff;background:rgba(26,79,245,.15)}
+
+  /* ============ HEADER ============ */
+  header{
+    padding:56px 0 40px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:40px;
+  }
+  header .tag{
+    display:inline-block;
+    font-size:11px;font-weight:600;
+    letter-spacing:.1em;text-transform:uppercase;
+    color:var(--bayan2);
+    background:rgba(26,79,245,.12);
+    border:1px solid rgba(26,79,245,.3);
+    padding:6px 12px;border-radius:8px;
+    margin-bottom:20px;
+  }
+  header h1{
+    font-size:36px;line-height:1.15;
+    letter-spacing:-.025em;font-weight:800;
+    color:#fff;margin-bottom:18px;
+  }
+  header .lede{
+    font-size:15.5px;line-height:1.75;
+    color:#b8c2d2;max-width:70ch;
+  }
+  header .lede b{color:#fff;font-weight:600}
+  header .meta{
+    display:flex;gap:24px;flex-wrap:wrap;
+    margin-top:24px;padding-top:24px;
+    border-top:1px dashed var(--line);
+    font-size:13px;color:var(--mut);
+  }
+  header .meta b{color:#cfd8e8;font-weight:600}
+
+  /* ============ SECTIONS ============ */
+  section{margin-bottom:52px;scroll-margin-top:80px}
+  section h2{
+    font-size:23px;line-height:1.3;
+    letter-spacing:-.02em;font-weight:700;
+    color:#fff;margin-bottom:10px;
+    display:flex;align-items:baseline;
+    gap:14px;flex-wrap:wrap;
+  }
+  section h2 .num{
+    font-size:12.5px;font-weight:700;
+    color:var(--bayan2);
+    background:rgba(26,79,245,.12);
+    border:1px solid rgba(26,79,245,.28);
+    padding:5px 10px;border-radius:7px;
+    letter-spacing:.04em;
+  }
+  section h2.warn .num{
+    color:var(--rose);
+    background:rgba(244,63,94,.12);
+    border-color:rgba(244,63,94,.28);
+  }
+  section .desc{
+    font-size:14.5px;color:var(--mut);
+    margin-bottom:22px;max-width:75ch;
+  }
+  section .desc b{color:#cfd8e8;font-weight:600}
+
+  /* ============ VERSION CARDS ============ */
+  .versions{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+  }
+  .version{
+    padding:24px 26px 22px;
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+  }
+  .version::before{
+    content:"";position:absolute;
+    top:0;right:0;left:0;height:3px;
+    background:rgb(var(--vc));
+  }
+  .version.v1{--vc:148,163,184}
+  .version.v2{--vc:26,79,245;
+    background:linear-gradient(180deg,rgba(26,79,245,.05),var(--panel))}
+
+  .version .tag{
+    font-size:10.5px;font-weight:700;
+    letter-spacing:.1em;text-transform:uppercase;
+    color:rgb(var(--vc));
+    margin-bottom:10px;
+  }
+  .version .date{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px;color:var(--mut2);
+    margin-bottom:14px;
+  }
+  .version h3{
+    font-size:17px;line-height:1.35;
+    letter-spacing:-.01em;color:#fff;
+    margin-bottom:12px;font-weight:700;
+  }
+  .version p{
+    font-size:13.5px;line-height:1.7;
+    color:#b8c2d2;
+  }
+  .version p b{color:#fff;font-weight:600}
+  .version .verdict{
+    margin-top:16px;padding-top:14px;
+    border-top:1px dashed var(--line);
+    font-size:12px;font-weight:600;
+    letter-spacing:.04em;
+    color:rgb(var(--vc));
+    text-transform:uppercase;
+  }
+
+  /* ============ SECTION BLOCKS ============ */
+  .block{
+    padding:24px 26px 22px;
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+    margin-bottom:16px;
+  }
+  .block::before{
+    content:"";position:absolute;
+    top:0;right:0;left:0;height:3px;
+    background:rgb(var(--bc));
+  }
+  .block.blue{--bc:26,79,245}
+  .block.emerald{--bc:52,211,153}
+  .block.amber{--bc:251,191,36}
+  .block.violet{--bc:167,139,250}
+  .block.rose{--bc:244,63,94}
+  .block.cyan{--bc:34,211,238}
+  .block.slate{--bc:148,163,184}
+
+  .block .label{
+    font-size:11px;font-weight:700;
+    letter-spacing:.09em;text-transform:uppercase;
+    color:rgb(var(--bc));
+    margin-bottom:14px;
+  }
+  .block h3{
+    font-size:18px;line-height:1.35;
+    letter-spacing:-.01em;color:#fff;
+    margin-bottom:12px;font-weight:700;
+  }
+  .block p{
+    font-size:14px;line-height:1.75;
+    color:#b8c2d2;margin-bottom:12px;
+  }
+  .block p:last-child{margin-bottom:0}
+  .block b{color:#fff;font-weight:600}
+  .block code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  .block ul{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    margin-top:10px;
+  }
+  .block ul li{
+    font-size:13.5px;
+    line-height:1.65;
+    color:#b8c2d2;
+    padding-left:22px;
+    position:relative;
+  }
+  .block ul li::before{
+    content:"→";
+    position:absolute;
+    left:0;top:0;
+    color:rgb(var(--bc));
+    font-weight:700;
+  }
+  .block ul li b{color:#fff;font-weight:600}
+
+  /* ============ INSTRUCTION LIST ============ */
+  .instructions{
+    list-style:none;
+    counter-reset:ins;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .instructions li{
+    counter-increment:ins;
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+    padding:14px 20px;
+    border-radius:11px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    font-size:13.5px;
+    line-height:1.7;
+    color:#cfd8e8;
+    transition:.2s;
+  }
+  .instructions li:hover{
+    border-color:rgba(26,79,245,.35);
+    background:rgba(26,79,245,.03);
+  }
+  .instructions li::before{
+    content:counter(ins);
+    flex:0 0 28px;width:28px;height:28px;
+    border-radius:8px;
+    display:grid;place-items:center;
+    font-size:12px;font-weight:800;
+    background:rgba(26,79,245,.14);
+    color:var(--bayan2);
+    border:1px solid rgba(26,79,245,.28);
+    font-variant-numeric:tabular-nums;
+    margin-top:2px;
+  }
+  .instructions li b{color:#fff;font-weight:600}
+
+  /* ============ COMPARISON TABLE ============ */
+  .compare{
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow-x:auto;
+    background:var(--panel);
+  }
+  table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:640px;
+  }
+  thead th{
+    background:var(--panel2);
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--mut);
+    padding:14px 18px;
+    text-align:left;
+    border-bottom:1px solid var(--line);
+    white-space:nowrap;
+  }
+  thead th.v1-col{color:var(--mut2)}
+  thead th.v2-col{color:var(--bayan2)}
+  tbody td{
+    padding:16px 18px;
+    font-size:13.5px;
+    color:#cfd8e8;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+    line-height:1.65;
+  }
+  tbody tr:last-child td{border-bottom:none}
+  tbody tr:hover{background:rgba(255,255,255,.015)}
+  tbody td b{color:#fff;font-weight:600}
+  tbody td code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 5px;border-radius:4px;
+    color:#dfe7f4;
+  }
+  tbody td .v1{
+    color:var(--mut);
+  }
+  tbody td .v2{
+    color:#eef2f9;
+  }
+
+  /* ============ STRENGTHS GRID ============ */
+  .two-col{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+  }
+  .two-col .block{margin-bottom:0}
+
+  /* ============ CALLOUT ============ */
+  .callout{
+    padding:20px 24px;
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    margin-top:16px;
+    display:flex;gap:18px;align-items:flex-start;
+  }
+  .callout .icon{
+    flex:0 0 36px;width:36px;height:36px;
+    border-radius:10px;
+    display:grid;place-items:center;
+    font-size:17px;
+  }
+  .callout .body{flex:1;min-width:0}
+  .callout .body .label{
+    font-size:11px;font-weight:700;
+    letter-spacing:.09em;text-transform:uppercase;
+    margin-bottom:8px;
+  }
+  .callout .body p{
+    font-size:13.5px;line-height:1.7;
+    color:#b8c2d2;
+  }
+  .callout .body p + p{margin-top:10px}
+  .callout .body b{color:#fff;font-weight:600}
+  .callout.info{
+    background:rgba(26,79,245,.05);
+    border-color:rgba(26,79,245,.3);
+  }
+  .callout.info .icon{
+    background:rgba(26,79,245,.15);
+    color:var(--bayan2);
+    border:1px solid rgba(26,79,245,.35);
+  }
+  .callout.info .label{color:var(--bayan2)}
+  .callout.warn{
+    background:rgba(251,191,36,.05);
+    border-color:rgba(251,191,36,.3);
+  }
+  .callout.warn .icon{
+    background:rgba(251,191,36,.15);
+    color:var(--amber);
+    border:1px solid rgba(251,191,36,.35);
+  }
+  .callout.warn .label{color:var(--amber)}
+
+  /* ============ LINKS ============ */
+  .link-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:10px;
+  }
+  .link-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:14px 18px;
+    border-radius:11px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    text-decoration:none;
+    color:#cfd8e8;
+    font-size:13.5px;
+    transition:.2s;
+  }
+  .link-item:hover{
+    border-color:rgba(26,79,245,.4);
+    background:rgba(26,79,245,.04);
+    color:#fff;
+  }
+  .link-item .ic{
+    flex:0 0 28px;width:28px;height:28px;
+    border-radius:8px;
+    display:grid;place-items:center;
+    background:rgba(26,79,245,.14);
+    color:var(--bayan2);
+    font-size:12px;
+    font-weight:700;
+  }
+  .link-item .txt{
+    flex:1;min-width:0;
+  }
+  .link-item .url{
+    display:block;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:11.5px;
+    color:var(--mut2);
+    margin-top:3px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+
+  /* ============ FOOTER ============ */
+  footer{
+    padding-top:32px;
+    margin-top:56px;
+    border-top:1px solid var(--line);
+    font-size:12.5px;
+    color:var(--mut2);
+    text-align:center;
+    line-height:1.8;
+  }
+  footer .mark{color:var(--bayan2);font-weight:600}
+  footer code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.04);
+    padding:2px 7px;border-radius:5px;
+    color:#cfd8e8;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:720px){
+    main{padding:0 16px 60px}
+    header{padding:40px 0 30px;margin-bottom:32px}
+    header h1{font-size:24px}
+    header .lede{font-size:14.5px}
+    section{margin-bottom:40px}
+    section h2{font-size:19px}
+    .versions,
+    .two-col{grid-template-columns:1fr;gap:12px}
+    .block{padding:20px 20px 18px}
+    .block h3{font-size:16px}
+    .version{padding:20px 20px 18px}
+    .topnav{padding:10px 16px}
+    .topnav a{font-size:11px;padding:6px 10px}
+  }
+  @media (max-width:480px){
+    header h1{font-size:21px}
+  }
+</style>
+</head>
+<body>
+
+<nav class="topnav" id="topnav">
+  <a href="#versions">Two versions</a>
+  <a href="#instructions">Instructions</a>
+  <a href="#overview">Overview</a>
+  <a href="#products">Products</a>
+  <a href="#icp">ICP</a>
+  <a href="#positioning">Positioning</a>
+  <a href="#business">Business</a>
+  <a href="#competitors">Competitors</a>
+  <a href="#mission">Mission</a>
+  <a href="#strengths">Strengths</a>
+  <a href="#team">Team</a>
+  <a href="#compare">Compare</a>
+  <a href="#refs">References</a>
+</nav>
+
+<main>
+
+  <!-- ============ HEADER ============ -->
+  <header>
+    <span class="tag">Master Prompt · Working Reference</span>
+    <h1>Bayan — Master Prompt</h1>
+    <p class="lede">
+      Working context for supporting <b>Nas (Nasim Mazaheri)</b> with Bayan
+      marketing, product communication, and business planning. Two versions
+      exist — the earlier <b>October 2024</b> draft and the revised
+      <b>September 2026</b> version. The revised version is the working prompt.
+    </p>
+    <div class="meta">
+      <span><b>Prepared:</b> 25 September 2026</span>
+      <span><b>Company:</b> Bayan AI Technologies LLC</span>
+      <span><b>Role:</b> Marketing / creative lead</span>
+      <span><b>Reports to:</b> Dr. Abdullah Al Alawi</span>
+    </div>
+  </header>
+
+  <!-- ============ TWO VERSIONS ============ -->
+  <section id="versions">
+    <h2><span class="num">01</span> Two versions of the prompt</h2>
+    <p class="desc">
+      The two versions describe the same company but differ in how carefully
+      they separate verified facts from working hypotheses.
+    </p>
+
+    <div class="versions">
+
+      <div class="version v1">
+        <div class="tag">Earlier draft</div>
+        <div class="date">Dated October 24, 2024</div>
+        <h3>Definitive company summary</h3>
+        <p>
+          Presents the five-product suite as the current lineup, calls the
+          company pre-revenue while describing subscriptions as the model, and
+          states the specific country list for the ICP as fact.
+        </p>
+        <p style="margin-top:10px">
+          Reads as a company profile — useful, but not careful about what's
+          verified vs. hypothesised.
+        </p>
+        <div class="verdict">Superseded · not the working version</div>
+      </div>
+
+      <div class="version v2">
+        <div class="tag">Revised · working version</div>
+        <div class="date">Prepared September 25, 2026</div>
+        <h3>Working context with guardrails</h3>
+        <p>
+          Separates confirmed facts from working hypotheses, flags what must
+          be verified before use, and adds an <b>Instructions for the
+          assistant</b> section with explicit do-nots.
+        </p>
+        <p style="margin-top:10px">
+          Reads as a working document — a prompt that governs how the
+          assistant should behave, not just what to say about Bayan.
+        </p>
+        <div class="verdict">✓ Use this as the working prompt</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ INSTRUCTIONS ============ -->
+  <section id="instructions">
+    <h2><span class="num">02</span> Instructions for the assistant</h2>
+    <p class="desc">
+      The guardrails that make the revised prompt work. These are the rules
+      the assistant should follow when supporting Nas.
+    </p>
+
+    <ol class="instructions">
+      <li>Support Nas as a marketing and creative lead. <b>Use a CEO voice only when Nas explicitly asks</b> for a CEO-style response.</li>
+      <li>Treat Nas's internal company information as <b>user-provided context</b>, not as publicly verified fact.</li>
+      <li><b>Browse current official Bayan pages</b> before stating current pricing, products, team names, exam coverage, or public metrics.</li>
+      <li><b>Separate confirmed facts from working hypotheses.</b> Never invent revenue, KPI results, exam pass outcomes, customer names, or team assignments.</li>
+      <li>Avoid guarantees such as "pass guarantee." Say Bayan <b>helps learners prepare</b>; do not promise exam success.</li>
+      <li>Keep business writing <b>clear, credible, and outcome-focused.</b> For this questionnaire, respond in English unless Nas requests another language.</li>
+    </ol>
+  </section>
+
+  <!-- ============ OVERVIEW ============ -->
+  <section id="overview">
+    <h2><span class="num">03</span> Company overview</h2>
+
+    <div class="block blue">
+      <div class="label">Identity</div>
+      <p><b>Company:</b> Bayan AI Technologies LLC, based in Muscat, Oman.</p>
+      <p><b>Category:</b> Medical education and medical licensing / board-exam preparation.</p>
+      <p><b>Public platform brand:</b> Bayan Medical Education. Current public pages also describe Bayan as a <b>MedResearch Academy initiative</b> — confirm the precise legal/operating relationship before using it in formal legal copy.</p>
+      <p><b>Founder and CEO:</b> Dr. Abdullah Al Alawi, a physician and medical educator.</p>
+      <p><b>Nas's role:</b> Marketing/creative lead, reporting to Dr. Abdullah Al Alawi.</p>
+    </div>
+
+    <div class="callout warn">
+      <div class="icon">⚠</div>
+      <div class="body">
+        <div class="label">Two things to confirm</div>
+        <p><b>Date correction:</b> The source draft said "October 24, 2024." This profile is prepared on 25 September 2026 — use the prepared date unless the earlier date referred to something else.</p>
+        <p><b>Stage and revenue:</b> An earlier internal brief described Bayan as pre-revenue. The current public website lists paid subscriptions, one-time exam-prep purchases, and institutional pricing/pilots, but <b>public offers do not establish whether sales have occurred</b>. Confirm actual revenue status internally before stating it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCTS ============ -->
+  <section id="products">
+    <h2><span class="num">04</span> Products and services</h2>
+
+    <div class="block violet">
+      <div class="label">Current public platform</div>
+      <p>Serves <b>physicians and residents, nurses, and medical students</b>. Offers:</p>
+      <ul>
+        <li>Exam-preparation question banks</li>
+        <li>Adaptive learning and spaced repetition</li>
+        <li>Courses</li>
+        <li>OSCE practice</li>
+        <li>Virtual patients</li>
+        <li>Clinical references and tools</li>
+      </ul>
+      <p style="margin-top:14px">The current website also features a separate <b>PreOp</b> perioperative reference app.</p>
+    </div>
+
+    <div class="block amber">
+      <div class="label">Earlier five-product family · verify each</div>
+      <p>An earlier internal company brief described a five-product family:</p>
+      <ul>
+        <li><b>Bayan Learning</b> (flagship)</li>
+        <li><b>PreOp</b></li>
+        <li><b>JournalReady</b></li>
+        <li><b>Medad</b></li>
+        <li><b>SmartRota</b></li>
+      </ul>
+      <p style="margin-top:14px">Confirm the <b>current launch and commercial status of each product</b> before describing all five as live. Public Bayan pages currently brand the education platform as <b>Bayan Medical Education</b>.</p>
+    </div>
+
+    <div class="block emerald">
+      <div class="label">Currently advertised on the public site</div>
+      <ul>
+        <li>Free access for users in <b>Oman</b> and limited free tiers or access initiatives.</li>
+        <li>Individual paid plans, including subscription plans for some learning tracks.</li>
+        <li>One-time purchases for some exam-preparation packages.</li>
+        <li>Institutional seat pricing and pilot access.</li>
+      </ul>
+      <p style="margin-top:14px"><b>These offers can change.</b> Verify the live pricing page before quoting prices or plan details.</p>
+    </div>
+  </section>
+
+  <!-- ============ ICP ============ -->
+  <section id="icp">
+    <h2><span class="num">05</span> Ideal customer and problem</h2>
+
+    <div class="block cyan">
+      <div class="label">Core users</div>
+      <p>Medical students, residents, physicians, and nurses preparing for licensing or board exams, including:</p>
+      <p style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;color:#cfd8e8;line-height:1.9">
+        OMSB · Arab Board · SCFHS/SMLE · DHA · MRCP · USMLE · OEN · others
+      </p>
+    </div>
+
+    <div class="block amber">
+      <div class="label">Working priority-customer hypothesis</div>
+      <p>
+        Internationally trained, <b>self-funding clinicians</b> from India,
+        Pakistan, Egypt, Sudan, and the Philippines preparing for Gulf licensing
+        exams on tight timelines.
+      </p>
+      <p style="margin-top:12px">
+        <b>Treat this as a hypothesis to validate</b>, not as a verified
+        customer-profile statistic.
+      </p>
+    </div>
+
+    <div class="block rose">
+      <div class="label">Problem and intended outcome</div>
+      <p><b>Problem:</b> Learners struggle to find structured, trustworthy preparation matched to their specific exam and weak areas. Generic or scattered study materials make it harder to know what to study and whether progress is on track.</p>
+      <p><b>Intended outcome:</b> More focused exam preparation, stronger clinical reasoning, and greater readiness and confidence. <b>Do not promise a pass.</b></p>
+    </div>
+  </section>
+
+  <!-- ============ POSITIONING ============ -->
+  <section id="positioning">
+    <h2><span class="num">06</span> Positioning and differentiation</h2>
+
+    <div class="block blue">
+      <div class="label">What sets Bayan apart</div>
+      <p>
+        Bayan combines <b>exam-specific preparation for Arab and Gulf
+        pathways</b> with <b>clinician-reviewed, evidence-anchored content</b>
+        and <b>adaptive study tools</b>.
+      </p>
+      <p>
+        Its published quality process includes automated checks, evidence and
+        citation checks, required human expert review, learner-flag review, and
+        re-verification of older content.
+      </p>
+      <p>
+        The platform supports different learner tracks and uses spaced
+        repetition and weak-area targeting.
+      </p>
+    </div>
+
+    <div class="callout info">
+      <div class="icon">◆</div>
+      <div class="body">
+        <div class="label">Working positioning statement</div>
+        <p style="font-size:15px;color:#fff;font-style:italic">"Clinician-reviewed, exam-aligned medical learning that adapts to each learner."</p>
+        <p style="margin-top:12px"><b>Guardrail:</b> avoid claiming Bayan is the only provider or categorically better than every competitor unless independently verified.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BUSINESS ============ -->
+  <section id="business">
+    <h2><span class="num">07</span> Business model and current questions</h2>
+
+    <div class="block emerald">
+      <div class="label">Publicly offered revenue streams</div>
+      <ul>
+        <li>Individual paid access, including subscriptions for some tracks</li>
+        <li>One-time exam-prep purchases</li>
+        <li>Institutional pricing following pilots</li>
+      </ul>
+    </div>
+
+    <div class="block cyan">
+      <div class="label">Free-access policies</div>
+      <p>Public pages advertise <b>free access in Oman</b> and access initiatives for eligible institutions or countries. <b>Check current eligibility terms</b> before describing them.</p>
+    </div>
+
+    <div class="two-col">
+      <div class="block amber">
+        <div class="label">Key commercial challenge</div>
+        <p>Turn early user adoption and institutional interest into <b>repeatable paid conversion and retention</b>.</p>
+      </div>
+
+      <div class="block violet">
+        <div class="label">Key decision</div>
+        <p>Decide which segment and offer should lead near-term growth: <b>individual exam candidates, institutional customers, or a sequenced approach</b>.</p>
+      </div>
+    </div>
+
+    <div class="callout warn" style="margin-top:16px">
+      <div class="icon">⚠</div>
+      <div class="body">
+        <div class="label">Open measurement need</div>
+        <p>Establish reliable baselines for <b>activation, conversion, retention, institutional pilot conversion, and learning outcomes</b>. KPI targets and actual revenue figures have not been provided in this profile.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPETITORS ============ -->
+  <section id="competitors">
+    <h2><span class="num">08</span> Competitive landscape</h2>
+
+    <div class="block violet">
+      <div class="label">Competitors to monitor</div>
+      <p><b>Gulf-focused preparation platforms:</b> StudyPrometric, GulfMedExams, MySMLE.</p>
+      <p><b>Broader medical question-bank benchmarks:</b> UWorld, AMBOSS.</p>
+      <p style="margin-top:12px"><b>Competitor features and coverage change</b> — verify current offerings before making comparisons.</p>
+    </div>
+
+    <div class="block rose">
+      <div class="label">Potential threats</div>
+      <ul>
+        <li>Regional platforms improving exam coverage and adaptive features</li>
+        <li>Global providers deepening Gulf-specific content</li>
+        <li>Candidates finding it difficult to assess content quality across AI-assisted or recall-based resources</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ MISSION ============ -->
+  <section id="mission">
+    <h2><span class="num">09</span> Mission and values</h2>
+
+    <div class="block blue">
+      <div class="label">Mission</div>
+      <p>
+        Close the access gap in high-quality, evidence-based medical education,
+        beginning in the Arab world and serving learners globally, so healthcare
+        professionals can prepare well and provide better care.
+      </p>
+    </div>
+
+    <div class="block emerald">
+      <div class="label">Core values</div>
+      <ul>
+        <li><b>Clinical integrity</b></li>
+        <li><b>Human accountability</b> for AI-assisted content</li>
+        <li><b>Learner-centred growth</b></li>
+        <li><b>Equitable access</b></li>
+        <li><b>Continuous improvement</b></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ STRENGTHS ============ -->
+  <section id="strengths">
+    <h2><span class="num">10</span> Strengths and areas to improve</h2>
+
+    <div class="two-col">
+      <div class="block emerald">
+        <div class="label">Strengths</div>
+        <ul>
+          <li>Specific preparation for locally important exam pathways such as <b>OMSB and the Arab Board</b></li>
+          <li><b>Clinician and educator involvement</b> in content quality</li>
+          <li>Adaptive study features and tracks for multiple learner groups</li>
+          <li>Early institutional and international reach</li>
+        </ul>
+      </div>
+
+      <div class="block amber">
+        <div class="label">Areas to improve</div>
+        <ul>
+          <li>Prioritize markets and exam tracks so <b>breadth does not dilute execution</b></li>
+          <li>Measure learner progress, verified exam outcomes where available, conversion, and retention <b>consistently</b></li>
+          <li>Scale content review and updates while <b>maintaining quality</b></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TEAM ============ -->
+  <section id="team">
+    <h2><span class="num">11</span> Team and KPI guidance</h2>
+    <p class="desc">
+      Public materials identify Dr. Abdullah Al Alawi as Founder and CEO and
+      report a network of 15+ active reviewers. They do not publish a complete
+      current team roster or individual KPI targets.
+    </p>
+
+    <div class="block blue">
+      <div class="label">Founder / CEO</div>
+      <p><b>Scope:</b> Strategy, clinical direction, and overall company performance.</p>
+      <p><b>Suggested measures:</b> revenue, paid adoption, learner retention, institutional partnerships, verified learning outcomes.</p>
+    </div>
+
+    <div class="block emerald">
+      <div class="label">Clinical reviewer network</div>
+      <p><b>Scope:</b> Expert review, evidence and citation verification, audits, and content updates.</p>
+      <p><b>Suggested measures:</b> review coverage, turnaround, audit findings, correction rates.</p>
+    </div>
+
+    <div class="block violet">
+      <div class="label">Product / AI engineering</div>
+      <p><b>Scope:</b> Platform reliability and adaptive learning experience.</p>
+      <p><b>Suggested measures:</b> uptime, activation, feature adoption, resolution time for user-reported issues.</p>
+      <p style="margin-top:12px"><b>Note:</b> the current public pages do not identify the function's owner by name.</p>
+    </div>
+
+    <div class="block amber">
+      <div class="label">Growth / institutional partnerships</div>
+      <p><b>Owner:</b> not publicly identified.</p>
+      <p><b>Suggested measures:</b> qualified institutional leads, pilot onboarding and conversion, active institutional seats.</p>
+    </div>
+
+    <div class="callout info" style="margin-top:16px">
+      <div class="icon">◆</div>
+      <div class="body">
+        <div class="label">Treat as proposed, not assigned</div>
+        <p>Present these as <b>proposed KPI areas</b> unless Nas confirms they are formally assigned targets.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPARE ============ -->
+  <section id="compare">
+    <h2><span class="num">12</span> Comparison · the two versions</h2>
+    <p class="desc">
+      Where the earlier draft and the revised working prompt diverge — and why
+      the revision matters.
+    </p>
+
+    <div class="compare">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:22%">Topic</th>
+            <th class="v1-col" style="width:39%">Earlier draft (Oct 2024)</th>
+            <th class="v2-col" style="width:39%">Revised working version (Sept 2026)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Date and roles</b></td>
+            <td><span class="v1">Says October 24, 2024. Lists Nas as "Owner, Marketer."</span></td>
+            <td><span class="v2">Uses the prepared date, September 25, 2026. Describes Nas as <b>marketing / creative lead</b> reporting to the CEO.</span></td>
+          </tr>
+          <tr>
+            <td><b>Products</b></td>
+            <td><span class="v1">Presents all five products as the current suite.</span></td>
+            <td><span class="v2">Keeps the five-product list as <b>earlier internal context</b> and says to verify each product's current launch and commercial status.</span></td>
+          </tr>
+          <tr>
+            <td><b>Revenue</b></td>
+            <td><span class="v1">Calls Bayan pre-revenue while describing subscriptions and one-time purchases as the model.</span></td>
+            <td><span class="v2">Separates <b>actual revenue</b> from <b>available offers</b> — public pricing pages advertise plans, but that alone doesn't confirm sales.</span></td>
+          </tr>
+          <tr>
+            <td><b>Ideal customer</b></td>
+            <td><span class="v1">States the specific countries and self-funding clinician segment as fact.</span></td>
+            <td><span class="v2">Keeps that segment as a <b>hypothesis to validate</b>.</span></td>
+          </tr>
+          <tr>
+            <td><b>Team and KPIs</b></td>
+            <td><span class="v1">Describes team functions and responsibilities as established.</span></td>
+            <td><span class="v2">Separates publicly reported information from <b>suggested KPI areas</b>. Public pages support the 15+ reviewer claim but don't provide a full team roster.</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout info" style="margin-top:16px">
+      <div class="icon">✓</div>
+      <div class="body">
+        <div class="label">Recommendation</div>
+        <p>
+          <b>Use the revised version as the working prompt.</b> Before using the
+          earlier version as a definitive company profile, confirm the five
+          products' status, actual revenue stage, and whether the named customer
+          segment is validated.
+        </p>
+        <p>
+          The problem solved, differentiation, challenges, competitors, mission,
+          and values are <b>substantially the same in both</b>. The revised
+          version mainly adds guardrails: verify changeable facts, label
+          assumptions, and avoid inventing outcomes or promising exam success.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REFERENCES ============ -->
+  <section id="refs">
+    <h2><span class="num">13</span> Useful public references</h2>
+    <p class="desc">
+      Verify current facts on these official pages before stating pricing,
+      products, team names, or exam coverage.
+    </p>
+
+    <div class="link-list">
+
+      <a href="https://www.bayan.edu.om/about" class="link-item" target="_blank" rel="noopener">
+        <span class="ic">A</span>
+        <span class="txt">
+          Bayan About
+          <span class="url">bayan.edu.om/about</span>
+        </span>
+      </a>
+
+      <a href="https://www.bayan.edu.om/" class="link-item" target="_blank" rel="noopener">
+        <span class="ic">B</span>
+        <span class="txt">
+          Bayan Medical Education
+          <span class="url">bayan.edu.om</span>
+        </span>
+      </a>
+
+      <a href="https://www.bayan.edu.om/pricing" class="link-item" target="_blank" rel="noopener">
+        <span class="ic">$</span>
+        <span class="txt">
+          Bayan Pricing
+          <span class="url">bayan.edu.om/pricing</span>
+        </span>
+      </a>
+
+      <a href="https://www.bayan.edu.om/global-access" class="link-item" target="_blank" rel="noopener">
+        <span class="ic">◉</span>
+        <span class="txt">
+          Bayan Global Access
+          <span class="url">bayan.edu.om/global-access</span>
+        </span>
+      </a>
+
+      <a href="https://www.bayan.edu.om/preop" class="link-item" target="_blank" rel="noopener">
+        <span class="ic">P</span>
+        <span class="txt">
+          PreOp
+          <span class="url">bayan.edu.om/preop</span>
+        </span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <p><span class="mark">Bayan</span> · Master Prompt · Working Reference</p>
+    <p style="margin-top:6px">
+      Prepared 25 September 2026 · <code>master-prompt2.md</code>
+    </p>
+  </footer>
+
+</main>
+
+<script>
+/* ============ Top nav border on scroll ============ */
+const topnav = document.getElementById('topnav');
+window.addEventListener('scroll', () => {
+  topnav.classList.toggle('scrolled', window.scrollY > 20);
+}, {passive:true});
+
+/* ============ Active section highlight ============ */
+const navLinks = document.querySelectorAll('.topnav a');
+const sections = [...navLinks].map(a =>
+  document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+const navIo = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting){
+      const id = '#' + e.target.id;
+      navLinks.forEach(a => a.classList.toggle('active',
+        a.getAttribute('href') === id));
+    }
+  });
+}, {threshold:0.3, rootMargin:'-80px 0px -60% 0px'});
+
+sections.forEach(s => navIo.observe(s));
+
+/* ============ Smooth scroll ============ */
+navLinks.forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    const el = document.querySelector(id);
+    if (!el) return;
+    e.preventDefault();
+    const offset = el.getBoundingClientRect().top + window.scrollY - 70;
+    window.scrollTo({top:offset, behavior:'smooth'});
+  });
+});
+</script>
+
+</body>
+</html>
