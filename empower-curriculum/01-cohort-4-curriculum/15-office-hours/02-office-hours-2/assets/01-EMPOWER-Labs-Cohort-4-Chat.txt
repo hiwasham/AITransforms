@@ -1,4 +1,0 @@
-00:28:15	Nancy Gottlieb:	So given that STAGE 3 can also update artifacts, and it seems to me that I would like to use that as the main place to do it, as I can share with my team......if I do that, shall I always go back and put the new updated Stage 3 artifact back into claude?
-00:48:40	Hayden Miyamoto:	https://www.youtube.com/watch?v=CDv0YqOtvEU&list=LL&index=11
-00:49:22	Beni Hirt:	Does Claude remember chat conversations in a project or is it only the artifacts?
-01:11:05	Pavlo:	https://gembadocs.com  I used this program to create standards for simple manual processes, I highly recommend it. There is a simple validation process by responsible people.

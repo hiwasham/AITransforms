@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bayan · Revenue Growth System — 30-Day Plan + Work Library</title>
+<style>
+  :root{
+    --ink:#080b10;--panel:#0f141d;--panel2:#141b26;--line:#1c2430;
+    --txt:#eef2f9;--mut:#8b95a9;--mut2:#4d5666;
+    --bayan:#1a4ff5;--bayan2:#4d7bff;
+    --emerald:#34d399;--amber:#fbbf24;--rose:#f43f5e;
+    --violet:#a78bfa;--cyan:#22d3ee;
+    --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--ink);color:var(--txt);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+
+  .nav{position:sticky;top:0;z-index:50;padding:13px 28px;background:linear-gradient(180deg,rgba(8,11,16,.97),rgba(8,11,16,.75) 80%,transparent);backdrop-filter:blur(14px);display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .nav .brand{display:flex;align-items:center;gap:10px;margin-right:auto}
+  .nav .mark{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font:800 14px/1 var(--sans);color:#fff;background:linear-gradient(140deg,var(--bayan),var(--violet));box-shadow:0 0 20px -6px rgba(26,79,245,.7)}
+  .nav .name{font:700 12.5px/1.2 var(--sans);color:#fff}
+  .nav .name small{display:block;font:400 9.5px/1.3 var(--mono);color:var(--mut2);letter-spacing:.1em;text-transform:uppercase;margin-top:2px}
+  .nav a{all:unset;cursor:pointer;font:500 11.5px/1 var(--mono);color:var(--mut);padding:7px 11px;border-radius:8px;transition:.2s}
+  .nav a:hover{color:#c8d2e2;background:rgba(255,255,255,.04)}
+
+  main{max-width:1080px;margin:0 auto;padding:0 24px 110px}
+
+  .hero{padding:66px 0 48px;border-bottom:1px solid var(--line);margin-bottom:52px}
+  .kicker{display:inline-flex;align-items:center;gap:9px;font:600 10.5px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--bayan2);padding:7px 13px;border-radius:8px;background:rgba(26,79,245,.1);border:1px solid rgba(26,79,245,.3);margin-bottom:22px}
+  .kicker::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--emerald);box-shadow:0 0 10px 0 rgba(52,211,153,.9);animation:blip 2.2s ease-in-out infinite}
+  @keyframes blip{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.7)}}
+  h1{font:800 clamp(30px,4.6vw,46px)/1.12 var(--sans);letter-spacing:-.03em;margin-bottom:18px;max-width:780px}
+  h1 em{font-style:normal;background:linear-gradient(120deg,var(--bayan2),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p.lead{color:var(--mut);font-size:15.5px;max-width:680px;margin-bottom:30px}
+  .statrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .stat b{display:block;font:700 21px/1.15 var(--sans);color:#fff}
+  .stat span{font:500 10.5px/1.4 var(--mono);color:var(--mut);letter-spacing:.04em}
+  .stat.bad b{color:var(--rose)} .stat.target b{color:var(--emerald)}
+
+  section{margin:0 0 62px}
+  h2{font:700 clamp(20px,2.6vw,27px)/1.25 var(--sans);letter-spacing:-.02em;margin-bottom:6px}
+  h2 .idx{font:600 11px/1 var(--mono);color:var(--bayan2);letter-spacing:.12em;display:block;margin-bottom:10px;text-transform:uppercase}
+  .sub{color:var(--mut);font-size:14px;max-width:680px;margin-bottom:26px}
+
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+  .panel + .panel{margin-top:14px}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th{font:600 10.5px/1.4 var(--mono);color:var(--mut2);text-transform:uppercase;letter-spacing:.08em;text-align:left;padding:8px 12px;border-bottom:1px solid var(--line)}
+  td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top;color:#cfd8e6}
+  tr:last-child td{border-bottom:none}
+  td b,td strong{color:#fff}
+  .ok{color:var(--emerald);font-weight:600}
+  .no{color:var(--rose);font-weight:600}
+  .dec{color:var(--amber);font-weight:600}
+
+  .fw{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:6px 0 4px}
+  .fw .stage{border-radius:11px;padding:13px 12px;border:1px solid var(--line);background:var(--panel);position:relative}
+  .fw .stage h4{font:600 11.5px/1.3 var(--sans);color:var(--mut);margin-bottom:6px}
+  .fw .stage p{font:500 10px/1.45 var(--mono);color:var(--mut2)}
+  .fw .stage.focus{background:linear-gradient(160deg,rgba(26,79,245,.16),rgba(167,139,250,.08));border-color:rgba(26,79,245,.55)}
+  .fw .stage.focus h4{color:#fff}
+  .fw .stage.focus::after{content:"FOCUS";position:absolute;top:-8px;right:10px;font:700 8.5px/1 var(--mono);letter-spacing:.12em;color:var(--bayan2);background:var(--ink);padding:3px 7px;border-radius:5px;border:1px solid rgba(26,79,245,.5)}
+  .fw .stage.assessed::after{content:"ASSESSED";position:absolute;top:-8px;right:10px;font:700 8.5px/1 var(--mono);letter-spacing:.12em;color:var(--emerald);background:var(--ink);padding:3px 7px;border-radius:5px;border:1px solid rgba(52,211,153,.4)}
+
+  details.acc{background:var(--panel);border:1px solid var(--line);border-radius:13px;margin-bottom:11px;overflow:hidden}
+  details.acc summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:13px;padding:16px 20px;transition:.15s}
+  details.acc summary::-webkit-details-marker{display:none}
+  details.acc summary:hover{background:rgba(255,255,255,.025)}
+  details.acc summary .chev{flex:0 0 auto;width:22px;height:22px;border-radius:7px;display:grid;place-items:center;background:rgba(26,79,245,.14);color:var(--bayan2);font:700 11px/1 var(--mono);transition:.2s}
+  details.acc[open] summary .chev{transform:rotate(90deg)}
+  details.acc summary .ttl{font:600 14px/1.35 var(--sans);color:#e8edf5}
+  details.acc summary .hint{margin-left:auto;font:500 10.5px/1.3 var(--mono);color:var(--mut2);text-align:right;flex:0 0 auto}
+  details.acc .body{padding:4px 20px 20px 55px;border-top:1px solid var(--line);padding-top:16px}
+  details.acc .body p{color:var(--mut);font-size:13.5px;margin-bottom:12px;max-width:700px}
+  details.acc .body ul{margin:0 0 12px 17px;color:#c3ccdb;font-size:13.5px}
+  details.acc .body li{margin-bottom:6px}
+  details.acc .body li::marker{color:var(--bayan2)}
+  .tag{display:inline-block;font:600 9.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border-radius:6px;margin-right:7px;vertical-align:2px}
+  .tag.done{color:var(--emerald);background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.3)}
+  .tag.dec{color:var(--amber);background:rgba(251,191,36,.09);border:1px solid rgba(251,191,36,.3)}
+  .tag.wk{color:var(--bayan2);background:rgba(26,79,245,.1);border:1px solid rgba(26,79,245,.3)}
+
+  /* file library */
+  .lib-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:18px}
+  .lib-count{font:600 11px/1 var(--mono);color:var(--emerald);letter-spacing:.08em;background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.25);border-radius:7px;padding:6px 10px}
+  .cat{background:var(--panel);border:1px solid var(--line);border-radius:13px;margin-bottom:12px;overflow:hidden}
+  .cat summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:12px;padding:14px 18px;transition:.15s}
+  .cat summary::-webkit-details-marker{display:none}
+  .cat summary:hover{background:rgba(255,255,255,.02)}
+  .cat summary .chev{width:20px;height:20px;border-radius:6px;display:grid;place-items:center;background:rgba(52,211,153,.12);color:var(--emerald);font:700 10px/1 var(--mono)}
+  .cat[open] summary .chev{transform:rotate(90deg)}
+  .cat summary .ttl{font:600 13.5px/1.3 var(--sans);color:#e8edf5}
+  .cat summary .n{margin-left:auto;font:600 10px/1 var(--mono);color:var(--mut2)}
+  .cat .files{padding:6px 18px 16px 50px}
+  .file{display:flex;gap:10px;align-items:baseline;padding:6px 0;border-bottom:1px solid rgba(28,36,48,.6)}
+  .file:last-child{border-bottom:none}
+  .file .doc{flex:0 0 16px;color:var(--mut2);font-size:12px}
+  .file a{color:var(--bayan2);text-decoration:none;font:500 12.5px/1.45 var(--mono)}
+  .file a:hover{color:#8fabff;text-decoration:underline}
+  .file .d{color:var(--mut2);font:400 10.5px/1.5 var(--sans);margin-left:4px}
+  .empty-note{color:var(--mut2);font-size:11.5px;font-style:italic}
+
+  .callout{border-left:3px solid var(--bayan);background:rgba(26,79,245,.07);border-radius:0 11px 11px 0;padding:15px 19px;margin:16px 0;color:#c9d3e2;font-size:13.5px}
+  .callout.amber{border-left-color:var(--amber);background:rgba(251,191,36,.06)}
+  .callout em{font-style:normal;color:#fff;font-weight:600}
+
+  .wk{border:1px solid var(--line);border-radius:13px;background:var(--panel);margin-bottom:16px;overflow:hidden}
+  .wk .wkhead{display:flex;align-items:baseline;gap:14px;padding:16px 20px;border-bottom:1px solid var(--line);background:linear-gradient(90deg,rgba(26,79,245,.09),transparent)}
+  .wk .wkhead b{font:700 15px/1.2 var(--sans);color:#fff}
+  .wk .wkhead span{font:500 11px/1.4 var(--mono);color:var(--mut)}
+  .wk .wkbody{padding:14px 20px 18px}
+
+  footer{border-top:1px solid var(--line);padding-top:30px;color:var(--mut2);font:500 11px/1.7 var(--mono)}
+  footer a{color:var(--mut)}
+  .tiny{font-size:11.5px;color:var(--mut2)}
+
+  @media(max-width:760px){.fw{grid-template-columns:repeat(2,1fr)}.nav a{display:none}.cat .files{padding-left:20px}}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="brand">
+    <div class="mark">B</div>
+    <div class="name">Bayan · Revenue Growth System<small>30-day · conversion-first · v3</small></div>
+  </div>
+  <a href="#answer">Answer</a>
+  <a href="#framework">Framework</a>
+  <a href="#calendar">30 Days</a>
+  <a href="#built">Built</a>
+  <a href="#library">Library</a>
+  <a href="#numbers">Numbers</a>
+  <a href="#decisions">Decisions</a>
+</nav>
+
+<main>
+
+<div class="hero">
+  <div class="kicker">For Dr. Abdullah · 2026-10-05 · ready for your go</div>
+  <h1>One system, aimed at <em>revenue</em> —<br>with the whole week of built work one click open.</h1>
+  <p class="lead">This plan responds to your review of 29 September: conversion before traffic, numbers not promises, execution not frameworks. The surface here is short on purpose — but nothing is hidden: <b>every claim links to the actual finished work</b> (§05 Library, 60 items). Read the boxes only, or open everything. Your pace.</p>
+  <div class="statrow">
+    <div class="stat"><b>~1,300</b><span>registered users</span></div>
+    <div class="stat bad"><b>&lt;1%</b><span>pay today · $277 lifetime</span></div>
+    <div class="stat bad"><b>5.0s</b><span>mobile load (target &lt;2.5s)</span></div>
+    <div class="stat target"><b>3→5→7%</b><span>of addressable base, M1–M3</span></div>
+    <div class="stat target"><b>60</b><span>finished work files, linked below</span></div>
+  </div>
+</div>
+
+<!-- ================= 1. ANSWER ================= -->
+<section id="answer">
+  <h2><span class="idx">01 · The one-minute answer</span>You were right — and there is a fact under it that changes the plan.</h2>
+  <p class="sub">Read this box and you know the whole strategy; everything after it is evidence, schedule, and the work library.</p>
+  <div class="panel">
+    <p style="color:#c3ccdb;font-size:14px;max-width:760px">Paid-access enforcement began <b>1 May 2026</b>. Every account created before that keeps full free access, permanently — plus 13 humanitarian free-access countries. So a large share of the 1,300 <em>cannot</em> pay: they already have everything. The real, convertible base is far smaller, and it has never been measured. So Week 1 is not copywriting — it is <b>segmentation + funnel instrumentation first</b>, then the conversion levers aimed only at users who can actually buy. On the levers themselves: activation (first value in session one), lifecycle nurture (trial→paid sequence), and a mid-tier price rung. Zero ad spend throughout.</p>
+  </div>
+</section>
+
+<!-- ================= 2. FRAMEWORK ================= -->
+<section id="framework">
+  <h2><span class="idx">02 · The system this plugs into</span>Revenue is a pipeline. We assessed the two stages that decide it.</h2>
+  <p class="sub">Your business runs the same pipeline every company runs — six stages, one flow. We ran a structured assessment of the two stages that directly decide revenue, <b>Lead→Sale</b> and <b>Sale→Delivery</b>. You don't need to learn the framework; you only need to know every task in this plan traces to one of these two stages and to a number. Click either focus stage for what the assessment found. <span class="tiny">(The full strategy stack behind it — the eight strategic planning cores from ICP to partnerships, plus the two enabling gates — is written up here: <a href="deepseek_html_20261003_ab3888.html" style="color:var(--bayan2)">the strategic+revenue framework</a>.)</span></p>
+
+  <div class="fw">
+    <div class="stage"><h4>Market</h4><p>reach &amp; awareness — compounding track, underneath</p></div>
+    <div class="stage focus"><h4>Lead→Sale</h4><p>the conversion engine — priority #1</p></div>
+    <div class="stage focus"><h4>Sale→Delivery</h4><p>payment → first value — priority #1</p></div>
+    <div class="stage assessed"><h4>Delivery→Success</h4><p>retention &amp; word of mouth — assessed, queued</p></div>
+    <div class="stage"><h4>Success→Referral</h4><p>later phase</p></div>
+    <div class="stage"><h4>Success→Advocacy</h4><p>later phase</p></div>
+  </div>
+
+  <div style="height:14px"></div>
+
+  <details class="acc">
+    <summary><span class="chev">›</span><span class="ttl">Extensive Assessment Reveals Serious Breakdowns in the Lead-to-Sale Process — and How to Fix Them</span><span class="hint">open for detail + links</span></summary>
+    <div class="body">
+      <p><b>What the assessment found</b> (ranked by revenue blocked):</p>
+      <ul>
+        <li><b>No measurement</b> — the funnel emits no events; "why don't they pay" is currently unanswerable with data. → <a href="sales-diagnostic-assessment-results.html" style="color:var(--bayan2)">sales diagnostic &amp; assessment</a></li>
+        <li><b>Grandfathering + free-country structure</b> — a large share of the 1,300 already has full free access (your decision; we pull numbers and propose only). → <a href="deepseek_html_20261003_8eb800.html" style="color:var(--bayan2)">CEO decision briefs</a></li>
+                <li><b>Price-ladder gap</b> — free jumps straight to $9.99–29/mo; no single-exam pass. → <a href="deepseek_html_20261003_8eb800.html" style="color:var(--bayan2)">CEO decision briefs</a></li>
+        <li><b>No nurture</b> — users sign up, hit the 5-question/day wall, go quiet. → <a href="deepseek_html_20261003_7fd01e.html" style="color:var(--bayan2)">growth engine design</a></li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="acc">
+    <summary><span class="chev">›</span><span class="ttl">Three Screens Decide the Revenue — and They're the Weakest in the Flow: Findings and Fixes</span><span class="hint">open for detail + links</span></summary>
+    <div class="body">
+      <p><b>What the assessment found:</b></p>
+      <ul>
+        <li><b>The payment path itself is unverified</b> — no test purchase has ever been recorded end-to-end.</li>
+        <li><b>First value is unmeasured and slow</b> — mobile load is 5.0 seconds; a live QA walkthrough also found two silent product defects (blocked analytics events + two broken authenticated queries). → <a href="deepseek_html_20261003_f32e4e.html" style="color:var(--bayan2)">Product QA report (72/100, with screenshots)</a></li>
+        <li><b>Three screens decide most of the revenue</b> — first-login diagnostic, the "your gap" screen, and the paywall — currently the weakest screens in the flow. → <a href="deepseek_html_20261004_987981.html" style="color:var(--bayan2)">UX audit — before/after (interactive)</a></li>
+      </ul>
+      <p><b>What the 30 days do about it:</b> a live checkout test purchase (W1), a first-value audit (W2), and a redesign of the three revenue screens — the mockups you have already seen and liked are the direction. If you approve the revenue-flow redesign, we recommend doing the <b>whole product UI as one consistent system</b>, not a patched section, so the app doesn't read as two different products.</p>
+    </div>
+  </details>
+
+  <div class="callout"><em>Build or hand off — your choice.</em> We deliver the designs and the solutions; we can implement them ourselves, or hand them to your existing team ready-to-build. The same established system we used to produce all 60 files in §05 keeps the effort and calendar short either way — it is a repeat of a working machine, not a from-scratch build.</div>
+</section>
+
+<!-- ================= 3. CALENDAR ================= -->
+<section id="calendar">
+  <h2><span class="idx">03 · The 30 days</span>Weekly deliverables, each tied to a business metric.</h2>
+  <p class="sub">Conversion and revenue (Lead→Sale) run every week. Market-to-Lead content, social and Instagram build underneath it. Items marked <span class="tag dec">decision</span> need you — but never to start; only for the two structural calls in Week 3.</p>
+
+  <div class="wk">
+    <div class="wkhead"><b>Week 1</b><span>Diagnose + first landing pages</span></div>
+    <div class="wkbody">
+      <table>
+        <tr><th>Deliverable</th><th>Business-metric impact</th></tr>
+        <tr><td><b>Non-payer segmentation report</b> — grandfathered / free-country / addressable / dormant, cross-tabbed by activity</td><td>Defines the true denominator A — every later number stands on it</td></tr>
+        <tr><td><b>Funnel instrumentation live</b> — 10 core events, 6-rate baseline dashboard <span class="tiny">(<a href="analytics-events-spec.md" style="color:var(--bayan2)">spec already written</a> (markdown))</span></td><td>"Why don't they pay" becomes answerable with data</td></tr>
+        <tr><td><b>3 landing pages drafted</b> — top winnable exam page · free diagnostic opt-in · upgrade/pricing page <span class="tiny">(style reference: <a href="deepseek_html_20261001_dd03fb.html" style="color:var(--bayan2)">11-section site, already drafted trilingually</a>)</span></td><td>The conversion surfaces themselves; compliance-passed</td></tr>
+        <tr><td><b>One locked question count</b> across all surfaces</td><td>Removes the credibility leak under every page</td></tr>
+        <tr><td><b>Checkout test purchase</b>, end-to-end</td><td>Proves the payment path works before any campaign</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="wk">
+    <div class="wkhead"><b>Week 2</b><span>Activation + the trial→paid trigger</span></div>
+    <div class="wkbody">
+      <table>
+        <tr><th>Deliverable</th><th>Business-metric impact</th></tr>
+        <tr><td><b>Onboarding flow</b> — first-login diagnostic → "your gap" screen → matching question bank</td><td>Activation rate; first value in session one</td></tr>
+        <tr><td><b>Trial→paid SOP live</b> — day-1 value, mid-trial, 3-days-before-expiry, expiry offer</td><td>Direct trial→paid conversion lever</td></tr>
+        <tr><td><b>Paywall moment</b> at the 5-Q/day wall — clear, non-aggressive</td><td>The single highest-leverage screen; tracked</td></tr>
+        <tr><td><b>First-value audit</b> — documented path + blocker list <span class="tiny">(baseline: <a href="deepseek_html_20261003_f32e4e.html" style="color:var(--bayan2)">QA report</a>)</span></td><td>Time-to-first-answer, the strongest paid predictor</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="wk">
+    <div class="wkhead"><b>Week 3</b><span>Reactivate the base + mid-tier + the social engine</span></div>
+    <div class="wkbody">
+      <table>
+        <tr><th>Deliverable</th><th>Business-metric impact</th></tr>
+        <tr><td><b>Winback drip</b> to the addressable dormant cohort — education-based, email + Telegram</td><td>Revives users who can pay, at zero media cost</td></tr>
+        <tr><td><b>Single-exam / exam-window pass SKU</b> <span class="tag dec">price = your call</span></td><td>Opens the ladder to one-exam candidates; timed to the next sitting</td></tr>
+        <tr><td><b>Grandfathering proposal</b> <span class="tag dec">decision</span> — count + $ at risk + gentle options</td><td>The largest single structural lever; pull + propose only</td></tr>
+        <tr><td><b>Instagram engine, first cohort</b> — exam-path content rhythm, first two weeks scheduled <span class="tiny">(<a href="https://github.com/hiwasham/AITransforms/tree/main/marketing-plans/bayan/nasim/" style="color:var(--bayan2)">Nasim's proposals</a> · <a href="https://github.com/hiwasham/AITransforms/blob/main/marketing-plans/bayan/Social%20Cadence%20Starter%20%E2%80%94%20X%20%2B%20Telegram.html" style="color:var(--bayan2)">draft calendar</a>)</span></td><td>Market-to-Lead pipeline feeding the landing pages</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="wk">
+    <div class="wkhead"><b>Week 4</b><span>Measure, report, decide</span></div>
+    <div class="wkbody">
+      <table>
+        <tr><th>Deliverable</th><th>Business-metric impact</th></tr>
+        <tr><td><b>30-day scorecard</b> — 6 funnel rates before/after, new paid count, MRR added, cost</td><td>The go/no-go evidence for months 2–3</td></tr>
+        <tr><td><b>Lever attribution</b> — which lever (activation / nurture / price) moved what</td><td>Where to double down</td></tr>
+        <tr><td><b>Written recommendation</b> for months 2–3, incl. whether to unlock a small paid test <span class="tiny">(<a href="magister-2026-10-04/bayan-paid-test-draft.md" style="color:var(--bayan2)">paid-test draft already written</a> (markdown))</span></td><td>Next 60 days decided on data, not opinion</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4. BUILT ================= -->
+<section id="built">
+  <h2><span class="idx">04 · Already built while you waited</span>The week of delay was build time — the inventory is in the Library.</h2>
+  <p class="sub">These are finished drafts, waiting only on your go. None required new headcount or paid spend. Each item below links to the actual files in <a href="#library" style="color:var(--bayan2)">§05 — the Work Library</a> (60 items); we kept this surface short on purpose so nothing overwhelms — the depth is one click away.</p>
+
+  <details class="acc">
+    <summary><span class="chev">›</span><span class="ttl">The full marketing site — 11 sections, three languages</span><span class="tag done">drafted</span><span class="hint">see the files →</span></summary>
+    <div class="body"><p>Header, hero, problem, framework, services, AI-assistant spotlight, example work, founder, resources, CTA, footer — every section written and reviewed against Bayan's content locks, in English, Persian and Arabic with correct RTL. Open <a href="deepseek_html_20261001_dd03fb.html" style="color:var(--bayan2)">the full trilingual site draft</a> to read all 11 sections with their text.</p></div>
+  </details>
+
+  <details class="acc">
+    <summary><span class="chev">›</span><span class="ttl">UX &amp; product audit of the live app</span><span class="tag done">done</span><span class="hint">2 linked reports</span></summary>
+    <div class="body">
+      <p>A live, logged-in QA walkthrough of the product — health scored 72/100, two silent defects found (blocked analytics events, two broken authenticated queries), every surface ranked by conversion impact, and the three revenue screens deep-dived with before/after directions. The mockups you saw and liked are this direction.</p>
+      <ul>
+        <li><a href="deepseek_html_20261003_f32e4e.html" style="color:var(--bayan2)">Product QA report</a> — with screenshots of the four key screens</li>
+        <li><a href="deepseek_html_20261004_987981.html" style="color:var(--bayan2)">UX audit — before/after</a> — interactive HTML, drag to compare</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="acc">
+    <summary><span class="chev">›</span><span class="ttl">Search &amp; AI-visibility work</span><span class="tag done">done</span><span class="hint">audit + 10 pages + 6 fixes</span></summary>
+    <div class="body">
+      <ul>
+        <li><b>Full site SEO audit</b> — scored, with the prioritized fix list. → <a href="seo-site-audit-5361ad1b-6925-49b7-ba63-133e9da0441e.md" style="color:var(--bayan2)">seo-site-audit</a> · <a href="Bayan%20SEO%20Audit%20%C2%B7%202026-09-27.html" style="color:var(--bayan2)">interactive audit (HTML)</a></li>
+        <li><b>AI-visibility audit</b> — 14 prompts × 5 engines; Bayan scores 4–7 on un-branded category questions today.</li>
+        <li><b>6 technical GEO fixes drafted</b> with a deploy runbook. → <a href="geo-fixes/" style="color:var(--bayan2)">geo-fixes/ folder (7 files)</a></li>
+        <li><b>10 exam pages drafted</b> (Prometric hub + 9 exams). → <a href="content-prometric/" style="color:var(--bayan2)">content-prometric/ folder (11 files)</a></li>
+        <li><b>Keyword map</b> — including one search Bayan already ranks #28 for at zero difficulty.</li>
+        <li><b>Days 31–60 content, 7 pieces</b> (MRCP, ABG, SMLE-vs-OMSB, OMSB). → <a href="content-days31-60/" style="color:var(--bayan2)">content-days31-60/ folder (7 files)</a></li>
+      </ul>
+      <p class="tiny">These run as the compounding track underneath the conversion sprint — trackers live, not leading.</p>
+    </div>
+  </details>
+
+  <details class="acc">
+    <summary><span class="chev">›</span><span class="ttl">Nasim's Instagram &amp; social system</span><span class="tag done">ready</span><span class="hint">see her proposals →</span></summary>
+    <div class="body">
+      <p>A per-exam-path content system (SMLE, OMSB, nursing each get their own rhythm), built on proven carousel and short-form-video architectures: every post has one job and a reason to keep swiping; slide 1 is the thumbnail that earns the tap; one visual template per series so the brand compounds. Mascots Bissan &amp; Gassan carry the personality. Months 1–3 each end in one data decision; Nasim runs production, publishing, monitoring and reporting, with competitor analysis alongside.</p>
+      <ul>
+        <li><a href="nasim/Bayan-Instagram-AI-Design-Proposal-Updated-EN-v2.pdf" style="color:var(--bayan2)">Instagram Management &amp; AI Design Proposal (EN, v2)</a> — the full system Nasim designed</li>
+        <li><a href="nasim/%D9%BE%D8%B1%D9%88%D9%BE%D9%88%D8%B2%D8%A7%D9%84_%D9%85%D8%AF%DB%8C%D8%B1%DB%8C%D8%AA_Instagram_%D9%88_AI_Design_%E2%80%94_Bayan.pdf" style="color:var(--bayan2)">Arabic proposal (RTL)</a></li>
+        <li><a href="https://github.com/hiwasham/AITransforms/blob/main/marketing-plans/bayan/Social%20Cadence%20Starter%20%E2%80%94%20X%20%2B%20Telegram.html" style="color:var(--bayan2)">Draft exam-specific social calendar</a></li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="acc">
+    <summary><span class="chev">›</span><span class="ttl">B2B / institutional track</span><span class="tag done">sized + SOP</span><span class="hint">open for the sizing →</span></summary>
+    <div class="body">
+      <p>B2C conversion is priority #1 and stays that way. B2B runs alongside as a warm-book lane owned by Nasim — no cold outreach (it replies at 0.2% and would waste the month). The sizing is done and honest: seat revenue alone is small; the track pays as credibility and distribution — anchor logos, free institutional seats feeding the B2C funnel, and the one number that flips the verdict: average negotiated contract value per institution.</p>
+      <ul>
+        <li><a href="bayan-b2b-sizing-memo.md" style="color:var(--bayan2)">B2B market-sizing memo</a> — TAM/SAM/SOM with sources and confidence tags</li>
+        <li><a href="deepseek_html_20261003_3d3af4.html" style="color:var(--bayan2)">B2B operating track</a> — warm-book moves + the repeatable SOP</li>
+        <li><b>Needs from you when you're ready:</b> the institute-negotiation details you mentioned to Nasim, and the commission/percentage expectations and calculation method for B2B sales so proposals are written correctly the first time.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="acc">
+    <summary><span class="chev">›</span><span class="ttl">Measurement &amp; consistency layer</span><span class="tag done">spec'd</span><span class="hint">see the spec →</span></summary>
+    <div class="body">
+      <p>The 10 core trial→paid events and 6-rate funnel dashboard spec (vendor-neutral, PostHog-first) — the layer Week 1 implements. Plus one approved source of truth for Bayan's facts: the question count currently appears as 8 different values across live surfaces, and the two sites name two different companies. You approve the official numbers once; after that an automatic check flags any page that disagrees. It reads public pages only and changes nothing without your sign-off.</p>
+      <ul>
+        <li><a href="analytics-events-spec.md" style="color:var(--bayan2)">Analytics events spec</a></li>
+        <li><a href="https://github.com/hiwasham/AITransforms/blob/main/marketing-plans/bayan/The%20Bayan%20Product%20Brain.html" style="color:var(--bayan2)">The facts source-of-truth proposal</a> — with the live drift report as of 29 Sep</li>
+      </ul>
+    </div>
+  </details>
+
+  <div class="callout"><em>The same system, proven elsewhere.</em> All of the above was produced with an established, repeatable working system — the same one behind multilingual marketing and site builds we have delivered for other clients (e.g. the IranFluent/tprsbooks ecosystem). That is why the volume above took days, not months, and why months 2–3 stay fast.</div>
+</section>
+
+<!-- ================= 5. LIBRARY ================= -->
+<section id="library">
+  <h2><span class="idx">05 · The work library</span>Every finished file from the last week — 60 items, clickable.</h2>
+  <p class="sub">This is the proof behind every claim in this plan. Each link opens the actual file — no summaries in between. Click a category to expand it. (Files open on GitHub; use the <b>download</b> button there to open any HTML page in your browser.)</p>
+  <div class="lib-head">
+    <div class="lib-count">60 finished work files · one week · zero paid spend</div>
+  </div>
+
+  <details class="cat" open>
+    <summary><span class="chev">›</span><span class="ttl">Strategy &amp; revenue system</span><span class="n">10 files</span></summary>
+    <div class="files">
+      <div class="file"><span class="doc">📄</span><a href="deepseek_html_20261003_ab3888.html">Strategic planning cores</a><span class="d">the full framework: 8 strategic cores (ICP → partnership) + 2 enabling gates, incl. competitive intelligence</span></div>
+      <div class="file"><span class="doc">📄</span><a href="deepseek_html_20261003_2db0f0.html">Revenue integration strategy</a><span class="d">the full Lead→Sale→Delivery→Success funnel design</span></div>
+      <div class="file"><span class="doc">📄</span><a href="deepseek_html_20261003_7fd01e.html">Growth engine design</a><span class="d">SEO + AI-visibility + social engine, 90-day live plan</span></div>
+      <div class="file"><span class="doc">🌐</span><a href="sales-diagnostic-assessment-results.html">Sales diagnostic &amp; assessment</a><span class="d">the 5 reasons users don't pay, ranked by $ blocked</span></div>
+      <div class="file"><span class="doc">📄</span><a href="bayan-b2b-sizing-memo.md">B2B market-sizing memo</a><span class="d">Gulf institutional TAM/SAM/SOM, sources + confidence — markdown, opens on GitHub</span></div>
+      <div class="file"><span class="doc">📄</span><a href="deepseek_html_20261003_3d3af4.html">B2B institutional track</a><span class="d">the warm-book B2B track + repeatable SOP</span></div>
+      <div class="file"><span class="doc">📄</span><a href="deepseek_html_20261003_8eb800.html">CEO decision briefs</a><span class="d">grandfathering options + mid-tier SKU pricing briefs</span></div>
+      <div class="file"><span class="doc">📄</span><a href="deepseek_html_20261003_c1b5cf.html">Conversion numbers annex</a><span class="d">the conversion model, inputs shown</span></div>
+      <div class="file"><span class="doc">📄</span><a href="analytics-events-spec.md">Analytics events spec</a><span class="d">vendor-neutral event taxonomy, 10 core trial→paid events</span></div>
+      <div class="file"><span class="doc">📄</span><a href="bayan-shared-language.md">Shared language &amp; compliance locks</a><span class="d">brand + compliance + product vocabulary locks</span></div>
+    </div>
+  </details>
+
+  <details class="cat">
+    <summary><span class="chev">›</span><span class="ttl">The marketing site — 11 sections, trilingual</span><span class="n">1 master + 10 draft folders</span></summary>
+    <div class="files">
+      <div class="file"><span class="doc">🌐</span><a href="deepseek_html_20261001_dd03fb.html">The 11-section site, trilingual</a><span class="d">all 11 sections (header → footer), EN / FA / AR (RTL)</span></div>
+      <div class="file"><span class="doc">📁</span><a href="https://github.com/hiwasham/AITransforms/tree/main/marketing-plans/bayan/work-2026-10-04">work-2026-10-04/</a><span class="d">10 fresh drafts: SEO page map &amp; briefs, Gulf licensing guide, ABG answer page, FAQ schema, BLUF+meta fixes, llms files, paid test, social calendar</span></div>
+    </div>
+  </details>
+
+  <details class="cat">
+    <summary><span class="chev">›</span><span class="ttl">UX &amp; product QA</span><span class="n">2 reports + 4 screenshots</span></summary>
+    <div class="files">
+      <div class="file"><span class="doc">🌐</span><a href="deepseek_html_20261003_f32e4e.html">Product QA &amp; improvement report</a><span class="d">live logged-in product QA — 72/100, two silent defects, fix list</span></div>
+      <div class="file"><span class="doc">🖼</span><a href="qa-report/screenshots/">QA screenshots</a><span class="d">landing · dashboard · analytics · OSCE</span></div>
+      <div class="file"><span class="doc">🌐</span><a href="deepseek_html_20261004_987981.html">UX audit — before/after</a><span class="d">three revenue screens, drag to compare</span></div>
+    </div>
+  </details>
+
+  <details class="cat">
+    <summary><span class="chev">›</span><span class="ttl">SEO / AI-visibility / GEO</span><span class="n">2 audits + 7 fix files</span></summary>
+    <div class="files">
+      <div class="file"><span class="doc">📄</span><a href="seo-site-audit-5361ad1b-6925-49b7-ba63-133e9da0441e.md">Site audit (markdown)</a><span class="d">full site audit, prioritized fixes</span></div>
+      <div class="file"><span class="doc">🌐</span><a href="Bayan%20SEO%20Audit%20%C2%B7%202026-09-27.html">Bayan SEO Audit (interactive HTML)</a><span class="d">the same audit, browsable</span></div>
+      <div class="file"><span class="doc">📁</span><a href="geo-fixes/">geo-fixes/</a><span class="d">llms.txt · llms-full.txt · FAQ schema · BLUF homepage rewrite · meta description · noscript fallback · DEPLOY runbook</span></div>
+    </div>
+  </details>
+
+  <details class="cat">
+    <summary><span class="chev">›</span><span class="ttl">Exam pages &amp; content</span><span class="n">11 + 7 files</span></summary>
+    <div class="files">
+      <div class="file"><span class="doc">📁</span><a href="content-prometric/">content-prometric/</a><span class="d">HUB + DHA · SMLE · QCHP · nursing · Oman MOH · NHRA · pharmacist · physiotherapist · lab-technician pages</span></div>
+      <div class="file"><span class="doc">📁</span><a href="content-days31-60/">content-days31-60/</a><span class="d">MRCP Part 1 samples · ABG interpretation · SMLE-vs-OMSB · OMSB prep · why-Bayan · social cadence starter</span></div>
+    </div>
+  </details>
+
+  <details class="cat">
+    <summary><span class="chev">›</span><span class="ttl">Nasim's Instagram &amp; AI design system</span><span class="n">3 proposals</span></summary>
+    <div class="files">
+      <div class="file"><span class="doc">📕</span><a href="nasim/Bayan-Instagram-AI-Design-Proposal-Updated-EN-v2.pdf">Instagram Management &amp; AI Design Proposal — EN v2</a><span class="d">the full 3-month system, per exam path</span></div>
+      <div class="file"><span class="doc">📕</span><a href="nasim/Instagram%20Management%20%26%20AI%20Design%20Proposal%20%E2%80%94%20Bayan.pdf">Instagram Management &amp; AI Design Proposal — original EN</a><span class="d">first version</span></div>
+      <div class="file"><span class="doc">📕</span><a href="nasim/%D9%BE%D8%B1%D9%88%D9%BE%D9%88%D8%B2%D8%A7%D9%84_%D9%85%D8%AF%DB%8C%D8%B1%DB%8C%D8%AA_Instagram_%D9%88_AI_Design_%E2%80%94_Bayan.pdf">پروپوزال مدیریت Instagram و AI Design — فارسی</a><span class="d">the same proposal, in Persian</span></div>
+    </div>
+  </details>
+
+  <details class="cat">
+    <summary><span class="chev">›</span><span class="ttl">Product research &amp; archive</span><span class="n">the deep evidence base</span></summary>
+    <div class="files">
+      <div class="file"><span class="doc">🌐</span><a href="deepseek_html_20261003_59e77e.html">Marketing research record</a><span class="d">the full Bayan market/product research base</span></div>
+      <div class="file"><span class="doc">📁</span><a href="product-archive/">product-archive/</a><span class="d">15 documented product areas — pricing model, QA pipeline, onboarding journey, gamification, study plans, flashcards + GAPS.md</span></div>
+      <div class="file"><span class="doc">📁</span><a href="https://github.com/hiwasham/AITransforms/tree/main/marketing-plans/bayan/work-archive">work-archive/</a><span class="d">the working archive: audits, workspace docs, brand and plan records</span></div>
+    </div>
+  </details>
+
+  <div class="callout"><em>How to read this library:</em> you never have to. This section exists so the work is <b>verifiable</b>, not required reading. If you want one file only, open <a href="deepseek_html_20261003_f32e4e.html" style="color:var(--bayan2)">the product QA report</a> — it is the one that found the two silent defects.</div>
+</section>
+
+<!-- ================= 6. NUMBERS ================= -->
+<section id="numbers">
+  <h2><span class="idx">06 · The numbers</span>Specific, with inputs shown — re-baselined against real data in Week 1.</h2>
+  <p class="sub">Targets sit on the <b>addressable base A</b> (Week 1 pins it down), not the vanity 1,300. Freemium free→paid benchmarks: ~2.6% EdTech average, 3.7% SaaS, 4–5% good, 6–8% best-in-class. Bayan is under 1% today — the headroom is real. Full model: <a href="deepseek_html_20261003_c1b5cf.html" style="color:var(--bayan2)">the numbers annex</a>.</p>
+  <div class="panel">
+    <table>
+      <tr><th></th><th>Month 1</th><th>Month 2</th><th>Month 3</th></tr>
+      <tr><td><b>Cumulative conversion of A</b></td><td>3%</td><td>5%</td><td>7%</td></tr>
+      <tr><td><b>If A = 400 → cumulative paid</b></td><td>12</td><td>20</td><td>28</td></tr>
+      <tr><td><b>New buyers each month</b></td><td>12</td><td>8</td><td>8</td></tr>
+      <tr><td><b>MRR run-rate @ $16/mo</b></td><td>$192</td><td>$320</td><td>$448</td></tr>
+      <tr><td><b>Incremental MRR</b></td><td>+$192</td><td>+$128</td><td>+$128</td></tr>
+    </table>
+    <p class="tiny" style="margin-top:12px">12/20/28 are cumulative; only 12/8/8 are new each month. Recurring → run-rate; a one-time exam pass is receipts, not MRR. A, price, and sub-vs-pass mix are [confirm in Week 1]. CAC on the existing base ≈ $0 media; fully-loaded cost reported separately. Paid acquisition stays $0 until the funnel proves organic conversion (EdTech benchmarks: ~$10–150/signup, ~$50–300/paying customer — enter only at LTV:CAC ≥ 3:1). Sprint budget: $0 ads; tooling ~$0–150/mo; a $300–500 paid test only if Week-4 data justifies it.</p>
+  </div>
+</section>
+
+<!-- ================= 7. DECISIONS ================= -->
+<section id="decisions">
+  <h2><span class="idx">07 · What we need from you</span>One go to start. Five items, later, at your pace.</h2>
+  <p class="sub">Nothing below blocks Week 1. The first item is the only one needed this week.</p>
+  <div class="panel">
+    <table>
+      <tr><th style="width:38%">Item</th><th>When needed</th></tr>
+      <tr><td><b>1. The go</b> — Week 1 ships immediately: segmentation, instrumentation, first 3 landing pages in your hands by end of week</td><td><span class="dec">This week</span></td></tr>
+      <tr><td><b>2. Grandfathering decision</b> — count + $ at risk + convert/sunset options on your desk; no migration without sign-off. <span class="tiny">(<a href="deepseek_html_20261003_8eb800.html" style="color:var(--bayan2)">decision briefs ready</a>)</span></td><td>Week 3</td></tr>
+      <tr><td><b>3. Mid-tier SKU price</b> — the single-exam pass, timed to the next sitting</td><td>Week 3</td></tr>
+      <tr><td><b>4. B2B context</b> — institute-negotiation details you mentioned to Nasim; commission/percentage expectations and calculation method</td><td>When ready</td></tr>
+      <tr><td><b>5. Email list + any ongoing activities</b> — existing list size/source/tooling so campaigns and launches are planned on reality; and anything already in motion we should stay consistent with</td><td>When ready</td></tr>
+    </table>
+  </div>
+  <div class="callout amber"><em>Not in this sprint:</em> the wider "knowledge brain" build you declined — only the locked-facts core the marketing genuinely needs, folded in at no extra cost. Turkey: parked, brought back only with a specific event or partner that pays for the trip; Nasim will walk you through the trip's tickets, receipts and documents separately.</div>
+</section>
+
+<!-- ================= 8. GUARDRAILS ================= -->
+<section>
+  <h2><span class="idx">08 · Guardrails</span>Non-negotiable for a medical brand.</h2>
+  <div class="panel">
+    <ul style="margin-left:17px;color:#c3ccdb;font-size:13.5px">
+      <li style="margin-bottom:6px">No pass or outcome guarantees, ever — "on the first attempt" is banned.</li>
+      <li style="margin-bottom:6px">Never bare "AI-powered" — always "AI assists with drafting; humans own what reaches learners."</li>
+      <li style="margin-bottom:6px">"Gulf Licensing Exam Preparation," not bare "Prometric"; no NCLEX/US framing in Gulf copy.</li>
+      <li style="margin-bottom:6px">Verified counts only — one locked question number; nothing invented; no fake scarcity around a licensing career.</li>
+      <li style="margin-bottom:6px">Grandfathering touches real users — pull + propose only.</li>
+      <li>Draft-first: no page goes live, no email sends, no ad money spent without your sign-off.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  Bayan AI Technologies · Revenue Growth System v3 · 2026-10-05 · prepared by Nasim &amp; Hiwa (AITransforms)<br>
+  Attach this file with the email, or open it in any browser — it is fully self-contained, and every link opens the real work file on GitHub.<br>
+  60 work files · 15 accordions · 7 library categories — short by design; deep by demand.
+</footer>
+
+</main>
+
+</body>
+</html>

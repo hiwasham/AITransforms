@@ -1,9 +1,0 @@
-# Verbatim API capture — carries per-page account PII (email, phone, consent IP,
-# owner name). Kept locally for re-runs; the rendered Markdown tree is the
-# committed, PII-scrubbed deliverable.
-raw-json/
-
-# Local session state / credential material (never commit)
-*-creds.md
-*jar.txt
-.tools/__pycache__/
