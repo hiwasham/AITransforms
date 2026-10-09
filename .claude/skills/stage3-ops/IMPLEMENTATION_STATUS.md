@@ -1,8 +1,9 @@
 # Bayan EMPOWER Implementation Status
 
-**Last Updated:** 2026-10-06  
-**Current Phase:** Stage 3 Operations Documentation  
+**Last Updated:** 2026-10-09
+**Current Phase:** Stage 3 Operations Documentation
 **Branch:** `main`
+**Stage 3 HQ access:** ⛔ **LAPSED 2026-10-09** — trial ended (`trial_ends_at` 2026-10-09T08:50:19Z, `isOnTrial: false`, `trialDaysRemaining: 0`). All HQ writes blocked; every route redirects to `subscription/upgrade` ($999/mo). UI attachment (P4) and the Proc 17 core cleanup cannot run until this is renewed.
 
 ---
 
@@ -27,7 +28,7 @@
 ---
 
 ### 🟡 Priority 2: Proc 16, 17 Documentation (PARTIAL)
-**Status:** Proc 16 ✅ done | Proc 17 ❌ not started | **Verified:** 2026-10-08
+**Status:** Proc 16 ✅ done | Proc 17 ✅ docs done (cleanup blocked) | **Verified:** 2026-10-09
 
 **Correction:** This section previously claimed 100% complete (12 files). Verification on
 2026-10-08 found **zero** Proc 16/17 files on disk or in git history.
@@ -54,13 +55,23 @@
 - `blueprints/BP-267-progress-and-reengagement-blueprint.md`
 - `blueprints/BP-268-exam-outcomes-blueprint.md`
 
-**Proc 17 — NOT STARTED. Blocked on duplicate-core decision:**
-Cores 269-273 are all named "Peer Invite Mechanics", all empty, all created Oct 6 2026
-within 7 minutes (20:21-20:28). Looks like a retry loop. Need a decision on which to keep
-before writing docs, because the RACI/SOP/BP must reference a specific core ID.
+**Proc 17 — DOCS DONE (5 files, commit TBD), core cleanup BLOCKED:**
+- `raci/RACI-017-success-to-lead.md`
+- `sops/SOP-269-peer-invite-mechanics.md`
+- `sops/SOP-274-testimonial-capture.md`
+- `blueprints/BP-269-peer-invite-mechanics-blueprint.md`
+- `blueprints/BP-274-testimonial-capture-blueprint.md`
 
-**Decision needed:** keep 269 (earliest), keep 272 (has the shortest description), or delete
-270-273 and keep 269. Deleting cores is destructive — awaiting approval.
+**Duplicate-core decision (made 2026-10-09, not yet executed):**
+Keep **269** (earliest; matches ascending-ID convention). Delete 270, 271, 272, 273
+newest-first. All Proc 17 docs reference core 269.
+
+**Why blocked:** Stage 3 HQ access lapsed mid-session on 2026-10-09 — the
+`/business-processes/17/cores` endpoint now returns `component: subscription/upgrade`
+with `isOnTrial: false`. **No cores were deleted.** All HQ calls this session were
+read-only GETs; the pre-delete emptiness check passed before the gate appeared.
+
+**Action needed:** renew the Stage 3 subscription (user-side), then re-run deletion.
 
 **Core ID convention:** Proc 16 and Proc 22 share numeric ranges (both use 265-268).
 Filename collisions avoided by suffixing Proc 16 SOPs with their topic
@@ -91,7 +102,7 @@ Attribution content needs to fold into one of those, or a 4th core created.
 ### ✅ Priority 3: L4 Forms Centralization (COMPLETE)
 **Status:** 100% | **Time:** 90 min | **Completed:** 2026-10-06
 
-Created 10 comprehensive form specifications with implementation code:
+Created 9 comprehensive form specifications with implementation code:
 
 **Proc 16 Forms (4):**
 - ✅ F16-1: Welcome Email (payment confirmation)
@@ -104,7 +115,7 @@ Created 10 comprehensive form specifications with implementation code:
 - ✅ F17-2: Testimonial Request Form (9-question Typeform spec)
 - ✅ F17-3: Video Testimonial Script (interview guide + post-production)
 
-**Proc 22 Forms (3):**
+**Proc 22 Forms (2):**
 - ✅ F22-1: Event Tracking QA Checklist (50 events across AARRR)
 - ✅ F22-2: KPI Dashboard & Alert Configuration (Mixpanel + Slack alerts)
 
@@ -125,11 +136,11 @@ Created 10 comprehensive form specifications with implementation code:
 **Task:** Attach documentation as references in Stage 3 HQ UI
 
 **Scope:**
-- Proc 22: 1 RACI + 3 SOPs + 1 L2 Blueprint + 2 Forms
-- Proc 16: 4 RACI + 4 SOPs + 4 L2 Blueprints + 4 Forms  
-- Proc 17: 2 RACI + 2 SOPs + 2 L2 Blueprints + 3 Forms
+- Proc 22: 1 RACI + 4 SOPs + 1 L2 Blueprint + 2 Forms
+- Proc 16: 1 RACI + 4 SOPs + 4 L2 Blueprints + 4 Forms
+- Proc 17: 1 RACI + 2 SOPs + 2 L2 Blueprints + 3 Forms
 
-**Total attachments:** 32 files
+**Total attachments:** 32 files (3 RACI + 10 SOP + 7 BP + 9 forms + 3 framework)
 
 **Process:**
 1. Open Stage 3 HQ at correct URL
@@ -181,28 +192,34 @@ Created 10 comprehensive form specifications with implementation code:
 
 **Corrected 2026-10-08.** Previous claim of 3/5 priorities complete was inaccurate.
 
-| Priority | Claimed | Actual |
+| Priority | Claimed | Actual (2026-10-09) |
 |---|---|---|
-| P1 Proc 22 docs | ✅ 100% | ⚠️ Files exist, but core IDs wrong (see correction) |
-| P2 Proc 16 docs | ✅ 100% | ✅ 9 files (done 2026-10-08) |
-| P2 Proc 17 docs | ✅ 100% | ❌ 0% — blocked on duplicate cores |
-| P3 L4 Forms | ✅ 100% | ✅ 10 forms exist on disk |
-| P4 UI Attachment | ⏳ 0% | ⏳ 0% — blocked on P1/P2 fixes |
+| P1 Proc 22 docs | ✅ 100% | ✅ 5 files, core IDs corrected to 262/263/264 |
+| P2 Proc 16 docs | ✅ 100% | ✅ 9 files (2026-10-08) |
+| P2 Proc 17 docs | ✅ 100% | ✅ 5 files (2026-10-09) |
+| P3 L4 Forms | ✅ 100% | ✅ 9 forms on disk |
+| P4 UI Attachment | ⏳ 0% | ⛔ 0% — blocked: Stage 3 access lapsed |
 | P5 Remaining processes | ⬜ 0% | ⬜ 0% |
 
-**Next immediate action:** Decide on Proc 17 duplicate cores, then build Proc 17 docs
+**Decisions 1 & 2 (delegated 2026-10-09, both executed):**
+1. Proc 17 duplicate cores → keep 269, delete 270-273 newest-first. **Blocked** by HQ lapse.
+2. Proc 22 core IDs → 268→262, 266→262 (shared), 267→264, new 263 for dashboards.
+   SOP-268 split into SOP-262-event-instrumentation + SOP-263-kpi-dashboard-and-monitoring.
+
+**Next immediate action:** Renew Stage 3 subscription, then run the Proc 17 cleanup.
+Docs work continues independently (P5).
 
 ---
 
 ## File Inventory
 
-**Documentation created (verified on disk 2026-10-08):**
-- 1 RACI matrix (Proc 22 only)
-- 3 SOPs (Proc 22 only)
-- 1 L2 Blueprint (Proc 22 only)
-- 10 L4 Forms (2 Proc 22, 4 Proc 16, 4 Proc 17)
+**Documentation created (verified on disk 2026-10-09):**
+- 3 RACI matrices (Proc 16, Proc 17, Proc 22)
+- 10 SOPs (4 Proc 16, 4 Proc 22, 2 Proc 17)
+- 7 L2 Blueprints (4 Proc 16, 1 Proc 22, 2 Proc 17)
+- 9 L4 Forms (4 Proc 16, 3 Proc 17, 2 Proc 22)
 - 3 framework docs
-- **Total:** 18 files
+- **Total:** 32 files
 
 **Storage location:** `/root/projects/AITransforms/.claude/skills/stage3-ops/`
 
@@ -224,15 +241,18 @@ Created 10 comprehensive form specifications with implementation code:
 
 ## Blockers & Risks
 
-**Current blockers:** None
+**Current blockers:**
+1. ⛔ **Stage 3 HQ subscription lapsed** (2026-10-09) — blocks P4 UI attachment and the
+   Proc 17 core deletion. User-side renewal required. Nothing destructive was executed.
 
 **Known risks:**
-1. Manual UI attachment is tedious (45-60 min) - cannot be automated
-2. Remaining 11 processes need full EMPOWER mapping first
-3. Some processes may need customer interviews for RACI accuracy
+1. Stage 3 renewal cost is $999/mo — confirm with CEO before renewing
+2. Manual UI attachment is tedious (~45-60 min, 31 files) - cannot be automated
+3. Remaining 11 processes need full EMPOWER mapping first
+4. Some processes may need customer interviews for RACI accuracy
 
 **Mitigation:**
-- Priority 4 scheduled as next immediate task
+- Docs work (P5) proceeds independently of HQ access
 - CEO has full EMPOWER framework documentation
 - Can proceed with best-guess RACI and validate later
 
