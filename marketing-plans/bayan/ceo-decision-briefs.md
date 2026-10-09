@@ -1,3 +1,6 @@
+[[JEV_INTEGRATION_AITransforms_bAYAN_COMPLETE_Bayan CEO decision briefs]]
+[[CEO_DECISION_FRAMEWORK]]
+...
 ![[deepseek_html_20261003_8eb800.html]]
 # Bayan — CEO Decision Briefs
 

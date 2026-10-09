@@ -41,3 +41,21 @@ Social goal: move from no rhythm → a repeatable, exam-specific cadence that re
 ## Measurement
 
 Track per-post saves/clicks where the platform allows. Decide channel emphasis after 2 weeks of data. `[TBD — connect X/Telegram to Magister for scheduling + analytics]`
+
+
+[[magistermarketing.com integration Publishing & Outreach]]
+
+https://magistermarketing.com/docs/publishing/social-and-ads
+# Built-in social posting & ads
+
+Magister can **publish social posts and run paid ad campaigns natively**, so you don't need a separate scheduling product. Connect the destination accounts from [Connections](https://magistermarketing.com/docs/integrations/connecting) and the agent drafts, schedules, and publishes.
+
+**Social platforms** — Instagram, X (Twitter), TikTok, LinkedIn, Facebook, Threads, YouTube, Pinterest, and Reddit. Scheduled posts show up on your [calendar](https://magistermarketing.com/docs/plans/calendar).
+
+**Paid ads** — launch and manage campaigns on **Meta**, **TikTok**, **LinkedIn**, **Pinterest**, and **X** ads. (Google Ads connects separately — see [Google Ads & SEO](https://magistermarketing.com/docs/integrations/google-ads-seo).)
+
+**Draft before live** — creating a social post produces a draft or schedule; publishing is the explicit go-live step. The public MCP catalog creates Meta and TikTok campaigns atomically paused. The full custom endpoint supports the other listed ad providers through create, immediate pause, and readback; an unresolved result must be verified before any activation. Starting spend remains a separate activation action.
+
+**Approvals** — social publishing and paid ads have separate ask-before categories. Paid-ad actions require their own connector scope and paid-spend approvals require a brand admin. Even MCP **Full access** does not include the paid-ads scope.
+
+**How you use it** — on Connect, direct the work from your external assistant. On Agent, ask in hosted chat or build a [workflow](https://magistermarketing.com/docs/workflows/what-are-workflows) for recurring creation. Live and spend actions follow [Permissions](https://magistermarketing.com/docs/connect/approvals-and-permissions).

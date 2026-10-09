@@ -1,3 +1,7 @@
+![[{09ECB646-199B-466D-9EB2-E2D7155FAF86}.png]]
+
+[[Fluent Customer Persona Profile-Game of Life Template-Claude-test-manual-samples-other warm leads]]
+
 Subject: made you a couple things for the England Healing Circles page
 
 Hi Chris,

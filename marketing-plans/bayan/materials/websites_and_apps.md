@@ -13,7 +13,7 @@ https://github.com/Datalux/Osintgram
 https://github.com/mcpware/instagram-mcp
 https://github.com/Morfeu333/instagram-video-analyzer-mcp
 https://github.com/0x0be/yesitsme
-[[deeplearning.ai crewai examples use cases-instagram]]
+[[deeplearning.ai crewai examples use cases-instagram-bayan-hiwa fps finland]]
 [[Github-coreyhaines31-Marketing skills for Claude Code-list-Marketing Plan-13-Idea Cross-Reference-specific client]]
 
 

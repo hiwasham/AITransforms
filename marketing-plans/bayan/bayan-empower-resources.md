@@ -1,3 +1,26 @@
+# [[2026-10-09]]
+
+
+● Done — and the outcome is better than the recovery I was bracing for. Here's the honest status.
+
+  Your request is satisfied: all the Market-to-Lead docs are on origin/main right now.
+  docs/processes/01-market-to-lead/
+  ├── 00-core-process.md          (L1)
+  ├── 01-blueprint-inbound.md     (L2 — Attract/Engage)
+  ├── 02-guide-blog-creation.md   (L3)
+  ├── 03-template-blog-post.md    (L4)
+  ├── 04-blueprint-lead-capture.md (L2 — Qualify/Route)  ← task #1
+  └── README.md 
+https://github.com/hiwasham/AITransforms/tree/main/docs/processes/01-market-to-lead
+
+
+
+
+wsl
+`claude --resume 6efb3575-4fb3-4209-af0d-41c41d63a1ab`
+ 
+/mnt/d/Obsidi1/03.Projects/AITransforms
+
 # Bayan EMPOWER Resources
 
 **Consolidated reference for all Bayan marketing frameworks, documentation, and Stage 3 implementation.**
