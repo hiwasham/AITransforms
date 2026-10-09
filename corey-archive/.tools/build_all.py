@@ -168,18 +168,22 @@ def build_classroom():
                             if (c.get("metadata") or {}).get("title") in order else 99)
     n = 0
     for course in courses_sorted:
-        md = course.get("metadata") or {}
-        title = md.get("title") or course.get("name")
+        # Skool classroom payload is nested one level: each course entry has
+        # .course (the course node w/ metadata) and .children (the lessons).
+        schema = course.get("course") or course
+        inn = schema.get("course") or schema
+        md = inn.get("metadata") or {}
+        title = md.get("title") or inn.get("name") or course.get("name")
         slug = f"{n+1:02d}-" + siteapi.slug(title, 40)
         n += 1
         base = f"01-classroom/{slug}"
         desc = pm_to_md(md.get("desc") or "")
         W(f"{base}/README.md",
           siteapi.fm(title=title, source=f"{GROUP_URL}/classroom", type="course",
-                     lessons=len(course.get("children") or [])) +
+                     lessons=len(schema.get("children") or [])) +
           f"\n# {title}\n\n{no_emails(desc)}\n")
         lessons_md = []
-        for i, node in enumerate(course.get("children") or []):
+        for i, node in enumerate(schema.get("children") or []):
             c = node.get("course") or {}
             lmd = c.get("metadata") or {}
             lid = c.get("id")
@@ -198,7 +202,7 @@ def build_classroom():
                          source=f"{GROUP_URL}/classroom/{siteapi.slug(title,10)}?md={lid}",
                          has_access=bool(lmd.get("hasAccess"))) +
               f"\n# {ltitle}\n\n{no_emails(body)}\n\n## Resources\n\n```json\n{resources}\n```\n")
-            lessons_md.append(f"| [{ltitle}]({lslug}/lesson.md) | {lid} |")
+            lessons_md.append((f"[{ltitle}]({lslug}/lesson.md)", lid))
         idx.append((slug, title, md.get("desc") or "", lessons_md))
     # classroom index
     lines = [siteapi.fm(title="Classroom — AI Operator Hub", source=f"{GROUP_URL}/classroom"),
