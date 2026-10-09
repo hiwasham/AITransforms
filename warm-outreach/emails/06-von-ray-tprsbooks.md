@@ -25,10 +25,6 @@ It also covers the homepage (no title, no meta description, 64 H1s, no
 structured data), a 4.2s mobile load time, and the Spanish / French search
 gaps. There are drafted fixes sitting behind all of it.
 
-One thing, and then I'll drop it. I first wrote to you in 2024 as "Akhbar" —
-that was a name I was using at the time, and it wasn't mine. I'm Hiwa, I run
-AITransforms, and I'd rather start this straight than have you find out later.
-
 If it's useful, I'll send you the drafted work — the Spanish and French page
 copy, the Berto rebuild, the homepage markup package — and you take it from
 there. If you'd rather I just implemented it in your WordPress, that's a
@@ -41,4 +37,4 @@ Hiwa
 Status: DRAFT — not sent
 Built: 2026-10-09 (v2 — replaced the free-resources angle)
 BFV: docs/tprsbooks-discovery-audit.html (Magister audit, 8 Oct 2026)
-Risk flag: identity restart (Akhbar -> Hiwa) — confirm the paragraph before sending
+Note: Akhbar identity paragraph cut per Hiwa (2026-10-09) — can be re-added before send
