@@ -1,4 +1,3 @@
-![[deepseek_html_20261003_f644f6.html]]
 # 06 — Account & Integrations
 
 Source: `raw-json/api__profile.json` (git-ignored), `api__prometric__access.json`,

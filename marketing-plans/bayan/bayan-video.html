@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Short-Form Video: Hooks, Scripts &amp; Strategy</title>
+<style>
+  :root{
+    --bg:#f7f7fa;
+    --surface:#ffffff;
+    --surface-2:#f3f4f8;
+    --border:#e5e6ef;
+    --text:#141824;
+    --muted:#6b7280;
+    --accent:#e11d48;
+    --accent-soft:#fff1f4;
+    --accent-border:#fecdd3;
+    --accent-deep:#be123c;
+    --cyan:#0891b2;
+    --cyan-soft:#ecfeff;
+    --cyan-border:#a5f3fc;
+    --violet:#7c3aed;
+    --violet-soft:#f5f3ff;
+    --violet-border:#ddd6fe;
+    --amber:#d97706;
+    --amber-soft:#fffbeb;
+    --amber-border:#fde68a;
+    --amber-text:#92400e;
+    --ok-bg:#ecfdf5;
+    --ok-border:#a7f3d0;
+    --ok-text:#047857;
+    --danger-bg:#fef2f2;
+    --danger-border:#fecaca;
+    --danger-text:#991b1b;
+    --neutral-bg:#f3f4f6;
+    --neutral-border:#d1d5db;
+    --neutral-text:#4b5563;
+    --code-bg:#fbfbfd;
+    --radius:14px;
+    --shadow:0 1px 2px rgba(20,24,36,.05), 0 10px 30px -18px rgba(20,24,36,.35);
+    --mono:ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  }
+  [data-theme="dark"]{
+    --bg:#0a0d18;
+    --surface:#131a2b;
+    --surface-2:#1a2338;
+    --border:#27324c;
+    --text:#e7edf9;
+    --muted:#94a3bf;
+    --accent:#fb7185;
+    --accent-soft:#2d1220;
+    --accent-border:#7c2d43;
+    --accent-deep:#fda4af;
+    --cyan:#22d3ee;
+    --cyan-soft:#0b2b33;
+    --cyan-border:#155e75;
+    --violet:#a78bfa;
+    --violet-soft:#1e1836;
+    --violet-border:#4c3d80;
+    --amber:#fbbf24;
+    --amber-soft:#2a2110;
+    --amber-border:#5c4718;
+    --amber-text:#fcd34d;
+    --ok-bg:#0c2a20;
+    --ok-border:#14532d;
+    --ok-text:#6ee7b7;
+    --danger-bg:#2b1414;
+    --danger-border:#5e2626;
+    --danger-text:#fca5a5;
+    --neutral-bg:#1c263c;
+    --neutral-border:#35435f;
+    --neutral-text:#a8b6cf;
+    --code-bg:#0e1524;
+    --shadow:0 1px 2px rgba(0,0,0,.5), 0 10px 30px -18px rgba(0,0,0,.9);
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size:15px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ---------- Top bar ---------- */
+  .topbar{
+    position:sticky; top:0; z-index:60;
+    background:var(--surface);
+    border-bottom:1px solid var(--border);
+  }
+  .topbar-inner{
+    max-width:1380px; margin:0 auto; padding:12px 20px;
+    display:flex; align-items:center; gap:16px; flex-wrap:wrap;
+  }
+  .brand{display:flex; align-items:center; gap:12px; min-width:0}
+  .brand-mark{
+    width:36px; height:36px; flex:0 0 36px; border-radius:10px;
+    background:linear-gradient(135deg,#e11d48,#7c3aed);
+    color:#fff; font-weight:800; font-size:15px;
+    display:flex; align-items:center; justify-content:center;
+    letter-spacing:-.5px;
+  }
+  .brand-text h1{font-size:15px; margin:0; font-weight:700; letter-spacing:-.2px}
+  .brand-text p{margin:0; font-size:12.5px; color:var(--muted)}
+  .topbar-actions{margin-left:auto; display:flex; align-items:center; gap:8px}
+  .btn{
+    font:inherit; font-size:13px; font-weight:600;
+    padding:7px 13px; border-radius:9px; cursor:pointer;
+    background:var(--surface-2); color:var(--text);
+    border:1px solid var(--border);
+    transition:background .15s, border-color .15s;
+  }
+  .btn:hover{background:var(--accent-soft); border-color:var(--accent-border); color:var(--accent-deep)}
+
+  /* ---------- Layout ---------- */
+  .layout{
+    max-width:1380px; margin:0 auto;
+    padding:28px 20px 90px;
+    display:grid;
+    grid-template-columns:250px minmax(0,1fr);
+    gap:32px;
+    align-items:start;
+  }
+
+  /* ---------- Sidebar ---------- */
+  .sidebar{
+    position:sticky; top:78px;
+    max-height:calc(100vh - 100px);
+    overflow-y:auto;
+    padding-right:4px;
+  }
+  .sidebar h2{
+    font-size:11px; text-transform:uppercase; letter-spacing:.09em;
+    color:var(--muted); margin:0 0 10px 12px; font-weight:700;
+  }
+  .nav{display:flex; flex-direction:column; gap:2px}
+  .nav a{
+    display:block; padding:7px 12px; border-radius:9px;
+    color:var(--muted); text-decoration:none; font-size:13.5px;
+    border-left:2px solid transparent;
+    transition:background .15s, color .15s;
+  }
+  .nav a:hover{background:var(--surface-2); color:var(--text)}
+  .nav a.active{background:var(--accent-soft); color:var(--accent-deep); font-weight:650}
+  .nav a.sub{padding-left:26px; font-size:12.8px}
+  .nav .divider{height:1px; background:var(--border); margin:10px 12px}
+
+  /* ---------- Sections ---------- */
+  main{min-width:0}
+  section{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:26px 28px;
+    margin-bottom:22px;
+    box-shadow:var(--shadow);
+    scroll-margin-top:90px;
+  }
+  section > h2{
+    font-size:19px; margin:0 0 6px; letter-spacing:-.3px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  .lede{color:var(--muted); font-size:14px; margin:0 0 20px}
+  h3{font-size:15.5px; margin:26px 0 8px; letter-spacing:-.2px}
+  h4{font-size:13px; margin:20px 0 6px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em}
+  p{margin:0 0 14px}
+  ul,ol{margin:0 0 14px; padding-left:22px}
+  li{margin-bottom:6px}
+  a{color:var(--accent-deep); text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  code{
+    font-family:var(--mono);
+    font-size:12.6px;
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    border-radius:6px;
+    padding:1.5px 5px;
+    color:var(--text);
+    word-break:break-word;
+  }
+  strong{font-weight:700}
+
+  /* ---------- Platform pills ---------- */
+  .plat{
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:11.2px; font-weight:800; letter-spacing:.06em;
+    text-transform:uppercase;
+    padding:3px 10px; border-radius:999px;
+    white-space:nowrap;
+  }
+  .plat::before{
+    content:""; width:6px; height:6px; border-radius:2px;
+    flex:0 0 6px; background:currentColor;
+  }
+  .plat.tt{background:var(--neutral-bg); color:var(--neutral-text); border:1px solid var(--neutral-border)}
+  .plat.rl{background:var(--accent-soft); color:var(--accent-deep); border:1px solid var(--accent-border)}
+  .plat.sh{background:var(--danger-bg); color:var(--danger-text); border:1px solid var(--danger-border)}
+  .plat.all{background:var(--cyan-soft); color:var(--cyan); border:1px solid var(--cyan-border)}
+  .plat.all::before{border-radius:50%}
+
+  /* ---------- Hook cards ---------- */
+  .hook-grid{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:14px; margin:0 0 20px;
+  }
+  .hook-card{
+    border:1px solid var(--border);
+    border-radius:14px;
+    background:var(--surface-2);
+    overflow:hidden;
+    display:flex; flex-direction:column;
+    border-top:3px solid var(--accent);
+  }
+  .hook-card.curiosity{border-top-color:var(--accent)}
+  .hook-card.value{border-top-color:var(--cyan)}
+  .hook-card.story{border-top-color:var(--violet)}
+  .hook-card.contro{border-top-color:var(--amber)}
+
+  .hook-card-head{
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+    padding:14px 16px;
+    border-bottom:1px solid var(--border);
+    background:var(--surface);
+  }
+  .hook-card-head h4{
+    margin:0; font-size:14px; font-weight:750; letter-spacing:-.1px;
+    flex:1; min-width:110px; text-transform:none; color:var(--text);
+  }
+  .hook-card-head .hc-best{
+    display:block; width:100%;
+    font-size:11.5px; font-weight:650; color:var(--muted);
+    margin:0;
+  }
+  .hook-copy-all{
+    font:inherit; font-family:ui-sans-serif, system-ui, sans-serif;
+    font-size:11px; font-weight:750; letter-spacing:.04em;
+    padding:4px 10px; border-radius:7px; cursor:pointer;
+    background:var(--accent-soft); color:var(--accent-deep);
+    border:1px solid var(--accent-border);
+    transition:background .15s, color .15s, border-color .15s;
+    white-space:nowrap;
+  }
+  .hook-copy-all:hover{background:var(--accent); border-color:var(--accent); color:#fff}
+  .hook-copy-all.done{background:var(--ok-text); border-color:var(--ok-text); color:#fff}
+
+  .hook-group{
+    padding:10px 12px 4px;
+    border-bottom:1px dashed var(--border);
+  }
+  .hook-group:last-child{border-bottom:0}
+  .hook-group .hg-label{
+    display:block;
+    font-size:10.5px; font-weight:800; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--muted);
+    margin:0 0 6px 4px;
+  }
+  .hook-list{list-style:none; padding:0; margin:0 0 4px}
+  .hook-list li{margin:0 0 3px}
+  .hook-list li:last-child{margin-bottom:0}
+
+  .hook-item{
+    width:100%;
+    text-align:left;
+    font:inherit;
+    font-size:13.3px;
+    line-height:1.5;
+    color:var(--text);
+    background:transparent;
+    border:1px solid transparent;
+    border-radius:9px;
+    padding:8px 10px;
+    cursor:pointer;
+    display:flex; align-items:flex-start; gap:8px;
+    transition:background .13s, border-color .13s;
+  }
+  .hook-item:hover{
+    background:var(--surface);
+    border-color:var(--accent-border);
+  }
+  .hook-item:active{background:var(--accent-soft)}
+  .hook-item .hq{
+    flex:0 0 18px; width:18px; height:18px;
+    margin-top:2px;
+    border-radius:6px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    display:flex; align-items:center; justify-content:center;
+    font-size:10px; font-weight:800; color:var(--muted);
+    transition:background .13s, color .13s, border-color .13s;
+  }
+  .hook-item:hover .hq{
+    background:var(--accent); color:#fff; border-color:var(--accent);
+  }
+  .hook-item .hq::before{content:"⧉"; opacity:0}
+  .hook-item:hover .hq::before{opacity:1}
+  .hook-item .ht{flex:1; min-width:0}
+  .hook-item.copied{
+    background:var(--ok-bg); border-color:var(--ok-border);
+  }
+  .hook-item.copied .hq{
+    background:var(--ok-text); color:#fff; border-color:var(--ok-text);
+  }
+  .hook-item.copied .hq::before{content:"✓"; opacity:1}
+
+  /* ---------- Placeholder chips ---------- */
+  .ph{
+    color:var(--accent-deep);
+    background:var(--accent-soft);
+    border:1px solid var(--accent-border);
+    border-radius:5px;
+    padding:0 4px;
+    font-weight:650;
+    white-space:pre-wrap;
+  }
+  [data-theme="dark"] .ph{
+    color:#fda4af; background:#2d1220; border-color:#7c2d43;
+  }
+  .tm{
+    display:inline-block;
+    color:var(--cyan);
+    background:var(--cyan-soft);
+    border:1px solid var(--cyan-border);
+    border-radius:5px;
+    padding:0 6px;
+    font-size:11.6px;
+    font-weight:750;
+    letter-spacing:.02em;
+    font-variant-numeric:tabular-nums;
+    white-space:nowrap;
+  }
+  [data-theme="dark"] .tm{
+    color:#67e8f9; background:#0b2b33; border-color:#155e75;
+  }
+
+  /* ---------- Code blocks ---------- */
+  .code-wrap{position:relative}
+  pre{
+    margin:0;
+    background:var(--code-bg);
+    color:var(--text);
+    padding:18px 20px;
+    overflow-x:auto;
+    font-family:var(--mono);
+    font-size:12.8px;
+    line-height:1.85;
+    border:0;
+    -webkit-font-smoothing:auto;
+    border-radius:12px;
+  }
+  pre code{
+    background:none; border:0; padding:0; color:inherit;
+    font-size:inherit; white-space:pre; font-family:inherit;
+  }
+
+  .copy-btn{
+    position:absolute; top:10px; right:10px;
+    font:inherit; font-family:ui-sans-serif, system-ui, sans-serif;
+    font-size:11.3px; font-weight:700; letter-spacing:.03em;
+    padding:5px 12px; border-radius:8px; cursor:pointer;
+    background:var(--surface);
+    color:var(--muted);
+    border:1px solid var(--border);
+    transition:background .15s, color .15s, border-color .15s;
+    z-index:2;
+  }
+  .copy-btn:hover{background:var(--accent); border-color:var(--accent); color:#fff}
+  .copy-btn.done{background:var(--ok-text); border-color:var(--ok-text); color:#fff}
+
+  /* ---------- Template card (script) ---------- */
+  .tpl{
+    border:1px solid var(--border);
+    border-radius:14px;
+    background:var(--surface);
+    margin:0 0 18px;
+    overflow:hidden;
+  }
+  .tpl-head{
+    display:flex; align-items:center; gap:12px; flex-wrap:wrap;
+    padding:14px 18px;
+    border-bottom:1px solid var(--border);
+    background:var(--surface-2);
+  }
+  .tpl-head h3{
+    margin:0; font-size:14.8px; font-weight:750; letter-spacing:-.15px;
+    flex:1; min-width:150px;
+  }
+  .tpl-head .tpl-when{
+    font-size:12.5px; color:var(--muted); width:100%;
+    margin:0; line-height:1.5;
+  }
+  .tpl-body{padding:14px}
+
+  /* ---------- Structure chain ---------- */
+  .structure{
+    border:1px solid var(--border);
+    border-radius:14px;
+    background:var(--surface-2);
+    padding:18px;
+    margin:0 0 18px;
+  }
+  .structure-head{
+    display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;
+    margin:0 0 14px;
+  }
+  .structure-head h3{
+    margin:0; font-size:15px; letter-spacing:-.15px;
+  }
+  .structure-head .dur{
+    font-size:12.3px; font-weight:750;
+    color:var(--cyan);
+    background:var(--cyan-soft);
+    border:1px solid var(--cyan-border);
+    border-radius:999px;
+    padding:2px 10px;
+  }
+  .struct-chain{
+    display:flex; flex-direction:column; gap:8px;
+  }
+  .struct-row{
+    display:grid;
+    grid-template-columns:82px 1fr;
+    gap:14px;
+    align-items:start;
+    padding:9px 12px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:10px;
+  }
+  .struct-row .t{
+    font-family:var(--mono);
+    font-size:12px; font-weight:750;
+    color:var(--cyan);
+    font-variant-numeric:tabular-nums;
+    padding-top:2px;
+  }
+  .struct-row .d{
+    font-size:13.6px;
+  }
+  .struct-row .d strong{color:var(--text)}
+  .structure .best{
+    margin:14px 0 0;
+    font-size:13px;
+    color:var(--muted);
+    padding:9px 13px;
+    border-left:3px solid var(--accent-border);
+    background:var(--surface);
+    border-radius:0 8px 8px 0;
+  }
+  .structure .best strong{color:var(--text)}
+
+  /* ---------- Visual pattern cards ---------- */
+  .pattern-grid{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:14px; margin:0 0 18px;
+  }
+  .pattern{
+    border:1px solid var(--border);
+    border-radius:13px;
+    background:var(--surface-2);
+    padding:16px 18px;
+    border-top:3px solid var(--cyan);
+  }
+  .pattern.p2{border-top-color:var(--violet)}
+  .pattern.p3{border-top-color:var(--amber)}
+  .pattern.p4{border-top-color:var(--accent)}
+  .pattern h4{
+    margin:0 0 10px; font-size:14px; font-weight:750;
+    letter-spacing:-.1px; text-transform:none; color:var(--text);
+  }
+  .pattern ul{margin:0; padding-left:19px; font-size:13.4px}
+  .pattern li{margin-bottom:5px}
+  .pattern li:last-child{margin-bottom:0}
+
+  /* ---------- Two-column decision blocks ---------- */
+  .decision-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:0 0 18px;
+  }
+  .decision{
+    border:1px solid var(--border);
+    border-radius:13px;
+    background:var(--surface-2);
+    padding:16px 18px;
+    border-left:4px solid var(--cyan);
+  }
+  .decision.original{border-left-color:var(--violet)}
+  .decision h4{
+    margin:0 0 10px; font-size:14px; font-weight:750;
+    letter-spacing:-.1px; text-transform:none; color:var(--text);
+  }
+  .decision ul{margin:0; padding-left:19px; font-size:13.4px}
+  .decision li{margin-bottom:5px}
+  .decision li:last-child{margin-bottom:0}
+
+  /* ---------- Tables ---------- */
+  .table-wrap{
+    overflow-x:auto; border:1px solid var(--border);
+    border-radius:12px; margin:0 0 18px;
+    -webkit-overflow-scrolling:touch;
+  }
+  table{width:100%; border-collapse:collapse; font-size:13.6px; min-width:480px}
+  thead th{
+    text-align:left; padding:11px 14px;
+    background:var(--surface-2);
+    font-size:11.5px; text-transform:uppercase; letter-spacing:.07em;
+    color:var(--muted); font-weight:700;
+    border-bottom:1px solid var(--border);
+    white-space:nowrap;
+  }
+  tbody td{padding:11px 14px; border-bottom:1px solid var(--border); vertical-align:top}
+  tbody tr:last-child td{border-bottom:0}
+  tbody tr:nth-child(even){background:color-mix(in srgb, var(--surface-2) 45%, transparent)}
+  td.num{font-variant-numeric:tabular-nums; white-space:nowrap}
+  td.nowrap{white-space:nowrap}
+  td.metric-name{font-weight:700; white-space:nowrap}
+  td.times{
+    font-family:var(--mono);
+    font-size:12.6px;
+    font-variant-numeric:tabular-nums;
+  }
+  td.level{
+    font-weight:750;
+    color:var(--accent-deep);
+    white-space:nowrap;
+  }
+
+  /* ---------- Batch workflow steps ---------- */
+  .steps{list-style:none; padding:0; margin:0; counter-reset:s}
+  .steps li{
+    counter-increment:s;
+    position:relative;
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:14px 18px 14px 60px;
+    margin:0 0 10px;
+    background:var(--surface-2);
+    font-size:14px;
+  }
+  .steps li::before{
+    content:counter(s);
+    position:absolute; left:17px; top:14px;
+    width:29px; height:29px; border-radius:9px;
+    background:var(--accent); color:#fff;
+    font-size:13.5px; font-weight:800;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .steps li strong{display:block; font-size:14.2px; margin-bottom:2px}
+  .steps li:last-child{margin-bottom:0}
+
+  /* ---------- Test list ---------- */
+  .test-list{list-style:none; padding:0; margin:0 0 18px; counter-reset:t}
+  .test-list li{
+    counter-increment:t;
+    position:relative;
+    padding:10px 0 10px 42px;
+    border-bottom:1px dashed var(--border);
+    font-size:14.1px;
+  }
+  .test-list li:last-child{border-bottom:0; padding-bottom:0}
+  .test-list li::before{
+    content:counter(t);
+    position:absolute; left:0; top:10px;
+    width:26px; height:26px; border-radius:8px;
+    background:var(--violet-soft); color:var(--violet);
+    border:1px solid var(--violet-border);
+    font-size:12.5px; font-weight:800;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .test-list li strong{color:var(--text)}
+
+  /* ---------- Pivot rules ---------- */
+  .pivot-list{list-style:none; padding:0; margin:0}
+  .pivot-list li{
+    border:1px solid var(--border);
+    border-left:4px solid var(--amber);
+    border-radius:10px;
+    background:var(--amber-soft);
+    color:var(--amber-text);
+    padding:13px 16px;
+    margin:0 0 10px;
+    font-size:13.8px;
+    line-height:1.6;
+  }
+  .pivot-list li:last-child{margin-bottom:0}
+  .pivot-list li strong{color:var(--amber-text); font-weight:800}
+  [data-theme="dark"] .pivot-list li strong{color:var(--amber-text)}
+
+  /* ---------- Callouts ---------- */
+  .callout{
+    border-radius:12px; padding:16px 18px; margin:0 0 18px;
+    border:1px solid var(--accent-border); background:var(--accent-soft);
+    font-size:13.8px;
+  }
+  .callout.cyan{
+    border-color:var(--cyan-border); background:var(--cyan-soft); color:var(--cyan);
+  }
+  .callout.cyan strong{color:var(--cyan)}
+  .callout.warn{
+    border-color:var(--amber-border); background:var(--amber-soft); color:var(--amber-text);
+  }
+  .callout.warn strong{color:var(--amber-text)}
+  .callout.ok{
+    border-color:var(--ok-border); background:var(--ok-bg); color:var(--ok-text);
+  }
+  .callout.ok strong{color:var(--ok-text)}
+  .callout h4{margin:0 0 8px; color:inherit; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase}
+  .callout p:last-child, .callout ul:last-child{margin-bottom:0}
+  .callout .big{
+    font-size:16px; font-weight:700; line-height:1.5; letter-spacing:-.2px; margin:0 0 8px;
+  }
+
+  /* ---------- Badges / notes ---------- */
+  .badges{display:flex; gap:8px; flex-wrap:wrap; margin:0 0 18px}
+  .badge{
+    font-size:12px; font-weight:650; padding:4px 11px; border-radius:999px;
+    background:var(--surface-2); color:var(--muted); border:1px solid var(--border);
+  }
+  .badge.accent{background:var(--accent-soft); color:var(--accent-deep); border-color:var(--accent-border)}
+  .badge.cyan{background:var(--cyan-soft); color:var(--cyan); border-color:var(--cyan-border)}
+
+  .note{
+    font-size:13px; color:var(--muted);
+    border-left:3px solid var(--accent-border);
+    padding:6px 0 6px 14px; margin:0 0 18px;
+  }
+  .note strong{color:var(--text)}
+
+  /* ---------- Overview TOC ---------- */
+  .toc-grid{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:12px; margin:0;
+  }
+  .toc-card{
+    border:1px solid var(--border); border-radius:12px;
+    background:var(--surface-2);
+    padding:15px 17px;
+    border-top:3px solid var(--accent);
+    text-decoration:none; color:inherit;
+    display:block;
+    transition:border-color .15s, transform .15s;
+  }
+  .toc-card:hover{transform:translateY(-2px); border-color:var(--accent-border); text-decoration:none}
+  .toc-card.c2{border-top-color:var(--cyan)}
+  .toc-card.c3{border-top-color:var(--violet)}
+  .toc-card.c4{border-top-color:var(--amber)}
+  .toc-card .tc-title{
+    font-size:14.2px; font-weight:750; letter-spacing:-.1px; margin:0 0 3px;
+  }
+  .toc-card .tc-sub{font-size:12.6px; color:var(--muted); margin:0 0 8px; line-height:1.5}
+  .toc-card .tc-count{
+    font-size:11.3px; font-weight:800; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--accent-deep);
+  }
+  .toc-card.c2 .tc-count{color:var(--cyan)}
+  .toc-card.c3 .tc-count{color:var(--violet)}
+  .toc-card.c4 .tc-count{color:var(--amber)}
+
+  footer{
+    max-width:1380px; margin:0 auto; padding:0 20px 60px;
+    color:var(--muted); font-size:12.6px; text-align:center;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:1000px){
+    .layout{grid-template-columns:1fr; gap:20px; padding-top:18px}
+    .sidebar{
+      position:static; max-height:none; overflow:visible;
+      background:var(--surface); border:1px solid var(--border);
+      border-radius:var(--radius); padding:16px; box-shadow:var(--shadow);
+    }
+    .nav{display:grid; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); gap:4px}
+    .nav .divider{display:none}
+    .nav a.sub{display:none}
+  }
+  @media (max-width:720px){
+    .decision-grid{grid-template-columns:1fr}
+  }
+  @media (max-width:600px){
+    section{padding:20px 17px}
+    .topbar-inner{padding:10px 14px}
+    .brand-text p{display:none}
+    pre{font-size:12.1px; padding:16px 14px}
+    .tpl-head{padding:13px 15px}
+    .struct-row{grid-template-columns:1fr; gap:4px}
+    .struct-row .t{padding-top:0}
+  }
+
+  /* ---------- Print ---------- */
+  @media print{
+    .topbar,.sidebar,.copy-btn,.hook-copy-all,footer{display:none !important}
+    body{background:#fff}
+    .layout{display:block; max-width:none; padding:0}
+    section{box-shadow:none; border-color:#d0d7e2; break-inside:avoid; page-break-inside:avoid}
+    .hook-card,.tpl,.pattern,.decision,.structure,.callout,.steps li,.pivot-list li,.toc-card{break-inside:avoid}
+    pre{white-space:pre-wrap; word-break:break-word; background:#f7f8fb; border:1px solid #dde1ea}
+    .code-wrap{overflow:visible}
+    .ph{background:#fff1f4}
+    .tm{background:#ecfeff}
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-mark">V</div>
+      <div class="brand-text">
+        <h1>Short-Form Video</h1>
+        <p>Hooks · Scripts · Strategy · TikTok / Reels / Shorts</p>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <button class="btn" id="themeToggle" type="button">Dark mode</button>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar">
+    <h2>Contents</h2>
+    <nav class="nav" id="nav">
+      <a href="#overview">Overview</a>
+      <a href="#hooks">Video Hook Library</a>
+      <a href="#h-curiosity" class="sub">Curiosity Hooks</a>
+      <a href="#h-value" class="sub">Value Hooks</a>
+      <a href="#h-story" class="sub">Story Hooks</a>
+      <a href="#h-contro" class="sub">Controversial Hooks</a>
+      <a href="#script">Scripting Template</a>
+      <a href="#structures">Additional Structures</a>
+      <a href="#visuals">Visual Patterns</a>
+      <a href="#audio">Audio Strategy</a>
+      <a href="#posting">Posting Strategy</a>
+      <a href="#analytics">Analytics &amp; Iteration</a>
+    </nav>
+  </aside>
+
+  <!-- ================= MAIN ================= -->
+  <main>
+
+    <!-- ---------- OVERVIEW ---------- -->
+    <section id="overview">
+      <h2>Overview</h2>
+      <p class="lede">
+        Detailed reference for creating short-form video content on TikTok, Instagram Reels,
+        and YouTube Shorts.
+      </p>
+
+      <div class="badges">
+        <span class="badge accent">Click-to-copy hooks</span>
+        <span class="badge cyan">Script template</span>
+        <span class="badge">4 hook categories</span>
+        <span class="badge">3 platforms</span>
+      </div>
+
+      <div class="callout cyan">
+        <h4>How to use</h4>
+        <p>
+          Every <span class="ph">[bracket]</span> is a slot to fill. Click any hook line to copy
+          it. Click any script block's <em>Copy</em> button to grab the whole template. The
+          structure stays; the words are yours.
+        </p>
+      </div>
+
+      <div class="toc-grid">
+        <a class="toc-card" href="#hooks">
+          <p class="tc-title">Video Hook Library</p>
+          <p class="tc-sub">Curiosity, Value, Story, Controversial</p>
+          <span class="tc-count">4 categories</span>
+        </a>
+        <a class="toc-card c2" href="#script">
+          <p class="tc-title">Scripting Template</p>
+          <p class="tc-sub">Hook / Body / CTA / Production notes</p>
+          <span class="tc-count">Full structure</span>
+        </a>
+        <a class="toc-card c3" href="#structures">
+          <p class="tc-title">Video Structures</p>
+          <p class="tc-sub">Story Arc + POV/Skit</p>
+          <span class="tc-count">2 formats</span>
+        </a>
+        <a class="toc-card c4" href="#posting">
+          <p class="tc-title">Posting Strategy</p>
+          <p class="tc-sub">Times, frequency, batch workflow</p>
+          <span class="tc-count">3 tables</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ---------- HOOK LIBRARY ---------- -->
+    <section id="hooks">
+      <h2>Video Hook Library</h2>
+      <p class="lede">
+        Four hook families, grouped by what they're best at driving. Click any line to copy it.
+      </p>
+
+      <div class="hook-grid">
+
+        <!-- Curiosity -->
+        <div class="hook-card curiosity" id="h-curiosity">
+          <div class="hook-card-head">
+            <h4>Curiosity Hooks</h4>
+            <button class="hook-copy-all" type="button" data-copy-all="h-curiosity">Copy all</button>
+            <p class="hc-best">Best for: <strong>engagement</strong></p>
+          </div>
+
+          <div class="hook-group">
+            <span class="hg-label">The "Secret" Formula</span>
+            <ul class="hook-list">
+              <li><button class="hook-item" type="button" data-copy="The secret to [outcome] that nobody talks about">
+                <span class="hq"></span>
+                <span class="ht">"The secret to <span class="ph">[outcome]</span> that nobody talks about"</span>
+              </button></li>
+              <li><button class="hook-item" type="button" data-copy="I found the hidden feature in [product/platform] that changes everything">
+                <span class="hq"></span>
+                <span class="ht">"I found the hidden feature in <span class="ph">[product/platform]</span> that changes everything"</span>
+              </button></li>
+              <li><button class="hook-item" type="button" data-copy="I can't believe this actually works...">
+                <span class="hq"></span>
+                <span class="ht">"I can't believe this actually works..."</span>
+              </button></li>
+            </ul>
+          </div>
+
+          <div class="hook-group">
+            <span class="hg-label">The Unexpected Discovery</span>
+            <ul class="hook-list">
+              <li><button class="hook-item" type="button" data-copy="I tried [thing] for 30 days and I was NOT expecting this">
+                <span class="hq"></span>
+                <span class="ht">"I tried <span class="ph">[thing]</span> for 30 days and I was NOT expecting this"</span>
+              </button></li>
+              <li><button class="hook-item" type="button" data-copy="This completely changed how I think about [topic]">
+                <span class="hq"></span>
+                <span class="ht">"This completely changed how I think about <span class="ph">[topic]</span>"</span>
+              </button></li>
+              <li><button class="hook-item" type="button" data-copy="Nobody talks about this, but...">
+                <span class="hq"></span>
+                <span class="ht">"Nobody talks about this, but..."</span>
+              </button></li>
+            </ul>
+          </div>
+
+          <div class="hook-group">
+            <span class="hg-label">The Question</span>
+            <ul class="hook-list">
+              <li><button class="hook-item" type="button" data-copy="Why does nobody talk about this?">
+                <span class="hq"></span>
+                <span class="ht">"Why does nobody talk about this?"</span>
+              </button></li>
+              <li><button class="hook-item" type="button" data-copy="Am I the only one who didn't know this?">
+                <span class="hq"></span>
+                <span class="ht">"Am I the only one who didn't know this?"</span>
+              </button></li>
+              <li><button class="hook-item" type="button" data-copy="The reason [common thing] doesn't work is...">
+                <span class="hq"></span>
+                <span class="ht">"The reason <span class="ph">[common thing]</span> doesn't work is..."</span>
+              </button></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Value -->
+        <div class="hook-card value" id="h-value">
+          <div class="hook-card-head">
+            <h4>Value Hooks</h4>
+            <button class="hook-copy-all" type="button" data-copy-all="h-value">Copy all</button>
+            <p class="hc-best">Best for: <strong>saves</strong></p>
+          </div>
+
+          <div class="hook-group">
+            <span class="hg-label">The Promise</span>
+            <ul class="hook-list">
+              <li><button class="hook-item" type="button" data-copy="How to [achieve outcome] in [specific timeframe]">
+                <span class="hq"></span>
+                <span class="ht">"How to <span class="ph">[achieve outcome]</span> in <span class="ph">[specific timeframe]</span>"</span>
+              </button></li>
+              <li><button class="hook-item" type="button" data-copy="[Number] [things] that will [benefit]">
+                <span class="hq"></span>
+                <span class="ht">"<span class="ph">[Number]</span> <span class="ph">[things]</span> that will <span class="ph">[benefit]</span>"</span>
+              </button></li>
+              <li><button class="hook-item" type="button" data-copy="Everything you need to know about [topic] in 60 seconds">
+                <span class="hq"></span>
+                <span class="ht">"Everything you need to know about <span class="ph">[topic]</span> in 60 seconds"</span>
+              </button></li>
+            </ul>
+          </div>
+
+          <div class="hook-group">
+            <span class="hg-label">The Hack / Shortcut</span>
+            <ul class="hook-list">
+              <li><button class="hook-item" type="button" data-copy="[Outcome] hack that actually works">
+                <span class="hq"></span>
+                <span class="ht">"<span class="ph">[Outcome]</span> hack that actually works"</span>
+              </button></li>
+              <li><button class="hook-item" type="button" data-copy="The [adjective] way to [outcome]">
+                <span class="hq"></span>
+                <span class="ht">"The <span class="ph">[adjective]</span> way to <span class="ph">[outcome]</span>"</span>
+              </button></li>
+              <li><button class="hook-item" type="button" data-copy="If you're struggling with [problem], watch this">
+                <span class="hq"></span>
+                <span class="ht">"If you're struggling with <span class="ph">[problem]</span>, watch this"</span>
+              </button></li>
+            </ul>
+          </div>
+
+          <div class="hook-group">
+            <span class="hg-label">The Warning</span>
+            <ul class="hook-list">
+              <li><button class="hook-item" type="button" data-copy="Stop doing [common practice] — here's why">
+                <span class="hq"></span>
+                <span class="ht">"Stop doing <span class="ph">[common practice]</span> — here's why"</span>
+              </button></li>
+              <li><button class="hook-item" type="button" data-copy="[Number] mistakes that are killing your [results]">
+                <span class="hq"></span>
+                <span class="ht">"<span class="ph">[Number]</span> mistakes that are killing your <span class="ph">[results]</span>"</span>
+              </button></li>
+              <li><button class="hook-item" type="button" data-copy="Why [thing you think is good] is actually hurting you">
+                <span class="hq"></span>
+                <span class="ht">"Why <span class="ph">[thing you think is good]</span> is actually hurting you"</span>
+              </button></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Story -->
+        <div class="hook-card story" id="h-story">
+          <div class="hook-card-head">
+            <h4>Story Hooks</h4>
+            <button class="hook-copy-all" type="button" data-copy-all="h-story">Copy all</button>
+            <p class="hc-best">Best for: <strong>watch time</strong></p>
+          </div>
+
+          <div class="hook-group">
+            <span class="hg-label">The Transformation</span>
+            <ul class="hook-list">
+              <li><button class="hook-item" type="button" data-copy="3 months ago, I [bad state]. Today, I [good state].">
+                <span class="hq"></span>
+                <span class="ht">"3 months ago, I <span class="ph">[bad state]</span>. Today, I <span class="ph">[good state]</span>."</span>
+              </button></li>
+              <li><button class="hook-item" type="button" data-copy="Here's how I went from [before] to [after]">
+                <span class="hq"></span>
+                <span class="ht">"Here's how I went from <span class="ph">[before]</span> to <span class="ph">[after]</span>"</span>
+              </button></li>
+              <li><button class="hook-item" type="button" data-copy="I used to think [old belief]. Then [event] changed everything.">
+                <span class="hq"></span>
+                <span class="ht">"I used to think <span class="ph">[old belief]</span>. Then <span class="ph">[event]</span> changed everything."</span>
+              </button></li>
+            </ul>
+          </div>
+
+          <div class="hook-group">
+            <span class="hg-label">The Failure</span>
+            <ul class="hook-list">
+              <li><button class="hook-item" type="button" data-copy="I made a huge mistake with [topic]">
+                <span class="hq"></span>
+                <span class="ht">"I made a huge mistake with <span class="ph">[topic]</span>"</span>
+              </button></li>
+              <li><button class="hook-item" type="button" data-copy="Here's why I stopped [common practice]">
+                <span class="hq"></span>
+                <span class="ht">"Here's why I stopped <span class="ph">[common practice]</span>"</span>
+              </button></li>
+              <li><button class="hook-item" type="button" data-copy="I lost [something significant] because of this mistake">
+                <span class="hq"></span>
+                <span class="ht">"I lost <span class="ph">[something significant]</span> because of this mistake"</span>
+              </button></li>
+            </ul>
+          </div>
+
+          <div class="hook-group">
+            <span class="hg-label">The Journey</span>
+            <ul class="hook-list">
+              <li><button class="hook-item" type="button" data-copy="So this just happened...">
+                <span class="hq"></span>
+                <span class="ht">"So this just happened..."</span>
+              </button></li>
+              <li><button class="hook-item" type="button" data-copy="This changed everything for me">
+                <span class="hq"></span>
+                <span class="ht">"This changed everything for me"</span>
+              </button></li>
+              <li><button class="hook-item" type="button" data-copy="Let me tell you about the time I [interesting situation]">
+                <span class="hq"></span>
+                <span class="ht">"Let me tell you about the time I <span class="ph">[interesting situation]</span>"</span>
+              </button></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Controversial -->
+        <div class="hook-card contro" id="h-contro">
+          <div class="hook-card-head">
+            <h4>Controversial Hooks</h4>
+            <button class="hook-copy-all" type="button" data-copy-all="h-contro">Copy all</button>
+            <p class="hc-best">Best for: <strong>comments</strong></p>
+          </div>
+
+          <div class="hook-group">
+            <ul class="hook-list">
+              <li><button class="hook-item" type="button" data-copy="Unpopular opinion: [bold statement]">
+                <span class="hq"></span>
+                <span class="ht">"Unpopular opinion: <span class="ph">[bold statement]</span>"</span>
+              </button></li>
+              <li><button class="hook-item" type="button" data-copy="[Common advice] is actually wrong">
+                <span class="hq"></span>
+                <span class="ht">"<span class="ph">[Common advice]</span> is actually wrong"</span>
+              </button></li>
+              <li><button class="hook-item" type="button" data-copy="I'm going to get hate for this, but...">
+                <span class="hq"></span>
+                <span class="ht">"I'm going to get hate for this, but..."</span>
+              </button></li>
+              <li><button class="hook-item" type="button" data-copy="Most [audience] get this completely wrong">
+                <span class="hq"></span>
+                <span class="ht">"Most <span class="ph">[audience]</span> get this completely wrong"</span>
+              </button></li>
+            </ul>
+          </div>
+
+          <div class="callout warn" style="margin:14px 12px 12px">
+            <h4>Use with care</h4>
+            <p>
+              Controversy drives comments — but on a medical brand it can also drive
+              complaints. Only deploy if the position is defensible and on-brand.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ---------- SCRIPTING TEMPLATE ---------- -->
+    <section id="script">
+      <h2>Scripting Template</h2>
+      <p class="lede">Fill in every block. The visual column is what separates a good script from a talking-head monologue.</p>
+
+      <div class="tpl">
+        <div class="tpl-head">
+          <h3>Full Video Script</h3>
+          <p class="tpl-when">
+            Works for talking head, slideshow, demo, or screen recording. The Hook block is 0–3
+            seconds — everything depends on it landing.
+          </p>
+        </div>
+        <div class="tpl-body">
+          <div class="code-wrap">
+<pre><code>## Video: <span class="ph">[Working Title]</span>
+
+**Platform:** TikTok / Reels / Shorts
+**Length:** <span class="ph">XX</span> seconds
+**Format:** <span class="ph">[Talking head / Slideshow / Demo / Screen recording]</span>
+
+### Hook <span class="tm">0-3 sec</span>
+- Visual: <span class="ph">[What viewer sees]</span>
+- Audio: <span class="ph">[What they hear]</span>
+- Text overlay: <span class="ph">[On-screen text]</span>
+
+### Body <span class="tm">3-X sec</span>
+- <span class="ph">[Timestamp]</span> - <span class="ph">[What happens/what you say]</span>
+- <span class="ph">[Timestamp]</span> - <span class="ph">[Next beat]</span>
+- <span class="ph">[Continue...]</span>
+
+### CTA <span class="tm">final 3-5 sec</span>
+- Verbal: <span class="ph">[What you say]</span>
+- Text: <span class="ph">[On-screen text]</span>
+- Action: <span class="ph">[Follow, comment, link in bio, etc.]</span>
+
+### Production Notes
+- Music/sound: <span class="ph">[Trending sound or music choice]</span>
+- B-roll needed: <span class="ph">[List any clips needed]</span>
+- Graphics: <span class="ph">[Any text animations or overlays]</span></code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- STRUCTURES ---------- -->
+    <section id="structures">
+      <h2>Additional Video Structures</h2>
+      <p class="lede">Two more formats beyond the base script template.</p>
+
+      <!-- Story Arc -->
+      <div class="structure">
+        <div class="structure-head">
+          <h3>The Story Arc</h3>
+          <span class="dur">45–60 sec</span>
+        </div>
+
+        <div class="struct-chain">
+          <div class="struct-row">
+            <span class="t">0-3s</span>
+            <span class="d"><strong>Hook:</strong> Tease the outcome</span>
+          </div>
+          <div class="struct-row">
+            <span class="t">3-15s</span>
+            <span class="d"><strong>Setup:</strong> Context and stakes</span>
+          </div>
+          <div class="struct-row">
+            <span class="t">15-45s</span>
+            <span class="d"><strong>Journey:</strong> What happened</span>
+          </div>
+          <div class="struct-row">
+            <span class="t">45-55s</span>
+            <span class="d"><strong>Resolution:</strong> The result</span>
+          </div>
+          <div class="struct-row">
+            <span class="t">55-60s</span>
+            <span class="d"><strong>Lesson / CTA</strong></span>
+          </div>
+        </div>
+
+        <p class="best">
+          <strong>Best for:</strong> Personal stories, case studies, testimonials
+        </p>
+
+        <div class="code-wrap" style="margin-top:14px">
+<pre><code><span class="tm">[0-3s]</span>  Hook: Tease the outcome
+<span class="tm">[3-15s]</span> Setup: Context and stakes
+<span class="tm">[15-45s]</span> Journey: What happened
+<span class="tm">[45-55s]</span> Resolution: The result
+<span class="tm">[55-60s]</span> Lesson/CTA</code></pre>
+        </div>
+      </div>
+
+      <!-- POV/Skit -->
+      <div class="structure">
+        <div class="structure-head">
+          <h3>The POV / Skit</h3>
+          <span class="dur">15–30 sec</span>
+        </div>
+
+        <div class="struct-chain">
+          <div class="struct-row">
+            <span class="t">0-3s</span>
+            <span class="d"><strong>Setup:</strong> Text overlay sets the scene</span>
+          </div>
+          <div class="struct-row">
+            <span class="t">3-25s</span>
+            <span class="d"><strong>Performance:</strong> Act out the relatable scenario</span>
+          </div>
+          <div class="struct-row">
+            <span class="t">25-30s</span>
+            <span class="d"><strong>Punchline or twist</strong></span>
+          </div>
+        </div>
+
+        <p class="best">
+          <strong>Best for:</strong> Relatable content, humor, niche communities
+        </p>
+
+        <div class="code-wrap" style="margin-top:14px">
+<pre><code><span class="tm">[0-3s]</span>  Setup: Text overlay sets the scene
+<span class="tm">[3-25s]</span> Performance: Act out the relatable scenario
+<span class="tm">[25-30s]</span> Punchline or twist</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- VISUAL PATTERNS ---------- -->
+    <section id="visuals">
+      <h2>Visual Patterns</h2>
+      <p class="lede">Four shooting formats. Each has its own production rules.</p>
+
+      <div class="pattern-grid">
+        <div class="pattern p1">
+          <h4>Talking Head</h4>
+          <ul>
+            <li>Good lighting (ring light or window light)</li>
+            <li>Eye contact with camera</li>
+            <li>Hand gestures for emphasis</li>
+            <li>Interesting background (bookshelf, plants, studio setup)</li>
+          </ul>
+        </div>
+        <div class="pattern p2">
+          <h4>Slideshow / Carousel Video</h4>
+          <ul>
+            <li>Strong visual on each slide (2–4 seconds per slide)</li>
+            <li>Text overlays with key points</li>
+            <li>Consistent style / branding</li>
+            <li>Voiceover or trending sound</li>
+          </ul>
+        </div>
+        <div class="pattern p3">
+          <h4>Screen Recording</h4>
+          <ul>
+            <li>Zoom in on important areas</li>
+            <li>Add cursor highlight or click animations</li>
+            <li>Keep movements smooth and intentional</li>
+            <li>Overlay your face in corner (optional but boosts engagement)</li>
+          </ul>
+        </div>
+        <div class="pattern p4">
+          <h4>B-Roll Heavy</h4>
+          <ul>
+            <li>Show don't tell</li>
+            <li>Quick cuts (1–3 seconds per shot)</li>
+            <li>Match cuts to voiceover beats</li>
+            <li>Mix wide, medium, and close-up shots</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- AUDIO ---------- -->
+    <section id="audio">
+      <h2>Audio Strategy</h2>
+      <p class="lede">Two decisions per video: trending sound or original audio — and how to mix it.</p>
+
+      <div class="decision-grid">
+        <div class="decision">
+          <h4>When to Use Trending Sounds</h4>
+          <ul>
+            <li>Entertainment / lifestyle content where the sound fits your message</li>
+            <li>When the trend is still rising (check platform trending pages)</li>
+            <li><strong>Don't</strong> use when it distracts from your message or is already declining</li>
+          </ul>
+        </div>
+        <div class="decision original">
+          <h4>When to Use Original Audio</h4>
+          <ul>
+            <li>Educational content where you're speaking</li>
+            <li>Storytimes and personal narratives</li>
+            <li>Product demos and tutorials</li>
+            <li>Building a recognizable brand voice</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Voiceover Tips</h3>
+      <ul>
+        <li>Speak slightly faster than normal conversation</li>
+        <li>Vary your tone — avoid monotone delivery</li>
+        <li>Pause for emphasis on key points</li>
+        <li>Record in a quiet space, use noise removal</li>
+        <li>AI voices work for faceless content (ElevenLabs, etc.)</li>
+      </ul>
+
+      <h3>Music Selection</h3>
+      <ul>
+        <li>Match energy to content (upbeat for tips, emotional for stories)</li>
+        <li>Avoid copyrighted music on Reels / Shorts</li>
+        <li>Use platform music libraries for safety</li>
+        <li>Lower music volume under voiceover (ducking)</li>
+      </ul>
+    </section>
+
+    <!-- ---------- POSTING ---------- -->
+    <section id="posting">
+      <h2>Posting Strategy</h2>
+      <p class="lede">Test against your own audience — these are starting points, not gospel.</p>
+
+      <h3>Optimal Posting Times</h3>
+      <p class="note">Local time. Test your own audience before trusting these.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Platform</th>
+              <th>Best Times (local)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="nowrap"><span class="plat tt">TikTok</span></td>
+              <td class="times">7–9 AM · 12–3 PM · 7–11 PM</td>
+            </tr>
+            <tr>
+              <td class="nowrap"><span class="plat rl">Reels</span></td>
+              <td class="times">9 AM · 12 PM · 7–9 PM</td>
+            </tr>
+            <tr>
+              <td class="nowrap"><span class="plat sh">Shorts</span></td>
+              <td class="times">12–3 PM · 7–9 PM</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Frequency Recommendations</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Goal</th>
+              <th>Minimum</th>
+              <th>Optimal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="metric-name">Growing</td>
+              <td class="level">1 / day</td>
+              <td class="level">2–4 / day</td>
+            </tr>
+            <tr>
+              <td class="metric-name">Maintaining</td>
+              <td class="level">3 / week</td>
+              <td class="level">1 / day</td>
+            </tr>
+            <tr>
+              <td class="metric-name">Testing</td>
+              <td class="level">2 / week</td>
+              <td class="level">5 / week</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Batch Creation Workflow</h3>
+      <ol class="steps">
+        <li>
+          <strong>Ideate</strong>
+          <span style="color:var(--muted)">30 min — Generate 10–20 concepts</span>
+        </li>
+        <li>
+          <strong>Script</strong>
+          <span style="color:var(--muted)">1 hour — Write scripts for 5–10 videos</span>
+        </li>
+        <li>
+          <strong>Batch film</strong>
+          <span style="color:var(--muted)">2 hours — Record all talking head content</span>
+        </li>
+        <li>
+          <strong>Edit</strong>
+          <span style="color:var(--muted)">2–3 hours — Edit and add captions</span>
+        </li>
+        <li>
+          <strong>Schedule</strong>
+          <span style="color:var(--muted)">30 min — Queue for optimal times</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ---------- ANALYTICS ---------- -->
+    <section id="analytics">
+      <h2>Analytics &amp; Iteration</h2>
+      <p class="lede">What to read, what to test, and when to change course.</p>
+
+      <h3>Metrics That Matter</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>What It Tells You</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="metric-name">Watch time %</td>
+              <td>Is content engaging throughout?</td>
+            </tr>
+            <tr>
+              <td class="metric-name">Completion rate</td>
+              <td>Did hook + content deliver?</td>
+            </tr>
+            <tr>
+              <td class="metric-name">Saves</td>
+              <td>Is content valuable enough to revisit?</td>
+            </tr>
+            <tr>
+              <td class="metric-name">Shares</td>
+              <td>Is content worth spreading?</td>
+            </tr>
+            <tr>
+              <td class="metric-name">Comments</td>
+              <td>Did content spark conversation?</td>
+            </tr>
+            <tr>
+              <td class="metric-name">Follows</td>
+              <td>Did viewer want more from you?</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>What to Test</h3>
+      <ol class="test-list">
+        <li><strong>Hooks:</strong> Same content, different opening</li>
+        <li><strong>Length:</strong> 15 sec vs 30 sec vs 60 sec</li>
+        <li><strong>Format:</strong> Talking head vs slideshow vs demo</li>
+        <li><strong>Time:</strong> Morning vs afternoon vs evening</li>
+        <li><strong>CTA:</strong> Different calls to action</li>
+      </ol>
+
+      <h3>When to Pivot</h3>
+      <ul class="pivot-list">
+        <li>
+          <strong>5+ videos with &lt;1% completion rate</strong> → change hooks
+        </li>
+        <li>
+          <strong>High views but low follows</strong> → check CTA and content-audience fit
+        </li>
+        <li>
+          <strong>High saves but low shares</strong> → content is valuable but not social
+        </li>
+        <li>
+          <strong>Lots of comments but negative</strong> → lean into controversy or adjust tone
+        </li>
+      </ul>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  Short-Form Video: Hooks, Scripts &amp; Strategy · Reference for TikTok, Instagram Reels, and YouTube Shorts.
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- Active nav highlighting ---------- */
+  var links = Array.prototype.slice.call(document.querySelectorAll("#nav a"));
+  var linkFor = {};
+  links.forEach(function (a) {
+    var id = a.getAttribute("href").slice(1);
+    var el = document.getElementById(id);
+    if (el) linkFor[id] = a;
+  });
+
+  if ("IntersectionObserver" in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var active = linkFor[entry.target.id];
+        if (!active) return;
+        links.forEach(function (a) { a.classList.remove("active"); });
+        active.classList.add("active");
+      });
+    }, { rootMargin: "-90px 0px -65% 0px", threshold: 0 });
+
+    Object.keys(linkFor).forEach(function (id) {
+      observer.observe(document.getElementById(id));
+    });
+  }
+
+  /* ---------- Clipboard helper ---------- */
+  function copyText(text, onDone) {
+    function done() { if (onDone) onDone(); }
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, function () { fallback(text, done); });
+    } else {
+      fallback(text, done);
+    }
+  }
+
+  function fallback(text, done) {
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "fixed";
+    ta.style.top = "-1000px";
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); } catch (e) { /* no-op */ }
+    document.body.removeChild(ta);
+    done();
+  }
+
+  /* ---------- Copy buttons on every code block ---------- */
+  document.querySelectorAll(".code-wrap").forEach(function (wrap) {
+    var pre = wrap.querySelector("pre");
+    if (!pre) return;
+
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "copy-btn";
+    btn.textContent = "Copy";
+
+    btn.addEventListener("click", function () {
+      var codeEl = pre.querySelector("code");
+      var text = codeEl ? codeEl.innerText : pre.innerText;
+
+      copyText(text, function () {
+        btn.textContent = "Copied";
+        btn.classList.add("done");
+        setTimeout(function () {
+          btn.textContent = "Copy";
+          btn.classList.remove("done");
+        }, 1600);
+      });
+    });
+
+    wrap.appendChild(btn);
+  });
+
+  /* ---------- Copy all hooks in a category ---------- */
+  document.querySelectorAll("[data-copy-all]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var cardId = btn.getAttribute("data-copy-all");
+      var card = document.getElementById(cardId);
+      if (!card) return;
+
+      var items = card.querySelectorAll(".hook-item .ht");
+      var lines = [];
+      items.forEach(function (el) {
+        lines.push(el.innerText.trim());
+      });
+      var text = lines.join("\n");
+
+      var original = btn.textContent;
+      copyText(text, function () {
+        btn.textContent = "Copied";
+        btn.classList.add("done");
+        setTimeout(function () {
+          btn.textContent = original;
+          btn.classList.remove("done");
+        }, 1600);
+      });
+    });
+  });
+
+  /* ---------- Click a hook to copy it ---------- */
+  document.querySelectorAll(".hook-item").forEach(function (item) {
+    item.addEventListener("click", function () {
+      var text = item.getAttribute("data-copy") || item.innerText.trim();
+
+      copyText(text, function () {
+        item.classList.add("copied");
+        setTimeout(function () {
+          item.classList.remove("copied");
+        }, 1100);
+      });
+    });
+  });
+
+  /* ---------- Theme toggle (persisted) ---------- */
+  var root = document.documentElement;
+  var toggle = document.getElementById("themeToggle");
+
+  function applyTheme(theme) {
+    if (theme === "dark") {
+      root.setAttribute("data-theme", "dark");
+      toggle.textContent = "Light mode";
+    } else {
+      root.removeAttribute("data-theme");
+      toggle.textContent = "Dark mode";
+    }
+  }
+
+  var saved = null;
+  try { saved = localStorage.getItem("bayan-theme"); } catch (e) { /* ignore */ }
+
+  if (!saved && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    saved = "dark";
+  }
+  applyTheme(saved === "dark" ? "dark" : "light");
+
+  toggle.addEventListener("click", function () {
+    var isDark = root.getAttribute("data-theme") === "dark";
+    var next = isDark ? "light" : "dark";
+    applyTheme(next);
+    try { localStorage.setItem("bayan-theme", next); } catch (e) { /* ignore */ }
+  });
+})();
+</script>
+
+</body>
+</html>

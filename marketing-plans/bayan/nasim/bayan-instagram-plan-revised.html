@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bayan · Instagram Growth Plan (Revised)</title>
+<style>
+  :root{
+    --ink:#05060a;--ink2:#0b0d13;--panel:#121521;--panel2:#191d2c;
+    --line:#232838;--txt:#f1f4fb;--mut:#7b8299;--mut2:#4d5468;
+    --bayan:#1a4ff5;--bayan2:#4d7bff;
+    --gold:245,190,60;--emerald:52,211,153;--rose:244,63,94;
+    --violet:167,139,250;--cyan:34,211,238;--accent:26,79,245;
+    --ig-gradient:linear-gradient(45deg,#833ab4,#fd1d1d,#fcb045);
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--ink);color:var(--txt);font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;line-height:1.55}
+  .bg{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+  .bg::before{content:"";position:absolute;inset:-30%;
+    background:
+      radial-gradient(40% 32% at 8% 6%, rgba(26,79,245,.13), transparent 60%),
+      radial-gradient(34% 30% at 92% 94%, rgba(131,58,180,.08), transparent 62%),
+      radial-gradient(30% 26% at 50% 50%, rgba(253,29,29,.04), transparent 60%);
+    filter:blur(32px)}
+  .bg::after{content:"";position:absolute;inset:0;
+    background-image:linear-gradient(rgba(255,255,255,.012) 1px,transparent 1px),
+                     linear-gradient(90deg,rgba(255,255,255,.012) 1px,transparent 1px);
+    background-size:52px 52px;
+    mask-image:radial-gradient(78% 62% at 50% 20%,#000 20%,transparent 100%)}
+  .wrap{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:40px 26px 80px;
+    display:flex;flex-direction:column;gap:22px}
+
+  .topline{display:flex;align-items:center;gap:11px;flex-wrap:wrap;
+    font:500 12px/1.3 var(--mono);color:var(--mut)}
+  .ig-pill{background:var(--ig-gradient);color:#fff;padding:5px 9px;border-radius:7px;
+    font:600 10px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+  .pill{font:600 10px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;
+    padding:5px 9px;border-radius:7px;background:rgba(var(--accent),.14);
+    color:rgb(var(--accent));border:1px solid rgba(var(--accent),.3)}
+  .pill.warn{background:rgba(245,190,60,.12);color:rgb(var(--gold));
+    border:1px dashed rgba(245,190,60,.4)}
+
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .hero,.sec-head,.card,.grid,.band{animation:fadeUp .5s cubic-bezier(.2,.7,.3,1) both}
+
+  .hero{border-radius:18px;border:1px solid var(--line);
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    padding:28px 30px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,#833ab4,#fd1d1d,#fcb045,#1a4ff5)}
+  .hero .k{font:600 10px/1 var(--mono);letter-spacing:.15em;text-transform:uppercase;
+    color:rgb(var(--accent));margin-bottom:12px;display:flex;align-items:center;gap:9px}
+  .hero .k::before{content:"";width:14px;height:3px;border-radius:3px;background:var(--ig-gradient)}
+  .hero h1{font:800 30px/1.14 var(--sans);letter-spacing:-.035em;margin-bottom:14px;
+    max-width:30ch;color:#fff}
+  .hero p{font-size:13.5px;color:#a8b3c5;max-width:82ch}
+  .hero p b{color:#dfe7f4;font-weight:600}
+  .hero p em{font-style:normal;color:rgb(var(--accent));font-weight:600}
+  .hero p+p{margin-top:12px}
+  .tag{display:inline-flex;align-items:center;gap:9px;font:600 9.5px/1 var(--mono);
+    letter-spacing:.1em;text-transform:uppercase;padding:7px 11px;border-radius:7px;margin-top:18px;
+    background:rgba(245,190,60,.12);color:rgb(var(--gold));border:1px dashed rgba(245,190,60,.4)}
+
+  .sec-head{display:flex;align-items:baseline;gap:14px;padding:10px 0 0;flex-wrap:wrap}
+  .sec-num{font:700 11px/1 var(--mono);letter-spacing:.14em;padding:7px 11px;border-radius:8px;
+    background:rgba(var(--accent),.14);color:rgb(var(--accent));border:1px solid rgba(var(--accent),.3)}
+  .sec-title{font:700 22px/1.2 var(--sans);letter-spacing:-.025em;color:#fff;flex:1;min-width:0}
+  .sec-title small{display:block;font:500 11.5px/1.4 var(--mono);color:var(--mut2);
+    letter-spacing:.03em;margin-top:5px;font-weight:400}
+
+  .grid{display:grid;gap:14px}
+  .g2{grid-template-columns:1fr 1fr}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g4{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+
+  .card{padding:20px 22px;border-radius:16px;border:1px solid var(--line);
+    background:linear-gradient(180deg,var(--panel2),var(--panel));position:relative;overflow:hidden;
+    transition:.28s}
+  .card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;
+    background:linear-gradient(90deg,rgb(var(--c,26,79,245)),rgba(var(--c,26,79,245),.1))}
+  .card:hover{transform:translateY(-3px);border-color:rgba(var(--c,26,79,245),.5);
+    box-shadow:0 22px 55px -32px rgba(var(--c,26,79,245),.85)}
+  .card .ch{font:700 9px/1 var(--mono);letter-spacing:.13em;text-transform:uppercase;
+    color:rgb(var(--c,26,79,245));margin-bottom:10px;display:flex;align-items:center;gap:8px}
+  .card .ch::before{content:"";width:9px;height:2px;border-radius:2px;background:currentColor}
+  .card h3{font:700 15px/1.3 var(--sans);letter-spacing:-.01em;color:#eef2f9;margin-bottom:8px}
+  .card p{font-size:12px;line-height:1.6;color:var(--mut)}
+  .card p b{color:#cfd8e8;font-weight:600}
+  .card p em{font-style:normal;color:rgb(var(--c,26,79,245));font-weight:600}
+
+  /* competitor card */
+  .comp{display:flex;flex-direction:column;gap:12px}
+  .comp-head{display:flex;align-items:center;justify-content:space-between;gap:10px;
+    padding-bottom:12px;border-bottom:1px dashed #232c39}
+  .comp-handle{font:700 14px/1.2 var(--sans);color:#fff;letter-spacing:-.01em}
+  .comp-tag{font:600 8.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;
+    padding:5px 8px;border-radius:6px;background:rgba(var(--c),.14);color:rgb(var(--c));
+    border:1px solid rgba(var(--c),.3)}
+  .comp-row{display:grid;grid-template-columns:auto 1fr;gap:6px 10px;font-size:11.5px}
+  .comp-row .lab{color:var(--mut2);font:600 9.5px/1.5 var(--mono);letter-spacing:.05em;
+    text-transform:uppercase}
+  .comp-row .val{color:#cfd8e8}
+  .fill{display:inline-block;min-width:46px;border-bottom:1.5px dashed rgba(var(--c),.5);
+    color:rgb(var(--c));font-family:var(--mono);font-size:10.5px;padding:0 4px;text-align:center}
+  .comp .takes{margin-top:4px;padding:10px 12px;border-radius:9px;
+    background:rgba(var(--c),.07);border:1px solid rgba(var(--c),.25);font-size:11.5px;line-height:1.55;color:#dfe7f4}
+  .comp .takes b{color:rgb(var(--c));font-weight:700}
+  .wk{display:flex;gap:8px;margin-top:2px}
+  .wk .wkc{flex:1;padding:8px 10px;border-radius:8px;background:rgba(255,255,255,.02);
+    border:1px solid var(--line);font-size:10.5px;line-height:1.4;color:var(--mut)}
+  .wk .wkc b{display:block;font:700 8.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;margin-bottom:5px}
+  .wk .lo b{color:rgb(var(--rose))}
+  .wk .hi b{color:rgb(var(--emerald))}
+
+  /* table */
+  .tbl{width:100%;border-collapse:collapse;border-radius:14px;overflow:hidden;
+    border:1px solid var(--line);font-size:12px}
+  .tbl th,.tbl td{padding:11px 13px;text-align:left;border-bottom:1px solid var(--line)}
+  .tbl th{background:rgba(var(--accent),.1);color:#dfe7f4;font:700 10px/1.3 var(--mono);
+    letter-spacing:.05em;text-transform:uppercase}
+  .tbl td{color:var(--mut);background:var(--ink2)}
+  .tbl td b{color:#eef2f9}
+  .tbl tr:last-child td{border-bottom:none}
+  .tbl .star td{background:rgba(52,211,153,.06)}
+  .tbl .star td:first-child b{color:rgb(var(--emerald))}
+  .fx{font-family:var(--mono);font-size:10.5px;color:rgb(var(--accent));
+    background:rgba(var(--accent),.1);padding:1px 5px;border-radius:4px}
+
+  /* funnel */
+  .funnel{display:flex;align-items:center;gap:6px;flex-wrap:wrap;
+    padding:16px 18px;border-radius:12px;background:rgba(255,255,255,.02);border:1px solid var(--line)}
+  .fstep{font:600 11px/1 var(--sans);padding:9px 13px;border-radius:9px;color:#dfe7f4;
+    background:rgba(var(--accent),.1);border:1px solid rgba(var(--accent),.25);white-space:nowrap}
+  .fstep.goal{background:rgba(52,211,153,.14);border-color:rgba(52,211,153,.4);color:rgb(var(--emerald));font-weight:700}
+  .farrow{color:var(--mut2);font-size:14px}
+
+  /* step rows (carousel / reel) */
+  .steps{display:flex;flex-direction:column;gap:7px}
+  .step{display:flex;gap:11px;align-items:flex-start;padding:9px 12px;border-radius:9px;
+    background:rgba(255,255,255,.02);border:1px solid var(--line);font-size:11.5px;line-height:1.5;color:var(--mut)}
+  .step .sn{flex:0 0 auto;font:700 9px/1 var(--mono);letter-spacing:.06em;color:rgb(var(--c,26,79,245));
+    background:rgba(var(--c,26,79,245),.14);border:1px solid rgba(var(--c,26,79,245),.3);
+    padding:5px 7px;border-radius:6px;margin-top:1px;min-width:52px;text-align:center;text-transform:uppercase}
+  .step b{color:#eef2f9;font-weight:600}
+
+  .band{padding:20px 24px;border-radius:16px;border:1px solid rgba(245,190,60,.32);
+    background:linear-gradient(135deg,rgba(245,190,60,.06),rgba(245,190,60,.01) 70%,transparent);
+    display:flex;gap:16px;align-items:flex-start}
+  .band .bi{flex:0 0 38px;width:38px;height:38px;border-radius:11px;display:grid;place-items:center;
+    font-size:17px;background:rgba(245,190,60,.16);color:rgb(var(--gold));border:1px solid rgba(245,190,60,.35)}
+  .band .bk{font:700 10px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:rgb(var(--gold));margin-bottom:9px}
+  .band .bt{font:650 15px/1.4 var(--sans);color:#eef2f9;margin-bottom:7px}
+  .band .bd{font-size:12.5px;line-height:1.65;color:#a8b3c5}
+  .band .bd b{color:#fff;font-weight:600}
+
+  ol.dec{list-style:none;counter-reset:d;display:flex;flex-direction:column;gap:10px}
+  ol.dec li{counter-increment:d;position:relative;padding:14px 18px 14px 56px;border-radius:12px;
+    background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);
+    font-size:12.5px;line-height:1.55;color:#a8b3c5}
+  ol.dec li::before{content:counter(d,decimal-leading-zero);position:absolute;left:14px;top:12px;
+    width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
+    font:800 13px/1 var(--sans);color:rgb(var(--accent));
+    background:linear-gradient(135deg,rgba(26,79,245,.2),rgba(131,58,180,.1));
+    border:1px solid rgba(26,79,245,.4)}
+  ol.dec li b{color:#eef2f9;font-weight:650}
+  ol.dec li em{font-style:normal;color:rgb(var(--emerald));font-weight:600}
+
+  .foot{margin-top:14px;padding:16px 20px;border-radius:12px;border:1px solid var(--line);
+    background:rgba(11,13,19,.6);font:400 10.5px/1.6 var(--mono);color:var(--mut2);letter-spacing:.02em}
+  .foot b{color:var(--mut)}
+
+  @media (max-width:860px){
+    .g2,.g3{grid-template-columns:1fr}
+    .hero h1{font-size:24px}
+    .wrap{padding:26px 16px 60px}
+  }
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<div class="wrap" id="wrap">
+  <div class="topline">
+    <span class="ig-pill">Instagram</span>
+    <span>@bayanaitech</span><span style="color:var(--mut2)">·</span>
+    <span>~775 followers (baseline, 2 Oct 2026)</span><span style="color:var(--mut2)">·</span>
+    <span class="pill">Revised growth plan</span>
+    <span class="pill warn">Draft · nothing published</span>
+  </div>
+
+  <div class="hero">
+    <div class="k">Enriches Nasim's proposal · for Dr. Abdullah</div>
+    <h1>Own the one gap every competitor leaves open: Gulf &amp; Arab-Board exam prep.</h1>
+    <p>
+      UWorld, AMBOSS, Osmosis and Sketchy are all built for <b>US exams</b>. Regional pages are
+      <b>inactive and visually inconsistent</b>. No one owns <em>DHA · DOH · MOHAP · SCFHS · OMSB ·
+      Arab Board</em> prep as an entertaining, character-led feed. That uncontested category is
+      Bayan's lane — and this plan turns @bayanaitech into a <b>measurable top-of-funnel</b> for
+      Bayan Learning, not an exam-only feed.
+    </p>
+    <p>
+      This keeps Nasim's 90-day structure, her two characters (<b>Bissan</b> &amp; <b>Ghassan</b>),
+      her 3-track audience model and her fee/terms <b>untouched</b>. It adds the two things she asked
+      for — a <em>competitor-analysis format</em> and a <em>monthly goal projection model</em> — plus
+      the content templates, growth loops and a conversion-first measurement model.
+    </p>
+    <span class="tag">⚠ Draft · no edit, post, or spend authorized · numeric cells need Nasim's authorized Insights review</span>
+  </div>
+
+  <div class="sec-head">
+    <span class="sec-num">01</span>
+    <h2 class="sec-title">Competitor analysis — the card format Nasim requested
+      <small>one card per competitor · positioning pre-filled · drop live numbers into the dashed blanks</small>
+    </h2>
+  </div>
+
+  <div class="grid g2">
+    <div class="card comp" style="--c:52,211,153">
+      <div class="comp-head"><span class="comp-handle">@uworld</span><span class="comp-tag">the "why" standard</span></div>
+      <div class="comp-row">
+        <span class="lab">Followers</span><span class="val"><span class="fill">—</span></span>
+        <span class="lab">Cadence</span><span class="val"><span class="fill">—</span>/wk</span>
+        <span class="lab">Video ratio</span><span class="val"><span class="fill">—</span> of last 9</span>
+        <span class="lab">Avg likes</span><span class="val">fun <span class="fill">—</span> · sci <span class="fill">—</span></span>
+      </div>
+      <div class="wk">
+        <div class="wkc lo"><b>▼ week low</b>"____" · <span class="fill">—</span>♥ <span class="fill">—</span>↗</div>
+        <div class="wkc hi"><b>▲ week high</b>"____" · <span class="fill">—</span>♥ <span class="fill">—</span>↗</div>
+      </div>
+      <p><b>Strength:</b> every item explains why the right answer is right and each distractor wrong. <b>Weakness:</b> 100% US-exam, little personality.</p>
+      <div class="takes"><b>Bayan takes →</b> the "why each option is wrong" discipline, localized to Gulf exams and delivered by Ghassan's mistake + Bissan's fix.</div>
+    </div>
+
+    <div class="card comp" style="--c:131,58,180">
+      <div class="comp-head"><span class="comp-handle">@amboss.med</span><span class="comp-tag">fixed template</span></div>
+      <div class="comp-row">
+        <span class="lab">Followers</span><span class="val"><span class="fill">—</span></span>
+        <span class="lab">Cadence</span><span class="val"><span class="fill">—</span>/wk</span>
+        <span class="lab">Video ratio</span><span class="val"><span class="fill">—</span> of last 9</span>
+        <span class="lab">Avg likes</span><span class="val">fun <span class="fill">—</span> · sci <span class="fill">—</span></span>
+      </div>
+      <div class="wk">
+        <div class="wkc lo"><b>▼ week low</b>"____" · <span class="fill">—</span>♥ <span class="fill">—</span>↗</div>
+        <div class="wkc hi"><b>▲ week high</b>"____" · <span class="fill">—</span>♥ <span class="fill">—</span>↗</div>
+      </div>
+      <p><b>Strength:</b> Question + answer in one recognizable, highly saveable template. <b>Weakness:</b> dense tone, US/EU focus.</p>
+      <div class="takes"><b>Bayan takes →</b> the fixed, instantly-recognizable Q→A template as our branded carousel.</div>
+    </div>
+
+    <div class="card comp" style="--c:252,176,69">
+      <div class="comp-head"><span class="comp-handle">@osmosis</span><span class="comp-tag">hard-topic visuals</span></div>
+      <div class="comp-row">
+        <span class="lab">Followers</span><span class="val"><span class="fill">—</span></span>
+        <span class="lab">Cadence</span><span class="val"><span class="fill">—</span>/wk</span>
+        <span class="lab">Video ratio</span><span class="val"><span class="fill">—</span> of last 9</span>
+        <span class="lab">Avg likes</span><span class="val">fun <span class="fill">—</span> · sci <span class="fill">—</span></span>
+      </div>
+      <div class="wk">
+        <div class="wkc lo"><b>▼ week low</b>"____" · <span class="fill">—</span>♥ <span class="fill">—</span>↗</div>
+        <div class="wkc hi"><b>▲ week high</b>"____" · <span class="fill">—</span>♥ <span class="fill">—</span>↗</div>
+      </div>
+      <p><b>Strength:</b> visual explanation of difficult topics; memorable. <b>Weakness:</b> med-school audience, production-heavy.</p>
+      <div class="takes"><b>Bayan takes →</b> one hard-topic visual explainer per week, cheaper and AI-assisted.</div>
+    </div>
+
+    <div class="card comp" style="--c:244,63,94">
+      <div class="comp-head"><span class="comp-handle">@sketchymedical</span><span class="comp-tag">characters + story</span></div>
+      <div class="comp-row">
+        <span class="lab">Followers</span><span class="val"><span class="fill">—</span></span>
+        <span class="lab">Cadence</span><span class="val"><span class="fill">—</span>/wk</span>
+        <span class="lab">Video ratio</span><span class="val"><span class="fill">—</span> of last 9</span>
+        <span class="lab">Avg likes</span><span class="val">fun <span class="fill">—</span> · sci <span class="fill">—</span></span>
+      </div>
+      <div class="wk">
+        <div class="wkc lo"><b>▼ week low</b>"____" · <span class="fill">—</span>♥ <span class="fill">—</span>↗</div>
+        <div class="wkc hi"><b>▲ week high</b>"____" · <span class="fill">—</span>♥ <span class="fill">—</span>↗</div>
+      </div>
+      <p><b>Strength:</b> characters + narrative memory hooks — the exact Bissan/Ghassan mechanism. <b>Weakness:</b> niche, US-exam, paywalled.</p>
+      <div class="takes"><b>Bayan takes →</b> proof character-led teaching scales — validates the Bissan/Ghassan bet.</div>
+    </div>
+  </div>
+
+  <div class="band">
+    <div class="bi">◎</div>
+    <div>
+      <div class="bk">Headline finding for the CEO</div>
+      <div class="bt">Every serious competitor serves the US exam and ignores the Gulf/Arab-Board candidate.</div>
+      <div class="bd">
+        Regional pages are inactive and visually inconsistent (no unified grid, <b>no highlights</b> —
+        the same gap the <code style="font-family:var(--mono)">bayan-insta.html</code> diagnosis found
+        on Bayan's own page). Bayan can own an uncontested category by being the <b>only character-led,
+        Gulf-exam-focused</b> feed, and win reach with the fun-carousel format that already spikes
+        regionally. The numeric cells above come from Nasim's authorized logged-in review — public
+        scraping can't give reliable reach/shares.
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-head">
+    <span class="sec-num">02</span>
+    <h2 class="sec-title">Monthly goal projection model — fillable the day Insights arrive
+      <small>Nasim won't invent numbers before analytics · this gives the CEO a model with ranges + the formula so exact targets drop in instantly</small>
+    </h2>
+  </div>
+
+  <div class="funnel">
+    <span class="fstep">Reach</span><span class="farrow">→</span>
+    <span class="fstep">Saves + shares</span><span class="farrow">→</span>
+    <span class="fstep">Profile visits</span><span class="farrow">→</span>
+    <span class="fstep">Bio-link taps</span><span class="farrow">→</span>
+    <span class="fstep goal">Sample-quiz starts</span><span class="farrow">→</span>
+    <span class="fstep goal">Sign-ups</span>
+  </div>
+
+  <div class="card" style="--c:26,79,245;margin-top:4px">
+    <div class="ch">North star</div>
+    <p>The CEO's concern is <b>conversion</b>, so the north-star metric is <em>sample-quiz starts from Instagram</em> — not follower count. Followers are a lagging reach proxy; a rise in reach is <b>not</b> a conversion win without downstream quiz-start / sign-up evidence.</p>
+  </div>
+
+  <table class="tbl" style="margin-top:4px">
+    <tr>
+      <th>Metric</th><th>Baseline</th><th>M1 · Foundation</th><th>M2 · Adjust</th><th>M3 · Convert</th>
+    </tr>
+    <tr>
+      <td><b>Followers</b></td><td>~775</td><td>+5–10%</td><td>+10–20%</td><td>+15–25%</td>
+    </tr>
+    <tr>
+      <td><b>Reach / post</b></td><td><span class="fill">—</span></td><td>establish baseline</td><td>+25–50% vs M1</td><td>hold reach, lift intent</td>
+    </tr>
+    <tr>
+      <td><b>Saves+shares / reach</b></td><td><span class="fill">—</span></td><td>measure per format</td><td>beat M1 median</td><td>beat M2 median</td>
+    </tr>
+    <tr>
+      <td><b>Profile visits / wk</b></td><td><span class="fill">—</span></td><td>baseline</td><td>+30%</td><td>+30%</td>
+    </tr>
+    <tr>
+      <td><b>Bio-link taps / wk</b></td><td><span class="fill">—</span></td><td>add tracked link</td><td>2× M1</td><td>2× M2</td>
+    </tr>
+    <tr class="star">
+      <td><b>Quiz-starts / mo (IG)</b></td><td>0 tracked</td><td>install + first signal</td><td>first real cohort</td><td><b>the number that matters</b></td>
+    </tr>
+    <tr>
+      <td><b>Attributable sign-ups</b></td><td>0 tracked</td><td>n/a — no path yet</td><td>first few</td><td>Month-3 goal</td>
+    </tr>
+  </table>
+
+  <div class="grid g2" style="margin-top:4px">
+    <div class="card" style="--c:34,211,153">
+      <div class="ch">Formula · reach</div>
+      <p><span class="fx">target reach/post = baseline median × (1 + lift)</span><br>Start lift at <b>+25%</b> M1→M2 — realistic for a page posting 3–4×/wk with fixed templates.</p>
+    </div>
+    <div class="card" style="--c:34,211,153">
+      <div class="ch">Formula · conversion</div>
+      <p><span class="fx">quiz-starts = profile-visits × bio-tap-rate × quiz-start-rate</span><br>Measure each rate in M1; set M2–M3 as the product of improving each by one step.</p>
+    </div>
+  </div>
+
+  <div class="band">
+    <div class="bi">“</div>
+    <div>
+      <div class="bk">What to tell the CEO about numbers</div>
+      <div class="bd">
+        <b>"We will not promise a follower number.</b> In Month 1 we install the baseline and the tracked
+        path from post → sample quiz. By end of Month 1 you'll have <b>real rates</b>, and Month 2–3
+        targets become arithmetic, not hope. Success in Month 3 is <b>sample-quiz starts and sign-ups
+        traced to Instagram</b> — the conversion you asked about — not likes."
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-head">
+    <span class="sec-num">03</span>
+    <h2 class="sec-title">Content system — production templates on top of Nasim's pillars
+      <small>keeps the ~60% fun · ~25% exam-education · ~15% product mix · Bissan explains why, Ghassan makes the mistake</small>
+    </h2>
+  </div>
+
+  <div class="grid g2">
+    <div class="card comp" style="--c:244,63,94">
+      <div class="comp-head"><span class="comp-handle">Ghassan</span><span class="comp-tag">the one who guesses</span></div>
+      <div class="comp-row">
+        <span class="lab">Role</span><span class="val">The candidate who guesses</span>
+        <span class="lab">Beat</span><span class="val">Picks the tempting wrong option, confidently</span>
+        <span class="lab">Tone</span><span class="val">Funny, relatable, a little chaotic</span>
+        <span class="lab">Catch</span><span class="val">"I was SO sure it was B…"</span>
+        <span class="lab">Never</span><span class="val">mocks the learner; is mean</span>
+      </div>
+    </div>
+    <div class="card comp" style="--c:34,211,153">
+      <div class="comp-head"><span class="comp-handle">Bissan</span><span class="comp-tag">the one who knows</span></div>
+      <div class="comp-row">
+        <span class="lab">Role</span><span class="val">The one who knows</span>
+        <span class="lab">Beat</span><span class="val">Explains why it's wrong, why the right one is right</span>
+        <span class="lab">Tone</span><span class="val">Calm, warm, authoritative</span>
+        <span class="lab">Catch</span><span class="val">"Here's the one line that makes it A."</span>
+        <span class="lab">Never</span><span class="val">lectures; uses jargon unexplained</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="--c:167,139,250;margin-top:4px">
+    <div class="ch">Hook library · first line / first 3 seconds</div>
+    <p><b>Curiosity:</b> "Everyone picks B. B is wrong. Here's why." · "This one word in the question changes the answer." · "90% of candidates miss this on OMSB."</p>
+    <p style="margin-top:7px"><b>Story:</b> "Ghassan failed this question. Twice." · "The night before my DHA exam, I learned this trick."</p>
+    <p style="margin-top:7px"><b>Value:</b> "3 ECG patterns that show up on every Gulf licensing exam." · "Stop memorizing. Do this instead:"</p>
+    <p style="margin-top:7px"><b>Contrarian:</b> "US exam tools won't pass you in the Gulf. Here's the gap." · "Flashcards are overrated for the Arab Board."</p>
+  </div>
+
+  <div class="grid g2">
+    <div class="card" style="--c:26,79,245">
+      <div class="ch">Carousel template · Question → Answer</div>
+      <div class="steps">
+        <div class="step"><span class="sn">S1 hook</span><span>The exam question + <b>Ghassan</b> picking the tempting wrong option.</span></div>
+        <div class="step"><span class="sn">S2 tension</span><span>"Why most candidates choose that…" — the trap.</span></div>
+        <div class="step"><span class="sn">S3 turn</span><span><b>Bissan:</b> the one distinguishing fact.</span></div>
+        <div class="step"><span class="sn">S4 answer</span><span>Correct option + why each distractor is wrong (the UWorld discipline).</span></div>
+        <div class="step"><span class="sn">S5 retain</span><span>1-line memory hook / mnemonic.</span></div>
+        <div class="step"><span class="sn">S6 cta</span><span>"Try 1 real question → link in bio" (tracked).</span></div>
+      </div>
+      <p style="margin-top:10px">Clinical reviewer signs off slides 3–4 before scheduling. Fixed brand template = instant recognition.</p>
+    </div>
+
+    <div class="card" style="--c:252,176,69">
+      <div class="ch">Reel A · "Ghassan's mistake" · 20–30s</div>
+      <div class="steps">
+        <div class="step"><span class="sn">0–3s</span><span>Ghassan on screen, bold text: "I picked B. Confidently." (visual + verbal + overlay hook)</span></div>
+        <div class="step"><span class="sn">3–10s</span><span>The question + why B is tempting.</span></div>
+        <div class="step"><span class="sn">10–22s</span><span>Bissan enters: the distinguishing fact → correct answer.</span></div>
+        <div class="step"><span class="sn">22–30s</span><span>"Which would YOU pick? 1 free question in bio." (tracked CTA)</span></div>
+      </div>
+      <p style="margin-top:10px"><b>Reel B — "In 30 seconds" demo:</b> open on a solved screen → "Pass the Gulf exam. Watch." → screen-record the real app (pick → explain → next) → "Start free → bio." Real footage only. <b>Subtitles mandatory</b> (3–5 words/line) — most views are muted.</p>
+    </div>
+  </div>
+
+  <div class="band">
+    <div class="bi">⟳</div>
+    <div>
+      <div class="bk">Efficiency engine · every piece works twice</div>
+      <div class="bt">One production, two placements, one tracked path to the sample quiz.</div>
+      <div class="bd">
+        For each Bayan SEO article → make its Reel. Instagram sends people to the article; the article
+        embeds the Reel. This formalizes Nasim's SEO↔IG loop and is the strongest argument for the
+        <b>"work with Dr. Hiva's team"</b> operating model in her proposal.
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-head">
+    <span class="sec-num">04</span>
+    <h2 class="sec-title">Four growth loops — zero ad budget
+      <small>each costs nothing and compounds · pulled from the marketing-ideas library</small>
+    </h2>
+  </div>
+
+  <div class="grid g4">
+    <div class="card" style="--c:34,211,153">
+      <div class="ch">#115 · challenge</div>
+      <h3>7-Day Gulf-Licensing Streak</h3>
+      <p>One question/day in Stories for 7 days; candidates reply to keep a streak; day 7 → sample quiz. Drives daily DMs + saves and builds the habit.</p>
+    </div>
+    <div class="card" style="--c:26,79,245">
+      <div class="ch">#93 / #137 · referral</div>
+      <h3>Candidate referral loop</h3>
+      <p>"Tag the study partner who always picks the wrong option." Candidates study in groups — tagging is native, free reach.</p>
+    </div>
+    <div class="card" style="--c:252,176,69">
+      <div class="ch">UGC · proof</div>
+      <h3>"Passed DHA with Bayan"</h3>
+      <p>Repost candidates who pass (with consent) — social proof + the exact conversion story the CEO wants.</p>
+    </div>
+    <div class="card" style="--c:167,139,250">
+      <div class="ch">#11 · comparison</div>
+      <h3>US-exam tools vs Gulf reality</h3>
+      <p>One honest carousel capturing the decision moment where Bayan is the only right answer. Frame as audience-fit, never name competitors negatively.</p>
+    </div>
+  </div>
+
+  <div class="sec-head">
+    <span class="sec-num">05</span>
+    <h2 class="sec-title">Measurement &amp; operating rhythm — conversion-first
+      <small>report counts and rates, never likes alone</small>
+    </h2>
+  </div>
+
+  <div class="grid g3">
+    <div class="card" style="--c:26,79,245">
+      <div class="ch">before launch</div>
+      <p>Pull 30-day Insights baseline (date range, timezone, follower base). Install one <b>tracked bio link / UTM</b> so every post→quiz path is countable.</p>
+    </div>
+    <div class="card" style="--c:34,211,153">
+      <div class="ch">weekly · 20 min</div>
+      <p>Top/bottom posts by <b>reach and saves+shares</b>, bio-link taps, quiz-starts, one change for next week.</p>
+    </div>
+    <div class="card" style="--c:167,139,250">
+      <div class="ch">monthly</div>
+      <p>Median performance by <b>pillar × format</b> vs baseline → the decision for next month. <b>Honesty rule:</b> reach alone is not a conversion win.</p>
+    </div>
+  </div>
+
+  <div class="sec-head">
+    <span class="sec-num">06</span>
+    <h2 class="sec-title">CEO decisions — Nasim's 6 asks + the diagnosis fix
+      <small>recommended option in green · one approval unlocks Month-1 execution</small>
+    </h2>
+  </div>
+
+  <ol class="dec">
+    <li><b>Audience:</b> targeted <em>Gulf / Arab-Board candidates</em> — not raw follower count.</li>
+    <li><b>Scope:</b> Bayan Learning page lead; other products mentioned for <em>credibility</em>.</li>
+    <li><b>Operating model:</b> <em>Dr. Hiva's technical/product team</em> — enables "works twice" + tracked conversion (vs. content liaison).</li>
+    <li><b>Official product name:</b> pick one — Bayan Learning / Bayan Edu / Bayan Medical Education.</li>
+    <li><b>Priority audience &amp; exam first:</b> which track leads Month 1 (recommend <em>Gulf Licensing</em>).</li>
+    <li><b>Shareable numbers:</b> which of question count / users / countries can go public.</li>
+    <li><b>Reconcile the count:</b> bio says "6 live products"; site says "seven initiatives / six solutions" — <em>fix before any public claim</em> (from the diagnosis).</li>
+  </ol>
+
+  <div class="band" style="border-color:rgba(52,211,153,.32);background:linear-gradient(135deg,rgba(52,211,153,.06),transparent 70%)">
+    <div class="bi" style="background:rgba(52,211,153,.16);color:rgb(var(--emerald));border-color:rgba(52,211,153,.35)">✓</div>
+    <div>
+      <div class="bk" style="color:rgb(var(--emerald))">30-day path once approved</div>
+      <div class="bd">
+        <b>Week 0:</b> CEO decisions · Insights baseline · competitor cards filled from live review · profile refresh drafted (name, bio, 4 highlights, unified grid).
+        <b>W1 clear reasoning:</b> fixed Q→A carousel + first Ghassan/Bissan Reel + Streak challenge.
+        <b>W2 trust:</b> "how we review clinical content" + first UGC repost.
+        <b>W3 tools:</b> real app demo Reels + comparison carousel.
+        <b>W4 + report:</b> build-from-Oman Reel + <b>Month-1 report with real rates → Month-2 targets become arithmetic.</b>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <b>Guardrails.</b> Nothing publishes until the profile refresh is approved and each clinical/research
+    claim is signed off. Reuse approved footage; invent no cases, outcomes, readiness, or statistics.
+    Keep the parent-company portfolio account distinct from Bayan exam-prep routing. All numeric
+    competitor/baseline cells require Nasim's authorized logged-in review — not public scraping.
+    <br><br>
+    <b>Draft · for CEO (Dr. Abdullah) + Nasim alignment.</b> Enriches Nasim's <i>Instagram Management &amp;
+    AI Design Proposal</i> (4 Oct 2026) and the <code style="font-family:var(--mono)">bayan-insta.html</code>
+    diagnosis. Does not replace her proposal — keeps her structure, characters, audience model and fee/terms untouched.
+  </div>
+
+</div>
+</body>
+</html>

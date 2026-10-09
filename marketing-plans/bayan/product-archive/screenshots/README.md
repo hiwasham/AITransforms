@@ -1,5 +1,3 @@
-![[deepseek_html_20261003_fd7d89.html]]
-
 # screenshots — captured views
 
 Full-page captures of the logged-in bayan.edu.om learner app, read-only. Desktop

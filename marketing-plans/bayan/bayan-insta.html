@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bayan Medical Education · Instagram Review</title>
+<style>
+  :root{
+    --ink:#05060a;--ink2:#0b0d13;--panel:#121521;--panel2:#191d2c;
+    --line:#232838;--txt:#f1f4fb;--mut:#7b8299;--mut2:#4d5468;
+    --bayan:#1a4ff5;--bayan2:#4d7bff;
+    --ig-purple:#833ab4;--ig-pink:#fd1d1d;--ig-orange:#fcb045;
+    --gold:245,190,60;--emerald:52,211,153;--rose:244,63,94;
+    --violet:167,139,250;--cyan:34,211,238;
+    --accent:26,79,245;
+    --ig-gradient:linear-gradient(45deg,#833ab4,#fd1d1d,#fcb045);
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{background:var(--ink);color:var(--txt);font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;overflow:hidden;line-height:1.5}
+
+  /* ambient */
+  .bg{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+  .bg::before{content:"";position:absolute;inset:-30%;
+    background:
+      radial-gradient(40% 32% at 8% 6%, rgba(26,79,245,.13), transparent 60%),
+      radial-gradient(34% 30% at 92% 94%, rgba(131,58,180,.08), transparent 62%),
+      radial-gradient(30% 26% at 50% 50%, rgba(253,29,29,.04), transparent 60%);
+    filter:blur(32px)}
+  .bg::after{content:"";position:absolute;inset:0;
+    background-image:linear-gradient(rgba(255,255,255,.012) 1px,transparent 1px),
+                     linear-gradient(90deg,rgba(255,255,255,.012) 1px,transparent 1px);
+    background-size:52px 52px;
+    mask-image:radial-gradient(78% 62% at 50% 38%,#000 20%,transparent 100%)}
+
+  .app{position:relative;z-index:1;display:grid;
+    grid-template-columns:270px 1fr;height:100vh}
+
+  /* ============ LEFT RAIL ============ */
+  .rail{border-right:1px solid var(--line);
+    background:linear-gradient(180deg,rgba(18,21,33,.96),rgba(11,13,19,.96));
+    backdrop-filter:blur(14px);display:flex;flex-direction:column;
+    padding:18px 12px 14px;gap:14px;min-height:0}
+
+  .brand{display:flex;align-items:center;gap:11px;
+    padding:2px 6px 16px;border-bottom:1px solid var(--line)}
+
+  /* Bayan avatar — logo placeholder */
+  .bayan-avatar{width:44px;height:44px;flex:0 0 44px;border-radius:50%;
+    position:relative;
+    background:linear-gradient(135deg,#0a1a52 0%,#1a4ff5 60%,#4d7bff 100%);
+    display:grid;place-items:center;
+    box-shadow:0 0 28px -4px rgba(26,79,245,.7)}
+  .bayan-avatar::before{content:"";position:absolute;inset:-3px;border-radius:50%;
+    background:conic-gradient(from 210deg,#833ab4,#fd1d1d,#fcb045,#1a4ff5,#833ab4);
+    z-index:-1;padding:2px;
+    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;mask-composite:exclude}
+  .bayan-avatar .mark{
+    font:800 19px/1 var(--sans);color:#fff;letter-spacing:-.06em;
+    position:relative;display:flex;align-items:center}
+  .bayan-avatar .mark::after{
+    content:"";position:absolute;right:-5px;bottom:-1px;
+    width:12px;height:12px;border-radius:3px;
+    background:#fff;
+    clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
+    opacity:.9}
+
+  .brand-info{flex:1;min-width:0}
+  .brand-name{font-size:13px;font-weight:700;letter-spacing:-.01em;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+    color:#fff}
+  .brand-sub{font:500 9px/1.35 var(--mono);color:var(--mut2);
+    letter-spacing:.11em;text-transform:uppercase;margin-top:3px}
+
+  .rail-label{font:600 9.5px/1 var(--mono);letter-spacing:.14em;
+    text-transform:uppercase;color:var(--mut2);padding:0 8px;margin-bottom:2px}
+
+  .view-switch{display:flex;flex-direction:column;gap:3px;
+    flex:1;overflow-y:auto;padding-right:2px;min-height:0}
+  .view-switch::-webkit-scrollbar{width:4px}
+  .view-switch::-webkit-scrollbar-thumb{background:#222a36;border-radius:9px}
+
+  .view-btn{all:unset;cursor:pointer;position:relative;
+    display:flex;align-items:center;gap:11px;
+    padding:9px 11px 9px 12px;border-radius:10px;
+    transition:background .18s,color .18s;color:var(--mut);
+    font:500 11.5px/1.3 var(--sans);letter-spacing:.01em}
+  .view-btn:hover{background:rgba(255,255,255,.04);color:#c8d2e2}
+  .view-btn.on{background:rgba(var(--accent),.12);color:var(--txt)}
+  .view-btn.on::before{content:"";position:absolute;left:0;top:50%;
+    translate:0 -50%;width:3px;height:18px;border-radius:9px;
+    background:rgb(var(--accent));box-shadow:0 0 14px 0 rgba(var(--accent),.9)}
+  .view-btn .vi{width:22px;height:22px;flex:0 0 22px;border-radius:7px;
+    display:grid;place-items:center;font-size:12px;
+    background:rgba(255,255,255,.05);color:var(--mut2);transition:.2s}
+  .view-btn.on .vi{background:rgba(var(--accent),.2);color:rgb(var(--accent))}
+
+  .rail-foot{border-top:1px solid var(--line);padding-top:12px;
+    display:flex;flex-direction:column;gap:10px}
+  .handle-badge{padding:11px 13px;border-radius:11px;
+    background:linear-gradient(135deg,rgba(26,79,245,.1),
+      rgba(131,58,180,.06));
+    border:1px solid rgba(26,79,245,.28);
+    display:flex;align-items:center;gap:10px}
+  .handle-badge .hb-dot{width:8px;height:8px;border-radius:50%;
+    background:var(--emerald);box-shadow:0 0 12px 0 rgba(52,211,153,.9);
+    flex:0 0 8px;
+    animation:blip 2.2s ease-in-out infinite}
+  @keyframes blip{
+    0%,100%{opacity:1;transform:scale(1)}
+    50%{opacity:.4;transform:scale(.7)}}
+  .handle-badge .hb-text{flex:1;min-width:0}
+  .handle-badge .hb-k{font:600 8.5px/1 var(--mono);letter-spacing:.13em;
+    text-transform:uppercase;color:rgb(var(--accent));margin-bottom:3px}
+  .handle-badge .hb-v{font:600 11px/1.3 var(--sans);color:#eef2f9;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+  .btn-demo{all:unset;cursor:pointer;text-align:center;
+    font:600 10px/1 var(--mono);letter-spacing:.09em;text-transform:uppercase;
+    padding:10px 12px;border-radius:9px;color:rgb(var(--accent));
+    background:rgba(var(--accent),.1);border:1px solid rgba(var(--accent),.3);
+    transition:.2s}
+  .btn-demo:hover{background:rgba(var(--accent),.18)}
+  .btn-demo.playing{color:#fff;background:rgb(var(--accent))}
+
+  /* ============ MAIN ============ */
+  .canvas{display:flex;flex-direction:column;min-width:0;min-height:0}
+
+  .topbar{display:flex;align-items:center;gap:14px;
+    padding:14px 26px;border-bottom:1px solid var(--line);
+    background:rgba(11,13,19,.6);backdrop-filter:blur(10px);flex-wrap:wrap}
+  .crumb{flex:1;min-width:0;display:flex;align-items:center;gap:11px;
+    font:500 12px/1.3 var(--mono);color:var(--mut);letter-spacing:.02em;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .crumb b{color:#dfe7f4;font-weight:600}
+  .crumb .sep{color:var(--mut2)}
+  .crumb .pill{font:600 10px/1 var(--mono);letter-spacing:.08em;
+    text-transform:uppercase;padding:5px 9px;border-radius:7px;
+    background:rgba(var(--accent),.14);color:rgb(var(--accent));
+    border:1px solid rgba(var(--accent),.3)}
+  .crumb .ig-pill{background:var(--ig-gradient);color:#fff;
+    border:none;padding:5px 9px;border-radius:7px;
+    font:600 10px/1 var(--mono);letter-spacing:.08em;
+    text-transform:uppercase}
+
+  .stage{flex:1;min-height:0;overflow-y:auto;padding:26px 26px 40px;
+    display:flex;flex-direction:column;gap:18px}
+  .stage::-webkit-scrollbar{width:9px}
+  .stage::-webkit-scrollbar-thumb{background:#1d2531;border-radius:9px}
+  .stage::-webkit-scrollbar-thumb:hover{background:#28323f}
+
+  /* reveal */
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}
+    to{opacity:1;transform:none}}
+  .reveal{animation:fadeUp .55s cubic-bezier(.2,.7,.3,1) both}
+
+  /* ============ HERO ============ */
+  .hero{border-radius:18px;border:1px solid var(--line);
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    padding:26px 28px;position:relative;overflow:hidden;
+    animation:fadeUp .55s cubic-bezier(.2,.7,.3,1) both}
+  .hero::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,#833ab4,#fd1d1d,#fcb045,#1a4ff5)}
+  .hero .h-k{font:600 10px/1 var(--mono);letter-spacing:.15em;
+    text-transform:uppercase;color:rgb(var(--accent));margin-bottom:12px;
+    display:flex;align-items:center;gap:9px}
+  .hero .h-k::before{content:"";width:14px;height:3px;border-radius:3px;
+    background:var(--ig-gradient)}
+  .hero h1{font:800 30px/1.12 var(--sans);letter-spacing:-.035em;
+    margin-bottom:14px;max-width:26ch;color:#fff}
+  .hero p{font-size:13.5px;color:#a8b3c5;max-width:78ch;line-height:1.65}
+  .hero p b{color:#dfe7f4;font-weight:600}
+  .hero p em{font-style:normal;color:rgb(var(--accent));font-weight:600}
+  .hero p + p{margin-top:12px}
+
+  .status-tag{display:inline-flex;align-items:center;gap:9px;
+    font:600 9.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;
+    padding:7px 11px;border-radius:7px;margin-top:18px;
+    background:rgba(245,190,60,.12);color:rgb(var(--gold));
+    border:1px dashed rgba(245,190,60,.4)}
+
+  /* ============ INSTAGRAM PHONE MOCKUP ============ */
+  .ig-compare{display:grid;grid-template-columns:1fr 1fr;gap:24px;
+    align-items:start;margin-top:8px}
+  .ig-phone-wrap{display:flex;flex-direction:column;gap:14px;align-items:center}
+  .ig-label{font:700 10px/1 var(--mono);letter-spacing:.14em;
+    text-transform:uppercase;padding:7px 13px;border-radius:8px;
+    display:inline-flex;align-items:center;gap:8px}
+  .ig-label.now{background:rgba(244,63,94,.14);color:rgb(var(--rose));
+    border:1px solid rgba(244,63,94,.32)}
+  .ig-label.next{background:rgba(26,79,245,.14);color:rgb(var(--bayan2));
+    border:1px solid rgba(26,79,245,.32)}
+  .ig-label.now::before{content:"●";font-size:8px}
+  .ig-label.next::before{content:"◉";font-size:11px}
+
+  .ig-phone{
+    width:100%;max-width:340px;
+    aspect-ratio:9/19.5;
+    background:#000;border-radius:44px;
+    border:10px solid #1a1d27;
+    box-shadow:
+      0 0 0 1px #2a2f3f,
+      0 40px 90px -30px rgba(0,0,0,.95),
+      0 0 70px -20px rgba(26,79,245,.35);
+    position:relative;overflow:hidden;
+    animation:fadeUp .65s cubic-bezier(.2,.7,.3,1) both}
+
+  .ig-phone::before{content:"";position:absolute;top:12px;left:50%;
+    translate:-50% 0;width:96px;height:26px;border-radius:99px;
+    background:#000;z-index:10}
+
+  .ig-screen{position:absolute;inset:0;
+    background:#000;
+    display:flex;flex-direction:column;overflow:hidden}
+
+  .ig-status{display:flex;justify-content:space-between;
+    padding:16px 24px 4px;
+    font:500 11px/1 var(--sans);color:#fff;letter-spacing:.02em;
+    z-index:11;position:relative}
+  .ig-status .right{display:flex;gap:5px;align-items:center;font-size:10px}
+
+  .ig-top{display:flex;align-items:center;padding:10px 16px 8px;
+    gap:16px;color:#fff;font-size:15px}
+  .ig-top .user{flex:1;display:flex;align-items:center;gap:8px;
+    font:600 15px/1 var(--sans);letter-spacing:-.01em}
+  .ig-top .user .chk{color:#0095f6;font-size:11px;margin-left:-4px;
+    opacity:.4}
+  .ig-top .icons{display:flex;gap:16px;font-size:17px;color:#fff}
+
+  .ig-profile{padding:8px 16px 0;overflow-y:auto;flex:1}
+  .ig-profile::-webkit-scrollbar{display:none}
+
+  .ig-row-1{display:flex;align-items:center;gap:20px;margin-bottom:14px}
+  .ig-avatar-wrap{position:relative;flex:0 0 82px;width:82px;height:82px}
+  .ig-avatar-ring{position:absolute;inset:0;border-radius:50%;
+    background:conic-gradient(from 210deg,#833ab4,#fd1d1d,#fcb045,#833ab4);
+    display:grid;place-items:center}
+  .ig-avatar-ring.hot{background:conic-gradient(from 210deg,#1a4ff5,#4d7bff,#833ab4,#1a4ff5)}
+  .ig-avatar-inner{width:72px;height:72px;border-radius:50%;
+    background:#000;display:grid;place-items:center;position:relative}
+  .ig-avatar-inner .av-core{
+    width:64px;height:64px;border-radius:50%;
+    background:linear-gradient(135deg,#0a1a52,#1a4ff5 60%,#4d7bff);
+    display:grid;place-items:center;
+    font:800 26px/1 var(--sans);color:#fff;letter-spacing:-.06em}
+  .ig-avatar-inner .av-core::after{
+    content:"";position:absolute;right:6px;bottom:6px;
+    width:14px;height:14px;border-radius:4px;
+    background:#fff;opacity:.95;
+    clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)}
+
+  .ig-stats{display:flex;gap:22px;flex:1;justify-content:space-around}
+  .ig-stat{display:flex;flex-direction:column;align-items:center;gap:2px}
+  .ig-stat .num{font:700 16px/1 var(--sans);color:#fff;letter-spacing:-.02em}
+  .ig-stat .lbl{font:400 11px/1.2 var(--sans);color:#a8a8a8}
+
+  .ig-bio{padding:0 0 14px;font-size:12.5px;line-height:1.5;color:#fff}
+  .ig-bio .name{font:700 13px/1.3 var(--sans);letter-spacing:-.01em;
+    margin-bottom:4px;color:#fff}
+  .ig-bio .desc{font-size:12.5px;line-height:1.55;color:#efefef}
+  .ig-bio .desc .hl{color:rgb(var(--accent));font-weight:600}
+  .ig-bio .link{margin-top:6px;font:500 12.5px/1.4 var(--sans);
+    color:#0095f6;display:flex;align-items:center;gap:5px}
+  .ig-bio .link .ic{font-size:11px}
+
+  .ig-buttons{display:grid;grid-template-columns:1fr 1fr auto;gap:6px;
+    margin-bottom:16px}
+  .ig-btn{all:unset;cursor:default;text-align:center;
+    font:600 12px/1 var(--sans);letter-spacing:-.005em;
+    padding:8px 10px;border-radius:9px;
+    background:#262626;color:#fff;
+    transition:.2s}
+  .ig-btn.primary{background:#0095f6}
+
+  .ig-highlights{display:flex;gap:14px;padding:4px 0 18px;
+    overflow-x:auto;margin:0 -16px;padding-left:16px;padding-right:16px}
+  .ig-highlights::-webkit-scrollbar{display:none}
+  .ig-hl{display:flex;flex-direction:column;align-items:center;gap:6px;
+    flex:0 0 auto}
+  .ig-hl .ring{width:62px;height:62px;border-radius:50%;
+    background:#262626;border:2px solid #2f2f2f;
+    display:grid;place-items:center;position:relative;
+    font:700 11px/1 var(--mono);color:#6b7280;
+    letter-spacing:.04em}
+  .ig-hl.filled .ring{background:conic-gradient(from 210deg,#1a4ff5,#4d7bff,#833ab4,#1a4ff5);}
+  .ig-hl.filled .ring::before{content:"";position:absolute;inset:3px;
+    border-radius:50%;background:#000}
+  .ig-hl.filled .ring span{position:relative;color:#fff;
+    font:700 10px/1 var(--sans);letter-spacing:-.005em;
+    text-align:center;padding:0 4px}
+  .ig-hl .lbl{font:400 10.5px/1.2 var(--sans);color:#fff;max-width:66px;
+    text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+  .ig-tabs{display:flex;border-top:1px solid #2f2f2f;padding-top:8px;
+    gap:0;margin:0 -16px;padding-left:16px;padding-right:16px}
+  .ig-tab{all:unset;cursor:default;flex:1;text-align:center;
+    padding:8px 0;font-size:20px;color:#8e8e8e}
+  .ig-tab.on{color:#fff;border-bottom:1px solid #fff}
+
+  .ig-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;
+    margin:0 -16px;padding-bottom:20px}
+  .ig-cell{aspect-ratio:1;background:#1a1d27;
+    display:grid;place-items:center;
+    font:700 9px/1.3 var(--mono);color:var(--mut2);
+    letter-spacing:.05em;text-align:center;padding:8px}
+
+  /* pin overlay for pinned posts */
+  .ig-cell.pinned{position:relative}
+  .ig-cell.pinned::before{content:"📌";position:absolute;top:5px;right:5px;
+    font-size:11px}
+
+  /* phone caption below */
+  .phone-caption{font:500 10.5px/1.55 var(--mono);color:var(--mut2);
+    letter-spacing:.03em;text-align:center;max-width:340px}
+
+  /* ============ SECTION HEADERS ============ */
+  .sec-head{display:flex;align-items:baseline;gap:14px;
+    padding:6px 0;flex-wrap:wrap;animation:fadeUp .5s cubic-bezier(.2,.7,.3,1) both}
+  .sec-num{font:700 11px/1 var(--mono);letter-spacing:.14em;
+    padding:7px 11px;border-radius:8px;
+    background:rgba(var(--accent),.14);color:rgb(var(--accent));
+    border:1px solid rgba(var(--accent),.3)}
+  .sec-title{font:700 22px/1.2 var(--sans);letter-spacing:-.025em;
+    color:#fff;flex:1;min-width:0}
+  .sec-title small{display:block;font:500 11.5px/1.4 var(--mono);
+    color:var(--mut2);letter-spacing:.03em;margin-top:5px;font-weight:400}
+
+  /* ============ DIAGNOSIS CARDS ============ */
+  .diag-grid{display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+  .diag-card{padding:22px 24px 20px;border-radius:16px;
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    border:1px solid var(--line);position:relative;overflow:hidden;
+    animation:fadeUp .5s cubic-bezier(.2,.7,.3,1) both;
+    animation-delay:var(--d,0ms)}
+  .diag-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;
+    background:linear-gradient(90deg,rgb(var(--dc)),rgba(var(--dc),.1))}
+  .diag-card.works{--dc:52,211,153}
+  .diag-card.friction{--dc:244,63,94}
+
+  .diag-head{display:flex;align-items:center;gap:12px;margin-bottom:16px;
+    padding-bottom:14px;border-bottom:1px dashed #232c39}
+  .diag-ico{width:36px;height:36px;flex:0 0 36px;border-radius:11px;
+    display:grid;place-items:center;font-size:16px;
+    background:rgba(var(--dc),.14);color:rgb(var(--dc));
+    border:1px solid rgba(var(--dc),.32)}
+  .diag-title{font:700 14px/1.3 var(--sans);color:#eef2f9;
+    letter-spacing:-.01em}
+  .diag-sub{font:500 10px/1.35 var(--mono);color:var(--mut2);
+    letter-spacing:.06em;margin-top:3px;text-transform:lowercase}
+
+  .diag-list{display:flex;flex-direction:column;gap:10px}
+  .diag-item{display:flex;gap:11px;align-items:flex-start;
+    padding:11px 13px;border-radius:10px;
+    background:rgba(255,255,255,.02);border:1px solid var(--line);
+    transition:.25s}
+  .diag-item:hover{border-color:rgba(var(--dc),.4);
+    background:rgba(var(--dc),.04);transform:translateX(3px)}
+  .diag-n{flex:0 0 22px;width:22px;height:22px;border-radius:7px;
+    display:grid;place-items:center;
+    font:700 10px/1 var(--mono);
+    background:rgba(var(--dc),.14);color:rgb(var(--dc));
+    border:1px solid rgba(var(--dc),.3);margin-top:1px}
+  .diag-body{flex:1;min-width:0}
+  .diag-name{font:600 12.5px/1.4 var(--sans);color:#eef2f9;
+    letter-spacing:-.005em;margin-bottom:5px}
+  .diag-desc{font-size:11.5px;line-height:1.55;color:var(--mut)}
+  .diag-desc b{color:#cfd8e8;font-weight:600}
+  .diag-desc em{font-style:normal;color:rgb(var(--dc));font-weight:600}
+  .diag-desc code{font-family:var(--mono);font-size:10.5px;
+    color:#cfd8e8;background:rgba(255,255,255,.05);
+    padding:1px 5px;border-radius:4px}
+
+  /* ============ EVIDENCE SNAPSHOT ============ */
+  .evidence{display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;
+    border-radius:14px;overflow:hidden;
+    border:1px solid var(--line);background:var(--line);
+    animation:fadeUp .5s cubic-bezier(.2,.7,.3,1) both}
+  .ev-cell{background:var(--ink2);padding:18px 20px 16px;
+    position:relative;overflow:hidden}
+  .ev-cell::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;
+    background:rgb(var(--ec));opacity:.85}
+  .ev-cell .ev-k{font:600 9.5px/1 var(--mono);letter-spacing:.13em;
+    text-transform:uppercase;color:var(--mut2);margin-bottom:10px}
+  .ev-cell .ev-v{font:700 20px/1.1 var(--sans);letter-spacing:-.03em;
+    color:rgb(var(--ec));font-variant-numeric:tabular-nums;
+    margin-bottom:6px}
+  .ev-cell .ev-v small{font-size:12px;color:var(--mut2);font-weight:600;
+    letter-spacing:0}
+  .ev-cell .ev-n{font:400 10.5px/1.4 var(--mono);color:var(--mut);
+    letter-spacing:.02em}
+
+  /* ============ CONTENT PILLARS ============ */
+  .pillars-grid{display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+  .pillar{border-radius:16px;overflow:hidden;
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    border:1px solid var(--line);
+    position:relative;
+    transition:.3s;
+    animation:fadeUp .5s cubic-bezier(.2,.7,.3,1) both;
+    animation-delay:var(--d,0ms)}
+  .pillar:hover{transform:translateY(-4px);
+    border-color:rgba(var(--pc),.5);
+    box-shadow:0 24px 60px -30px rgba(var(--pc),.85)}
+  .pillar::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,rgb(var(--pc)),rgba(var(--pc),.1));
+    z-index:2}
+
+  .pillar-top{padding:18px 20px 14px;position:relative;
+    background:linear-gradient(160deg,
+      rgba(var(--pc),.14),rgba(var(--pc),.02) 70%,transparent);
+    overflow:hidden}
+  .pillar-share{position:absolute;top:18px;right:20px;
+    font:700 26px/1 var(--sans);letter-spacing:-.04em;
+    color:rgb(var(--pc));opacity:.9;
+    font-variant-numeric:tabular-nums}
+  .pillar-share small{font-size:12px;opacity:.7;font-weight:600;
+    margin-left:2px}
+  .pillar-kicker{font:700 9px/1 var(--mono);letter-spacing:.13em;
+    text-transform:uppercase;color:rgb(var(--pc));margin-bottom:10px;
+    display:flex;align-items:center;gap:8px}
+  .pillar-kicker::before{content:"";width:9px;height:2px;
+    border-radius:2px;background:currentColor}
+  .pillar-name{font:700 17px/1.2 var(--sans);letter-spacing:-.02em;
+    color:#fff;max-width:70%}
+
+  .pillar-body{padding:16px 20px 18px}
+  .pillar-formats{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+  .pillar-fmt{font:600 9.5px/1 var(--mono);letter-spacing:.08em;
+    text-transform:uppercase;padding:5px 8px;border-radius:6px;
+    background:rgba(255,255,255,.04);color:#cfd8e8;
+    border:1px solid var(--line)}
+  .pillar-fmt.reel{background:rgba(var(--pc),.14);
+    color:rgb(var(--pc));border-color:rgba(var(--pc),.3)}
+  .pillar-desc{font-size:12px;line-height:1.6;color:#a8b3c5;
+    margin-bottom:14px}
+  .pillar-desc b{color:#eef2f9;font-weight:600}
+  .pillar-cta{display:flex;flex-wrap:wrap;gap:6px;padding-top:12px;
+    border-top:1px dashed #232c39}
+  .cta-chip{font:600 10px/1 var(--sans);letter-spacing:-.005em;
+    padding:6px 11px;border-radius:99px;
+    background:#262626;color:#fff;
+    border:1px solid #363636}
+
+  /* ============ WEEK CALENDAR ============ */
+  .cal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .week-col{border-radius:14px;
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    border:1px solid var(--line);overflow:hidden;
+    animation:fadeUp .5s cubic-bezier(.2,.7,.3,1) both;
+    animation-delay:var(--d,0ms)}
+  .week-head{padding:14px 16px 12px;
+    background:linear-gradient(160deg,rgba(var(--wc),.14),transparent);
+    border-bottom:1px solid var(--line);
+    position:relative}
+  .week-head .wk-num{font:700 9px/1 var(--mono);letter-spacing:.13em;
+    text-transform:uppercase;color:rgb(var(--wc));margin-bottom:5px}
+  .week-head .wk-theme{font:700 14px/1.2 var(--sans);color:#fff;
+    letter-spacing:-.015em}
+
+  .week-body{padding:12px 14px 16px}
+  .post{padding:11px 12px;border-radius:10px;
+    background:rgba(255,255,255,.02);border:1px solid var(--line);
+    margin-bottom:8px;transition:.25s;cursor:default}
+  .post:last-child{margin-bottom:0}
+  .post:hover{border-color:rgba(var(--wc),.4);
+    background:rgba(var(--wc),.04);transform:translateX(2px)}
+  .post-type{font:700 9px/1 var(--mono);letter-spacing:.12em;
+    text-transform:uppercase;color:rgb(var(--wc));margin-bottom:6px;
+    display:flex;align-items:center;gap:6px}
+  .post-type::before{content:"";width:7px;height:7px;border-radius:2px;
+    background:currentColor}
+  .post-name{font:600 11.5px/1.4 var(--sans);color:#eef2f9;
+    margin-bottom:4px}
+  .post-note{font-size:10.5px;line-height:1.5;color:var(--mut);
+    letter-spacing:.01em}
+
+  /* ============ KPI DASHBOARD ============ */
+  .kpi-grid{display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+  .kpi{padding:20px 20px 18px;border-radius:14px;
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    border:1px solid var(--line);position:relative;overflow:hidden;
+    transition:.3s;
+    animation:fadeUp .5s cubic-bezier(.2,.7,.3,1) both;
+    animation-delay:var(--d,0ms)}
+  .kpi:hover{transform:translateY(-3px);
+    border-color:rgba(var(--kc),.45);
+    box-shadow:0 22px 55px -30px rgba(var(--kc),.8)}
+  .kpi::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;
+    background:linear-gradient(90deg,rgb(var(--kc)),rgba(var(--kc),.1))}
+  .kpi-head{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+  .kpi-ico{width:32px;height:32px;flex:0 0 32px;border-radius:9px;
+    display:grid;place-items:center;font-size:14px;
+    background:rgba(var(--kc),.14);color:rgb(var(--kc));
+    border:1px solid rgba(var(--kc),.3)}
+  .kpi-stage{font:700 9.5px/1 var(--mono);letter-spacing:.13em;
+    text-transform:uppercase;color:rgb(var(--kc))}
+  .kpi-title{font:700 14px/1.3 var(--sans);color:#eef2f9;
+    letter-spacing:-.01em;margin-bottom:10px}
+  .kpi-desc{font-size:11.5px;line-height:1.6;color:var(--mut)}
+  .kpi-desc b{color:#cfd8e8;font-weight:600}
+  .kpi-desc code{font-family:var(--mono);font-size:10.5px;
+    color:rgb(var(--kc));background:rgba(var(--kc),.1);
+    padding:1.5px 5px;border-radius:4px}
+
+  /* ============ DECISIONS ============ */
+  .decisions-list{display:flex;flex-direction:column;gap:12px}
+  .decision{padding:20px 22px 18px;border-radius:14px;
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    border:1px solid var(--line);
+    display:flex;gap:16px;align-items:flex-start;
+    transition:.3s;position:relative;overflow:hidden;
+    animation:fadeUp .5s cubic-bezier(.2,.7,.3,1) both;
+    animation-delay:var(--d,0ms)}
+  .decision:hover{transform:translateX(4px);
+    border-color:rgba(var(--accent),.4)}
+  .decision::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+    background:rgb(var(--accent));opacity:.85}
+  .dec-num{flex:0 0 40px;width:40px;height:40px;border-radius:12px;
+    display:grid;place-items:center;
+    font:800 16px/1 var(--sans);letter-spacing:-.04em;
+    background:linear-gradient(135deg,rgba(26,79,245,.2),rgba(131,58,180,.1));
+    color:rgb(var(--accent));
+    border:1px solid rgba(var(--accent),.4);
+    box-shadow:0 0 26px -10px rgba(var(--accent),.9);
+    font-variant-numeric:tabular-nums}
+  .dec-body{flex:1;min-width:0}
+  .dec-title{font:650 14.5px/1.4 var(--sans);color:#eef2f9;
+    letter-spacing:-.01em;margin-bottom:8px}
+  .dec-desc{font-size:12.5px;line-height:1.6;color:#a8b3c5}
+  .dec-desc b{color:#eef2f9;font-weight:600}
+  .dec-desc em{font-style:normal;color:rgb(var(--accent));font-weight:600}
+  .dec-desc code{font-family:var(--mono);font-size:11px;
+    color:#cfd8e8;background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:5px}
+
+  /* ============ APPROVAL BOUNDARY ============ */
+  .boundary{margin-top:6px;padding:22px 26px;border-radius:16px;
+    border:1px solid rgba(245,190,60,.32);
+    background:linear-gradient(135deg,rgba(245,190,60,.06),
+      rgba(245,190,60,.01) 70%,transparent);
+    display:flex;gap:18px;align-items:flex-start;
+    animation:fadeUp .55s cubic-bezier(.2,.7,.3,1) both .2s}
+  .boundary .b-ico{flex:0 0 40px;width:40px;height:40px;border-radius:12px;
+    display:grid;place-items:center;font-size:17px;
+    background:rgba(245,190,60,.16);color:rgb(var(--gold));
+    border:1px solid rgba(245,190,60,.35)}
+  .boundary .b-body{flex:1;min-width:0}
+  .boundary .b-k{font:700 10px/1 var(--mono);letter-spacing:.14em;
+    text-transform:uppercase;color:rgb(var(--gold));margin-bottom:10px}
+  .boundary .b-t{font:650 15.5px/1.35 var(--sans);color:#eef2f9;
+    letter-spacing:-.01em;margin-bottom:8px}
+  .boundary .b-d{font-size:12.5px;line-height:1.65;color:#a8b3c5}
+  .boundary .b-d b{color:#fff;font-weight:600}
+  .boundary .b-d em{font-style:normal;color:rgb(var(--gold));font-weight:600}
+
+  /* ============ STATUS BAR ============ */
+  .statusbar{display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+    padding:10px 26px;border-top:1px solid var(--line);
+    background:rgba(11,13,19,.65);
+    font:400 10.5px/1 var(--mono);color:var(--mut2);letter-spacing:.03em}
+  .statusbar b{color:var(--mut);font-weight:500}
+  .statusbar .right{margin-left:auto;display:flex;align-items:center;
+    gap:14px;flex-wrap:wrap}
+  .statusbar .chip{color:rgb(var(--accent));background:rgba(var(--accent),.12);
+    padding:4px 7px;border-radius:5px;font-size:9.5px;letter-spacing:.05em}
+  .statusbar .chip.ig{background:var(--ig-gradient);color:#fff}
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:1050px){
+    .ig-compare{grid-template-columns:1fr;gap:32px}
+    .cal-grid{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:900px){
+    .app{grid-template-columns:1fr;grid-template-rows:auto 1fr}
+    .rail{flex-direction:column;border-right:none;
+      border-bottom:1px solid var(--line);padding:12px 12px 0;gap:10px}
+    .brand{padding-bottom:10px}
+    .view-switch{flex-direction:row;overflow-x:auto;gap:5px;
+      padding-bottom:10px}
+    .view-btn{flex:0 0 auto;padding:8px 12px}
+    .view-btn.on::before{display:none}
+    .rail-foot{display:none}
+    .rail-label{display:none}
+    .stage{padding:18px 16px 30px}
+    .hero{padding:20px}
+    .hero h1{font-size:24px}
+    .topbar{padding:12px 16px}
+    .statusbar{padding:10px 16px}
+    .statusbar .right{margin-left:0}
+    .sec-title{font-size:18px}
+  }
+  @media (max-width:600px){
+    .ig-phone{max-width:290px}
+    .cal-grid{grid-template-columns:1fr}
+    .pillar-share{font-size:22px}
+    .sec-title{font-size:16px}
+  }
+</style>
+</head>
+<body>
+
+<div class="bg"></div>
+
+<div class="app">
+
+  <!-- ============ LEFT RAIL ============ -->
+  <aside class="rail">
+    <div class="brand">
+      <div class="bayan-avatar">
+        <span class="mark">B</span>
+      </div>
+      <div class="brand-info">
+        <div class="brand-name">Bayan Medical Education</div>
+        <div class="brand-sub">Instagram Review</div>
+      </div>
+    </div>
+
+    <div class="rail-label">Views</div>
+    <div class="view-switch" id="viewSwitch">
+      <button class="view-btn on" data-view="overview">
+        <span class="vi">◐</span> Executive summary
+      </button>
+      <button class="view-btn" data-view="profile">
+        <span class="vi">◎</span> Profile refresh
+      </button>
+      <button class="view-btn" data-view="diagnosis">
+        <span class="vi">◇</span> Diagnosis
+      </button>
+      <button class="view-btn" data-view="pillars">
+        <span class="vi">▤</span> Content pillars
+      </button>
+      <button class="view-btn" data-view="calendar">
+        <span class="vi">▥</span> 4-week calendar
+      </button>
+      <button class="view-btn" data-view="measurement">
+        <span class="vi">◈</span> Measurement
+      </button>
+      <button class="view-btn" data-view="decisions">
+        <span class="vi">⚑</span> CEO decisions
+      </button>
+    </div>
+
+    <div class="rail-foot">
+      <div class="handle-badge">
+        <span class="hb-dot"></span>
+        <div class="hb-text">
+          <div class="hb-k">Reviewed account</div>
+          <div class="hb-v">@bayanaitech</div>
+        </div>
+      </div>
+      <button class="btn-demo" id="demoBtn">▶ run demo</button>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <main class="canvas">
+    <header class="topbar">
+      <div class="crumb" id="crumb"></div>
+    </header>
+
+    <section class="stage" id="stage"></section>
+
+    <footer class="statusbar" id="statusbar"></footer>
+  </main>
+
+</div>
+
+<script>
+/* =========================================================
+   HELPERS
+   ========================================================= */
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/&/g,'&amp;')
+  .replace(/</g,'&lt;').replace(/>/g,'&gt;');
+
+const VIEWS = [
+  { id:'overview', label:'Executive summary', accent:'26,79,245' },
+  { id:'profile', label:'Profile refresh', accent:'26,79,245' },
+  { id:'diagnosis', label:'Diagnosis', accent:'52,211,153' },
+  { id:'pillars', label:'Content pillars', accent:'131,58,180' },
+  { id:'calendar', label:'4-week calendar', accent:'253,29,29' },
+  { id:'measurement', label:'Measurement', accent:'252,176,69' },
+  { id:'decisions', label:'CEO decisions', accent:'26,79,245' }
+];
+
+/* =========================================================
+   CHROME
+   ========================================================= */
+function renderCrumb(){
+  const v = VIEWS.find(x => x.id === state.view);
+  $('crumb').innerHTML = `
+    <span class="ig-pill">Instagram</span>
+    <span class="sep">·</span>
+    <span>Bayan Medical Education</span>
+    <span class="sep">·</span>
+    <span style="color:var(--mut2)">${v.label}</span>`;
+}
+
+function renderStatus(){
+  $('statusbar').innerHTML = `
+    <span>review <b>@bayanaitech · 2 Oct 2026</b></span>
+    <span class="right">
+      <span><b>~775</b> followers</span>
+      <span class="chip ig">draft · not authorized</span>
+      <span class="chip">insights pending</span>
+    </span>`;
+}
+
+/* =========================================================
+   STATE
+   ========================================================= */
+const state = { view:'overview', demoPlaying:false, demoTimeout:null };
+
+/* =========================================================
+   STAGE DISPATCH
+   ========================================================= */
+function renderAll(){
+  renderCrumb();
+  renderStatus();
+  renderStage();
+  $('viewSwitch').querySelectorAll('.view-btn').forEach(b =>
+    b.classList.toggle('on', b.dataset.view === state.view));
+  const accent = VIEWS.find(x => x.id === state.view).accent;
+  document.documentElement.style.setProperty('--accent', accent);
+}
+
+function renderStage(){
+  const el = $('stage');
+  el.innerHTML = '';
+  if (state.view === 'overview') renderOverview();
+  else if (state.view === 'profile') renderProfile();
+  else if (state.view === 'diagnosis') renderDiagnosis();
+  else if (state.view === 'pillars') renderPillars();
+  else if (state.view === 'calendar') renderCalendar();
+  else if (state.view === 'measurement') renderMeasurement();
+  else if (state.view === 'decisions') renderDecisions();
+  el.scrollTop = 0;
+}
+
+/* =========================================================
+   VIEW: OVERVIEW
+   ========================================================= */
+function renderOverview(){
+  const html = `
+    <div class="hero">
+      <div class="h-k">Executive recommendation · 2 October 2026</div>
+      <h1>Treat the profile as a company front door — not an exam-only feed.</h1>
+      <p>
+        The account currently describes itself as <em>"AI platforms for
+        healthcare, education &amp; research. 6 live products. Built in Oman"</em>,
+        with bio links pointing to both <b>bayanai.tech</b> and
+        <b>bayan.edu.om</b>. The main opportunity is not more generic
+        posting — it is making the company promise, product navigation, and
+        next action clearer, then establishing a repeatable proof-led
+        editorial system.
+      </p>
+      <p>
+        <b>Specific trust risk:</b> the Instagram bio says "6 live products"
+        while the site currently reads "Seven initiatives" and "Showing 6
+        solutions." Reconcile <em>count vs. initiative vs. live product</em>
+        before repeating any count in the bio.
+      </p>
+
+      <div class="status-tag">⚠ Draft plan · no edit, post, or spend authorized</div>
+    </div>
+
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <h2 class="sec-title">Evidence snapshot
+        <small>public, observed 2026-10-02 · analytics not available</small>
+      </h2>
+    </div>
+
+    <div class="evidence">
+      <div class="ev-cell" style="--ec:34,211,238">
+        <div class="ev-k">Followers</div>
+        <div class="ev-v">773–775</div>
+        <div class="ev-n">approx. point-in-time</div>
+      </div>
+      <div class="ev-cell" style="--ec:26,79,245">
+        <div class="ev-k">Display name</div>
+        <div class="ev-v" style="font-size:14px">Bayanai-tech</div>
+        <div class="ev-n">brand-ambiguous</div>
+      </div>
+      <div class="ev-cell" style="--ec:131,58,180">
+        <div class="ev-k">Category</div>
+        <div class="ev-v" style="font-size:14px">IT Company</div>
+        <div class="ev-n">verify more precise option</div>
+      </div>
+      <div class="ev-cell" style="--ec:244,63,94">
+        <div class="ev-k">Verified badge</div>
+        <div class="ev-v" style="font-size:18px">None</div>
+        <div class="ev-n">absent</div>
+      </div>
+      <div class="ev-cell" style="--ec:252,176,69">
+        <div class="ev-k">Highlights</div>
+        <div class="ev-v" style="font-size:18px">0</div>
+        <div class="ev-n">no persistent navigation</div>
+      </div>
+      <div class="ev-cell" style="--ec:167,139,250">
+        <div class="ev-k">Bio links</div>
+        <div class="ev-v" style="font-size:14px">2</div>
+        <div class="ev-n">no audience-first routing</div>
+      </div>
+    </div>
+  `;
+  $('stage').innerHTML = html;
+}
+
+/* =========================================================
+   VIEW: PROFILE (before / after phones)
+   ========================================================= */
+function renderProfile(){
+  const html = `
+    <div class="hero">
+      <div class="h-k">Profile refresh · draft for CEO / brand review</div>
+      <h1>Before and after — how the profile reads at a glance.</h1>
+      <p>
+        The recommended direction is a <b>company-level front door</b> —
+        portfolio first, product routes second, exam-prep routing delegated
+        to <b>bayan.edu.om</b>. The bio's unverified "6 live products"
+        count is removed until product status and count are reconciled.
+      </p>
+    </div>
+
+    <div class="sec-head" style="margin-top:6px">
+      <span class="sec-num">02</span>
+      <h2 class="sec-title">Profile comparison
+        <small>left: current · right: recommended draft · not published</small>
+      </h2>
+    </div>
+
+    <div class="ig-compare">
+      <!-- CURRENT -->
+      <div class="ig-phone-wrap">
+        <span class="ig-label now">current</span>
+        ${renderPhone({current:true})}
+        <div class="phone-caption">
+          Bio still uses "6 live products" · two links, no audience-first routing<br>
+          · no highlights · display name reads "Bayanai-tech"
+        </div>
+      </div>
+
+      <!-- RECOMMENDED -->
+      <div class="ig-phone-wrap">
+        <span class="ig-label next">recommended draft</span>
+        ${renderPhone({current:false})}
+        <div class="phone-caption">
+          Bio removes the count · company name explicit · primary link routes<br>
+          to a portfolio with labeled destinations · highlights installed
+        </div>
+      </div>
+    </div>
+  `;
+  $('stage').innerHTML = html;
+}
+
+function renderPhone({current}){
+  const bio = current
+    ? `<div class="desc">
+         AI platforms for healthcare, education &amp; research.
+         <span class="hl">6 live products</span>. Built in Oman
+       </div>
+       <div class="link"><span class="ic">🔗</span> bayanai.tech / bayan.edu.om</div>`
+    : `<div class="desc">
+         Healthcare, education &amp; research from Oman.<br>
+         <b style="color:#fff">Bayan AI Technologies</b> | Explore our work ↓
+       </div>
+       <div class="link"><span class="ic">🔗</span> bayanai.tech (portfolio)</div>`;
+
+  const highlights = current
+    ? `<div class="ig-hl"><div class="ring">empty</div><div class="lbl">—</div></div>
+       <div class="ig-hl"><div class="ring">empty</div><div class="lbl">—</div></div>
+       <div class="ig-hl"><div class="ring">empty</div><div class="lbl">—</div></div>
+       <div class="ig-hl"><div class="ring">empty</div><div class="lbl">—</div></div>`
+    : `<div class="ig-hl filled"><div class="ring"><span>START</span></div><div class="lbl">Start here</div></div>
+       <div class="ig-hl filled"><div class="ring"><span>BAYAN</span></div><div class="lbl">Bayan</div></div>
+       <div class="ig-hl filled"><div class="ring"><span>R&amp;D</span></div><div class="lbl">Research</div></div>
+       <div class="ig-hl filled"><div class="ring"><span>TEAM</span></div><div class="lbl">Team</div></div>`;
+
+  const gridCells = current
+    ? Array(9).fill(0).map(() =>
+        `<div class="ig-cell">no public feed evidence</div>`).join('')
+    : Array(9).fill(0).map((_,i) =>
+        `<div class="ig-cell${i < 3 ? ' pinned' : ''}">
+          ${i === 0 ? 'WHAT WE DO\\nportfolio' :
+            i === 1 ? 'PRODUCT MAP\\nstatus · links' :
+            i === 2 ? 'PROOF / DEMO\\nstrongest reel' :
+            'content ' + (i+1)}
+         </div>`).join('');
+
+  return `
+    <div class="ig-phone">
+      <div class="ig-screen">
+        <div class="ig-status">
+          <span>9:41</span>
+          <span class="right"><span>●●●</span><span>▮</span></span>
+        </div>
+
+        <div class="ig-top">
+          <div class="user">
+            ${current ? 'bayanai-tech' : 'bayanaitech'}
+            <span class="chk">✓</span>
+          </div>
+          <div class="icons">
+            <span>＋</span>
+            <span>☰</span>
+          </div>
+        </div>
+
+        <div class="ig-profile">
+          <div class="ig-row-1">
+            <div class="ig-avatar-wrap">
+              <div class="ig-avatar-ring${current ? '' : ' hot'}">
+                <div class="ig-avatar-inner">
+                  <div class="av-core">B</div>
+                </div>
+              </div>
+            </div>
+            <div class="ig-stats">
+              <div class="ig-stat">
+                <span class="num">${current ? '—' : '—'}</span>
+                <span class="lbl">posts</span>
+              </div>
+              <div class="ig-stat">
+                <span class="num">${current ? '775' : '775'}</span>
+                <span class="lbl">followers</span>
+              </div>
+              <div class="ig-stat">
+                <span class="num">—</span>
+                <span class="lbl">following</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ig-bio">
+            <div class="name">${current ? 'Bayanai-tech' : 'Bayan AI Technologies'}</div>
+            ${bio}
+          </div>
+
+          <div class="ig-buttons">
+            <button class="ig-btn primary">Follow</button>
+            <button class="ig-btn">Message</button>
+            <button class="ig-btn" style="width:34px;padding:8px 0">▾</button>
+          </div>
+
+          <div class="ig-highlights">
+            ${highlights}
+          </div>
+
+          <div class="ig-tabs">
+            <button class="ig-tab on">▦</button>
+            <button class="ig-tab">▶</button>
+            <button class="ig-tab">◉</button>
+          </div>
+
+          <div class="ig-grid">
+            ${gridCells}
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+/* =========================================================
+   VIEW: DIAGNOSIS
+   ========================================================= */
+function renderDiagnosis(){
+  const works = [
+    { n:'01', name:'Distinctive origin and purpose',
+      desc:'"Built in Oman" gives the account a concrete identity and a credible regional frame.' },
+    { n:'02', name:'Real portfolio breadth',
+      desc:'Distinct public initiatives rather than a single generic AI product.' },
+    { n:'03', name:'Plausible parent-company position',
+      desc:'"Healthcare, education &amp; research" can unify the portfolio if examples and product routes make it tangible.' },
+    { n:'04', name:'Public bridge to the education product',
+      desc:'The Bayan site and sample quiz provide a direct learner action when Bayan is the subject.' }
+  ];
+
+  const friction = [
+    { n:'01', name:'Portfolio wording does not resolve the count',
+      desc:'Bio says "6 live products"; site says "seven initiatives / showing six solutions." Unless <em>initiative, solution, live product</em> are clearly distinguished, this invites doubt.' },
+    { n:'02', name:'Two links, no audience-first routing',
+      desc:'A company visitor, physician/learner, academic partner, and institution shouldn\'t have to infer which destination is meant for them. Route by <em>user need</em>, not internal brand architecture.' },
+    { n:'03', name:'Display name is brand-ambiguous',
+      desc:'"Bayanai-tech" may not read as the official parent-company name. Use the recognized company name plus a concise searchable category if Instagram\'s name field permits.' },
+    { n:'04', name:'No public highlight navigation',
+      desc:'Zero highlights reported means visitors may lack persistent explainers for the company, each product, research stage, and how to get in touch.' },
+    { n:'05', name:'No feed evidence to identify winners',
+      desc:'A calendar built without account Insights could amplify the wrong topic or audience. Start with a small portfolio-aware test and review real reach/saves/shares/link actions.' },
+    { n:'06', name:'Company account vs. education page have different jobs',
+      desc:'The parent profile should introduce portfolio and partnerships; Bayan-specific exam-prep promotion should route to the education experience and avoid diluting the company account.' }
+  ];
+
+  const html = `
+    <div class="hero">
+      <div class="h-k">Diagnosis · what's working vs. what's friction</div>
+      <h1>The profile's real problem isn't activity — it's clarity.</h1>
+      <p>
+        The account already has a distinctive origin, real portfolio breadth,
+        and a plausible parent-company frame. What it's missing is a
+        <b>resolved identity</b> — a naming, a count, a routing, a navigation
+        that a stranger can read in three seconds.
+      </p>
+    </div>
+
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <h2 class="sec-title">Diagnosis
+        <small>four things already working · six friction points</small>
+      </h2>
+    </div>
+
+    <div class="diag-grid">
+      <div class="diag-card works" style="--d:0ms">
+        <div class="diag-head">
+          <div class="diag-ico">✓</div>
+          <div>
+            <div class="diag-title">What's already working</div>
+            <div class="diag-sub">4 strengths</div>
+          </div>
+        </div>
+        <div class="diag-list">
+          ${works.map(w => `
+            <div class="diag-item">
+              <span class="diag-n">${w.n}</span>
+              <div class="diag-body">
+                <div class="diag-name">${w.name}</div>
+                <div class="diag-desc">${w.desc}</div>
+              </div>
+            </div>`).join('')}
+        </div>
+      </div>
+
+      <div class="diag-card friction" style="--d:100ms">
+        <div class="diag-head">
+          <div class="diag-ico">⚡</div>
+          <div>
+            <div class="diag-title">Highest-priority friction</div>
+            <div class="diag-sub">6 blockers to clarity</div>
+          </div>
+        </div>
+        <div class="diag-list">
+          ${friction.map(f => `
+            <div class="diag-item">
+              <span class="diag-n">${f.n}</span>
+              <div class="diag-body">
+                <div class="diag-name">${f.name}</div>
+                <div class="diag-desc">${f.desc}</div>
+              </div>
+            </div>`).join('')}
+        </div>
+      </div>
+    </div>
+
+    <div class="boundary">
+      <div class="b-ico">⚑</div>
+      <div class="b-body">
+        <div class="b-k">Recommended order</div>
+        <div class="b-t">Align facts first, then navigation, then content.</div>
+        <div class="b-d">
+          <b>(1)</b> Align facts/naming and profile navigation.
+          <b>(2)</b> Install a clear brand/product hierarchy.
+          <b>(3)</b> Test content themes and measure qualified actions for 30 days.
+          <b>(4)</b> Decide what to scale using actual account Insights.
+          <em>Do not judge success on follower count alone.</em>
+        </div>
+      </div>
+    </div>
+  `;
+  $('stage').innerHTML = html;
+}
+
+/* =========================================================
+   VIEW: PILLARS
+   ========================================================= */
+function renderPillars(){
+  const pillars = [
+    {
+      share:'35',
+      color:'26,79,245',
+      name:'Product in use / user problem',
+      kicker:'Primary pillar',
+      formats:['Screen demo','Reel 20–40s','Carousel'],
+      desc:'Show a real workflow solving a real user problem. <b>Screen demo + question → workflow → what the tool does</b>. Product-specific but routed through the company frame.',
+      cta:['Try the sample question','Explore [product]']
+    },
+    {
+      share:'25',
+      color:'131,58,180',
+      name:'Evidence, method, and responsible technology',
+      kicker:'Trust pillar',
+      formats:['Clinician explainer','Method walkthrough','Research note'],
+      desc:'Clinician or researcher explains sources, review, limitations, evaluation stage. <b>Distinguish research from deployment</b> — never claim clinical readiness.',
+      cta:['Read the research note','Ask about evaluation']
+    },
+    {
+      share:'20',
+      color:'252,176,69',
+      name:'Oman-built team and ecosystem',
+      kicker:'Identity pillar',
+      formats:['Founder perspective','Build notes','Collaboration'],
+      desc:'Founder or clinician perspective on building from Oman. Local context, real names, no unsupported impact claims.',
+      cta:['Explore the team\'s work','Discuss a collaboration']
+    },
+    {
+      share:'20',
+      color:'52,211,153',
+      name:'Learner and partner education',
+      kicker:'Reach pillar',
+      formats:['Exam tip','Clinical reasoning','Research method'],
+      desc:'Exam learning tips, clinical reasoning concepts, research/education methods. <b>Clinical review required</b> before every post.',
+      cta:['Practice the sample','Save this for revision']
+    }
+  ];
+
+  const html = `
+    <div class="hero">
+      <div class="h-k">Content strategy · 4-week pilot</div>
+      <h1>Four pillars. Three posts per week. One variable at a time.</h1>
+      <p>
+        The pilot aim is <b>qualified discovery</b> and <b>next-step actions</b>
+        for the right portfolio audiences — not vanity metrics. Proposed rhythm
+        is <em>3 feed posts per week</em>: 2 short videos/Reels + 1 carousel
+        or static case explainer. This is a <b>test volume</b>, not a benchmark.
+      </p>
+    </div>
+
+    <div class="sec-head">
+      <span class="sec-num">04</span>
+      <h2 class="sec-title">Content pillars
+        <small>approximate share of posts · 4-week rotation</small>
+      </h2>
+    </div>
+
+    <div class="pillars-grid">
+      ${pillars.map((p, i) => `
+        <div class="pillar" style="--pc:${p.color};--d:${i*70}ms">
+          <div class="pillar-top">
+            <div class="pillar-share">${p.share}<small>%</small></div>
+            <div class="pillar-kicker">${p.kicker}</div>
+            <div class="pillar-name">${p.name}</div>
+          </div>
+          <div class="pillar-body">
+            <div class="pillar-formats">
+              ${p.formats.map((f, j) => `
+                <span class="pillar-fmt ${j === 0 ? 'reel' : ''}">${f}</span>
+              `).join('')}
+            </div>
+            <div class="pillar-desc">${p.desc}</div>
+            <div class="pillar-cta">
+              ${p.cta.map(c => `<span class="cta-chip">${c}</span>`).join('')}
+            </div>
+          </div>
+        </div>`).join('')}
+    </div>
+
+    <div class="boundary">
+      <div class="b-ico">⚑</div>
+      <div class="b-body">
+        <div class="b-k">Rotation discipline</div>
+        <div class="b-t">One theme per week. Rotate the initiative within that theme.</div>
+        <div class="b-d">
+          Over four weeks, deliberately feature different initiatives, with
+          <b>Bayan</b> as the learning product but not the only story. Maintain
+          a portfolio index in the profile and <em>avoid forcing all initiatives
+          into every post</em>. Suggested weekly themes: clear reasoning ·
+          responsible AI / research · practical tools · people / partnerships.
+        </div>
+      </div>
+    </div>
+  `;
+  $('stage').innerHTML = html;
+}
+
+/* =========================================================
+   VIEW: CALENDAR
+   ========================================================= */
+function renderCalendar(){
+  const weeks = [
+    {
+      num:'Week 1',
+      theme:'Clear reasoning',
+      color:'26,79,245',
+      posts:[
+        { type:'Reel', name:'Parent brand in 30 seconds',
+          note:'Founder/clinician names the domains, shows a portfolio map, distinguishes company from Bayan product. Verify the initiative count/status first.' },
+        { type:'Carousel', name:'Bayan learner experience',
+          note:'Real approved sample question + explanation. Clinical reviewer signs off. CTA: try a sample question.' },
+        { type:'Reel', name:'Research-stage clarity',
+          note:'Researcher explains what Medad is exploring and what it is NOT claiming. Distinguishes R&D from clinical deployment.' }
+      ]
+    },
+    {
+      num:'Week 2',
+      theme:'Responsible AI / research',
+      color:'131,58,180',
+      posts:[
+        { type:'Carousel', name:'How we review clinical content',
+          note:'The 20-point rubric and human gate, explained plainly. No claims of outcome or pass rate.' },
+        { type:'Reel', name:'Sources and limitations',
+          note:'A clinician explains how sources are selected and dated — and what the tool explicitly does not do.' },
+        { type:'Carousel', name:'Why "clinician-reviewed" matters',
+          note:'Contrast with generic AI. No comparison claims against named competitors.' }
+      ]
+    },
+    {
+      num:'Week 3',
+      theme:'Practical tools',
+      color:'252,176,69',
+      posts:[
+        { type:'Reel', name:'PreOp · in 30 seconds',
+          note:'Real workflow demo. Screen recording + face overlay. Approved clinical context only.' },
+        { type:'Carousel', name:'SmartRota · scheduling for clinics',
+          note:'Anonymized scenario. No real patient or staff data.' },
+        { type:'Reel', name:'JournalReady · researcher workflow',
+          note:'Who it is for, what it does, what it does not do. Routed through the portfolio frame.' }
+      ]
+    },
+    {
+      num:'Week 4',
+      theme:'People & partnerships',
+      color:'52,211,153',
+      posts:[
+        { type:'Reel', name:'Build notes from Oman',
+          note:'Founder perspective — one specific decision and its reasoning. No impact or scale claims.' },
+        { type:'Carousel', name:'Portfolio map · who does what',
+          note:'Cross-portfolio explainer. Routes each initiative to its destination link with an accurate status label.' },
+        { type:'Reel', name:'Research collaboration',
+          note:'How academic and clinical partners can engage. CTA: contact for partnership/research.' }
+      ]
+    }
+  ];
+
+  const html = `
+    <div class="hero">
+      <div class="h-k">4-week content calendar · draft</div>
+      <h1>One theme per week. Rotate the initiative inside it.</h1>
+      <p>
+        Every post routes to a labeled destination — no generic "link in bio"
+        pointers. <b>No posts publish</b> until the profile refresh is
+        approved <em>and</em> each clinical or research claim is signed off.
+        This calendar is a hypothesis plan, not a schedule.
+      </p>
+    </div>
+
+    <div class="sec-head">
+      <span class="sec-num">05</span>
+      <h2 class="sec-title">Four weeks
+        <small>3 posts per week · 12 posts total · draft only</small>
+      </h2>
+    </div>
+
+    <div class="cal-grid">
+      ${weeks.map((w, i) => `
+        <div class="week-col" style="--wc:${w.color};--d:${i*70}ms">
+          <div class="week-head">
+            <div class="wk-num">${w.num}</div>
+            <div class="wk-theme">${w.theme}</div>
+          </div>
+          <div class="week-body">
+            ${w.posts.map(p => `
+              <div class="post">
+                <div class="post-type">${p.type}</div>
+                <div class="post-name">${p.name}</div>
+                <div class="post-note">${p.note}</div>
+              </div>`).join('')}
+          </div>
+        </div>`).join('')}
+    </div>
+
+    <div class="boundary">
+      <div class="b-ico">⚑</div>
+      <div class="b-body">
+        <div class="b-k">Production rule</div>
+        <div class="b-t">Reuse approved footage. Do not invent.</div>
+        <div class="b-d">
+          Reuse approved existing footage and screens.
+          <b>Do not invent</b> patient cases, outcomes, product readiness,
+          research results, endorsements, or statistics.
+          <em>Every clinical or research claim is signed off by the
+          clinical/research reviewer</em> before scheduling.
+        </div>
+      </div>
+    </div>
+  `;
+  $('stage').innerHTML = html;
+}
+
+/* =========================================================
+   VIEW: MEASUREMENT
+   ========================================================= */
+function renderMeasurement(){
+  const kpis = [
+    { stage:'Discovery', color:'34,211,238', ico:'◉',
+      title:'Accounts reached · non-follower reach · Reel plays',
+      desc:'Instagram Insights by post and by 30-day window. <b>Keep reach distinct from plays</b> — they are different signals.' },
+    { stage:'Relevance', color:'131,58,180', ico:'◇',
+      title:'Saves + shares per reach · engaged accounts',
+      desc:'Report <b>numerator and denominator</b> per format. <em>Do not optimize likes alone.</em>' },
+    { stage:'Intent', color:'252,176,69', ico:'→',
+      title:'Profile visits · bio-link taps · contact-button actions',
+      desc:'Instagram Insights, with distinct <b>tagged destination links</b> if available.' },
+    { stage:'Qualified outcome', color:'52,211,153', ico:'✓',
+      title:'Sample-quiz starts / completions · partner inquiries · attributable sign-ups',
+      desc:'First-party web/app analytics with agreed event definitions. <b>No claim of attribution</b> without valid tags/events.' },
+    { stage:'Efficiency', color:'244,63,94', ico:'⌗',
+      title:'Production hours per qualified action',
+      desc:'Log staff/creator time. Compare by <b>pillar</b> and <b>format</b>.' }
+  ];
+
+  const html = `
+    <div class="hero">
+      <div class="h-k">Measurement · baseline first, then a 30-day test</div>
+      <h1>Capture the baseline before publishing anything.</h1>
+      <p>
+        Before the pilot goes live, pull the preceding <b>30 days from
+        Instagram Insights</b> — date range, timezone, account/follower
+        baseline — and establish link tracking / UTM conventions.
+        <em>Public profile scraping cannot provide these metrics.</em>
+      </p>
+
+      <div class="status-tag" style="background:rgba(26,79,245,.12);color:var(--bayan2);border-color:rgba(26,79,245,.35)">
+        ⚑ 30-day success rule: set numeric targets only after pulling the recent Insights baseline
+      </div>
+    </div>
+
+    <div class="sec-head">
+      <span class="sec-num">06</span>
+      <h2 class="sec-title">KPI framework
+        <small>five stages · measured by Instagram Insights + first-party analytics</small>
+      </h2>
+    </div>
+
+    <div class="kpi-grid">
+      ${kpis.map((k, i) => `
+        <div class="kpi" style="--kc:${k.color};--d:${i*60}ms">
+          <div class="kpi-head">
+            <div class="kpi-ico">${k.ico}</div>
+            <div class="kpi-stage">${k.stage}</div>
+          </div>
+          <div class="kpi-title">${k.title}</div>
+          <div class="kpi-desc">${k.desc}</div>
+        </div>`).join('')}
+    </div>
+
+    <div class="boundary">
+      <div class="b-ico">⚑</div>
+      <div class="b-body">
+        <div class="b-k">Honest reporting</div>
+        <div class="b-t">Treat observed changes as directional. Don't call reach a conversion win.</div>
+        <div class="b-d">
+          In the pilot, compare <b>median post-level performance</b> by format
+          and pillar against the baseline period. Report <em>counts and rates</em>,
+          not just percentages. Keep publishing volume reasonably stable while
+          testing one major variable at a time (hook, format, or CTA).
+          <b>Do not call a rise in reach a conversion win</b> without downstream
+          action evidence.
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-head" style="margin-top:18px">
+      <span class="sec-num">↻</span>
+      <h2 class="sec-title">Owners &amp; operating rhythm
+        <small>proposed · subject to confirmation</small>
+      </h2>
+    </div>
+
+    <div class="diag-grid">
+      <div class="diag-card works" style="--d:0ms">
+        <div class="diag-head">
+          <div class="diag-ico">◇</div>
+          <div>
+            <div class="diag-title">Owners</div>
+            <div class="diag-sub">5 roles</div>
+          </div>
+        </div>
+        <div class="diag-list">
+          <div class="diag-item">
+            <span class="diag-n">1</span>
+            <div class="diag-body">
+              <div class="diag-name">CEO / brand owner</div>
+              <div class="diag-desc">Approves portfolio naming/status, product-count language, bio/link priority, and any claims.</div>
+            </div>
+          </div>
+          <div class="diag-item">
+            <span class="diag-n">2</span>
+            <div class="diag-body">
+              <div class="diag-name">Content lead</div>
+              <div class="diag-desc">Prepares three posts per week, adapts to each audience, logs hours, reviews comments.</div>
+            </div>
+          </div>
+          <div class="diag-item">
+            <span class="diag-n">3</span>
+            <div class="diag-body">
+              <div class="diag-name">Clinical / research reviewer</div>
+              <div class="diag-desc">Signs off on clinical education, research status, evidence, and caveats before scheduling.</div>
+            </div>
+          </div>
+          <div class="diag-item">
+            <span class="diag-n">4</span>
+            <div class="diag-body">
+              <div class="diag-name">Web / analytics owner</div>
+              <div class="diag-desc">Checks destinations, adds campaign tags/events, shares first-party outcome readout.</div>
+            </div>
+          </div>
+          <div class="diag-item">
+            <span class="diag-n">5</span>
+            <div class="diag-body">
+              <div class="diag-name">Weekly 20-minute review</div>
+              <div class="diag-desc">Top and bottom posts by reach and saves/shares, link actions, questions, accuracy issues, production effort. Decide one change for next week.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="diag-card friction" style="--d:100ms">
+        <div class="diag-head">
+          <div class="diag-ico">⚠</div>
+          <div>
+            <div class="diag-title">Review limitations</div>
+            <div class="diag-sub">what this report cannot claim</div>
+          </div>
+        </div>
+        <div class="diag-list">
+          <div class="diag-item">
+            <span class="diag-n">1</span>
+            <div class="diag-body">
+              <div class="diag-desc">Instagram's public post/reel endpoints were unavailable through the permitted read surface. No private insights, demographics, reach, saves, shares, profile visits, link taps, or conversion data were accessed.</div>
+            </div>
+          </div>
+          <div class="diag-item">
+            <span class="diag-n">2</span>
+            <div class="diag-body">
+              <div class="diag-desc">Follower count (773–775) is an approximate point-in-time observation, not a stable baseline or historical trend.</div>
+            </div>
+          </div>
+          <div class="diag-item">
+            <span class="diag-n">3</span>
+            <div class="diag-body">
+              <div class="diag-desc">A prior website audit (2026-09-23) applies to Bayan's education site — not Instagram. Do not treat it as a finding about this feed.</div>
+            </div>
+          </div>
+          <div class="diag-item">
+            <span class="diag-n">4</span>
+            <div class="diag-body">
+              <div class="diag-desc">The recommendations are <b>profile-first hypotheses to validate</b>, not feed-performance conclusions.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+  $('stage').innerHTML = html;
+}
+
+/* =========================================================
+   VIEW: DECISIONS
+   ========================================================= */
+function renderDecisions(){
+  const decisions = [
+    {
+      title:'What is the correct current classification and count?',
+      desc:'Six live products, six solutions, seven initiatives, or another approved description? Which are <b>live</b>, <b>in research</b>, <b>preview</b>, or <b>not currently promoted</b>?'
+    },
+    {
+      title:'Should Instagram represent the parent-company portfolio or be re-centered on Bayan?',
+      desc:'The recommended answer is <em>parent-company portfolio</em> — with Bayan as the education product, not the whole story.'
+    },
+    {
+      title:'Which single profile action matters most for the next 30 days?',
+      desc:'Explore products · try Bayan sample quiz · or contact for partnership/research. One priority — not three.'
+    },
+    {
+      title:'Who supplies Insights and who reviews clinical/research claims?',
+      desc:'Also: <b>how many hours per week are available</b> from the content lead, the clinical reviewer, and the analytics owner?'
+    },
+    {
+      title:'Is the Bayan blue appropriate for the parent-company account?',
+      desc:'The current company site uses a separate dark visual system. Confirm whether <code>#1a4ff5</code> carries the parent brand or only the Bayan education product.'
+    }
+  ];
+
+  const html = `
+    <div class="hero">
+      <div class="h-k">CEO decisions requested · 5 items</div>
+      <h1>Five decisions. Then the profile, the bio, and the first two weeks.</h1>
+      <p>
+        Nothing in this report is authorized. Once these five decisions are
+        confirmed and a 30-day Insights export is supplied, prepare
+        <b>(a)</b> exact profile/bio/link revisions and <b>(b)</b> a two-week
+        content batch with owners, source/clinical checks, and measurement
+        tags — for approval before anything goes live.
+      </p>
+    </div>
+
+    <div class="sec-head">
+      <span class="sec-num">07</span>
+      <h2 class="sec-title">Decisions
+        <small>each requires an explicit answer before the pilot starts</small>
+      </h2>
+    </div>
+
+    <div class="decisions-list">
+      ${decisions.map((d, i) => `
+        <div class="decision" style="--d:${i*60}ms">
+          <div class="dec-num">${String(i+1).padStart(2,'0')}</div>
+          <div class="dec-body">
+            <div class="dec-title">${d.title}</div>
+            <div class="dec-desc">${d.desc}</div>
+          </div>
+        </div>`).join('')}
+    </div>
+
+    <div class="boundary" style="margin-top:16px">
+      <div class="b-ico">⚑</div>
+      <div class="b-body">
+        <div class="b-k">Approval boundary</div>
+        <div class="b-t">This report is analysis and draft strategy only.</div>
+        <div class="b-d">
+          <b>No profile edit, post, message, link change, public claim, or
+          schedule has been made.</b> After the CEO confirms the five decisions
+          and shares a 30-day Insights export, prepare <em>(a)</em> exact
+          profile/bio/link revisions and <em>(b)</em> a two-week content batch
+          with owners, source/clinical checks, and measurement tags for
+          approval <em>before anything goes live</em>.
+        </div>
+      </div>
+    </div>
+  `;
+  $('stage').innerHTML = html;
+}
+
+/* =========================================================
+   NAV WIRING
+   ========================================================= */
+$('viewSwitch').addEventListener('click', e => {
+  const btn = e.target.closest('.view-btn');
+  if (!btn) return;
+  stopDemo();
+  state.view = btn.dataset.view;
+  renderAll();
+});
+
+/* =========================================================
+   DEMO
+   ========================================================= */
+function startDemo(){
+  stopDemo();
+  state.demoPlaying = true;
+  $('demoBtn').classList.add('playing');
+  $('demoBtn').textContent = '■ stop demo';
+
+  state.view = 'overview';
+  renderAll();
+
+  const sequence = [
+    { view:'overview', delay:2400 },
+    { view:'profile', delay:3400 },
+    { view:'diagnosis', delay:3000 },
+    { view:'pillars', delay:2800 },
+    { view:'calendar', delay:3200 },
+    { view:'measurement', delay:3200 },
+    { view:'decisions', delay:3200 }
+  ];
+
+  let i = 0;
+  function step(){
+    if (!state.demoPlaying) return;
+    if (i >= sequence.length){
+      stopDemo();
+      return;
+    }
+    state.view = sequence[i].view;
+    renderAll();
+    i++;
+    state.demoTimeout = setTimeout(step, sequence[i-1].delay);
+  }
+  state.demoTimeout = setTimeout(step, 500);
+}
+
+function stopDemo(){
+  state.demoPlaying = false;
+  if (state.demoTimeout) clearTimeout(state.demoTimeout);
+  state.demoTimeout = null;
+  const btn = $('demoBtn');
+  if (btn){
+    btn.classList.remove('playing');
+    btn.textContent = '▶ run demo';
+  }
+}
+
+$('demoBtn').addEventListener('click', () => {
+  if (state.demoPlaying) stopDemo();
+  else startDemo();
+});
+
+/* =========================================================
+   KEYBOARD
+   ========================================================= */
+document.addEventListener('keydown', e => {
+  if (e.target.matches('input,textarea,select')) return;
+  const idx = VIEWS.findIndex(v => v.id === state.view);
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown'){
+    e.preventDefault();
+    stopDemo();
+    state.view = VIEWS[(idx+1) % VIEWS.length].id;
+    renderAll();
+  } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp'){
+    e.preventDefault();
+    stopDemo();
+    state.view = VIEWS[(idx-1+VIEWS.length) % VIEWS.length].id;
+    renderAll();
+  }
+});
+
+/* =========================================================
+   BOOT
+   ========================================================= */
+renderAll();
+</script>
+</body>
+</html>
