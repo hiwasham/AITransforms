@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TPRS Books — A Week of Work, Built For You</title>
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="description" content="Eight finished discovery improvements for tprsbooks.com — diagnosed, built, and held for your review. Nothing published.">
+<style>
+  :root{
+    --ink:#16181d; --muted:#5c6370; --line:#e3e6ea; --bg:#fff; --card:#f8f9fb;
+    --accent:#1f6feb; --bad:#b42318; --badbg:#fef3f2; --warn:#b54708; --warnbg:#fffaeb;
+    --ok:#067647; --okbg:#ecfdf3;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --ink:#e8eaed; --muted:#9aa2b1; --line:#2a2f3a; --bg:#0f1116; --card:#171a21;
+           --accent:#6ea8ff; --bad:#ff8a80; --badbg:#2a1414; --warn:#fdb022; --warnbg:#231a05;
+           --ok:#6ee7a8; --okbg:#0f2419; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  .wrap{max-width:880px;margin:0 auto;padding:52px 20px 90px}
+  .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  h1{font-size:38px;line-height:1.12;margin:12px 0 14px;letter-spacing:-.022em}
+  h2{font-size:22px;margin:52px 0 12px;letter-spacing:-.012em}
+  h3{font-size:16px;margin:0 0 2px}
+  .lede{font-size:18px;color:var(--muted);max-width:64ch}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:20px 0}
+  .good{background:var(--okbg);border:1px solid var(--ok);border-radius:12px;padding:18px 20px;margin:20px 0}
+  .warn-box{background:var(--warnbg);border:1px solid var(--warn);border-radius:12px;padding:18px 20px;margin:20px 0}
+  code{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:2px 6px;font-size:14px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:15px}
+  th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+  .no{color:var(--bad);font-weight:600}
+  .yes{color:var(--ok);font-weight:600}
+  .mid{color:var(--warn);font-weight:600}
+  ul{margin:10px 0 16px;padding-left:22px} li{margin:7px 0}
+  footer{margin-top:64px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+  .sig{margin-top:10px;color:var(--ink);font-weight:600}
+  .dim{color:var(--muted)}
+  .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:22px 0}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .stat .n{font-size:28px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .stat .l{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600;margin-bottom:6px}
+  .deliverable{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:14px 0}
+  .dhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+  .badge{display:inline-block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;
+    color:var(--ok);background:var(--okbg);border:1px solid var(--ok);border-radius:99px;padding:3px 10px;white-space:nowrap}
+  .kv{display:grid;grid-template-columns:84px 1fr;gap:4px 14px;font-size:15px}
+  .kv dt{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:600;padding-top:2px}
+  .kv dd{margin:0}
+  .tag{font-size:12px;color:var(--muted);font-weight:600}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">For Von Ray · tprsbooks.com · prepared by AITransforms</div>
+  <h1>A week of discovery work for TPRS Books — built, and waiting for you to read it</h1>
+  <p class="lede">Not a proposal. Eight finished improvements to how teachers find your books in Google
+  and in AI assistants. Each one started from a measured gap on your own site, each one is drafted and
+  held for your review, and not a single one has touched tprsbooks.com.</p>
+
+  <div class="strip">
+    <div class="stat"><div class="l">Items built</div><div class="n">8</div></div>
+    <div class="stat"><div class="l">Published live</div><div class="n">0</div></div>
+    <div class="stat"><div class="l">Build time</div><div class="n">1 wk</div></div>
+    <div class="stat"><div class="l">Health today</div><div class="n">55</div></div>
+  </div>
+
+  <div class="good">
+    <strong>Read the summary boxes only, or open every detail — your pace.</strong> This page is short on
+    the surface and complete underneath. Everything below was made for TPRS Books and is yours whether or
+    not we ever work together.
+  </div>
+
+  <h2>How this was made</h2>
+  <p>We ran a live discovery audit of tprsbooks.com: six real teacher searches checked against where you
+  rank, three classroom questions put to Claude, a homepage markup inspection, and a speed measurement
+  from your actual mobile traffic. That audit became eight scoped work items. Each was drafted, reviewed
+  against your own brand voice, and set aside for a human at TPRS Books to approve. The week was build
+  time, not planning time — this is the same system we run for other clients, which is why the volume
+  took days.</p>
+
+  <h2>The eight things we built</h2>
+  <p>Every card below is the same shape: the gap we measured, what we drafted to close it, and the honest
+  expected effect. Figures are measured from your site; projected numbers are labelled as projections,
+  never promised.</p>
+  <div class="deliverable">
+    <div class="dhead"><h3>1 · Homepage discovery package</h3><span class="badge">Drafted · held for review</span></div>
+    <dl class="kv">
+      <dt>Gap</dt><dd>Your homepage has no title tag, no meta description, no Open Graph tags, and no structured data — and it carries 64 H1 headings, so crawlers can't tell what the page is about. Shared in a Facebook group or staff email, the link arrives as a bare grey box.</dd>
+      <dt>Built</dt><dd>A page title and meta description, a single-H1 hierarchy, Organization JSON-LD, Open Graph tags for clean link previews, plus <code>llms.txt</code> and <code>llms-full.txt</code> drafts so AI tools can read the site properly.</dd>
+      <dt>Effect</dt><dd>Site &amp; content health, measured at 59 today, projected to 100 once applied.</dd>
+    </dl>
+    <div class="tag">SEO · move 1</div>
+  </div>
+
+  <div class="deliverable">
+    <div class="dhead"><h3>2 · Spanish learning-books page</h3><span class="badge">Drafted · held for review</span></div>
+    <dl class="kv">
+      <dt>Gap</dt><dd>“spanish language learning books” is searched about 2,900 times a month. tprsbooks.com does not appear in Google's top 100 for it.</dd>
+      <dt>Built</dt><dd>A dedicated page with title, meta description, H1 and copy targeting that search, in your own teacher-focused voice, with verified internal links to the matching readers.</dd>
+      <dt>Effect</dt><dd>Targets a 2,900/mo gap. A ranking is never guaranteed — the page is the shot, not a promise.</dd>
+    </dl>
+    <div class="tag">SEO · move 2</div>
+  </div>
+
+  <div class="deliverable">
+    <div class="dhead"><h3>3 · French learning-books page</h3><span class="badge">Drafted · held for review</span></div>
+    <dl class="kv">
+      <dt>Gap</dt><dd>“french language learning books” is searched about 720 times a month. You are not ranking for it.</dd>
+      <dt>Built</dt><dd>The same treatment as the Spanish page, scoped to your French catalogue, with verified internal links.</dd>
+      <dt>Effect</dt><dd>Targets a 720/mo gap. Projected, not promised.</dd>
+    </dl>
+    <div class="tag">SEO · move 2</div>
+  </div>
+
+  <div class="deliverable">
+    <div class="dhead"><h3>4 · Berto page rebuild</h3><span class="badge">Drafted · held for review</span></div>
+    <dl class="kv">
+      <dt>Gap</dt><dd>“berto spanish book” already ranks you at #4 — proof the pattern works when a page is right. Nothing was protecting or extending that win.</dd>
+      <dt>Built</dt><dd>A stronger Berto page with verified links out to your related Spanish readers, so the one search that works pulls teachers deeper into the catalogue.</dd>
+      <dt>Effect</dt><dd>Protects the position-4 result and routes it to adjacent titles. Revenue-path work.</dd>
+    </dl>
+    <div class="tag">Revenue · move 3</div>
+  </div>
+  <div class="deliverable">
+    <div class="dhead"><h3>5 · Graded-reader comparison guide</h3><span class="badge">Drafted · held for review</span></div>
+    <dl class="kv">
+      <dt>Gap</dt><dd>Asked “how do TPRS novels compare with other graded readers?”, Claude answered without naming TPRS Books at all. That is the question teachers ask while <em>choosing</em> — and you were absent from it.</dd>
+      <dt>Built</dt><dd>A teacher-friendly comparison guide that answers the question honestly and completely, written so an AI assistant can find and cite it.</dd>
+      <dt>Effect</dt><dd>Targets the comparison prompt you are currently losing. AI-visibility work.</dd>
+    </dl>
+    <div class="tag">AI visibility · move 4</div>
+  </div>
+
+  <div class="deliverable">
+    <div class="dhead"><h3>6 · Novice-learner fit guidance</h3><span class="badge">Drafted · held for review</span></div>
+    <dl class="kv">
+      <dt>Gap</dt><dd>Asked whether TPRS books suit novice language learners, Claude did not mention you — even though this is exactly what your readers are built for.</dd>
+      <dt>Built</dt><dd>Verified level guidance and classroom examples placed where they answer that question, so the fit is explicit on the page and legible to AI.</dd>
+      <dt>Effect</dt><dd>Closes the novice-fit question. Activation work — it meets a teacher at the moment they're deciding.</dd>
+    </dl>
+    <div class="tag">Activation · move 5</div>
+  </div>
+
+  <div class="deliverable">
+    <div class="dhead"><h3>7 · Safe WordPress speed set</h3><span class="badge">Drafted · held for review</span></div>
+    <dl class="kv">
+      <dt>Gap</dt><dd>Real mobile visitors wait about 4.2 seconds (75th percentile) before your main content appears. A teacher on a school connection comparing two suppliers doesn't wait four seconds.</dd>
+      <dt>Built</dt><dd>A change set of the safe wins only: roughly 450ms recoverable from unused CSS, and about 150ms each from CSS and JS minification. No redesign, no risk to the live theme.</dd>
+      <dt>Effect</dt><dd>Measured recoverable time, not a guess. Held for review before anything is applied.</dd>
+    </dl>
+    <div class="tag">SEO · move 1</div>
+  </div>
+
+  <div class="deliverable">
+    <div class="dhead"><h3>8 · Teacher social calendar</h3><span class="badge">Drafted · held for review</span></div>
+    <dl class="kv">
+      <dt>Gap</dt><dd>Social presence scored 0 in the audit — a channel teachers live on, sitting unused.</dd>
+      <dt>Built</dt><dd>Share-ready drafts built from four themes drawn from your own catalogue, in your encouraging, teacher-focused voice.</dd>
+      <dt>Effect</dt><dd>Social health projected 0 → 60. A starting cadence, yours to run or hand back.</dd>
+    </dl>
+    <div class="tag">Referral / Social · move 6</div>
+  </div>
+
+  <h2>The evidence it came from</h2>
+  <p>None of the above is invented. It traces to a measured baseline you can re-check in ninety days:</p>
+
+  <table>
+    <thead><tr><th>What we checked</th><th>Today</th><th>Projected once applied</th></tr></thead>
+    <tbody>
+      <tr><td>Overall discovery health</td><td class="num mid">55</td><td class="num yes">89</td></tr>
+      <tr><td>Google search (ranks for 1 of 6 target searches)</td><td class="num mid">48</td><td class="num yes">76</td></tr>
+      <tr><td>AI answers (named in 1 of 3 tested questions)</td><td class="num mid">61</td><td class="num yes">94</td></tr>
+      <tr><td>Site &amp; content (mobile loads in 4.2s)</td><td class="num mid">59</td><td class="num yes">100</td></tr>
+      <tr><td>Social</td><td class="num no">0</td><td class="num yes">60</td></tr>
+    </tbody>
+  </table>
+
+  <p>The full discovery audit — the six searches, the three AI questions, the homepage markup table and the
+  speed numbers — is one click away:
+  <a href="tprsbooks-discovery-audit.html">open the discovery audit</a>.</p>
+
+  <div class="good">
+    <strong>Nothing has been published.</strong> No live change was made to tprsbooks.com. Every item above
+    is a draft waiting for a human at TPRS Books to read it and decide. The projected scores are
+    projections, not outcomes — the same baseline can be re-measured in ninety days and compared.
+  </div>
+
+  <h2>If you'd like to use any of it</h2>
+  <p>Reply and tell me which items are worth applying. We can hand you the drafts to run yourself, or apply
+  the approved ones for you — your call, nothing goes live without your sign-off.</p>
+
+  <footer>
+    Prepared for Von Ray · tprsbooks.com · all figures measured, projections labelled as projections ·
+    no changes made to your site
+    <div class="sig">Hiwa · AITransforms</div>
+  </footer>
+
+</div>
+</body>
+</html>

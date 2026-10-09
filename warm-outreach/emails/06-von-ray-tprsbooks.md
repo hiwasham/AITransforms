@@ -1,40 +1,44 @@
-Subject: Agentes Secretos and Casa Dividida — teachers can't find them
+Subject: I built a week of discovery work for TPRS Books — it's yours
 
 Hi Von,
 
-I ran a full discovery audit on tprsbooks.com this week. Two findings I think
-you'll want to see.
+I spent this week building eight finished improvements to how teachers find
+TPRS Books — in Google and in AI assistants like Claude. They're drafted, held
+for your review, and nothing has touched your site. It's a gift, not a pitch.
 
-First: Agentes Secretos and Casa Dividida are your books, and a teacher
-searching for either by name cannot find you in Google's top 100. Agentes
-Secretos gets 390 searches a month. Somebody else is getting them. Berto sits
-at #4, so the pattern works when the page is right.
+One link, everything in it:
 
-Second: I asked Claude three questions a teacher would ask. You came up for
-"where can I buy TPRS Spanish readers" — and were invisible for "are TPRS
-books useful for novice learners" and "how do TPRS novels compare with other
-graded readers." You're winning the buying question and losing the choosing
-ones. By the time someone's ready to buy, they've already decided.
+  {{BFV_URL}}
 
-The whole audit is here — every number, no charge, and I made no changes to
-your site:
+Read the summary boxes only, or open every detail — your pace. The short
+version of what's in there:
 
-  https://hiwasham.github.io/AITransforms/tprsbooks-discovery-audit.html
+- A homepage discovery package (title, meta description, Open Graph, structured
+  data, and a single clean heading — your homepage currently has 64 H1s and no
+  title tag, so a shared link arrives as a bare grey box).
+- Real pages for the Spanish (2,900/mo) and French (720/mo) book searches you
+  don't rank for today.
+- A Berto rebuild to protect the one search where you already sit at #4.
+- A comparison guide and novice-fit guidance for the two classroom questions
+  Claude answers right now without ever naming you.
+- A safe WordPress speed set (your mobile load is ~4.2s) and a teacher social
+  calendar from your own catalogue.
 
-It also covers the homepage (no title, no meta description, 64 H1s, no
-structured data), a 4.2s mobile load time, and the Spanish / French search
-gaps. There are drafted fixes sitting behind all of it.
+Each one started from a measured gap on your own site, and the page shows you
+the gap, the fix, and the honest expected effect — projections labelled as
+projections, never promised. The full audit it came from is one click inside.
 
-If it's useful, I'll send you the drafted work — the Spanish and French page
-copy, the Berto rebuild, the homepage markup package — and you take it from
-there. If you'd rather I just implemented it in your WordPress, that's a
-conversation we can have. Either way, the audit is yours.
+If any of it is useful, reply and tell me which pieces are worth applying. I'll
+hand you the drafts to run yourself, or apply the approved ones for you — your
+call, nothing goes live without your sign-off. Either way the work is yours.
 
 Warmly,
 Hiwa
 
 ---
 Status: DRAFT — not sent
-Built: 2026-10-09 (v2 — replaced the free-resources angle)
-BFV: docs/tprsbooks-discovery-audit.html (Magister audit, 8 Oct 2026)
+Built: 2026-10-09 (v3 — rewritten BFV-first; leads with the built work, audit now one click in)
+BFV page: docs/tprsbooks-value-first.html (links to docs/tprsbooks-discovery-audit.html)
+ACTION BEFORE SEND: replace {{BFV_URL}} with the real deployed URL of
+  tprsbooks-value-first.html (wherever Hiwa deploys it — Vercel or GitHub Pages).
 Note: Akhbar identity paragraph cut per Hiwa (2026-10-09) — can be re-added before send
