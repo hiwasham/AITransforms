@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TPRS Books — Free Resources Funnel Audit</title>
+<meta name="description" content="A specific, verifiable audit of one funnel on tprsbooks.com — prepared as a gift.">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<style>
+  :root{
+    --ink:#16181d; --muted:#5c6370; --line:#e3e6ea; --bg:#ffffff;
+    --accent:#1f6feb; --bad:#b42318; --badbg:#fef3f2; --ok:#067647; --okbg:#ecfdf3;
+    --card:#f8f9fb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --ink:#e8eaed; --muted:#9aa2b1; --line:#2a2f3a; --bg:#0f1116;
+           --accent:#6ea8ff; --bad:#ff8a80; --badbg:#2a1414; --ok:#6ee7a8; --okbg:#0f2419; --card:#171a21; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  .wrap{max-width:820px;margin:0 auto;padding:48px 20px 80px}
+  .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  h1{font-size:34px;line-height:1.2;margin:12px 0 10px;letter-spacing:-.02em}
+  h2{font-size:20px;margin:44px 0 12px;letter-spacing:-.01em}
+  p{margin:0 0 14px;color:var(--ink)}
+  .lede{font-size:18px;color:var(--muted);max-width:60ch}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:18px 0}
+  .flag{background:var(--badbg);border:1px solid var(--bad);border-radius:12px;padding:18px 20px;margin:18px 0}
+  .good{background:var(--okbg);border:1px solid var(--ok);border-radius:12px;padding:18px 20px;margin:18px 0}
+  code{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:2px 6px;font-size:14px;
+       font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  table{width:100%;border-collapse:collapse;margin:16px 0;font-size:15px}
+  th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .no{color:var(--bad);font-weight:600}
+  .yes{color:var(--ok);font-weight:600}
+  ul{margin:10px 0 14px;padding-left:22px}
+  li{margin:7px 0}
+  .quote{border-left:3px solid var(--line);padding:4px 0 4px 16px;color:var(--muted);font-style:italic;margin:16px 0}
+  footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+  .sig{margin-top:8px;color:var(--ink);font-weight:600}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="eyebrow">Prepared for Von Ray · TPRS Books</div>
+  <h1>One funnel, three broken pages</h1>
+  <p class="lede">I went looking for your free resources and found the front door locked, with a
+  suggestion box standing where the key should be. Everything below is something you can
+  open in a browser right now and see for yourself.</p>
+
+  <h2>What I found</h2>
+
+  <p>“Free Resources” is one of the main links in your top navigation. It points to
+  <code>/resources/</code>. That page says exactly one thing to a teacher:</p>
+
+  <div class="quote">“Signup for access to all of our free resources for teachers of all languages!
+  Thank you for connecting with TPRS, fill out the form and gain access to all our free resources.”</div>
+
+  <p>There is a form on that page. It just isn’t a signup form.</p>
+
+  <div class="flag">
+    <strong>The only form on the Free Resources page is your testimonials form.</strong><br>
+    Its heading reads <em>“Leave us a review”</em>, and its fields are
+    <em>Name · Role · Product · Experience/Testimonial</em>.
+    <br><br>
+    So the page instructs a teacher to “fill out the form and gain access to all our free resources,”
+    and the form in front of them is asking for a product review.
+  </div>
+
+  <p>That is the visible problem. The invisible one is worse, because it affects the pages
+  people reach from search and from old links.</p>
+
+  <h2>The rest of the free-resource family</h2>
+
+  <p>Four different URLs promise free resources. Here is what each one actually serves:</p>
+
+  <table>
+    <thead>
+      <tr><th>URL</th><th>Visible page content</th><th>Form on page</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>/resources/</code></td>
+        <td>247 characters — the “fill out the form” copy</td>
+        <td class="no">Testimonials</td>
+      </tr>
+      <tr>
+        <td><code>/free/</code></td>
+        <td class="no">0 characters</td>
+        <td class="no">Testimonials</td>
+      </tr>
+      <tr>
+        <td><code>/free-resources-2/</code></td>
+        <td class="no">0 characters</td>
+        <td class="no">Testimonials</td>
+      </tr>
+      <tr>
+        <td><code>/freeresources/</code></td>
+        <td class="no">0 characters</td>
+        <td class="no">Testimonials</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><code>/free-resources/</code> redirects to <code>/free-resources-2/</code> — which is one of
+  the blank ones. So any link, bookmark, or search result pointing at the old address lands
+  a teacher on an empty page with a review form on it.</p>
+
+  <h2>The thing that proves it isn’t “just how the site looks”</h2>
+
+  <p>I checked this against your homepage, because “no content” is the kind of claim that is
+  usually my fault rather than the site’s:</p>
+
+  <table>
+    <thead><tr><th>Page</th><th>Rendered content</th></tr></thead>
+    <tbody>
+      <tr><td>Homepage (<code>/</code>)</td><td class="yes">68,969 characters — renders perfectly</td></tr>
+      <tr><td><code>/resources/</code></td><td class="no">1,846 characters</td></tr>
+      <tr><td><code>/free/</code> · <code>/free-resources-2/</code> · <code>/freeresources/</code></td><td class="no">0 characters</td></tr>
+    </tbody>
+  </table>
+
+  <p>Your site is fine. Your theme is fine. These four pages specifically are not — and they
+  are the ones holding the free content, which is the most reliable first step a new teacher
+  takes with you.</p>
+
+  <div class="card">
+    <strong>One small sitewide detail while I was in there:</strong> the testimonials form’s
+    first field has no label. It renders the placeholder text <code>Untitled (Required)</code>
+    to the person filling it out. Anyone who does decide to leave you a review is being asked
+    to fill in a field called “Untitled.”
+  </div>
+
+  <h2>Why this is the funnel I’d fix first</h2>
+
+  <ul>
+    <li>It sits in your main navigation, so it is on every page of the site.</li>
+    <li>Free resources is where a teacher who is curious but not yet buying goes. Right now
+        that road ends at a review form.</li>
+    <li>It is a small, contained fix. Nothing needs rebuilding — the pages need their real
+        content, and the signup form needs to be the form on the page.</li>
+    <li>It is measurable. A working signup form on <code>/resources/</code> gives you a number
+        you do not currently have: how many teachers actually want the free material.</li>
+  </ul>
+
+  <div class="good">
+    <strong>What I’d do, concretely.</strong> Put a real signup form on <code>/resources/</code>,
+    point the three duplicate URLs at it so nothing lands on a blank page, and give the
+    testimonials field a label. That is the whole job.
+  </div>
+
+  <footer>
+    Prepared as a gift — no charge, no obligation, and no changes were made to your site.
+    I only read public pages.<br>
+    <span class="sig">Hiwa · AITransforms</span>
+  </footer>
+
+</div>
+</body>
+</html>
