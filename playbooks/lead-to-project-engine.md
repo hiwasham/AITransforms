@@ -31,7 +31,7 @@ Customer-lifecycle stages this engine spans: **Market-to-Lead** (stages 1–2) �
 | 2 | Reframe marketing → revenue | conversion-first-plan, RevenueEngine, 6-channel M2L | `{{revenue_model}}`, `{{product_paths}}`, `{{pricing}}` |
 | 3 | Package as decisions, not homework | CEO decision briefs + 1-pager | `{{decisions}}`, `{{guardrails}}` |
 | 4 | Propose small, measurable, tiered | 4-week engagement email, 2-tier price, case studies | `{{timeline}}`, `{{price_tiers}}`, `{{case_studies}}` |
-| 5 | Deliver as one clickable link | GitHub Pages `docs/` site + relative-link conversion | `{{content_set}}` |
+| 5 | Deliver as one clickable BFV gift page | one-link site: value-first page (artifact cards) + audit one click in | `{{content_set}}` |
 | 6 | Handle the hold without pushing | board-ROI reply (remove blocker + pin a date) | `{{stated_objection}}` |
 
 ---
@@ -89,6 +89,27 @@ attachments, no "which version," no download friction.
 the board. You look like a product company, not a freelancer emailing zip files.
 **Bayan artifacts:** the Vercel site (summary boxes + one-click depth per section).
 **EMPOWER:** execution-systems hygiene (Session 9).
+
+**BFV upgrade — show the finished product, not the plan (added v1.2):** the
+one-link page is a Hormozi *Big Value First* gift. The failure mode is leading
+with the *diagnosis* (impressive) but rendering the *cure* as a flat bullet
+list. Teachers (and CEOs) are wowed by a finished product, not a to-do list. So:
+- **Lead with the built value**, not the gap. First screen = "here is a week of
+  finished work, it's yours," with a proof strip (items built · published live:
+  0 · build time · health today). The audit/diagnosis moves to "the evidence it
+  came from," one click open.
+- **Render each deliverable as a finished-looking artifact card**, same shape
+  every time: *gap we measured → what we drafted → honest expected effect*, with
+  a status badge ("Drafted · held for review"). Cards beat a `<ul>`.
+- **Honesty is the credibility, not a disclaimer.** "Nothing published · 0 live
+  changes" and "projections labelled as projections, never promised" are what
+  make the gift land as trustworthy. Measured figures only; never invent URLs,
+  rankings, or outcomes.
+- **One real next step**, low-commitment: "reply and tell me which pieces are
+  worth applying." The email leads with the gift and the link, audit one click in.
+**TPRS artifacts:** `docs/tprsbooks-value-first.html` (BFV gift page) +
+`docs/tprsbooks-discovery-audit.html` (the evidence, linked from it);
+`warm-outreach/emails/06-von-ray-tprsbooks.md` v3 (BFV-first email).
 
 ### Stage 6 — Handle the hold without pushing
 **Move:** When the lead stalls ("internal review," "board approval"), do NOT
@@ -152,4 +173,9 @@ source models studied · stated objection · case studies used.
 - **v1.1 (2026-10-09)** — Corrected Stage 5 to the real delivery channel (Vercel
   `bayanedu.vercel.app`, not GitHub Pages). Added the proven-language swipe file
   mined from the 2026-10-07 pitch email.
+- **v1.2 (2026-10-09)** — Stage 5 BFV upgrade: the one-link page must lead with
+  the *finished built work* (artifact cards: gap → fix → honest effect), not the
+  diagnosis; honesty ("nothing published", projections labelled) is the
+  credibility. First instance: TPRS Books `tprsbooks-value-first.html` + v3 VON
+  email.
 
