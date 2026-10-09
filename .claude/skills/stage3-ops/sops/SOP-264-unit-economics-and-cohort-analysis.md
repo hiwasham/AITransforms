@@ -1,11 +1,16 @@
-# SOP-267: Unit Economics & Cohort Analysis
+# SOP-264: Unit Economics & Cohort Analysis
 
-**Process:** Proc 22 - Funnel Instrumentation & Unit Economics  
-**Core:** 267 (Unit Economics)  
-**Owner:** Data Analyst  
-**Accountable:** CEO  
-**Version:** 1.0  
-**Last Updated:** 2026-10-06
+**Process:** Proc 22 - Financial Performance Management
+**Core:** 264 - Unit Economics & Cohort Analysis
+**Owner:** Data Analyst
+**Accountable:** CEO (Dr. Abdullah Al Alawi)
+**Version:** 1.1
+**Last Updated:** 2026-10-09
+
+> **Core-ID note (2026-10-09):** This SOP was written as "SOP-267" against an
+> unverified core ID. The live Proc 22 core for unit economics is **264**.
+> Upstream: Core 262 (attribution feeds CAC, instrumentation feeds retention).
+> Sibling: `SOP-263-kpi-dashboard-and-monitoring.md`.
 
 ---
 
@@ -25,8 +30,8 @@ Calculate and track LTV, CAC, payback period, and churn by cohort to ensure sust
 - Churn segmentation and root cause analysis
 
 **Out of Scope:**
-- Attribution tracking (covered in SOP-266)
-- Event implementation (covered in SOP-268)
+- Attribution tracking (covered in SOP-262-attribution-tracking)
+- Event implementation (covered in SOP-262-event-instrumentation)
 - Financial forecasting (separate finance SOP)
 
 ---
@@ -37,14 +42,14 @@ Calculate and track LTV, CAC, payback period, and churn by cohort to ensure sust
 |------|----------------|
 | Data Analyst | Cohort analysis, metrics calculation, reporting |
 | CEO | Target setting, strategic decisions based on unit economics |
-| Marketing Lead | CAC optimization, channel budget allocation |
+| Marketer (Nasim) | CAC optimization, channel budget allocation |
 | Developer | Data infrastructure, automated reporting |
 
 ---
 
 ## Prerequisites
 
-- [ ] Attribution data available (SOP-266 complete)
+- [ ] Attribution data available (SOP-262-attribution-tracking complete)
 - [ ] Payment events tracked (subscription_started, subscription_renewed, subscription_canceled)
 - [ ] Session/activity events tracked (session_start for retention)
 - [ ] Ad spend data collection automated or manual process established
@@ -93,7 +98,7 @@ Calculate and track LTV, CAC, payback period, and churn by cohort to ensure sust
 ### 2. Calculate CAC (Customer Acquisition Cost)
 
 **Frequency:** Monthly (by cohort and channel)  
-**Owner:** Marketing Lead + Data Analyst
+**Owner:** Marketer (Nasim) + Data Analyst
 
 **Steps:**
 
@@ -498,7 +503,7 @@ Calculate and track LTV, CAC, payback period, and churn by cohort to ensure sust
    **Next Month Actions:**
    - [Specific recommendations]
 
-8.2. **Email to CEO + Marketing Lead**.
+8.2. **Email to CEO + Marketer (Nasim)**.
 
 8.3. **Store report** in `/reports/unit-economics/YYYY-MM.pdf`.
 
@@ -591,9 +596,9 @@ Calculate and track LTV, CAC, payback period, and churn by cohort to ensure sust
 ## Approval
 
 **Reviewed By:**
-- [ ] CEO (Nasim) - Targets, strategic decisions
+- [ ] CEO (Dr. Abdullah Al Alawi) - Targets, strategic decisions
 - [ ] Data Analyst - Calculation methods, reporting
-- [ ] Marketing Lead - CAC accuracy, channel insights
+- [ ] Marketer (Nasim) - CAC accuracy, channel insights
 - [ ] Developer - Dashboard automation
 
 **Approved:** _____________ **Next Review:** Q1 2027

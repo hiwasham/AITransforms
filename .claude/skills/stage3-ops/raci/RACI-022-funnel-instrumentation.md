@@ -1,9 +1,14 @@
-# RACI-022: Funnel Instrumentation & Unit Economics
+# RACI-022: Financial Performance Management
 
-**Process:** Proc 22 - Funnel Instrumentation & Unit Economics  
-**Cores:** 266 (Marketing Attribution), 267 (Unit Economics), 268 (Analytics Implementation)  
-**Owner:** CEO (Nasim)  
-**Last Updated:** 2026-10-06
+**Process:** Proc 22 - Financial Performance Management
+**Cores:** 262 (Analytics Implementation & Event Instrumentation), 263 (KPI Dashboard & Real-Time Monitoring), 264 (Unit Economics & Cohort Analysis)
+**Owner:** CEO (Dr. Abdullah Al Alawi)
+**Last Updated:** 2026-10-09
+
+> **Core-ID correction (2026-10-09):** Earlier revisions of this RACI referenced
+> cores 266/267/268. Those IDs belong to **Proc 16** (Delivery to Success). The
+> live Proc 22 cores are 262/263/264. Mapping: 268→262, 266→262, 267→264, and
+> 263 is new (dashboard/monitoring was previously folded into 268).
 
 ---
 
@@ -20,21 +25,25 @@
 
 | Role | Name | Responsibilities |
 |------|------|------------------|
-| CEO | Nasim | Business strategy, KPI targets, investor reporting |
+| CEO | Dr. Abdullah Al Alawi | Business strategy, KPI targets, investor reporting |
 | CTO | TBD | Technical architecture, data infrastructure |
 | Developer | TBD | Implementation, integration, maintenance |
-| Marketing Lead | TBD | Campaign attribution, channel optimization |
+| Marketer | Nasim | Campaign attribution, channel optimization |
 | Data Analyst | TBD | Dashboard design, insight generation |
 
 ---
 
-## Core 266: Marketing Attribution & Source Tracking
+## Core 262: Analytics Implementation & Event Instrumentation
+
+**Sibling SOPs:** `SOP-262-attribution-tracking.md` (UTM capture and source resolution), `SOP-262-event-instrumentation.md` (event taxonomy and SDK).
+
+**Attribution sub-scope**
 
 **Purpose:** Track every user's acquisition source from first touch through conversion
 
 ### Activities & RACI
 
-| Activity | CEO | CTO | Developer | Marketing Lead | Data Analyst |
+| Activity | CEO | CTO | Developer | Marketer (Nasim) | Data Analyst |
 |----------|-----|-----|-----------|----------------|--------------|
 | **Define attribution model** (first-touch vs last-touch vs multi-touch) | **A** | C | I | **R** | C |
 | **Set up UTM parameter taxonomy** (campaign naming conventions) | C | I | **R** | **A** | I |
@@ -48,7 +57,7 @@
 
 ### Decision Rights
 
-**Strategic Decisions (CEO/Marketing Lead):**
+**Strategic Decisions (CEO/Marketer (Nasim)):**
 - Which attribution model to use (first-touch, last-touch, multi-touch)
 - UTM naming conventions and campaign taxonomy
 - Offline-to-online attribution strategy
@@ -60,7 +69,7 @@
 - Cross-domain tracking implementation approach
 - How to handle missing/incomplete UTM parameters
 
-**Operational Decisions (Developer/Marketing Lead):**
+**Operational Decisions (Developer/Marketer (Nasim)):**
 - When to create new UTM campaigns vs reuse existing
 - How to handle typos/variations in UTM parameters
 - Attribution cleanup and normalization rules
@@ -68,26 +77,26 @@
 ### Communication Flows
 
 **Daily:**
-- Developer → Marketing Lead: New campaign UTM codes ready for use
+- Developer → Marketer (Nasim): New campaign UTM codes ready for use
 - Developer → CTO: Attribution tracking errors/failures
 
 **Weekly:**
-- Marketing Lead → CEO: Top 5 performing channels by signups
-- Data Analyst → Marketing Lead: Attribution anomalies (sudden drops, spikes)
+- Marketer (Nasim) → CEO: Top 5 performing channels by signups
+- Data Analyst → Marketer (Nasim): Attribution anomalies (sudden drops, spikes)
 
 **Monthly:**
-- Marketing Lead → CEO: Full attribution report with CAC per source
+- Marketer (Nasim) → CEO: Full attribution report with CAC per source
 - CTO → CEO: Attribution data quality metrics (completeness, accuracy)
 
 ---
 
-## Core 267: Unit Economics & Cohort Analysis
+## Core 264: Unit Economics & Cohort Analysis
 
 **Purpose:** Calculate and track LTV, CAC, payback period, churn by cohort
 
 ### Activities & RACI
 
-| Activity | CEO | CTO | Developer | Marketing Lead | Data Analyst |
+| Activity | CEO | CTO | Developer | Marketer (Nasim) | Data Analyst |
 |----------|-----|-----|-----------|----------------|--------------|
 | **Define cohort segmentation** (signup month, source, specialty) | **A** | I | I | C | **R** |
 | **Calculate CAC per channel** (ad spend + organic effort / signups) | **A** | I | C | **R** | **R** |
@@ -122,7 +131,7 @@
 
 **Weekly:**
 - Data Analyst → CEO: Cohort health snapshot (latest cohort retention)
-- Data Analyst → Marketing Lead: CAC trends by channel
+- Data Analyst → Marketer (Nasim): CAC trends by channel
 
 **Monthly:**
 - Data Analyst → CEO: Full unit economics report (LTV, CAC, payback, cohorts)
@@ -133,13 +142,13 @@
 
 ---
 
-## Core 268: Analytics Implementation & Instrumentation
+## Core 263: KPI Dashboard & Real-Time Monitoring
 
 **Purpose:** Implement event tracking, dashboards, and automated alerts
 
 ### Activities & RACI
 
-| Activity | CEO | CTO | Developer | Marketing Lead | Data Analyst |
+| Activity | CEO | CTO | Developer | Marketer (Nasim) | Data Analyst |
 |----------|-----|-----|-----------|----------------|--------------|
 | **Define events to track** (50 events across AARRR) | C | C | **R** | C | **A** |
 | **Implement event tracking code** (Mixpanel SDK integration) | I | **A** | **R** | I | C |
@@ -181,7 +190,7 @@
 - Developer → CTO: Analytics system health (errors, missing events)
 
 **Monthly:**
-- Data Analyst → CEO + Marketing Lead: Full analytics review (all KPIs, trends, insights)
+- Data Analyst → CEO + Marketer (Nasim): Full analytics review (all KPIs, trends, insights)
 - Developer → CTO: Analytics technical debt (deprecated events, cleanup needed)
 
 **Quarterly:**
@@ -192,15 +201,15 @@
 
 ## Cross-Core Dependencies
 
-**Core 266 → Core 267:**
+**Core 262 → Core 264:**
 - Attribution data feeds CAC calculations (need cost per source)
 - Cohort analysis requires source segmentation from attribution
 
-**Core 266 → Core 268:**
+**Core 262 → Core 263:**
 - Attribution events are part of the 50-event tracking plan
 - Attribution reports live in the KPI dashboards
 
-**Core 267 → Core 268:**
+**Core 264 → Core 263:**
 - Unit economics metrics require event tracking (signups, payments, churn)
 - Cohort retention curves are built on session/activity events
 
@@ -214,10 +223,10 @@
 ## Approval & Sign-Off
 
 **RACI Reviewers:**
-- [ ] CEO (Nasim) - Strategy, decision rights, communication flows
+- [ ] CEO (Dr. Abdullah Al Alawi) - Strategy, decision rights, communication flows
 - [ ] CTO (TBD) - Technical feasibility, resource allocation
 - [ ] Developer (TBD) - Implementation workload, timeline
-- [ ] Marketing Lead (TBD) - Attribution model, channel tracking
+- [ ] Marketer (Nasim) (TBD) - Attribution model, channel tracking
 - [ ] Data Analyst (TBD) - Metrics definitions, reporting cadence
 
 **Approval Date:** _____________  
@@ -231,4 +240,4 @@
 
 **Outsourced Work:** If analytics implementation is outsourced (contractor, agency), the Developer role in this RACI maps to "External Developer" with the CTO as the internal A (accountable for vendor management).
 
-**Tooling Lock-In:** This RACI is platform-agnostic (works with Mixpanel, Amplitude, GA4). SOP-266/267/268 will specify the chosen tools.
+**Tooling Lock-In:** This RACI is platform-agnostic (works with Mixpanel, Amplitude, GA4). The Core 262–264 SOPs will specify the chosen tools.

@@ -48,7 +48,7 @@ Convert a successful payment into a fully usable, correctly-entitled Bayan accou
 - [ ] Stripe account live with webhook endpoint configured
 - [ ] User database schema supports entitlement fields
 - [ ] Email sending service operational
-- [ ] `client_reference_id` passed on every Stripe Checkout session (see SOP-262)
+- [ ] `client_reference_id` passed on every Stripe Checkout session (see `SOP-262-attribution-tracking.md`)
 - [ ] Slack (or email) channel for provisioning failure alerts
 
 ---

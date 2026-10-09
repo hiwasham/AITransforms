@@ -1,11 +1,21 @@
-# SOP-266: Marketing Attribution & Source Tracking
+# SOP-262: Attribution Tracking & Source Instrumentation
 
-**Process:** Proc 22 - Funnel Instrumentation & Unit Economics  
-**Core:** 266 (Marketing Attribution)  
-**Owner:** Marketing Lead  
-**Accountable:** CEO  
-**Version:** 1.0  
-**Last Updated:** 2026-10-06
+**Process:** Proc 22 - Financial Performance Management
+**Core:** 262 - Analytics Implementation & Event Instrumentation
+**Owner:** Marketer (Nasim)
+**Accountable:** CEO (Dr. Abdullah Al Alawi)
+**Version:** 1.1
+**Last Updated:** 2026-10-09
+
+> **Core-ID note (2026-10-09):** This SOP was written as "SOP-266 - Marketing
+> Attribution" against an unverified core ID. The live Proc 22 core set is
+> **262** (Analytics Implementation & Event Instrumentation), **263** (KPI
+> Dashboard & Real-Time Monitoring), **264** (Unit Economics & Cohort Analysis).
+> There is no separate "Marketing Attribution" core — attribution is the
+> *acquisition* half of Core 262's instrumentation surface, so this SOP lives
+> inside Core 262 alongside `SOP-262-event-instrumentation.md`. Event plumbing
+> is that sibling SOP; this one owns UTM capture, source resolution, and
+> channel-level reports.
 
 ---
 
@@ -25,8 +35,8 @@ Track every user's acquisition source from first touch through conversion to cal
 - Attribution reporting and analysis
 
 **Out of Scope:**
-- Post-conversion attribution (covered in SOP-267)
-- Event tracking implementation (covered in SOP-268)
+- Post-conversion attribution (covered in SOP-264-unit-economics)
+- Event tracking implementation (covered in SOP-262-event-instrumentation)
 - Ad platform management (separate marketing SOP)
 
 ---
@@ -35,7 +45,7 @@ Track every user's acquisition source from first touch through conversion to cal
 
 | Role | Responsibility |
 |------|----------------|
-| Marketing Lead | Campaign setup, UTM creation, attribution analysis |
+| Marketer (Nasim) | Campaign setup, UTM creation, attribution analysis |
 | Developer | Technical implementation, tracking code maintenance |
 | CEO | Attribution model selection, budget allocation decisions |
 | Data Analyst | Report building, attribution accuracy validation |
@@ -56,7 +66,7 @@ Track every user's acquisition source from first touch through conversion to cal
 ### 1. Campaign Planning & UTM Creation
 
 **Frequency:** Before launching any marketing campaign  
-**Owner:** Marketing Lead
+**Owner:** Marketer (Nasim)
 
 **Steps:**
 
@@ -195,7 +205,7 @@ Track every user's acquisition source from first touch through conversion to cal
 ### 4. Offline Attribution (QR Codes)
 
 **Frequency:** Per offline campaign (conferences, print ads, billboards)  
-**Owner:** Marketing Lead
+**Owner:** Marketer (Nasim)
 
 **Steps:**
 
@@ -273,7 +283,7 @@ Track every user's acquisition source from first touch through conversion to cal
 
 **Steps:**
 
-6.1. **Weekly Quick Report** (email to Marketing Lead + CEO):
+6.1. **Weekly Quick Report** (email to Marketer (Nasim) + CEO):
    ```sql
    -- Top 5 sources by signups (last 7 days)
    SELECT 
@@ -332,7 +342,7 @@ Track every user's acquisition source from first touch through conversion to cal
    - CAC trend over time by channel
    - Source mix pie chart (% of signups per source)
 
-6.6. **Email report** to CEO + Marketing Lead with insights:
+6.6. **Email report** to CEO + Marketer (Nasim) with insights:
    - Best performing campaign (lowest CAC)
    - Worst performing campaign (highest CAC or zero conversions)
    - Recommendations (pause, scale, optimize)
@@ -344,7 +354,7 @@ Track every user's acquisition source from first touch through conversion to cal
 ### 7. Attribution Validation & Cleanup
 
 **Frequency:** Weekly (spot-check), Monthly (audit)  
-**Owner:** Marketing Lead
+**Owner:** Marketer (Nasim)
 
 **Steps:**
 
@@ -502,8 +512,8 @@ Track every user's acquisition source from first touch through conversion to cal
 ## Approval
 
 **Reviewed By:**
-- [ ] CEO (Nasim) - Strategy, KPI targets
-- [ ] Marketing Lead - UTM taxonomy, reporting
+- [ ] CEO (Dr. Abdullah Al Alawi) - Strategy, KPI targets
+- [ ] Marketer (Nasim) - UTM taxonomy, reporting
 - [ ] Developer - Technical implementation
 - [ ] Data Analyst - Report accuracy
 

@@ -1,10 +1,27 @@
-# BP-022: Funnel Instrumentation & Unit Economics Blueprint
+# BP-022: Financial Performance Management Blueprint
 
-**Process:** Proc 22 - Funnel Instrumentation & Unit Economics  
-**Level:** L2 Blueprint (Strategic Context)  
-**Cores:** 266 (Marketing Attribution), 267 (Unit Economics), 268 (Analytics Implementation)  
-**Owner:** CEO (Nasim)  
-**Last Updated:** 2026-10-06
+**Process:** Proc 22 - Financial Performance Management
+**Level:** L2 Blueprint (Strategic Context)
+**Cores:** 262 (Analytics Implementation & Event Instrumentation), 263 (KPI Dashboard & Real-Time Monitoring), 264 (Unit Economics & Cohort Analysis)
+**Owner:** CEO (Dr. Abdullah Al Alawi)
+**Last Updated:** 2026-10-09
+
+> **Core-ID correction (2026-10-09).** This blueprint was drafted against an
+> assumed core set. The narrative below (components, flow, risks, timeline) is
+> still accurate; only the **labels** were wrong. Read every "Core 266/267/268"
+> in the body against this table:
+>
+> | In the narrative | Live core | Live name |
+> |---|---|---|
+> | Core 268 (Analytics Implementation) | **262** | Analytics Implementation & Event Instrumentation |
+> | Core 266 (Marketing Attribution) | **262** | (attribution is the acquisition half of 262) |
+> | Core 267 (Unit Economics) | **264** | Unit Economics & Cohort Analysis |
+> | — (previously folded into 268) | **263** | KPI Dashboard & Real-Time Monitoring |
+>
+> Cores 266/267/268 in fact belong to **Proc 16** (Delivery to Success).
+> Live proc 22 processes as "Financial Performance Management" in Stage 3 HQ.
+> There is **no** separate Marketing Attribution core: attribution content folds
+> into Core 262 as implementation detail.
 
 ---
 
@@ -35,7 +52,7 @@
 - Marketing spends $X on Google/Facebook/organic → how many paying customers came from each? Unknown.
 - Users sign up → which ones activate? Which features predict retention? Unknown.
 - Subscribers churn → why? When? Which cohorts are most at risk? Unknown.
-- CEO asks "what's our CAC?" → Marketing Lead guesses, no data to back it up.
+- CEO asks "what's our CAC?" → Marketer (Nasim) guesses, no data to back it up.
 - Investor asks "what's your LTV:CAC?" → no answer, or answer based on assumptions.
 
 **Consequences:**
@@ -63,7 +80,7 @@
 
 ## Core Components
 
-### Core 266: Marketing Attribution & Source Tracking
+### Core 262 (was labelled 266): Attribution & Source Tracking
 
 **Purpose:** Track every user from first click to conversion so we know which channels work.
 
@@ -76,9 +93,9 @@
 **Success metric:** >95% of signups have known source (not "direct")
 
 **What this enables:**
-- Marketing Lead can answer "which campaign should we pause?" with data, not gut feel
+- Marketer (Nasim) can answer "which campaign should we pause?" with data, not gut feel
 - CEO can compare cost per signup by channel to decide budget allocation
-- Attribution report feeds directly into CAC calculation (Core 267)
+- Attribution report feeds directly into CAC calculation (Core 264)
 
 **Risks:**
 - Users clear cookies → lose attribution (mitigation: backup in email link)
@@ -87,7 +104,7 @@
 
 ---
 
-### Core 267: Unit Economics & Cohort Analysis
+### Core 264 (was labelled 267): Unit Economics & Cohort Analysis
 
 **Purpose:** Calculate LTV, CAC, payback period, and churn by cohort to prove sustainable economics.
 
@@ -116,7 +133,7 @@
 
 ---
 
-### Core 268: Analytics Implementation & Instrumentation
+### Core 262 (was labelled 268): Analytics Implementation & Instrumentation
 
 **Purpose:** Implement event tracking, dashboards, and alerts so we have real-time visibility.
 
@@ -149,7 +166,7 @@
 ## Process Flow (How The Cores Work Together)
 
 ```
-User Journey                  Core 266                Core 267                Core 268
+User Journey                  Core 262 (attr)         Core 264                Core 262 (events)
 ─────────────────────────────────────────────────────────────────────────────────────────
 1. User clicks ad           → Capture UTM params    →                        → Track page_view
    (Google Search)             (utm_source=google)
@@ -178,7 +195,7 @@ User Journey                  Core 266                Core 267                Co
                                                          best channel, scale it
 ```
 
-**The integration:** Core 266 (attribution) feeds Core 267 (CAC), which uses Core 268 (events) to calculate LTV. All three rely on Core 268's event tracking as the data foundation.
+**The integration:** Core 262 (attribution) feeds Core 264 (CAC), which uses Core 262 (events) to calculate LTV. Cores 264 and 263 both rest on Core 262's event tracking as the data foundation.
 
 ---
 
@@ -199,7 +216,7 @@ User Journey                  Core 266                Core 267                Co
 **Phase 3: Optimization (Week 4+)**
 - [ ] Automated alerts configured
 - [ ] First monthly unit economics report delivered
-- [ ] Marketing Lead makes budget decision based on CAC data
+- [ ] Marketer (Nasim) makes budget decision based on CAC data
 - [ ] CEO pitches investor with LTV:CAC proof
 
 **Ultimate success:** CEO can answer "what's our unit economics?" in 10 seconds with data, and the board trusts the answer enough to approve a growth round.
@@ -221,8 +238,8 @@ User Journey                  Core 266                Core 267                Co
 - [ ] Budget approved: $300/month for tools
 
 **Blockers:**
-- If attribution not implemented (SOP-266) → can't calculate accurate CAC (SOP-267)
-- If events not tracked (SOP-268) → can't build cohort retention curves (SOP-267)
+- If attribution not implemented (SOP-262-attribution-tracking) → can't calculate accurate CAC (SOP-264-unit-economics-and-cohort-analysis)
+- If events not tracked (SOP-262-event-instrumentation) → can't build cohort retention curves (SOP-264-unit-economics-and-cohort-analysis)
 - If payment webhooks not configured → revenue events missing → LTV calculation broken
 
 ---
@@ -232,7 +249,7 @@ User Journey                  Core 266                Core 267                Co
 **People:**
 - Developer: 3 weeks full-time (implementation, QA, debugging)
 - Data Analyst: 1 week part-time (event taxonomy, dashboard design, thresholds)
-- Marketing Lead: 3 days part-time (UTM taxonomy, campaign tracking, reporting)
+- Marketer (Nasim): 3 days part-time (UTM taxonomy, campaign tracking, reporting)
 - CEO: 4 hours (KPI prioritization, alert escalation paths, targets approval)
 - CTO: 2 days part-time (platform selection, technical architecture review)
 
@@ -256,7 +273,7 @@ User Journey                  Core 266                Core 267                Co
 
 | Risk | Probability | Impact | Mitigation |
 |------|-------------|--------|------------|
-| **Event tracking has bugs → data inaccurate** | Medium | High | Comprehensive QA (SOP-268 Procedure 3), monthly audits |
+| **Event tracking has bugs → data inaccurate** | Medium | High | Comprehensive QA (SOP-262-event-instrumentation, Procedure 3), monthly audits |
 | **Developer underestimates complexity** | Medium | Medium | Break into 3 phases with checkpoints, allow buffer time |
 | **Mixpanel event limit hit → tracking stops** | Low | High | Monitor usage at 80%, upgrade plan proactively |
 | **Attribution window too short/long** | Low | Medium | Start with 30 days (industry standard), adjust if needed |
@@ -264,7 +281,7 @@ User Journey                  Core 266                Core 267                Co
 | **Alert fatigue → alerts ignored** | Medium | Medium | Start conservative (few alerts), tune thresholds quarterly |
 | **Too much data → analysis paralysis** | Low | Medium | Focus on 5 core KPIs (DAU, LTV, CAC, payback, churn), ignore rest |
 
-**Critical path risk:** If Core 268 (event tracking) fails, the entire process collapses. Mitigation: Do Core 268 first, verify data quality before building dashboards.
+**Critical path risk:** If Core 262 (event tracking) fails, the entire process collapses. Mitigation: Do Core 262 first, verify data quality before building dashboards.
 
 ---
 
@@ -290,7 +307,7 @@ User Journey                  Core 266                Core 267                Co
 - **Cons:** $5k-15k upfront, agency doesn't understand business context, vendor lock-in
 - **Verdict:** Consider if internal team lacks time, but prefer internal ownership for agility
 
-**Chosen approach:** Core 268 on Mixpanel (event tracking + dashboards), internal team builds, 3-week timeline.
+**Chosen approach:** Core 262 on Mixpanel (event tracking + dashboards), internal team builds, 3-week timeline.
 
 ---
 
@@ -330,13 +347,13 @@ Week 4: Polish & Handoff
 - Automated alerts fire if thresholds breached
 
 **Weekly:**
-- Marketing Lead reviews top 5 channels by signups (15 min)
+- Marketer (Nasim) reviews top 5 channels by signups (15 min)
 - Developer spot-checks event accuracy (30 min)
 
 **Monthly:**
 - Data Analyst runs unit economics report (4 hours)
 - Data Analyst runs analytics audit (2 hours)
-- CEO + Marketing Lead review report, decide budget allocation (1 hour)
+- CEO + Marketer (Nasim) review report, decide budget allocation (1 hour)
 
 **Quarterly:**
 - Team reviews event taxonomy (add new events, archive unused)
@@ -352,20 +369,20 @@ Week 4: Polish & Handoff
 **How Proc 22 enables other processes:**
 
 **→ Proc 16 (Delivery to Success):**
-- Activation metrics from Core 268 → identify which onboarding steps predict retention
-- Re-engagement alerts (from Core 268) → trigger drip campaign (SOP-257)
+- Activation metrics from Core 262 → identify which onboarding steps predict retention
+- Re-engagement alerts (from Core 263) → trigger drip campaign (SOP-257)
 
 **→ Proc 17 (Success to Referral):**
-- Referral attribution (Core 266) → calculate referral CAC (negative CAC = reward cost)
-- Cohort analysis (Core 267) → identify which users are most likely to refer
+- Referral attribution (Core 262) → calculate referral CAC (negative CAC = reward cost)
+- Cohort analysis (Core 264) → identify which users are most likely to refer
 
 **→ Stage 4 (Optimization & Scaling):**
-- Unit economics (Core 267) → justify raising growth capital to scale
+- Unit economics (Core 264) → justify raising growth capital to scale
 - Payback period <3 months → enables aggressive customer acquisition
 
 **→ Product roadmap:**
-- Feature usage data (Core 268) → prioritize features that drive activation and retention
-- Churn reasons (Core 267) → identify product gaps to fix
+- Feature usage data (Core 262) → prioritize features that drive activation and retention
+- Churn reasons (Core 264) → identify product gaps to fix
 
 **The big picture:** Proc 22 is the "central nervous system" of Bayan's growth. Without it, the company operates on instinct. With it, every decision—marketing budget, product roadmap, hiring, fundraising—is backed by data.
 
@@ -400,7 +417,7 @@ Week 4: Polish & Handoff
 
 **Qualitative:**
 - CEO confidently pitches "our unit economics" to investors (before: avoided topic)
-- Marketing Lead makes budget decisions in 10 minutes (before: days of debate)
+- Marketer (Nasim) makes budget decisions in 10 minutes (before: days of debate)
 - Developer prioritizes features based on usage data (before: CEO gut feel)
 - Team morale improved: "We know what's working" vs "We're guessing"
 
@@ -435,11 +452,11 @@ Week 4: Polish & Handoff
 
 ## Approval
 
-**Blueprint Owner:** CEO (Nasim)
+**Blueprint Owner:** CEO (Dr. Abdullah Al Alawi)
 
 **Reviewed By:**
 - [ ] CTO - Technical feasibility, platform selection
-- [ ] Marketing Lead - Attribution model, campaign tracking
+- [ ] Marketer (Nasim) - Attribution model, campaign tracking
 - [ ] Data Analyst - Metrics definitions, calculation methods
 - [ ] Developer - Implementation timeline, resource estimate
 
