@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bayan · 90-Day Plan — ABG Draft Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+ </head>
+<body>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Course",
+      "name": "ABG & Acid-Base",
+      "description": "A free clinical course covering arterial blood gas interpretation and acid-base disorders, delivered as 5 modules and 10 clinical cases with a certificate on completion.",
+      "url": "https://www.bayan.edu.om/courses/abg-analysis",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "provider": {
+        "@type": "Organization",
+        "name": "Bayan",
+        "url": "https://www.bayan.edu.om/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What ABG interpretation course includes a certificate and clinical cases?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bayan's ABG & Acid-Base course is presented as a free clinical course covering arterial blood gas interpretation and acid-base disorders. The public course listing states that it contains 5 modules and 10 cases, with a certificate on completion."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What certificate do learners receive on the ABG & Acid-Base course?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The course listing states 'Certificate on completion.' Bayan's homepage describes the certificates attached to its guided courses as QR-verified. The public materials reviewed do not state the certificate's exact title, issuing body wording, validity period, accreditation status, or whether any assessment is required before it is issued."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the ABG & Acid-Base course include clinical cases?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The public course listing states that the ABG & Acid-Base course includes 10 cases."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the format of the ABG & Acid-Base course?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The verified format details are: a free clinical course, 5 modules, and 10 cases, with reading modules and clinical cases described in Bayan's homepage overview of its guided courses."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --font-sans:'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-display:'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-mono:'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --bg:#f5f9fa; --surface:#ffffff; --surface-2:#eef4f5; --surface-3:#e5eef0;
+  --ink:#10222e; --ink-soft:#3d5566; --muted:#6b8496;
+  --line:#dde7ea; --line-strong:#c8d8dc;
+  --brand:#0c5c66; --brand-600:#0a4a53; --brand-700:#083a41; --brand-100:#e3f1f2;
+  --accent:#b8862b; --accent-soft:#fdf6e7; --accent-line:#e8d3a4;
+  --ok:#12796a; --ok-soft:#e6f4f1; --ok-line:#b7ded6;
+  --warn:#9a6b12;
+  --radius:16px; --radius-lg:26px;
+  --shadow-sm:0 1px 2px rgba(16,34,46,.06), 0 4px 14px rgba(16,34,46,.05);
+  --shadow:0 10px 30px rgba(16,34,46,.08);
+  --shadow-lg:0 24px 60px rgba(8,58,65,.18);
+  --maxw:1120px; --header-h:66px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--font-sans);background:var(--bg);color:var(--ink);
+  font-size:17px;line-height:1.72;-webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility}
+img,svg{max-width:100%;display:block}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{font-family:var(--font-display);line-height:1.18;letter-spacing:-.015em;
+  margin:0 0 .6em;color:var(--ink);font-weight:700}
+h1{font-size:clamp(1.95rem,4.4vw,3.1rem)}
+h2{font-size:clamp(1.45rem,2.8vw,2rem)}
+h3{font-size:clamp(1.12rem,2vw,1.3rem)}
+p{margin:0 0 1.1em}
+ul,ol{margin:0 0 1.1em;padding-left:1.15em}
+li{margin-bottom:.5em}
+li::marker{color:var(--brand)}
+code{font-family:var(--font-mono);font-size:.85em;background:var(--surface-3);
+  color:var(--ink);padding:.12em .42em;border-radius:6px;border:1px solid var(--line)}
+.wrap{width:min(100% - 2.5rem, var(--maxw));margin-inline:auto}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:6px}
+
+.site-header{position:sticky;top:0;z-index:80;
+  background:color-mix(in srgb, var(--surface) 88%, transparent);
+  backdrop-filter:saturate(180%) blur(14px);
+  -webkit-backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid var(--line)}
+.header-inner{height:var(--header-h);display:flex;align-items:center;gap:1.25rem}
+.brand{display:flex;align-items:center;gap:.6rem;font-weight:700;
+  color:var(--ink);text-decoration:none;letter-spacing:-.02em;flex-shrink:0}
+.brand-mark{width:34px;height:34px;border-radius:10px;flex:0 0 auto;
+  background:linear-gradient(140deg,var(--brand),#14919f);
+  display:grid;place-items:center;color:#fff;font-family:var(--font-display);
+  font-size:1.05rem;box-shadow:0 6px 16px rgba(12,92,102,.32)}
+.brand-text{display:flex;flex-direction:column;line-height:1.05}
+.brand-name{font-size:1.02rem}
+.brand-sub{font-size:.68rem;font-weight:600;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--muted)}
+.header-actions{display:flex;align-items:center;gap:.6rem;margin-left:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  font:inherit;font-weight:600;font-size:.92rem;
+  padding:.7rem 1.25rem;border-radius:12px;border:1px solid transparent;
+  cursor:pointer;text-decoration:none;white-space:nowrap;
+  transition:transform .18s ease, box-shadow .18s ease}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 8px 20px rgba(12,92,102,.28)}
+.btn-primary:hover{background:var(--brand-600)}
+.btn-light{background:#fff;color:var(--brand-700);box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.btn-outline-light{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.5)}
+.btn-sm{padding:.55rem 1rem;font-size:.85rem}
+.btn-lg{padding:.95rem 1.6rem;font-size:1rem}
+
+.hero{padding:2.5rem 0 1rem}
+.hero-panel{position:relative;overflow:hidden;border-radius:var(--radius-lg);
+  padding:clamp(2rem,5vw,3.4rem);
+  background:
+    radial-gradient(900px 420px at 88% -10%, rgba(47,182,196,.55), transparent 60%),
+    radial-gradient(700px 400px at 5% 110%, rgba(184,134,43,.32), transparent 62%),
+    linear-gradient(135deg,#083a41 0%, #0c5c66 48%, #0f7d8a 100%);
+  color:#eaf6f7;box-shadow:var(--shadow-lg)}
+.hero-panel::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,.14) 1px, transparent 1px);
+  background-size:22px 22px;opacity:.4;
+  mask-image:linear-gradient(to bottom, rgba(0,0,0,.7), transparent 75%);
+  -webkit-mask-image:linear-gradient(to bottom, rgba(0,0,0,.7), transparent 75%)}
+.hero-grid{position:relative;z-index:1;display:grid;
+  grid-template-columns:minmax(0,1.3fr) minmax(0,.9fr);
+  gap:clamp(1.75rem,4vw,3rem);align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:.55rem;
+  background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.28);
+  padding:.4rem .9rem;border-radius:999px;
+  font-size:.76rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+  color:#d8f1f4;margin-bottom:1.2rem}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:#5fe0c4;
+  box-shadow:0 0 0 4px rgba(95,224,196,.22)}
+.hero h1{color:#fff;margin-bottom:.7rem;text-wrap:balance}
+.hero h1 em{font-style:normal;display:block;
+  background:linear-gradient(90deg,#ffd98a,#f2b950);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-lead{font-size:clamp(1rem,1.6vw,1.1rem);color:#cfebee;
+  max-width:56ch;margin-bottom:1.6rem}
+.hero-meta{display:flex;flex-wrap:wrap;gap:.5rem .85rem;margin-bottom:1.7rem;
+  font-size:.8rem;color:#a9d6db;font-weight:500}
+.hero-meta span{display:inline-flex;align-items:center;gap:.4rem}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.7rem}
+.hero-card{background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.26);
+  border-radius:22px;padding:1.5rem 1.5rem 1.3rem;
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  box-shadow:0 18px 40px rgba(0,0,0,.2)}
+.hero-card h2{font-family:var(--font-sans);font-size:.74rem;
+  letter-spacing:.13em;text-transform:uppercase;color:#9fd9de;
+  margin-bottom:1.1rem;font-weight:700}
+.fact-list{list-style:none;padding:0;margin:0}
+.fact-list li{display:flex;align-items:flex-start;gap:.85rem;
+  padding:.7rem 0;border-bottom:1px dashed rgba(255,255,255,.18);margin:0}
+.fact-list li:last-child{border-bottom:0;padding-bottom:0}
+.fact-list li:first-child{padding-top:0}
+.fact-icon{flex:0 0 auto;width:34px;height:34px;border-radius:10px;
+  display:grid;place-items:center;font-size:.95rem;
+  background:rgba(95,224,196,.16);color:#8cf0d8}
+.fact-body{flex:1;min-width:0}
+.fact-label{font-size:.7rem;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;color:#9fd9de;margin-bottom:.15rem}
+.fact-value{font-size:.93rem;color:#eaf7f8;font-weight:600;line-height:1.4}
+
+.subnav{position:sticky;top:var(--header-h);z-index:70;
+  background:color-mix(in srgb, var(--bg) 90%, transparent);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);margin-top:2rem}
+.subnav-inner{display:flex;gap:.4rem;overflow-x:auto;padding:.65rem 0;
+  scrollbar-width:none}
+.subnav-inner::-webkit-scrollbar{display:none}
+.subnav a{flex:0 0 auto;font-size:.82rem;font-weight:600;
+  color:var(--ink-soft);padding:.4rem .8rem;border-radius:999px;
+  text-decoration:none;border:1px solid transparent;transition:.2s;
+  white-space:nowrap}
+.subnav a:hover{background:var(--surface);border-color:var(--line);color:var(--brand)}
+
+.article{padding:2.6rem 0 1rem}
+.section{padding:2.4rem 0;border-bottom:1px solid var(--line);
+  scroll-margin-top:calc(var(--header-h) + 60px)}
+.section:last-of-type{border-bottom:0}
+.section-head{max-width:74ch;margin-bottom:1.4rem}
+.section-num{display:inline-flex;align-items:center;justify-content:center;
+  width:34px;height:34px;border-radius:10px;
+  background:var(--brand-100);color:var(--brand);
+  font-family:var(--font-sans);font-size:.9rem;font-weight:700;
+  margin-bottom:.75rem}
+.section h2{margin-bottom:.5rem}
+.section-sub{color:var(--muted);font-size:1rem;margin:0}
+.lead{font-size:1.06rem;color:var(--ink-soft);max-width:72ch}
+
+.answer-box{position:relative;border-radius:var(--radius-lg);
+  padding:clamp(1.5rem,3.2vw,2.3rem);
+  background:linear-gradient(140deg, color-mix(in srgb,var(--brand) 7%, var(--surface)), var(--surface));
+  border:1px solid color-mix(in srgb,var(--brand) 28%, var(--line));
+  box-shadow:var(--shadow);overflow:hidden}
+.answer-box::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;
+  background:linear-gradient(180deg,var(--brand),#2fb6c4)}
+.answer-label{display:inline-flex;align-items:center;gap:.5rem;
+  font-size:.72rem;font-weight:800;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--brand);margin-bottom:.85rem}
+.answer-label::before{content:"";width:8px;height:8px;border-radius:50%;
+  background:var(--brand);box-shadow:0 0 0 4px color-mix(in srgb,var(--brand) 20%, transparent)}
+.answer-box p{font-size:1.04rem;color:var(--ink);margin-bottom:.9rem}
+.answer-box p:last-child{margin-bottom:0}
+.answer-box strong{color:var(--brand-700)}
+
+.callout{display:flex;gap:1rem;border-radius:var(--radius);
+  padding:1.1rem 1.3rem;margin:1.5rem 0;
+  border:1px solid var(--line);background:var(--surface);
+  box-shadow:var(--shadow-sm)}
+.callout-icon{flex:0 0 auto;width:38px;height:38px;border-radius:11px;
+  display:grid;place-items:center;font-size:1.05rem}
+.callout p:last-child{margin-bottom:0}
+.callout-body{font-size:.94rem;color:var(--ink-soft)}
+.callout strong{color:var(--ink)}
+.callout.note{background:var(--accent-soft);border-color:var(--accent-line)}
+.callout.note .callout-icon{background:color-mix(in srgb,var(--accent) 18%, transparent);color:var(--warn)}
+.callout.tip{background:var(--brand-100);border-color:color-mix(in srgb,var(--brand) 22%, transparent)}
+.callout.tip .callout-icon{background:color-mix(in srgb,var(--brand) 16%, transparent);color:var(--brand)}
+
+.grid{display:grid;gap:1rem}
+.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius);padding:1.35rem 1.4rem;
+  box-shadow:var(--shadow-sm);
+  transition:transform .22s ease, box-shadow .22s ease}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.card h3{margin-bottom:.35rem;font-size:1.06rem}
+.card p{font-size:.92rem;color:var(--ink-soft);margin:0}
+.card-icon{width:42px;height:42px;border-radius:12px;margin-bottom:.9rem;
+  display:grid;place-items:center;font-size:1.1rem;
+  background:var(--brand-100);color:var(--brand)}
+
+.check-list{list-style:none;padding:0;margin:0}
+.check-list li{position:relative;padding-left:2.1rem;margin-bottom:.8rem;
+  color:var(--ink-soft);font-size:.96rem}
+.check-list li::before{content:"✓";position:absolute;left:0;top:.12rem;
+  width:1.35rem;height:1.35rem;border-radius:50%;
+  background:color-mix(in srgb,var(--ok) 14%, transparent);
+  color:var(--ok);font-size:.75rem;font-weight:800;
+  display:grid;place-items:center}
+.check-list li strong{color:var(--ink)}
+.check-list.two-col{columns:2;column-gap:2.4rem}
+.check-list.two-col li{break-inside:avoid}
+
+.help-list{list-style:none;padding:0;margin:0}
+.help-list li{position:relative;padding-left:2.1rem;margin-bottom:.8rem;
+  color:var(--ink-soft);font-size:.95rem}
+.help-list li::before{content:"?";position:absolute;left:0;top:.12rem;
+  width:1.35rem;height:1.35rem;border-radius:50%;
+  background:var(--accent-soft);color:var(--warn);
+  font-size:.75rem;font-weight:800;display:grid;place-items:center;
+  border:1px solid var(--accent-line)}
+
+.table-wrap{overflow:hidden;border:1px solid var(--line);
+  border-radius:var(--radius);background:var(--surface);
+  box-shadow:var(--shadow-sm);margin:1.5rem 0}
+table{width:100%;border-collapse:collapse;font-size:.94rem}
+thead th{background:var(--surface-2);color:var(--ink);
+  font-family:var(--font-sans);font-size:.74rem;letter-spacing:.08em;
+  text-transform:uppercase;font-weight:800;text-align:left;
+  padding:.85rem 1.15rem;border-bottom:1px solid var(--line-strong)}
+tbody td{padding:.95rem 1.15rem;border-bottom:1px solid var(--line);
+  color:var(--ink-soft);vertical-align:top;line-height:1.6}
+tbody tr:last-child td{border-bottom:0}
+td strong{color:var(--ink)}
+td.q-cell{font-weight:700;color:var(--ink);width:34%}
+.tag{display:inline-flex;align-items:center;gap:.4rem;
+  font-size:.72rem;font-weight:800;letter-spacing:.06em;
+  text-transform:uppercase;padding:.22rem .6rem;
+  border-radius:999px;border:1px solid transparent}
+.tag::before{content:"";width:7px;height:7px;border-radius:50%;
+  background:currentColor}
+.tag-yes{background:var(--ok-soft);color:var(--ok);border-color:var(--ok-line)}
+.tag-partial{background:var(--accent-soft);color:var(--warn);border-color:var(--accent-line)}
+
+.faq{display:grid;gap:.7rem;margin-top:1.4rem}
+details.faq-item{background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius);overflow:hidden;
+  transition:border-color .2s ease, box-shadow .2s ease}
+details.faq-item[open]{border-color:color-mix(in srgb,var(--brand) 40%, var(--line));
+  box-shadow:var(--shadow-sm)}
+details.faq-item summary{cursor:pointer;list-style:none;
+  padding:1.05rem 3.2rem 1.05rem 1.35rem;
+  font-weight:600;font-size:1rem;color:var(--ink);
+  position:relative;transition:color .2s}
+details.faq-item summary::-webkit-details-marker{display:none}
+details.faq-item summary:hover{color:var(--brand)}
+details.faq-item summary::after{content:"";position:absolute;
+  right:1.3rem;top:50%;width:11px;height:11px;margin-top:-6px;
+  border-right:2px solid var(--brand);border-bottom:2px solid var(--brand);
+  transform:rotate(45deg);transition:transform .25s ease}
+details.faq-item[open] summary::after{transform:rotate(-135deg);margin-top:-3px}
+.faq-answer{padding:0 1.35rem 1.25rem;color:var(--ink-soft);font-size:.95rem}
+.faq-answer p:last-child{margin-bottom:0}
+
+.cta{margin:3rem 0 2rem;border-radius:var(--radius-lg);
+  padding:clamp(2rem,4.5vw,3.2rem);
+  background:
+    radial-gradient(700px 320px at 90% 0%, rgba(47,182,196,.5), transparent 62%),
+    linear-gradient(135deg,#083a41,#0c5c66 55%,#0f7d8a);
+  color:#eaf6f7;text-align:center;box-shadow:var(--shadow-lg)}
+.cta h2{color:#fff;margin-bottom:.6rem}
+.cta p{color:#c9e6e9;max-width:60ch;margin-inline:auto}
+.cta-buttons{display:flex;flex-wrap:wrap;gap:.7rem;
+  justify-content:center;margin-top:1.6rem}
+.cta-note{font-size:.82rem;color:#9ec9ce;margin-top:1.5rem;margin-bottom:0}
+
+.editorial{border-radius:var(--radius);padding:1.1rem 1.35rem;
+  background:var(--surface-2);border:1px solid var(--line);
+  font-size:.86rem;color:var(--ink-soft);margin-bottom:2rem}
+.editorial strong{color:var(--ink)}
+
+.site-footer{background:var(--surface);border-top:1px solid var(--line);
+  padding:2.4rem 0 1.9rem;margin-top:2rem;
+  font-size:.88rem;color:var(--muted)}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2rem}
+.footer-grid h4{font-family:var(--font-sans);font-size:.72rem;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--ink);
+  margin-bottom:.85rem;font-weight:800}
+.footer-links{list-style:none;padding:0;margin:0}
+.footer-links li{margin-bottom:.45rem}
+.footer-links a{color:var(--ink-soft);font-size:.87rem}
+.footer-bottom{margin-top:2rem;padding-top:1.4rem;
+  border-top:1px solid var(--line);
+  display:flex;flex-wrap:wrap;gap:.8rem;justify-content:space-between;
+  font-size:.79rem}
+
+@media (max-width:1000px){
+  .hero-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  body{font-size:16px}
+  .subnav{display:none}
+  .grid-3,.grid-2{grid-template-columns:1fr}
+  .check-list.two-col{columns:1}
+  .brand-sub{display:none}
+}
+@media (max-width:640px){
+  .table-wrap{border:0;background:transparent;box-shadow:none;overflow:visible}
+  table,thead,tbody,tr,td{display:block;width:100%}
+  thead{display:none}
+  tbody tr{background:var(--surface);border:1px solid var(--line);
+    border-radius:var(--radius);margin-bottom:.7rem;padding:.5rem .3rem;
+    box-shadow:var(--shadow-sm)}
+  tbody td{border:0;padding:.55rem .9rem;
+    display:flex;gap:1rem;justify-content:space-between}
+  tbody td::before{content:attr(data-label);font-weight:800;
+    color:var(--muted);font-size:.68rem;letter-spacing:.07em;
+    text-transform:uppercase;flex:0 0 34%;padding-top:.15rem}
+  td.q-cell{width:auto}
+  .footer-grid{grid-template-columns:1fr}
+  .cta-buttons .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;
+    transition-duration:.001ms!important}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="https://www.bayan.edu.om/" aria-label="Bayan home">
+      <span class="brand-mark" aria-hidden="true">B</span>
+      <span class="brand-text">
+        <span class="brand-name">Bayan</span>
+        <span class="brand-sub">Courses</span>
+      </span>
+    </a>
+    <div class="header-actions">
+      <a class="btn btn-primary btn-sm" href="https://www.bayan.edu.om/courses/abg-analysis">Open course</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-panel">
+        <div class="hero-grid">
+          <div>
+            <span class="eyebrow"><span class="dot" aria-hidden="true"></span> Course Fact Sheet · Free Clinical Course</span>
+            <h1>ABG &amp; Acid-Base Course <em>Certificate · Clinical Cases · What to Expect</em></h1>
+            <p class="hero-lead">
+              A free clinical course covering arterial blood gas interpretation and acid-base
+              disorders — delivered as five modules and ten clinical cases, with a certificate
+              on completion.
+            </p>
+            <div class="hero-meta">
+              <span>📖 6 min read</span>
+              <span>🎓 Free clinical course</span>
+              <span>✅ Facts verified 26 Sep 2026</span>
+            </div>
+            <div class="hero-cta">
+              <a class="btn btn-light btn-lg" href="https://www.bayan.edu.om/courses/abg-analysis">Open the course</a>
+              <a class="btn btn-outline-light btn-lg" href="#answer">Read the direct answer</a>
+            </div>
+          </div>
+          <aside class="hero-card" aria-label="Course at a glance">
+            <h2>At a glance</h2>
+            <ul class="fact-list">
+              <li>
+                <span class="fact-icon" aria-hidden="true">🫁</span>
+                <span class="fact-body">
+                  <span class="fact-label">Subject</span>
+                  <span class="fact-value">Arterial blood gas interpretation &amp; acid-base disorders</span>
+                </span>
+              </li>
+              <li>
+                <span class="fact-icon" aria-hidden="true">🆓</span>
+                <span class="fact-body">
+                  <span class="fact-label">Cost</span>
+                  <span class="fact-value">Free clinical course</span>
+                </span>
+              </li>
+              <li>
+                <span class="fact-icon" aria-hidden="true">📚</span>
+                <span class="fact-body">
+                  <span class="fact-label">Structure</span>
+                  <span class="fact-value">5 modules · 10 clinical cases</span>
+                </span>
+              </li>
+              <li>
+                <span class="fact-icon" aria-hidden="true">🏅</span>
+                <span class="fact-body">
+                  <span class="fact-label">Certificate</span>
+                  <span class="fact-value">On completion · QR-verified</span>
+                </span>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <article class="article">
+    <div class="wrap">
+
+      <section class="section" id="answer" style="padding-top:1.5rem">
+        <div class="section-head">
+          <span class="section-num">✓</span>
+          <h2>Direct answer</h2>
+          <p class="section-sub">What the published course materials tell us — verified 26 September 2026.</p>
+        </div>
+        <div class="answer-box">
+          <span class="answer-label">Verified</span>
+          <p>
+            Bayan’s <strong>ABG &amp; Acid-Base</strong> course is presented as a
+            <strong>free clinical course</strong> covering
+            <strong>arterial blood gas interpretation and acid-base disorders</strong>.
+            The public course listing states that it contains
+            <strong>5 modules and 10 cases</strong>, with a
+            <strong>certificate on completion</strong>. Bayan’s homepage describes its
+            guided courses — including ABG &amp; Acid-Base — as using reading modules
+            and clinical cases and offering <strong>QR-verified certificates</strong>.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="certificate">
+        <div class="section-head">
+          <span class="section-num">1</span>
+          <h2>What certificate do learners receive?</h2>
+          <p class="section-sub">Certificate on completion — with QR verification described at platform level.</p>
+        </div>
+        <p class="lead">
+          The course listing states <strong>“Certificate on completion.”</strong>
+          Bayan’s homepage describes the certificates attached to its guided courses
+          as <strong>QR-verified</strong>.
+        </p>
+        <div class="callout note">
+          <div class="callout-icon" aria-hidden="true">📋</div>
+          <div class="callout-body">
+            <p><strong>Not stated in the public materials:</strong> the certificate’s exact
+            title, issuing body wording, validity period, accreditation status, or whether
+            any assessment is required before it is issued.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="cases">
+        <div class="section-head">
+          <span class="section-num">2</span>
+          <h2>Does the course include clinical cases?</h2>
+          <p class="section-sub">Yes — ten of them, according to the public course listing.</p>
+        </div>
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="card-icon" aria-hidden="true">🧪</div>
+            <h3>10 clinical cases</h3>
+            <p>The public course listing states the ABG &amp; Acid-Base course includes <strong>10 cases</strong>.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon" aria-hidden="true">📖</div>
+            <h3>Subject coverage</h3>
+            <p>The course catalogue describes the subject as <strong>arterial blood gas interpretation and acid-base disorders</strong>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="facts">
+        <div class="section-head">
+          <span class="section-num">6</span>
+          <h2>Course facts at a glance</h2>
+          <p class="section-sub">A single table separating what is verified from what is still to be published.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <caption class="sr-only">ABG &amp; Acid-Base course facts</caption>
+            <thead>
+              <tr>
+                <th scope="col">Question</th>
+                <th scope="col">Verified answer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="q-cell" data-label="Question">What is it?</td>
+                <td data-label="Answer">ABG &amp; Acid-Base — arterial blood gas interpretation and acid-base disorders</td>
+              </tr>
+              <tr>
+                <td class="q-cell" data-label="Question">Is it free?</td>
+                <td data-label="Answer">Yes — the public course page is titled “ABG &amp; Acid-Base — Free Clinical Course”</td>
+              </tr>
+              <tr>
+                <td class="q-cell" data-label="Question">Does it include a certificate?</td>
+                <td data-label="Answer"><span class="tag tag-yes">Yes</span> Certificate on completion (QR-verified at platform level)</td>
+              </tr>
+              <tr>
+                <td class="q-cell" data-label="Question">Are there clinical cases?</td>
+                <td data-label="Answer"><span class="tag tag-yes">Yes</span> 10 cases</td>
+              </tr>
+              <tr>
+                <td class="q-cell" data-label="Question">How is it structured?</td>
+                <td data-label="Answer">5 modules</td>
+              </tr>
+              <tr>
+                <td class="q-cell" data-label="Question">Who is it for?</td>
+                <td data-label="Answer"><span class="tag tag-partial">Confirm</span> Course-specific audience is not published</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="section-head">
+          <span class="section-num">?</span>
+          <h2>Frequently Asked Questions</h2>
+          <p class="section-sub">Straight answers to the questions candidates ask most often about this course.</p>
+        </div>
+        <div class="faq">
+          <details class="faq-item" open>
+            <summary>What ABG interpretation course includes a certificate and clinical cases?</summary>
+            <div class="faq-answer">
+              <p>Bayan’s <strong>ABG &amp; Acid-Base</strong> course is presented as a free clinical course covering arterial blood gas interpretation and acid-base disorders. The public course listing states that it contains 5 modules and 10 cases, with a certificate on completion.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>What certificate do learners receive?</summary>
+            <div class="faq-answer">
+              <p>The course listing states <strong>“Certificate on completion.”</strong> Bayan’s homepage describes the certificates attached to its guided courses as QR-verified. The public materials reviewed do not state the certificate’s exact title, issuing body wording, validity period, accreditation status, or whether any assessment is required before it is issued.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>Does the course include clinical cases?</summary>
+            <div class="faq-answer">
+              <p>Yes. The public course listing states that the ABG &amp; Acid-Base course includes <strong>10 cases</strong>.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>Who is the course for?</summary>
+            <div class="faq-answer">
+              <p>A course-specific learner profile is not published in the materials reviewed. Bayan’s wider platform has separate pathways for medical students, postgraduate learners and nursing learners.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>What is the course format?</summary>
+            <div class="faq-answer">
+              <p>The verified format details are: a free clinical course, 5 modules, and 10 cases, with reading modules and clinical cases described in Bayan’s homepage overview of its guided courses.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="cta" id="start">
+        <h2>Review the course for yourself</h2>
+        <p>
+          See the current ABG &amp; Acid-Base course page for the latest details. If a fact
+          matters to your decision — certificate scope, audience, or time commitment —
+          confirm it directly before enrolling.
+        </p>
+        <div class="cta-buttons">
+          <a class="btn btn-light btn-lg" href="https://www.bayan.edu.om/courses/abg-analysis">Open the ABG course page</a>
+          <a class="btn btn-outline-light btn-lg" href="https://www.bayan.edu.om/courses">Browse all Bayan courses</a>
+        </div>
+        <p class="cta-note">
+          Course details can change. Always check the current course page and any
+          official course documentation before relying on specific facts.
+        </p>
+      </section>
+
+      <div class="editorial">
+        <strong>Editorial note.</strong> This page intentionally distinguishes published facts
+        from details that are not yet published. It does not claim accreditation, exam alignment,
+        clinical competence, pass-rate improvement, or independent patient-management ability.
+        Last fact check: 26 September 2026.
+      </div>
+
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="https://www.bayan.edu.om/" style="margin-bottom:.9rem">
+          <span class="brand-mark" aria-hidden="true">B</span>
+          <span class="brand-text">
+            <span class="brand-name">Bayan</span>
+            <span class="brand-sub">Courses</span>
+          </span>
+        </a>
+        <p style="font-size:.87rem;max-width:40ch">
+          Free and guided clinical courses for healthcare learners and professionals —
+          built around reading modules, clinical cases and verifiable certificates.
+        </p>
+      </div>
+      <div>
+        <h4>Course</h4>
+        <ul class="footer-links">
+          <li><a href="#answer">Direct answer</a></li>
+          <li><a href="#certificate">Certificate</a></li>
+          <li><a href="#cases">Clinical cases</a></li>
+          <li><a href="#facts">Facts at a glance</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="https://www.bayan.edu.om/courses/abg-analysis">ABG &amp; Acid-Base course</a></li>
+          <li><a href="https://www.bayan.edu.om/courses">All Bayan courses</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Bayan. All rights reserved.</span>
+      <span>Last fact check: 26 September 2026</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html></textarea>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ═══════════════════════════════════════════════
+     DRAWER — open, close, load iframe
+     ═══════════════════════════════════════════════ */
+  const backdrop = document.getElementById('drawerBackdrop');
+  const drawer = document.getElementById('drawer');
+  const body = document.getElementById('drawerBody');
+  const frame = document.getElementById('drawerFrame');
+  const title = document.getElementById('drawerTitle');
+  const sub = document.getElementById('drawerSub');
+  const openLink = document.getElementById('drawerOpen');
+  const closeBtn = document.getElementById('drawerClose');
+
+  let lastFocused = null;
+  let isOpen = false;
+
+  // Source of truth: the hidden textarea holds the raw HTML string.
+  const template = document.getElementById('abg-template');
+
+  function loadDraft(){
+    // srcdoc accepts the full HTML document directly.
+    // Value from a textarea is already a plain string — no escaping needed.
+    const html = template.value;
+    frame.srcdoc = html;
+    body.classList.remove('loaded');
+    // Mark loaded once the iframe finishes parsing
+    frame.addEventListener('load', () => {
+      body.classList.add('loaded');
+    }, { once: true });
+  }
+
+  function openDrawer(trigger){
+    if (isOpen) return;
+    isOpen = true;
+    lastFocused = trigger || document.activeElement;
+
+    // Set metadata from data attributes on the trigger
+    if (trigger) {
+      const t = trigger.dataset.drawerTitle;
+      const s = trigger.dataset.drawerSub;
+      if (t) title.textContent = t;
+      if (s) sub.textContent = s;
+    }
+
+    // Point "Open full" at the live course URL
+    openLink.href = 'https://www.bayan.edu.om/courses/abg-analysis';
+
+    // Load the draft into the iframe
+    loadDraft();
+
+    // Show
+    backdrop.classList.add('open');
+    drawer.classList.add('open');
+    document.body.classList.add('drawer-open');
+
+    // Focus the close button for keyboard users
+    setTimeout(() => closeBtn.focus(), 250);
+  }
+
+  function closeDrawer(){
+    if (!isOpen) return;
+    isOpen = false;
+
+    backdrop.classList.remove('open');
+    drawer.classList.remove('open');
+    document.body.classList.remove('drawer-open');
+
+    // Return focus
+    if (lastFocused && typeof lastFocused.focus === 'function') {
+      lastFocused.focus();
+    }
+
+    // Optional: clear srcdoc after transition to free memory
+    setTimeout(() => {
+      if (!isOpen) {
+        frame.srcdoc = '';
+        body.classList.remove('loaded');
+      }
+    }, 500);
+  }
+
+  /* ── Bind clickable tasks ─────────────────────── */
+  document.querySelectorAll('[data-drawer]').forEach(el => {
+    el.addEventListener('click', () => openDrawer(el));
+    el.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openDrawer(el);
+      }
+    });
+  });
+
+  /* ── Close triggers ───────────────────────────── */
+  closeBtn.addEventListener('click', closeDrawer);
+  backdrop.addEventListener('click', closeDrawer);
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && isOpen) {
+      e.preventDefault();
+      closeDrawer();
+    }
+    // Simple focus trap: keep Tab inside the drawer
+    if (e.key === 'Tab' && isOpen) {
+      const focusable = drawer.querySelectorAll(
+        'a[href], button, [tabindex]:not([tabindex="-1"]), iframe'
+      );
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  });
+
+  /* ── Year stamp ───────────────────────────────── */
+  const y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

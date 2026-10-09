@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The 90-Day Roadmap — Bayan Learning</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#04070E; --panel:rgba(12,20,34,.6); --panel-2:rgba(255,255,255,.025);
+  --ink:#EAF0FA; --dim:#8998B0; --faint:#414E63;
+  --line:rgba(137,152,176,.14); --line-hi:rgba(137,152,176,.3);
+  --teal:#2DD4BF; --violet:#A78BFA; --blue:#60A5FA;
+  --amber:#FBBF24; --red:#F87171; --green:#34D399; --pink:#F472B6;
+  --navy:#0B2C5E; --brand-blue:#1E5FC7; --brand-blue-2:#2563C9;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --mono:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--ink);
+  font-family:'Inter',-apple-system,sans-serif;
+  line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+.bg-grid{
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(45,212,191,.02) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(45,212,191,.02) 1px,transparent 1px);
+  background-size:120px 120px;
+  mask-image:radial-gradient(ellipse 90% 70% at 50% 30%,#000 25%,transparent 95%);
+}
+.orb{position:fixed;border-radius:50%;filter:blur(120px);opacity:.12;pointer-events:none;z-index:0}
+.orb.a{width:520px;height:520px;background:var(--teal);top:-200px;left:-160px;animation:drift 34s ease-in-out infinite}
+.orb.b{width:460px;height:460px;background:var(--violet);top:40%;right:-200px;animation:drift 40s ease-in-out infinite reverse}
+.orb.c{width:420px;height:420px;background:var(--blue);bottom:-180px;left:30%;animation:drift 46s ease-in-out infinite}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,-40px)}}
+
+.wrap{position:relative;z-index:2;max-width:1400px;margin:0 auto;padding:0 32px 100px}
+@media(max-width:640px){.wrap{padding:0 16px 60px}}
+
+/* ═══════ HERO HEADER ═══════ */
+header.hero{padding:38px 0 20px}
+
+/* Brand row — logo + wordmark */
+.brand-row{
+  display:flex;align-items:center;gap:18px;
+  padding:14px 22px 14px 18px;
+  border-radius:18px;
+  border:1px solid var(--line);
+  background:linear-gradient(135deg, rgba(11,44,94,.35), rgba(12,20,34,.55));
+  backdrop-filter:blur(12px);
+  width:fit-content;
+  margin-bottom:26px;
+  position:relative;
+  overflow:hidden;
+  transition:.4s var(--ease);
+}
+.brand-row::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(400px 120px at 0% 50%, rgba(30,95,199,.18), transparent 70%);
+  opacity:.9;
+}
+.brand-row:hover{
+  border-color:rgba(30,95,199,.45);
+  box-shadow:0 0 0 1px rgba(30,95,199,.2), 0 8px 28px -12px rgba(30,95,199,.45);
+}
+.brand-logo{
+  width:56px;height:56px;flex:0 0 auto;
+  display:block;
+  position:relative;z-index:1;
+  filter:drop-shadow(0 2px 10px rgba(30,95,199,.35));
+  transition:transform .4s var(--ease);
+}
+.brand-row:hover .brand-logo{transform:rotate(-4deg) scale(1.04)}
+.brand-text{position:relative;z-index:1;display:flex;flex-direction:column;gap:2px}
+.brand-wordmark{
+  font-family:'Instrument Serif', 'Iowan Old Style', Georgia, serif;
+  font-size:22px;font-weight:600;letter-spacing:.06em;
+  color:#EAF0FA;line-height:1;
+}
+.brand-sub{
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.32em;
+  text-transform:uppercase;color:#8FA8D8;
+  margin-top:4px;
+}
+
+/* Kicker */
+.kicker{
+  font-family:var(--mono);font-size:11px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--faint);
+  display:flex;align-items:center;gap:12px;margin-bottom:16px;
+}
+.kicker::before{content:'';width:26px;height:1px;background:var(--faint)}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(45,212,191,.16);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+h1{
+  font-size:clamp(30px,4.6vw,54px);font-weight:900;
+  letter-spacing:-.05em;line-height:1.02;margin-bottom:14px;max-width:22ch;
+}
+h1 em{
+  font-style:normal;
+  background:linear-gradient(100deg,var(--teal) 0%,var(--blue) 50%,var(--violet) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  background-size:200% 100%;animation:shift 9s ease-in-out infinite;
+}
+@keyframes shift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.lede{color:var(--dim);font-size:15.5px;max-width:72ch;line-height:1.65}
+.lede b{color:var(--ink);font-weight:600}
+
+/* Hero grid */
+.hero-grid{display:grid;grid-template-columns:1fr 340px;gap:36px;align-items:start}
+@media(max-width:880px){.hero-grid{grid-template-columns:1fr;gap:26px}}
+
+/* Arc card */
+.arc-card{
+  display:flex;flex-direction:column;align-items:center;gap:14px;
+  padding:22px 26px;border:1px solid rgba(231,181,68,.32);border-radius:18px;
+  background:
+    radial-gradient(600px 240px at 0% 0%, rgba(231,181,68,.1), transparent 65%),
+    linear-gradient(180deg,var(--panel),rgba(255,255,255,.02));
+  position:relative;overflow:hidden;
+}
+.arc-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--amber),transparent);
+  animation:scan 3s ease-in-out infinite;
+}
+@keyframes scan{0%,100%{opacity:.4}50%{opacity:1}}
+.arc-wrap{position:relative;width:180px;height:180px}
+.arc-wrap svg{width:100%;height:100%;transform:rotate(-90deg);overflow:visible}
+.arc-track{fill:none;stroke:#0f1a26;stroke-width:11;stroke-linecap:round}
+.arc-proj{
+  fill:none;stroke-width:11;stroke-linecap:round;
+  stroke:url(#projGrad);
+  stroke-dasharray:440;stroke-dashoffset:440;
+  transition:stroke-dashoffset 1.9s cubic-bezier(.22,1,.36,1) .3s;
+  filter:drop-shadow(0 0 9px rgba(231,181,68,.5));
+}
+.arc-current{
+  fill:none;stroke-width:11;stroke-linecap:round;
+  stroke:url(#currGrad);
+  stroke-dasharray:440;stroke-dashoffset:440;
+  transition:stroke-dashoffset 1.7s cubic-bezier(.22,1,.36,1);
+  filter:drop-shadow(0 0 7px rgba(255,107,107,.5));
+}
+.arc-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.arc-center .ac-num{
+  font-family:var(--mono);font-size:46px;font-weight:400;line-height:1;letter-spacing:-.04em;
+  background:linear-gradient(180deg,#fff,#FBBF24);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  font-variant-numeric:tabular-nums;
+}
+.arc-center .ac-lbl{
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--dim);margin-top:7px;
+}
+.arc-meta{display:flex;flex-direction:column;gap:6px;width:100%;margin-top:6px}
+.am-row{display:flex;justify-content:space-between;gap:12px;font-size:12px}
+.am-row .k{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+.am-row .v{font-family:var(--mono);font-size:12.5px;color:#C3D0E2;font-weight:600}
+.am-row .v.fail{color:#FF9AA4}
+.am-row .v.gold{color:var(--amber)}
+
+/* Ask callout */
+.ask{
+  margin-top:32px;padding:22px 26px;border-radius:14px;
+  background:
+    radial-gradient(600px 220px at 0% 0%, rgba(96,165,250,.1), transparent 65%),
+    linear-gradient(180deg,rgba(10,18,36,.9),rgba(13,21,34,.9));
+  border:1px solid rgba(96,165,250,.32);
+  display:flex;gap:16px;align-items:flex-start;
+}
+.ask .askic{
+  width:38px;height:38px;border-radius:10px;flex:0 0 auto;
+  display:grid;place-items:center;
+  background:rgba(96,165,250,.14);border:1px solid rgba(96,165,250,.4);
+  color:var(--blue);font-size:16px;font-weight:800;
+}
+.ask .asktext{flex:1;font-size:14.5px;color:#DBE4F0;line-height:1.6}
+.ask .asktext strong{color:#fff;font-weight:650}
+.ask .asktext em{
+  color:var(--amber);font-style:normal;font-weight:600;
+  border-bottom:1.5px solid rgba(251,191,36,.4);
+  padding-bottom:1px;
+}
+
+/* Controls */
+.controls{
+  margin-top:28px;padding:16px 20px;border-radius:16px;
+  border:1px solid var(--line);background:var(--panel);
+  backdrop-filter:blur(10px);
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+}
+.zoom-group{
+  display:flex;gap:2px;padding:3px;border-radius:10px;
+  background:rgba(0,0,0,.3);border:1px solid var(--line);
+}
+.zoom-btn{
+  font-family:var(--mono);font-size:11px;font-weight:500;
+  letter-spacing:.12em;text-transform:uppercase;
+  padding:8px 15px;border-radius:7px;border:none;
+  background:transparent;color:var(--dim);cursor:pointer;
+  transition:.3s var(--ease);
+}
+.zoom-btn:hover{color:var(--ink)}
+.zoom-btn.active{
+  background:color-mix(in srgb,var(--teal) 20%,transparent);
+  color:var(--teal);
+  box-shadow:0 0 0 1px rgba(45,212,191,.3) inset;
+}
+.play-btn{
+  display:flex;align-items:center;gap:9px;
+  padding:10px 20px;border-radius:10px;
+  background:var(--teal);border:none;color:#04211E;
+  font-family:inherit;font-size:13.5px;font-weight:700;
+  letter-spacing:-.01em;cursor:pointer;
+  transition:.25s var(--ease);
+  box-shadow:0 0 0 1px rgba(45,212,191,.4);
+}
+.play-btn:hover{filter:brightness(1.1);transform:translateY(-1px)}
+.play-btn .ico{font-size:11px;display:grid;place-items:center}
+.play-btn.playing{background:var(--amber);color:#2C1F04;box-shadow:0 0 0 1px rgba(251,191,36,.4)}
+.day-badge{
+  margin-left:auto;
+  display:flex;align-items:center;gap:8px;
+  font-family:var(--mono);font-size:12px;letter-spacing:.08em;
+  padding:8px 14px;border-radius:9px;
+  background:rgba(255,255,255,.03);border:1px solid var(--line);
+  color:var(--dim);
+}
+.day-badge span#dayCount{
+  color:var(--teal);font-weight:600;font-size:15px;
+  min-width:32px;display:inline-block;text-align:right;
+}
+.phase-badge{
+  display:flex;align-items:center;gap:9px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.12em;
+  text-transform:uppercase;padding:9px 14px;border-radius:9px;
+  background:rgba(45,212,191,.08);border:1px solid rgba(45,212,191,.25);
+  color:var(--teal);transition:.4s var(--ease);
+}
+.phase-badge .dot{
+  width:7px;height:7px;border-radius:50%;background:currentColor;
+  box-shadow:0 0 0 4px color-mix(in srgb,currentColor 18%,transparent);
+  animation:pulse 1.8s ease-in-out infinite;
+}
+.phase-badge.week2{background:rgba(96,165,250,.08);border-color:rgba(96,165,250,.25);color:var(--blue)}
+.phase-badge.month2{background:rgba(167,139,250,.08);border-color:rgba(167,139,250,.25);color:var(--violet)}
+.phase-badge.done{background:rgba(52,211,153,.1);border-color:rgba(52,211,153,.3);color:var(--green)}
+
+/* Timeline */
+.timeline-wrap{
+  margin-top:20px;border-radius:20px;
+  border:1px solid var(--line);
+  background:linear-gradient(180deg,rgba(8,14,26,.7),rgba(4,7,14,.5));
+  backdrop-filter:blur(8px);
+  padding:24px 20px;
+  position:relative;overflow:hidden;
+}
+.timeline-wrap::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,
+    rgba(45,212,191,.5) 0%,rgba(45,212,191,.5) 8%,
+    rgba(96,165,250,.5) 8%,rgba(96,165,250,.5) 34%,
+    rgba(167,139,250,.5) 34%,rgba(167,139,250,.5) 100%);
+  opacity:.7;pointer-events:none;
+}
+svg#timeline{display:block;width:100%;height:auto;overflow:visible}
+.t-name{font-family:'Inter',sans-serif;font-size:11.5px;font-weight:600;fill:var(--ink);letter-spacing:-.01em;pointer-events:none}
+.t-channel{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;text-anchor:end;pointer-events:none}
+.t-check{font-family:'Inter',sans-serif;font-size:14px;font-weight:700;pointer-events:none}
+.phase-label{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.14em;text-anchor:middle;pointer-events:none}
+.phase-sub{font-family:'Inter',sans-serif;font-size:10.5px;font-weight:500;text-anchor:middle;pointer-events:none;fill:var(--dim)}
+.ruler-label{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;fill:var(--faint);text-anchor:middle;pointer-events:none}
+.ph-label{font-family:var(--mono);font-size:11px;font-weight:600;fill:var(--teal);text-anchor:middle;letter-spacing:.06em;pointer-events:none}
+
+/* Metrics */
+.metrics-strip{margin-top:20px;display:grid;grid-template-columns:repeat(7,1fr);gap:10px}
+@media(max-width:1100px){.metrics-strip{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:680px){.metrics-strip{grid-template-columns:repeat(2,1fr)}}
+.metric-card{
+  border-radius:13px;border:1px solid var(--line);
+  background:var(--panel-2);padding:14px 14px 12px;
+  position:relative;overflow:hidden;transition:.4s var(--ease);
+}
+.metric-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:var(--mc);transform:scaleX(.3);transform-origin:left;
+  transition:transform .8s var(--ease);
+}
+.metric-card.active::before{transform:scaleX(1)}
+.metric-card.active{border-color:color-mix(in srgb,var(--mc) 30%,var(--line));background:color-mix(in srgb,var(--mc) 4%,var(--panel-2))}
+.mc-label{
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--faint);margin-bottom:8px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.mc-label::after{content:'';width:6px;height:6px;border-radius:50%;background:var(--mc);opacity:0;transition:opacity .4s}
+.metric-card.active .mc-label::after{opacity:1}
+.mc-values{display:flex;align-items:baseline;gap:5px;margin-bottom:10px}
+.mc-current{font-family:var(--mono);font-size:26px;font-weight:600;letter-spacing:-.04em;color:var(--mc);line-height:1;transition:.3s}
+.mc-target{font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:.02em}
+.mc-bar{height:4px;border-radius:2px;background:rgba(255,255,255,.06);overflow:hidden}
+.mc-fill{height:100%;border-radius:2px;background:var(--mc);width:0;transition:width .3s linear}
+
+/* Legend */
+.legend{margin-top:24px;display:flex;flex-wrap:wrap;gap:8px}
+.leg{
+  display:flex;align-items:center;gap:8px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.06em;
+  padding:6px 12px;border-radius:8px;
+  background:var(--panel-2);border:1px solid var(--line);
+  color:var(--dim);transition:.25s var(--ease);
+}
+.leg:hover{border-color:var(--line-hi);color:var(--ink)}
+.leg .d{width:8px;height:8px;border-radius:50%;background:var(--lc);box-shadow:0 0 0 3px color-mix(in srgb,var(--lc) 18%,transparent)}
+
+/* ═══════ ACCORDIONS ═══════ */
+.accordions{margin-top:60px;display:flex;flex-direction:column;gap:16px}
+.acc{
+  border-radius:20px;border:1px solid var(--line);
+  background:linear-gradient(180deg,rgba(8,14,26,.75),rgba(4,7,14,.55));
+  backdrop-filter:blur(10px);overflow:hidden;position:relative;
+  transition:border-color .4s var(--ease);
+}
+.acc::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:var(--acc-grad);opacity:.85;pointer-events:none;
+}
+.acc[data-accent="teal"]  { --acc-grad:linear-gradient(90deg,var(--teal),var(--blue)); }
+.acc[data-accent="violet"]{ --acc-grad:linear-gradient(90deg,var(--violet),var(--pink)); }
+.acc:hover{border-color:var(--line-hi)}
+.acc[data-accent="teal"].open{border-color:rgba(45,212,191,.35)}
+.acc[data-accent="violet"].open{border-color:rgba(167,139,250,.35)}
+
+.acc-head{
+  display:flex;align-items:center;gap:18px;
+  padding:24px 28px;cursor:pointer;
+  background:transparent;border:none;width:100%;text-align:left;color:inherit;
+  font-family:inherit;transition:background .25s var(--ease);
+}
+.acc-head:hover{background:rgba(255,255,255,.015)}
+.acc-icon{
+  width:46px;height:46px;border-radius:12px;flex:0 0 auto;
+  display:grid;place-items:center;font-size:20px;
+  background:rgba(45,212,191,.1);
+  border:1px solid rgba(45,212,191,.28);
+  color:var(--teal);
+  transition:.35s var(--ease);
+}
+.acc[data-accent="violet"] .acc-icon{background:rgba(167,139,250,.1);border-color:rgba(167,139,250,.28);color:var(--violet)}
+.acc.open[data-accent="teal"] .acc-icon{background:rgba(45,212,191,.18);box-shadow:0 0 0 4px rgba(45,212,191,.08)}
+.acc.open[data-accent="violet"] .acc-icon{background:rgba(167,139,250,.18);box-shadow:0 0 0 4px rgba(167,139,250,.08)}
+.acc-title{flex:1;min-width:0}
+.acc-title .t{
+  font-size:17.5px;font-weight:700;letter-spacing:-.022em;color:var(--ink);
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+}
+.acc-title .t .pill{
+  font-family:var(--mono);font-size:9.5px;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;
+  padding:3px 9px;border-radius:6px;
+  background:rgba(255,255,255,.04);border:1px solid var(--line);
+  color:var(--dim);
+}
+.acc-title .s{font-size:13px;color:var(--dim);margin-top:4px;line-height:1.5}
+.acc-chev{
+  width:34px;height:34px;border-radius:9px;flex:0 0 auto;
+  display:grid;place-items:center;
+  background:rgba(255,255,255,.03);border:1px solid var(--line);
+  color:var(--dim);font-size:13px;
+  transition:transform .45s var(--ease),color .3s,border-color .3s,background .3s;
+}
+.acc.open .acc-chev{transform:rotate(180deg);color:var(--teal);border-color:rgba(45,212,191,.35);background:rgba(45,212,191,.08)}
+.acc[data-accent="violet"].open .acc-chev{color:var(--violet);border-color:rgba(167,139,250,.35);background:rgba(167,139,250,.08)}
+
+.acc-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s var(--ease)}
+.acc.open .acc-body{grid-template-rows:1fr}
+.acc-body-inner{overflow:hidden}
+.acc-content{padding:0 28px 32px;border-top:1px solid var(--line);margin-top:4px;padding-top:28px}
+
+.ev-sec{margin-bottom:32px}
+.ev-sec:last-child{margin-bottom:0}
+.ev-head{display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.ev-head .n{
+  font-family:var(--mono);font-size:10px;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:var(--teal);
+  padding:4px 10px;border-radius:6px;
+  background:rgba(45,212,191,.1);border:1px solid rgba(45,212,191,.28);
+}
+.acc[data-accent="violet"] .ev-head .n{color:var(--violet);background:rgba(167,139,250,.1);border-color:rgba(167,139,250,.28)}
+.ev-head .t{font-size:14.5px;font-weight:700;color:var(--ink);letter-spacing:-.015em}
+.ev-head .c{font-family:var(--mono);font-size:10.5px;color:var(--faint);margin-left:auto;letter-spacing:.06em}
+
+.bt-table{border:1px solid var(--line);border-radius:14px;background:rgba(4,7,14,.4);overflow:hidden}
+.bt-head{
+  display:grid;grid-template-columns:1.5fr 1.1fr 1.1fr 1.2fr;
+  gap:16px;padding:12px 20px;background:rgba(0,0,0,.25);
+  border-bottom:1px solid var(--line);
+  font-family:var(--mono);font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--faint);
+}
+.bt-row{
+  display:grid;grid-template-columns:1.5fr 1.1fr 1.1fr 1.2fr;
+  gap:16px;padding:14px 20px;border-bottom:1px solid var(--line);
+  align-items:center;transition:background .2s;
+}
+.bt-row:last-child{border-bottom:0}
+.bt-row:hover{background:rgba(255,255,255,.015)}
+.bt-row .bt-m{font-size:13.5px;font-weight:600;color:var(--ink);line-height:1.3}
+.bt-row .bt-v{font-family:var(--mono);font-size:13px;font-weight:600;color:#F87171;letter-spacing:-.01em}
+.bt-row .bt-v.good{color:var(--green)}
+.bt-row .bt-v.warn{color:var(--amber)}
+.bt-row .bt-v.gold{color:var(--amber)}
+.bt-row .bt-t{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--amber);letter-spacing:-.01em}
+.bt-row .bt-t .a{color:var(--faint);font-weight:500}
+.bt-row .bt-s{font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:.02em}
+@media(max-width:900px){
+  .bt-head{display:none}
+  .bt-row{grid-template-columns:1fr 1fr;gap:8px;padding:14px 16px}
+  .bt-row .bt-s{grid-column:1 / -1}
+}
+
+.kw-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.kw{
+  padding:14px 16px;border-radius:11px;
+  background:rgba(255,255,255,.025);
+  border:1px solid var(--line);
+  position:relative;overflow:hidden;
+  transition:.3s var(--ease);
+}
+.kw::before{content:'';position:absolute;inset:0 auto 0 0;width:3px;background:var(--kw-c,var(--teal))}
+.kw:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--kw-c,var(--teal)) 35%,var(--line))}
+.kw.tier1{--kw-c:var(--amber)}
+.kw.tier2{--kw-c:var(--blue)}
+.kw.ranked{--kw-c:var(--green)}
+.kw-head{display:flex;justify-content:space-between;gap:10px;margin-bottom:10px}
+.kw-name{font-size:13.5px;font-weight:600;color:var(--ink);line-height:1.3}
+.kw-diff{
+  font-family:var(--mono);font-size:10px;font-weight:700;
+  padding:2px 8px;border-radius:5px;flex:0 0 auto;
+  background:rgba(96,165,250,.12);color:var(--blue);
+  border:1px solid rgba(96,165,250,.28);
+  letter-spacing:.04em;height:fit-content;
+}
+.kw-diff.easy{background:rgba(52,211,153,.12);color:var(--green);border-color:rgba(52,211,153,.28)}
+.kw-diff.ranked{background:rgba(52,211,153,.14);color:var(--green);border-color:rgba(52,211,153,.32)}
+.kw-vol{font-family:var(--mono);font-size:16px;font-weight:700;color:var(--ink);letter-spacing:-.02em;line-height:1}
+.kw-vol small{font-family:var(--mono);font-size:9.5px;color:var(--faint);font-weight:400;margin-left:4px;letter-spacing:.06em}
+.kw-note{font-family:var(--mono);font-size:10.5px;color:var(--dim);margin-top:8px;line-height:1.4}
+
+.tier-divider{
+  display:flex;align-items:center;gap:12px;margin:20px 0 14px;
+  font-family:var(--mono);font-size:10.5px;
+  letter-spacing:.16em;text-transform:uppercase;
+}
+.tier-divider:first-child{margin-top:0}
+.tier-divider .dot{width:8px;height:8px;border-radius:50%;background:var(--td-c);box-shadow:0 0 0 3px color-mix(in srgb,var(--td-c) 20%,transparent)}
+.tier-divider .name{color:var(--td-c);font-weight:700}
+.tier-divider .line{flex:1;height:1px;background:var(--line)}
+.tier-divider .note{color:var(--faint);font-size:9.5px;letter-spacing:.06em;text-transform:none}
+
+.geo-list{display:flex;flex-direction:column;gap:8px}
+.geo{
+  display:grid;grid-template-columns:1fr auto auto;gap:14px;align-items:center;
+  padding:12px 16px;border-radius:10px;
+  background:rgba(255,255,255,.02);
+  border:1px solid var(--line);
+  transition:.25s var(--ease);
+}
+.geo:hover{transform:translateX(3px);border-color:rgba(96,165,250,.35)}
+.geo-name{font-size:13.5px;font-weight:600;color:var(--ink);line-height:1.35}
+.geo-name small{display:block;font-size:11.5px;color:var(--dim);font-weight:400;margin-top:2px}
+.geo-badge{
+  font-family:var(--mono);font-size:10.5px;padding:3px 9px;border-radius:6px;
+  white-space:nowrap;background:rgba(248,113,113,.1);color:#F87171;
+  border:1px solid rgba(248,113,113,.25);flex:0 0 auto;
+}
+.geo-effort{
+  font-family:var(--mono);font-size:9.5px;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;
+  padding:3px 9px;border-radius:6px;white-space:nowrap;flex:0 0 auto;
+}
+.geo-effort.trivial{background:rgba(52,211,153,.12);color:var(--green);border:1px solid rgba(52,211,153,.28)}
+.geo-effort.low{background:rgba(96,165,250,.12);color:var(--blue);border:1px solid rgba(96,165,250,.28)}
+@media(max-width:640px){
+  .geo{grid-template-columns:1fr auto}
+  .geo-effort{grid-column:1 / -1;justify-self:start}
+}
+
+.sources{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}
+.source{
+  padding:14px 16px;border-radius:11px;
+  background:rgba(255,255,255,.02);
+  border:1px solid var(--line);
+  transition:.25s var(--ease);
+}
+.source:hover{border-color:var(--line-hi);background:rgba(255,255,255,.035)}
+.source .s-k{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:6px}
+.source .s-n{font-size:13.5px;font-weight:600;color:var(--ink);line-height:1.35}
+.source .s-d{font-size:11.5px;color:var(--dim);margin-top:4px}
+
+.note{
+  padding:14px 18px;border-radius:12px;
+  background:rgba(96,165,250,.05);
+  border:1px dashed rgba(96,165,250,.28);
+  font-size:13px;color:#B3C0D2;line-height:1.65;
+}
+.note strong{color:var(--ink);font-weight:650}
+.note code{
+  font-family:var(--mono);font-size:11.5px;color:#9FD8DD;
+  background:rgba(0,0,0,.3);border:1px solid var(--line);
+  border-radius:4px;padding:1px 6px;
+}
+
+.plan-phase{margin-bottom:28px}
+.plan-phase:last-child{margin-bottom:0}
+.plan-phase-head{
+  display:flex;align-items:center;gap:12px;
+  padding-bottom:12px;margin-bottom:14px;
+  border-bottom:1px solid var(--line);flex-wrap:wrap;
+}
+.plan-phase-head .tag{
+  font-family:var(--mono);font-size:10px;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;
+  padding:4px 10px;border-radius:6px;
+  background:rgba(45,212,191,.1);border:1px solid rgba(45,212,191,.28);
+  color:var(--teal);
+}
+.plan-phase-head .tt{font-size:14.5px;font-weight:700;color:var(--ink);letter-spacing:-.015em;flex:1}
+.plan-phase-head .cnt{font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:.06em}
+
+.plan-tasks{display:flex;flex-direction:column;gap:8px}
+.plan-task{
+  display:grid;grid-template-columns:130px 1fr;gap:20px;
+  padding:14px 18px;border-radius:11px;
+  background:rgba(255,255,255,.02);
+  border:1px solid var(--line);
+  transition:.25s var(--ease);align-items:start;
+}
+.plan-task:hover{border-color:rgba(255,255,255,.12);background:rgba(255,255,255,.035);transform:translateX(3px)}
+.plan-task .ch{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding-top:3px}
+.plan-task .body .ti{font-size:13.5px;font-weight:600;color:var(--ink);line-height:1.4;margin-bottom:4px}
+.plan-task .body .wh{font-size:12.5px;color:var(--dim);line-height:1.55}
+.plan-task .body .wh strong{color:var(--ink);font-weight:600}
+.plan-task .body .wh em{
+  font-style:normal;color:var(--amber);font-family:var(--mono);font-size:11px;
+  padding:1px 6px;border-radius:4px;
+  background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.25);
+}
+@media(max-width:640px){
+  .plan-task{grid-template-columns:1fr;gap:8px}
+}
+
+.locks{
+  border:1px solid rgba(251,191,36,.3);border-radius:14px;
+  background:
+    radial-gradient(500px 200px at 0% 0%, rgba(251,191,36,.05), transparent 70%),
+    rgba(4,7,14,.4);
+  padding:24px 26px;
+}
+.locks-head{display:flex;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.locks-head .n{
+  font-family:var(--mono);font-size:10px;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:var(--amber);padding:4px 10px;border-radius:6px;
+  background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.28);
+}
+.locks-head .t{font-size:14.5px;font-weight:700;color:var(--ink);letter-spacing:-.015em}
+.locks ul{list-style:none;display:flex;flex-direction:column;gap:11px;margin:0;padding:0}
+.locks li{font-size:13.5px;color:#DBE4F0;line-height:1.6;padding-left:24px;position:relative}
+.locks li::before{content:'✓';position:absolute;left:0;top:0;color:var(--amber);font-weight:800;font-size:13px}
+.locks li em{
+  font-style:normal;color:var(--amber);font-family:var(--mono);font-size:11.5px;
+  padding:1px 6px;border-radius:4px;
+  background:rgba(251,191,36,.08);border:1px solid rgba(251,191,36,.22);
+}
+.boundary{
+  margin-top:18px;padding:14px 18px;border-radius:11px;
+  background:rgba(248,113,113,.05);
+  border:1px dashed rgba(248,113,113,.3);
+  font-size:13px;color:#D0C4B0;line-height:1.6;
+}
+.boundary strong{color:#FF9AA4;font-weight:650}
+
+footer{
+  margin-top:60px;padding-top:28px;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--faint);
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01s!important;transition-duration:.01s!important}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="orb a"></div>
+<div class="orb b"></div>
+<div class="orb c"></div>
+
+<div class="wrap">
+
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <header class="hero">
+
+    <!-- Brand row with logo -->
+    <div class="brand-row" aria-label="Bayan Learning">
+      <svg class="brand-logo" viewBox="0 0 340 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- Book pages (navy) -->
+        <g fill="#0B2C5E">
+          <path d="M 32 205 Q 82 226 138 240 L 140 248 Q 78 233 24 210 Z"/>
+          <path d="M 50 189 Q 100 213 148 228 L 150 236 Q 92 219 42 194 Z"/>
+          <path d="M 70 175 Q 116 200 155 217 L 157 225 Q 106 206 62 180 Z"/>
+        </g>
+
+        <!-- ECG line (navy) -->
+        <path d="M 22 105 L 72 98 L 98 42 L 122 132 L 148 72 L 172 98 L 196 78"
+              fill="none" stroke="#0B2C5E" stroke-width="7"
+              stroke-linecap="round" stroke-linejoin="round"/>
+
+        <!-- Main B — upper bow (brand blue) -->
+        <path d="M 198 82
+                 C 268 82 318 126 318 178
+                 C 318 214 296 244 254 252
+                 L 253 238
+                 C 284 230 302 206 302 178
+                 C 302 138 264 100 200 96 Z"
+              fill="#1E5FC7"/>
+
+        <!-- Main B — lower bow that hooks back like a heart (brand blue) -->
+        <path d="M 152 250
+                 C 162 262 184 270 212 272
+                 C 270 277 322 234 316 180
+                 L 300 182
+                 C 304 228 260 262 216 258
+                 C 190 256 176 250 168 242 Z"
+              fill="#1E5FC7"/>
+      </svg>
+
+      <div class="brand-text">
+        <div class="brand-wordmark">BAYAN LEARNING</div>
+        <div class="brand-sub">Intelligence for Better Learning</div>
+      </div>
+    </div>
+
+    <div class="kicker"><span class="dot"></span>fig. 07 — the 90-day roadmap · edu / bayan</div>
+
+    <div class="hero-grid">
+      <div>
+        <h1>Strong product. <em>Weak discovery.</em></h1>
+        <p class="lede">
+          Bayan has <strong>5,589 clinician-reviewed questions</strong>, learners in
+          <strong>55+ countries</strong>, and a server-rendered site AI crawlers can
+          already read. The gap is discovery — Bayan ranks for zero commercial-intent
+          exam keywords and appears in none of the AI answers buyers now ask. That gap
+          is fixable with content Bayan is uniquely positioned to publish.
+        </p>
+
+        <div class="ask">
+          <div class="askic">⚑</div>
+          <div class="asktext">
+            <strong>The ask:</strong> approve a draft-first, 90-day discovery and content
+            push. <em>Nothing publishes without your sign-off.</em> Results reported
+            weekly against the baseline in Section 02.
+          </div>
+        </div>
+      </div>
+
+      <div class="arc-card">
+        <div class="arc-wrap">
+          <svg viewBox="0 0 180 180">
+            <defs>
+              <linearGradient id="currGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#ff6b6b"/>
+                <stop offset="100%" stop-color="#ffb020"/>
+              </linearGradient>
+              <linearGradient id="projGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#e7b544"/>
+                <stop offset="100%" stop-color="#a76d13"/>
+              </linearGradient>
+            </defs>
+            <circle class="arc-track" cx="90" cy="90" r="70"/>
+            <circle class="arc-proj" cx="90" cy="90" r="70" id="arcProj"/>
+            <circle class="arc-current" cx="90" cy="90" r="70" id="arcCurr"/>
+          </svg>
+          <div class="arc-center">
+            <div class="ac-num" id="arcNum">0</div>
+            <div class="ac-lbl">health / 100</div>
+          </div>
+        </div>
+        <div class="arc-meta">
+          <div class="am-row"><span class="k">Now</span><span class="v fail">25</span></div>
+          <div class="am-row"><span class="k">90-day target</span><span class="v gold">54</span></div>
+          <div class="am-row"><span class="k">Primary goal</span><span class="v">Revenue</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════ CONTROLS ═══════════════════ -->
+  <div class="controls">
+    <div class="zoom-group" id="zoomGroup">
+      <button class="zoom-btn active" data-zoom="days">Days</button>
+      <button class="zoom-btn" data-zoom="weeks">Weeks</button>
+      <button class="zoom-btn" data-zoom="month">Month</button>
+      <button class="zoom-btn" data-zoom="quarter">Quarter</button>
+    </div>
+    <button class="play-btn" id="playBtn">
+      <span class="ico">▶</span>
+      <span class="txt">Play</span>
+    </button>
+    <div class="phase-badge" id="phaseBadge">
+      <span class="dot"></span>
+      <span class="txt">Ready</span>
+    </div>
+    <div class="day-badge">
+      Day <span id="dayCount">0</span> / 90
+    </div>
+  </div>
+
+  <!-- ═══════════════════ TIMELINE ═══════════════════ -->
+  <div class="timeline-wrap">
+    <svg id="timeline" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid meet" role="img" aria-label="90-day roadmap timeline">
+      <defs>
+        <linearGradient id="playheadTrail" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#2DD4BF" stop-opacity="0"/>
+          <stop offset="100%" stop-color="#2DD4BF" stop-opacity=".18"/>
+        </linearGradient>
+        <filter id="phGlow" x="-80%" y="-80%" width="260%" height="260%">
+          <feGaussianBlur stdDeviation="3" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <g id="phaseBands"></g>
+      <g id="ruler"></g>
+      <g id="taskRows"></g>
+      <g id="playhead">
+        <rect id="phTrail" x="0" y="55" width="80" height="450" fill="url(#playheadTrail)" pointer-events="none"/>
+        <line id="phLine" x1="0" y1="55" x2="0" y2="505" stroke="#2DD4BF" stroke-width="1.5" opacity=".75" filter="url(#phGlow)" pointer-events="none"/>
+        <circle id="phDot" cx="0" cy="55" r="4" fill="#fff" filter="url(#phGlow)" pointer-events="none"/>
+        <polygon id="phTri" points="0,50 -5,40 5,40" fill="#2DD4BF" pointer-events="none"/>
+        <text id="phLabel" class="ph-label" x="0" y="30">Day 0</text>
+      </g>
+      <g id="pulses"></g>
+    </svg>
+  </div>
+
+  <div class="metrics-strip" id="metricsStrip"></div>
+  <div class="legend" id="legend"></div>
+
+  <!-- ═══════════════════ ACCORDIONS ═══════════════════ -->
+  <div class="accordions">
+
+    <!-- ACCORDION 1 · EVIDENCE -->
+    <div class="acc open" data-accent="teal" id="accEvidence">
+      <button class="acc-head" type="button" aria-expanded="true" aria-controls="accEvidenceBody">
+        <div class="acc-icon">📊</div>
+        <div class="acc-title">
+          <div class="t">
+            See more details, data &amp; evidence
+            <span class="pill">7 metrics · 8 keywords · 6 gaps</span>
+          </div>
+          <div class="s">The measurements, sources, and gaps behind every number on the timeline.</div>
+        </div>
+        <div class="acc-chev">▼</div>
+      </button>
+      <div class="acc-body" id="accEvidenceBody">
+        <div class="acc-body-inner">
+          <div class="acc-content">
+
+            <div class="ev-sec">
+              <div class="ev-head">
+                <span class="n">01 · Baseline vs target</span>
+                <span class="t">What we measured — and what we are modelling</span>
+                <span class="c">7 metrics</span>
+              </div>
+              <div class="bt-table">
+                <div class="bt-head">
+                  <span>Metric</span>
+                  <span>Now · measured</span>
+                  <span>90-day target</span>
+                  <span>Source</span>
+                </div>
+                <div class="bt-row">
+                  <div class="bt-m">Overall marketing health</div>
+                  <div class="bt-v">25 / 100</div>
+                  <div class="bt-t">54 <span class="a">/ 100</span></div>
+                  <div class="bt-s">BayanMarketingSystem audit</div>
+                </div>
+                <div class="bt-row">
+                  <div class="bt-m">Google search visibility</div>
+                  <div class="bt-v">0 / 100 · 0 of 10 kw</div>
+                  <div class="bt-t">28 <span class="a">/ 100</span></div>
+                  <div class="bt-s">DataForSEO</div>
+                </div>
+                <div class="bt-row">
+                  <div class="bt-m">AI search visibility</div>
+                  <div class="bt-v">10 / 100 · 0 of 3</div>
+                  <div class="bt-t">42 <span class="a">/ 100</span></div>
+                  <div class="bt-s">AI visibility audit</div>
+                </div>
+                <div class="bt-row">
+                  <div class="bt-m">Website &amp; content</div>
+                  <div class="bt-v good">73 / 100 — strong base</div>
+                  <div class="bt-t">100 <span class="a">/ 100</span></div>
+                  <div class="bt-s">BayanMarketingSystem audit</div>
+                </div>
+                <div class="bt-row">
+                  <div class="bt-m">GEO / AI-answer readiness</div>
+                  <div class="bt-v gold">71 / 100</div>
+                  <div class="bt-t">90 <span class="a">/ 100</span></div>
+                  <div class="bt-s">AEO audit · 2026-09-28</div>
+                </div>
+                <div class="bt-row">
+                  <div class="bt-m">Mobile LCP (load speed)</div>
+                  <div class="bt-v warn">5,039 ms — slow</div>
+                  <div class="bt-t">Under 2.5 s</div>
+                  <div class="bt-s">PageSpeed Insights</div>
+                </div>
+                <div class="bt-row">
+                  <div class="bt-m">Organic keywords (domain)</div>
+                  <div class="bt-v warn">0 commercial-intent</div>
+                  <div class="bt-t">Targeted set</div>
+                  <div class="bt-s">DataForSEO live pull</div>
+                </div>
+              </div>
+              <div class="note" style="margin-top:14px">
+                <strong>Measurement honesty.</strong> The "Now" column comes from live tools.
+                The "90-day target" is a modelled projection — not a guarantee. Ranking
+                is content-led and typically moves in <strong>4–8 weeks</strong>, not days.
+              </div>
+            </div>
+
+            <div class="ev-sec">
+              <div class="ev-head">
+                <span class="n">02 · Keyword opportunity</span>
+                <span class="t">Where Bayan can realistically rank</span>
+                <span class="c">8 terms · difficulty 5–18</span>
+              </div>
+
+              <div class="tier-divider" style="--td-c:var(--amber)">
+                <span class="dot"></span>
+                <span class="name">Tier 1 — Gulf licensing priority</span>
+                <span class="line"></span>
+                <span class="note">matches Bayan's core positioning</span>
+              </div>
+
+              <div class="kw-grid">
+                <div class="kw ranked">
+                  <div class="kw-head">
+                    <div class="kw-name">mrcp 1 sample questions</div>
+                    <div class="kw-diff ranked">#28</div>
+                  </div>
+                  <div class="kw-vol">140<small>/ mo</small></div>
+                  <div class="kw-note">Already ranking — nudge to page 1</div>
+                </div>
+                <div class="kw tier1">
+                  <div class="kw-head">
+                    <div class="kw-name">arab board exam questions</div>
+                    <div class="kw-diff">—</div>
+                  </div>
+                  <div class="kw-vol">110<small>/ mo</small></div>
+                  <div class="kw-note">Regional intent · direct Bayan fit</div>
+                </div>
+                <div class="kw tier1">
+                  <div class="kw-head">
+                    <div class="kw-name">prometric exam questions</div>
+                    <div class="kw-diff">—</div>
+                  </div>
+                  <div class="kw-vol">90<small>/ mo</small></div>
+                  <div class="kw-note">Regional intent · direct Bayan fit</div>
+                </div>
+              </div>
+
+              <div class="tier-divider" style="--td-c:var(--blue)">
+                <span class="dot"></span>
+                <span class="name">Tier 2 — International expansion</span>
+                <span class="line"></span>
+                <span class="note">pursue only if product priority confirms</span>
+              </div>
+
+              <div class="kw-grid">
+                <div class="kw tier2">
+                  <div class="kw-head">
+                    <div class="kw-name">usmle step 2 question bank</div>
+                    <div class="kw-diff easy">diff 14</div>
+                  </div>
+                  <div class="kw-vol">390<small>/ mo</small></div>
+                  <div class="kw-note">Highest volume · low difficulty</div>
+                </div>
+                <div class="kw tier2">
+                  <div class="kw-head">
+                    <div class="kw-name">usmle step 3 question bank</div>
+                    <div class="kw-diff easy">diff 5</div>
+                  </div>
+                  <div class="kw-vol">210<small>/ mo</small></div>
+                  <div class="kw-note">Easiest win in the set</div>
+                </div>
+                <div class="kw tier2">
+                  <div class="kw-head">
+                    <div class="kw-name">usmle step 1 question bank</div>
+                    <div class="kw-diff">diff 18</div>
+                  </div>
+                  <div class="kw-vol">260<small>/ mo</small></div>
+                </div>
+                <div class="kw tier2">
+                  <div class="kw-head">
+                    <div class="kw-name">usmle question bank</div>
+                    <div class="kw-diff">diff 17</div>
+                  </div>
+                  <div class="kw-vol">170<small>/ mo</small></div>
+                </div>
+                <div class="kw tier2">
+                  <div class="kw-head">
+                    <div class="kw-name">question bank for usmle</div>
+                    <div class="kw-diff">diff 17</div>
+                  </div>
+                  <div class="kw-vol">170<small>/ mo</small></div>
+                </div>
+              </div>
+
+              <div class="note" style="margin-top:14px">
+                <strong>Proof the domain can rank:</strong> Bayan already ranks (positions
+                11–54) for ~20 long-tail clinical terms — e.g. <em>"im vaccine sites"</em> #11,
+                <em>"coagulation cascade vwf"</em> #32. The content depth is there; the pages
+                aimed at commercial terms are missing.
+              </div>
+            </div>
+
+            <div class="ev-sec">
+              <div class="ev-head">
+                <span class="n">03 · GEO gaps</span>
+                <span class="t">Six items holding AI-answer readiness down</span>
+                <span class="c">6 gaps · mostly trivial</span>
+              </div>
+
+              <div class="geo-list">
+                <div class="geo">
+                  <div class="geo-name">FAQ / Q&amp;A schema <small>Improves machine-readable structure; may support AI citation</small></div>
+                  <div class="geo-badge">Missing</div>
+                  <div class="geo-effort low">Low</div>
+                </div>
+                <div class="geo">
+                  <div class="geo-name">Meta description <small>Currently truncating in SERP display</small></div>
+                  <div class="geo-badge">301 chars</div>
+                  <div class="geo-effort trivial">Trivial</div>
+                </div>
+                <div class="geo">
+                  <div class="geo-name">BLUF direct-answer style <small>Lead pages with one-line summary</small></div>
+                  <div class="geo-badge">25%</div>
+                  <div class="geo-effort low">Low</div>
+                </div>
+                <div class="geo">
+                  <div class="geo-name">llms.txt <small>Proposed convention for describing your site to AI engines</small></div>
+                  <div class="geo-badge">Missing</div>
+                  <div class="geo-effort trivial">Trivial</div>
+                </div>
+                <div class="geo">
+                  <div class="geo-name">llms-full.txt <small>Extended context for AI models</small></div>
+                  <div class="geo-badge">Missing</div>
+                  <div class="geo-effort low">Low</div>
+                </div>
+                <div class="geo">
+                  <div class="geo-name">noscript fallback <small>Content for crawlers that don't run JavaScript</small></div>
+                  <div class="geo-badge">Missing</div>
+                  <div class="geo-effort trivial">Trivial</div>
+                </div>
+              </div>
+
+              <div class="note" style="margin-top:14px">
+                <strong>On AI discoverability.</strong>
+                <code>llms.txt</code> is an emerging convention, not yet a standard every AI
+                engine must use. Structured data can improve machine-readable structure, but
+                no markup guarantees a rich result or an AI citation. These changes are
+                <em>supportive</em> — real movement is measured through the weekly tracker.
+              </div>
+            </div>
+
+            <div class="ev-sec">
+              <div class="ev-head">
+                <span class="n">04 · Evidence sources</span>
+                <span class="t">Where every number comes from</span>
+                <span class="c">5 live tools</span>
+              </div>
+
+              <div class="sources">
+                <div class="source">
+                  <div class="s-k">Audit</div>
+                  <div class="s-n">BayanMarketingSystem marketing audit</div>
+                  <div class="s-d">2026-09-28 · overall health 25/100</div>
+                </div>
+                <div class="source">
+                  <div class="s-k">Keywords</div>
+                  <div class="s-n">DataForSEO live pull</div>
+                  <div class="s-d">Difficulty 5–18 on target question-bank terms</div>
+                </div>
+                <div class="source">
+                  <div class="s-k">AI answers</div>
+                  <div class="s-n">AEO / GEO audit</div>
+                  <div class="s-d">2026-09-28 · 71/100 · six named gaps</div>
+                </div>
+                <div class="source">
+                  <div class="s-k">Performance</div>
+                  <div class="s-n">Google PageSpeed Insights</div>
+                  <div class="s-d">Mobile LCP 5,039 ms · redirects + unused JS</div>
+                </div>
+                <div class="source">
+                  <div class="s-k">Tracking</div>
+                  <div class="s-n">AI visibility tracker</div>
+                  <div class="s-d">14 prompts × 5 engines · weekly cadence</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACCORDION 2 · FULL PLAN -->
+    <div class="acc" data-accent="violet" id="accPlan">
+      <button class="acc-head" type="button" aria-expanded="false" aria-controls="accPlanBody">
+        <div class="acc-icon">🗺</div>
+        <div class="acc-title">
+          <div class="t">
+            The 90-day plan, in full
+            <span class="pill">9 tasks · 2 phases</span>
+          </div>
+          <div class="s">Every task, channel, and reason — in the order they run.</div>
+        </div>
+        <div class="acc-chev">▼</div>
+      </button>
+      <div class="acc-body" id="accPlanBody">
+        <div class="acc-body-inner">
+          <div class="acc-content">
+
+            <div class="plan-phase">
+              <div class="plan-phase-head">
+                <span class="tag">This week</span>
+                <span class="tt">The visibility unlocks — low effort, fast payoff</span>
+                <span class="cnt">4 tasks</span>
+              </div>
+              <div class="plan-tasks">
+                <div class="plan-task">
+                  <div class="ch" style="color:var(--violet)">AI visibility</div>
+                  <div class="body">
+                    <div class="ti">Draft + publish the ABG course page</div>
+                    <div class="wh">ABG is a probe where Bayan is named in <em>0</em> AI answers today — a direct-answer page starts fixing that.</div>
+                  </div>
+                </div>
+                <div class="plan-task">
+                  <div class="ch" style="color:var(--violet)">AI visibility</div>
+                  <div class="body">
+                    <div class="ti">Publish the Gulf exam guide</div>
+                    <div class="wh">Captures "which platform for OMSB / Arab Board" intent AI can cite.</div>
+                  </div>
+                </div>
+                <div class="plan-task">
+                  <div class="ch" style="color:var(--amber)">GEO</div>
+                  <div class="body">
+                    <div class="ti">Add AI guidance files (llms.txt + llms-full.txt)</div>
+                    <div class="wh">Trivial effort; describes Bayan to AI engines in a machine-readable format. <strong>Cheapest meaningful GEO improvement.</strong></div>
+                  </div>
+                </div>
+                <div class="plan-task">
+                  <div class="ch" style="color:var(--amber)">GEO</div>
+                  <div class="body">
+                    <div class="ti">Draft the exam-preparation FAQ</div>
+                    <div class="wh">FAQ schema improves machine-readable structure and may support search and AI discoverability.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="plan-phase">
+              <div class="plan-phase-head">
+                <span class="tag" style="background:rgba(96,165,250,.1);border-color:rgba(96,165,250,.28);color:var(--blue)">This month</span>
+                <span class="tt">The ranking + reach layer</span>
+                <span class="cnt">5 tasks</span>
+              </div>
+              <div class="plan-tasks">
+                <div class="plan-task">
+                  <div class="ch" style="color:var(--amber)">GEO</div>
+                  <div class="body">
+                    <div class="ti">BLUF + meta fixes (trim 301→160 chars, add noscript)</div>
+                    <div class="wh">Closes the last three GEO gaps → <em>71→90</em>.</div>
+                  </div>
+                </div>
+                <div class="plan-task">
+                  <div class="ch" style="color:var(--blue)">SEO</div>
+                  <div class="body">
+                    <div class="ti">Map target searches to pages</div>
+                    <div class="wh">Aims the Gulf tier and confirmed USMLE tier at real pages (Google subscore <em>0→28</em>).</div>
+                  </div>
+                </div>
+                <div class="plan-task">
+                  <div class="ch" style="color:var(--blue)">SEO</div>
+                  <div class="body">
+                    <div class="ti">Draft priority SEO page briefs</div>
+                    <div class="wh">Turns the low-difficulty keyword list into rankable pages.</div>
+                  </div>
+                </div>
+                <div class="plan-task">
+                  <div class="ch" style="color:var(--pink)">Social</div>
+                  <div class="body">
+                    <div class="ti">Draft exam-specific social calendar</div>
+                    <div class="wh">Bayan already has X and Telegram channels; a posting rhythm lifts social score <em>44→69</em>.</div>
+                  </div>
+                </div>
+                <div class="plan-task">
+                  <div class="ch" style="color:var(--red)">Paid ads</div>
+                  <div class="body">
+                    <div class="ti">Draft a paid-ads test</div>
+                    <div class="wh"><strong>Held at $0/month</strong> pending unit economics — drafted, not funded, until you approve spend.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="locks">
+              <div class="locks-head">
+                <span class="n">Content locks</span>
+                <span class="t">Enforced on every word</span>
+              </div>
+              <ul>
+                <li>Human-owned / clinician-reviewed — never bare <em>"AI-powered"</em></li>
+                <li>No pass or outcome guarantees, ever — <em>"on the first attempt"</em> is banned</li>
+                <li><em>"Gulf Licensing Exam Preparation"</em> — not bare "Prometric"</li>
+                <li>Verified counts only — <em>5,589 questions · 55+ countries</em>; nothing invented</li>
+                <li>Any unknown becomes a <em>[confirm with team]</em> placeholder, never a guess</li>
+              </ul>
+              <div class="boundary">
+                <strong>Publishing boundary:</strong> everything above is a draft. No page
+                goes live, no email sends, and no ad money is spent without your explicit
+                sign-off. The weekly report is the accountability loop.
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <span>fig. 07 — 90-day roadmap · bayan learning</span>
+    <span>days · weeks · month · quarter</span>
+  </footer>
+</div>
+
+<script>
+const SVG_NS = 'http://www.w3.org/2000/svg';
+
+const TASKS = [
+  { id:'llms',   name:'Add AI guidance files',      channel:'GEO',           color:'#FBBF24', start:1,  end:3,  m:{geo:8} },
+  { id:'abg',    name:'Draft + answer ABG page',    channel:'AI visibility', color:'#A78BFA', start:1,  end:5,  m:{ai:8,google:3,web:2,health:4} },
+  { id:'gulf',   name:'Publish Gulf exam guide',    channel:'AI visibility', color:'#A78BFA', start:3,  end:7,  m:{ai:12,google:5,web:4,health:4} },
+  { id:'faq',    name:'Draft exam-prep FAQ',        channel:'GEO',           color:'#FBBF24', start:5,  end:9,  m:{geo:5,ai:4,web:4,health:3} },
+  { id:'bluf',   name:'BLUF + meta fixes',          channel:'GEO',           color:'#FBBF24', start:8,  end:14, m:{geo:6,web:6,health:3} },
+  { id:'map',    name:'Map 10 target searches',     channel:'SEO',           color:'#60A5FA', start:10, end:18, m:{google:8,web:5,health:4} },
+  { id:'social', name:'Draft social calendar',      channel:'Social',        color:'#F472B6', start:12, end:22, m:{social:25,health:4} },
+  { id:'briefs', name:'Draft priority SEO briefs',  channel:'SEO',           color:'#60A5FA', start:15, end:25, m:{google:12,web:6,ai:8,health:5} },
+  { id:'paid',   name:'Draft paid-ads test',        channel:'Paid ads',      color:'#F87171', start:20, end:28, m:{ads:46,health:2} }
+];
+
+const BASE = { health:25, google:0, ai:10, web:73, geo:71, social:44, ads:14 };
+const TARGET = { health:54, google:28, ai:42, web:100, geo:90, social:69, ads:60 };
+const METRIC_META = [
+  { key:'health', label:'Health',    color:'#FBBF24' },
+  { key:'google', label:'Google',    color:'#60A5FA' },
+  { key:'ai',     label:'AI search', color:'#A78BFA' },
+  { key:'web',    label:'Website',   color:'#2DD4BF' },
+  { key:'geo',    label:'GEO',       color:'#FBBF24' },
+  { key:'social', label:'Social',    color:'#F472B6' },
+  { key:'ads',    label:'Ads',       color:'#F87171' }
+];
+
+const LABEL_W=260, TIMELINE_X0=LABEL_W, TIMELINE_X1=1160;
+const TIMELINE_W=TIMELINE_X1-TIMELINE_X0, TOTAL_DAYS=90, ROW_START_Y=118, ROW_H=42;
+const dayToX = d => TIMELINE_X0 + (d / TOTAL_DAYS) * TIMELINE_W;
+
+let currentDay=0, isPlaying=false, lastTime=0, currentZoom='days';
+const completedTasks = new Set();
+
+const $ = id => document.getElementById(id);
+const phaseBandsG=$('phaseBands'), rulerG=$('ruler'), taskRowsG=$('taskRows'), pulsesG=$('pulses');
+const phLine=$('phLine'), phDot=$('phDot'), phTri=$('phTri'), phTrail=$('phTrail'), phLabel=$('phLabel');
+const dayCount=$('dayCount'), phaseBadge=$('phaseBadge'), playBtn=$('playBtn');
+const metricsStrip=$('metricsStrip'), legend=$('legend');
+
+function el(tag, attrs={}, parent=null){
+  const n = document.createElementNS(SVG_NS, tag);
+  for(const k in attrs) n.setAttribute(k, attrs[k]);
+  if(parent) parent.appendChild(n);
+  return n;
+}
+
+function renderPhaseBands(){
+  phaseBandsG.innerHTML = '';
+  const bands = [
+    { start:0,  end:7,  label:'WEEK 1',      sub:'Visibility unlocks',      color:'#2DD4BF' },
+    { start:7,  end:30, label:'WEEKS 2–4',   sub:'Ranking + reach layer',   color:'#60A5FA' },
+    { start:30, end:90, label:'COMPOUNDING', sub:'Content ranks, AI cites', color:'#A78BFA' }
+  ];
+  bands.forEach(b=>{
+    const x1=dayToX(b.start), x2=dayToX(b.end);
+    el('rect',{x:x1,y:14,width:x2-x1,height:36,rx:6,fill:b.color,'fill-opacity':.06,stroke:b.color,'stroke-opacity':.18,'stroke-width':1},phaseBandsG);
+    el('text',{class:'phase-label',x:(x1+x2)/2,y:31,fill:b.color},phaseBandsG).textContent=b.label;
+    el('text',{class:'phase-sub',x:(x1+x2)/2,y:44},phaseBandsG).textContent=b.sub;
+  });
+}
+
+function renderRuler(mode){
+  rulerG.innerHTML='';
+  const y=66;
+  el('line',{x1:TIMELINE_X0,y1:y+16,x2:TIMELINE_X1,y2:y+16,stroke:'rgba(137,152,176,.25)','stroke-width':1},rulerG);
+  if(mode==='days'){
+    for(let d=0;d<=TOTAL_DAYS;d++){
+      const x=dayToX(d), major=d%5===0;
+      el('line',{x1:x,y1:y+(major?10:12),x2:x,y2:y+22,stroke:major?'rgba(137,152,176,.4)':'rgba(137,152,176,.18)','stroke-width':1},rulerG);
+      if(major&&d>0&&d<=90) el('text',{class:'ruler-label',x:x,y:y+6},rulerG).textContent='D'+d;
+    }
+  } else if(mode==='weeks'){
+    for(let w=1;w<=13;w++){
+      const day=(w-1)*7, x=dayToX(day);
+      el('line',{x1:x,y1:y+8,x2:x,y2:y+22,stroke:'rgba(137,152,176,.4)','stroke-width':1},rulerG);
+      if(w<13){ const nx=dayToX(w*7); el('rect',{x:x+2,y:y+14,width:nx-x-4,height:6,fill:'rgba(96,165,250,.08)',rx:3},rulerG); }
+      el('text',{class:'ruler-label',x:x+50,y:y+6},rulerG).textContent='W'+w;
+    }
+  } else if(mode==='month'){
+    [{start:0,end:30,label:'MONTH 1'},{start:30,end:60,label:'MONTH 2'},{start:60,end:90,label:'MONTH 3'}].forEach(m=>{
+      const x1=dayToX(m.start), x2=dayToX(m.end);
+      el('rect',{x:x1+2,y:y+10,width:x2-x1-4,height:12,fill:'rgba(167,139,250,.08)',stroke:'rgba(167,139,250,.2)','stroke-width':1,rx:4},rulerG);
+      el('text',{class:'ruler-label',x:(x1+x2)/2,y:y+20,style:'font-size:11px;font-weight:600;fill:#A78BFA;letter-spacing:.16em'},rulerG).textContent=m.label;
+    });
+  } else if(mode==='quarter'){
+    const x1=dayToX(0), x2=dayToX(90);
+    el('rect',{x:x1+2,y:y+8,width:x2-x1-4,height:16,fill:'rgba(167,139,250,.1)',stroke:'rgba(167,139,250,.3)','stroke-width':1.5,rx:8},rulerG);
+    el('text',{class:'ruler-label',x:(x1+x2)/2,y:y+20,style:'font-size:12px;font-weight:700;fill:#A78BFA;letter-spacing:.24em'},rulerG).textContent='QUARTER 1 — 90 DAYS';
+  }
+}
+
+function renderTasks(){
+  taskRowsG.innerHTML='';
+  TASKS.forEach((t,i)=>{
+    const y=ROW_START_Y+i*ROW_H, rowCy=y+ROW_H/2-4;
+    const x1=dayToX(t.start), x2=dayToX(t.end+1);
+    const barY=y+6, barH=22;
+    el('line',{x1:12,y1:y+ROW_H-4,x2:TIMELINE_X1,y2:y+ROW_H-4,stroke:'rgba(137,152,176,.06)','stroke-width':1},taskRowsG);
+    el('circle',{cx:22,cy:rowCy,r:4.5,fill:t.color,opacity:.9},taskRowsG);
+    el('text',{class:'t-name',x:36,y:rowCy+4},taskRowsG).textContent=t.name;
+    el('text',{class:'t-channel',x:LABEL_W-14,y:rowCy+4,fill:t.color,'fill-opacity':.75},taskRowsG).textContent=t.channel;
+    el('rect',{x:x1,y:barY,width:x2-x1,height:barH,rx:5,fill:t.color,'fill-opacity':.1,stroke:t.color,'stroke-opacity':.18,'stroke-width':1},taskRowsG);
+    el('rect',{id:'fill-'+t.id,x:x1,y:barY,width:0,height:barH,rx:5,fill:t.color,'fill-opacity':.85},taskRowsG);
+    el('text',{id:'check-'+t.id,class:'t-check',x:x2+12,y:rowCy+5,fill:t.color,opacity:0},taskRowsG).textContent='✓';
+    el('text',{x:x1-4,y:barY-3,'text-anchor':'middle',style:'font-family:var(--mono);font-size:8px;fill:var(--faint);letter-spacing:.06em'},taskRowsG).textContent='d'+t.start;
+    el('text',{x:x2+4,y:barY+barH+12,'text-anchor':'middle',style:'font-family:var(--mono);font-size:8px;fill:var(--faint);letter-spacing:.06em'},taskRowsG).textContent='d'+t.end;
+  });
+}
+
+function renderMetrics(){
+  metricsStrip.innerHTML='';
+  METRIC_META.forEach(m=>{
+    const card=document.createElement('div');
+    card.className='metric-card';
+    card.style.setProperty('--mc',m.color);
+    card.dataset.key=m.key;
+    card.innerHTML=`<div class="mc-label">${m.label}</div><div class="mc-values"><span class="mc-current" id="mv-${m.key}">${BASE[m.key]}</span><span class="mc-target">→ ${TARGET[m.key]}</span></div><div class="mc-bar"><div class="mc-fill" id="mb-${m.key}"></div></div>`;
+    metricsStrip.appendChild(card);
+  });
+}
+
+function renderLegend(){
+  legend.innerHTML='';
+  [['AI visibility','#A78BFA'],['GEO','#FBBF24'],['SEO','#60A5FA'],['Social','#F472B6'],['Paid ads','#F87171']].forEach(c=>{
+    const el2=document.createElement('div');
+    el2.className='leg';
+    el2.style.setProperty('--lc',c[1]);
+    el2.innerHTML=`<span class="d"></span>${c[0]}`;
+    legend.appendChild(el2);
+  });
+}
+
+function computeMetric(key,day){
+  let v=BASE[key];
+  TASKS.forEach(t=>{
+    if(!t.m[key])return;
+    const r=Math.max(0,Math.min(1,(day-t.start)/(t.end-t.start)));
+    v+=t.m[key]*r;
+  });
+  return Math.round(v);
+}
+
+function updatePlayhead(day){
+  currentDay=day;
+  const x=dayToX(day);
+  phLine.setAttribute('x1',x); phLine.setAttribute('x2',x);
+  phDot.setAttribute('cx',x);
+  phTri.setAttribute('points',`${x},50 ${x-5},40 ${x+5},40`);
+  phTrail.setAttribute('x',Math.max(0,x-80));
+  phTrail.setAttribute('width',Math.min(80,x));
+  phLabel.setAttribute('x',x);
+  phLabel.textContent='Day '+Math.round(day);
+
+  TASKS.forEach(t=>{
+    const fill=document.getElementById('fill-'+t.id);
+    const check=document.getElementById('check-'+t.id);
+    if(!fill)return;
+    const r=Math.max(0,Math.min(1,(day-t.start)/(t.end-t.start)));
+    const x1=dayToX(t.start), x2=dayToX(t.end+1);
+    fill.setAttribute('width',(x2-x1)*r);
+    if(r>=1&&!completedTasks.has(t.id)){
+      completedTasks.add(t.id);
+      check.setAttribute('opacity',1);
+      spawnPulse(x2,ROW_START_Y+TASKS.indexOf(t)*ROW_H+ROW_H/2-4,t.color);
+    } else if(r<1&&completedTasks.has(t.id)){
+      completedTasks.delete(t.id);
+      check.setAttribute('opacity',0);
+    }
+    if(r>=1) check.setAttribute('opacity',1);
+  });
+
+  METRIC_META.forEach(m=>{
+    const v=computeMetric(m.key,day);
+    const num=document.getElementById('mv-'+m.key);
+    if(num) num.textContent=v;
+    const bar=document.getElementById('mb-'+m.key);
+    if(bar){ const pct=((v-BASE[m.key])/(TARGET[m.key]-BASE[m.key]))*100; bar.style.width=Math.max(0,Math.min(100,pct))+'%'; }
+    const card=document.querySelector(`.metric-card[data-key="${m.key}"]`);
+    if(card) card.classList.toggle('active',v>BASE[m.key]);
+  });
+
+  updatePhase(day);
+  dayCount.textContent=Math.round(day);
+}
+
+function updatePhase(day){
+  phaseBadge.className='phase-badge';
+  const t=phaseBadge.querySelector('.txt');
+  if(day<7){ t.textContent='This week — visibility unlocks'; }
+  else if(day<30){ phaseBadge.classList.add('week2'); t.textContent='Weeks 2–4 — ranking + reach'; }
+  else if(day<90){ phaseBadge.classList.add('month2'); t.textContent='Compounding window'; }
+  else { phaseBadge.classList.add('done'); t.textContent='Q1 complete — 54 / 90'; }
+}
+
+function spawnPulse(cx,cy,color){
+  const ring=el('circle',{cx,cy,r:10,fill:'none',stroke:color,'stroke-width':2,opacity:1},pulsesG);
+  el('animate',{attributeName:'r',from:10,to:60,dur:'0.9s',fill:'freeze'},ring);
+  el('animate',{attributeName:'opacity',from:1,to:0,dur:'0.9s',fill:'freeze'},ring);
+  setTimeout(()=>ring.remove(),950);
+}
+
+const PLAY_DURATION=18000;
+function play(){
+  if(isPlaying)return;
+  if(currentDay>=90)currentDay=0;
+  isPlaying=true;
+  playBtn.classList.add('playing');
+  playBtn.querySelector('.ico').textContent='❚❚';
+  playBtn.querySelector('.txt').textContent='Pause';
+  lastTime=performance.now();
+  requestAnimationFrame(tick);
+}
+function pause(){
+  isPlaying=false;
+  playBtn.classList.remove('playing');
+  playBtn.querySelector('.ico').textContent='▶';
+  playBtn.querySelector('.txt').textContent='Play';
+}
+function tick(now){
+  if(!isPlaying)return;
+  const dt=now-lastTime; lastTime=now;
+  const deltaDays=(dt/PLAY_DURATION)*90;
+  let nextDay=currentDay+deltaDays;
+  if(nextDay>=90){ updatePlayhead(90); pause(); return; }
+  updatePlayhead(nextDay);
+  requestAnimationFrame(tick);
+}
+
+function setZoom(mode){
+  currentZoom=mode;
+  document.querySelectorAll('.zoom-btn').forEach(b=>b.classList.toggle('active',b.dataset.zoom===mode));
+  renderRuler(mode);
+}
+
+document.getElementById('zoomGroup').addEventListener('click',e=>{
+  const btn=e.target.closest('.zoom-btn');
+  if(btn) setZoom(btn.dataset.zoom);
+});
+playBtn.addEventListener('click',()=>{ if(isPlaying) pause(); else play(); });
+
+const svg=document.getElementById('timeline');
+let scrubbing=false;
+function scrubFromEvent(e){
+  const rect=svg.getBoundingClientRect();
+  const scale=1200/rect.width;
+  const svgX=(e.clientX-rect.left)*scale;
+  const day=Math.max(0,Math.min(90,((svgX-TIMELINE_X0)/TIMELINE_W)*90));
+  if(isPlaying) pause();
+  TASKS.forEach(t=>{ const r=(day-t.start)/(t.end-t.start); if(r<1) completedTasks.delete(t.id); });
+  updatePlayhead(day);
+}
+svg.addEventListener('mousedown',e=>{ scrubbing=true; scrubFromEvent(e); });
+window.addEventListener('mousemove',e=>{ if(scrubbing) scrubFromEvent(e); });
+window.addEventListener('mouseup',()=>scrubbing=false);
+svg.addEventListener('touchstart',e=>{ scrubbing=true; scrubFromEvent(e.touches[0]); },{passive:true});
+svg.addEventListener('touchmove',e=>{ if(scrubbing) scrubFromEvent(e.touches[0]); },{passive:true});
+svg.addEventListener('touchend',()=>scrubbing=false);
+
+document.querySelectorAll('.acc').forEach(acc=>{
+  const head=acc.querySelector('.acc-head');
+  head.addEventListener('click',()=>{
+    const isOpen=acc.classList.contains('open');
+    const next=!isOpen;
+    acc.classList.toggle('open',next);
+    head.setAttribute('aria-expanded',next?'true':'false');
+  });
+});
+
+function init(){
+  renderPhaseBands();
+  renderRuler('days');
+  renderTasks();
+  renderMetrics();
+  renderLegend();
+  updatePlayhead(0);
+}
+init();
+</script>
+</body>
+</html>

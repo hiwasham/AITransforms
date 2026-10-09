@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Release Gate Closeout — Flow Map</title>
+<style>
+  :root{
+    --bg:#070a10;
+    --card:#0f151e;
+    --card-2:#131b26;
+    --line:#1c2634;
+    --text:#e8eff8;
+    --muted:#7e8fa6;
+    --closed:#2ed573;
+    --blocked:#ffb020;
+    --open:#ff4d5e;
+    --user:#22d3ee;
+    --agent:#a06bff;
+    --artifact:#2ed573;
+    --compute:#4f7cff;
+    --gpu:#c9a6ff;
+    --locked:#ff5c8a;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:
+      radial-gradient(1100px 600px at 10% -8%, #141e2e 0%, transparent 55%),
+      radial-gradient(900px 500px at 100% 0%, #1a1428 0%, transparent 50%),
+      var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    padding:0 22px 90px;
+  }
+  .wrap{max-width:1100px;margin:0 auto}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- HERO ---------- */
+  .hero{padding:64px 0 38px;border-bottom:1px solid var(--line)}
+  .eyebrow{
+    font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:20px;display:flex;align-items:center;gap:10px;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--agent);display:inline-block}
+  h1{
+    font-size:clamp(29px,5vw,52px);line-height:1.07;letter-spacing:-.035em;
+    font-weight:800;max-width:22ch;
+  }
+  h1 .hl{
+    background:linear-gradient(92deg,var(--closed),var(--user));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .lede{color:#a9b8cb;font-size:clamp(15px,1.7vw,18px);max-width:68ch;margin-top:20px}
+  .lede strong{color:#fff;font-weight:650}
+
+  .status-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+  .pill{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:var(--mono);font-size:11.5px;letter-spacing:.03em;
+    padding:7px 13px;border-radius:999px;border:1px solid var(--line);
+    background:var(--card);color:var(--muted);white-space:nowrap;
+  }
+  .pill .dot{width:7px;height:7px;border-radius:50%;background:currentColor;flex:0 0 auto}
+  .pill.closed{color:var(--closed);border-color:#1c4433;background:#0f1d17}
+  .pill.blocked{color:var(--blocked);border-color:#4a3818;background:#1c1710}
+  .pill.blocked .dot{animation:pulseDot 1.6s ease-in-out infinite}
+  @keyframes pulseDot{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(255,176,32,.55)}50%{opacity:.5;box-shadow:0 0 0 6px rgba(255,176,32,0)}}
+  .pill.user{color:var(--user);border-color:#1c4247;background:#0c1a1c}
+
+  /* ---------- SKIM NAV ---------- */
+  .skim{
+    position:sticky;top:0;z-index:40;
+    background:rgba(7,10,16,.9);backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+    margin:0 -22px;padding:12px 22px;
+    overflow-x:auto;white-space:nowrap;
+    scrollbar-width:none;
+  }
+  .skim::-webkit-scrollbar{display:none}
+  .skim-inner{display:inline-flex;gap:6px;align-items:center;min-width:100%}
+  .skim-chip{
+    display:inline-flex;align-items:center;gap:7px;
+    font-family:var(--mono);font-size:11px;letter-spacing:.03em;
+    padding:7px 12px;border-radius:8px;border:1px solid var(--line);
+    background:var(--card);color:#8fa0b6;cursor:pointer;
+    transition:all .2s;flex:0 0 auto;
+  }
+  .skim-chip:hover{border-color:#33445c;color:#c3d0e2;transform:translateY(-1px)}
+  .skim-chip .d{width:6px;height:6px;border-radius:50%;background:currentColor;flex:0 0 auto}
+  .skim-chip[data-type="user"] .d{background:var(--user)}
+  .skim-chip[data-type="agent"] .d{background:var(--agent)}
+  .skim-chip[data-type="artifact"] .d{background:var(--artifact)}
+  .skim-chip[data-type="block"] .d{background:var(--blocked)}
+  .skim-sep{width:1px;height:18px;background:var(--line);flex:0 0 auto;margin:0 4px}
+
+  /* ---------- SECTION ---------- */
+  section{padding:56px 0;border-bottom:1px solid var(--line)}
+  section:last-of-type{border-bottom:0}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:10px;flex-wrap:wrap}
+  .sec-num{font-family:var(--mono);font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:3px 8px}
+  h2{font-size:clamp(21px,2.9vw,30px);letter-spacing:-.03em;font-weight:760}
+  .sec-desc{color:var(--muted);font-size:15px;max-width:68ch;margin-bottom:30px}
+
+  /* ---------- GATE BOARD ---------- */
+  .board{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+  @media(max-width:980px){.board{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:640px){.board{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:420px){.board{grid-template-columns:1fr}}
+  .gate{
+    border:1px solid var(--line);border-radius:14px;padding:18px 16px 16px;
+    background:linear-gradient(180deg,var(--card),var(--card-2));
+    position:relative;overflow:hidden;
+    transition:transform .3s,border-color .3s;
+  }
+  .gate:hover{transform:translateY(-4px)}
+  .gate::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--gc)}
+  .gate .gn{
+    font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--muted);
+    margin-bottom:10px;display:flex;align-items:center;justify-content:space-between;gap:8px;
+  }
+  .gate .status{
+    font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:.1em;
+    text-transform:uppercase;padding:3px 7px;border-radius:5px;
+  }
+  .gate .status.closed{background:#0f2419;color:var(--closed);border:1px solid #1e4632}
+  .gate .status.blocked{background:#241a0f;color:var(--blocked);border:1px solid #4a3818}
+  .gate .status.satisfied{background:#0f1d17;color:#7ee9a8;border:1px solid #1e4632;opacity:.8}
+  .gate .gname{font-size:13.5px;font-weight:680;color:#fff;line-height:1.3;margin-bottom:10px;min-height:2.6em}
+  .gate .gmeta{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.5}
+  .gate .gmeta b{color:#c3d0e2;font-weight:600}
+  .gate.blocked{box-shadow:0 0 0 1px rgba(255,176,32,.15),0 0 30px -12px rgba(255,176,32,.4)}
+  .gate.blocked .gn .livedot{
+    width:6px;height:6px;border-radius:50%;background:var(--blocked);display:inline-block;
+    animation:pulseDot 1.6s ease-in-out infinite;
+  }
+
+  .board-summary{
+    margin-top:20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+    padding:16px 20px;border:1px solid var(--line);border-radius:12px;
+    background:linear-gradient(180deg,var(--card),var(--card-2));
+  }
+  .board-summary .big{
+    font-family:var(--mono);font-size:28px;font-weight:800;letter-spacing:-.03em;
+    color:var(--closed);font-variant-numeric:tabular-nums;
+  }
+  .board-summary .big span{color:var(--muted);font-weight:600}
+  .board-summary .txt{font-size:14px;color:#b3c0d2;flex:1;min-width:200px}
+  .board-summary .txt strong{color:#fff}
+
+  /* ---------- TIMELINE ---------- */
+  .timeline{position:relative;padding-left:36px}
+  .timeline::before{
+    content:"";position:absolute;left:13px;top:8px;bottom:8px;width:2px;
+    background:linear-gradient(180deg,var(--closed),var(--blocked),var(--user),var(--agent),var(--artifact));
+    opacity:.28;border-radius:2px;
+  }
+  .phase-group{margin-bottom:8px}
+  .phase-label{
+    display:flex;align-items:center;gap:10px;
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--muted);margin:26px 0 14px;position:relative;
+  }
+  .phase-label::before{
+    content:"";position:absolute;left:-36px;width:12px;height:12px;border-radius:50%;
+    background:var(--bg);border:2px solid var(--pc,#33445c);top:50%;transform:translateY(-50%);
+  }
+  .phase-label .pl-line{flex:1;height:1px;background:var(--line)}
+  .phase-group:first-child .phase-label{margin-top:0}
+
+  .beat{
+    position:relative;margin-bottom:10px;
+    background:linear-gradient(180deg,var(--card),var(--card-2));
+    border:1px solid var(--line);border-radius:12px;
+    transition:border-color .25s,transform .25s,box-shadow .25s;
+    cursor:pointer;overflow:hidden;
+  }
+  .beat::before{
+    content:"";position:absolute;left:-29px;top:22px;
+    width:10px;height:10px;border-radius:50%;
+    background:var(--bc);box-shadow:0 0 0 3px var(--bg),0 0 14px -2px var(--bc);
+    transition:transform .25s;
+  }
+  .beat:hover{border-color:color-mix(in srgb,var(--bc) 45%,var(--line));transform:translateX(3px)}
+  .beat.open{border-color:var(--bc);box-shadow:0 0 0 1px color-mix(in srgb,var(--bc) 25%,transparent)}
+  .beat.open::before{transform:scale(1.35)}
+
+  .beat-head{padding:16px 18px;display:flex;align-items:flex-start;gap:14px}
+  .beat-ic{
+    width:32px;height:32px;border-radius:9px;flex:0 0 auto;display:grid;place-items:center;
+    font-family:var(--mono);font-size:14px;font-weight:700;
+    background:color-mix(in srgb,var(--bc) 14%,transparent);
+    border:1px solid color-mix(in srgb,var(--bc) 38%,transparent);
+    color:var(--bc);
+  }
+  .beat-ic.pulse{animation:pulseIc 1.8s ease-in-out infinite}
+  @keyframes pulseIc{0%,100%{box-shadow:0 0 0 0 color-mix(in srgb,var(--bc) 45%,transparent)}50%{box-shadow:0 0 0 7px transparent}}
+  .beat-main{flex:1;min-width:0}
+  .beat-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:5px}
+  .beat-type{
+    font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--bc);padding:2px 7px;border-radius:5px;
+    background:color-mix(in srgb,var(--bc) 12%,transparent);
+    border:1px solid color-mix(in srgb,var(--bc) 30%,transparent);
+  }
+  .beat-title{font-size:15px;font-weight:660;color:#eef4fb;line-height:1.35}
+  .beat-sub{font-size:13px;color:var(--muted);line-height:1.45;margin-top:3px}
+  .beat-chev{flex:0 0 auto;color:var(--muted);font-size:13px;margin-top:6px;transition:transform .3s}
+  .beat.open .beat-chev{transform:rotate(90deg);color:var(--bc)}
+
+  .beat-detail{
+    max-height:0;overflow:hidden;opacity:0;
+    transition:max-height .5s cubic-bezier(.22,1,.36,1),opacity .3s,padding .3s;
+    padding:0 18px;
+  }
+  .beat.open .beat-detail{max-height:1100px;opacity:1;padding:0 18px 18px}
+  .beat-detail-inner{
+    border-top:1px solid var(--line);padding-top:14px;
+    font-size:13.5px;color:#adbbce;line-height:1.65;
+  }
+  .beat-detail-inner strong{color:#e2eaf4;font-weight:640}
+  .beat-detail-inner code{
+    font-family:var(--mono);font-size:12px;color:#9fd8dd;
+    background:#0d1a1c;border:1px solid #1d3a3d;border-radius:5px;padding:1px 6px;
+    word-break:break-all;
+  }
+  .beat-detail-inner ul{list-style:none;margin-top:10px;display:flex;flex-direction:column;gap:7px}
+  .beat-detail-inner li{
+    font-size:13px;color:#a9b8cb;padding-left:18px;position:relative;line-height:1.55;
+  }
+  .beat-detail-inner li::before{
+    content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:2px;
+    background:var(--bc);opacity:.7;
+  }
+  .beat-detail-inner .cmd{
+    display:block;margin-top:12px;padding:11px 14px;
+    background:#0b1218;border:1px solid #1c2634;border-radius:8px;
+    font-family:var(--mono);font-size:12px;color:#9fd8dd;
+    overflow-x:auto;white-space:nowrap;
+  }
+
+  /* ---------- COMPUTE WALL ---------- */
+  .compute-grid{display:grid;grid-template-columns:1fr 60px 1fr;gap:0;align-items:stretch}
+  @media(max-width:800px){.compute-grid{grid-template-columns:1fr;gap:16px}}
+  .zone{
+    border:1px solid var(--line);border-radius:16px;padding:24px 24px 22px;
+    background:linear-gradient(180deg,var(--card),var(--card-2));position:relative;overflow:hidden;
+  }
+  .zone.cpu{border-color:#3a2020;background:linear-gradient(180deg,#170f0f,#12161d)}
+  .zone.gpu{border-color:#2c1c4d;background:linear-gradient(180deg,#130f1c,#10161f)}
+  .zone .zlabel{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+    margin-bottom:8px;display:flex;align-items:center;gap:8px;
+  }
+  .zone.cpu .zlabel{color:#ff8a8a}
+  .zone.gpu .zlabel{color:var(--gpu)}
+  .zone h3{font-size:17px;font-weight:740;color:#fff;margin-bottom:14px;letter-spacing:-.02em}
+  .zone .stat{
+    font-family:var(--mono);font-size:30px;font-weight:800;letter-spacing:-.03em;
+    line-height:1;margin-bottom:6px;font-variant-numeric:tabular-nums;
+  }
+  .zone.cpu .stat{color:#ff8a8a}
+  .zone.gpu .stat{color:var(--gpu)}
+  .zone .stat-label{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-bottom:18px}
+  .zone ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+  .zone li{
+    font-size:13.5px;color:#b3c0d2;padding-left:20px;position:relative;line-height:1.5;
+  }
+  .zone.cpu li::before{content:"✕";position:absolute;left:0;top:0;font-size:12px;font-weight:700;color:#ff8a8a}
+  .zone.gpu li::before{content:"→";position:absolute;left:0;top:0;font-size:12px;font-weight:700;color:var(--gpu)}
+
+  .wall{
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:12px;padding:0 6px;position:relative;
+  }
+  @media(max-width:800px){.wall{flex-direction:row;padding:8px 0}}
+  .wall::before{
+    content:"";position:absolute;top:0;bottom:0;left:50%;width:2px;
+    background:repeating-linear-gradient(180deg,#2a1c3d 0 6px,transparent 6px 12px);
+    transform:translateX(-50%);
+  }
+  @media(max-width:800px){
+    .wall::before{top:50%;bottom:auto;left:0;right:0;width:auto;height:2px;
+      background:repeating-linear-gradient(90deg,#2a1c3d 0 6px,transparent 6px 12px);transform:none}
+  }
+  .wall-badge{
+    position:relative;z-index:2;background:#12161d;border:1px solid #2a1c3d;
+    border-radius:11px;padding:10px 8px;text-align:center;width:72px;
+    box-shadow:0 0 0 7px var(--bg);
+  }
+  .wall-badge .ic{font-size:16px;margin-bottom:3px;color:var(--gpu)}
+  .wall-badge .t{font-family:var(--mono);font-size:8.5px;letter-spacing:.1em;color:#9fb0c4;line-height:1.3;text-transform:uppercase}
+  @media(max-width:800px){.wall-badge{display:flex;align-items:center;gap:8px;padding:7px 12px;width:auto}
+    .wall-badge .ic{margin:0}}
+
+  /* ---------- SIBLING DRIVER ---------- */
+  .pattern{
+    border:1px solid var(--line);border-radius:16px;padding:28px 26px;
+    background:linear-gradient(180deg,var(--card),var(--card-2));
+  }
+  .pattern-flow{
+    display:grid;grid-template-columns:1fr 44px 1fr 44px 1fr;gap:0;align-items:center;
+  }
+  @media(max-width:860px){.pattern-flow{grid-template-columns:1fr;gap:14px}}
+  .pnode{
+    border:1px solid var(--line);border-radius:12px;padding:18px 18px;
+    background:#0d131b;position:relative;
+  }
+  .pnode.locked{border-color:#4a2028;background:#170f13}
+  .pnode.new{border-color:#1e4631;background:#0d1c15}
+  .pnode.result{border-color:#4a3818;background:#1c1710}
+  .pnode .ptag{
+    font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
+    margin-bottom:9px;display:flex;align-items:center;gap:7px;
+  }
+  .pnode.locked .ptag{color:var(--locked)}
+  .pnode.new .ptag{color:var(--closed)}
+  .pnode.result .ptag{color:var(--blocked)}
+  .pnode .pname{
+    font-family:var(--mono);font-size:12.5px;color:#dbe4f0;word-break:break-all;
+    line-height:1.4;margin-bottom:8px;font-weight:600;
+  }
+  .pnode .pdesc{font-size:12.5px;color:#98a9bd;line-height:1.5}
+  .pnode .plock{
+    position:absolute;top:14px;right:14px;font-size:14px;color:var(--locked);opacity:.7;
+  }
+  .parrow{
+    display:flex;align-items:center;justify-content:center;
+    color:var(--muted);font-size:18px;font-family:var(--mono);
+  }
+  @media(max-width:860px){.parrow{transform:rotate(90deg)}}
+  .pattern-note{
+    margin-top:22px;padding-top:18px;border-top:1px dashed var(--line);
+    font-size:13.5px;color:#a9b8cb;line-height:1.65;
+  }
+  .pattern-note strong{color:#fff;font-weight:640}
+  .pattern-note code{
+    font-family:var(--mono);font-size:12px;color:#9fd8dd;
+    background:#0d1a1c;border:1px solid #1d3a3d;border-radius:4px;padding:1px 6px;
+  }
+
+  /* ---------- RUNBOOK ---------- */
+  .runbook{
+    border:1px solid #4a3818;border-radius:18px;
+    background:
+      radial-gradient(700px 260px at 0% 0%, rgba(255,176,32,.12), transparent 65%),
+      linear-gradient(180deg,#161208,#10161f);
+    padding:34px 34px 30px;position:relative;overflow:hidden;
+  }
+  .runbook::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:2px;
+    background:linear-gradient(90deg,transparent,var(--blocked),transparent);
+    animation:scan 3s ease-in-out infinite;
+  }
+  @keyframes scan{0%,100%{opacity:.4;transform:scaleX(.7)}50%{opacity:1;transform:scaleX(1)}}
+  .runbook .tag{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--blocked);margin-bottom:16px;display:flex;align-items:center;gap:9px;
+  }
+  .runbook h3{
+    font-size:clamp(19px,2.6vw,26px);font-weight:780;letter-spacing:-.03em;line-height:1.25;
+    color:#fff;max-width:26ch;
+  }
+  .runbook .files{
+    margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:12px;
+  }
+  @media(max-width:700px){.runbook .files{grid-template-columns:1fr}}
+  .rfile{
+    border:1px solid #2a2214;border-radius:12px;padding:16px 18px;
+    background:#0e141c;
+  }
+  .rfile .fname{
+    font-family:var(--mono);font-size:12px;color:#ffd08a;word-break:break-all;
+    margin-bottom:8px;font-weight:600;
+  }
+  .rfile .fdesc{font-size:12.8px;color:#98a9bd;line-height:1.55}
+  .runbook .cmd-block{
+    margin-top:22px;padding:18px 20px;
+    background:#0a0e14;border:1px solid #2a2214;border-radius:12px;
+  }
+  .runbook .cmd-block .cl{
+    font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--blocked);margin-bottom:12px;
+  }
+  .runbook .cmd-block code{
+    font-family:var(--mono);font-size:12.5px;color:#9fd8dd;
+    display:block;line-height:1.7;white-space:pre;overflow-x:auto;
+  }
+  .runbook .thresholds{
+    margin-top:22px;display:flex;flex-wrap:wrap;gap:8px;
+  }
+  .th{
+    font-family:var(--mono);font-size:11.5px;color:#ffd08a;
+    background:#1c1710;border:1px solid #4a3818;border-radius:999px;padding:5px 12px;
+  }
+  .runbook .warn{
+    margin-top:22px;padding:16px 18px;border-radius:11px;
+    background:#1a0f13;border:1px solid #4a2028;
+    font-size:13.5px;color:#ffb0bb;line-height:1.6;
+  }
+  .runbook .warn strong{color:#fff;font-weight:660}
+
+  /* ---------- CONCEPTS ---------- */
+  .concepts{display:flex;flex-wrap:wrap;gap:9px}
+  .concept{
+    font-family:var(--mono);font-size:12px;letter-spacing:.02em;
+    padding:8px 14px;border-radius:9px;border:1px solid var(--line);
+    background:var(--card);color:#93a4b8;cursor:default;
+    transition:all .25s;
+  }
+  .concept:hover{border-color:#33445c;color:#dbe4f0;transform:translateY(-2px)}
+  .concept[data-c="gate"]:hover{border-color:#1e4632;color:#7ee9a8}
+  .concept[data-c="block"]:hover{border-color:#4a3818;color:#ffd08a}
+  .concept[data-c="compute"]:hover{border-color:#2c1c4d;color:var(--gpu)}
+  .concept[data-c="lock"]:hover{border-color:#4a2028;color:#ff9aba}
+
+  footer{
+    margin-top:52px;padding-top:26px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+    font-family:var(--mono);font-size:11px;color:#5b6b80;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="eyebrow">Obsidi1-analysis · Release Gate Closeout · 2026-09-27</div>
+    <h1>Four gates closed. <span class="hl">One blocked by compute.</span></h1>
+    <p class="lede">
+      A release-verification resume that rebound a hash-bound artifact manifest, hit a
+      CPU wall on the vector benchmark, and — rather than fake it — packaged the
+      remaining gate as a <strong>one-command GPU runbook</strong>.
+    </p>
+    <div class="status-row">
+      <span class="pill closed"><span class="dot"></span>4 / 5 gates satisfied</span>
+      <span class="pill blocked"><span class="dot"></span>1 blocked · CPU-only</span>
+      <span class="pill user"><span class="dot"></span>Runbook queued</span>
+      <span class="pill"><span class="dot"></span>No vault writes</span>
+    </div>
+  </header>
+
+  <!-- ============ SKIM NAV ============ -->
+  <nav class="skim" aria-label="Quick jump">
+    <div class="skim-inner" id="skimNav"></div>
+  </nav>
+
+  <!-- ============ 01 · GATE BOARD ============ -->
+  <section class="reveal">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <h2>The gate board</h2>
+    </div>
+    <p class="sec-desc">
+      Five release gates were originally failing. Three were satisfied by July receipts,
+      one was closed today by rebinding the artifact manifest, and one remains — blocked
+      purely by CPU compute.
+    </p>
+
+    <div class="board">
+      <div class="gate" style="--gc:var(--closed)">
+        <div class="gn"><span>GATE 01</span><span class="status closed">closed ✓</span></div>
+        <div class="gname">artifact_hash_binding</div>
+        <div class="gmeta">
+          <b>128</b> artifacts · <b>666 MB</b><br>
+          zero missing / new / unstable
+        </div>
+      </div>
+      <div class="gate blocked" style="--gc:var(--blocked)">
+        <div class="gn"><span>GATE 02</span><span class="livedot"></span></div>
+        <div class="gname">qmd_vector_benchmark</div>
+        <div class="gmeta">
+          timeout <b>&gt;240s</b> · first query<br>
+          index <b>100%</b> complete
+        </div>
+      </div>
+      <div class="gate" style="--gc:var(--closed)">
+        <div class="gn"><span>GATE 03</span><span class="status satisfied">july ✓</span></div>
+        <div class="gname">vector completion</div>
+        <div class="gmeta">
+          <b>14,360 / 14,360</b> docs<br>
+          <b>37,214</b> vectors · 0 missing
+        </div>
+      </div>
+      <div class="gate" style="--gc:var(--closed)">
+        <div class="gn"><span>GATE 04</span><span class="status satisfied">july ✓</span></div>
+        <div class="gname">egress receipt</div>
+        <div class="gmeta">
+          satisfied by July receipt<br>
+          no re-run needed
+        </div>
+      </div>
+      <div class="gate" style="--gc:var(--closed)">
+        <div class="gn"><span>GATE 05</span><span class="status satisfied">july ✓</span></div>
+        <div class="gname">v12 prompt</div>
+        <div class="gmeta">
+          satisfied by July receipt<br>
+          no re-run needed
+        </div>
+      </div>
+    </div>
+
+    <div class="board-summary">
+      <div class="big">4<span>/5</span></div>
+      <div class="txt">
+        <strong>Three</strong> satisfied by July receipts &nbsp;·&nbsp;
+        <strong>one</strong> closed today by rebinding the manifest &nbsp;·&nbsp;
+        <strong>one</strong> left — blocked only by CPU compute here.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 02 · TIMELINE ============ -->
+  <section class="reveal">
+    <div class="sec-head">
+      <span class="sec-num">02</span>
+      <h2>The flow</h2>
+    </div>
+    <p class="sec-desc">
+      Every beat of the conversation — including the misread, the re-ask, and the
+      runbook packaging. <strong>Click any beat</strong> to zoom into the command-level
+      detail.
+    </p>
+
+    <div class="timeline" id="timeline"></div>
+  </section>
+
+  <!-- ============ 03 · COMPUTE WALL ============ -->
+  <section class="reveal">
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <h2>Why the gate is blocked — not by data, by compute</h2>
+    </div>
+    <p class="sec-desc">
+      The vector index is complete. Lexical retrieval scores perfectly. The only thing
+      missing is a machine that can run the query fast enough to produce the artifact.
+    </p>
+
+    <div class="compute-grid">
+      <div class="zone cpu">
+        <div class="zlabel"><span>✕</span> This box — CPU only</div>
+        <h3>One query blows the budget</h3>
+        <div class="stat">&gt;240s</div>
+        <div class="stat-label">timeout on the FIRST query</div>
+        <ul>
+          <li>Reloads the <strong>333 MB</strong> embeddinggemma model per subprocess</li>
+          <li><code>qmd</code> warns: no GPU acceleration available</li>
+          <li>Running all 10 queries ≈ <strong>40 min</strong> for an all-timeout artifact</li>
+          <li>Benchmark was killed — no partial file left behind</li>
+        </ul>
+      </div>
+
+      <div class="wall">
+        <div class="wall-badge">
+          <div class="ic">↗</div>
+          <div class="t">needs<br>GPU</div>
+        </div>
+      </div>
+
+      <div class="zone gpu">
+        <div class="zlabel"><span>→</span> A GPU host / warm server</div>
+        <h3>Each query finishes in time</h3>
+        <div class="stat">&lt;budget</div>
+        <div class="stat-label">per-query, model resident</div>
+        <ul>
+          <li>Model loads once and stays warm</li>
+          <li>Vector search returns within the per-query budget</li>
+          <li>All 10 queries complete → artifact produced</li>
+          <li>Gate closes; verdict printed by the wrapper</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 · SIBLING DRIVER ============ -->
+  <section class="reveal">
+    <div class="sec-head">
+      <span class="sec-num">04</span>
+      <h2>The pattern: a hash-bound file you can't edit</h2>
+    </div>
+    <p class="sec-desc">
+      The committed benchmark hardcodes <code>--no-gpu</code> — but it's bound into the
+      release manifest, so editing it would break the very gate it's meant to satisfy.
+      The fix is a <strong>sibling driver</strong> that imports it and swaps only the
+      offending call.
+    </p>
+
+    <div class="pattern">
+      <div class="pattern-flow">
+        <div class="pnode locked">
+          <div class="plock">🔒</div>
+          <div class="ptag"><span>●</span> Locked · hash-bound</div>
+          <div class="pname">bin/run_retrieval_benchmark.py</div>
+          <div class="pdesc">
+            Committed to the release manifest. Hardcodes <code>--no-gpu</code> on
+            <code>qmd vsearch</code> (lines 64–65). Must not be edited.
+          </div>
+        </div>
+
+        <div class="parrow">→</div>
+
+        <div class="pnode new">
+          <div class="ptag"><span>✦</span> New · sibling driver</div>
+          <div class="pname">bin/run_vector_benchmark_gpu.py</div>
+          <div class="pdesc">
+            Imports the locked file and reuses its scoring + acceptance logic
+            <em>verbatim</em>. Swaps <strong>only</strong> the vsearch call for a
+            GPU-enabled one.
+          </div>
+        </div>
+
+        <div class="parrow">→</div>
+
+        <div class="pnode result">
+          <div class="ptag"><span>◆</span> Output</div>
+          <div class="pname">benchmark-qmd_vector.json</div>
+          <div class="pdesc">
+            Written under <code>retrieval/results/</code>. Clears the fixture
+            thresholds → gate closes.
+          </div>
+        </div>
+      </div>
+
+      <div class="pattern-note">
+        <strong>Why this matters:</strong> the parent file's hash is part of what the
+        release gate verifies. Touching it to add <code>--no-gpu</code> removal would
+        invalidate the binding you're trying to prove. The sibling reuses everything —
+        same scoring, same acceptance — and changes one thing.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 · RUNBOOK ============ -->
+  <section class="reveal">
+    <div class="sec-head">
+      <span class="sec-num">05</span>
+      <h2>The queued runbook</h2>
+    </div>
+    <p class="sec-desc">
+      One command. Preflight, benchmark, verdict. Runs wherever a GPU (or a warm
+      <code>qmd</code> embed server) is available.
+    </p>
+
+    <div class="runbook">
+      <div class="tag"><span>◆</span> Queued · runs on a GPU host</div>
+      <h3>Packaged so the gate closes the moment it runs somewhere with a GPU.</h3>
+
+      <div class="files">
+        <div class="rfile">
+          <div class="fname">bin/run_vector_benchmark_gpu.py</div>
+          <div class="fdesc">
+            58 lines. GPU-capable driver. Imports the hash-bound benchmark, reuses its
+            scoring + acceptance verbatim, swaps only the vsearch call. Defaults
+            <code>--backends</code> to <code>qmd_vector</code>.
+          </div>
+        </div>
+        <div class="rfile">
+          <div class="fname">bin/close_vector_benchmark_gate.sh</div>
+          <div class="fdesc">
+            66 lines. Wrapper: preflight (qmd on PATH, index present, venv activate,
+            warmup), runs the driver, writes the artifact, prints the acceptance verdict.
+          </div>
+        </div>
+      </div>
+
+      <div class="cmd-block">
+        <div class="cl">To close the gate — run on a GPU host</div>
+        <code>cd saveme/archive/Obsidi1-analysis-20260723
+bin/close_vector_benchmark_gate.sh</code>
+      </div>
+
+      <div class="thresholds">
+        <span class="th">max_errors: 0</span>
+        <span class="th">avg R@5 ≥ 0.6</span>
+        <span class="th">avg R@10 ≥ 0.7</span>
+        <span class="th">en_to_fa_hard_work_avoidance R@5 = 1.0</span>
+        <span class="th">fa_to_en_context_switch R@5 = 1.0</span>
+      </div>
+
+      <div class="warn">
+        <strong>Do NOT re-run <code>bin/verify_release.py</code> after this passes.</strong>
+        It re-enumerates the Windows vault against the July baseline — and the vault has
+        been edited since — so it would flip the valid immutability receipt to a spurious
+        FAIL. Reconcile the consolidated verdict's vector-benchmark section
+        <em>manually</em>.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 06 · CONCEPTS ============ -->
+  <section class="reveal">
+    <div class="sec-head">
+      <span class="sec-num">06</span>
+      <h2>Concepts in play</h2>
+    </div>
+    <p class="sec-desc">Hover any chip for a color-coded hint at its category.</p>
+    <div class="concepts">
+      <span class="concept" data-c="gate">Release gate verification</span>
+      <span class="concept" data-c="gate">artifact_hash_binding</span>
+      <span class="concept" data-c="gate">July receipts</span>
+      <span class="concept" data-c="gate">relative-glob manifest</span>
+      <span class="concept" data-c="gate">stable_while_hashed</span>
+      <span class="concept" data-c="block">qmd_vector_benchmark</span>
+      <span class="concept" data-c="block">timeout_after_240s</span>
+      <span class="concept" data-c="block">release-verification.json</span>
+      <span class="concept" data-c="compute">embeddinggemma 333 MB</span>
+      <span class="concept" data-c="compute">qmd vsearch</span>
+      <span class="concept" data-c="compute">CPU-only · no GPU accel</span>
+      <span class="concept" data-c="compute">warm embed server</span>
+      <span class="concept" data-c="compute">R@5 · MRR · BM25</span>
+      <span class="concept" data-c="lock">hash-bound file</span>
+      <span class="concept" data-c="lock">sibling driver</span>
+      <span class="concept" data-c="lock">--no-gpu hardcoded</span>
+      <span class="concept" data-c="gate">SQLite index query</span>
+      <span class="concept" data-c="gate">14,360 / 14,360 docs</span>
+      <span class="concept" data-c="compute">cross-language fixture</span>
+      <span class="concept" data-c="lock">boundary check</span>
+    </div>
+  </section>
+
+  <footer>
+    <span>Obsidi1-analysis · release gate closeout</span>
+    <span>12 beats · 5 gates · 1 runbook · 2 new files</span>
+  </footer>
+
+</div>
+
+<script>
+  /* ============ REVEAL ============ */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  /* ============ BEAT DATA ============ */
+  const beats = [
+    {
+      phase: 'Gate 1 — artifact_hash_binding',
+      pc: 'var(--closed)',
+      type: 'agent', bc: 'var(--agent)', ic: '⚙',
+      title: 'Re-bound the artifact manifest → gate CLOSED',
+      sub: '128 artifacts · 666 MB · zero missing / new / unstable.',
+      detail: `Rebound via <code>verify_release.build_artifact_manifest</code> —
+        relative-glob based, so the path move into <code>/mnt/d/Obsidi1</code> doesn't
+        affect it, and no vault read was needed.
+        <ul>
+          <li><strong>pass: True</strong> — 128 artifacts, 666 MB, zero missing / new / unstable paths</li>
+          <li><code>logs/skill-selection.md</code> — the file that raced the July run and caused the original failure — is now bound and <code>stable_while_hashed: true</code></li>
+          <li>Written to a new file <code>evidence/final/release-artifacts-reverified-20260926.jsonl</code> (sha256 <code>17149d1d…</code>)</li>
+          <li>The July <code>release-artifacts.jsonl</code> was left untouched as the run-time record</li>
+        </ul>`
+    },
+    {
+      phase: 'Gate 2 — qmd_vector_benchmark',
+      pc: 'var(--blocked)',
+      type: 'block', bc: 'var(--blocked)', ic: '⛔',
+      title: 'Ran the vector benchmark — stopped it → BLOCKED',
+      sub: 'CPU-only: first query timed out at 240s.',
+      detail: `Ran <code>run_retrieval_benchmark.py</code> with the vector backend and
+        stopped it.
+        <ul>
+          <li><code>qmd_bm25</code>: healthy — R@5 = <strong>1.00</strong>, MRR = <strong>1.00</strong> on sampled queries</li>
+          <li><code>qmd_vector</code>: <code>timeout_after_240s</code> on the <strong>first</strong> query</li>
+          <li>Vector search reloads the <strong>333 MB</strong> embeddinggemma model per subprocess, CPU-only — <code>qmd</code> warns no GPU acceleration</li>
+          <li>Running all 10 would have burned ~40 min for an all-timeout, failing artifact — killed it</li>
+          <li>No partial file left behind</li>
+        </ul>`
+    },
+    {
+      phase: 'Gate 2 — qmd_vector_benchmark',
+      pc: 'var(--blocked)',
+      type: 'agent', bc: 'var(--agent)', ic: '⌕',
+      title: 'Confirmed: environment limit, not incompleteness',
+      sub: 'Vector index is 100% complete; lexical scores perfectly.',
+      detail: `Confirmed by direct SQLite query that the
+        <code>obsidi1-analysis-complete</code> vector index is <strong>100% complete</strong>:
+        <ul>
+          <li><strong>14,360 / 14,360</strong> docs</li>
+          <li><strong>37,214</strong> vectors</li>
+          <li><strong>0</strong> missing</li>
+          <li>Lexical retrieval scores R@5 = <strong>1.00</strong> on the same fixture</li>
+        </ul>
+        To turn this gate green you need to run the vector benchmark on a <strong>GPU host</strong>
+        — or against a warm <code>qmd</code> embed server.`
+    },
+    {
+      phase: 'Net result',
+      pc: 'var(--agent)',
+      type: 'agent', bc: 'var(--agent)', ic: '∑',
+      title: '4 of 5 gates satisfied — asked (a) or (b)',
+      sub: 'Queue the GPU run, or leave it documented?',
+      detail: `Three gates satisfied by July receipts (vector completion, egress receipt,
+        v12 prompt) plus <code>artifact_hash_binding</code> today. Only
+        <code>qmd_vector_benchmark</code> remains, purely CPU-bound here.
+        <br><br>
+        Did <strong>not</strong> regenerate the consolidated <code>release-verification.json</code>:
+        now that the workspace lives inside <code>/mnt/d/Obsidi1</code>,
+        <code>verify_release.py</code>'s boundary check treats every artifact as
+        vault-local (structural fail), and re-running would overwrite the valid July
+        receipts. Full reconciliation recorded in
+        <code>logs/claude-resume-closeout-20260926.md</code>.`
+    },
+    {
+      phase: 'The "a" misread',
+      pc: 'var(--user)',
+      type: 'user', bc: 'var(--user)', ic: '❯',
+      title: '"a"',
+      sub: 'A single letter — ambiguous.',
+      detail: `The user replied with just <code>a</code>. The agent could not tell whether
+        this meant option (a) from the previous turn, a stray keystroke, or something
+        else entirely.`
+    },
+    {
+      phase: 'The "a" misread',
+      pc: 'var(--agent)',
+      type: 'agent', bc: 'var(--agent)', ic: '↻',
+      title: 'Restored skills, didn\'t parse "a", offered 3 options',
+      sub: 'Read closeout log, run-state memory, CLAUDE.md, README, PLAN.',
+      detail: `Restored skills after a <code>/loop</code>, read
+        <code>logs/claude-resume-closeout-20260926.md</code> (167 lines),
+        <code>obsidi1-analysis-run-state.md</code> (37 lines), <code>CLAUDE.md</code>
+        (93 lines), <code>reports/README.md</code> (17 lines), and
+        <code>plans/PLAN.md</code> (257 lines).
+        <br><br>
+        Reported the resume task finished and asked whether "a" meant:
+        <ul>
+          <li><strong>(1)</strong> Queue the vector benchmark for a GPU host</li>
+          <li><strong>(2)</strong> Leave it documented as-is and stop</li>
+          <li><strong>(3)</strong> Something else</li>
+        </ul>
+        Also flagged: the hourly <code>/loop</code> (cron <code>7 * * * *</code>) was still
+        active with nothing left to do.`
+    },
+    {
+      phase: 'Option 1',
+      pc: 'var(--user)',
+      type: 'user', bc: 'var(--user)', ic: '❯',
+      title: '"1"',
+      sub: 'Queue the vector benchmark for a GPU host.',
+      detail: `The user chose option 1: queue the vector benchmark to run later on a GPU
+        host.`
+    },
+    {
+      phase: 'Option 1',
+      pc: 'var(--lock)',
+      type: 'agent', bc: 'var(--agent)', ic: '⌕',
+      title: 'Confirmed the constraint: can\'t run here, can\'t edit the file',
+      sub: '--no-gpu is hardcoded and hash-bound.',
+      detail: `Pulled the exact invocation details. Confirmed:
+        <ul>
+          <li>The committed <code>run_retrieval_benchmark.py</code> hardcodes <code>--no-gpu</code> on <code>vsearch</code> (lines 64–65)</li>
+          <li>That file is <strong>hash-bound</strong> in the release artifact manifest — cannot be edited</li>
+          <li>There is a threshold block for <code>qmd_vector</code> in the fixture</li>
+        </ul>
+        So "queue it" became: create a one-command, self-contained runbook + wrapper that
+        closes the gate the moment it's run on a GPU host.`
+    },
+    {
+      phase: 'Option 1',
+      pc: 'var(--closed)',
+      type: 'artifact', bc: 'var(--artifact)', ic: '✦',
+      title: 'Wrote bin/run_vector_benchmark_gpu.py',
+      sub: '58 lines · sibling driver that imports the locked parent.',
+      detail: `A GPU-capable driver. The committed <code>run_retrieval_benchmark.py</code>
+        hardcodes <code>--no-gpu</code> and is hash-bound, so this sibling
+        <strong>imports it</strong> and reuses its scoring + acceptance logic
+        <em>verbatim</em> — swapping ONLY the <code>vsearch</code> call for a GPU-enabled
+        one (no <code>--no-gpu</code>). Defaults <code>--backends</code> to
+        <code>qmd_vector</code>.`
+    },
+    {
+      phase: 'Option 1',
+      pc: 'var(--closed)',
+      type: 'artifact', bc: 'var(--artifact)', ic: '✦',
+      title: 'Wrote bin/close_vector_benchmark_gate.sh',
+      sub: '66 lines · one-command wrapper with preflight.',
+      detail: `A wrapper that does preflight (qmd on PATH, index present, venv activate,
+        warmup query), runs the driver against
+        <code>retrieval/bilingual-fixture.json</code> + <code>/root/.cache/qmd/index.sqlite</code>,
+        writes <code>retrieval/results/benchmark-qmd_vector.json</code>, then prints the
+        acceptance <code>release_gate</code> verdict. Env overrides:
+        <code>FIXTURE=… DATABASE=… OUTPUT=… TIMEOUT=…</code>`
+    },
+    {
+      phase: 'Option 1',
+      pc: 'var(--blocked)',
+      type: 'artifact', bc: 'var(--artifact)', ic: '✎',
+      title: 'Updated closeout doc + project memory',
+      sub: 'Recorded the runbook with the manual-reconciliation warning.',
+      detail: `Added 36 lines to <code>logs/claude-resume-closeout-20260926.md</code>
+        documenting the runbook, the acceptance thresholds, and the manual-reconciliation
+        reminder: <strong>do NOT re-run <code>bin/verify_release.py</code></strong> — it
+        re-enumerates the Windows vault against the July baseline and would flip the
+        valid immutability receipt to a spurious FAIL.
+        <br><br>
+        Also updated the project memory so the runbook is discoverable next session.`
+    },
+    {
+      phase: 'Option 1',
+      pc: 'var(--agent)',
+      type: 'agent', bc: 'var(--agent)', ic: '✓',
+      title: 'Final summary — offered to cancel /loop',
+      sub: 'Smoke-tested wiring only; no query ran on CPU.',
+      detail: `Reported: bash <code>-n</code> clean, driver imports and arg-wires cleanly.
+        Smoke-tested wiring only — no query ran, so no
+        <code>benchmark-qmd_vector.json</code> was produced on CPU (confirmed the results
+        dir still holds only the July BM25/FTS file).
+        <br><br>
+        Flagged again: the hourly <code>/loop</code> (cron <code>7 * * * *</code>) is still
+        running with nothing left to do here — offered to cancel it.`
+    },
+  ];
+
+  /* ============ RENDER TIMELINE ============ */
+  const timeline = document.getElementById('timeline');
+  let currentPhase = '';
+
+  beats.forEach((b, i) => {
+    if (b.phase !== currentPhase) {
+      currentPhase = b.phase;
+      const group = document.createElement('div');
+      group.className = 'phase-group';
+      group.innerHTML = `
+        <div class="phase-label" style="--pc:${b.pc}">
+          <span>${b.phase}</span>
+          <span class="pl-line"></span>
+        </div>
+      `;
+      timeline.appendChild(group);
+    }
+
+    const beat = document.createElement('div');
+    beat.className = 'beat';
+    beat.style.setProperty('--bc', b.bc);
+    beat.dataset.index = i;
+    beat.innerHTML = `
+      <div class="beat-head">
+        <div class="beat-ic ${b.type === 'block' ? 'pulse' : ''}">${b.ic}</div>
+        <div class="beat-main">
+          <div class="beat-top">
+            <span class="beat-type">${b.type}</span>
+          </div>
+          <div class="beat-title">${b.title}</div>
+          <div class="beat-sub">${b.sub}</div>
+        </div>
+        <div class="beat-chev">▶</div>
+      </div>
+      <div class="beat-detail">
+        <div class="beat-detail-inner">${b.detail}</div>
+      </div>
+    `;
+
+    beat.addEventListener('click', () => {
+      const isOpen = beat.classList.contains('open');
+      document.querySelectorAll('.beat').forEach(x => x.classList.remove('open'));
+      if (!isOpen) beat.classList.add('open');
+    });
+
+    timeline.appendChild(beat);
+  });
+
+  /* ============ RENDER SKIM NAV ============ */
+  const skimNav = document.getElementById('skimNav');
+  let lastPhase = '';
+  beats.forEach((b, i) => {
+    if (b.phase !== lastPhase && lastPhase !== '') {
+      const sep = document.createElement('span');
+      sep.className = 'skim-sep';
+      skimNav.appendChild(sep);
+    }
+    lastPhase = b.phase;
+
+    const chip = document.createElement('button');
+    chip.className = 'skim-chip';
+    chip.dataset.type = b.type;
+    const short = b.title.length > 36 ? b.title.slice(0, 34).trim() + '…' : b.title;
+    chip.innerHTML = `<span class="d"></span>${short}`;
+    chip.addEventListener('click', () => {
+      const target = document.querySelector(`.beat[data-index="${i}"]`);
+      if (!target) return;
+      document.querySelectorAll('.beat').forEach(x => x.classList.remove('open'));
+      target.classList.add('open');
+      target.scrollIntoView({behavior: 'smooth', block: 'center'});
+      target.style.transition = 'box-shadow .3s';
+      target.style.boxShadow = `0 0 0 3px ${b.bc}33`;
+      setTimeout(() => { target.style.boxShadow = ''; }, 900);
+    });
+    skimNav.appendChild(chip);
+  });
+
+  /* ============ OPEN THE BLOCKED GATE BEAT BY DEFAULT ============ */
+  const blockedBeat = document.querySelector('.beat[data-index="1"]');
+  if (blockedBeat) {
+    blockedBeat.classList.add('open');
+  }
+</script>
+</body>
+</html>

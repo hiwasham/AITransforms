@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lead to Sale · Level 1 Core Process SOP</title>
+<style>
+  :root{
+    --ink:#05070b;--ink2:#0a0e14;--panel:#0f141c;--panel2:#141b25;
+    --line:#1b2430;--txt:#e9eef6;--mut:#7b8798;--mut2:#4d5666;
+    --gold:245,190,60;--cyan:34,211,238;--violet:167,139,250;
+    --emerald:52,211,153;--rose:244,63,94;--slate:120,132,148;
+    --accent:245,190,60;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{background:var(--ink);color:var(--txt);font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;overflow:hidden;line-height:1.5}
+
+  .bg{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+  .bg::before{content:"";position:absolute;inset:-30%;
+    background:
+      radial-gradient(40% 35% at 12% 8%, rgba(var(--accent),.10), transparent 60%),
+      radial-gradient(38% 38% at 90% 85%, rgba(var(--violet),.07), transparent 65%);
+    transition:background 1.2s ease;filter:blur(26px)}
+  .bg::after{content:"";position:absolute;inset:0;
+    background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+                     linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+    background-size:48px 48px;
+    mask-image:radial-gradient(75% 60% at 50% 35%,#000 25%,transparent 100%)}
+
+  .app{position:relative;z-index:1;display:grid;
+    grid-template-columns:252px 1fr;height:100vh}
+
+  /* ============ LEFT RAIL ============ */
+  .rail{border-right:1px solid var(--line);
+    background:linear-gradient(180deg,rgba(14,18,24,.92),rgba(9,12,16,.92));
+    backdrop-filter:blur(14px);display:flex;flex-direction:column;
+    padding:18px 12px 14px;gap:14px;min-height:0}
+
+  .brand{display:flex;align-items:center;gap:11px;padding:2px 6px 14px;
+    border-bottom:1px solid var(--line)}
+  .logo{width:36px;height:36px;border-radius:11px;display:grid;place-items:center;
+    font:700 15px/1 var(--mono);color:#06090d;
+    background:linear-gradient(140deg,rgb(var(--accent)),rgba(var(--accent),.55));
+    box-shadow:0 0 22px -4px rgba(var(--accent),.7);
+    transition:background .6s ease,box-shadow .6s ease}
+  .brand-name{font-size:13px;font-weight:650;letter-spacing:.01em}
+  .brand-sub{font:400 9.5px/1.4 var(--mono);color:var(--mut2);
+    letter-spacing:.1em;text-transform:uppercase}
+
+  .rail-label{font:600 9.5px/1 var(--mono);letter-spacing:.14em;
+    text-transform:uppercase;color:var(--mut2);padding:0 8px;margin-bottom:2px}
+
+  .nav{display:flex;flex-direction:column;gap:3px;overflow-y:auto;
+    flex:1;min-height:0;padding-right:2px}
+  .nav::-webkit-scrollbar{width:4px}
+  .nav::-webkit-scrollbar-thumb{background:#222a36;border-radius:9px}
+
+  .nav-item{all:unset;cursor:pointer;position:relative;
+    display:flex;align-items:center;gap:11px;
+    padding:9px 10px 9px 12px;border-radius:10px;
+    transition:background .18s,color .18s;color:var(--mut)}
+  .nav-item:hover{background:rgba(255,255,255,.035);color:#c3ccdc}
+  .nav-item.active{background:rgba(var(--pc),.10);color:var(--txt)}
+  .nav-item.active::before{content:"";position:absolute;left:0;top:50%;
+    translate:0 -50%;width:3px;height:18px;border-radius:9px;
+    background:rgb(var(--pc));box-shadow:0 0 12px 0 rgba(var(--pc),.9)}
+  .nav-num{flex:0 0 24px;width:24px;height:24px;border-radius:7px;
+    display:grid;place-items:center;font:700 11px/1 var(--mono);
+    background:rgba(255,255,255,.05);color:var(--mut2);
+    border:1px solid transparent;transition:.3s}
+  .nav-item.active .nav-num{background:rgba(var(--pc),.2);color:rgb(var(--pc));
+    border-color:rgba(var(--pc),.4)}
+  .nav-item.done .nav-num{background:rgb(var(--pc));color:var(--ink);
+    border-color:rgb(var(--pc))}
+  .nav-item.done .nav-num::after{content:"✓";font-size:10px}
+  .nav-item.done .nav-num span{display:none}
+  .nav-txt{display:flex;flex-direction:column;gap:1px;min-width:0;flex:1}
+  .nav-name{font-size:12px;font-weight:560;letter-spacing:.01em;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .nav-sub{font:400 9.5px/1.3 var(--mono);color:var(--mut2);letter-spacing:.04em}
+  .nav-item.active .nav-sub{color:rgb(var(--pc))}
+
+  .rail-foot{border-top:1px solid var(--line);padding-top:12px;
+    display:flex;flex-direction:column;gap:10px}
+  .overall{display:flex;flex-direction:column;gap:7px;padding:0 8px}
+  .overall-row{display:flex;justify-content:space-between;align-items:baseline}
+  .overall-label{font:500 9.5px/1 var(--mono);letter-spacing:.08em;
+    text-transform:uppercase;color:var(--mut2)}
+  .overall-val{font:700 15px/1 var(--mono);color:rgb(var(--accent));
+    letter-spacing:-.02em}
+  .overall-bar{height:4px;border-radius:99px;background:#171e28;overflow:hidden}
+  .overall-fill{height:100%;width:0;border-radius:99px;
+    background:linear-gradient(90deg,rgba(var(--accent),.5),rgb(var(--accent)));
+    box-shadow:0 0 12px -2px rgba(var(--accent),.9);
+    transition:width .5s cubic-bezier(.22,.75,.3,1)}
+  .btn-demo{all:unset;cursor:pointer;text-align:center;
+    font:600 10px/1 var(--mono);letter-spacing:.09em;text-transform:uppercase;
+    padding:10px 12px;border-radius:9px;color:rgb(var(--accent));
+    background:rgba(var(--accent),.10);border:1px solid rgba(var(--accent),.3);
+    transition:.2s}
+  .btn-demo:hover{background:rgba(var(--accent),.18)}
+  .btn-demo.playing{color:#0a0e13;background:rgb(var(--accent))}
+
+  /* ============ MAIN ============ */
+  .canvas{display:flex;flex-direction:column;min-width:0;min-height:0}
+
+  .topbar{display:flex;align-items:center;gap:14px;
+    padding:14px 26px;border-bottom:1px solid var(--line);
+    background:rgba(9,12,16,.55);backdrop-filter:blur(10px)}
+  .crumb{flex:1;min-width:0;display:flex;align-items:center;gap:11px;
+    font:500 12px/1.3 var(--mono);color:var(--mut);letter-spacing:.02em;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .crumb b{color:#dfe7f4;font-weight:600}
+  .crumb .sep{color:var(--mut2)}
+  .crumb .pill{font:600 10px/1 var(--mono);letter-spacing:.08em;
+    text-transform:uppercase;padding:5px 9px;border-radius:7px;
+    background:rgba(var(--accent),.12);color:rgb(var(--accent));
+    border:1px solid rgba(var(--accent),.28)}
+
+  .view-tabs{display:flex;gap:4px;padding:4px;border-radius:10px;
+    background:rgba(255,255,255,.03);border:1px solid var(--line)}
+  .view-tabs button{all:unset;cursor:pointer;
+    font:500 10.5px/1 var(--mono);letter-spacing:.06em;text-transform:lowercase;
+    padding:7px 12px;border-radius:7px;color:var(--mut);transition:.18s}
+  .view-tabs button:hover{color:#c3ccdc}
+  .view-tabs button.on{color:#0a0e13;background:rgb(var(--accent))}
+
+  .stage{flex:1;min-height:0;overflow-y:auto;padding:26px 26px 34px;
+    display:flex;flex-direction:column;gap:18px}
+  .stage::-webkit-scrollbar{width:8px}
+  .stage::-webkit-scrollbar-thumb{background:#1d2531;border-radius:9px}
+  .stage::-webkit-scrollbar-thumb:hover{background:#28323f}
+
+  /* ============ QUESTION WIZARD ============ */
+  .q-card{border-radius:18px;border:1px solid var(--line);
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    padding:22px 24px;position:relative;overflow:hidden;
+    animation:qIn .55s cubic-bezier(.2,.7,.3,1) both}
+  @keyframes qIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .q-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,rgb(var(--accent)),rgba(var(--accent),.15))}
+
+  .q-head{display:flex;align-items:flex-start;gap:16px;margin-bottom:18px}
+  .q-num{flex:0 0 auto;font:700 11px/1 var(--mono);letter-spacing:.09em;
+    padding:6px 9px;border-radius:7px;
+    background:rgba(var(--accent),.14);color:rgb(var(--accent));
+    border:1px solid rgba(var(--accent),.3)}
+  .q-title{font:650 20px/1.3 var(--sans);letter-spacing:-.02em;flex:1;min-width:0}
+  .q-title small{display:block;font:400 11.5px/1.5 var(--mono);
+    color:var(--mut2);letter-spacing:.03em;margin-top:6px}
+
+  .loop{display:flex;align-items:stretch;gap:0;margin-bottom:20px;
+    padding:12px 14px;border-radius:13px;
+    background:rgba(255,255,255,.025);border:1px solid var(--line);overflow-x:auto}
+  .loop::-webkit-scrollbar{height:0}
+  .step-chip{flex:1;min-width:120px;position:relative;
+    display:flex;align-items:center;gap:10px;padding:8px 12px 8px 10px;
+    border-radius:9px;transition:.3s}
+  .step-chip + .step-chip{margin-left:6px}
+  .step-chip .dot{width:22px;height:22px;flex:0 0 22px;border-radius:7px;
+    display:grid;place-items:center;font:700 10px/1 var(--mono);
+    background:rgba(255,255,255,.05);color:var(--mut2);
+    border:1px solid transparent;transition:.35s}
+  .step-chip .st{font:600 10.5px/1 var(--mono);letter-spacing:.04em;
+    color:var(--mut);transition:.3s;text-transform:lowercase}
+  .step-chip.active{background:rgba(var(--accent),.08)}
+  .step-chip.active .dot{background:rgba(var(--accent),.2);color:rgb(var(--accent));
+    border-color:rgba(var(--accent),.45);
+    animation:stepPulse 1.8s ease-in-out infinite}
+  @keyframes stepPulse{
+    0%,100%{box-shadow:0 0 0 0 rgba(var(--accent),.45)}
+    60%{box-shadow:0 0 0 8px rgba(var(--accent),0)}}
+  .step-chip.active .st{color:rgb(var(--accent))}
+  .step-chip.done .dot{background:rgba(52,211,153,.15);color:#34d399;
+    border-color:rgba(52,211,153,.4)}
+  .step-chip.done .st{color:#7fdcb6}
+  .step-chip .arrow{position:absolute;right:-3px;top:50%;translate:0 -50%;
+    color:var(--mut2);font-size:11px;z-index:2;pointer-events:none;
+    background:var(--panel);padding:0 2px}
+  .step-chip:last-child .arrow{display:none}
+
+  .panel{border-radius:13px;padding:16px 18px;
+    animation:slideIn .5s cubic-bezier(.2,.7,.3,1) both}
+  @keyframes slideIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .panel.draft{background:linear-gradient(180deg,rgba(var(--accent),.07),rgba(var(--accent),.02));
+    border:1px solid rgba(var(--accent),.25)}
+  .panel.confirmed{background:linear-gradient(180deg,rgba(52,211,153,.06),rgba(52,211,153,.01));
+    border:1px solid rgba(52,211,153,.28)}
+  .panel.await{background:rgba(255,255,255,.02);border:1px dashed var(--line)}
+
+  .panel-head{display:flex;align-items:center;gap:10px;margin-bottom:11px}
+  .panel-ico{width:24px;height:24px;border-radius:7px;display:grid;place-items:center;
+    font-size:12px;flex:0 0 24px}
+  .panel.draft .panel-ico{background:rgba(var(--accent),.16);color:rgb(var(--accent))}
+  .panel.confirmed .panel-ico{background:rgba(52,211,153,.16);color:#34d399}
+  .panel.await .panel-ico{background:rgba(255,255,255,.05);color:var(--mut)}
+  .panel-ttl{font:600 10px/1 var(--mono);letter-spacing:.13em;text-transform:uppercase}
+  .panel.draft .panel-ttl{color:rgb(var(--accent))}
+  .panel.confirmed .panel-ttl{color:#4fdfa9}
+  .panel.await .panel-ttl{color:var(--mut)}
+  .panel-tag{margin-left:auto;font:500 9.5px/1 var(--mono);letter-spacing:.06em;
+    text-transform:lowercase;color:var(--mut2);
+    padding:4px 7px;border-radius:5px;background:rgba(255,255,255,.04)}
+  .panel-body{font-size:13.5px;line-height:1.65;color:#cfd8e8}
+  .panel-body b{color:#fff;font-weight:600}
+  .panel-body em{font-style:normal;color:rgb(var(--accent))}
+  .panel.confirmed .panel-body em{color:#4fdfa9}
+  .panel-body code{font-family:var(--mono);font-size:12px;color:#cfd8e8;
+    background:rgba(255,255,255,.05);padding:1.5px 6px;border-radius:5px}
+
+  .actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px;
+    animation:slideIn .5s cubic-bezier(.2,.7,.3,1) both}
+  .btn{all:unset;cursor:pointer;font:600 11px/1 var(--mono);
+    letter-spacing:.07em;text-transform:uppercase;
+    padding:10px 14px;border-radius:9px;transition:.2s;white-space:nowrap;
+    display:inline-flex;align-items:center;gap:8px}
+  .btn .bico{font-size:12px}
+  .btn-primary{color:#0a0e13;background:rgb(var(--accent));
+    box-shadow:0 0 24px -8px rgba(var(--accent),.9)}
+  .btn-primary:hover{filter:brightness(1.1)}
+  .btn-primary.pulse{animation:btnPulse 1.6s ease-in-out infinite}
+  @keyframes btnPulse{
+    0%,100%{box-shadow:0 0 0 0 rgba(var(--accent),.55)}
+    60%{box-shadow:0 0 0 10px rgba(var(--accent),0)}}
+  .btn-ghost{color:var(--mut);border:1px solid var(--line);
+    background:rgba(255,255,255,.02)}
+  .btn-ghost:hover{color:#c3ccdc;border-color:#2b3543}
+  .btn-confirm{color:#0a0e13;background:#34d399}
+  .btn-confirm:hover{filter:brightness(1.08)}
+
+  /* ============ SOP DIAGRAM ============ */
+  .sop-head{border-radius:18px;border:1px solid var(--line);
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    padding:22px 24px;position:relative;overflow:hidden;
+    animation:qIn .55s cubic-bezier(.2,.7,.3,1) both}
+  .sop-head::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,rgb(var(--gold)),rgb(var(--cyan)),rgb(var(--violet)),rgb(var(--emerald)))}
+  .sop-kicker{font:600 10px/1 var(--mono);letter-spacing:.15em;
+    text-transform:uppercase;color:rgb(var(--accent));margin-bottom:10px}
+  .sop-title{font:700 26px/1.2 var(--sans);letter-spacing:-.025em;margin-bottom:8px}
+  .sop-sub{font-size:13.5px;color:var(--mut);max-width:70ch;line-height:1.6}
+
+  .boundary{display:flex;align-items:center;gap:12px;
+    padding:12px 16px;border-radius:12px;
+    background:rgba(255,255,255,.02);border:1px dashed var(--line);
+    font:500 11px/1.4 var(--mono);color:var(--mut);letter-spacing:.03em;
+    flex-wrap:wrap}
+  .boundary .bd{display:flex;align-items:center;gap:8px}
+  .boundary .bd .d{width:8px;height:8px;border-radius:50%}
+  .boundary .out{color:var(--mut2);text-decoration:line-through;opacity:.55}
+
+  .legend{display:flex;gap:10px;flex-wrap:wrap;
+    animation:qIn .5s cubic-bezier(.2,.7,.3,1) both}
+  .legend .lg{display:flex;align-items:center;gap:8px;
+    padding:8px 12px;border-radius:9px;
+    background:rgba(255,255,255,.03);border:1px solid var(--line);
+    font:500 10.5px/1 var(--mono);letter-spacing:.04em;color:#b9c4d6}
+  .legend .lg .sw{width:10px;height:10px;border-radius:3px;background:rgb(var(--lc));
+    box-shadow:0 0 10px -1px rgba(var(--lc),.9)}
+  .legend .lg .cnt{margin-left:4px;color:var(--mut2);font-size:9.5px}
+
+  /* lanes */
+  .lane{
+    border-radius:16px;border:1px solid var(--line);
+    background:linear-gradient(180deg,rgba(var(--lc),.04),rgba(15,20,28,.6));
+    padding:16px 16px 18px;position:relative;overflow:hidden;
+    animation:qIn .55s cubic-bezier(.2,.7,.3,1) both}
+  .lane::before{content:"";position:absolute;top:0;left:0;bottom:0;width:3px;
+    background:rgb(var(--lc));opacity:.85}
+
+  .lane-head{display:flex;align-items:center;gap:11px;margin-bottom:16px}
+  .lane-num{width:28px;height:28px;flex:0 0 28px;border-radius:8px;
+    display:grid;place-items:center;font:700 11px/1 var(--mono);
+    background:rgba(var(--lc),.16);color:rgb(var(--lc));
+    border:1px solid rgba(var(--lc),.35)}
+  .lane-name{font:650 15px/1.2 var(--sans);letter-spacing:-.01em}
+  .lane-sub{font:500 10px/1.3 var(--mono);color:var(--mut2);
+    letter-spacing:.06em;text-transform:lowercase;margin-left:auto}
+
+  .lane-flow{display:flex;align-items:stretch;gap:0;
+    overflow-x:auto;padding-bottom:6px}
+  .lane-flow::-webkit-scrollbar{height:7px}
+  .lane-flow::-webkit-scrollbar-thumb{background:#1d2531;border-radius:9px}
+
+  /* required step-box structure */
+  .step-box{
+    flex:0 0 250px;min-width:250px;
+    padding:14px 15px 13px;border-radius:12px;
+    background:linear-gradient(180deg,rgba(20,27,37,.95),rgba(15,20,28,.95));
+    border:1px solid rgba(var(--lc),.28);
+    display:flex;flex-direction:column;gap:8px;
+    position:relative;transition:transform .25s,border-color .25s,box-shadow .25s;
+    animation:stepIn .55s cubic-bezier(.2,.7,.3,1) both}
+  .step-box:hover{transform:translateY(-3px);
+    border-color:rgba(var(--lc),.6);
+    box-shadow:0 18px 40px -24px rgba(var(--lc),.9)}
+  @keyframes stepIn{
+    from{opacity:0;transform:translateY(12px) scale(.97)}
+    to{opacity:1;transform:none}}
+  .step-box::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;
+    background:linear-gradient(90deg,rgba(var(--lc),.8),rgba(var(--lc),.1))}
+
+  .step-title{font:650 13px/1.35 var(--sans);letter-spacing:-.005em;color:#eef3fb}
+  .step-desc{font:400 11.5px/1.5 var(--sans);color:#a5b1c3}
+  .raci{
+    font:500 10px/1.45 var(--mono);color:#8b96a9;
+    padding:7px 9px;border-radius:8px;
+    background:rgba(var(--lc),.07);
+    border:1px solid rgba(var(--lc),.18);
+    letter-spacing:.015em;
+  }
+  .raci b{color:rgb(var(--lc));font-weight:700}
+  .step-num{
+    position:absolute;top:11px;right:12px;
+    font:700 9px/1 var(--mono);letter-spacing:.06em;
+    color:rgba(var(--lc),.75)}
+
+  /* connector arrows */
+  .connector{
+    flex:0 0 34px;display:grid;place-items:center;
+    position:relative;align-self:center;height:2px;
+  }
+  .connector::before{
+    content:"";position:absolute;left:6px;right:10px;top:50%;translate:0 -50%;
+    height:2px;border-radius:2px;
+    background:linear-gradient(90deg,rgba(var(--lc),.15),rgba(var(--lc),.6));
+  }
+  .connector::after{
+    content:"";position:absolute;right:6px;top:50%;translate:0 -50%;
+    width:0;height:0;
+    border-left:7px solid rgb(var(--lc));
+    border-top:5px solid transparent;
+    border-bottom:5px solid transparent;
+  }
+  .connector .flow{
+    position:absolute;left:0;top:50%;translate:0 -50%;
+    width:6px;height:6px;border-radius:50%;
+    background:#fff;
+    box-shadow:0 0 10px 0 rgba(var(--lc),.95);
+    animation:flowX 2.6s cubic-bezier(.5,.05,.55,.95) infinite;
+    opacity:0;
+  }
+  @keyframes flowX{
+    0%{left:6px;opacity:0}
+    15%{opacity:1}
+    85%{opacity:1}
+    100%{left:calc(100% - 16px);opacity:0}
+  }
+
+  /* between-lane down arrow */
+  .lane-arrow{
+    display:flex;justify-content:center;align-items:center;
+    height:34px;position:relative;
+    animation:qIn .5s cubic-bezier(.2,.7,.3,1) both}
+  .lane-arrow::before{
+    content:"";width:2px;height:100%;
+    background:linear-gradient(180deg,rgba(255,255,255,.2),rgba(255,255,255,.05));
+    position:relative;
+  }
+  .lane-arrow .lbl{
+    position:absolute;left:50%;translate:-50% 0;
+    font:500 9.5px/1 var(--mono);color:var(--mut2);letter-spacing:.14em;
+    text-transform:uppercase;
+    background:var(--ink);padding:3px 10px;border-radius:6px;
+    border:1px solid var(--line);white-space:nowrap;
+  }
+  .lane-arrow .lbl b{color:var(--mut);font-weight:600}
+
+  /* cross-cutting lane */
+  .lane.cross{--lc:var(--slate);
+    background:linear-gradient(180deg,rgba(var(--slate),.05),rgba(15,20,28,.6))}
+  .lane.cross .step-box{border-style:dashed}
+
+  /* ============ CODE VIEW ============ */
+  .code-wrap{border-radius:16px;border:1px solid var(--line);
+    background:#0a0e13;overflow:hidden;
+    animation:qIn .5s cubic-bezier(.2,.7,.3,1) both}
+  .code-bar{display:flex;align-items:center;gap:10px;
+    padding:12px 16px;border-bottom:1px solid var(--line);
+    background:rgba(255,255,255,.02)}
+  .code-bar .fname{font:500 11px/1 var(--mono);color:var(--mut);letter-spacing:.05em}
+  .code-bar .tagx{margin-left:auto;
+    font:500 9.5px/1 var(--mono);letter-spacing:.09em;text-transform:uppercase;
+    color:rgb(var(--accent));background:rgba(var(--accent),.12);
+    padding:5px 8px;border-radius:6px;border:1px solid rgba(var(--accent),.28)}
+  .code-bar .copy-btn{all:unset;cursor:pointer;
+    font:600 10px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;
+    padding:6px 10px;border-radius:7px;
+    color:var(--mut);border:1px solid var(--line);transition:.2s}
+  .code-bar .copy-btn:hover{color:#c3ccdc;border-color:#2b3543}
+  .code-bar .copy-btn.ok{color:#34d399;border-color:rgba(52,211,153,.4);
+    background:rgba(52,211,153,.08)}
+  pre.code{padding:18px;font:400 11.5px/1.75 var(--mono);color:#93a1b8;
+    overflow-x:auto;max-height:70vh}
+  pre.code::-webkit-scrollbar{width:8px;height:8px}
+  pre.code::-webkit-scrollbar-thumb{background:#1d2531;border-radius:9px}
+  pre.code .t{color:#7ba4ff}
+  pre.code .a{color:#5fd39a}
+  pre.code .c{color:#f5be3c}
+  pre.code .p{color:#c792ea}
+
+  /* ============ STATUS BAR ============ */
+  .statusbar{display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+    padding:10px 26px;border-top:1px solid var(--line);
+    background:rgba(9,12,16,.6);
+    font:400 10.5px/1 var(--mono);color:var(--mut2);letter-spacing:.03em}
+  .statusbar b{color:var(--mut);font-weight:500}
+  .statusbar .right{margin-left:auto;display:flex;align-items:center;gap:14px;
+    flex-wrap:wrap}
+  .statusbar .chip{color:rgb(var(--accent));background:rgba(var(--accent),.1);
+    padding:4px 7px;border-radius:5px;font-size:9.5px;letter-spacing:.05em}
+
+  @media (max-width:900px){
+    .app{grid-template-columns:1fr;grid-template-rows:auto 1fr}
+    .rail{flex-direction:column;border-right:none;
+      border-bottom:1px solid var(--line);padding:12px 12px 0;gap:10px}
+    .brand{padding-bottom:10px}
+    .nav{flex-direction:row;overflow-x:auto;overflow-y:hidden;
+      padding-bottom:12px;gap:6px}
+    .nav-item{flex:0 0 auto;padding:8px 12px}
+    .nav-item.active::before{display:none}
+    .nav-txt{flex-direction:row;align-items:center;gap:8px}
+    .nav-sub{display:none}
+    .rail-foot{display:none}
+    .stage{padding:18px 16px 22px}
+    .q-card{padding:18px 16px}
+    .q-title{font-size:17px}
+    .topbar{padding:12px 16px;flex-wrap:wrap}
+    .view-tabs{order:2;width:100%}
+    .statusbar{padding:10px 16px}
+    .statusbar .right{margin-left:0}
+    .step-box{flex-basis:220px;min-width:220px}
+  }
+</style>
+</head>
+<body>
+
+<div class="bg"></div>
+
+<div class="app">
+
+  <!-- =============== LEFT RAIL =============== -->
+  <aside class="rail">
+    <div class="brand">
+      <div class="logo">SOP</div>
+      <div>
+        <div class="brand-name">Lead → Sale</div>
+        <div class="brand-sub">core process</div>
+      </div>
+    </div>
+
+    <div class="rail-label">Discovery</div>
+    <div class="nav" id="nav"></div>
+
+    <div class="rail-foot">
+      <div class="overall">
+        <div class="overall-row">
+          <span class="overall-label">Progress</span>
+          <span class="overall-val" id="overallPct">0%</span>
+        </div>
+        <div class="overall-bar"><div class="overall-fill" id="overallFill"></div></div>
+      </div>
+      <button class="btn-demo" id="demoBtn">▶ run demo</button>
+    </div>
+  </aside>
+
+  <!-- =============== MAIN CANVAS =============== -->
+  <main class="canvas">
+    <header class="topbar">
+      <div class="crumb" id="crumb"></div>
+      <div class="view-tabs" id="viewTabs">
+        <button data-view="flow" class="on">process diagram</button>
+        <button data-view="code">raw html</button>
+      </div>
+    </header>
+
+    <section class="stage" id="stage"></section>
+
+    <footer class="statusbar" id="statusbar">
+      <span>author <b>Level 1 SOP</b></span>
+      <span class="right">
+        <span><b>16</b> process steps</span>
+        <span class="chip" id="raciChip">RACI · 4 lanes</span>
+      </span>
+    </footer>
+  </main>
+
+</div>
+
+<script>
+/* =========================================================
+   COMPANY CONTEXT — Bayan (from Master Prompt)
+   ========================================================= */
+const COMPANY = "Bayan";
+
+/* =========================================================
+   THE 3 KEY QUESTIONS
+   ========================================================= */
+const QUESTIONS = [
+  {
+    id:"q1",
+    nav:"Sales model",
+    num:"1",
+    color:"245,190,60",
+    title:"What's your primary sales model?",
+    sub:"Inside sales · field sales · channel partners · self-serve?",
+    draft:`Digital-first <b>inside sales</b>, currently founder-led. The primary
+      channels are <b>Telegram (@BayanMedEd)</b> and email. The target model is a
+      hybrid inside-sales motion — <b>SDR</b> qualifies and books, <b>AE</b> runs
+      discovery and closes. No field sales, no channel partners yet; self-serve
+      subscriptions sit alongside but are not the focus of this SOP.`,
+    confirmed:`Digital-first inside sales. SDR + AE hybrid target state.
+      Telegram + email as primary channels. No field or channel sales.`,
+    insight:`Inside sales means the process can be fully instrumented with
+      Telegram, email, and CRM — no travel or territory logic to design for.
+      It also means the SDR layer is the highest-leverage first hire.`
+  },
+  {
+    id:"q2",
+    nav:"Cycle & deal size",
+    num:"2",
+    color:"34,211,238",
+    title:"What's your typical sales cycle length and deal size?",
+    sub:"This drives how much nurturing the process needs.",
+    draft:`Average deal size is roughly <b>$220</b> with a tail up to
+      <b>$3K–$10K</b> for institutional / B2B conversations. Cycle length is
+      <b>14–21 days</b> for individual subscriptions and <b>45–60 days</b> for
+      B2B / institutional deals. The SOP needs to work for both: light-touch for
+      the sub flow, structured for the B2B flow.`,
+    confirmed:`Sub flow: 14–21 days, ~$220 ACV. B2B flow: 45–60 days,
+      $3K–$10K deal size. Dual-track SOP required.`,
+    insight:`A 14–21 day sub cycle means the SDR-to-close handoff has to be
+      tight — every extra day of latency costs roughly <b>10% close probability</b>.
+      The B2B track needs a separate, richer proposal + contract stage.`
+  },
+  {
+    id:"q3",
+    nav:"Sales roles",
+    num:"3",
+    color:"167,139,250",
+    title:"Do you have dedicated sales roles, or are they shared?",
+    sub:"Determines realistic RACI assignments.",
+    draft:`Currently <b>founder-only</b> — no dedicated SDR, AE, or Sales Manager.
+      The founder handles qualification, discovery, demos, proposals, and closing.
+      The <b>target state</b> for this SOP is: 1 SDR, 1 AE, and the founder acting
+      as Sales Manager / escalation closer for high-value deals. Marketing and
+      Clinical Leads exist and can be assigned Consulted roles.`,
+    confirmed:`Founder-only today. Target SOP state: 1 SDR · 1 AE ·
+      Founder as Sales Manager. Marketing & Clinical Leads are the Consulted parties.`,
+    insight:`Writing the SOP for the target state (not today's state) is the
+      right call — it becomes the hiring brief for the SDR and the onboarding
+      doc for the AE. RACI roles are named by <b>title</b>, not by person, so the
+      SOP survives the hire.`
+  }
+];
+
+/* =========================================================
+   THE SOP — 4 color-coded lanes + cross-cutting
+   ========================================================= */
+const LANES = [
+  {
+    id:"qualify", name:"Lead Qualification", num:"01",
+    sub:"MQL → SQL", color:"245,190,60",
+    steps:[
+      { title:"MQL Intake & Routing",
+        desc:"MQL arrives from marketing via Telegram, email, or signup form. Logged, de-duplicated, and routed to the sales queue within 15 minutes.",
+        raci:"R: Marketing Ops | A: Founder | C: Sales Lead" },
+      { title:"Lead Scoring & ICP Match",
+        desc:"Score against ICP — exam path, urgency signals, budget indicators, engagement history. Auto-flag tier-1 leads for priority outreach.",
+        raci:"R: SDR | A: Sales Lead | C: Marketing Lead" },
+      { title:"Qualification Call (MQL → SQL)",
+        desc:"Structured 10-minute qualifying call or message thread. Confirm budget, authority, need, and timeline (BANT). Promote to SQL or return to nurture.",
+        raci:"R: SDR | A: Sales Lead | C: N/A" }
+    ]
+  },
+  {
+    id:"develop", name:"Sales Development", num:"02",
+    sub:"SDR / BDR activities", color:"34,211,238",
+    steps:[
+      { title:"SDR Outreach Sequence",
+        desc:"Multi-touch cadence across Telegram + email. Five touches over ten days, personalised by exam path and content already consumed.",
+        raci:"R: SDR | A: Sales Lead | C: Marketing Lead" },
+      { title:"Enablement Asset Delivery",
+        desc:"Send the relevant case study, clinician-reviewed article, or exam-path guide matched to the lead's stated goal. No generic PDF dumps.",
+        raci:"R: SDR | A: Sales Lead | C: Clinical Lead" },
+      { title:"Discovery Call Booking",
+        desc:"Book the discovery call on the AE calendar. Send a pre-call brief with lead context, scoring, and full content history.",
+        raci:"R: SDR | A: Sales Lead | C: N/A" }
+    ]
+  },
+  {
+    id:"engage", name:"Sales Engagement", num:"03",
+    sub:"Discovery → proposal", color:"167,139,250",
+    steps:[
+      { title:"Discovery Call",
+        desc:"Structured 30-minute discovery. Uncover pain, goals, decision process, and success criteria. Confirm budget and timeline.",
+        raci:"R: AE | A: Sales Lead | C: Clinical Lead" },
+      { title:"Needs Assessment & Gap Analysis",
+        desc:"Document current state vs. target state. Map to product capabilities. Score fit and flag any clinical-content needs.",
+        raci:"R: AE | A: Sales Lead | C: Clinical Lead" },
+      { title:"Demo / Presentation Delivery",
+        desc:"Tailored demo built around the lead's exam path and weak areas. Show the clinician-review workflow, not just features.",
+        raci:"R: AE | A: Sales Lead | C: Product Lead" },
+      { title:"Proposal Creation",
+        desc:"Generate proposal from the standard template. Apply the correct pricing tier; no ad-hoc pricing without written approval.",
+        raci:"R: AE | A: Sales Lead | C: Finance" },
+      { title:"Objection Handling",
+        desc:"Address price, timing, and credibility objections using documented responses. Loop in Clinical Lead for content-trust objections.",
+        raci:"R: AE | A: Sales Lead | C: Clinical Lead" }
+    ]
+  },
+  {
+    id:"close", name:"Closing Activities", num:"04",
+    sub:"Negotiation → closed-won", color:"52,211,153",
+    steps:[
+      { title:"Negotiation & Pricing Approval",
+        desc:"Final terms. Any discount beyond the guardrail escalates to the Founder for approval before the contract goes out.",
+        raci:"R: AE | A: Founder/CEO | C: Finance" },
+      { title:"Contract Management & Signature",
+        desc:"Send contract via e-signature, collect signature, verify payment method. Handle any redlines with Legal.",
+        raci:"R: AE | A: Founder/CEO | C: Legal" },
+      { title:"Closed-Won & Handoff",
+        desc:"Mark the deal closed-won in the CRM. Trigger onboarding sequence and notify Customer Success within 24 hours.",
+        raci:"R: AE | A: Founder/CEO | C: CS Lead" }
+    ]
+  }
+];
+
+const CROSS_LANE = {
+  id:"cross", name:"Cross-Cutting", num:"05",
+  sub:"Runs across all lanes", color:"120,132,148",
+  steps:[
+    { title:"Pipeline Management",
+      desc:"Weekly pipeline review. Forecast update, stage hygiene, stale-deal triage. Runs every Monday without exception.",
+      raci:"R: Sales Lead | A: Founder/CEO | C: N/A" },
+    { title:"Sales Coaching",
+      desc:"Call reviews, script refinement, skill development. Bi-weekly 1:1s plus a monthly team session.",
+      raci:"R: Sales Lead | A: Founder/CEO | C: N/A" }
+  ]
+};
+
+/* =========================================================
+   STATE
+   ========================================================= */
+const state = {
+  view:"questions",
+  qIdx:0,
+  confirmed:new Set(),
+  viewMode:"flow",
+  demoPlaying:false,
+  demoTimeout:null
+};
+
+/* =========================================================
+   HELPERS
+   ========================================================= */
+const $ = id => document.getElementById(id);
+const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+
+/* =========================================================
+   RENDER — nav
+   ========================================================= */
+function renderNav(){
+  const nav = $('nav');
+  let html = "";
+
+  QUESTIONS.forEach((q, i) => {
+    const isActive = state.view === 'questions' && state.qIdx === i;
+    const done = state.confirmed.has(q.id);
+    html += `
+      <button class="nav-item ${isActive?'active':''} ${done?'done':''}"
+              data-kind="q" data-i="${i}" style="--pc:${q.color}">
+        <span class="nav-num">${done?'':'<span>'+q.num+'</span>'}</span>
+        <span class="nav-txt">
+          <span class="nav-name">${q.nav}</span>
+          <span class="nav-sub">question ${q.num}</span>
+        </span>
+      </button>`;
+  });
+
+  html += `<div class="rail-label" style="margin-top:8px">Artifacts</div>`;
+
+  const allDone = state.confirmed.size === QUESTIONS.length;
+  html += `
+    <button class="nav-item ${state.view==='sop'?'active':''} ${allDone?'':'disabled'}"
+            data-kind="sop" style="--pc:245,190,60"
+            ${!allDone?'style="opacity:.4;pointer-events:none"':''}>
+      <span class="nav-num">SOP</span>
+      <span class="nav-txt">
+        <span class="nav-name">Process diagram</span>
+        <span class="nav-sub">level 1 · RACI</span>
+      </span>
+    </button>`;
+
+  nav.innerHTML = html;
+
+  nav.querySelectorAll('.nav-item').forEach(btn => {
+    btn.addEventListener('click', () => {
+      stopDemo();
+      const kind = btn.dataset.kind;
+      if (kind === 'q'){
+        state.view = 'questions';
+        state.qIdx = parseInt(btn.dataset.i);
+      } else if (kind === 'sop'){
+        state.view = 'sop';
+      }
+      renderAll();
+    });
+  });
+}
+
+/* =========================================================
+   RENDER — chrome (top bar, status)
+   ========================================================= */
+function renderChrome(){
+  const el = $('crumb');
+
+  if (state.view === 'questions'){
+    const q = QUESTIONS[state.qIdx];
+    el.innerHTML = `
+      <span class="pill" style="color:rgb(${q.color});background:rgba(${q.color},.12);border-color:rgba(${q.color},.3)">Question ${q.num}</span>
+      <span class="sep">·</span>
+      <span>${q.nav}</span>`;
+  } else if (state.view === 'sop'){
+    el.innerHTML = `
+      <span class="pill">SOP</span>
+      <span class="sep">·</span>
+      <span>Lead → Sale · Level 1 Core Process</span>`;
+  }
+
+  const total = QUESTIONS.length;
+  const done = state.confirmed.size;
+  const pct = Math.round((done / total) * 100);
+  $('overallPct').textContent = pct + '%';
+  $('overallFill').style.width = pct + '%';
+
+  const totalSteps = LANES.reduce((s,l) => s + l.steps.length, 0) + CROSS_LANE.steps.length;
+  $('statusbar').innerHTML = `
+    <span>author <b>Level 1 SOP</b></span>
+    <span class="right">
+      <span><b>${totalSteps}</b> process steps</span>
+      <span class="chip">RACI · ${LANES.length} lanes</span>
+    </span>`;
+}
+
+/* =========================================================
+   RENDER — stage dispatcher
+   ========================================================= */
+function renderStage(){
+  if (state.view === 'questions') renderQuestion();
+  else if (state.view === 'sop'){
+    if (state.viewMode === 'flow') renderSOP();
+    else renderCode();
+  }
+}
+
+function renderAll(){
+  renderNav();
+  renderChrome();
+  renderStage();
+}
+
+/* =========================================================
+   RENDER — question wizard
+   ========================================================= */
+function renderQuestion(){
+  const q = QUESTIONS[state.qIdx];
+  const confirmed = state.confirmed.has(q.id);
+
+  document.documentElement.style.setProperty('--accent', q.color);
+
+  const step = confirmed ? 4 : 1;
+
+  const STEPS = [
+    { t:"answer",  s:"AI drafts from context" },
+    { t:"present", s:"show draft to you" },
+    { t:"confirm", s:"you confirm or edit" },
+    { t:"wait",    s:"wait before next" },
+    { t:"log",     s:"add to SOP spec" }
+  ];
+  const chipHTML = STEPS.map((st, i) => {
+    const cls = i < step ? 'done' : i === step ? 'active' : '';
+    const num = i < step ? '✓' : i + 1;
+    return `
+      <div class="step-chip ${cls}">
+        <span class="dot">${num}</span>
+        <span class="st">${st.t}</span>
+        <span class="arrow">→</span>
+      </div>`;
+  }).join('');
+
+  let body = `
+    <div class="panel draft" style="animation-delay:60ms">
+      <div class="panel-head">
+        <span class="panel-ico">🤖</span>
+        <span class="panel-ttl">AI draft</span>
+        <span class="panel-tag">from your master prompt</span>
+      </div>
+      <div class="panel-body">${q.draft}</div>
+    </div>`;
+
+  if (!confirmed){
+    body += `
+      <div class="actions" style="animation-delay:180ms">
+        <button class="btn btn-confirm" id="qConfirm">
+          <span class="bico">✓</span> confirm
+        </button>
+        <button class="btn btn-ghost" id="qEdit">
+          <span class="bico">✎</span> edit
+        </button>
+        <button class="btn btn-ghost" id="qReplace">
+          <span class="bico">↻</span> replace
+        </button>
+      </div>`;
+  } else {
+    body += `
+      <div class="panel confirmed" style="animation-delay:100ms">
+        <div class="panel-head">
+          <span class="panel-ico">✓</span>
+          <span class="panel-ttl">confirmed</span>
+          <span class="panel-tag">locked for SOP</span>
+        </div>
+        <div class="panel-body">${q.confirmed}</div>
+      </div>
+
+      <div class="panel draft" style="animation-delay:220ms">
+        <div class="panel-head">
+          <span class="panel-ico">💡</span>
+          <span class="panel-ttl">why this matters</span>
+          <span class="panel-tag">SOP design signal</span>
+        </div>
+        <div class="panel-body">${q.insight}</div>
+      </div>
+
+      <div class="actions" style="animation-delay:320ms">
+        <button class="btn btn-primary ${state.confirmed.size===QUESTIONS.length?'pulse':''}"
+                id="qNext">
+          <span class="bico">→</span>
+          ${state.confirmed.size===QUESTIONS.length ? 'generate SOP' : 'next question'}
+        </button>
+      </div>`;
+  }
+
+  $('stage').innerHTML = `
+    <div class="q-card">
+      <div class="q-head">
+        <span class="q-num">Q${q.num}</span>
+        <h2 class="q-title">${q.title}
+          <small>${q.sub}</small>
+        </h2>
+      </div>
+      <div class="loop">${chipHTML}</div>
+      ${body}
+    </div>`;
+
+  wireQuestion(q);
+}
+
+function wireQuestion(q){
+  const confirm = $('qConfirm');
+  if (confirm) confirm.addEventListener('click', () => {
+    stopDemo();
+    state.confirmed.add(q.id);
+    renderAll();
+  });
+
+  const edit = $('qEdit');
+  if (edit) edit.addEventListener('click', () => {
+    stopDemo();
+    state.confirmed.add(q.id);
+    renderAll();
+  });
+
+  const replace = $('qReplace');
+  if (replace) replace.addEventListener('click', () => {
+    stopDemo();
+    state.confirmed.add(q.id);
+    renderAll();
+  });
+
+  const next = $('qNext');
+  if (next) next.addEventListener('click', () => {
+    stopDemo();
+    if (state.confirmed.size === QUESTIONS.length){
+      state.view = 'sop';
+      state.viewMode = 'flow';
+    } else {
+      const nextUnconfirmed = QUESTIONS.findIndex(x => !state.confirmed.has(x.id));
+      if (nextUnconfirmed !== -1){
+        state.qIdx = nextUnconfirmed;
+      } else if (state.qIdx < QUESTIONS.length - 1){
+        state.qIdx++;
+      }
+    }
+    renderAll();
+  });
+}
+
+/* =========================================================
+   RENDER — SOP diagram
+   ========================================================= */
+function renderSOP(){
+  document.documentElement.style.setProperty('--accent', '245,190,60');
+
+  // boundary strip
+  const boundary = `
+    <div class="boundary">
+      <span class="bd"><span class="d" style="background:rgb(var(--gold))"></span><b style="color:#e9eef6">START:</b> MQL received</span>
+      <span class="out">Market → Lead</span>
+      <span class="bd" style="margin-left:auto">
+        <b style="color:#e9eef6">END:</b> Closed-Won contract
+        <span class="d" style="background:rgb(var(--emerald))"></span>
+      </span>
+      <span class="out">Sale → Delivery</span>
+    </div>`;
+
+  // legend
+  const legend = `
+    <div class="legend">
+      ${LANES.map(l => `
+        <div class="lg" style="--lc:${l.color}">
+          <span class="sw"></span>
+          ${l.name}
+          <span class="cnt">${l.steps.length} steps</span>
+        </div>`).join('')}
+      <div class="lg" style="--lc:${CROSS_LANE.color}">
+        <span class="sw"></span>
+        ${CROSS_LANE.name}
+        <span class="cnt">${CROSS_LANE.steps.length} steps</span>
+      </div>
+    </div>`;
+
+  // lanes
+  const lanesHTML = LANES.map((lane, li) => {
+    const stepsHTML = lane.steps.map((s, si) => {
+      const num = String(li+1).padStart(2,'0') + '.' + (si+1);
+      const step = `
+        <div class="step-box" style="animation-delay:${(li*3+si)*70 + 180}ms">
+          <span class="step-num">${num}</span>
+          <div class="step-title">${esc(s.title)}</div>
+          <div class="step-desc">${esc(s.desc)}</div>
+          <div class="raci">${raciHTML(s.raci)}</div>
+        </div>`;
+      const connector = si < lane.steps.length - 1
+        ? `<div class="connector" style="--lc:${lane.color}">
+             <span class="flow" style="animation-delay:${si*0.4}s"></span>
+           </div>`
+        : '';
+      return step + connector;
+    }).join('');
+
+    const laneEl = `
+      <div class="lane" style="--lc:${lane.color};animation-delay:${li*90+60}ms">
+        <div class="lane-head">
+          <span class="lane-num">${lane.num}</span>
+          <span class="lane-name">${lane.name}</span>
+          <span class="lane-sub">${lane.sub}</span>
+        </div>
+        <div class="lane-flow">${stepsHTML}</div>
+      </div>`;
+
+    // down arrow between lanes
+    const arrow = li < LANES.length - 1
+      ? `<div class="lane-arrow" style="animation-delay:${li*90+120}ms">
+           <span class="lbl">${li === 0 ? 'qualified → develop' : li === 1 ? 'booked → engage' : 'proposal → close'}</span>
+         </div>`
+      : '';
+
+    return laneEl + arrow;
+  }).join('');
+
+  // cross-cutting lane
+  const crossSteps = CROSS_LANE.steps.map((s, si) => {
+    const num = 'X.' + (si+1);
+    const step = `
+      <div class="step-box" style="animation-delay:${(LANES.length*3+si)*70 + 200}ms">
+        <span class="step-num">${num}</span>
+        <div class="step-title">${esc(s.title)}</div>
+        <div class="step-desc">${esc(s.desc)}</div>
+        <div class="raci">${raciHTML(s.raci)}</div>
+      </div>`;
+    const connector = si < CROSS_LANE.steps.length - 1
+      ? `<div class="connector" style="--lc:${CROSS_LANE.color}">
+           <span class="flow" style="animation-delay:${si*0.4}s"></span>
+         </div>`
+      : '';
+    return step + connector;
+  }).join('');
+
+  const crossLane = `
+    <div class="lane cross" style="--lc:${CROSS_LANE.color};animation-delay:${LANES.length*90+120}ms">
+      <div class="lane-head">
+        <span class="lane-num">${CROSS_LANE.num}</span>
+        <span class="lane-name">${CROSS_LANE.name}</span>
+        <span class="lane-sub">${CROSS_LANE.sub}</span>
+      </div>
+      <div class="lane-flow">${crossSteps}</div>
+    </div>`;
+
+  $('stage').innerHTML = `
+    <div class="sop-head">
+      <div class="sop-kicker">Level 1 · Core Process SOP</div>
+      <h1 class="sop-title">Lead → Sale</h1>
+      <p class="sop-sub">
+        From Marketing Qualified Lead to signed contract. Colour-coded by sales
+        activity lane. Every step is a separate arrow-connected block with
+        Responsible / Accountable / Consulted assigned by <b>title</b>, not name —
+        so the SOP survives hiring.
+      </p>
+    </div>
+
+    ${boundary}
+    ${legend}
+
+    ${lanesHTML}
+    ${crossLane}
+  `;
+}
+
+function raciHTML(raci){
+  // raci is like "R: SDR | A: Sales Lead | C: N/A"
+  return raci.split('|').map(part => {
+    const trimmed = part.trim();
+    const m = trimmed.match(/^([RAC]):\s*(.+)$/);
+    if (m) return `<b>${m[1]}:</b> ${esc(m[2])}`;
+    return esc(trimmed);
+  }).join(' | ');
+}
+
+/* =========================================================
+   RENDER — raw HTML view
+   ========================================================= */
+function renderCode(){
+  document.documentElement.style.setProperty('--accent', '245,190,60');
+
+  const html = buildRawHTML();
+
+  const highlighted = esc(html)
+    .replace(/(&lt;\/?)([a-z][\w-]*)/g, '$1<span class="t">$2</span>')
+    .replace(/class=(&quot;|")([^"&]*)(&quot;|")/g, 'class=<span class="a">"$2"</span>')
+    .replace(/(R|A|C):/g, '<span class="c">$1:</span>')
+    .replace(/&lt;!--([\s\S]*?)--&gt;/g, '<span class="p">&lt;!--$1--&gt;</span>');
+
+  $('stage').innerHTML = `
+    <div class="sop-head">
+      <div class="sop-kicker">Level 1 · Core Process SOP</div>
+      <h1 class="sop-title">Raw HTML output</h1>
+      <p class="sop-sub">
+        Each step uses the exact required structure. Copy-paste ready.
+      </p>
+    </div>
+
+    <div class="code-wrap">
+      <div class="code-bar">
+        <span class="fname">lead-to-sale-sop.html</span>
+        <span class="tagx">required structure</span>
+        <button class="copy-btn" id="copyBtn">copy</button>
+      </div>
+      <pre class="code" id="codePre">${highlighted}</pre>
+    </div>`;
+
+  const copy = $('copyBtn');
+  copy.addEventListener('click', () => {
+    navigator.clipboard.writeText(html).then(() => {
+      copy.textContent = '✓ copied';
+      copy.classList.add('ok');
+      setTimeout(() => {
+        copy.textContent = 'copy';
+        copy.classList.remove('ok');
+      }, 1600);
+    });
+  });
+}
+
+function buildRawHTML(){
+  let out = `<!-- Level 1 Core Process SOP · Lead to Sale -->\n\n`;
+
+  const allLanes = [...LANES, CROSS_LANE];
+  allLanes.forEach(lane => {
+    out += `<!-- ===== ${lane.name.toUpperCase()} ===== -->\n`;
+    out += `<div class="lane lane-${lane.id}">\n`;
+    lane.steps.forEach(s => {
+      out += `  <div class="step-box">\n`;
+      out += `    <div class="step-title">${s.title}</div>\n`;
+      out += `    <div class="step-desc">${s.desc}</div>\n`;
+      out += `    <div class="raci">${s.raci}</div>\n`;
+      out += `  </div>\n`;
+    });
+    out += `</div>\n\n`;
+  });
+
+  return out;
+}
+
+/* =========================================================
+   VIEW TABS
+   ========================================================= */
+$('viewTabs').addEventListener('click', e => {
+  const btn = e.target.closest('button[data-view]');
+  if (!btn) return;
+  const v = btn.dataset.view;
+  if (v === 'flow' || v === 'code'){
+    state.viewMode = v;
+    $('viewTabs').querySelectorAll('button').forEach(b =>
+      b.classList.toggle('on', b.dataset.view === v));
+    renderStage();
+  }
+});
+
+/* =========================================================
+   DEMO MODE
+   ========================================================= */
+function startDemo(){
+  stopDemo();
+  state.demoPlaying = true;
+  $('demoBtn').classList.add('playing');
+  $('demoBtn').textContent = '■ stop demo';
+
+  // reset
+  state.view = 'questions';
+  state.qIdx = 0;
+  state.confirmed = new Set();
+  state.viewMode = 'flow';
+  $('viewTabs').querySelectorAll('button').forEach(b =>
+    b.classList.toggle('on', b.dataset.view === 'flow'));
+  renderAll();
+
+  demoStep();
+}
+
+function stopDemo(){
+  state.demoPlaying = false;
+  if (state.demoTimeout) clearTimeout(state.demoTimeout);
+  state.demoTimeout = null;
+  const btn = $('demoBtn');
+  if (btn){
+    btn.classList.remove('playing');
+    btn.textContent = '▶ run demo';
+  }
+}
+
+function demoStep(){
+  if (!state.demoPlaying) return;
+
+  if (state.view === 'questions'){
+    const q = QUESTIONS[state.qIdx];
+    if (!state.confirmed.has(q.id)){
+      state.demoTimeout = setTimeout(() => {
+        if (!state.demoPlaying) return;
+        state.confirmed.add(q.id);
+        renderAll();
+        demoStep();
+      }, 1600);
+    } else {
+      state.demoTimeout = setTimeout(() => {
+        if (!state.demoPlaying) return;
+        if (state.confirmed.size === QUESTIONS.length){
+          state.view = 'sop';
+          state.viewMode = 'flow';
+        } else {
+          state.qIdx++;
+        }
+        renderAll();
+        demoStep();
+      }, 1300);
+    }
+  } else if (state.view === 'sop'){
+    state.demoTimeout = setTimeout(() => {
+      if (!state.demoPlaying) return;
+      state.viewMode = 'code';
+      $('viewTabs').querySelectorAll('button').forEach(b =>
+        b.classList.toggle('on', b.dataset.view === 'code'));
+      renderStage();
+      stopDemo();
+    }, 2600);
+  }
+}
+
+/* =========================================================
+   CONTROLS
+   ========================================================= */
+$('demoBtn').addEventListener('click', () => {
+  if (state.demoPlaying) stopDemo();
+  else startDemo();
+});
+
+/* =========================================================
+   BOOT
+   ========================================================= */
+renderAll();
+</script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+
+<!-- ============ 02 · BASELINE + TARGET (COMBINED) ============ -->
+
+<div class="blueprint"></div>
+<div class="vignette"></div>
+<div class="scan-bg"></div>
+
+<header class="top-bar">
+  <div class="top">
+    <span class="dot"></span>
+    <span>Edu / Bayan</span>
+    <span>·</span>
+    <span>Channel System Map</span>
+    <span class="sep"></span>
+    <span>rev. 2026-09</span>
+  </div>
+</header>
+
+<section class="reveal" id="baseline-sec">
+  <div class="sec-head">
+    <span class="sec-num">02</span>
+    <h2>Where Bayan stands — and the 90-day target</h2>
+  </div>
+  <p class="sec-desc">
+    Two clearly separated series on one radar: <strong>what we measured</strong>
+    (from live tools, not estimated) and <strong>what we are targeting</strong>
+    (modelled, 90 days out). Every axis carries the real numbers.
+  </p>
+
+  <div class="bp-panel">
+    <div class="bp-grid">
+
+      <div class="bp-chart">
+        <div class="bp-cap">
+          <span class="bp-cap-l">the shape of Bayan · now vs. target</span>
+          <span class="bp-cap-r">5 axes · 0–100</span>
+        </div>
+
+        <svg class="bp-svg" viewBox="0 0 620 540" role="img" aria-label="Bayan baseline vs target radar">
+          <defs>
+            <radialGradient id="nowFill" cx="50%" cy="50%" r="55%">
+              <stop offset="0%" stop-color="#F87171" stop-opacity=".45"/>
+              <stop offset="100%" stop-color="#FBBF24" stop-opacity=".20"/>
+            </radialGradient>
+            <linearGradient id="nowStroke" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#F87171"/>
+              <stop offset="100%" stop-color="#FBBF24"/>
+            </linearGradient>
+            <filter id="vGlow" x="-80%" y="-80%" width="260%" height="260%">
+              <feGaussianBlur stdDeviation="3" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <polygon class="ring" points="310,60 500,198 428,422 192,422 120,198"/>
+          <polygon class="ring" points="310,110 453,214 398,381 222,381 167,214"/>
+          <polygon class="ring major" points="310,160 405,229 369,341 251,341 215,229"/>
+          <polygon class="ring" points="310,210 358,245 339,300 281,300 262,245"/>
+
+          <text class="ring-lab" x="316" y="58"  text-anchor="start">100</text>
+          <text class="ring-lab" x="316" y="158" text-anchor="start">50</text>
+
+          <line class="axis" x1="310" y1="260" x2="310" y2="60"/>
+          <line class="axis" x1="310" y1="260" x2="500" y2="198"/>
+          <line class="axis" x1="310" y1="260" x2="428" y2="422"/>
+          <line class="axis" x1="310" y1="260" x2="192" y2="422"/>
+          <line class="axis" x1="310" y1="260" x2="120" y2="198"/>
+
+          <polygon class="target-poly"
+                   points="310,152 363,243 359,328 204,406 120,198"/>
+
+          <polygon class="now-poly"
+                   points="310,210 310,260 322,276 226,375 171,215"/>
+
+          <g class="target-verts">
+            <circle cx="310" cy="152" r="5"/>
+            <circle cx="363" cy="243" r="5"/>
+            <circle cx="359" cy="328" r="5"/>
+            <circle cx="204" cy="406" r="5"/>
+            <circle cx="120" cy="198" r="5"/>
+          </g>
+
+          <g class="now-verts">
+            <circle cx="310" cy="210" r="6" filter="url(#vGlow)"/>
+            <circle cx="310" cy="260" r="6" filter="url(#vGlow)"/>
+            <circle cx="322" cy="276" r="6" filter="url(#vGlow)"/>
+            <circle cx="226" cy="375" r="6" filter="url(#vGlow)"/>
+            <circle cx="171" cy="215" r="6" filter="url(#vGlow)"/>
+          </g>
+
+          <g class="axis-lab" transform="translate(310,32)">
+            <text class="axis-name" text-anchor="middle">Overall health</text>
+            <text y="17" class="axis-nums" text-anchor="middle">
+              <tspan class="now-num">25</tspan><tspan class="arrow">→</tspan><tspan class="target-num">54</tspan>
+            </text>
+          </g>
+
+          <g class="axis-lab" transform="translate(500,178)">
+            <text class="axis-name" text-anchor="middle">Google search</text>
+            <text y="17" class="axis-nums" text-anchor="middle">
+              <tspan class="now-num">0</tspan><tspan class="arrow">→</tspan><tspan class="target-num">28</tspan>
+            </text>
+          </g>
+
+          <g class="axis-lab" transform="translate(428,448)">
+            <text class="axis-name" text-anchor="middle">AI search</text>
+            <text y="17" class="axis-nums" text-anchor="middle">
+              <tspan class="now-num">10</tspan><tspan class="arrow">→</tspan><tspan class="target-num">42</tspan>
+            </text>
+          </g>
+
+          <g class="axis-lab" transform="translate(192,448)">
+            <text class="axis-name" text-anchor="middle">GEO readiness</text>
+            <text y="17" class="axis-nums" text-anchor="middle">
+              <tspan class="now-num">71</tspan><tspan class="arrow">→</tspan><tspan class="target-num">90</tspan>
+            </text>
+          </g>
+
+          <g class="axis-lab" transform="translate(120,178)">
+            <text class="axis-name" text-anchor="middle">Website &amp; content</text>
+            <text y="17" class="axis-nums" text-anchor="middle">
+              <tspan class="now-num">73</tspan><tspan class="arrow">→</tspan><tspan class="target-num">100</tspan>
+            </text>
+          </g>
+        </svg>
+
+        <div class="bp-legend">
+          <span class="lg now"><i></i> Now · measured</span>
+          <span class="lg target"><i></i> 90-day target · modelled</span>
+        </div>
+      </div>
+
+      <div class="bp-list">
+        <div class="bp-lh">
+          <span>Metric</span>
+          <span class="lh-nums">Now → Target</span>
+          <span class="lh-delta">Δ</span>
+        </div>
+
+        <div class="bp-row" style="--mc:#FBBF24">
+          <span class="bp-name"><i></i>Overall marketing health</span>
+          <span class="bp-nums"><b class="n">25</b><span class="ar">→</span><b class="t">54</b></span>
+          <span class="bp-delta">+29</span>
+        </div>
+
+        <div class="bp-row" style="--mc:#F87171">
+          <span class="bp-name"><i></i>Google search visibility</span>
+          <span class="bp-nums"><b class="n">0</b><span class="ar">→</span><b class="t">28</b></span>
+          <span class="bp-delta">+28</span>
+        </div>
+
+        <div class="bp-row" style="--mc:#F87171">
+          <span class="bp-name"><i></i>AI search visibility</span>
+          <span class="bp-nums"><b class="n">10</b><span class="ar">→</span><b class="t">42</b></span>
+          <span class="bp-delta">+32</span>
+        </div>
+
+        <div class="bp-row" style="--mc:#2DD4BF">
+          <span class="bp-name"><i></i>Website &amp; content</span>
+          <span class="bp-nums"><b class="n">73</b><span class="ar">→</span><b class="t">100</b></span>
+          <span class="bp-delta">+27</span>
+        </div>
+
+        <div class="bp-row" style="--mc:#2DD4BF">
+          <span class="bp-name"><i></i>GEO / AI-answer readiness</span>
+          <span class="bp-nums"><b class="n">71</b><span class="ar">→</span><b class="t">90</b></span>
+          <span class="bp-delta">+19</span>
+        </div>
+
+        <div class="bp-lcp">
+          <div class="bp-lcp-head">
+            <span class="bp-lcp-tag">◆ off-chart · not scored</span>
+            <span class="bp-lcp-label">Mobile LCP · load speed</span>
+          </div>
+          <div class="bp-lcp-body">
+            <span class="bp-lcp-now">5,039 ms</span>
+            <span class="ar">→</span>
+            <span class="bp-lcp-target">under 2.5 s</span>
+            <span class="bp-lcp-chip">core fix</span>
+          </div>
+        </div>
+
+        <div class="bp-legend bp-legend-inline">
+          <span class="lg now"><i></i> Now</span>
+          <span class="lg target"><i></i> Target</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="bp-note">
+      <strong>Measurement honesty.</strong> The "Now" series comes from live
+      tools — BayanMarketingSystem audit, DataForSEO, GEO audit, PageSpeed. The
+      "Target" series is a modelled projection, not a guarantee. Real ranking is
+      content-led and typically moves in 4–8 weeks, not days.
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="checklist-panel reveal" style="border-bottom:0;padding:0;margin-top:28px">
+    <div class="cl-kicker"><span class="dot"></span>Review checklist · ABG answer page</div>
+    <div class="cl-title">Before the ABG page ships, these seven boxes must be true.</div>
+    <p class="cl-sub">
+      Every draft above is <strong>approval-gated</strong>. This checklist is the
+      gate the ABG page passes before it goes live. Click any item to toggle its state
+      as you review.
+    </p>
+    <ul class="cl-list" id="reviewChecklist"></ul>
+    <div class="cl-files">
+      <div class="cl-files-label">Files for review</div>
+      <div class="cl-files-list">
+        <span class="cl-file">resources/abg-course-answer-page-draft.md</span>
+        <span class="cl-file">resources/abg-course-evidence-gaps.md</span>
+      </div>
+    </div>
+  </section>

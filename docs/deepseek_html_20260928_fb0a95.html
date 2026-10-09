@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The 90-Day Roadmap — Bayan Learning</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#04070E; --panel:rgba(12,20,34,.6); --panel-2:rgba(255,255,255,.025);
+  --ink:#EAF0FA; --dim:#8998B0; --faint:#414E63;
+  --line:rgba(137,152,176,.14); --line-hi:rgba(137,152,176,.3);
+  --teal:#2DD4BF; --violet:#A78BFA; --blue:#60A5FA;
+  --amber:#FBBF24; --red:#F87171; --green:#34D399; --pink:#F472B6;
+  --navy:#0B2C5E; --brand-blue:#1E5FC7; --brand-blue-2:#2563C9;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --mono:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--ink);
+  font-family:'Inter',-apple-system,sans-serif;
+  line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+</style>
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="orb a"></div>
+<div class="orb b"></div>
+<div class="orb c"></div>
+
+<div class="wrap">
+
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <header class="hero">
+
+
+
+    <div class="kicker"><span class="dot"></span>fig. 07 — the 90-day roadmap · edu / bayan</div>
+
+    <div class="hero-grid">
+      <div>
+        <h1>Strong product. <em>Weak discovery.</em></h1>
+        <p class="lede">
+          Bayan has <strong>5,589 clinician-reviewed questions</strong>, learners in
+          <strong>55+ countries</strong>, and a server-rendered site AI crawlers can
+          already read. The gap is discovery — Bayan ranks for zero commercial-intent
+          exam keywords and appears in none of the AI answers buyers now ask. That gap
+          is fixable with content Bayan is uniquely positioned to publish.
+        </p>
+
+        <div class="ask">
+          <div class="askic">⚑</div>
+          <div class="asktext">
+            <strong>The ask:</strong> approve a draft-first, 90-day discovery and content
+            push. <em>Nothing publishes without your sign-off.</em> Results reported
+            weekly against the baseline in Section 02.
+          </div>
+        </div>
+      </div>
+
+      <div class="arc-card">
+        <div class="arc-wrap">
+          <svg viewBox="0 0 180 180">
+            <defs>
+              <linearGradient id="currGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#ff6b6b"/>
+                <stop offset="100%" stop-color="#ffb020"/>
+              </linearGradient>
+              <linearGradient id="projGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#e7b544"/>
+                <stop offset="100%" stop-color="#a76d13"/>
+              </linearGradient>
+            </defs>
+            <circle class="arc-track" cx="90" cy="90" r="70"/>
+            <circle class="arc-proj" cx="90" cy="90" r="70" id="arcProj"/>
+            <circle class="arc-current" cx="90" cy="90" r="70" id="arcCurr"/>
+          </svg>
+          <div class="arc-center">
+            <div class="ac-num" id="arcNum">0</div>
+            <div class="ac-lbl">health / 100</div>
+          </div>
+        </div>
+        <div class="arc-meta">
+          <div class="am-row"><span class="k">Now</span><span class="v fail">25</span></div>
+          <div class="am-row"><span class="k">90-day target</span><span class="v gold">54</span></div>
+          <div class="am-row"><span class="k">Primary goal</span><span class="v">Revenue</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════ CONTROLS ═══════════════════ -->
+  <div class="controls">
+    <div class="zoom-group" id="zoomGroup">
+      <button class="zoom-btn active" data-zoom="days">Days</button>
+      <button class="zoom-btn" data-zoom="weeks">Weeks</button>
+      <button class="zoom-btn" data-zoom="month">Month</button>
+      <button class="zoom-btn" data-zoom="quarter">Quarter</button>
+    </div>
+    <button class="play-btn" id="playBtn">
+      <span class="ico">▶</span>
+      <span class="txt">Play</span>
+    </button>
+    <div class="phase-badge" id="phaseBadge">
+      <span class="dot"></span>
+      <span class="txt">Ready</span>
+    </div>
+    <div class="day-badge">
+      Day <span id="dayCount">0</span> / 90
+    </div>
+  </div>
+
+  <!-- ═══════════════════ TIMELINE ═══════════════════ -->
+  <div class="timeline-wrap">
+    <svg id="timeline" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid meet" role="img" aria-label="90-day roadmap timeline">
+      <defs>
+        <linearGradient id="playheadTrail" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#2DD4BF" stop-opacity="0"/>
+          <stop offset="100%" stop-color="#2DD4BF" stop-opacity=".18"/>
+        </linearGradient>
+        <filter id="phGlow" x="-80%" y="-80%" width="260%" height="260%">
+          <feGaussianBlur stdDeviation="3" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <g id="phaseBands"></g>
+      <g id="ruler"></g>
+      <g id="taskRows"></g>
+      <g id="playhead">
+        <rect id="phTrail" x="0" y="55" width="80" height="450" fill="url(#playheadTrail)" pointer-events="none"/>
+        <line id="phLine" x1="0" y1="55" x2="0" y2="505" stroke="#2DD4BF" stroke-width="1.5" opacity=".75" filter="url(#phGlow)" pointer-events="none"/>
+        <circle id="phDot" cx="0" cy="55" r="4" fill="#fff" filter="url(#phGlow)" pointer-events="none"/>
+        <polygon id="phTri" points="0,50 -5,40 5,40" fill="#2DD4BF" pointer-events="none"/>
+        <text id="phLabel" class="ph-label" x="0" y="30">Day 0</text>
+      </g>
+      <g id="pulses"></g>
+    </svg>
+  </div>
+
+  <div class="metrics-strip" id="metricsStrip"></div>
+  <div class="legend" id="legend"></div>
+
+  <!-- ═══════════════════ ACCORDIONS ═══════════════════ -->
+  <div class="accordions">
+
+    <!-- ACCORDION 1 · EVIDENCE -->
+    <div class="acc open" data-accent="teal" id="accEvidence">
+      <button class="acc-head" type="button" aria-expanded="true" aria-controls="accEvidenceBody">
+        <div class="acc-icon">📊</div>
+        <div class="acc-title">
+          <div class="t">
+            See more details, data &amp; evidence
+            <span class="pill">7 metrics · 8 keywords · 6 gaps</span>
+          </div>
+          <div class="s">The measurements, sources, and gaps behind every number on the timeline.</div>
+        </div>
+        <div class="acc-chev">▼</div>
+      </button>
+      <div class="acc-body" id="accEvidenceBody">
+        <div class="acc-body-inner">
+          <div class="acc-content">
+
+            <div class="ev-sec">
+              <div class="ev-head">
+                <span class="n">01 · Baseline vs target</span>
+                <span class="t">What we measured — and what we are modelling</span>
+                <span class="c">7 metrics</span>
+              </div>
+              <div class="bt-table">
+                <div class="bt-head">
+                  <span>Metric</span>
+                  <span>Now · measured</span>
+                  <span>90-day target</span>
+                  <span>Source</span>
+                </div>
+                <div class="bt-row">
+                  <div class="bt-m">Overall marketing health</div>
+                  <div class="bt-v">25 / 100</div>
+                  <div class="bt-t">54 <span class="a">/ 100</span></div>
+                  <div class="bt-s">BayanMarketingSystem audit</div>
+                </div>
+                <div class="bt-row">
+                  <div class="bt-m">Google search visibility</div>
+                  <div class="bt-v">0 / 100 · 0 of 10 kw</div>
+                  <div class="bt-t">28 <span class="a">/ 100</span></div>
+                  <div class="bt-s">DataForSEO</div>
+                </div>
+                <div class="bt-row">
+                  <div class="bt-m">AI search visibility</div>
+                  <div class="bt-v">10 / 100 · 0 of 3</div>
+                  <div class="bt-t">42 <span class="a">/ 100</span></div>
+                  <div class="bt-s">AI visibility audit</div>
+                </div>
+                <div class="bt-row">
+                  <div class="bt-m">Website &amp; content</div>
+                  <div class="bt-v good">73 / 100 — strong base</div>
+                  <div class="bt-t">100 <span class="a">/ 100</span></div>
+                  <div class="bt-s">BayanMarketingSystem audit</div>
+                </div>
+                <div class="bt-row">
+                  <div class="bt-m">GEO / AI-answer readiness</div>
+                  <div class="bt-v gold">71 / 100</div>
+                  <div class="bt-t">90 <span class="a">/ 100</span></div>
+                  <div class="bt-s">AEO audit · 2026-09-28</div>
+                </div>
+                <div class="bt-row">
+                  <div class="bt-m">Mobile LCP (load speed)</div>
+                  <div class="bt-v warn">5,039 ms — slow</div>
+                  <div class="bt-t">Under 2.5 s</div>
+                  <div class="bt-s">PageSpeed Insights</div>
+                </div>
+                <div class="bt-row">
+                  <div class="bt-m">Organic keywords (domain)</div>
+                  <div class="bt-v warn">0 commercial-intent</div>
+                  <div class="bt-t">Targeted set</div>
+                  <div class="bt-s">DataForSEO live pull</div>
+                </div>
+              </div>
+              <div class="note" style="margin-top:14px">
+                <strong>Measurement honesty.</strong> The "Now" column comes from live tools.
+                The "90-day target" is a modelled projection — not a guarantee. Ranking
+                is content-led and typically moves in <strong>4–8 weeks</strong>, not days.
+              </div>
+            </div>
+
+            <div class="ev-sec">
+              <div class="ev-head">
+                <span class="n">02 · Keyword opportunity</span>
+                <span class="t">Where Bayan can realistically rank</span>
+                <span class="c">8 terms · difficulty 5–18</span>
+              </div>
+
+              <div class="tier-divider" style="--td-c:var(--amber)">
+                <span class="dot"></span>
+                <span class="name">Tier 1 — Gulf licensing priority</span>
+                <span class="line"></span>
+                <span class="note">matches Bayan's core positioning</span>
+              </div>
+
+              <div class="kw-grid">
+                <div class="kw ranked">
+                  <div class="kw-head">
+                    <div class="kw-name">mrcp 1 sample questions</div>
+                    <div class="kw-diff ranked">#28</div>
+                  </div>
+                  <div class="kw-vol">140<small>/ mo</small></div>
+                  <div class="kw-note">Already ranking — nudge to page 1</div>
+                </div>
+                <div class="kw tier1">
+                  <div class="kw-head">
+                    <div class="kw-name">arab board exam questions</div>
+                    <div class="kw-diff">—</div>
+                  </div>
+                  <div class="kw-vol">110<small>/ mo</small></div>
+                  <div class="kw-note">Regional intent · direct Bayan fit</div>
+                </div>
+                <div class="kw tier1">
+                  <div class="kw-head">
+                    <div class="kw-name">prometric exam questions</div>
+                    <div class="kw-diff">—</div>
+                  </div>
+                  <div class="kw-vol">90<small>/ mo</small></div>
+                  <div class="kw-note">Regional intent · direct Bayan fit</div>
+                </div>
+              </div>
+
+              <div class="tier-divider" style="--td-c:var(--blue)">
+                <span class="dot"></span>
+                <span class="name">Tier 2 — International expansion</span>
+                <span class="line"></span>
+                <span class="note">pursue only if product priority confirms</span>
+              </div>
+
+              <div class="kw-grid">
+                <div class="kw tier2">
+                  <div class="kw-head">
+                    <div class="kw-name">usmle step 2 question bank</div>
+                    <div class="kw-diff easy">diff 14</div>
+                  </div>
+                  <div class="kw-vol">390<small>/ mo</small></div>
+                  <div class="kw-note">Highest volume · low difficulty</div>
+                </div>
+                <div class="kw tier2">
+                  <div class="kw-head">
+                    <div class="kw-name">usmle step 3 question bank</div>
+                    <div class="kw-diff easy">diff 5</div>
+                  </div>
+                  <div class="kw-vol">210<small>/ mo</small></div>
+                  <div class="kw-note">Easiest win in the set</div>
+                </div>
+                <div class="kw tier2">
+                  <div class="kw-head">
+                    <div class="kw-name">usmle step 1 question bank</div>
+                    <div class="kw-diff">diff 18</div>
+                  </div>
+                  <div class="kw-vol">260<small>/ mo</small></div>
+                </div>
+                <div class="kw tier2">
+                  <div class="kw-head">
+                    <div class="kw-name">usmle question bank</div>
+                    <div class="kw-diff">diff 17</div>
+                  </div>
+                  <div class="kw-vol">170<small>/ mo</small></div>
+                </div>
+                <div class="kw tier2">
+                  <div class="kw-head">
+                    <div class="kw-name">question bank for usmle</div>
+                    <div class="kw-diff">diff 17</div>
+                  </div>
+                  <div class="kw-vol">170<small>/ mo</small></div>
+                </div>
+              </div>
+
+              <div class="note" style="margin-top:14px">
+                <strong>Proof the domain can rank:</strong> Bayan already ranks (positions
+                11–54) for ~20 long-tail clinical terms — e.g. <em>"im vaccine sites"</em> #11,
+                <em>"coagulation cascade vwf"</em> #32. The content depth is there; the pages
+                aimed at commercial terms are missing.
+              </div>
+            </div>
+
+            <div class="ev-sec">
+              <div class="ev-head">
+                <span class="n">03 · GEO gaps</span>
+                <span class="t">Six items holding AI-answer readiness down</span>
+                <span class="c">6 gaps · mostly trivial</span>
+              </div>
+
+              <div class="geo-list">
+                <div class="geo">
+                  <div class="geo-name">FAQ / Q&amp;A schema <small>Improves machine-readable structure; may support AI citation</small></div>
+                  <div class="geo-badge">Missing</div>
+                  <div class="geo-effort low">Low</div>
+                </div>
+                <div class="geo">
+                  <div class="geo-name">Meta description <small>Currently truncating in SERP display</small></div>
+                  <div class="geo-badge">301 chars</div>
+                  <div class="geo-effort trivial">Trivial</div>
+                </div>
+                <div class="geo">
+                  <div class="geo-name">BLUF direct-answer style <small>Lead pages with one-line summary</small></div>
+                  <div class="geo-badge">25%</div>
+                  <div class="geo-effort low">Low</div>
+                </div>
+                <div class="geo">
+                  <div class="geo-name">llms.txt <small>Proposed convention for describing your site to AI engines</small></div>
+                  <div class="geo-badge">Missing</div>
+                  <div class="geo-effort trivial">Trivial</div>
+                </div>
+                <div class="geo">
+                  <div class="geo-name">llms-full.txt <small>Extended context for AI models</small></div>
+                  <div class="geo-badge">Missing</div>
+                  <div class="geo-effort low">Low</div>
+                </div>
+                <div class="geo">
+                  <div class="geo-name">noscript fallback <small>Content for crawlers that don't run JavaScript</small></div>
+                  <div class="geo-badge">Missing</div>
+                  <div class="geo-effort trivial">Trivial</div>
+                </div>
+              </div>
+
+              <div class="note" style="margin-top:14px">
+                <strong>On AI discoverability.</strong>
+                <code>llms.txt</code> is an emerging convention, not yet a standard every AI
+                engine must use. Structured data can improve machine-readable structure, but
+                no markup guarantees a rich result or an AI citation. These changes are
+                <em>supportive</em> — real movement is measured through the weekly tracker.
+              </div>
+            </div>
+
+            <div class="ev-sec">
+              <div class="ev-head">
+                <span class="n">04 · Evidence sources</span>
+                <span class="t">Where every number comes from</span>
+                <span class="c">5 live tools</span>
+              </div>
+
+              <div class="sources">
+                <div class="source">
+                  <div class="s-k">Audit</div>
+                  <div class="s-n">BayanMarketingSystem marketing audit</div>
+                  <div class="s-d">2026-09-28 · overall health 25/100</div>
+                </div>
+                <div class="source">
+                  <div class="s-k">Keywords</div>
+                  <div class="s-n">DataForSEO live pull</div>
+                  <div class="s-d">Difficulty 5–18 on target question-bank terms</div>
+                </div>
+                <div class="source">
+                  <div class="s-k">AI answers</div>
+                  <div class="s-n">AEO / GEO audit</div>
+                  <div class="s-d">2026-09-28 · 71/100 · six named gaps</div>
+                </div>
+                <div class="source">
+                  <div class="s-k">Performance</div>
+                  <div class="s-n">Google PageSpeed Insights</div>
+                  <div class="s-d">Mobile LCP 5,039 ms · redirects + unused JS</div>
+                </div>
+                <div class="source">
+                  <div class="s-k">Tracking</div>
+                  <div class="s-n">AI visibility tracker</div>
+                  <div class="s-d">14 prompts × 5 engines · weekly cadence</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACCORDION 2 · FULL PLAN -->
+    <div class="acc" data-accent="violet" id="accPlan">
+      <button class="acc-head" type="button" aria-expanded="false" aria-controls="accPlanBody">
+        <div class="acc-icon">🗺</div>
+        <div class="acc-title">
+          <div class="t">
+            The 90-day plan, in full
+            <span class="pill">9 tasks · 2 phases</span>
+          </div>
+          <div class="s">Every task, channel, and reason — in the order they run.</div>
+        </div>
+        <div class="acc-chev">▼</div>
+      </button>
+      <div class="acc-body" id="accPlanBody">
+        <div class="acc-body-inner">
+          <div class="acc-content">
+
+            <div class="plan-phase">
+              <div class="plan-phase-head">
+                <span class="tag">This week</span>
+                <span class="tt">The visibility unlocks — low effort, fast payoff</span>
+                <span class="cnt">4 tasks</span>
+              </div>
+              <div class="plan-tasks">
+                <div class="plan-task">
+                  <div class="ch" style="color:var(--violet)">AI visibility</div>
+                  <div class="body">
+                    <div class="ti">Draft + publish the ABG course page</div>
+                    <div class="wh">ABG is a probe where Bayan is named in <em>0</em> AI answers today — a direct-answer page starts fixing that.</div>
+                  </div>
+                </div>
+                <div class="plan-task">
+                  <div class="ch" style="color:var(--violet)">AI visibility</div>
+                  <div class="body">
+                    <div class="ti">Publish the Gulf exam guide</div>
+                    <div class="wh">Captures "which platform for OMSB / Arab Board" intent AI can cite.</div>
+                  </div>
+                </div>
+                <div class="plan-task">
+                  <div class="ch" style="color:var(--amber)">GEO</div>
+                  <div class="body">
+                    <div class="ti">Add AI guidance files (llms.txt + llms-full.txt)</div>
+                    <div class="wh">Trivial effort; describes Bayan to AI engines in a machine-readable format. <strong>Cheapest meaningful GEO improvement.</strong></div>
+                  </div>
+                </div>
+                <div class="plan-task">
+                  <div class="ch" style="color:var(--amber)">GEO</div>
+                  <div class="body">
+                    <div class="ti">Draft the exam-preparation FAQ</div>
+                    <div class="wh">FAQ schema improves machine-readable structure and may support search and AI discoverability.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="plan-phase">
+              <div class="plan-phase-head">
+                <span class="tag" style="background:rgba(96,165,250,.1);border-color:rgba(96,165,250,.28);color:var(--blue)">This month</span>
+                <span class="tt">The ranking + reach layer</span>
+                <span class="cnt">5 tasks</span>
+              </div>
+              <div class="plan-tasks">
+                <div class="plan-task">
+                  <div class="ch" style="color:var(--amber)">GEO</div>
+                  <div class="body">
+                    <div class="ti">BLUF + meta fixes (trim 301→160 chars, add noscript)</div>
+                    <div class="wh">Closes the last three GEO gaps → <em>71→90</em>.</div>
+                  </div>
+                </div>
+                <div class="plan-task">
+                  <div class="ch" style="color:var(--blue)">SEO</div>
+                  <div class="body">
+                    <div class="ti">Map target searches to pages</div>
+                    <div class="wh">Aims the Gulf tier and confirmed USMLE tier at real pages (Google subscore <em>0→28</em>).</div>
+                  </div>
+                </div>
+                <div class="plan-task">
+                  <div class="ch" style="color:var(--blue)">SEO</div>
+                  <div class="body">
+                    <div class="ti">Draft priority SEO page briefs</div>
+                    <div class="wh">Turns the low-difficulty keyword list into rankable pages.</div>
+                  </div>
+                </div>
+                <div class="plan-task">
+                  <div class="ch" style="color:var(--pink)">Social</div>
+                  <div class="body">
+                    <div class="ti">Draft exam-specific social calendar</div>
+                    <div class="wh">Bayan already has X and Telegram channels; a posting rhythm lifts social score <em>44→69</em>.</div>
+                  </div>
+                </div>
+                <div class="plan-task">
+                  <div class="ch" style="color:var(--red)">Paid ads</div>
+                  <div class="body">
+                    <div class="ti">Draft a paid-ads test</div>
+                    <div class="wh"><strong>Held at $0/month</strong> pending unit economics — drafted, not funded, until you approve spend.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="locks">
+              <div class="locks-head">
+                <span class="n">Content locks</span>
+                <span class="t">Enforced on every word</span>
+              </div>
+              <ul>
+                <li>Human-owned / clinician-reviewed — never bare <em>"AI-powered"</em></li>
+                <li>No pass or outcome guarantees, ever — <em>"on the first attempt"</em> is banned</li>
+                <li><em>"Gulf Licensing Exam Preparation"</em> — not bare "Prometric"</li>
+                <li>Verified counts only — <em>5,589 questions · 55+ countries</em>; nothing invented</li>
+                <li>Any unknown becomes a <em>[confirm with team]</em> placeholder, never a guess</li>
+              </ul>
+              <div class="boundary">
+                <strong>Publishing boundary:</strong> everything above is a draft. No page
+                goes live, no email sends, and no ad money is spent without your explicit
+                sign-off. The weekly report is the accountability loop.
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <span>fig. 07 — 90-day roadmap · bayan learning</span>
+    <span>days · weeks · month · quarter</span>
+  </footer>
+</div>
+
+</body>
+</html>

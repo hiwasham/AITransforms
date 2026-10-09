@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bayan Conversion-First Trial — Revised Numbers Annex</title>
+<style>
+  :root{
+    --ink:#0a0d14;
+    --ink2:#0f131c;
+    --panel:#151b26;
+    --panel2:#1a2230;
+    --line:#232c3b;
+    --txt:#eef2f9;
+    --mut:#8b95a9;
+    --mut2:#5a6477;
+    --bayan:#1a4ff5;
+    --bayan2:#4d7bff;
+    --emerald:#34d399;
+    --amber:#fbbf24;
+    --gold:#eab308;
+    --rose:#f43f5e;
+    --violet:#a78bfa;
+    --cyan:#22d3ee;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);
+    color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  main{max-width:1000px;margin:0 auto;padding:0 24px 80px}
+
+  /* ============ TOP NAV ============ */
+  .topnav{
+    position:sticky;top:0;z-index:50;
+    padding:12px 24px;
+    background:linear-gradient(180deg,rgba(10,13,20,.95),rgba(10,13,20,.65) 80%,transparent);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    display:flex;gap:4px;overflow-x:auto;flex-wrap:wrap;
+    border-bottom:1px solid transparent;
+    transition:border-color .3s;
+  }
+  .topnav.scrolled{border-bottom-color:var(--line)}
+  .topnav::-webkit-scrollbar{display:none}
+  .topnav a{
+    all:unset;cursor:pointer;
+    font-size:12px;font-weight:500;
+    color:var(--mut);
+    padding:7px 12px;border-radius:8px;
+    transition:.2s;white-space:nowrap;
+  }
+  .topnav a:hover{color:#c8d2e2;background:rgba(255,255,255,.04)}
+  .topnav a.active{color:#fff;background:rgba(26,79,245,.15)}
+
+  /* ============ HEADER ============ */
+  header{
+    padding:56px 0 40px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:40px;
+  }
+  header .crumbs{
+    display:flex;align-items:center;gap:10px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    color:var(--mut2);
+    margin-bottom:20px;
+    flex-wrap:wrap;
+  }
+  header .crumbs .sep{color:var(--line)}
+  header .crumbs .here{color:var(--bayan2);font-weight:600}
+
+  header .tag{
+    display:inline-block;
+    font-size:11px;font-weight:600;
+    letter-spacing:.1em;text-transform:uppercase;
+    color:var(--amber);
+    background:rgba(251,191,36,.12);
+    border:1px solid rgba(251,191,36,.32);
+    padding:6px 12px;border-radius:8px;
+    margin-bottom:20px;
+  }
+  header h1{
+    font-size:38px;line-height:1.12;
+    letter-spacing:-.028em;font-weight:800;
+    color:#fff;margin-bottom:18px;
+    max-width:24ch;
+  }
+  header .lede{
+    font-size:15.5px;line-height:1.75;
+    color:#b8c2d2;max-width:74ch;
+  }
+  header .lede b{color:#fff;font-weight:600}
+  header .lede code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:5px;
+    color:#dfe7f4;
+  }
+
+  .meta-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:16px 24px;
+    margin-top:28px;padding-top:24px;
+    border-top:1px dashed var(--line);
+  }
+  .meta-grid .m-item{
+    display:flex;flex-direction:column;gap:3px;
+  }
+  .meta-grid .m-k{
+    font-size:10.5px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;
+    color:var(--mut2);
+  }
+  .meta-grid .m-v{
+    color:#cfd8e8;font-weight:500;
+    font-size:13.5px;
+  }
+  .meta-grid .m-v code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ SECTIONS ============ */
+  section{margin-bottom:56px;scroll-margin-top:80px}
+  section h2{
+    font-size:23px;line-height:1.3;
+    letter-spacing:-.02em;font-weight:700;
+    color:#fff;margin-bottom:10px;
+    display:flex;align-items:baseline;
+    gap:14px;flex-wrap:wrap;
+  }
+  section h2 .num{
+    font-size:12.5px;font-weight:700;
+    color:var(--bayan2);
+    background:rgba(26,79,245,.12);
+    border:1px solid rgba(26,79,245,.28);
+    padding:5px 10px;border-radius:7px;
+    letter-spacing:.04em;
+  }
+  section h2.warn .num{
+    color:var(--amber);
+    background:rgba(251,191,36,.12);
+    border-color:rgba(251,191,36,.3);
+  }
+  section h2.danger .num{
+    color:var(--rose);
+    background:rgba(244,63,94,.12);
+    border-color:rgba(244,63,94,.3);
+  }
+  section .desc{
+    font-size:14.5px;color:var(--mut);
+    margin-bottom:22px;max-width:78ch;
+  }
+  section .desc b{color:#cfd8e8;font-weight:600}
+  section .desc code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ INPUTS TABLE ============ */
+  .table-wrap{
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow-x:auto;
+    background:var(--panel);
+  }
+  table{
+    width:100%;border-collapse:collapse;
+    min-width:640px;
+  }
+  thead th{
+    background:var(--panel2);
+    font-size:11px;font-weight:600;
+    letter-spacing:.06em;text-transform:uppercase;
+    color:var(--mut);
+    padding:14px 18px;
+    text-align:left;
+    border-bottom:1px solid var(--line);
+    white-space:nowrap;
+  }
+  tbody td{
+    padding:14px 18px;
+    font-size:13.5px;
+    color:#cfd8e8;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+    line-height:1.6;
+  }
+  tbody tr:last-child td{border-bottom:none}
+  tbody tr:hover{background:rgba(255,255,255,.015)}
+  tbody td .num-cell{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px;
+    color:#dfe7f4;
+    white-space:nowrap;
+  }
+  tbody td .num-cell.money{color:var(--emerald);font-weight:600}
+  tbody td .num-cell.empty{
+    color:var(--rose);
+    font-weight:700;
+    letter-spacing:.04em;
+  }
+  tbody td code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:2px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+  tbody td b{color:#fff;font-weight:600}
+
+  .status-pill{
+    display:inline-block;
+    font-family:ui-monospace,monospace;
+    font-size:10.5px;
+    font-weight:700;
+    letter-spacing:.05em;
+    padding:3px 8px;
+    border-radius:5px;
+    white-space:nowrap;
+  }
+  .status-pill.confirm{
+    background:rgba(251,191,36,.14);
+    color:var(--amber);
+    border:1px solid rgba(251,191,36,.3);
+  }
+  .status-pill.verify{
+    background:rgba(34,211,238,.14);
+    color:var(--cyan);
+    border:1px solid rgba(34,211,238,.3);
+  }
+  .status-pill.rose{
+    background:rgba(244,63,94,.14);
+    color:var(--rose);
+    border:1px solid rgba(244,63,94,.3);
+  }
+
+  /* ============ ARITHMETIC CARDS ============ */
+  .arith-list{
+    display:flex;flex-direction:column;
+    gap:14px;
+    counter-reset:arith;
+  }
+  .arith{
+    counter-increment:arith;
+    padding:20px 24px 20px 24px;
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+    transition:.2s;
+  }
+  .arith::before{
+    content:"";position:absolute;
+    top:0;right:0;bottom:0;width:3px;
+    background:rgb(var(--ac),.9);
+  }
+  .arith:hover{
+    border-color:rgba(var(--ac),.4);
+    background:rgba(var(--ac),.02);
+  }
+  .arith.a1{--ac:26,79,245}
+  .arith.a2{--ac:34,211,238}
+  .arith.a3{--ac:251,191,36}
+  .arith.a4{--ac:167,139,250}
+
+  .arith-head{
+    display:flex;align-items:baseline;
+    gap:12px;
+    margin-bottom:14px;
+  }
+  .arith-num{
+    flex:0 0 auto;
+    font-family:ui-monospace,monospace;
+    font-size:12px;
+    font-weight:800;
+    padding:4px 10px;
+    border-radius:6px;
+    background:rgba(var(--ac),.16);
+    color:rgb(var(--ac));
+    border:1px solid rgba(var(--ac),.34);
+    letter-spacing:.04em;
+  }
+  .arith-label{
+    font-size:13.5px;
+    font-weight:700;
+    color:#fff;
+    letter-spacing:-.005em;
+  }
+  .arith-math{
+    padding:14px 16px;
+    border-radius:10px;
+    background:rgba(0,0,0,.35);
+    border:1px solid var(--line);
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13px;
+    line-height:1.7;
+    color:#cfd8e8;
+    margin-bottom:12px;
+    overflow-x:auto;
+  }
+  .arith-math .k{color:#7ba4ff}
+  .arith-math .n{color:var(--emerald);font-weight:700}
+  .arith-math .res{color:var(--amber);font-weight:700}
+  .arith-math .err{color:#ff8a94;font-weight:600}
+  .arith p{
+    font-size:13px;
+    line-height:1.7;
+    color:#b8c2d2;
+    margin:0;
+  }
+  .arith p b{color:#fff;font-weight:600}
+  .arith p code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ COHORT MODEL ============ */
+  .cohort-formula{
+    padding:22px 24px;
+    border-radius:var(--radius);
+    background:linear-gradient(135deg,rgba(26,79,245,.06),rgba(26,79,245,.02) 60%,transparent);
+    border:1px solid rgba(26,79,245,.35);
+    margin-bottom:20px;
+    text-align:center;
+  }
+  .cohort-formula .cf-eq{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:22px;
+    font-weight:800;
+    letter-spacing:-.02em;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+    line-height:1.4;
+  }
+  .cohort-formula .cf-eq .letter{
+    padding:6px 14px;
+    border-radius:9px;
+    font-size:24px;
+  }
+  .cohort-formula .cf-eq .letter.g{background:rgba(244,63,94,.15);color:var(--rose);border:1px solid rgba(244,63,94,.35)}
+  .cohort-formula .cf-eq .letter.f{background:rgba(251,191,36,.15);color:var(--amber);border:1px solid rgba(251,191,36,.35)}
+  .cohort-formula .cf-eq .letter.a{background:rgba(52,211,153,.2);color:var(--emerald);border:1px solid rgba(52,211,153,.5);box-shadow:0 0 20px -6px rgba(52,211,153,.7)}
+  .cohort-formula .cf-eq .letter.u{background:rgba(148,163,184,.12);color:#cbd5e1;border:1px solid rgba(148,163,184,.3)}
+  .cohort-formula .cf-eq .op{color:var(--mut2);font-weight:700}
+  .cohort-formula .cf-eq .total{
+    padding:6px 14px;
+    border-radius:9px;
+    font-size:20px;
+    background:rgba(255,255,255,.05);
+    color:#fff;
+    border:1px solid var(--line);
+  }
+  .cohort-formula .cf-note{
+    font-size:12.5px;
+    line-height:1.6;
+    color:var(--mut);
+    margin-top:14px;
+    font-family:ui-monospace,monospace;
+    letter-spacing:.02em;
+  }
+
+  .buckets{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    margin-bottom:20px;
+  }
+  .bucket{
+    padding:20px 18px 18px;
+    border-radius:12px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+    transition:.25s;
+  }
+  .bucket::before{
+    content:"";position:absolute;
+    top:0;right:0;left:0;height:3px;
+    background:rgb(var(--bc));
+  }
+  .bucket:hover{
+    transform:translateY(-3px);
+    border-color:rgba(var(--bc),.5);
+    box-shadow:0 18px 40px -24px rgba(var(--bc),.85);
+  }
+  .bucket.b-g{--bc:244,63,94}
+  .bucket.b-f{--bc:251,191,36}
+  .bucket.b-a{--bc:52,211,153;
+    background:linear-gradient(180deg,rgba(52,211,153,.06),var(--panel));
+    border-color:rgba(52,211,153,.4)}
+  .bucket.b-u{--bc:148,163,184}
+
+  .bucket-letter{
+    width:38px;height:38px;
+    border-radius:10px;
+    display:grid;place-items:center;
+    font-family:ui-monospace,monospace;
+    font-size:17px;font-weight:800;
+    background:rgba(var(--bc),.16);
+    color:rgb(var(--bc));
+    border:1px solid rgba(var(--bc),.35);
+    margin-bottom:12px;
+  }
+  .bucket-name{
+    font-size:13.5px;
+    font-weight:700;
+    color:#fff;
+    letter-spacing:-.005em;
+    line-height:1.35;
+    margin-bottom:8px;
+  }
+  .bucket-desc{
+    font-size:11.5px;
+    line-height:1.6;
+    color:var(--mut);
+  }
+  .bucket-desc b{color:#cfd8e8;font-weight:600}
+  .bucket-tag{
+    display:inline-block;
+    margin-top:10px;
+    font-family:ui-monospace,monospace;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    padding:3px 8px;
+    border-radius:5px;
+    background:rgba(var(--bc),.14);
+    color:rgb(var(--bc));
+    border:1px solid rgba(var(--bc),.3);
+  }
+  .bucket.b-a .bucket-tag{
+    background:var(--emerald);
+    color:#0a0d14;
+    border-color:var(--emerald);
+  }
+
+  /* ============ SCENARIO TABLES ============ */
+  .scenario-block{
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    overflow:hidden;
+    margin-bottom:16px;
+    position:relative;
+  }
+  .scenario-block::before{
+    content:"";position:absolute;
+    top:0;right:0;left:0;height:3px;
+    background:rgb(var(--sc));
+  }
+  .scenario-block.s-recurring{--sc:52,211,153}
+  .scenario-block.s-onetime{--sc:34,211,238}
+
+  .scenario-head{
+    padding:20px 24px 16px;
+    display:flex;align-items:center;
+    gap:14px;flex-wrap:wrap;
+    border-bottom:1px solid var(--line);
+    background:linear-gradient(90deg,rgba(var(--sc),.06),transparent);
+  }
+  .scenario-tag{
+    font-family:ui-monospace,monospace;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    padding:5px 10px;
+    border-radius:6px;
+    background:rgba(var(--sc),.16);
+    color:rgb(var(--sc));
+    border:1px solid rgba(var(--sc),.34);
+  }
+  .scenario-title{
+    font-size:16px;
+    font-weight:700;
+    color:#fff;
+    letter-spacing:-.01em;
+  }
+  .scenario-sub{
+    flex:1;
+    min-width:220px;
+    font-size:12.5px;
+    color:var(--mut);
+    line-height:1.5;
+  }
+  .scenario-body table{
+    min-width:480px;
+  }
+  .scenario-body thead th{
+    background:rgba(255,255,255,.02);
+    font-size:10.5px;
+  }
+  .scenario-body tbody td{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13px;
+    font-variant-numeric:tabular-nums;
+    text-align:right;
+  }
+  .scenario-body tbody td:first-child{
+    font-family:inherit;
+    font-size:13.5px;
+    font-weight:500;
+    text-align:left;
+    color:#cfd8e8;
+  }
+  .scenario-body tbody tr.highlight td{
+    background:rgba(var(--sc),.05);
+    color:rgb(var(--sc));
+    font-weight:700;
+  }
+  .scenario-body tbody tr.dim td{
+    color:var(--mut);
+  }
+
+  .scenario-note{
+    padding:14px 24px 18px;
+    border-top:1px dashed var(--line);
+    font-size:12.5px;
+    line-height:1.65;
+    color:var(--mut);
+  }
+  .scenario-note b{color:#fff;font-weight:600}
+  .scenario-note code{
+    font-family:ui-monospace,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1px 5px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ CALLOUTS ============ */
+  .callout{
+    padding:20px 24px;
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    margin:16px 0;
+    display:flex;gap:18px;align-items:flex-start;
+    position:relative;
+    overflow:hidden;
+  }
+  .callout::before{
+    content:"";position:absolute;
+    left:0;top:0;bottom:0;width:3px;
+    background:rgb(var(--cc));
+  }
+  .callout-icon{
+    flex:0 0 40px;
+    width:40px;height:40px;
+    border-radius:11px;
+    display:grid;place-items:center;
+    font-size:18px;
+    background:rgba(var(--cc),.15);
+    color:rgb(var(--cc));
+    border:1px solid rgba(var(--cc),.35);
+  }
+  .callout-body{flex:1;min-width:0}
+  .callout-label{
+    font-size:11px;font-weight:700;
+    letter-spacing:.09em;text-transform:uppercase;
+    color:rgb(var(--cc));
+    margin-bottom:10px;
+  }
+  .callout p{
+    font-size:13.5px;
+    line-height:1.7;
+    color:#b8c2d2;
+    margin:0;
+  }
+  .callout p + p{margin-top:10px}
+  .callout p b{color:#fff;font-weight:600}
+  .callout p em{font-style:italic;color:#dfe7f4}
+  .callout p code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.05);
+    padding:1.5px 6px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  .callout.info{--cc:26,79,245}
+  .callout.warn{--cc:251,191,36}
+  .callout.danger{--cc:244,63,94}
+  .callout.success{--cc:52,211,153}
+  .callout.violet{--cc:167,139,250}
+
+  /* ============ BENCHMARK CARD ============ */
+  .benchmark{
+    padding:24px 26px;
+    border-radius:var(--radius);
+    background:linear-gradient(135deg,rgba(234,179,8,.06),rgba(234,179,8,.01) 70%,transparent);
+    border:1px solid rgba(234,179,8,.32);
+    position:relative;
+    overflow:hidden;
+    margin:16px 0;
+  }
+  .benchmark::before{
+    content:"";position:absolute;
+    left:0;top:0;bottom:0;width:4px;
+    background:var(--gold);
+  }
+  .benchmark-label{
+    font-size:11px;font-weight:700;
+    letter-spacing:.1em;text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:14px;
+    display:flex;align-items:center;gap:9px;
+  }
+  .benchmark-label::before{
+    content:"";width:12px;height:2px;
+    border-radius:2px;background:currentColor;
+  }
+  .benchmark-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:14px;
+    margin-bottom:16px;
+  }
+  .bm-item{
+    padding:14px 16px;
+    border-radius:10px;
+    background:rgba(0,0,0,.3);
+    border:1px solid rgba(234,179,8,.2);
+  }
+  .bm-item .bm-k{
+    font-size:10.5px;
+    font-weight:700;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--mut2);
+    margin-bottom:8px;
+  }
+  .bm-item .bm-v{
+    font-family:ui-monospace,monospace;
+    font-size:22px;
+    font-weight:800;
+    letter-spacing:-.02em;
+    color:#fff;
+    font-variant-numeric:tabular-nums;
+    line-height:1;
+    margin-bottom:6px;
+  }
+  .bm-item .bm-v.bm-saas{color:var(--cyan)}
+  .bm-item .bm-v.bm-edtech{color:var(--amber)}
+  .bm-item .bm-v.bm-bayan{color:var(--rose)}
+  .bm-item .bm-n{
+    font-size:11px;
+    line-height:1.5;
+    color:var(--mut);
+  }
+  .benchmark p{
+    font-size:13.5px;
+    line-height:1.7;
+    color:#d8d0bd;
+  }
+  .benchmark p b{color:#fff;font-weight:600}
+
+  /* ============ CAC CARDS ============ */
+  .cac-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    margin:16px 0;
+  }
+  .cac-card{
+    padding:22px 24px 20px;
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+  }
+  .cac-card::before{
+    content:"";position:absolute;
+    top:0;right:0;left:0;height:3px;
+    background:rgb(var(--kc));
+  }
+  .cac-card.media{--kc:52,211,153}
+  .cac-card.full{--kc:167,139,250}
+  .cac-card.new{--kc:34,211,238}
+
+  .cac-k{
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    color:rgb(var(--kc));
+    margin-bottom:12px;
+  }
+  .cac-title{
+    font-size:15px;
+    font-weight:700;
+    color:#fff;
+    letter-spacing:-.01em;
+    line-height:1.4;
+    margin-bottom:10px;
+  }
+  .cac-val{
+    font-family:ui-monospace,monospace;
+    font-size:26px;
+    font-weight:800;
+    letter-spacing:-.03em;
+    color:rgb(var(--kc));
+    font-variant-numeric:tabular-nums;
+    margin-bottom:10px;
+    line-height:1;
+  }
+  .cac-desc{
+    font-size:13px;
+    line-height:1.65;
+    color:#b8c2d2;
+  }
+  .cac-desc b{color:#fff;font-weight:600}
+
+  /* ============ BUDGET TABLE ============ */
+  .budget-table{
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    overflow:hidden;
+  }
+  .budget-table .brow{
+    display:grid;
+    grid-template-columns:1fr 180px 1fr;
+    gap:14px;
+    align-items:flex-start;
+    padding:16px 22px;
+    border-bottom:1px solid var(--line);
+    font-size:13.5px;
+    transition:.2s;
+  }
+  .budget-table .brow:last-child{border-bottom:none}
+  .budget-table .brow:hover{background:rgba(255,255,255,.015)}
+  .budget-table .brow.head{
+    background:rgba(255,255,255,.02);
+    padding:12px 22px;
+    font-size:10.5px;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--mut);
+  }
+  .budget-table .brow.head:hover{background:rgba(255,255,255,.02)}
+  .budget-table .brow.total{
+    background:linear-gradient(90deg,rgba(52,211,153,.06),transparent);
+    font-weight:600;
+  }
+  .budget-table .b-line{
+    font-weight:500;
+    color:#cfd8e8;
+  }
+  .budget-table .b-line b{color:#fff;font-weight:600}
+  .budget-table .b-amt{
+    font-family:ui-monospace,monospace;
+    font-size:13px;
+    font-weight:700;
+    color:#dfe7f4;
+    text-align:right;
+    white-space:nowrap;
+    font-variant-numeric:tabular-nums;
+  }
+  .budget-table .b-amt.zero{color:var(--emerald)}
+  .budget-table .b-amt.unfilled{color:var(--rose);letter-spacing:.04em}
+  .budget-table .b-amt.tbd{color:var(--amber)}
+  .budget-table .b-basis{
+    font-size:12px;
+    line-height:1.55;
+    color:var(--mut);
+  }
+  .budget-table .b-basis b{color:#cfd8e8;font-weight:600}
+  .budget-table .b-basis code{
+    font-family:ui-monospace,monospace;
+    font-size:11.5px;
+    background:rgba(255,255,255,.05);
+    padding:1px 5px;border-radius:4px;
+    color:#dfe7f4;
+  }
+
+  /* ============ DECISIONS TABLE ============ */
+  .decisions-table{
+    border-radius:var(--radius);
+    background:var(--panel);
+    border:1px solid var(--line);
+    overflow:hidden;
+  }
+  .decisions-table .drow{
+    display:grid;
+    grid-template-columns:44px 1fr 200px;
+    gap:16px;
+    align-items:flex-start;
+    padding:18px 24px;
+    border-bottom:1px solid var(--line);
+    font-size:13.5px;
+    transition:.2s;
+  }
+  .decisions-table .drow:last-child{border-bottom:none}
+  .decisions-table .drow:hover{background:rgba(255,255,255,.015)}
+  .decisions-table .dnum{
+    font-family:ui-monospace,monospace;
+    font-size:13px;
+    font-weight:800;
+    color:var(--bayan2);
+    padding-top:2px;
+  }
+  .decisions-table .dname{
+    color:#cfd8e8;
+    line-height:1.55;
+  }
+  .decisions-table .dname b{color:#fff;font-weight:600}
+  .decisions-table .downer{
+    font-family:ui-monospace,monospace;
+    font-size:11.5px;
+    color:var(--mut);
+    line-height:1.5;
+    text-align:right;
+  }
+  .decisions-table .downer b{color:#cfd8e8;font-weight:600}
+
+  /* ============ FOOTER ============ */
+  footer{
+    padding-top:32px;
+    margin-top:56px;
+    border-top:1px solid var(--line);
+    font-size:12.5px;
+    color:var(--mut2);
+    text-align:center;
+    line-height:1.85;
+  }
+  footer .mark{color:var(--bayan2);font-weight:600}
+  footer code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12px;
+    background:rgba(255,255,255,.04);
+    padding:2px 7px;border-radius:5px;
+    color:#cfd8e8;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:820px){
+    main{padding:0 16px 60px}
+    header{padding:40px 0 30px;margin-bottom:32px}
+    header h1{font-size:26px}
+    header .lede{font-size:14.5px}
+    section{margin-bottom:44px}
+    section h2{font-size:20px}
+
+    .buckets{grid-template-columns:1fr 1fr;gap:10px}
+    .cac-grid{grid-template-columns:1fr}
+    .budget-table .brow{grid-template-columns:1fr;gap:6px}
+    .budget-table .b-amt{text-align:left}
+    .decisions-table .drow{grid-template-columns:36px 1fr;gap:12px}
+    .decisions-table .downer{grid-column:2;text-align:left;padding-top:6px}
+
+    .cohort-formula .cf-eq{font-size:16px;gap:6px}
+    .cohort-formula .cf-eq .letter{font-size:18px;padding:5px 10px}
+    .cohort-formula .cf-eq .total{font-size:16px;padding:5px 10px}
+
+    .topnav{padding:10px 16px}
+    .topnav a{font-size:11px;padding:6px 10px}
+  }
+  @media (max-width:480px){
+    header h1{font-size:22px}
+    .buckets{grid-template-columns:1fr}
+    .benchmark-grid{grid-template-columns:1fr}
+    .arith{padding:16px 18px}
+    .arith-math{font-size:12px;padding:12px 14px}
+    table{min-width:0;font-size:12px}
+    thead th,tbody td{padding:11px 12px;font-size:12px}
+  }
+</style>
+</head>
+<body>
+
+<nav class="topnav" id="topnav">
+  <a href="#inputs">Inputs</a>
+  <a href="#arithmetic">Baseline math</a>
+  <a href="#cohort">Cohort model</a>
+  <a href="#scenario">Scenarios</a>
+  <a href="#targets">Target policy</a>
+  <a href="#cac">CAC</a>
+  <a href="#budget">Budget</a>
+  <a href="#fee">Nasim fee</a>
+  <a href="#decisions">Decisions</a>
+</nav>
+
+<main>
+
+  <!-- ============ HEADER ============ -->
+  <header>
+    <div class="crumbs">
+      <span>Bayan</span>
+      <span class="sep">/</span>
+      <span>Conversion-First Trial</span>
+      <span class="sep">/</span>
+      <span class="here">Revised Numbers Annex</span>
+    </div>
+
+    <span class="tag">Draft for CEO · scenario, not forecast</span>
+    <h1>Revised Numbers Annex</h1>
+    <p class="lede">
+      Companion to <b>bayan-conversion-first-plan.md</b>. Every rate here is a
+      <b>model with its inputs shown</b> — a scenario that can be checked, not
+      a promise pulled from air. The statuses and caveats matter more than the
+      numbers. Currency: <code>$277</code> and <code>$16</code> are treated
+      as USD <b>for arithmetic only</b>.
+    </p>
+
+    <div class="meta-grid">
+      <div class="m-item">
+        <span class="m-k">Companion</span>
+        <span class="m-v"><code>bayan-conversion-first-plan.md</code></span>
+      </div>
+      <div class="m-item">
+        <span class="m-k">Revision basis</span>
+        <span class="m-v"><code>paste-1…7</code> + <code>analytics-events-spec</code></span>
+      </div>
+      <div class="m-item">
+        <span class="m-k">Status</span>
+        <span class="m-v">Draft · no authorization to spend</span>
+      </div>
+      <div class="m-item">
+        <span class="m-k">Currency</span>
+        <span class="m-v">USD · arithmetic only</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ INPUTS ============ -->
+  <section id="inputs">
+    <h2><span class="num">01</span> Inputs · source and confidence</h2>
+    <p class="desc">
+      Twelve inputs. Every one carries a status. <b>Only some are supplied
+      values; the rest are unverified</b>. Where a value is unfilled, it is
+      marked <code>$____</code> — the plan refuses to invent it.
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Input</th>
+            <th style="width:220px">Supplied value</th>
+            <th>Status / caveat</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Registered users</b></td>
+            <td><span class="num-cell">1,300</span></td>
+            <td>CEO-review brief · reconcile to deduplicated export + cutoff date <span class="status-pill confirm">confirm</span></td>
+          </tr>
+          <tr>
+            <td><b>Conversion</b></td>
+            <td><span class="num-cell">&lt;1%</span></td>
+            <td>Exact numerator, denominator, and observation window <span class="status-pill confirm">confirm</span></td>
+          </tr>
+          <tr>
+            <td><b>Revenue</b></td>
+            <td><span class="num-cell money">$277 total</span></td>
+            <td>Currency, date range, payer count, refunds, fees, gross/net <span class="status-pill confirm">confirm</span></td>
+          </tr>
+          <tr>
+            <td><b>Pre-2026-05-01 free access</b></td>
+            <td><span class="num-cell">permanent</span></td>
+            <td>Supplied excerpt cites an app access rule not included in full · verify deployed policy</td>
+          </tr>
+          <tr>
+            <td><b>Humanitarian free countries</b></td>
+            <td><span class="num-cell">13 · Oman not included</span></td>
+            <td>Actual country list and country-resolution policy <span class="status-pill confirm">confirm</span></td>
+          </tr>
+          <tr>
+            <td><b>Addressable non-payers · A</b></td>
+            <td><span class="num-cell empty">unknown</span></td>
+            <td>Computed only after deduplication + entitlement + geography + payment + offer-fit rules</td>
+          </tr>
+          <tr>
+            <td><b>Trial</b></td>
+            <td><span class="num-cell">30 days</span></td>
+            <td>Live trial and expiry behavior <span class="status-pill confirm">confirm</span></td>
+          </tr>
+          <tr>
+            <td><b>Free usage cap</b></td>
+            <td><span class="num-cell">5 Q/day</span></td>
+            <td>Actual production behavior <span class="status-pill confirm">confirm</span></td>
+          </tr>
+          <tr>
+            <td><b>Existing subscription prices</b></td>
+            <td><span class="num-cell">$9.99–$29/mo</span></td>
+            <td>Live plans / currency / contents <span class="status-pill confirm">confirm</span></td>
+          </tr>
+          <tr>
+            <td><b>Proposed blended ARPU</b></td>
+            <td><span class="num-cell">~$16</span></td>
+            <td>Scenario assumption · not verified · not necessarily MRR</td>
+          </tr>
+          <tr>
+            <td><b>Tools / lifecycle estimate</b></td>
+            <td><span class="num-cell">$0–$150/mo</span></td>
+            <td>Estimate only · provider pricing, subscriptions, fees <span class="status-pill confirm">confirm</span></td>
+          </tr>
+          <tr>
+            <td><b>Optional paid test</b></td>
+            <td><span class="num-cell">$300–$500</span></td>
+            <td>Proposed range only · <b>no authorization</b></td>
+          </tr>
+          <tr>
+            <td><b>Nasim's trial fee</b></td>
+            <td><span class="num-cell empty">$____</span></td>
+            <td>Deliberately unfilled · amount, currency, scope, relation to $500 cap <span class="status-pill rose">with Nasim/Hiwa</span></td>
+          </tr>
+          <tr>
+            <td><b>Question counts</b></td>
+            <td><span class="num-cell">4k / 5k / 5,589 / 5,610 / 5,760 / 10k+</span></td>
+            <td>Eight variants claimed · six enumerated · authoritative count <span class="status-pill confirm">confirm</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ ARITHMETIC ============ -->
+  <section id="arithmetic">
+    <h2><span class="num">02</span> Baseline arithmetic</h2>
+    <p class="desc">
+      Computed from the saved paste files — <b>not</b> from the rounded prose
+      claims. Four things the arithmetic actually shows.
+    </p>
+
+    <div class="arith-list">
+
+      <div class="arith a1">
+        <div class="arith-head">
+          <span class="arith-num">01</span>
+          <span class="arith-label">The payer count is fewer than 13 — not "about 13"</span>
+        </div>
+        <div class="arith-math">
+          <span class="k">if</span> &lt;1% uses 1,300 <span class="k">as</span> denominator:<br>
+          0.01 × 1,300 = <span class="n">13</span><br>
+          → payers = <span class="res">&lt; 13</span>
+        </div>
+        <p>
+          Not a verified payer count — the rate window and numerator are
+          missing. The value is a <b>ceiling, not a measurement</b>.
+        </p>
+      </div>
+
+      <div class="arith a2">
+        <div class="arith-head">
+          <span class="arith-num">02</span>
+          <span class="arith-label">$277 ÷ 1,300 is not ARPU</span>
+        </div>
+        <div class="arith-math">
+          $277 ÷ 1,300 = <span class="n">$0.2130769…</span><br>
+          ≈ <span class="res">$0.2131</span> <span class="k">per registered user</span>
+        </div>
+        <p>
+          Across an unknown "to date" window. This is <b>not ARPU, ARPPU, MRR,
+          LTV, or revenue per eligible user</b>. It is a raw ratio of two
+          numbers with different meanings.
+        </p>
+      </div>
+
+      <div class="arith a3">
+        <div class="arith-head">
+          <span class="arith-num">03</span>
+          <span class="arith-label">"+500 visits → +$10–50/mo" cannot be checked</span>
+        </div>
+        <div class="arith-math">
+          <span class="err">missing:</span> per-payer price · conversion window<br>
+          <span class="err">missing:</span> repeat / retention behavior<br>
+          <span class="err">missing:</span> acquisition source
+        </div>
+        <p>
+          It illustrates <b>missing inputs</b> — not an evidence-based result.
+        </p>
+      </div>
+
+      <div class="arith a4">
+        <div class="arith-head">
+          <span class="arith-num">04</span>
+          <span class="arith-label">"1% → 5% = thousands/mo" depends on invalid assumptions</span>
+        </div>
+        <div class="arith-math">
+          <span class="k">@ hypothetical $16/mo, all 1,300 eligible:</span><br>
+          1% → 13 payers → <span class="n">$208</span> gross run-rate<br>
+          5% → 65 payers → <span class="n">$1,040</span> gross run-rate<br>
+          gap = <span class="res">$832</span> gross monthly run-rate
+        </div>
+        <p>
+          Before fees, refunds, churn, eligibility exclusions. A <b>hypothetical
+          on an invalid-until-verified denominator</b> — not a Bayan projection.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ COHORT ============ -->
+  <section id="cohort">
+    <h2><span class="num">03</span> Cohort model · the real denominator</h2>
+    <p class="desc">
+      The conversion denominator is <b>not 1,300</b>. Deduplicate the account
+      export, then assign every account to exactly one mutually exclusive
+      eligibility group at a fixed snapshot date.
+    </p>
+
+    <div class="cohort-formula">
+      <div class="cf-eq">
+        <span class="letter g">G</span>
+        <span class="op">+</span>
+        <span class="letter f">F</span>
+        <span class="op">+</span>
+        <span class="letter a">A</span>
+        <span class="op">+</span>
+        <span class="letter u">U</span>
+        <span class="op">=</span>
+        <span class="total">1,300</span>
+      </div>
+      <div class="cf-note">only if the supplied total is confirmed against the export</div>
+    </div>
+
+    <div class="buckets">
+
+      <div class="bucket b-g">
+        <div class="bucket-letter">G</div>
+        <div class="bucket-name">Grandfathered</div>
+        <div class="bucket-desc">
+          Created before <b>2026-05-01</b>, holding permanent free access
+          under the confirmed policy.
+        </div>
+        <span class="bucket-tag">not addressable</span>
+      </div>
+
+      <div class="bucket b-f">
+        <div class="bucket-letter">F</div>
+        <div class="bucket-name">Free-country</div>
+        <div class="bucket-desc">
+          Eligible for humanitarian free access under the confirmed country
+          list, excluding any already in <b>G</b> by a documented precedence
+          rule.
+        </div>
+        <span class="bucket-tag">not addressable</span>
+      </div>
+
+      <div class="bucket b-a">
+        <div class="bucket-letter">A</div>
+        <div class="bucket-name">Addressable non-payer</div>
+        <div class="bucket-desc">
+          Unique, non-paying account with an <b>eligible location / entitlement</b>
+          and a <b>verified matching paid offer</b>.
+        </div>
+        <span class="bucket-tag">✓ the denominator</span>
+      </div>
+
+      <div class="bucket b-u">
+        <div class="bucket-letter">U</div>
+        <div class="bucket-name">Unresolved</div>
+        <div class="bucket-desc">
+          Missing / ambiguous access, country, duplicate, payment, or
+          offer-fit evidence.
+        </div>
+        <span class="bucket-tag">excluded until resolved</span>
+      </div>
+
+    </div>
+
+    <div class="callout info">
+      <div class="icon">◆</div>
+      <div class="callout-body">
+        <div class="callout-label">Engagement is a separate dimension</div>
+        <p>
+          Active / inactive / unknown is a <b>cross-tab within each group</b> —
+          not a fifth bucket. <code>G</code>, <code>F</code>, and
+          <code>A</code> can each contain inactive accounts.
+        </p>
+        <p>
+          "Wrong segment" is a <em>declared-intent / offer-fit attribute</em>
+          to check — <b>not a reason to silently drop a user</b>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCENARIOS ============ -->
+  <section id="scenario">
+    <h2 class="warn"><span class="num">04</span> Supplied scenario · illustrative, not a target</h2>
+    <p class="desc">
+      The supplied material proposes a cumulative conversion scenario of
+      <b>3% / 5% / 7%</b> over three months on an addressable base, at a blended
+      <b>~$16</b>. For arithmetic only, <code>A = 400</code> is used as a
+      placeholder — <b>replace it with the Week-1 addressable count</b> before
+      any number here is used.
+    </p>
+
+    <!-- RECURRING -->
+    <div class="scenario-block s-recurring">
+      <div class="scenario-head">
+        <span class="scenario-tag">if recurring</span>
+        <span class="scenario-title">$16 = a monthly subscription price</span>
+        <span class="scenario-sub">The dollar figures are run-rate levels — the incremental adds are what matter.</span>
+      </div>
+      <div class="scenario-body">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Month 1</th>
+              <th>Month 2</th>
+              <th>Month 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="dim">
+              <td>Cumulative conversion of A</td>
+              <td>3%</td>
+              <td>5%</td>
+              <td>7%</td>
+            </tr>
+            <tr>
+              <td>Cumulative paid (A = 400)</td>
+              <td>12</td>
+              <td>20</td>
+              <td>28</td>
+            </tr>
+            <tr class="highlight">
+              <td>New buyers that month</td>
+              <td>12</td>
+              <td>8</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>Gross MRR run-rate level</td>
+              <td>$192</td>
+              <td>$320</td>
+              <td>$448</td>
+            </tr>
+            <tr class="highlight">
+              <td>Incremental MRR vs prior</td>
+              <td>+$192</td>
+              <td>+$128</td>
+              <td>+$128</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="scenario-note">
+        Before churn, refunds, payment fees, taxes, variable costs, Nasim /
+        tools / engineering costs. Read two things honestly: the
+        <b>12 / 20 / 28 are cumulative</b> — only <b>12 / 8 / 8</b> are new;
+        and <b>$192 / $320 / $448 are run-rate levels</b>, not new money added
+        each month. Month 1's <code>$192</code> does <b>not</b> exceed the
+        <code>$277</code> lifetime-to-date — and the two are not comparable in
+        any case.
+      </div>
+    </div>
+
+    <!-- ONE-TIME -->
+    <div class="scenario-block s-onetime">
+      <div class="scenario-head">
+        <span class="scenario-tag">if one-time</span>
+        <span class="scenario-title">$16 = a one-time exam pass</span>
+        <span class="scenario-sub">These are cumulative gross receipts — not MRR. Do not call them MRR.</span>
+      </div>
+      <div class="scenario-body">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Month 1</th>
+              <th>Month 2</th>
+              <th>Month 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cumulative gross receipts</td>
+              <td>$192</td>
+              <td>$320</td>
+              <td>$448</td>
+            </tr>
+            <tr class="highlight">
+              <td>Added receipts this month</td>
+              <td>$192</td>
+              <td>$128</td>
+              <td>$128</td>
+            </tr>
+            <tr class="dim">
+              <td>MRR</td>
+              <td>n/a</td>
+              <td>n/a</td>
+              <td>n/a</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="scenario-note">
+        There is <b>no run-rate</b>; a one-time pass does not recur. Report as
+        <em>receipts</em>, not as MRR. The word "MRR" is not allowed anywhere
+        near these numbers.
+      </div>
+    </div>
+
+    <div class="callout danger">
+      <div class="icon">⚑</div>
+      <div class="callout-body">
+        <div class="callout-label">Never compare monthly to lifetime</div>
+        <p>
+          <b>Never compare a monthly MRR run-rate to the $277 lifetime-to-date.</b>
+          First establish the window the <code>$277</code> covers; then compare
+          it only to <b>cumulative receipts over the same window</b>. Monthly
+          run-rate vs lifetime total is a <em>category error</em>, not a result.
+        </p>
+      </div>
+    </div>
+
+    <div class="callout info">
+      <div class="icon">◆</div>
+      <div class="callout-body">
+        <div class="callout-label">If the mix includes both — report three quantities, never one blended number</div>
+        <p>
+          <b>MRR</b> = active recurring subscriptions × net monthly price (after
+          churn). <b>One-time receipts</b> = exam-pass units × net pass price,
+          in the month collected. <b>Net contribution</b> = receipts −
+          (payment fees + variable service / content cost) per unit.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TARGET POLICY ============ -->
+  <section id="targets">
+    <h2><span class="num">05</span> Target policy · how a scenario becomes a target</h2>
+    <p class="desc">
+      The 3 / 5 / 7% figures are <b>proposed scenarios from the supplied
+      material</b>, not committed targets and not a forecast. They become
+      targets only after Week-1 instrumentation gives Bayan's own baseline on
+      the fixed addressable denominator.
+    </p>
+
+    <div class="benchmark">
+      <div class="benchmark-label">Benchmark context · verified 2026-10-01, First Page Sage</div>
+      <div class="benchmark-grid">
+        <div class="bm-item">
+          <div class="bm-k">SaaS freemium average</div>
+          <div class="bm-v bm-saas">~3.7%</div>
+          <div class="bm-n">80+ clients · 2021–2025</div>
+        </div>
+        <div class="bm-item">
+          <div class="bm-k">EdTech freemium average</div>
+          <div class="bm-v bm-edtech">~2.6%</div>
+          <div class="bm-n">EdTech sits at the <b>low end</b></div>
+        </div>
+        <div class="bm-item">
+          <div class="bm-k">Bayan today</div>
+          <div class="bm-v bm-bayan">&lt;1%</div>
+          <div class="bm-n">Below even the EdTech average</div>
+        </div>
+      </div>
+      <p>
+        "Good" is <b>4–5%</b>; best-in-class <b>6–8%</b> — AI-native products
+        skew toward that top band. Bayan at <b>&lt;1% sits below even the EdTech
+        average</b>, so the headroom is real. A re-engaged, nurtured base with
+        a working paywall and a mid-tier SKU can plausibly reach
+        <b>3–5% of the addressable cohort within 90 days</b>.
+      </p>
+      <p style="margin-top:12px">
+        <b>A benchmark explains why the headroom exists — it does not validate
+        3/5/7% for Bayan over 90 days.</b> Only Bayan's own instrumented
+        baseline can do that.
+      </p>
+    </div>
+
+    <div class="callout warn">
+      <div class="icon">⚠</div>
+      <div class="callout-body">
+        <div class="callout-label">Data gate · turn scenario → target</div>
+        <p>
+          Four things must be known before any rate here is more than
+          illustrative: <b>(1)</b> fixed <code>A</code>; <b>(2)</b> baseline
+          numerator and denominator with closed date windows; <b>(3)</b>
+          verified net price; <b>(4)</b> recurring-vs-one-time product mix.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CAC ============ -->
+  <section id="cac">
+    <h2><span class="num">06</span> CAC and unit economics</h2>
+    <p class="desc">
+      The distinction that matters: <b>media CAC</b> and <b>fully-loaded CAC</b>
+      are different numbers, and the existing-base conversion is not $0 CAC
+      even when media spend is $0.
+    </p>
+
+    <div class="cac-grid">
+
+      <div class="cac-card media">
+        <div class="cac-k">Existing base · Weeks 1–4</div>
+        <div class="cac-title">$0 paid media is not $0 CAC</div>
+        <div class="cac-val">$0<span style="font-size:15px;color:var(--mut2);font-weight:600;margin-left:4px"> media</span></div>
+        <div class="cac-desc">
+          Fully-loaded program cost is real — <b>Nasim's fee + any engineering
+          + tooling + payment fees</b>. Report <b>media CAC and fully-loaded
+          CAC separately</b>. It remains the cheapest MRR available because it
+          converts users already in the door.
+        </div>
+      </div>
+
+      <div class="cac-card new">
+        <div class="cac-k">New paid acquisition · Months 2–3</div>
+        <div class="cac-title">Held at $0 until the funnel proves organic conversion</div>
+        <div class="cac-val">$10–150<span style="font-size:15px;color:var(--mut2);font-weight:600;margin-left:4px"> / signup</span></div>
+        <div class="cac-desc">
+          EdTech CAC runs <b>~$10–150 per signup / trial</b> and
+          <b>~$50–300 per paying customer</b> (verified 2026-10-01). Defensible
+          only once <b>LTV:CAC ≥ 3:1</b> with payback inside 12 months is
+          demonstrable — which needs retention data Bayan does not yet have.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="callout danger">
+      <div class="icon">⚑</div>
+      <div class="callout-body">
+        <div class="callout-label">Guardrail, not a measured ratio</div>
+        <p>
+          <b>LTV:CAC cannot be claimed before retention and margin data exist.</b>
+          State it as a <em>guardrail</em> — not as a Bayan-measured ratio. It
+          gates paid acquisition; it does not describe current performance.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BUDGET ============ -->
+  <section id="budget">
+    <h2><span class="num">07</span> Monthly budget · two scenarios</h2>
+    <p class="desc">
+      The canonical live plan records a <b>$500/month planning cap</b> — this
+      does not establish cash authorization, actual available cash, current
+      spend, or who can do engineering. The <code>$0–150</code> tooling and
+      later <code>$300–500</code> paid test are <b>proposals</b>, not confirmed
+      quotes or approved spend.
+    </p>
+
+    <div class="budget-table">
+      <div class="brow head">
+        <div>Line</div>
+        <div style="text-align:right">Amount</div>
+        <div>Basis</div>
+      </div>
+      <div class="brow">
+        <div class="b-line"><b>Paid media</b></div>
+        <div class="b-amt zero">$0</div>
+        <div class="b-basis">No acquisition spend in the trial.</div>
+      </div>
+      <div class="brow">
+        <div class="b-line"><b>Email / analytics / tools</b></div>
+        <div class="b-amt tbd">$0–150/mo</div>
+        <div class="b-basis">Estimate only — not verified. Check existing PostHog + current subscriptions before adding any cost.</div>
+      </div>
+      <div class="brow">
+        <div class="b-line"><b>Nasim fee</b></div>
+        <div class="b-amt unfilled">$____</div>
+        <div class="b-basis"><b>[confirm with Nasim/Hiwa]</b> — the one input the plan cannot compute.</div>
+      </div>
+      <div class="brow">
+        <div class="b-line"><b>Engineering / data</b></div>
+        <div class="b-amt tbd">TBD</div>
+        <div class="b-basis">Supplied Phase-0 estimate is 5–7 workdays before copy; owner availability <b>[confirm]</b>.</div>
+      </div>
+      <div class="brow">
+        <div class="b-line"><b>Transaction fees</b></div>
+        <div class="b-amt tbd">variable</div>
+        <div class="b-basis">Per-payment; applies only once there are payers.</div>
+      </div>
+      <div class="brow total">
+        <div class="b-line"><b>Fully-loaded total · Month 1</b></div>
+        <div class="b-amt" style="color:var(--emerald)">≈ $0–150/mo + fee + eng</div>
+        <div class="b-basis">Fully-loaded, not media-only.</div>
+      </div>
+    </div>
+
+    <div class="callout warn" style="margin-top:20px">
+      <div class="icon">⚠</div>
+      <div class="callout-body">
+        <div class="callout-label">Optional paid test · Months 2–3 only · not approved</div>
+        <p>
+          <b>Inside the $500 cap:</b> permitted media is at most
+          <code>max(0, $500 − confirmed non-media costs)</code>. A $300 test
+          fits only if non-media costs ≤ $200; a $500 test fits only if
+          non-media costs = $0.
+        </p>
+        <p>
+          <b>Above the cap:</b> requires a separately approved higher cap.
+          <b>No paid campaign is justified until the baseline is measured</b>
+          and an allowable CAC is computed from verified net contribution and
+          incremental conversions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NASIM FEE ============ -->
+  <section id="fee">
+    <h2 class="danger"><span class="num">08</span> Nasim's fee · the one unfilled input</h2>
+
+    <div class="callout danger" style="margin-top:0">
+      <div class="icon">$</div>
+      <div class="callout-body">
+        <div class="callout-label">Proposed · not committed</div>
+        <p style="font-family:ui-monospace,monospace;font-size:14px;color:#fff">
+          [PROPOSED — Nasim/Hiwa confirm: fixed 30-day trial fee of <b style="color:var(--rose)">$____</b>]
+        </p>
+        <p>
+          Scoped to exactly the weekly deliverables in the plan. Currency,
+          gross / net basis, included deliverables, and whether it sits inside
+          the $500/month cap <b>all require confirmation</b>.
+        </p>
+        <p>
+          <b>Recommended structure for a cost-conscious CEO:</b> a modest
+          fixed trial fee so the "yes" is easy, with months 2–3 optionally
+          tied to the results the trial produces. <em>This number is the one
+          input the plan cannot invent — it is Hiwa / Nasim's decision.</em>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DECISIONS ============ -->
+  <section id="decisions">
+    <h2><span class="num">09</span> Decisions and data needed</h2>
+    <p class="desc">
+      Five inputs. Nothing in this annex authorizes spend, messaging,
+      entitlement changes, or a committed target until these are resolved.
+    </p>
+
+    <div class="decisions-table">
+      <div class="drow">
+        <div class="dnum">1</div>
+        <div class="dname">
+          Deduplicated account export → fixed <b>G / F / A / U</b> counts + <b>A</b>
+        </div>
+        <div class="downer"><b>Data / engineering</b><br>[confirm]</div>
+      </div>
+      <div class="drow">
+        <div class="dnum">2</div>
+        <div class="dname">
+          Exact grandfathering + free-country policy from the authoritative source
+        </div>
+        <div class="downer"><b>CEO / product</b></div>
+      </div>
+      <div class="drow">
+        <div class="dnum">3</div>
+        <div class="dname">
+          Baseline conversion numerator, denominator, closed date window
+        </div>
+        <div class="downer"><b>Data</b> · post-instrumentation</div>
+      </div>
+      <div class="drow">
+        <div class="dnum">4</div>
+        <div class="dname">
+          Verified net price + recurring-vs-one-time product mix
+        </div>
+        <div class="downer"><b>CEO / product</b></div>
+      </div>
+      <div class="drow">
+        <div class="dnum">5</div>
+        <div class="dname">
+          Nasim's fee — amount, currency, basis, cap relationship
+        </div>
+        <div class="downer"><b>Nasim / Hiwa</b></div>
+      </div>
+    </div>
+
+    <div class="callout info">
+      <div class="icon">◆</div>
+      <div class="callout-body">
+        <div class="callout-label">What this annex does not authorize</div>
+        <p>
+          <b>Nothing here authorizes spend, messaging, entitlement changes, or
+          a committed target.</b> Every rate is a model with its inputs shown,
+          re-baselined against Bayan's own data once Week-1 instrumentation is
+          live.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <p><span class="mark">Bayan</span> · Conversion-First Trial · Revised Numbers Annex</p>
+    <p style="margin-top:6px">
+      Draft for CEO review · companion to <code>bayan-conversion-first-plan.md</code>
+    </p>
+  </footer>
+
+</main>
+
+<script>
+/* ============ Top nav border on scroll ============ */
+const topnav = document.getElementById('topnav');
+window.addEventListener('scroll', () => {
+  topnav.classList.toggle('scrolled', window.scrollY > 20);
+}, {passive:true});
+
+/* ============ Active section highlight ============ */
+const navLinks = document.querySelectorAll('.topnav a');
+const sections = [...navLinks].map(a =>
+  document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+const navIo = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting){
+      const id = '#' + e.target.id;
+      navLinks.forEach(a => a.classList.toggle('active',
+        a.getAttribute('href') === id));
+    }
+  });
+}, {threshold:0.3, rootMargin:'-80px 0px -60% 0px'});
+
+sections.forEach(s => navIo.observe(s));
+
+/* ============ Smooth scroll ============ */
+navLinks.forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    const el = document.querySelector(id);
+    if (!el) return;
+    e.preventDefault();
+    const offset = el.getBoundingClientRect().top + window.scrollY - 70;
+    window.scrollTo({top:offset, behavior:'smooth'});
+  });
+});
+</script>
+
+</body>
+</html>
