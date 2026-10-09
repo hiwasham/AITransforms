@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Safe WordPress speed set — TPRS Books</title>
+<meta name="robots" content="noindex,nofollow,noarchive">
+<link rel="stylesheet" href="../assets/bfv.css">
+</head>
+<body>
+<div class="ambient"></div>
+<div class="progress" id="prog"></div>
+
+<main>
+  <a class="back" href="../tprsbooks-value-first.html">← Back to the eight builds</a>
+
+  <section class="hero" id="top">
+    <span class="kicker">Build 07 · Move 1 · Be readable</span>
+    <h1>The safe speed wins only — <em>no redesign, no risk</em>.</h1>
+    <p class="lead">Real visitors wait 4.2s on mobile before your main content loads. This is the set of
+    safe wins behind that number — the ones that don't touch your design — measured and held.</p>
+    <div class="statrow">
+      <div class="stat bad"><b>4.2s</b><span>Mobile load (p75)</span></div>
+      <div class="stat"><b>53</b><span>Lighthouse mobile perf</span></div>
+      <div class="stat ok"><b>~750ms</b><span>Recoverable, safe wins</span></div>
+      <div class="stat ok"><b>Move 1</b><span>Be readable</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="idx">The build</span>Gap, fix, and honest effect</h2>
+    <dl class="kv">
+      <dt>Gap</dt>
+      <dd>At the 75th percentile, mobile visitors wait <b>4.2s</b> (desktop 4.0s) for main content.
+      Lighthouse scores mobile performance <b>53</b>.</dd>
+      <dt>Built</dt>
+      <dd>The safe wins only: about <b>450ms</b> recoverable from unused CSS, and roughly <b>150ms each</b>
+      from CSS and JS minification. No redesign, nothing that changes how the site looks.</dd>
+      <dt>How</dt>
+      <dd>WordPress-safe changes behind the existing theme, measured against your actual field data rather
+      than a one-off lab run.</dd>
+      <dt>Effect</dt>
+      <dd>The recoverable time is measured; the exact second-count after applying is held for review, not
+      promised. Re-measurable against today's field data.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2><span class="idx">What's in the draft</span>Only the no-risk wins</h2>
+    <ol class="outline">
+      <li><b>Remove or defer unused CSS</b> — about 450ms.</li>
+      <li><b>Minify CSS</b> — about 150ms.</li>
+      <li><b>Minify JS</b> — about 150ms.</li>
+      <li><b>Verify no visual regression</b> — the page must look identical.</li>
+      <li><b>Re-measure field data</b> after, against today's baseline.</li>
+    </ol>
+  </section>
+
+  <div class="callout good"><b>Drafted and held.</b> Nothing applied to tprsbooks.com. The recoverable
+  milliseconds are measured; the post-change load time is a projection, re-checkable in ninety days.</div>
+
+  <footer>
+    Build 07 of 8 · all figures measured on tprsbooks.com, projections labelled as projections ·
+    no changes made to your site.<br>
+    <a href="../tprsbooks-discovery-audit.html">See the audit this came from →</a>
+    <div class="sig">Hiwa · AITransforms</div>
+  </footer>
+</main>
+
+<script>
+  var p=document.getElementById('prog');
+  addEventListener('scroll',function(){var h=document.documentElement,m=h.scrollHeight-h.clientHeight;
+    p.style.width=(m>0?h.scrollTop/m*100:0)+'%'},{passive:true});
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Homepage discovery package — TPRS Books</title>
+<meta name="robots" content="noindex,nofollow,noarchive">
+<link rel="stylesheet" href="../assets/bfv.css">
+</head>
+<body>
+<div class="ambient"></div>
+<div class="progress" id="prog"></div>
+
+<main>
+  <a class="back" href="../tprsbooks-value-first.html">← Back to the eight builds</a>
+
+  <section class="hero" id="top">
+    <span class="kicker">Build 01 · Move 1 · Be readable</span>
+    <h1>A homepage that <em>tells Google and AI what it is</em>.</h1>
+    <p class="lead">Your site renders perfectly for people. But the homepage markup tells a crawler
+    almost nothing — so shared links arrive as bare grey boxes and AI tools can't summarise you.
+    This is the drop-in fix, drafted and held.</p>
+    <div class="statrow">
+      <div class="stat"><b>64</b><span>H1 tags today</span></div>
+      <div class="stat ok"><b>1</b><span>H1 there should be</span></div>
+      <div class="stat"><b>0</b><span>Title / meta / OG today</span></div>
+      <div class="stat ok"><b>59→100</b><span>Site &amp; content, projected</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="idx">The build</span>Gap, fix, and honest effect</h2>
+    <dl class="kv">
+      <dt>Gap</dt>
+      <dd>No page title, no meta description, no Open Graph tags (all three missing), no JSON-LD,
+      no FAQ schema, no <code>llms.txt</code>. The homepage carries <b>64 H1 tags</b> — telling a
+      crawler 64 things are equally the main topic — and only 1 H2.</dd>
+      <dt>Built</dt>
+      <dd>A single discovery package for the <code>&lt;head&gt;</code> and heading hierarchy: one page
+      title, one meta description, three Open Graph tags, a single-H1 structure, an Organization
+      JSON-LD block, plus <code>llms.txt</code> and <code>llms-full.txt</code> drafts.</dd>
+      <dt>How</dt>
+      <dd>WordPress-safe. Nothing changes the visible design — only the head markup and the heading
+      levels underneath it. The page looks identical to a human.</dd>
+      <dt>Effect</dt>
+      <dd>Site &amp; content score projected <b>59 → 100</b>. Shared links gain a title, description and
+      preview image. Projection, not a promise — re-checkable in ninety days.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2><span class="idx">What's in the draft</span>Five changes, no redesign</h2>
+    <ol class="outline">
+      <li>A <b>page title and meta description</b> written specifically for the homepage.</li>
+      <li>Three <b>Open Graph tags</b> (title, description, image) so a shared link previews properly.</li>
+      <li>A <b>heading pass</b>: collapse the 64 H1s to one true H1, demote the rest to H2/H3.</li>
+      <li>An <b>Organization JSON-LD</b> block so search and AI know who you are.</li>
+      <li><b>llms.txt + llms-full.txt</b> drafts — a clean map for AI crawlers.</li>
+    </ol>
+  </section>
+
+  <div class="callout good"><b>Drafted and held.</b> Nothing has been applied to tprsbooks.com.
+  The projected score is a projection; the same homepage checks can be re-run after it's live and
+  compared against today's baseline.</div>
+
+  <footer>
+    Build 01 of 8 · all figures measured on tprsbooks.com, projections labelled as projections ·
+    no changes made to your site.<br>
+    <a href="../tprsbooks-discovery-audit.html">See the audit this came from →</a>
+    <div class="sig">Hiwa · AITransforms</div>
+  </footer>
+</main>
+
+<script>
+  var p=document.getElementById('prog');
+  addEventListener('scroll',function(){var h=document.documentElement,m=h.scrollHeight-h.clientHeight;
+    p.style.width=(m>0?h.scrollTop/m*100:0)+'%'},{passive:true});
+</script>
+</body>
+</html>
