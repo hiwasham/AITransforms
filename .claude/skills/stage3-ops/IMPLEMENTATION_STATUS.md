@@ -152,8 +152,25 @@ Created 9 comprehensive form specifications with implementation code:
 
 ---
 
-### ⬜ Priority 5: Remaining 11 Bayan Processes (NOT STARTED)
-**Status:** 0% | **Estimated Time:** 15-20 hours
+### 🟡 Priority 5: Remaining 11 Bayan Processes (IN PROGRESS)
+**Status:** Proc 4 exemplar ✅ complete | **Started:** 2026-10-09 | **Remaining Est:** 15-20 hours
+
+**Approach (user-approved):** build ONE process end-to-end full-depth as the quality reference,
+then batch the rest. Exemplar = **Proc 4 Customer Segmentation & Persona Development**.
+
+**Proc 4 — DONE (7 files, commit TBD) — DRAFT core IDs 215/216, unverified vs lapsed HQ:**
+- `raci/RACI-004-customer-segmentation.md` (189 lines)
+- `blueprints/BP-004-customer-segmentation-blueprint.md` (251 lines)
+- `sops/SOP-004-icp-and-persona.md` (211 lines, Core 215)
+- `sops/SOP-004-segmentation-and-targeting.md` (247 lines, Core 216)
+- `forms/F4-1-persona-card.md` (178 lines)
+- `forms/F4-2-icp-fit-scorecard.md` (169 lines)
+- `forms/F4-3-segmentation-matrix.md` (154 lines)
+
+**Core-ID caveat:** every Proc 4 file carries a ⚠️ DRAFT/UNVERIFIED stamp. Cores 215 (ICP &
+Persona) / 216 (Segmentation & Targeting) come from client working draft `cores-draft.md`;
+they could not be verified or created against live Stage 3 HQ (lapsed 2026-10-09). Reconcile at
+renewal. Forms F4-* are INTERNAL strategy tools (no multi-language, unlike customer-facing F16/F17).
 
 **Scope:** Build complete Stage 3 documentation for:
 
@@ -184,7 +201,10 @@ Created 9 comprehensive form specifications with implementation code:
 - Heavy processes (4+ cores): 4 hours each × 2 = 8 hours
 - **Total estimate:** 31 hours (conservative)
 
-**Dependencies:** None (can start immediately after Priority 4)
+**Dependencies:** None. Proc 4 proceeds independently of the HQ renewal blocker.
+
+**Next P5 step (needs user confirm before batching):** Strategy procs (5, 9) or Operations
+procs (1, 2, 3, 6, 7, 8); procs 10-13 / 18-21 still need EMPOWER mapping.
 
 ---
 
@@ -199,7 +219,7 @@ Created 9 comprehensive form specifications with implementation code:
 | P2 Proc 17 docs | ✅ 100% | ✅ 5 files (2026-10-09) |
 | P3 L4 Forms | ✅ 100% | ✅ 9 forms on disk |
 | P4 UI Attachment | ⏳ 0% | ⛔ 0% — blocked: Stage 3 access lapsed |
-| P5 Remaining processes | ⬜ 0% | ⬜ 0% |
+| P5 Remaining processes | ⬜ 0% | 🟡 Proc 4 exemplar done (7 files); rest not started |
 
 **Decisions 1 & 2 (delegated 2026-10-09, both executed):**
 1. Proc 17 duplicate cores → keep 269, delete 270-273 newest-first. **Blocked** by HQ lapse.
@@ -214,16 +234,16 @@ Docs work continues independently (P5).
 ## File Inventory
 
 **Documentation created (verified on disk 2026-10-09):**
-- 3 RACI matrices (Proc 16, Proc 17, Proc 22)
-- 10 SOPs (4 Proc 16, 4 Proc 22, 2 Proc 17)
-- 7 L2 Blueprints (4 Proc 16, 1 Proc 22, 2 Proc 17)
-- 9 L4 Forms (4 Proc 16, 3 Proc 17, 2 Proc 22)
+- 4 RACI matrices (Proc 4, 16, 17, 22)
+- 12 SOPs (2 Proc 4, 4 Proc 16, 4 Proc 22, 2 Proc 17)
+- 8 L2 Blueprints (1 Proc 4, 4 Proc 16, 1 Proc 22, 2 Proc 17)
+- 12 L4 Forms (3 Proc 4, 4 Proc 16, 3 Proc 17, 2 Proc 22)
 - 3 framework docs
-- **Total:** 32 files
+- **Total:** 39 files (+7 Proc 4 this session, uncommitted)
 
 **Storage location:** `/root/projects/AITransforms/.claude/skills/stage3-ops/`
 
-**Git status:** All files committed and pushed to `main` branch
+**Git status:** Proc 4 (7 files) uncommitted, awaiting approval. All earlier files committed to `main`.
 
 ---
 
