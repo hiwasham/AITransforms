@@ -26,12 +26,11 @@
 
 ---
 
-### ❌ Priority 2: Proc 16, 17 Documentation (NOT DONE — status was wrong)
-**Status:** 0% | **Verified:** 2026-10-08
+### 🟡 Priority 2: Proc 16, 17 Documentation (PARTIAL)
+**Status:** Proc 16 ✅ done | Proc 17 ❌ not started | **Verified:** 2026-10-08
 
 **Correction:** This section previously claimed 100% complete (12 files). Verification on
-2026-10-08 found **zero** Proc 16/17 RACI/SOP/Blueprint files on disk or in git history.
-Only the 5 Proc 22 files exist.
+2026-10-08 found **zero** Proc 16/17 files on disk or in git history.
 
 **Verified live core IDs (hq.stage3.app, team `BLearning`):**
 
@@ -44,9 +43,28 @@ Only the 5 Proc 22 files exist.
 | 17 Success to Lead | 269-273 | Peer Invite Mechanics ×5 (⚠️ duplicates) | empty |
 | 17 | 274 | Testimonial & Case Study Capture | empty |
 
-**Still to create:**
-- Proc 16: 4 RACI + 4 SOPs + 4 L2 Blueprints
-- Proc 17: 1-2 RACI + 1-2 SOPs + 1-2 L2 Blueprints (pending duplicate-core cleanup)
+**Proc 16 — DONE (9 files, committed 6531d54):**
+- `raci/RACI-016-delivery-to-success.md`
+- `sops/SOP-265-payment-provisioning.md`
+- `sops/SOP-266-onboarding-handoff.md`
+- `sops/SOP-267-progress-and-reengagement.md`
+- `sops/SOP-268-exam-outcomes.md`
+- `blueprints/BP-265-payment-provisioning-blueprint.md`
+- `blueprints/BP-266-onboarding-handoff-blueprint.md`
+- `blueprints/BP-267-progress-and-reengagement-blueprint.md`
+- `blueprints/BP-268-exam-outcomes-blueprint.md`
+
+**Proc 17 — NOT STARTED. Blocked on duplicate-core decision:**
+Cores 269-273 are all named "Peer Invite Mechanics", all empty, all created Oct 6 2026
+within 7 minutes (20:21-20:28). Looks like a retry loop. Need a decision on which to keep
+before writing docs, because the RACI/SOP/BP must reference a specific core ID.
+
+**Decision needed:** keep 269 (earliest), keep 272 (has the shortest description), or delete
+270-273 and keep 269. Deleting cores is destructive — awaiting approval.
+
+**Core ID convention:** Proc 16 and Proc 22 share numeric ranges (both use 265-268).
+Filename collisions avoided by suffixing Proc 16 SOPs with their topic
+(e.g. `SOP-266-onboarding-handoff.md` vs Proc 22's `SOP-266-marketing-attribution.md`).
 
 ---
 ### ⚠️ Priority 1 CORRECTION: Proc 22 core IDs wrong
@@ -166,12 +184,13 @@ Created 10 comprehensive form specifications with implementation code:
 | Priority | Claimed | Actual |
 |---|---|---|
 | P1 Proc 22 docs | ✅ 100% | ⚠️ Files exist, but core IDs wrong (see correction) |
-| P2 Proc 16/17 docs | ✅ 100% | ❌ 0% — no files exist |
+| P2 Proc 16 docs | ✅ 100% | ✅ 9 files (done 2026-10-08) |
+| P2 Proc 17 docs | ✅ 100% | ❌ 0% — blocked on duplicate cores |
 | P3 L4 Forms | ✅ 100% | ✅ 10 forms exist on disk |
 | P4 UI Attachment | ⏳ 0% | ⏳ 0% — blocked on P1/P2 fixes |
 | P5 Remaining processes | ⬜ 0% | ⬜ 0% |
 
-**Next immediate action:** Fix Proc 22 core ID mapping, then build Proc 16/17 docs
+**Next immediate action:** Decide on Proc 17 duplicate cores, then build Proc 17 docs
 
 ---
 
