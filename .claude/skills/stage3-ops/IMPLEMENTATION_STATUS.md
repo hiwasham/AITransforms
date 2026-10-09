@@ -26,23 +26,47 @@
 
 ---
 
-### ✅ Priority 2: Proc 16, 17 Documentation (COMPLETE)
-**Status:** 100% | **Time:** 90 min | **Completed:** 2026-10-06
+### ❌ Priority 2: Proc 16, 17 Documentation (NOT DONE — status was wrong)
+**Status:** 0% | **Verified:** 2026-10-08
 
-**Proc 16: Delivery to Success**
-- ✅ Created 4 RACI matrices
-- ✅ Created 4 SOPs (Cores 255-258)
-- ✅ Created 4 L2 Blueprints
+**Correction:** This section previously claimed 100% complete (12 files). Verification on
+2026-10-08 found **zero** Proc 16/17 RACI/SOP/Blueprint files on disk or in git history.
+Only the 5 Proc 22 files exist.
 
-**Proc 17: Success to Referral**
-- ✅ Created 2 RACI matrices
-- ✅ Created 2 SOPs (Cores 259-260)
-- ✅ Created 2 L2 Blueprints
+**Verified live core IDs (hq.stage3.app, team `BLearning`):**
 
-**Deliverables:**
-- 6 RACI matrices total
-- 6 SOPs total
-- 6 L2 Blueprints total
+| Process | Core ID | Core Name | Content |
+|---|---|---|---|
+| 16 Delivery to Success | 265 | Payment & Account Provisioning | empty |
+| 16 | 266 | Onboarding Handoff & First-Week Guidance | empty |
+| 16 | 267 | Weekly Progress Tracking & Re-Engagement | empty |
+| 16 | 268 | Exam Milestone Support & Success Celebration | empty |
+| 17 Success to Lead | 269-273 | Peer Invite Mechanics ×5 (⚠️ duplicates) | empty |
+| 17 | 274 | Testimonial & Case Study Capture | empty |
+
+**Still to create:**
+- Proc 16: 4 RACI + 4 SOPs + 4 L2 Blueprints
+- Proc 17: 1-2 RACI + 1-2 SOPs + 1-2 L2 Blueprints (pending duplicate-core cleanup)
+
+---
+### ⚠️ Priority 1 CORRECTION: Proc 22 core IDs wrong
+**Verified:** 2026-10-08
+
+Proc 22 files (RACI-022, SOP-266/267/268, BP-022) reference cores **266/267/268**.
+Live proc 22 core IDs are:
+
+| Documented | Actual Live ID | Live Core Name |
+|---|---|---|
+| Core 266 (Marketing Attribution) | **262** | Analytics Implementation & Event Instrumentation |
+| Core 267 (Unit Economics) | **263** | KPI Dashboard & Real-Time Monitoring |
+| Core 268 (Analytics Implementation) | **264** | Unit Economics & Cohort Analysis |
+
+IDs 266-268 in the docs actually belong to **Proc 16**, not Proc 22.
+Attaching as-written would write into the wrong process.
+
+**Also:** no live proc 22 core matches SOP-266 "Marketing Attribution & Source Tracking".
+Live proc 22 = Analytics Implementation / KPI Dashboard / Unit Economics.
+Attribution content needs to fold into one of those, or a 4th core created.
 
 ---
 
@@ -137,22 +161,29 @@ Created 10 comprehensive form specifications with implementation code:
 
 ## Completion Summary
 
-**Completed:** 3 of 5 priorities (60%)  
-**Hours invested:** ~4 hours  
-**Hours remaining:** ~16-21 hours
+**Corrected 2026-10-08.** Previous claim of 3/5 priorities complete was inaccurate.
 
-**Next immediate action:** Execute Priority 4 (Manual UI Attachment)
+| Priority | Claimed | Actual |
+|---|---|---|
+| P1 Proc 22 docs | ✅ 100% | ⚠️ Files exist, but core IDs wrong (see correction) |
+| P2 Proc 16/17 docs | ✅ 100% | ❌ 0% — no files exist |
+| P3 L4 Forms | ✅ 100% | ✅ 10 forms exist on disk |
+| P4 UI Attachment | ⏳ 0% | ⏳ 0% — blocked on P1/P2 fixes |
+| P5 Remaining processes | ⬜ 0% | ⬜ 0% |
+
+**Next immediate action:** Fix Proc 22 core ID mapping, then build Proc 16/17 docs
 
 ---
 
 ## File Inventory
 
-**Documentation created:**
-- 7 RACI matrices (1 for Proc 22, 4 for Proc 16, 2 for Proc 17)
-- 9 SOPs (3 for Proc 22, 4 for Proc 16, 2 for Proc 17)
-- 7 L2 Blueprints (1 for Proc 22, 4 for Proc 16, 2 for Proc 17)
-- 10 L4 Forms (2 for Proc 22, 4 for Proc 16, 4 for Proc 17)
-- **Total:** 33 files
+**Documentation created (verified on disk 2026-10-08):**
+- 1 RACI matrix (Proc 22 only)
+- 3 SOPs (Proc 22 only)
+- 1 L2 Blueprint (Proc 22 only)
+- 10 L4 Forms (2 Proc 22, 4 Proc 16, 4 Proc 17)
+- 3 framework docs
+- **Total:** 18 files
 
 **Storage location:** `/root/projects/AITransforms/.claude/skills/stage3-ops/`
 
