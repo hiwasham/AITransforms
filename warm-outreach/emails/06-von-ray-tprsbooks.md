@@ -1,44 +1,44 @@
-Subject: your Free Resources page tells teachers to fill out a form that isn't there
+Subject: Agentes Secretos and Casa Dividida — teachers can't find them
 
 Hi Von,
 
-I was on your site looking at how you hand out free resources, and found a
-small thing that I think is costing you signups every day.
+I ran a full discovery audit on tprsbooks.com this week. Two findings I think
+you'll want to see.
 
-The "Free Resources" link in your main nav points to /resources/. The page
-says: "fill out the form and gain access to all of our free resources."
-There is a form on that page — but it's your testimonials form. Its heading
-is "Leave us a review," and the fields are Name, Role, Product, Testimonial.
-So a teacher who wants free material is asked to review a product instead.
+First: Agentes Secretos and Casa Dividida are your books, and a teacher
+searching for either by name cannot find you in Google's top 100. Agentes
+Secretos gets 390 searches a month. Somebody else is getting them. Berto sits
+at #4, so the pattern works when the page is right.
 
-It gets worse one click away. /free/, /free-resources-2/ and /freeresources/
-load with no visible content at all, and /free-resources/ redirects to one of
-them. Anyone arriving from search or an old link gets a blank page.
+Second: I asked Claude three questions a teacher would ask. You came up for
+"where can I buy TPRS Spanish readers" — and were invisible for "are TPRS
+books useful for novice learners" and "how do TPRS novels compare with other
+graded readers." You're winning the buying question and losing the choosing
+ones. By the time someone's ready to buy, they've already decided.
 
-I checked your homepage to make sure this wasn't just how the site renders —
-it's 68,969 characters and loads perfectly. Your site is fine. These four
-pages are not.
+The whole audit is here — every number, no charge, and I made no changes to
+your site:
 
-I wrote the whole thing up here, with the exact URLs so you can verify every
-line in about two minutes:
+  https://hiwasham.github.io/AITransforms/tprsbooks-discovery-audit.html
 
-  https://hiwasham.github.io/AITransforms/von-tprs-free-resources-audit.html
-
-No ask attached to this. I did it because it was quick and it's the kind of
-thing that's invisible from inside.
+It also covers the homepage (no title, no meta description, 64 H1s, no
+structured data), a 4.2s mobile load time, and the Spanish / French search
+gaps. There are drafted fixes sitting behind all of it.
 
 One thing, and then I'll drop it. I first wrote to you in 2024 as "Akhbar" —
 that was a name I was using at the time, and it wasn't mine. I'm Hiwa, I run
 AITransforms, and I'd rather start this straight than have you find out later.
-Sorry for the confusion that caused.
 
-If you ever want the free-resources funnel actually fixed — form, redirects,
-labels — I'd be glad to. If not, the audit is yours.
+If it's useful, I'll send you the drafted work — the Spanish and French page
+copy, the Berto rebuild, the homepage markup package — and you take it from
+there. If you'd rather I just implemented it in your WordPress, that's a
+conversation we can have. Either way, the audit is yours.
 
 Warmly,
 Hiwa
 
 ---
 Status: DRAFT — not sent
-Built: 2026-10-09
-Risk flag: identity restart (Akhbar -> Hiwa) — see note below before sending
+Built: 2026-10-09 (v2 — replaced the free-resources angle)
+BFV: docs/tprsbooks-discovery-audit.html (Magister audit, 8 Oct 2026)
+Risk flag: identity restart (Akhbar -> Hiwa) — confirm the paragraph before sending
