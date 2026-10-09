@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TPRS Books — Discovery Audit</title>
+<meta name="robots" content="noindex,nofollow,noarchive">
+<style>
+  :root{
+    --ink:#16181d; --muted:#5c6370; --line:#e3e6ea; --bg:#fff; --card:#f8f9fb;
+    --accent:#1f6feb; --bad:#b42318; --badbg:#fef3f2; --warn:#b54708; --warnbg:#fffaeb;
+    --ok:#067647; --okbg:#ecfdf3;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --ink:#e8eaed; --muted:#9aa2b1; --line:#2a2f3a; --bg:#0f1116; --card:#171a21;
+           --accent:#6ea8ff; --bad:#ff8a80; --badbg:#2a1414; --warn:#fdb022; --warnbg:#231a05;
+           --ok:#6ee7a8; --okbg:#0f2419; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  .wrap{max-width:860px;margin:0 auto;padding:52px 20px 90px}
+  .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  h1{font-size:36px;line-height:1.15;margin:12px 0 12px;letter-spacing:-.022em}
+  h2{font-size:21px;margin:48px 0 12px;letter-spacing:-.012em}
+  h3{font-size:16px;margin:26px 0 8px}
+  .lede{font-size:18px;color:var(--muted);max-width:62ch}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:20px 0}
+  .flag{background:var(--badbg);border:1px solid var(--bad);border-radius:12px;padding:18px 20px;margin:20px 0}
+  .warn-box{background:var(--warnbg);border:1px solid var(--warn);border-radius:12px;padding:18px 20px;margin:20px 0}
+  .good{background:var(--okbg);border:1px solid var(--ok);border-radius:12px;padding:18px 20px;margin:20px 0}
+  code{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:2px 6px;font-size:14px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  table{width:100%;border-collapse:collapse;margin:18px 0;font-size:15px}
+  th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+  .no{color:var(--bad);font-weight:600}
+  .yes{color:var(--ok);font-weight:600}
+  .mid{color:var(--warn);font-weight:600}
+  ul{margin:10px 0 16px;padding-left:22px} li{margin:7px 0}
+  .scores{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:22px 0}
+  .score{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .score .n{font-size:30px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .score .l{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600;margin-bottom:6px}
+  .score .p{font-size:13px;color:var(--muted);margin-top:4px}
+  .bar{height:6px;border-radius:99px;background:var(--line);margin-top:10px;overflow:hidden}
+  .bar span{display:block;height:100%;background:var(--accent)}
+  footer{margin-top:64px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+  .sig{margin-top:10px;color:var(--ink);font-weight:600}
+  .dim{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="eyebrow">Discovery audit · tprsbooks.com · 8 October 2026</div>
+  <h1>You rank for one of six searches — and two of the ones you miss are your own books</h1>
+  <p class="lede">A teacher searching for <em>Agentes Secretos</em> or <em>Casa Dividida</em> cannot find
+  TPRS Books in Google's top 100. Those are your titles. Here is the full picture, measured.</p>
+
+  <div class="scores">
+    <div class="score">
+      <div class="l">Overall health</div>
+      <div class="n">55</div>
+      <div class="bar"><span style="width:55%"></span></div>
+      <div class="p">projected 89 when the gaps below close</div>
+    </div>
+    <div class="score">
+      <div class="l">Google search</div>
+      <div class="n">48</div>
+      <div class="bar"><span style="width:48%"></span></div>
+      <div class="p">ranks for 1 of 6 target searches</div>
+    </div>
+    <div class="score">
+      <div class="l">AI answers</div>
+      <div class="n">61</div>
+      <div class="bar"><span style="width:61%"></span></div>
+      <div class="p">named in 1 of 3 tested answers</div>
+    </div>
+    <div class="score">
+      <div class="l">Site &amp; content</div>
+      <div class="n">59</div>
+      <div class="bar"><span style="width:59%"></span></div>
+      <div class="p">mobile loads in 4.2s</div>
+    </div>
+  </div>
+
+  <h2>1. You are invisible for your own catalogue</h2>
+
+  <p>These six searches were measured against where TPRS Books actually appears in Google:</p>
+
+  <table>
+    <thead><tr><th>Search</th><th>Monthly searches</th><th>Where you rank</th></tr></thead>
+    <tbody>
+      <tr><td>spanish language learning books</td><td class="num">2,900</td><td class="no">not in top 100</td></tr>
+      <tr><td>french language learning books</td><td class="num">720</td><td class="no">not in top 100</td></tr>
+      <tr><td><strong>agentes secretos book</strong></td><td class="num">390</td><td class="no">not in top 100</td></tr>
+      <tr><td><strong>berto spanish book</strong></td><td class="num">90</td><td class="yes">#4</td></tr>
+      <tr><td><strong>casa dividida book</strong></td><td class="num">40</td><td class="no">not in top 100</td></tr>
+      <tr><td>spanish readers for language learners</td><td class="num">—</td><td class="no">not ranking</td></tr>
+    </tbody>
+  </table>
+
+  <div class="flag">
+    <strong>Agentes Secretos and Casa Dividida are your books.</strong> Teachers are searching for them
+    by name, at 390 and 40 searches a month, and finding someone else. <em>Berto</em> sits at #4 — which
+    proves the pattern works when the page is right. Three of the four book-title searches are
+    being handed to competitors.
+  </div>
+
+  <h2>2. AI assistants know your books exist — but not when to recommend them</h2>
+
+  <p>Three questions were put to Claude, the assistant that answers a growing share of
+  "what should I use in my classroom" questions. Results:</p>
+
+  <table>
+    <thead><tr><th>Question a teacher would ask</th><th>TPRS Books mentioned?</th><th>Cited?</th></tr></thead>
+    <tbody>
+      <tr><td>Where can I buy TPRS Spanish readers?</td><td class="yes">yes</td><td class="yes">yes</td></tr>
+      <tr><td>Are TPRS books useful for novice language learners?</td><td class="no">no</td><td class="mid">yes</td></tr>
+      <tr><td>How do TPRS novels compare with other graded readers?</td><td class="no">no</td><td class="no">no</td></tr>
+    </tbody>
+  </table>
+
+  <p>You win the buying question and lose the two <em>choosing</em> questions. That is the wrong way
+  around: by the time a teacher is ready to buy, they have already decided what to buy. You are
+  absent from the conversation where they make that decision.</p>
+
+  <h2>3. The homepage is sending almost no signals to search engines or AI</h2>
+
+  <p>Your site renders and is perfectly readable. But the homepage is missing the basic markup
+  that tells Google and AI tools what the page <em>is</em>:</p>
+
+  <table>
+    <thead><tr><th>Check</th><th>Result</th></tr></thead>
+    <tbody>
+      <tr><td>Page title</td><td class="no">missing</td></tr>
+      <tr><td>Meta description</td><td class="no">missing</td></tr>
+      <tr><td>Open Graph tags (link previews)</td><td class="no">missing — all three</td></tr>
+      <tr><td>JSON-LD structured data</td><td class="no">none found</td></tr>
+      <tr><td>FAQ content / schema</td><td class="no">none found</td></tr>
+      <tr><td><code>llms.txt</code> / <code>llms-full.txt</code></td><td class="no">not present</td></tr>
+      <tr><td>H1 tags on the homepage</td><td class="no">64 — should be 1</td></tr>
+      <tr><td>H2 tags on the homepage</td><td class="mid">1</td></tr>
+      <tr><td>XML sitemap</td><td class="yes">present, 9 child sitemaps</td></tr>
+      <tr><td>Canonical tag</td><td class="yes">present</td></tr>
+      <tr><td>HTTPS</td><td class="yes">yes</td></tr>
+    </tbody>
+  </table>
+
+  <p>64 H1s means the page is telling a crawler that 64 things are equally the main topic. None of
+  them wins. When a link to TPRS Books is shared in a Facebook group or a staff email, there is
+  no title, no description and no image — so it arrives as a bare grey link.</p>
+
+  <h2>4. Speed is costing you teachers</h2>
+
+  <div class="warn-box">
+    <strong>Real visitors, 75th percentile, mobile: 4.2 seconds</strong> before main content appears.
+    Desktop is 4.0s. A Lighthouse mobile run scores performance <strong>53</strong>, with roughly
+    <strong>450ms</strong> recoverable from unused CSS and about 150ms each from CSS and JS minification.
+  </div>
+
+  <p>That is measured from your actual traffic, not a lab. A teacher on a school connection
+  deciding between two suppliers does not wait four seconds.</p>
+
+  <h2>What was built from this</h2>
+
+  <p>This audit was turned into eight work items. Seven are drafted and ready for review:</p>
+
+  <ul>
+    <li><strong>Spanish learning-books page</strong> — title, meta description, H1 and copy targeting
+        "spanish language learning books" (2,900/mo), with verified internal links.</li>
+    <li><strong>French learning-books page</strong> — the same treatment for a 720/mo gap.</li>
+    <li><strong>Berto page rebuild</strong> — protect and extend the one search that already works.</li>
+    <li><strong>Homepage discovery package</strong> — title, description, Open Graph, single-H1 hierarchy,
+        Organization JSON-LD, plus <code>llms.txt</code> and <code>llms-full.txt</code> drafts.</li>
+    <li><strong>Novice-learner guidance</strong> — level guidance and classroom examples for the
+        AI question you are currently losing.</li>
+    <li><strong>Graded-reader comparison guide</strong> — a direct answer to the question Claude
+        answers without you.</li>
+    <li><strong>Speed change set</strong> — the safe CSS/JS wins behind the 4.2s.</li>
+    <li><strong>Teacher social calendar</strong> — four themes drawn from your own catalogue.</li>
+  </ul>
+
+  <div class="good">
+    <strong>Nothing has been published.</strong> No live change was made to tprsbooks.com. Every
+    item above is a draft waiting for a human at TPRS Books to read it and decide.
+  </div>
+
+  <h2>If you want the short version</h2>
+
+  <p>Fix the homepage markup so search engines and AI can read the site properly. Build real pages
+  for the four book searches you are losing — two of which are your own titles. Then answer the
+  two choosing questions teachers are asking, once, well, where AI will find the answer.</p>
+
+  <p>That is the whole plan. It is finite and it is measurable — the same six searches can be
+  re-run in ninety days and compared against this baseline.</p>
+
+  <footer>
+    Audit run 8 October 2026 · all figures measured, none projected as fact ·
+    no changes made to tprsbooks.com
+    <div class="sig">Hiwa · AITransforms</div>
+  </footer>
+
+</div>
+</body>
+</html>
