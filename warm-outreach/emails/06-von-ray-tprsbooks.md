@@ -8,7 +8,7 @@ for your review, and nothing has touched your site. It's a gift, not a pitch.
 
 One link, everything in it:
 
-  {{BFV_URL}}
+  https://hiwasham.github.io/AITransforms/tprsbooks-value-first.html
 
 Read the summary boxes only, or open every detail — your pace. The short
 version of what's in there:
@@ -39,6 +39,6 @@ Hiwa
 Status: DRAFT — not sent
 Built: 2026-10-09 (v3 — rewritten BFV-first; leads with the built work, audit now one click in)
 BFV page: docs/tprsbooks-value-first.html (links to docs/tprsbooks-discovery-audit.html)
-ACTION BEFORE SEND: replace {{BFV_URL}} with the real deployed URL of
-  tprsbooks-value-first.html (wherever Hiwa deploys it — Vercel or GitHub Pages).
+BFV_URL: filled with the live GitHub Pages URL (verified HTTP 200, 2026-10-10).
+  Swap to a Vercel URL later if Hiwa prefers.
 Note: Akhbar identity paragraph cut per Hiwa (2026-10-09) — can be re-added before send
